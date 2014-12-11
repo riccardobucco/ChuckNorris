@@ -1,0 +1,170 @@
+————————————————————————————
+
+Creatore: Moretto Alessandro
+Data: 11 dicembre 2014
+Durata operazione: 2.5 ore
+
+————————————————————————————
+
+In questo documento informale ho creato lo scheletro della prima versione (dare successivamente una versione, secondo le norme che emergeranno) del documento “Norme di Progetto” e le successive attività’ da completare entro e non oltre domenica 14 dicembre 2014 ore 00:00.
+
+Ogni persona dovra’ scrivere in un documento di bozza su Google Docs il proprio elaborato anticipandolo da un Header con il seguente formato:
+——————————————————————————
+
+Creatore: $Cognome $Nome
+Data inizio stesura: $giorno $MeseLetterale $anno
+Data fine stesura: $giorno $MeseLetterale $anno
+Durata operazione: $durata ore
+
+—————————————————————————— 
+
+Finita la stesura (prima della fase di Verifica) il blocco dovrà esser caricato sul repository nella cartella kaizen-team/Documentazione/NormeDiProgetto/StesureBlocchi/ con il nome delle sezioni es: RiunioniCodificaGlossario.txt per mantenere una storia parziale.
+
+Concluse le verifiche i blocchi dovranno esser caricati sul repository nella cartella kaizen-team/Documentazione/NormeDiProgetto/StesureBlocchiVer/ con lo stesso nome.
+
+Non appena un componente del gruppo avrà concluso il suo lavoro può’ procedere alla verifica del blocco di scheletro di un altro componente scrivendo sotto l’header scrivendo: “In fase di verifica da parte di $Cognome $Nome”.
+
+Conclusa la verifica, il verificatore dovrà cambiare la frase “In fase di verifica” in “Verificato” ed aggiungendo una riga sotto con data, ora e durata della verifica nel seguente formato di esempio: Verifica conclusa il 14 dicembre 2014 alle 21:31. Durata 0.5 ore.
+
+Ogni blocco di documento dovrà’ avere ALMENO 2 verifiche da persone diverse.
+
+La verifica di un documento dovrà’ essere fatta in mutua esclusione.
+
+Ogni proposta di modifica dovrà avvenire mettendo un commento (strumento Google Docs e non /*commento*/) sulla parte da modificare con scritto la proposta della modifica e ma motivazione. Se il creatore od un altro componente approva, la modifica può’ essere effettuata.
+
+Il link del proprio documento dovrà esser mandato nella mailing list con oggetto: “Blocco norme di progetto”
+
+Attivita’ a risorse: (NB: il numero a fianco delle sezioni e’ l’ordine progressivo sul documento finale) PS: per lamentele andate a pestare il Responsabile ;)
+—————————————————————————— 
+Moretto Alessandro: creazione diagramma di Gantt attività WE e attività settimana prossima (dal 15 dicembre 2014 al 21 dicembre 2014) e calcolo ore di impegno settimanale medio per membro.
+—————————————————————————— 
+Bucco Riccardo:
+
+2.5 ore
+
+4) Documenti:
+	Template
+	Struttura del documento
+		Prima pagina
+		Diario delle modifiche
+		Indici
+		Formattazione generale delle pagine
+	Norme tipografiche
+		Punteggiatura
+		Stile di testo
+		Composizione del testo
+		Formati ricorrenti
+		Sigle
+	Componenti grafiche
+		Tabelle
+		Immagini
+	Classificazione documenti
+		Documenti formali
+		Documenti informali
+		Formalizzazione dei documenti
+	intestazione file di documentazione
+	Versionamento
+	ciclo di vita
+
+—————————————————————————— 
+Bigarella Chiara:
+
+2.5 ore
+
+7) Analisi dei requisiti
+	studio di fattibilità
+	Analisi dei requisiti
+		Classificazione dei requisiti
+		Classificazione dei casi d'uso
+	Tracciamento
+	Modellazione concettuale del sistema e allocazione
+
+8) organizzazione:
+	Ruoli di progetto
+		amministratore
+		project Manager
+		analista
+		Progettista
+		Programmatore
+		Verificatore
+
+—————————————————————————— 
+Carlon Chiara:
+
+2.5 ore
+
+1) norme di progetto:
+	introduzione
+		-scopo del documento
+		-scopo prodotto
+		-glossario
+		-Riferimenti
+			-informativi
+			-normativi
+	
+2)Comunicazioni
+	-interne
+	-esterne
+	-composizione e-mail
+
+—————————————————————————— 
+Pavanello Fabio:
+
+2.5 ore
+
+3) Riunioni:
+	-Motivi (le riunioni verranno fatte non con frequenza ma su richiesta ok?)
+	-convocazione Riunione
+		-interna
+	-Svolgimento riunione
+		-esterna
+	-verbale
+		-riunione esterna
+		-riunione interna
+
+
+5) Codifica dei file e documentazione
+	codifica e convenzioni
+	documentazione
+
+6) Glossario
+	proprieta’ garantite
+
+—————————————————————————— 
+Dal Bianco Davide:
+
+3 ore (allegare scelte fatte da amministratore con giustificazione)
+
+9) repository
+	visibilità repository
+	Norme sui nomi del file
+	Struttura del repository
+	Procedure di aggiornamento del repository
+	norme per il commit
+
+
+10) Protocollo per lo sviluppo dell’applicazione 	Creare un nuovo progetto
+	Creazione ticket
+		Ticket di pianificazione
+		Ticket di realizzazione e controllo
+		Ticket di verifica
+		Dipendenze temporali	Aggiornamento ticket
+		Ticket di pianificazione
+		Ticket di realizzazione e controllo
+		Ticket di verifica	Consigli di utilizzo
+		Pagina personale
+		Visualizzare segnalazioni	
+—————————————————————————— 
+Rubin Marco:
+
+2.5 ore  (allegare scelte fatte da amministratore con giustificazione)
+
+11) Ambiente di sviluppo:
+	Sistema Operativo
+	Organizzazione e condivisione (coordinamento)
+		dropbox
+		ganttproject
+		…ecc
+	Strumenti per il versionamento
+	strumenti per documentazione
+	codice 
