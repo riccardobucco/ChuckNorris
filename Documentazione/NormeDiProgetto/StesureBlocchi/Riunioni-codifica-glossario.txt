@@ -1,0 +1,105 @@
+Creatore: Pavanello Fabio Matteo
+Data inizio stesura: 12 dicembre 2014
+Data fine stesura: 12 dicembre 2014
+Durata operazione: 2h25m ca.
+_____________________________________________
+
+
+	
+3) Riunioni:
+
+	-Convocazione Riunione
+				 
+		Il compito di indire le riunioni spetta unicamente al Responsabile di Progetto,
+		che potrà esercitare tale diritto ogni qualvolta lo riterrà opportuno. Le riunioni
+		indette su iniziativa del Responsabile di Progetto sono considerate "ordinarie".
+		Gli altri membri del team potranno richiedere la convocazione di riunioni straordinarie
+		solo previa comunicazione e autorizzazione del Responsabile di Progetto che potrà
+		rifiutarle, qualora non le ritenesse importanti per tutto il team o per lo stato
+		di avanzamento dei lavori, posticiparle, o suggerire l'utilizzo di altri mezzi di
+		comunicazione se ne considerasse l'oggetto non abbastanza importante da causare una 
+		interruzione dei lavori.
+		Sia per la convocazione delle riunioni ordinarie che di quelle straordinarie il Responsabile
+		di Progetto deve comunicare la data, l'ora e il luogo ai membri del team con almeno
+		tre giorni di preavviso utilizzando la mailing list [vedi sezione Comunicazioni interne]. 
+		La mail inviata dovrà essere così strutturata:
+		 
+			>> Oggetto: Convocazione della riunione [ordinaria/straorinaria] numero N per il giorno gg/mm/aa, 
+						dove N indica il numero delle riunioni effettuate
+			>> Corpo:	
+						* Data: data e ora prevista;
+						* Luogo: luogo previsto;
+						* Tipo:	ordinaria/straordinaria;
+						* Ordine del giorno;
+		
+		I membri del team devono comunicare tempestivamente la loro disponibilità a partecipare alla
+		riunione allo scopo di consentire al Responsabile di rimandare eventualmente l'incontro.
+		I membri del team possono manifestare le loro preferenze in merito all'ora e al luogo 
+		dell'incontro, ma non riguardo la data, tranne nel caso straordinario in cui il Responsabile 
+		di Progetto convochi una riunione dando meno di tre giorni di preavviso.
+		
+		E' prevista la possibilità di riunioni riguardanti solo alcune persone del team per agevolare
+		la transizione da una fase all'altra del processo di sviluppo; per esempio all'inizio della fase 
+		di progettazione potrebbero essere necessari incontri fra Analisti e Progettisti, e fra Progettisti
+		e Programmatori all'inizio della fase di sviluppo.
+		Tali incontri sono ritenuti di carattere informale e pertanto non sono regolamentati nel presente
+		documento.
+		
+	-Svolgimento riunione
+
+		All'inizio degli incontri verrà nominato un Segretario, il quale avrà il compito di verificare
+		la presenza dei membri del team e annotare gli argomenti affrontati per poi redigere il verbale 
+		della riunione che verrà archiviato nel repository per la libera consultazione da parte del gruppo.
+		I partecipanti alle riunioni dovranno tenere un atteggiamento che favorisca la discussione di tutti
+		i punti dell'O.d.G. individuati.
+
+	-Verbale
+
+		-Riunione esterna
+		
+			I verbali delle riunioni esterne, col proponente o con committente, sono documenti ufficiali, che possono
+			avere un potenziale valore normativo o essere fonti di requisiti.
+			In considerazione di ciò, si è ritenuto più consono che la redazione di questi verbali avvenisse utilizzando
+			il formato LATEX, pertanto è stato predisposto dagli amministratori un apposito template.
+			I verbali delle riunioni esterne saranno redatti da un membro del gruppo nominato di volta in volta dal Responsabile
+			di Progetto.
+
+		-Riunione interna
+
+		I verbali delle riunioni interne, sia ordinarie che straordinarie, sono ritenuti di carattere informale,
+		puramente informativo.
+		Questi verbali saranno redatti dal Segretario scelto durante le riunioni utilizzando lo strumento che preferisce,
+		e saranno poi posti in formato .pdf nel repositoy.
+
+5) Codifica dei file e documentazione
+	
+	Codifica e convenzioni
+	
+		Tutti i file contenenti codice o documentazione dovranno utilizzare la codifica UTF-8 senza BOM.
+		Per andare a capo si userà LF (Line Feed), carattere '\n'.
+		
+		I nomi delle variabili, delle funzioni e degli altri elementi di programmazione dovranno essere 
+		rigorosamente in inglese.
+		
+		Modifiche a questa sezione saranno ammesse previa approvazione degli Amministratori e del Responsabile
+		di Progetto.
+	
+	Documentazione
+	
+		I file contenenti codice dovranno presentare un'intestazione strutturata in questo modo:
+		
+		/*!
+		 * \file Nome del file
+		 * \author Autore - indirizzo mail
+		 * \date Data di creazione
+		 * \brief Breve descrizione del file
+		 */
+		 
+	Si prevede di ampliare questa sezione nella fase di sviluppo.
+
+6) Glossario
+	
+	Il glossario conterrà tutte le parole e sigle, utilizzate nei documenti redatti nelle diverse parti del progetto,
+	che si prevede possano essere oggetto di fraintendimenti o incomprensioni da parte degli stakeholder.
+	Le definizioni contenute nel glossario saranno in ordine alfabetico, sintetiche ma il più significative possibile.
+	La stesura di questo importante documento avverrà in formato Latex.
