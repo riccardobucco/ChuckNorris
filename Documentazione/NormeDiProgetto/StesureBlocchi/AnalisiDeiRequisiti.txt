@@ -1,0 +1,72 @@
+————————————————————————————
+
+Creatore: Bigarella Chiara
+Data: 12 dicembre 2014
+Durata operazione: 2,5 ore
+
+————————————————————————————
+
+7) Analisi dei requisiti
+
+	Studio di fattibilità
+
+Lo studio di fattibilità deve essere rapido e accurato.
+Il documento di Studio di Fattibilità verrà redatto dagli analisti, sulla base di ciò che emergerà dalle prime 2 
+riunioni. Qui i membri del gruppo si confronteranno su tematiche quali:
+- il dominio applicativo e tecnologico dei capitolati;
+- lo studio del rapporto costi/benefici: confronto tra mercato attuale e quello futuro, costo di produzione e 
+redditività dell'investimento;
+- l'analisi dei rischi di ognuno di essi;
+- le conoscenze e preferenze di ognuno.
+
+
+	Analisi dei requisiti
+
+Il documento di Analisi dei Requisiti verrà redatto dagli analisti. Tale documento conterrà tutti i requisiti evinti
+dal capitolato, dagli incontri con il proponente e dal dominio. Ogni requisito sarà espresso in modo chiaro e sintetico,
+evitando ogni possibile causa di ambiguità. A questo scopo si dovrà ricorrere all'utilizzo di termini tecnici e si dovrà
+accompagnare i requisiti con i diagrammi dei casi d'uso.
+I requisiti, inoltre, dovranno essere consistenti: non dovranno essere in conflitto gli uni con gli altri.
+La stesura dei requisiti seguirà un approcio top-down. L'analista dovrà dire, per ogni requisito, il modo in cui esso 
+verrà verificato. Ogni metodo di verifica avrà una certa efficacia e un determinato costo.
+
+		* Classificazione dei requisiti
+		I requisiti dovranno essere classificati per tipo e importanza, utilizzando la seguente codifica:
+		R[importanza][tipo][codice]
+
+		IMPORTANZA: indica l'importanza strategica del requisito e può assumere i seguenti valori:
+			- 1: requisiti obbligatori;
+			- 2: requisiti desiderabili;
+			- 3: requisiti opzionali.
+		// in alternativa si potrebbe usare O, D, F. 
+
+		TIPO: indica la tipologia del requisito e può assumere i seguenti valori:
+			- F: indica che si tratta di un requisito funzionale;
+			- P: indica che si tratta di un requisito prestazionale;
+			- Q: indica che si tratta di un requisito di qualità;
+			- V: indica che si tratta di un requisito di vincolo.
+		
+		CODICE: indica il codice univoco che identifica un requisito.
+
+		* Classificazione dei casi d'uso
+		I casi d'uso dovranno essere classificati utilizzando la seguente codifica:
+		UC[]
+		// come indentifichiamo e classifichiamo i casi d'uso?
+
+	Tracciamento
+	Per ogni requisito è necessario indicarne le fonti: ogni requisito ne ha almeno una. Le fonti dei requisiti sono: 
+	il capitolato, i casi d'uso e i verbali. Il tracciamento dei requisiti è compito dell'analista.
+	// o useremo un software che lo farà in automatico?
+
+	Modellazione concettuale del sistema e allocazione
+Gli analisti si occuperanno dell'identificazione dei casi d'uso. Si richiede di correlare ogni diagramma di caso d’uso
+con una descrizione narrativa in cui dovranno comparire le seguenti informazioni:
+- Titolo del caso d'uso;
+– Attori principali e secondari;
+– Descrizione del caso d'uso;
+– Precondizione del caso d'uso;
+– Postcondizione del caso d'uso;
+– Flusso principale degli eventi, specificando per ogni evento titolo, descrizione, attori coinvolti e se l’evento è 
+descritto nel dettaglio da un altro caso d’uso;
+- Scenari alternativi,specificando per ogni scenario alternativo titolo, descrizione,
+attori coinvolti e se lo scenario è descritto nel dettaglio da un altro caso d’uso.
