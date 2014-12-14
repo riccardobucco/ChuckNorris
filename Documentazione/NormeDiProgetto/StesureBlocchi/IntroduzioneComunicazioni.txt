@@ -1,0 +1,90 @@
+﻿——————————————————————————
+
+Creatore: Carlon Chiara
+Data inizio stesura: 14 dicembre 2014
+Data fine stesura: 14 dicembre 2014
+Durata operazione: 2h 50min
+
+—————————————————————————— 
+
+1) Introduzione
+	Scopo del documento
+
+Il presente documento intende stabilire le varie norme che il gruppo Kaizen Team seguirà nello sviluppo del progetto “Norris”. Ciascun componente sarà obbligato a prendere visione di tale documento e a rispettare le norme, le convenzioni e le raccomandazioni ivi esposte, le quali permetteranno migliorare l’efficienza del lavoro svolto, facilitare la fase di verifica e permettere  l’unificazione dei file prodotti e la loro coerenza.
+In particolare si considereranno:
+l’organizzazione della comunicazione tra i vari membri del team;
+la stesura dei documenti e le relative convenzioni;
+l’organizzazione del lavoro durante le varie fasi di sviluppo del progetto;
+l’ambiente di lavoro, il repository ed il ticketing.
+
+	Scopo del prodotto
+
+Lo scopo del progetto è la creazione di un framework, basato sulle tecnologie Node.js, Express.js e Socket.io, per la generazione di diversi tipi di grafici a partire da dati provenienti da sorgenti arbitrarie.
+  Il framework creato deve fornire delle API per la configurazione programmatica della rappresentazione grafica e dei dati che si vogliono utilizzare, oltre a funzioni di aggiornamento dei grafici lato server tramite WebSocket.
+
+
+	Glossario
+
+Allo scopo di rendere più semplice la comprensione dei documenti ed evitare eventuali ambiguità, viene allegato il "Glossario-x.y.z", che contiene la spiegazione della terminologia tecnica e degli acronimi utilizzati.
+Per facilitare la lettura, i termini saranno scritti in corsivo e marcati da una “G” maiuscola a pedice.
+
+	Riferimenti
+		Informativi
+	
+Guida introduttiva a Latex: http://latex-project.org/guides/
+Specifiche UTF-8: http://en.wikipedia.org/wiki/UTF-8
+GitHub: http://github.com
+
+
+2) Comunicazioni
+	Comunicazioni interne
+
+Per  le comunicazioni interne si utilizzerà una mailing list appositamente creata:
+mailinglist@kaizenteam.it
+
+I componenti del gruppo utilizzeranno tale indirizzo per comunicare tra di loro, risultando così sempre aggiornati su ogni scambio di informazioni. Tale sistema potrà essere utilizzato esclusivamente per questioni riguardanti il progetto. 
+Per facilitare la comunicazione il gruppo si avvale, anche, di sistemi di instant messaging con l’obbligo di stilare un verbale, qualora siano state prese decisioni di rilevante importanza, che verrà condiviso a tutti i membri tramite mailing list. In tal modo è possibile tenere traccia di ogni discussione avvenuta all’interno del gruppo.
+
+	Comunicazioni esterne
+
+Il responsabile di progetto avrà l’incarico di mantenere i contatti tra il team e le componenti esterne, utilizzando una casella di posta elettronica dedicata:
+info@kaizenteam.it
+
+Sarà, inoltre, suo compito informare tutti i membri del gruppo di eventuali discussioni avvenute, inviando, quando necessario, tali mail per mezzo della mailing list ufficiale.
+
+	Composizione e-mail
+
+In questa sezione viene definita la struttura di ogni e-mail, sia per comunicazioni interne che esterne.
+
+	Destinatario
+
+Interno: l’indirizzo utilizzabile è mailinglist@kaizenteam.it
+
+Esterno: varia se ci si deve riferire al Prof. Vardanega Tullio, Prof. Cardin Riccardo o al Proponente.
+
+	Mittente
+
+Interno: l’indirizzo e-mail di chi scrive il messaggio
+
+Esterno: l’unico indirizzo utilizzabile è info@kaizenteam.it
+
+	Oggetto
+
+L’oggetto deve essere chiaro e conciso e diverso da altri già utilizzati.
+Per comporre un messaggio di risposta è necessario anteporre all’oggetto il prefisso “Re:”, per inoltrare è obbligatorio anteporre “I:”, in modo da facilitare le varie comunicazioni.
+Inoltre, l’oggetto del messaggio non deve mai essere modificato.
+
+	Corpo
+
+Il corpo di un messaggio deve essere esaustivo e facilmente comprensibile a tutti i componenti del team.
+In caso di risposta o di inoltro, la parte aggiunta deve essere posta all’inizio, mantenendo anche il messaggio precedente,  per non obbligare i membri a dover scorrere l’e-mail completa e per permettere la visione intera della conversazione.
+
+	Allegati
+
+Nel caso sia necessario si possono utilizzare gli allegati, ad esempio, per inviare a tutti i membri del gruppo, il verbale di un incontro con il proponente o con il committente.
+
+
+
+
+
+		
