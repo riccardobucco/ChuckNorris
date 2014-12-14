@@ -1,0 +1,11 @@
+Creatore: Rubin Marco
+Data inizio stesura: 14 DICEMBRE 2014
+Data fine stesura: 14 DICEMBRE 2014
+Durata operazione: 2 ore
+
+11) Ambiente di sviluppo
+- SISTEMA OPERATIVO: Per evitare problemi di incompatibilità si sceglie fin dall'inizio di utilizzare il sistema operativo Linux 14.04.1 LTS (long-term support).
+- ORGANIZZAZIONE E CONDIVISIONE: Si predispone un account su dropbox per la condivisione informale della documentazione tra i componenti del progetto, in quanto tutte le documentazioni e i files necessari e facenti parte del progetto dovranno essere sottoposti a versionamento.
+- STRUMENTI PER IL VERSIONAMENTO: Per il versionamento dei documenti e delle sorgenti dell'applicativo si utilizza Git (http://www.git-scm.com/), uno strumento di versionamento gratuito e open source sviluppato per gestire progetti sia piccoli che molto grandi con efficienza e velocità. Vengono in particolare predisposte le directory doc per i documenti di progetto e app per le sorgenti.
+Per la schedulazione delle attività e delle risorse si utilizza GanttProject 2.6.6 (http://www.ganttproject.biz/), un software java rilasciato sotto licenza GPL.
+La scrittura dei documenti avverrà tramite Latex (www.latex-project.org), utilizzando l'editor gEdit.
