@@ -1,0 +1,61 @@
+\section{Repository}
+
+
+Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git. Viene preferita questa soluzione perché consigliata dal capitolato d’appalto.
+Visibilità repository
+Per la condivisione e il versionamento dei configuration item è stato creato un repository privato su GitHub,  raggiungibile all’indirizzo \texttt{https://github.com/marcorubin/kaizen-team/}. L’accesso è consentito solamente agli utenti approvati dal Project Manager.
+\subsection{Struttura del repository}
+I file all’interno del repository sono organizzati secondo la seguente struttura: \\
+ROOT
+\begin{itemize}
+	\item Documents
+		\begin{itemize}
+			\item Commons
+			\item NormeDiProgetto
+			\item StudioDiFattibilita
+			\item AnalisiDeiRequisiti
+			\item PianoDiProgetto
+			\item PianoDiQualifica
+			\item SpecificaTecnica
+			\item Glossario
+		\end{itemize}
+	\item Source
+		\begin{itemize}
+			\item Da definire non prima della progettazione architetturale
+		\end{itemize}
+\end{itemize}
+
+	
+\subsection{Norme sui nomi dei file}
+I nomi dei file all’interno del repository sono soggetti alle seguenti norme:
+\begin{itemize}
+	\item devono contenere solamente lettere, numeri, il carattere underscore U+005F, il segno meno U+2212 e il punto U+002E
+	\item devono avere una lunghezza minima di 3 caratteri
+	\item devono contenere le informazioni sufficiente per distinguere il file in modo non ambiguo
+	\item le informazioni devono essere riportate dal generale al particolare
+	\item le date devono essere specificate nel formato YYMMDD
+\end{itemize}
+
+Si consiglia inoltre:
+\begin{itemize}
+\item di utilizzare il meno possibile i caratteri underscore e segno meno, utilizzando al loro posto la notazione camel case
+\item di utilizzare nomi con una lunghezza compresa tra i 5 e i 25 caratteri
+\item di specificare sempre l’estensione quando possibile
+\end{itemize}
+
+\subsection{Norme per il commit}
+\begin{itemize}
+\item Quando si effettua un commit è necessario specificare nel messaggio una descrizione sintetica e non ambigua delle modifiche apportate
+\item Le modifiche apportate con un commit devono essere complete e testate con successo
+\item Le modifiche apportate con un commit devono essere logicamente correlate tra di loro
+\end{itemize}
+
+\subsection{Procedure di aggiornamento del repository}
+Per aggiornare il repository è prevista una procedura ben definita:
+\begin{enumerate}
+\item Pull del repository tramite comando “git pull”
+\item Eventuale merge tramite comando “git merge”
+\item Stage dei file da aggiornare tramite comando “git add [files]”
+\item Commit tramite comando “git commit -m ‘messaggio’”
+\item Push del repository tramite comando “git push”
+\end{enumerate}
