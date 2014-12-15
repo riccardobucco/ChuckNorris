@@ -1,0 +1,8 @@
+
+#pdflatex files
+**/*.aux
+**/*.toc
+**/*.out
+
+#other files
+**/*.log
