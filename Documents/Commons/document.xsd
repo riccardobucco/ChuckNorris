@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="document">
+  <xsd:complexType>
+  	<xsd:sequence>
+
+  		<xsd:element name="title" type="xsd:string"/>
+  		<xsd:element name="type" type="xsd:string"/>
+  		<xsd:element name="redactedby" type="xsd:string"/>
+  		<xsd:element name="verifiedby" type="xsd:string"/>
+  		<xsd:element name="approvedby" type="xsd:string"/>
+
+  		<xsd:element name="sections">
+  			<xsd:complexType>
+  				<xsd:sequence maxOccurs="unbounded">
+  					<xsd:element name="name" type="xsd:string"/>
+  				</xsd:sequence>
+  			</xsd:complexType>
+  		</xsd:element>
+
+  		<xsd:element name="changes">
+  			<xsd:complexType>
+  				<xsd:sequence maxOccurs="unbounded">
+  					<xsd:element name="version">
+  						<xsd:complexType>
+  							<xsd:sequence>
+  								<xsd:element name="id" type="xsd:string"/>
+  								<xsd:element name="author" type="xsd:string"/>
+  								<xsd:element name="role" type="xsd:string"/>
+  								<xsd:element name="description" type="xsd:string"/>
+  							</xsd:sequence>
+  						</xsd:complexType>
+  					</xsd:element>
+  				</xsd:sequence>
+  			</xsd:complexType>
+  		</xsd:element>
+
+  	</xsd:sequence>
+  </xsd:complexType>
+</xsd:element>
+
+</xsd:schema>
