@@ -12,9 +12,9 @@ $(DOCUMENTI): FORCE
 	@ xsltproc -o $@/$@.tex Commons/document.xsl $@/$@.xml
 
 	@ #compilazione file latex
-	@ pdflatex -output-directory $@ $@/$@.tex
-	@ pdflatex -output-directory $@ $@/$@.tex > /dev/null
-	@ pdflatex -output-directory $@ $@/$@.tex > /dev/null
+	@ export TEXINPUTS=":Commons/:$@/"; pdflatex -output-directory $@ $@/$@.tex
+	@ export TEXINPUTS=":Commons/:$@/"; pdflatex -output-directory $@ $@/$@.tex > /dev/null
+	@ export TEXINPUTS=":Commons/:$@/"; pdflatex -output-directory $@ $@/$@.tex > /dev/null
 	
 
 clean: FORCE
