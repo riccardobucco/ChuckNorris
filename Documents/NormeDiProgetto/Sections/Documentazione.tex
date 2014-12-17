@@ -3,10 +3,10 @@
 		\subsubsection{Procedura di formalizzazione dei documenti}
 			Di seguito viene riportata la procedura alla quale deve essere sottoposto un documento prima di essere definitivamente formalizzato:
 			\begin{enumerate}
-				\item i redattori si occupano della stesura del documento e della correzione di eventuali errori (documento in lavorazione);
-				\item il responsabile di progetto assegna a uno o più verificatori il compito di verificare che non vi siano errori nella versione consegnata dai redattori (documento in verifica);
-				\item se i verificatori trovano degli errori, si torna al primo punto; se invece non viene rilevata alcuna anomalia il documento viene consegnato al responsabile di progetto;
-				\item il responsabile di progetto può decidere di approvare il documento (e in questo caso la procedura di formalizzazione termina, documento approvato) oppure di respingerlo (in questo caso si torna al primo punto).
+				\item i Redattori si occupano della stesura del documento e della correzione di eventuali errori (documento in lavorazione);
+				\item il Responsabile di Progetto assegna a uno o più Verificatori il compito di verificare che non vi siano errori nella versione consegnata dai redattori (documento in verifica);
+				\item se i Verificatori trovano degli errori, si torna al primo punto; se invece non viene rilevata alcuna anomalia il documento viene consegnato al Responsabile di Progetto;
+				\item il Responsabile di Progetto può decidere di approvare il documento (e in questo caso la procedura di formalizzazione termina, documento approvato) oppure di respingerlo (in questo caso si torna al primo punto).
 			\end{enumerate}
 	\subsection{Norme}
 		\subsubsection{Struttura dei documenti}
@@ -15,7 +15,7 @@
 				\item frontespizio;
 				\item descrizione del documento;
 				\item diario delle modifiche;
-				\item indice analitico;
+				\item indice delle sezioni;
 				\item indice delle tabelle;
 				\item indice delle figure;
 				\item introduzione;
@@ -225,39 +225,39 @@
 						\item MM rappresenta il mese;
 						\item GG rappresenta il giorno.
 					\end{enumerate}
-					Affinché tale formalismo venga seguito correttamente, per fare riferimento a una data si deve utilizzare il comando Latex \textbackslash data{anno}{mese}{giorno}. Esso garantisce la corretta scrittura delle date.
+					Affinché tale formalismo venga seguito correttamente, per fare riferimento a una data si deve utilizzare il comando \latex{} \textbackslash date{giorno}{mese}{anno}. Esso garantisce la corretta scrittura delle date.
 				\subparagraph{Orari}
 					Gli orari devono essere espressi seguendo il formalismo indicato dallo standard [ISO 8601]: HH-MM. Tale formalismo va interpretato nel seguente modo:
 					\begin{enumerate}
 						\item HH rappresenta le ore (formato 24 ore);
 						\item MM rappresenta i minuti.
 					\end{enumerate}
-					Affinché tale formalismo venga seguito correttamente, per fare riferimento a un orario si deve utilizzare il comando Latex \textbackslash orario{ore}{minuti}. Esso garantisce la corretta scrittura degli orari.
+					Affinché tale formalismo venga seguito correttamente, per fare riferimento a un orario si deve utilizzare il comando \latex{} \textbackslash time{ore}{minuti}. Esso garantisce la corretta scrittura degli orari.
 				\subparagraph{Indirizzi web}
-					Per fare riferimento a un sito web è necessario utilizzare il comando Latex apposito: \textbackslash web{nome sito}. Esso garantisce la corretta scrittura del sito web secondo le norme seguenti:
+					Per fare riferimento a un sito web è necessario utilizzare il comando \latex{} apposito: \textbackslash uri{nome_uri}. Esso garantisce la corretta scrittura del sito web secondo le norme seguenti:
 					\begin{itemize}
 						\item si adotta lo stile monospace;
 						\item il testo è formattato tramite il colore blu.
 					\end{itemize}
 				\subparagraph{Path}
-					Per fare riferimento a un path è necessario utilizzare il comando Latex apposito: \textbackslash path{percorso}. Esso garantisce la corretta scrittura del path secondo le norme seguenti:
+					Per fare riferimento a un path è necessario utilizzare il comando \latex{} apposito: \textbackslash path{percorso}. Esso garantisce la corretta scrittura del path secondo le norme seguenti:
 					\begin{itemize}
 						\item si adotta lo stile monospace.
 					\end{itemize}
 				\subparagraph{Ruoli di progetto}
-					Per fare riferimento a un ruolo di progetto è necessario utilizzare il comando Latex apposito: \textbackslash ruolo{nome ruolo}. Esso garantisce la corretta scrittura del ruolo secondo le norme seguenti:
+					Per fare riferimento a un ruolo di progetto è necessario seguire le seguenti norme:
 					\begin{itemize}
 						\item la prima lettera delle parole che non sono preposizioni è maiuscola;
 						\item si adotta lo stile corsivo.
 					\end{itemize}
 				\subparagraph{Nomi dei documenti}
-					Quando si vuole fare riferimento a un documento è necessario utilizzare il comando Latex apposito: \textbackslash doctitle{nome documento}. Esso garantisce la corretta scrittura del nome del documento secondo le norme seguenti:
+					Quando si vuole fare riferimento a un documento è necessario seguire le seguenti norme:
 					\begin{itemize}
 						\item la prima lettera delle parole che non sono preposizioni è maiuscola;
 						\item si adotta lo stile corsivo;
 						\item il nome del documento va racchiuso tra virgolette inglesi (aperte: “; chiuse:”).
 					\end{itemize}
-					Se si vuole includere il numero nella forma vX.Y che indica l’ultima versione del documento si deve utilizzare il comando Latex \textbackslash lastversion{}.
+					Se si vuole includere il numero nella forma vX.Y che indica l’ultima versione del documento si deve utilizzare il comando \latex{} \textbackslash lastversion{}.
 				\subparagraph{Nomi dei file}
 					Quando si fa riferimento a un file senza indicarne il percorso si seguono le seguenti norme:
 					\begin{itemize}
@@ -265,25 +265,25 @@
 						\item il nome del file va racchiuso tra virgolette inglesi (aperte: “; chiuse:”).
 					\end{itemize}
 				\subparagraph{Revisioni}
-					Quando si fa riferimento a una revisione programmata è necessario utilizzare il comando Latex apposito: \textbackslash rev{nome revisione}. Esso garantisce la corretta scrittura del nome della revisione secondo le norme seguenti:
+					Quando si fa riferimento a una revisione programmata è necessario seguire le seguenti norme:
 					\begin{itemize}
 						\item la prima lettera delle parole che non sono preposizioni è maiuscola;
 						\item si adotta lo stile grassetto.
 					\end{itemize}
 				\subparagraph{Fasi del progetto}
-					Quando si fa riferimento a una fase del progetto è necessario utilizzare il comando Latex apposito: \textbackslash fase{nome fase}. Esso garantisce la corretta scrittura del nome della fase secondo le norme seguenti:
+					Quando si fa riferimento alle fasi di progetto è necessario seguire le seguenti norme:
 					\begin{itemize}
 						\item la prima lettera delle parole che non sono preposizioni è maiuscola;
 						\item si adotta lo stile grassetto.
 					\end{itemize}
 				\subparagraph{Nome del gruppo}
-					Quando si fa riferimento al nome del gruppo è necessario utilizzare il comando Latex apposito: \textbackslash groupname. Esso garantisce la corretta scrittura del nome del gruppo.
+					Quando si fa riferimento al nome del gruppo è necessario utilizzare il comando \latex{} apposito: \textbackslash groupname{}. Esso garantisce la corretta scrittura del nome del gruppo.
 				\subparagraph{Nome del progetto}
-					Quando si fa riferimento al nome del progetto è necessario utilizzare il comando Latex apposito: \textbackslash progetto. Esso garantisce la corretta scrittura del nome del gruppo.
-				\subparagraph{Nome del proponente}
-					Quando si fa riferimento al proponente è necessario utilizzare il comando Latex apposito: \textbackslash proponente. Esso garantisce la corretta scrittura del suo nome.
-				\subparagraph{Nome del committente}
-					Quando si fa riferimento al committente è necessario utilizzare il comando Latex apposito: \textbackslash committente. Esso garantisce la corretta scrittura del suo nome.
+					Quando si fa riferimento al nome del progetto è necessario utilizzare il comando \latex{} apposito: \textbackslash projectname{}. Esso garantisce la corretta scrittura del nome del gruppo.
+				%\subparagraph{Nome del proponente}
+				%	Quando si fa riferimento al proponente è necessario utilizzare il comando \latex{} apposito: \textbackslash proponente{}. Esso garantisce la corretta scrittura del suo nome.
+				%\subparagraph{Nome del committente}
+				%	Quando si fa riferimento al committente è necessario utilizzare il comando \latex{} apposito: \textbackslash committente. Esso garantisce la corretta scrittura del suo nome.
 				\subparagraph{Nomi propri}
 					Ogniqualvolta si intende utilizzare un nome proprio si deve scrivere prima il cognome e successivamente il nome.\\
 					Quando si parla di disporre i nomi in ordine alfabetico si da sempre per scontato che la prima lettera rispetto alla quale si ordina è la prima lettera del cognome.
@@ -376,13 +376,13 @@
 			Tutti i file contenenti codice o documentazione dovranno utilizzare la codifica UTF-8 senza BOM.\\
 			Per andare a capo si userà LF (Line Feed), carattere '\textbackslash n'.
 	\subsection{Strumenti}
-		\subsubsection{Latex}
-			Per la stesura dei documenti si è scelto di utilizzare il linguaggio di markup LATEX.  Il motivo principale che ha portato a questa scelta è la facilità di separazione tra contenuto e formattazione. Con LATEX è possibile scrivere testo senza doversi preoccupare di dare a esso una formattazione coerente con le norme: è infatti possibile definire un unico template, valido per qualsiasi documento, che applica le regole tipografiche in automatico.
+		\subsubsection{\latex{}}
+			Per la stesura dei documenti si è scelto di utilizzare il linguaggio di markup \latex{}.  Il motivo principale che ha portato a questa scelta è la facilità di separazione tra contenuto e formattazione. Con \latex{} è possibile scrivere testo senza doversi preoccupare di dare a esso una formattazione coerente con le norme: è infatti possibile definire un unico template, valido per qualsiasi documento, che applica le regole tipografiche in automatico.
 			\paragraph{Template}
-				Ogni documento dovrà essere realizzato a partire da un template LATEX appropriato reperibile al percorso INSERIRE PERCORSO TEMPLATE.\\
-				Grazie ai template di Latex, non ci si deve preoccupare della formattazione del testo durante la sua stesura: infatti, basta impostare le regole all’interno di un unico e queste verranno adottate in automatico all’interno di tutti i documenti che fanno uso del template. Inoltre, se le regole dovessero cambiare in corso d’opera (cambiamenti alle Norme di Progetto), basta modificare il singolo file contenente le regole invece che tutti i documenti scritti fino a quel determinato momento.
+				Ogni documento dovrà essere realizzato a partire da un template \latex{} appropriato reperibile al percorso INSERIRE PERCORSO TEMPLATE.\\
+				Grazie ai template di \latex{}, non ci si deve preoccupare della formattazione del testo durante la sua stesura: infatti, basta impostare le regole all’interno di un unico e queste verranno adottate in automatico all’interno di tutti i documenti che fanno uso del template. Inoltre, se le regole dovessero cambiare in corso d’opera (cambiamenti alle Norme di Progetto), basta modificare il singolo file contenente le regole invece che tutti i documenti scritti fino a quel determinato momento.
 			\paragraph{Comandi personalizzati}
-				Per permettere un’adeguazione automatica alle regole imposte all’interno delle norme tipografiche si è deciso di creare dei comandi personalizzati utilizzabili in Latex. Ogni membro del gruppo dovrà saperli usare in modo appropriato ogniqualvolta ve ne sia il bisogno.\\
+				Per permettere un’adeguazione automatica alle regole imposte all’interno delle norme tipografiche si è deciso di creare dei comandi personalizzati utilizzabili in \latex{}. Ogni membro del gruppo dovrà saperli usare in modo appropriato ogniqualvolta ve ne sia il bisogno.\\
 				L’elenco completo di tutti i comandi lo si può trovare a  INSERIRE PERCORSO
 		\subsubsection{Strumenti per i diagrammi}
 		\subsubsection{Strumenti per la rilevazione di errori ortografici}
