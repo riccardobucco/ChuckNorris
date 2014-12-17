@@ -21,6 +21,7 @@
     \usepackage[italian]{babel}
     \usepackage[utf8]{inputenc}
     \usepackage[T1]{fontenc}
+    \usepackage{graphicx}
     \usepackage{hyperref}
     \usepackage{color}
 
@@ -57,9 +58,16 @@
   <xsl:template name="title">
         \begin{titlepage}
           \begin{center}
-            \LARGE{\groupname} \\
-            \Large{\projectname} \\
-            \Large{\doctitle{}}
+            {\fontsize{2 cm}{1em}\selectfont \groupname} \\ [3 cm]
+            \includegraphics[scale=0.6]{Pics/logo} \\ [4 cm]
+
+            \hrule
+            \vspace{2 mm}
+            \Huge{\projectname} \\
+            \Large{\doctitle}
+            \vspace{2 mm}
+            \hrule
+
           \end{center}
         \end{titlepage}
   </xsl:template>
