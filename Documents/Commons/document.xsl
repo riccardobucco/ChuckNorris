@@ -8,8 +8,13 @@
 
     %macro definitions
     \newcommand{\groupname}{Kaizen Team}
+    \newcommand{\projectname}{Norris}
     \newcommand{\doctitle}{<xsl:value-of select="title"/>}
     \newcommand{\lastversion}{<xsl:value-of select="versions/version[1]/id"/>}
+    %\newcommand{\date}[3]{#3-#2-#1}
+    %\newcommand{\time}[2]{#1-#2}
+    \newcommand{\uri}[1]{\textcolor{blue}{\texttt{#1}}}
+    \newcommand{\path}[1]{\texttt{#1}}
 
     %package include
     \usepackage[margin=2cm]{geometry}
@@ -29,8 +34,16 @@
     \begin{document}
 
       <xsl:call-template name="title"/>
-
+      \newpage
+      <xsl:call-template name="description"/>
+      \newpage
+	  <xsl:call-template name="changes"/>
+	  \newpage
       \tableofcontents
+      \newpage
+      \listoftables
+      \newpage
+      \listoffigures
       \newpage
 
       <xsl:for-each select="sections/name">
@@ -44,10 +57,20 @@
   <xsl:template name="title">
         \begin{titlepage}
           \begin{center}
-            \LARGE{\doctitle} \\
-            \Large{\groupname}
+            \LARGE{\groupname} \\
+            \Large{\projectname} \\
+            \Large{\doctitle{}}
           \end{center}
         \end{titlepage}
   </xsl:template>
+  
+  <xsl:template name="description">
+        DESCRIZIONE
+  </xsl:template>
+  
+  <xsl:template name="changes">
+        MODIFICHE
+  </xsl:template>
+  
 
 </xsl:stylesheet>
