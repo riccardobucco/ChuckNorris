@@ -12,7 +12,7 @@
   		<xsd:element name="verifiedby" type="xsd:string"/>
   		<xsd:element name="approvedby" type="xsd:string"/>
 
-  		<xsd:element name="sections">
+  		<xsd:element name="include">
   			<xsd:complexType>
   				<xsd:sequence maxOccurs="unbounded">
   					<xsd:element name="name" type="xsd:string"/>
