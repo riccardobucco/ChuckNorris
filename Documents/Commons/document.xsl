@@ -10,7 +10,7 @@
     \newcommand{\groupname}{Kaizen Team}
     \newcommand{\projectname}{Norris}
     \newcommand{\doctitle}{<xsl:value-of select="title"/>}
-    \newcommand{\lastversion}{<xsl:value-of select="versions/version[1]/id"/>}
+    \newcommand{\lastversion}{<xsl:value-of select="changes/version[1]/id"/>}
     %\newcommand{\date}[3]{#3-#2-#1}
     %\newcommand{\time}[2]{#1-#2}
     \newcommand{\uri}[1]{\textcolor{blue}{\texttt{#1}}}
@@ -22,6 +22,9 @@
     \usepackage[utf8]{inputenc}
     \usepackage[T1]{fontenc}
     \usepackage{graphicx}
+    \usepackage{fancyhdr}
+    \usepackage{lastpage}
+    \usepackage{tabu}
     \usepackage{hyperref}
     \usepackage{color}
 
@@ -31,15 +34,27 @@
     \setcounter{tocdepth}{5}
     \setcounter{secnumdepth}{5}
 
+    %fancyhdr config
+    %\lhead{\colorbox{blue}{ciao}}
+    %\chead{\colorbox{blue}}
+    %\rhead{\colorbox{blue}}
+    \lfoot{\doctitle \\ v\lastversion}
+    \cfoot{}
+    \rfoot{\thepage/\pageref{LastPage}}
+    
+
 
     \begin{document}
 
-      <xsl:call-template name="title"/>
+      \pagestyle{fancy}
+      \input{Tex/document-title.tex}
       \newpage
       <xsl:call-template name="description"/>
       \newpage
-	  <xsl:call-template name="changes"/>
-	  \newpage
+	    <xsl:call-template name="changes"/>
+	    \newpage
+
+      
       \tableofcontents
       \newpage
       \listoftables
@@ -55,29 +70,32 @@
 
   </xsl:template>
   
-  <xsl:template name="title">
-        \begin{titlepage}
-          \begin{center}
-            {\fontsize{2 cm}{1em}\selectfont \groupname} \\ [3 cm]
-            \includegraphics[scale=0.6]{Pics/logo} \\ [4 cm]
-
-            \hrule
-            \vspace{2 mm}
-            \Huge{\projectname} \\
-            \Large{\doctitle}
-            \vspace{2 mm}
-            \hrule
-
-          \end{center}
-        \end{titlepage}
-  </xsl:template>
-  
   <xsl:template name="description">
-        DESCRIZIONE
+        \section*{Descrizione del documento}
   </xsl:template>
   
   <xsl:template name="changes">
-        MODIFICHE
+      \section*{Diario delle modifiche}
+      \begin{center}
+        \begin{tabu} to \textwidth {|X[c]|X[c]|X[c]|X[c]|X[c]|}
+          \hline
+          \rowfont{\bf}
+          Versione <xsl:text>&amp;</xsl:text>
+          Data <xsl:text>&amp;</xsl:text>
+          Autore <xsl:text>&amp;</xsl:text>
+          Ruolo <xsl:text>&amp;</xsl:text>
+          Descrizione \\
+          \hline
+          <xsl:for-each select="changes/version">
+            <xsl:value-of select="id"/> <xsl:text>&amp;</xsl:text>
+            <xsl:value-of select="date"/> <xsl:text>&amp;</xsl:text>
+            <xsl:value-of select="author"/> <xsl:text>&amp;</xsl:text>
+            <xsl:value-of select="role"/> <xsl:text>&amp;</xsl:text>
+            <xsl:value-of select="description"/> \\
+            \hline
+          </xsl:for-each>
+        \end{tabu}
+      \end{center}
   </xsl:template>
   
 
