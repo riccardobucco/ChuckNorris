@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Esegue il controllo ortografico del documento indicato
 # Attenzione! Prima di lanciare questo script installare il pacchetto aspell-it
