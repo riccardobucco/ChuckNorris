@@ -1,0 +1,12 @@
+#!bin/bash
+
+# Esegue il controllo ortografico del documento indicato
+# Attenzione! Prima di lanciare questo script installare il pacchetto aspell-it
+# --mode=tex	indica che si vuole analizzare un documento latex
+# --lan=it	indica che la lingua da utilizzare e' l'italiano
+# --master=it	indica che il dizionario da utilizzare e' quello italiano
+# --run-together	indica di considerare le parole composte
+# --clean-words	indica di eseguire la correzione delle parole
+# check $1	indica che si vuole controllare il file passato come primo parametro	
+
+aspell --mode=tex --lang=it --master=it --run-together --clean-words check $1 
