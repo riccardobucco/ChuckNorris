@@ -11,8 +11,8 @@
     \newcommand{\projectname}{Norris}
     \newcommand{\doctitle}{<xsl:value-of select="title"/>}
     \newcommand{\lastversion}{<xsl:value-of select="changes/version[1]/id"/>}
-    %\newcommand{\date}[3]{#3-#2-#1}
-    %\newcommand{\time}[2]{#1-#2}
+    \newcommand{\insdate}[3]{#3-#2-#1}
+    \newcommand{\instime}[2]{#1-#2}
     \newcommand{\uri}[1]{\textcolor{blue}{\texttt{#1}}}
     \newcommand{\path}[1]{\texttt{#1}}
 

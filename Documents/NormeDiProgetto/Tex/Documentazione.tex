@@ -225,22 +225,22 @@
 						\item MM rappresenta il mese;
 						\item GG rappresenta il giorno.
 					\end{enumerate}
-					Affinché tale formalismo venga seguito correttamente, per fare riferimento a una data si deve utilizzare il comando \LaTeX \textbackslash date{giorno}{mese}{anno}. Esso garantisce la corretta scrittura delle date.
+					Affinché tale formalismo venga seguito correttamente, per fare riferimento a una data si deve utilizzare il comando \LaTeX \textbackslash insdate\{giorno\}\{mese\}\{anno\}. Esso garantisce la corretta scrittura delle date.
 				\subparagraph{Orari}
 					Gli orari devono essere espressi seguendo il formalismo indicato dallo standard [ISO 8601]: HH-MM. Tale formalismo va interpretato nel seguente modo:
 					\begin{enumerate}
 						\item HH rappresenta le ore (formato 24 ore);
 						\item MM rappresenta i minuti.
 					\end{enumerate}
-					Affinché tale formalismo venga seguito correttamente, per fare riferimento a un orario si deve utilizzare il comando \LaTeX \textbackslash time{ore}{minuti}. Esso garantisce la corretta scrittura degli orari.
+					Affinché tale formalismo venga seguito correttamente, per fare riferimento a un orario si deve utilizzare il comando \LaTeX \textbackslash instime\{ore\}\{minuti\}. Esso garantisce la corretta scrittura degli orari.
 				\subparagraph{Indirizzi web}
-					Per fare riferimento a un sito web è necessario utilizzare il comando \LaTeX apposito: \textbackslash uri{nome\_uri}. Esso garantisce la corretta scrittura del sito web secondo le norme seguenti:
+					Per fare riferimento a un sito web è necessario utilizzare il comando \LaTeX apposito: \textbackslash uri\{nome\_uri\}. Esso garantisce la corretta scrittura del sito web secondo le norme seguenti:
 					\begin{itemize}
 						\item si adotta lo stile monospace;
 						\item il testo è formattato tramite il colore blu.
 					\end{itemize}
 				\subparagraph{Path}
-					Per fare riferimento a un path è necessario utilizzare il comando \LaTeX apposito: \textbackslash path{percorso}. Esso garantisce la corretta scrittura del path secondo le norme seguenti:
+					Per fare riferimento a un path è necessario utilizzare il comando \LaTeX apposito: \textbackslash path\{percorso\}. Esso garantisce la corretta scrittura del path secondo le norme seguenti:
 					\begin{itemize}
 						\item si adotta lo stile monospace.
 					\end{itemize}
@@ -257,7 +257,7 @@
 						\item si adotta lo stile corsivo;
 						\item il nome del documento va racchiuso tra virgolette inglesi (aperte: “; chiuse:”).
 					\end{itemize}
-					Se si vuole includere il numero nella forma vX.Y che indica l’ultima versione del documento si deve utilizzare il comando \LaTeX \textbackslash lastversion{}.
+					Se si vuole includere il numero nella forma X.Y.Z che indica l’ultima versione del documento si deve utilizzare il comando \LaTeX \textbackslash lastversion.
 				\subparagraph{Nomi dei file}
 					Quando si fa riferimento a un file senza indicarne il percorso si seguono le seguenti norme:
 					\begin{itemize}
@@ -277,9 +277,9 @@
 						\item si adotta lo stile grassetto.
 					\end{itemize}
 				\subparagraph{Nome del gruppo}
-					Quando si fa riferimento al nome del gruppo è necessario utilizzare il comando \LaTeX apposito: \textbackslash groupname{}. Esso garantisce la corretta scrittura del nome del gruppo.
+					Quando si fa riferimento al nome del gruppo è necessario utilizzare il comando \LaTeX apposito: \textbackslash groupname. Esso garantisce la corretta scrittura del nome del gruppo.
 				\subparagraph{Nome del progetto}
-					Quando si fa riferimento al nome del progetto è necessario utilizzare il comando \LaTeX apposito: \textbackslash projectname{}. Esso garantisce la corretta scrittura del nome del gruppo.
+					Quando si fa riferimento al nome del progetto è necessario utilizzare il comando \LaTeX apposito: \textbackslash projectname. Esso garantisce la corretta scrittura del nome del gruppo.
 				%\subparagraph{Nome del proponente}
 				%	Quando si fa riferimento al proponente è necessario utilizzare il comando \LaTeX apposito: \textbackslash proponente{}. Esso garantisce la corretta scrittura del suo nome.
 				%\subparagraph{Nome del committente}
