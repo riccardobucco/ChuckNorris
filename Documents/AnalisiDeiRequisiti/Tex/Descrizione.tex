@@ -1,0 +1,34 @@
+\section{Descrizione generale}
+
+
+\subsection{Obiettivi del prodotto}
+Norris è un framework per node.js che permette la creazione ad alto livello di grafici visualizzabili tramite un browser. Norris dispone inoltre di alcune API per aggiornare i grafici in tempo reale attraverso dei WebSocket, senza dover effettuare una nuova richiesta HTTP al webserver.
+
+
+\subsection{Funzioni del prodotto}
+Il framework svolge principalmente due funzioni:
+\begin{itemize}
+	\item Creazione di un grafico di tipo:
+	\begin{description}
+		\item[Bar chart] Il grafico \emph{bar chart} è il grafico a barre. L'unico aggiornamento consentito è quello in place;
+		\item[Line chart] Il grafico \emph{line chart} è il grafico a linea. Consente gli aggiornamenti in place e stream;
+		\item[Map chart] Il grafico \emph{map chart} è una mappa geografica con rappresentati dei dati in sovraimpressione. Consente gli aggiornamenti in place e movie;
+		\item[Table] Il grafico \emph{table} è una rappresentazioni di dati in forma tabellare. Consente gli aggiornamenti in place e stream.
+	\end{description}
+	\item Aggiornamento del grafico di tipo:
+	\begin{description}
+		\item[In place] I nuovi valori sostituiscono quelli vecchi;
+		\item[Stream] I nuovi dati si aggiungono a quelli vecchi;
+		\item[Movie] Vengono aggiunti nuovi dati e i valori dei vecchi dati possono essere modificati.
+	\end{description}
+\end{itemize}
+
+
+\subsection{Caratteristiche degli utenti}
+Il prodotto è rivolto a tutti gli sviluppatori di node.js con conoscenza del framework express.js
+
+\subsection{Piattaforma di esecuzione}
+Il framework è scritto in node.js e funziona in qualsiasi piattaforma dove sia presente l'interprete.
+
+\subsection{Vincoli generali}
+Per la corretta visualizzazione dei grafici è richiesto \emph{Google Chrome} v38.0.X o superiori oppure \emph{Mozilla Firefox} v32.X o superiori.

@@ -1,4 +1,5 @@
-DOCUMENTI = NormeDiProgetto
+DOCUMENTI =	NormeDiProgetto \
+		AnalisiDeiRequisiti
 
 
 all: $(DOCUMENTI)
@@ -18,7 +19,10 @@ $(DOCUMENTI): FORCE
 	
 
 clean: FORCE
+	@ #file latex autogenerati
+	@ rm -f */*.tex
 	@ #file generati da pdflatex
-	@ $(foreach doc, $(DOCUMENTI), rm -f $(doc)/$(doc).tex $(doc)/*.aux $(doc)/*.out $(doc)/*.toc $(doc)/*.log $(doc)/*.pdf)
+	@ rm -f */*.out */*.log */*.aux */*.toc */*.lof */*.lot
 
 FORCE:
+
