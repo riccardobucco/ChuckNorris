@@ -1,7 +1,5 @@
 
 #pdflatex files
-Documents/*/*.tex
-Documents/*/*.pdf
 **/*.aux
 **/*.toc
 **/*.lof
