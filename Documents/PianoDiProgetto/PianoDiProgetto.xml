@@ -9,26 +9,13 @@
 
 	<include>
 		<name>Introduzione</name>
-	</include>
-
-	<changes>
-		<version>
-			<id>0.0.1</id>
-			<date>2014-12-30</date>
-			<author>autore</author>
-			<role>ruolo</role>
-			<description>descrizione</description>
-		</version>
-	</changes>
-	
-	<include>
 		<name>Organigramma</name>
 	</include>
 
 	<changes>
 		<version>
 			<id>0.0.1</id>
-			<date>2015-01-02</date>
+			<date>2014-12-30</date>
 			<author>autore</author>
 			<role>ruolo</role>
 			<description>descrizione</description>
