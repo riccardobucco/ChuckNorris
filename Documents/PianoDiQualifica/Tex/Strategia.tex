@@ -1,0 +1,142 @@
+% !TEX encoding = UTF-8 Unicode
+
+\section{Visione generale della strategia}
+\subsection{Tecniche di controllo qualità di processo}
+	Per qualità di processo si intende la quantificazione del valore di ciò che è stato fatto. Per ottenere la qualità di processo viene utilizzato il principio di miglioramento continuo PDCA, da cui deriva un miglioramento di tutti i processi e quindi dei prodotti.
+	In particolare i processi vengono definiti in modo da poterli controllare più facilmente e con obiettivi di efficacia, efficienza ed esperienza (in questo caso il migioramento è correttivo, deriva dalla comprensione degli errori).
+	Il controllo dell'andamento della qualità dei processi può avvenire, in modo indiretto, attraverso il controllo, più pratico e veloce, della qualità dei prodotti, inoltre ...
+\subsection{Tecniche di controllo qualità di prodotto}
+	Per ottenere un prodotto con le qualità indicate nella sezione 2 viene effettuato un corretto controllo di qualità al fine di rimuovere ogni possibile causa di alterazione del prodotto. Tale metodo di natura preventiva è chiamato Quality Assurance.
+	Una volta creati, i diversi componenti del prodotto finale verranno testati per garantire che il loro funzionamento risulti deterministico.
+	A conclusione delle attività di controllo della qualità di prodotto verrà effettuata l'attività di validazione del framework, che confermerà se i requisiti saranno stati rispettati o meno.
+\subsection{Organizzazione}
+	E' stato deciso di organizzare la strategia di verifica sulla base  di verifiche delle diverse attività del processo di sviluppo.
+	...
+	Il compito di effettuare le verifiche, personalmente e attraverso gli strumenti individuati, spetterà al verificatore in carica nei momenti definiti dal Responsabile di Progetto.
+	L'attività di verifica si estenderà sulle attività di processo in questo modo:
+	\begin{itemize}
+		\item stesura dei documenti (ci si riferisce ad ogni documento esterno redatto durante lo svolgimento del progetto):
+			\begin{itemize}
+				\item controllo ortografico con Aspell;
+				\item controllo lessicale attraverso l'attenta rilettura dei documenti;
+				\item controllo dei contenuti attraverso la rilettura accurata dei documenti;
+				\item controllo del rispetto delle regole individuate nel documento "Norme di Progetto \lastversion".
+			\end{itemize}
+		\item individuazione e analisi dei requisiti:
+			\begin{itemize}
+				\item controllo delle caratteristiche di essenzialità e completezza dei requisiti attraverso l'utilizzo di un'applicazione web appositamente creata per il tracciamento dei requisiti
+			\end{itemize}
+		\item progettazione architetturale:
+			\begin{itemize}
+				\item la qualità della fase di progettazione architetturale verrà garantita dal controllo del tracciamento bidirezionale dei requisiti (fonte-requisito, requisito-fonte) e della corretta mappatura dei requisiti nelle parti del sistema.
+			\end{itemize}
+		\item progettazione di dettaglio dei requisiti che si è deciso di implementare: 
+			\begin{itemize}
+				\item ???
+			\end{itemize}
+		\item codifica: 
+			\begin{itemize}
+				\item la qualità nella fase di implementazione del codice verrà garantita aderendo strettamante alle direttive dei progettisti e attuando test dei diversi componenti realizzati per garantirne il corretto funzionamento, singolarmente e in modo aggregato
+			\end{itemize}
+		\item validazione:
+			\begin{itemize}
+				\item nella fase di validazione verrà effettuato un test finale per la verifica di tutti i requisiti obbligatori individuati
+			\end{itemize}
+	\end{itemize}
+	\subsection{Pianificazione delle scadenze temporali}
+	L'attività di controllo della qualità deve essere svolta per garantire la sufficienza dei risultati prodotti, in modo da dare la possibilità di rispettare le scadenze fissate dal committente.
+	Tali scadenze si individuano nelle revisioni di seguito riportate:
+		\begin{itemize}
+			\item Revisione dei Requisiti: \insdate{16}{02}{2015} (revisione formale);
+			\item[Revisione di Progettazione]:\insdate{24}{04}{2015} (revisione di progresso);
+			\item[Revisione di Qualifica]:\insdate{29}{05}{2015} (revisione di progresso);
+			\item[Revisione di Accettazione]:\insdate{18}{06}{2015} (revisione formale).
+		\end{itemize}
+	
+	\subsection{Responsabilità}
+	E' totalmente a carico del Responsabile di Progetto la responsabilità di accertare il corretto svolgimento delle attività di controllo della qualità e il loro esito.
+	L'aggiornamento e il controllo dell'ambiente di sviluppo, nonchè del documento "Norme di Progetto" è a carico degli Amministratori di Sistema.
+	\subsection{Risorse}
+	\subsubsection{Risorse necessarie}
+	La realizzazione del progetto Norris necessita di risorse umane e tecnologiche.
+	\paragraph{Risorse umane}
+		Le risorse umane impiegate, intese come figure professionali, sono indicate e definite nel documento "Norme di Progetto x.y.z" alla sottosezione "Ruoli di progetto".
+	\paragraph{Risorse tecnologiche}
+		Le risorse tecnologiche, software e hardware, sono tutti gli strumenti necessari allo svolgimento efficace ed efficiente del progetto in tutte le sue componenti, dalla documentazione allo codifica, dalla verifica al coordinamento.
+		\subparagraph{Risorse software}
+		Di esse fanno parte:
+			\begin{itemize}
+				\item software per la documentazione in formato LATEX;
+				\item software per la creazione di diagrammi UML;
+				\item IDE per lo sviluppo nei linguaggi di programmazione indicati nel capitolato;
+				\item script per l'automazione di attività di verifica;
+				\item software per l'analisi del codice;
+				\item software per l'automazione dei test.
+			\end{itemize}
+		\subparagraph{Risorse hardware}
+			\begin{itemize}
+				\item Computer, fissi o portatili, sufficentemente potenti da poter supportare tutte le risorse software necessarie.
+			\end{itemize}
+	\subsubsection{Risorse disponibili}
+	Le risorse umane derivano dalla disponibilità dei membri del gruppo.
+	\paragraph{Risorse software}
+		\begin{itemize}
+			\item Gli script per l'automazione delle attività di verifica sono prodotti autonomamente dal team;
+			\item I software necessari alla documentazione nelle diverse fasi di avanzamento  del progetto e alla fase di sviluppo sono di distribuzione open-source e in possesso di ogni membro del team.
+		\end{itemize}
+	\paragraph{Risorse hardware}
+		\begin{itemize}
+			\item Ogni membro del team possiede almeno un computer portatile con il sistema operativo comune individuato;
+			\item Il team di sviluppo si appoggia, inoltre, alle risorse hardware del Servizio Calcolo del dipartimento di Matematica Pura e Applicata dell'Università degli studi di Padova, con sede in via Trieste, 63.
+		\end{itemize}
+	\subsection Strumenti
+	Gli strumenti utilizzati dal team per rendere la realizzazione del progetto il più efficace ed efficiente possibile sono indicati nel documento "Norme di progetto \lastversion" alla sezione "Ambiente di sviluppo".
+	\subsection Tecniche di analisi	
+	Per poter determinare il livello di qualità del prodotto, rispetto agli obiettivi sopra indicati, il team di sviluppo utilizza diversi tipi di tecniche di analisi dei dati.
+	Le tecniche di analisi si possono suddividere in due grandi categorie:
+	\begin{description}
+		\item Tecniche di analisi dinamica: questo tipo di tecniche analizzano misurazioni effettuate durante l'esecuzione di un programma, e consentono di determinare attributi di qualità come l'efficienza e l'affidabilità. Nello specifico, di questa categoria faranno parte i test per la determinazione del tempo di latenza dei dati.
+		\item Tecniche di analisi statica: questo tipo di tecniche analizzano misurazioni relative a caratteristiche del progetto, del codice o della documentazione, e consentono di determinare il livello di attributi di qualità come la comprensibilità, la manutenibilità e la complessità. I metodi di acquisizione degli indici da analizzare sono:
+		\begin{itemize}
+			\item Walkthrough, cioè la lettura dell'oggetto della misurazione per cercare qualunque possibile errore;
+		= 	\item Inspection, cioè la lettura mirata dell'oggetto della misurazione alla ricerca di errori ritenuti più probabili e frequenti.
+		\end{itemize}
+	\end{description}
+	\subsection{Misure e metriche}
+	Affinchè la qualità sia predittiva, è necessario che il processo di verifica sia quantificabile, e pertanto si definiscono delle metriche, cioè un sistema di misurazione formato da misure e criteri per valutarle.
+	Ci sono due tipi di range all'interno dei quali si collocheranno i valori delle misurazioni:
+	\begin{itemize}
+		\item Range di accettazione: questi valori saranno ammessi per l'accettazione del prodotto
+		\item Range ottimale: questi sono i valori ottimali in cui dovrebbe collocarsi la misurazione
+	\end{itemize}
+	\subsubsection{Metriche per i processi}
+		Per il controllo della qualità dei processi è stato deciso di adottare il modello CMM. Questo modello ha lo scopo di migliorare i processi e, più in generale, di aiutare una organizzazione a migliorare le sue prestazioni.
+		Per ogni processo vengono valutati i livelli di "Capability" e "Maturity" cioè, rispettivamente, la misura dell'adeguatezza del processo  rispetto agli scopi per cui è stato definito e il grado di consolidamento di un processo all'interno dell'organizzazione. I valori possono oscillare tra 1 e 5.
+		La scelta del team è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del team di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in quanto, nella sua versione pura, non prevede il consolidamento delle best practice.
+		
+		I range stabiliti per questa metrica sono:
+		\begin{itemize}
+			\item Range di accettazione: 3 - 5;
+			\item Range ottimale: 4 - 5;
+		\end{itemize}	
+	\subsubsection{Metriche per i documenti}
+		Per il controllo della qualità dei documenti è stato deciso di adottare l'indice Gulpease, un indice di leggibilità del testo tarato sulla lingua italiana.
+		Questo particolare indice si basa sulla lunghezza della parola e sulla lunghezza della frase rispetto al numero di lettere.
+		
+			Ind. Gulpease = 89 + (300*#frasi - 10*#lettere)/#parole
+			
+		Il risultato è compreso tra 0 e 100, dove la leggibilità è direttamente proporzionale al valore.
+		Tipicamente vengono associate le seguenti soglie dell'indice Gulpease al livello di istruzione:
+		\begin{itemize}
+			\item inferiore a 80: bassa leggibilità per chi ha la licenza elementare;
+			\item inferiore a 60: bassa leggibilità per chi ha la licenza media;
+			\item inferiore a 40: bassa leggibilità per chi ha la licenza superiore.
+		\end{itemize}
+		
+		I range stabiliti per questa metrica, in considerazione del fatto che la documentazione si considera destinata a persone sufficientemente competenti, sono:
+		\begin{itemize}
+			\item Range di accettazione: 35 - 100;
+			\item Range ottimale: 45 - 100.
+		\end{itemize}
+	\subsubsection{Metriche del codice}
+		A questo punto dello sviluppo del progetto, il team non è ancora pronto per indicare delle metriche adeguate per il controllo della qualità del codice, ma si riserva di indicare tali metriche in fase di progettazione.
