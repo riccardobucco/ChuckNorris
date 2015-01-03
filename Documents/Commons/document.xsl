@@ -9,12 +9,21 @@
     %macro definitions
     \newcommand{\groupname}{Kaizen Team}
     \newcommand{\projectname}{Norris}
+    \newcommand{\fullprojectname}{\projectname : Real-time Business Intelligence}
     \newcommand{\doctitle}{<xsl:value-of select="title"/>}
     \newcommand{\lastversion}{<xsl:value-of select="changes/version[1]/id"/>}
     \newcommand{\insdate}[3]{#3-#2-#1}
     \newcommand{\instime}[2]{#1-#2}
     \newcommand{\uri}[1]{\textcolor{blue}{\texttt{#1}}}
     \newcommand{\path}[1]{\texttt{#1}}
+    \newcommand{\role}[1]{\textit{#1}}
+    \newcommand{\doc}[1]{\textit{“#1”}}
+    \newcommand{\file}[1]{\textit{“#1”}}
+    \newcommand{\rev}[1]{\texttt{#1}}
+    \newcommand{\phase}[1]{\texttt{#1}}
+    \newcommand{\proponente}{Maccagnan Alessandro}
+    \newcommand{\committente}{Vardanega Tullio}
+
 
     %package include
     \usepackage[margin=2cm]{geometry}
