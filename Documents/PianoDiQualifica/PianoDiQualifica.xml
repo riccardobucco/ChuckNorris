@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<document>
+	<title>Piano di Qualifica</title>
+	<type>Esterno</type>
+	<redactedby>redazione</redactedby>
+	<verifiedby>verifica</verifiedby>
+	<approvedby>approvazione</approvedby>
+
+	<include>
+		<name>Introduzione</name>
+		<name>Qualita</name>
+		<name>Strategia</name>
+	</include>
+
+	<changes>
+		<version>
+			<id>0.0.1</id>
+			<date>2014-01-03</date>
+			<author>Pavanello Fabio Matteo</author>
+			<role>ruolo</role>
+			<description>Prima stesura documento</description>
+		</version>
+	</changes>
+</document>
