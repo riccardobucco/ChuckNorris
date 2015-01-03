@@ -1,6 +1,7 @@
 DOCUMENTI =	NormeDiProgetto \
-			AnalisiDeiRequisiti \
-			PianoDiProgetto
+		AnalisiDeiRequisiti \
+		PianoDiProgetto \
+		PianoDiQualifica
 
 
 all: $(DOCUMENTI)
