@@ -1,6 +1,6 @@
 DOCUMENTI =	NormeDiProgetto \
-		AnalisiDeiRequisiti \
-		PianoDiProgetto
+			AnalisiDeiRequisiti \
+			PianoDiProgetto
 
 
 all: $(DOCUMENTI)
@@ -14,10 +14,12 @@ $(DOCUMENTI): FORCE
 	@ xsltproc -o $@/$@.tex Commons/document.xsl $@/$@.xml
 
 	@ #compilazione file latex
-	@ export TEXINPUTS=":Commons/:$@/"; pdflatex -output-directory $@ $@/$@.tex
-	@ export TEXINPUTS=":Commons/:$@/"; pdflatex -output-directory $@ $@/$@.tex > /dev/null
-	@ export TEXINPUTS=":Commons/:$@/"; pdflatex -output-directory $@ $@/$@.tex > /dev/null
-	
+	@ make $@/$@.pdf
+
+%.pdf:	FORCE
+	@ export TEXINPUTS=":Commons/"; pdflatex -output-directory `dirname $*` `dirname $*`.tex
+	@ export TEXINPUTS=":Commons/"; pdflatex -output-directory `dirname $*` `dirname $*`.tex > /dev/null
+	@ export TEXINPUTS=":Commons/"; pdflatex -output-directory `dirname $*` `dirname $*`.tex > /dev/null
 
 clean: FORCE
 	@ #file latex autogenerati
@@ -26,4 +28,3 @@ clean: FORCE
 	@ rm -f */*.out */*.log */*.aux */*.toc */*.lof */*.lot
 
 FORCE:
-
