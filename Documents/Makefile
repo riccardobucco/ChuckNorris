@@ -9,10 +9,10 @@ all: $(DOCUMENTI)
 
 $(DOCUMENTI): FORCE
 	@ #validazione schema
-	@ xmllint --noout --schema Commons/document.xsd $@/$@.xml
+	@ xmllint --noout --schema Commons/Document.xsd $@/$@.xml
 
 	@ #creazione file latex
-	@ xsltproc -o $@/$@.tex Commons/document.xsl $@/$@.xml
+	@ xsltproc -o $@/$@.tex Commons/Document.xsl $@/$@.xml
 
 	@ #compilazione file latex
 	@ make $@/$@.pdf
