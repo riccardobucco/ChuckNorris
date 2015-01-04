@@ -4,7 +4,7 @@
   <xsl:output method="text"/>
   
   <xsl:template match="/document">
-    \documentclass[12pt,a4paper]{article}
+    \documentclass[12pt,a4paper,twoside]{article}
 
     %macro definitions
     \newcommand{\groupname}{Kaizen Team}
@@ -44,12 +44,14 @@
     \setcounter{secnumdepth}{5}
 
     %fancyhdr config
-    %\lhead{\colorbox{blue}{ciao}}
-    %\chead{\colorbox{blue}}
-    %\rhead{\colorbox{blue}}
-    \lfoot{\doctitle \\ v\lastversion}
-    \cfoot{}
-    \rfoot{\thepage/\pageref{LastPage}}
+    \fancyhead{}
+    \fancyhead[RE,LO]{\includegraphics[scale=0.05]{Pics/Logo}}
+    \fancyhead[RO,LE]{\doctitle}
+
+    \fancyfoot{}
+    \fancyfoot[C]{\thepage}
+    
+    
     
 
 
