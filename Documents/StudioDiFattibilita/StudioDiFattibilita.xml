@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<document>
+	<title>Studio di Fattibilit\'{a}</title>
+	<type>Interno</type>
+	<redactedby>redazione</redactedby>
+	<verifiedby>verifica</verifiedby>
+	<approvedby>approvazione</approvedby>
+
+	<include>
+		<name>Introduzione</name>
+		<name>StudioDiFattibilitaC3</name>
+		<name>StudioDiFattibilitaAltriCapitolati</name>
+	</include>
+
+	<changes>
+		<version>
+			<id>0.0.1</id>
+			<date>2014-12-18</date>
+			<author>autore</author>
+			<role>ruolo</role>
+			<description>descrizione</description>
+		</version>
+	</changes>
+</document>

@@ -1,7 +1,8 @@
 DOCUMENTI =	NormeDiProgetto \
 		AnalisiDeiRequisiti \
 		PianoDiProgetto \
-		PianoDiQualifica
+		PianoDiQualifica \
+		StudioDiFattibilita \
 
 
 all: $(DOCUMENTI)
