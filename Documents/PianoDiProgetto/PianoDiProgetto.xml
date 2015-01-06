@@ -8,17 +8,18 @@
 	<approvedby>approvazione</approvedby>
 
 	<include>
-		<name>Introduzione</name>
-		<name>Organigramma</name>
+        <name>Introduzione</name>
+        <name>Pianificazione</name>
+        <name>Organigramma</name>
 	</include>
 
 	<changes>
 		<version>
 			<id>0.0.1</id>
 			<date>2014-12-30</date>
-			<author>Moretto Alessandro, Rubin Marco</author>
-			<role>Responsabile</role>
-			<description>Creazione documento</description>
+			<author>autore</author>
+			<role>ruolo</role>
+			<description>descrizione</description>
 		</version>
 	</changes>
 </document>
