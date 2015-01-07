@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Questo script restituisce l'indice gulpease del file passato come parametro
+
 if [ -z $1 ]
 then
 	exit 1
