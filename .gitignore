@@ -10,6 +10,7 @@ Documents/*/*.pdf
 
 #other files
 **/*.log
+**/*~
 
 #hidden files
 **/.*
