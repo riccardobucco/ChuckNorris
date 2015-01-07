@@ -6,24 +6,6 @@
   <xsl:template match="/document">
     \documentclass[12pt,a4paper,twoside]{article}
 
-    %macro definitions
-    \newcommand{\groupname}{Kaizen Team}
-    \newcommand{\projectname}{Norris}
-    \newcommand{\fullprojectname}{\projectname : Real-time Business Intelligence}
-    \newcommand{\doctitle}{<xsl:value-of select="title"/>}
-    \newcommand{\lastversion}{<xsl:value-of select="changes/version[1]/id"/>}
-    \newcommand{\insdate}[3]{#3-#2-#1}
-    \newcommand{\instime}[2]{#1-#2}
-    \newcommand{\uri}[1]{\textcolor{blue}{\texttt{#1}}}
-    \newcommand{\path}[1]{\texttt{#1}}
-    \newcommand{\role}[1]{\textit{#1}}
-    \newcommand{\doc}[1]{\textit{“#1”}}
-    \newcommand{\file}[1]{\textit{“#1”}}
-    \newcommand{\rev}[1]{\texttt{#1}}
-    \newcommand{\phase}[1]{\texttt{#1}}
-    \newcommand{\proponente}{Maccagnan Alessandro}
-    \newcommand{\committente}{Vardanega Tullio}
-
 
     %package include
     \usepackage[margin=2cm]{geometry}
@@ -36,6 +18,26 @@
     \usepackage{tabu}
     \usepackage{hyperref}
     \usepackage{color}
+
+
+    %macro definitions
+    \newcommand{\groupname}{Kaizen Team}
+    \newcommand{\projectname}{Norris}
+    \newcommand{\fullprojectname}{\projectname : Real-time Business Intelligence}
+    \newcommand{\doctitle}{<xsl:value-of select="title"/>}
+    \newcommand{\lastversion}{<xsl:value-of select="changes/version[1]/id"/>}
+    \newcommand{\proponente}{Maccagnan Alessandro}
+    \newcommand{\committente}{Vardanega Tullio}
+
+    \newcommand{\insdate}[3]{#3-#2-#1}
+    \newcommand{\instime}[2]{#1-#2}
+    \newcommand{\insuri}[1]{\textcolor{blue}{\texttt{#1}}}
+    \newcommand{\inspath}[1]{\texttt{#1}}
+    \newcommand{\insrole}[1]{\textit{#1}}
+    \newcommand{\insdoc}[1]{\textit{“#1”}}
+    \newcommand{\insfile}[1]{\textit{“#1”}}
+    \newcommand{\insrev}[1]{\texttt{#1}}
+    \newcommand{\insphase}[1]{\texttt{#1}}
 
 
     %config
