@@ -7,8 +7,10 @@
 	<verifiedby>verifica</verifiedby>
 	<approvedby>approvazione</approvedby>
 
-	<include>
+    <include>
         <name>Introduzione</name>
+        <name>CicloDiVita</name>
+        <name>Scadenze</name>
         <name>Pianificazione</name>
         <name>Organigramma</name>
 	</include>
