@@ -20,11 +20,11 @@
 				\item controllo ortografico con Aspell;
 				\item controllo lessicale attraverso l'attenta rilettura dei documenti;
 				\item controllo dei contenuti attraverso la rilettura accurata dei documenti;
-				\item controllo del rispetto delle regole individuate nel documento "Norme di Progetto \lastversion".
+				\item controllo del rispetto delle regole individuate nel documento "\insdoc{Norme di Progetto v\lastversion{}}".
 			\end{itemize}
 		\item individuazione e analisi dei requisiti:
 			\begin{itemize}
-				\item controllo delle caratteristiche di essenzialità e completezza dei requisiti attraverso l'utilizzo di un'applicazione web appositamente creata per il tracciamento dei requisiti
+				\item controllo delle caratteristiche di essenzialità e completezza dei requisiti attraverso l'utilizzo di un'applicazione web appositamente creata per il tracciamento dei requisiti.
 			\end{itemize}
 		\item progettazione architetturale:
 			\begin{itemize}
@@ -36,31 +36,31 @@
 			\end{itemize}
 		\item codifica: 
 			\begin{itemize}
-				\item la qualità nella fase di implementazione del codice verrà garantita aderendo strettamante alle direttive dei progettisti e attuando test dei diversi componenti realizzati per garantirne il corretto funzionamento, singolarmente e in modo aggregato
+				\item la qualità nella fase di implementazione del codice verrà garantita aderendo strettamante alle direttive dei progettisti e attuando test dei diversi componenti realizzati per garantirne il corretto funzionamento, singolarmente e in modo aggregato.
 			\end{itemize}
 		\item validazione:
 			\begin{itemize}
-				\item nella fase di validazione verrà effettuato un test finale per la verifica di tutti i requisiti obbligatori individuati
+				\item nella fase di validazione verrà effettuato un test finale per la verifica di tutti i requisiti obbligatori individuati.
 			\end{itemize}
 	\end{itemize}
 	\subsection{Pianificazione delle scadenze temporali}
 	L'attività di controllo della qualità deve essere svolta per garantire la sufficienza dei risultati prodotti, in modo da dare la possibilità di rispettare le scadenze fissate dal committente.\\
 	Tali scadenze si individuano nelle revisioni di seguito riportate:
 		\begin{itemize}
-			\item Revisione dei Requisiti: \insdate{16}{02}{2015} (revisione formale);
-			\item[Revisione di Progettazione]:\insdate{24}{04}{2015} (revisione di progresso);
-			\item[Revisione di Qualifica]:\insdate{29}{05}{2015} (revisione di progresso);
-			\item[Revisione di Accettazione]:\insdate{18}{06}{2015} (revisione formale).
+			\item \rev{Revisione dei Requisiti}: \insdate{16}{02}{2015} (revisione formale);
+			\item \rev{Revisione di Progettazione}:\insdate{24}{04}{2015} (revisione di progresso);
+			\item \rev{Revisione di Qualifica}:\insdate{29}{05}{2015} (revisione di progresso);
+			\item \rev{Revisione di Accettazione}:\insdate{18}{06}{2015} (revisione formale).
 		\end{itemize}
 	
 	\subsection{Responsabilità}
-	E' totalmente a carico del Responsabile di Progetto la responsabilità di accertare il corretto svolgimento delle attività di controllo della qualità e il loro esito.\\
-	L'aggiornamento e il controllo dell'ambiente di sviluppo, nonchè del documento "Norme di Progetto" è a carico degli Amministratori di Sistema.
+	E' totalmente a carico del \role{Responsabile di Progetto} la responsabilità di accertare il corretto svolgimento delle attività di controllo della qualità e il loro esito.\\
+	L'aggiornamento e il controllo dell'ambiente di sviluppo, nonchè del documento "\insdoc{Norme di Progetto}" è a carico degli \role{Amministratori di Sistema}.
 	\subsection{Risorse}
 	\subsubsection{Risorse necessarie}
 	La realizzazione del progetto Norris necessita di risorse umane e tecnologiche.
 	\paragraph{Risorse umane}
-		Le risorse umane impiegate, intese come figure professionali, sono indicate e definite nel documento "Norme di Progetto x.y.z" alla sottosezione "Ruoli di progetto".
+		Le risorse umane impiegate, intese come figure professionali, sono indicate e definite nel documento "\doc{Norme di Progetto} \lastversion" alla sottosezione "Ruoli di progetto".
 	\paragraph{Risorse tecnologiche}
 		Le risorse tecnologiche, software e hardware, sono tutti gli strumenti necessari allo svolgimento efficace ed efficiente del progetto in tutte le sue componenti, dalla documentazione allo codifica, dalla verifica al coordinamento.
 		\subparagraph{Risorse software}
@@ -90,7 +90,7 @@
 			\item Il team di sviluppo si appoggia, inoltre, alle risorse hardware del Servizio Calcolo del dipartimento di Matematica Pura e Applicata dell'Università degli studi di Padova, con sede in via Trieste, 63.
 		\end{itemize}
 	\subsection Strumenti
-	Gli strumenti utilizzati dal team per rendere la realizzazione del progetto il più efficace ed efficiente possibile sono indicati nel documento "Norme di progetto \lastversion" alla sezione "Ambiente di sviluppo".
+	Gli strumenti utilizzati dal team per rendere la realizzazione del progetto il più efficace ed efficiente possibile sono indicati nel documento "\insdoc{Norme di progetto v\lastversion{}}" alla sezione "Ambiente di sviluppo".
 	\subsection Tecniche di analisi	
 	Per poter determinare il livello di qualità del prodotto, rispetto agli obiettivi sopra indicati, il team di sviluppo utilizza diversi tipi di tecniche di analisi dei dati.\\
 	Le tecniche di analisi si possono suddividere in due grandi categorie:
@@ -98,16 +98,16 @@
 		\item Tecniche di analisi dinamica: questo tipo di tecniche analizzano misurazioni effettuate durante l'esecuzione di un programma, e consentono di determinare attributi di qualità come l'efficienza e l'affidabilità. Nello specifico, di questa categoria faranno parte i test per la determinazione del tempo di latenza dei dati.
 		\item Tecniche di analisi statica: questo tipo di tecniche analizzano misurazioni relative a caratteristiche del progetto, del codice o della documentazione, e consentono di determinare il livello di attributi di qualità come la comprensibilità, la manutenibilità e la complessità. I metodi di acquisizione degli indici da analizzare sono:
 		\begin{itemize}
-			\item Walkthrough, cioè la lettura dell'oggetto della misurazione per cercare qualunque possibile errore;
-		= 	\item Inspection, cioè la lettura mirata dell'oggetto della misurazione alla ricerca di errori ritenuti più probabili e frequenti.
+			\item \textbf{walkthrough}, cioè la lettura dell'oggetto della misurazione per cercare qualunque possibile errore;
+		= 	\item \textbf{inspection}, cioè la lettura mirata dell'oggetto della misurazione alla ricerca di errori ritenuti più probabili e frequenti.
 		\end{itemize}
 	\end{description}
 	\subsection{Misure e metriche}
 	Affinchè la qualità sia predittiva, è necessario che il processo di verifica sia quantificabile, e pertanto si definiscono delle metriche, cioè un sistema di misurazione formato da misure e criteri per valutarle.\\
 	Ci sono due tipi di range all'interno dei quali si collocheranno i valori delle misurazioni:
 	\begin{itemize}
-		\item Range di accettazione: questi valori saranno ammessi per l'accettazione del prodotto
-		\item Range ottimale: questi sono i valori ottimali in cui dovrebbe collocarsi la misurazione
+		\item range di accettazione: questi valori saranno ammessi per l'accettazione del prodotto
+		\item range ottimale: questi sono i valori ottimali in cui dovrebbe collocarsi la misurazione
 	\end{itemize}
 	\subsubsection{Metriche per i processi}
 		Per il controllo della qualità dei processi è stato deciso di adottare il modello CMM. Questo modello ha lo scopo di migliorare i processi e, più in generale, di aiutare una organizzazione a migliorare le sue prestazioni.\\
@@ -136,8 +136,8 @@
 		
 		I range stabiliti per questa metrica, in considerazione del fatto che la documentazione si considera destinata a persone sufficientemente competenti, sono:
 		\begin{itemize}
-			\item Range di accettazione: 35 - 100;
-			\item Range ottimale: 45 - 100.
+			\item range di accettazione: 35 - 100;
+			\item range ottimale: 45 - 100.
 		\end{itemize}
 	\subsubsection{Metriche del codice}
 		A questo punto dello sviluppo del progetto, il team non è ancora pronto per indicare delle metriche adeguate per il controllo della qualità del codice, ma si riserva di indicare tali metriche in fase di progettazione.
