@@ -77,7 +77,7 @@
       \newpage
 
       <xsl:for-each select="include/name">
-      \input{Tex/<xsl:value-of select="."/>.tex}
+      \input{<xsl:value-of select="."/>.tex}
       </xsl:for-each>
 
     \end{document}
