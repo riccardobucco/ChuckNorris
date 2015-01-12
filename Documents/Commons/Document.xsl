@@ -18,6 +18,7 @@
     \usepackage{tabu}
     \usepackage{hyperref}
     \usepackage{color}
+    \usepackage{eurosym}
 
 
     %macro definitions
