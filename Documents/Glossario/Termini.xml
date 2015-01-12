@@ -1,13 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <terms>
-
-	<entry name="Termine5">
-		Descrizione bla bla bla
+	<entry name="Aggiornamento in place">
+		Questo tipo di aggiornamento sostituisce valori già presenti con valori nuovi e aggiornati.
 	</entry>
-
-	<entry name="Termine1">
-		Trallalalalalalala
+	<entry name="Aggiornamento in stream">
+		l’aggiornamento in stream aggiunge nuovi valori al grafico. Il grafico mantiene la visualizzazione dei dati già presenti aggiungendo nuove rappresentazioni grafiche dei nuovi dati aggiunti.
+	</entry>
+	<entry name="Aggiornamento movie">
+		Il metodo di aggiornamento movie, combina i due metodi in place|G| e stream|G|. Questo aggiornamento gestisce la transizione della rappresentazione del grafico in due momenti successivi.
+	</entry>
+	<entry name="Aspell">
+		Strumento di correzione ortografica multilingue.
+	</entry>
+	<entry name="API">
+		Acronimo di “Application Programming Interface”. Si tratta di procedure disponibili al programmatore utili per l'implementazione di un certo compito all’interno di un programma.
+	<entry>
+	<entry name="Bar Chart">
+		E' un grafico a barre rettangolari con lunghezza proporzionale al valore che rappresentano. Le barre possono essere orientate verticalmente od orizzontalmente. Questa tipologia di grafico utilizza barre orizzontali o verticali per mostrare confronti tra categorie. Un asse del grafico mostra le categorie specifiche confrontate, e l'altro asse rappresenta un valore discreto.
+	</entry>
+	<entry name="Best Practice">
+		Con "Best Practice" si intendono tutte quelle tecniche e modi di agire che, se applicate costantemente, portano a risultati migliori rispetto a quelli ottenuti se non venissero applicate. Le "Best Practice" sono in continua evoluzione perchè sono ampliate ogni volta che viene scoperto un miglioramento.
+	</entry>
+	<entry name="BitBucket">
+		E' un servizio web di hosting per lo sviluppo di progetti software che usa i sistemi di controllo di versione Git e Mercurial.
+	</entry>
+	<entry name="Browser">
+		Programma che consente di usufruire dei servizi di connettività in Internet, o di una rete di computer.
+	</entry>
+	<entry name="Capitolato">
+		Documento tecnico, in genere allegato ad un contratto di
+		appalto, che vi fa riferimento per definire in quella sede le specifiche tecniche delle opere che andranno ad eseguirsi per effetto del contratto stesso.
+	</entry>
+	<entry name="Chrome">
+		Browser web basato sul motore di ricerca Google.
+	</entry>
+	<entry name="Client">
+		Componente che accede ai servizi o alle risorse di un’altra componente detta server|G|.
+	</entry>
+	<entry name="Database">
+		È una base di dati, cioè un archivio o un insieme di archivi contenenti informazioni strutturate e collegate tra loro secondo un particolare modello logico
+		(relazionale, gerarchico, a oggetti, etc.), offrendo una gestione efficiente dei dati che vi sono contenuti.
+	<entry>
+	<entry name="Firefox">Browser web</entry>
+	<entry name="Framework">
+		un'architettura logica di supporto (spesso un'implementazione logica di un particolare design pattern) su cui un software può essere progettato e realizzato, spesso facilitandone lo sviluppo da parte del programmatore. Alla base di un framework c'è sempre una serie di librerie di codice utilizzabili in fase di linking con uno o più linguaggi di programmazione, spesso corredate da una serie di strumenti di supporto allo sviluppo del software, come ad esempio un IDE, un debugger o altri strumenti ideati per aumentare la velocità di sviluppo del prodotto finito. L'utilizzo di un framework impone dunque al programmatore una precisa metodologia di sviluppo del software.
+	</entry>
+	<entry name="Event-driven">
+		Il modello event-driven, o “programmazione ad eventi”, si basa su un concetto piuttosto semplice: si lancia una azione quando accade qualcosa. Ogni azione quindi risulta asincrona a differenza dei pattern di programmazione più comune in cui una azione succede ad un’altra solo dopo che essa è stata completata.
+	</entry>
+	<entry name="Express.js">
+		framework|G| di Node.js per applicazioni web, che offre una serie di funzionalità per le applicazioni web e mobile.
+	</entry>
+	<entry name="GitHub">
+		E' un servizio web di hosting per lo sviluppo di progetti software che usa il sistema di controllo di versione Git. GitHub offre diversi piani per repository privati sia a pagamento, sia gratuiti, molto utilizzati per lo sviluppo di progetti open-source.
+	</entry>
+	<entry name="Header">Intestazione</entry>
+	<entry name="HTTP">
+		L'HyperText Transfer Protocol (HTTP), letteralmente "protocollo di trasferimento di un ipertesto", è usato come principale sistema per la trasmissione d'informazioni sul web ovvero in un'architettura tipica client-server.
+		Le specifiche del protocollo sono gestite dal World Wide Web Consortium (W3C). Un server HTTP generalmente resta in ascolto delle richieste dei client sulla porta 80 usando il protocollo TCP a livello di trasporto.
+	</entry>
+	<entry name="Indice Gulpease">
+		L'Indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delleparole in lettere anziché in sillabe, semplificandone il calcolo automatico.
+	</entry>
+	<entry name="Issue">
+		è un’unità di lavoro per realizare un miglioramento in un progetto software. Un issue potrebbe essere un bug, una funzione richiesta, un compito, una documentazione mancante e così via.
+	<entry>
+	<entry name="Line Cgart">
+		E' un tipo di grafico che visualizza informazioni come una serie di punti di dati denominato 'marker' collegate da segmenti rettilinei. Si tratta di un tipo di base di grafici comuni in molti campi. È simile a un grafico a dispersione salvo che i punti di misurazione sono ordinate (tipicamente dal loro valore asse x) e unite con una linea spezzata. Line Chart mostrano come un dato particolare cambia ad intervalli uguali di tempo. Un grafico a linee è spesso utilizzato per visualizzare una tendenza nei dati su intervalli di tempo - una serie storica - così la linea è spesso tracciata cronologicamente.
+	</entry>
+	<entry name="Map Chart">
+		Questa tipologia di grafico è una mappa geografica con dati rappresentati in sovraimpressione. I dati possono essere rappresentati come forme geometriche colorate, come icone o come testo. Generalmente le forme geometriche e le icone possono essere selezionabili, così come la mappa può essere ingrandita o rimpicciolita a discrezione dell’utente. Le rappresentazioni dei dati cambiano contestualmente alla porzione di mappa visualizzata.
+	</entry>
+	<entry name="Middleware">
+		Insieme di programmi informatici che fungono da intermediari tra diverse applicazioni e componenti software. Sono spesso utilizzati come supporto per sistemi distribuiti complessi.
+	</entry>
+	<entry name="Server">
+		Componente o sottosistema informatico di elaborazione che fornisce, a livello logico e a livello fisico, un qualunque tipo di servizio ad altre componenti (tipicamente chiamate client|G|, cioè "cliente") che ne fanno richiesta attraverso una rete di computer, all'interno di un sistema informatico o direttamente in locale su un computer.
+	</entry>
+	<entry name="Table">
+		La rappresentazione dei dati a tabella è una comune griglia sulla quale vengono visualizzati i valori. Nella prima riga, o header|G|, vengono messe le etichette esplicative del tipo di dato colonnato mentre nelle varie righe sono elencati i vari dati.
+	</entry>
+	<entry name="Web Socket">
+		Tecnologia web che fornisce canali di comunicazione bidirezionali attraverso una singola connessione TCP. L'API del WebSocket è stata standardizzata dal W3C e il protocollo WebSocket è stato standardizzato dall'IETF.
 	</entry>
 
 </terms>
