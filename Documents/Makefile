@@ -2,10 +2,26 @@ DOCUMENTI =	NormeDiProgetto \
 		AnalisiDeiRequisiti \
 		PianoDiProgetto \
 		PianoDiQualifica \
-		StudioDiFattibilita \
+		StudioDiFattibilita
+
+all: $(DOCUMENTI) Glossario
 
 
-all: $(DOCUMENTI)
+Glossario: FORCE
+	@ #validazione schema
+	@ xmllint --noout --schema Commons/Document.xsd Glossario/Glossario.xml
+
+	@ #creazione file latex
+	@ xsltproc -o Glossario/Glossario.tex Commons/Document.xsl Glossario/Glossario.xml
+
+	@ #validazione schema
+	@ xmllint --noout --schema Glossario/Termini.xsd Glossario/Termini.xml
+
+	@ #creazione file latex
+	@ xsltproc -o Glossario/Termini.tex Glossario/Termini.xsl Glossario/Termini.xml
+
+	@ #compilazione file latex
+	@ make $@/$@.pdf
 
 
 $(DOCUMENTI): FORCE
@@ -18,7 +34,7 @@ $(DOCUMENTI): FORCE
 	@ #compilazione file latex
 	@ make $@/$@.pdf
 
-%.pdf:	FORCE
+%.pdf: FORCE
 	@ export TEXINPUTS=":Commons/"; pdflatex -output-directory `dirname $*` `dirname $*`.tex
 	@ export TEXINPUTS=":Commons/"; pdflatex -output-directory `dirname $*` `dirname $*`.tex > /dev/null
 	@ export TEXINPUTS=":Commons/"; pdflatex -output-directory `dirname $*` `dirname $*`.tex > /dev/null
