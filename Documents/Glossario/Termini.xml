@@ -60,14 +60,27 @@
 		L'HyperText Transfer Protocol (HTTP), letteralmente "protocollo di trasferimento di un ipertesto", è usato come principale sistema per la trasmissione d'informazioni sul web ovvero in un'architettura tipica client-server.
 		Le specifiche del protocollo sono gestite dal World Wide Web Consortium (W3C). Un server HTTP generalmente resta in ascolto delle richieste dei client sulla porta 80 usando il protocollo TCP a livello di trasporto.
 	</entry>
+	<entry name="IDE">
+		Un Integrated Development Environment, letteralmente ambiente di sviluppo integrato, fornisce un insieme di strumenti di ausilio alla programmazione quali un editor, un compilatore e/o
+interprete e un debugger
+	</entry>
 	<entry name="Indice Gulpease">
 		L'Indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delleparole in lettere anziché in sillabe, semplificandone il calcolo automatico.
 	</entry>
+	<entry name="Inspection">
+		Tecnica di analisi statica basata sulla lettura mirata dei documenti/codice in cerca di errori specifici.
+	<entry>
 	<entry name="Issue">
 		è un’unità di lavoro per realizare un miglioramento in un progetto software. Un issue potrebbe essere un bug, una funzione richiesta, un compito, una documentazione mancante e così via.
-	<entry>
+	</entry>
+	<entry name="Latex">
+		Si tratta di un linguaggio di markup, basato sul principio WYSIWYM (What You See Is What You Mean), e utilizzato per la composizione di testi. Si presta particolarmente alla stesura di documenti tecnici molto lunghi, in modo concorrente, da parte di persone diverse.
+	</entry>
 	<entry name="Line Cgart">
 		E' un tipo di grafico che visualizza informazioni come una serie di punti di dati denominato 'marker' collegate da segmenti rettilinei. Si tratta di un tipo di base di grafici comuni in molti campi. È simile a un grafico a dispersione salvo che i punti di misurazione sono ordinate (tipicamente dal loro valore asse x) e unite con una linea spezzata. Line Chart mostrano come un dato particolare cambia ad intervalli uguali di tempo. Un grafico a linee è spesso utilizzato per visualizzare una tendenza nei dati su intervalli di tempo - una serie storica - così la linea è spesso tracciata cronologicamente.
+	</entry>
+	<entry name="Mailing list">
+		Collezione di nomi ed indirizzi utilizzata per mandare messaggi multipli a diversi destinatari.
 	</entry>
 	<entry name="Map Chart">
 		Questa tipologia di grafico è una mappa geografica con dati rappresentati in sovraimpressione. I dati possono essere rappresentati come forme geometriche colorate, come icone o come testo. Generalmente le forme geometriche e le icone possono essere selezionabili, così come la mappa può essere ingrandita o rimpicciolita a discrezione dell’utente. Le rappresentazioni dei dati cambiano contestualmente alla porzione di mappa visualizzata.
@@ -75,11 +88,32 @@
 	<entry name="Middleware">
 		Insieme di programmi informatici che fungono da intermediari tra diverse applicazioni e componenti software. Sono spesso utilizzati come supporto per sistemi distribuiti complessi.
 	</entry>
+	<entry name="Milestone">
+		In italiano "Pietra miliare". Questo termine indica importanti traguardi in termini di tempo o di attività, che sanciscono una metrica di avanzamento del progetto.
+	</entry>
+	<entry name="Monospace">
+		Stile di scrittura che utilizza i caratteri monospaziati, cioè quei caratteri che, indipendentemente dalla lettera, occupano la stessa larghezza.
+	</entry>
+	<entry name="PDCA">
+		Il "Plan-Do-Check-Act", detto anche Ciclo di Deming o Ciclo di Miglioramento Continuo, è un metodo per perseguire un continuo miglioramento della qualità nei processi.
+	</entry>
+	<entry name="Prodotto">
+		Per prodotto, nei documenti del progetto Norris, si intende il risultato di una attività, sia esso un documento, del codice sorgente o un qualsiasi risultato verificabile.
+	</entry>
+	<entry name="Script">
+		Per "script" in informatica si intende un piccolo programma sequenziale, scritto in linguaggio interpretato, destinato all'automazione di attività ripetitive.
+	</entry
 	<entry name="Server">
-		Componente o sottosistema informatico di elaborazione che fornisce, a livello logico e a livello fisico, un qualunque tipo di servizio ad altre componenti (tipicamente chiamate client|G|, cioè "cliente") che ne fanno richiesta attraverso una rete di computer, all'interno di un sistema informatico o direttamente in locale su un computer.
+		Componente o sottosistema informatico di elaborazione che fornisce, a livello logico e a livello fisico, un qualunque tipo di servizio ad altre componenti (tipicamente chiamate client, cioè "cliente") che ne fanno richiesta attraverso una rete di computer, all'interno di un sistema informatico o direttamente in locale su un computer.
 	</entry>
 	<entry name="Table">
-		La rappresentazione dei dati a tabella è una comune griglia sulla quale vengono visualizzati i valori. Nella prima riga, o header|G|, vengono messe le etichette esplicative del tipo di dato colonnato mentre nelle varie righe sono elencati i vari dati.
+		La rappresentazione dei dati a tabella è una comune griglia sulla quale vengono visualizzati i valori. Nella prima riga, o header, vengono messe le etichette esplicative del tipo di dato colonnato mentre nelle varie righe sono elencati i vari dati.
+	</entry>
+	<entry name="Team">
+		Col termine Team, o con la sua traduzione italiana (Gruppo), nei documenti del progetto Norris si intendono le persone che fanno parte del Kaizen-Team.
+	</entry>
+	<entry name="UML">
+		L'"Unified Modelling Language" è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. Attraverso tale linguaggio è possibile definire i diagrammi dei casi d'uso, delle attività e delle classi.
 	</entry>
 	<entry name="Web Socket">
 		Tecnologia web che fornisce canali di comunicazione bidirezionali attraverso una singola connessione TCP. L'API del WebSocket è stata standardizzata dal W3C e il protocollo WebSocket è stato standardizzato dall'IETF.
