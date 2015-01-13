@@ -11,6 +11,7 @@
   		<xsd:element name="redactedby" type="xsd:string"/>
   		<xsd:element name="verifiedby" type="xsd:string"/>
   		<xsd:element name="approvedby" type="xsd:string"/>
+      <xsd:element name="distribution" type="xsd:string"/>
 
   		<xsd:element name="include">
   			<xsd:complexType>
@@ -20,7 +21,7 @@
   			</xsd:complexType>
   		</xsd:element>
 
-  		<xsd:element name="changes">
+      <xsd:element name="changes">
   			<xsd:complexType>
   				<xsd:sequence maxOccurs="unbounded">
   					<xsd:element name="version">
