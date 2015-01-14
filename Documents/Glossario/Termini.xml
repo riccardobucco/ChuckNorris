@@ -6,7 +6,7 @@
 	</entry>
 
 	<entry name="Aggiornamento movie">
-		L'aggiornamento movie combina i due metodi in place e stream, permettendo di gestire la transizione della rappresentazione del grafico in due momenti successivi. Questo metodo di aggiornamento permette di:
+		L'aggiornamento movie combina i due metodi di aggiornamento \insglo{in place} e \insglo{stream}, permettendo di gestire la transizione della rappresentazione del grafico in due momenti successivi. Questo metodo di aggiornamento permette di:
 		\begin{itemize}
 			\item sostituire i valori già rappresentati;
 			\item aggiungere nuovi valori al grafico;
@@ -15,7 +15,7 @@
 	</entry>
 
 	<entry name="Aggiornamento stream">
-		L’aggiornamento stream aggiunge nuovi valori al grafico. Il grafico mantiene la visualizzazione dei dati già presenti, aggiungendo nuove rappresentazioni grafiche per i nuovi dati aggiunti.
+		L’\insglo{aggiornamento stream} aggiunge nuovi valori al grafico. Il grafico mantiene la visualizzazione dei dati già presenti, aggiungendo nuove rappresentazioni grafiche per i nuovi dati aggiunti.
 	</entry>
 
 	<entry name="Aspell">
@@ -23,7 +23,7 @@
 	</entry>
 
 	<entry name="API">
-		Acronimo di "Application Programming Interface". Si tratta di procedure disponibili al programmatore, utili per l'implementazione di un certo compito all'interno di un programma.
+		Acronimo di "Application Programming Interface". Si tratta di \insglo{procedure} disponibili al programmatore, utili per l'implementazione di un certo compito all'interno di un programma.
 	</entry>
 
 	<entry name="Bar Chart">
@@ -35,7 +35,7 @@
 	</entry>
 
 	<entry name="BitBucket">
-		Servizio web di hosting per lo sviluppo di progetti software che usa i sistemi di controllo di versione Git e Mercurial.
+		Servizio web di hosting per lo sviluppo di progetti software che usa i sistemi di controllo di versione \insglo{Git} e \insglo{Mercurial}.
 	</entry>
 
 	<entry name="Browser">
@@ -47,11 +47,11 @@
 	</entry>
 
 	<entry name="Chrome">
-		Browser web sviluppato da Google.
+		\insglo{Browser} web sviluppato da Google.
 	</entry>
 
 	<entry name="Client">
-		Componente di un sistema informatico che accede ai servizi o alle risorse di un’altra componente del sistema, detta server.
+		Componente di un sistema informatico che accede ai servizi o alle risorse di un’altra componente del sistema, detta \insglo{server}.
 	</entry>
 
 	<entry name="Database">
@@ -61,10 +61,10 @@
 		 Software specificatamente progettato per l'analisi e l'eliminazione dei bug, ovvero errori di programmazione interni al codice di altri programmi.
 	</entry>
 
-	<entry name="Firefox">Browser web.</entry>
+	<entry name="Firefox">\insglo{Browser} web.</entry>
 
 	<entry name="Framework">
-		Architettura logica di supporto (spesso un'implementazione logica di un particolare design pattern) su cui un software può essere progettato e realizzato, spesso facilitandone lo sviluppo da parte del programmatore. Alla base di un framework c'è sempre una serie di librerie di codice utilizzabili in fase di linking con uno o più linguaggi di programmazione, spesso corredate da una serie di strumenti di supporto allo sviluppo del software, come ad esempio un IDE, un debugger o altri strumenti ideati per aumentare la velocità di sviluppo del prodotto finito. L'utilizzo di un framework impone dunque al programmatore una precisa metodologia di sviluppo del software.
+		Architettura logica di supporto (spesso un'implementazione logica di un particolare \insglo{design pattern}) su cui un software può essere progettato e realizzato, spesso facilitandone lo sviluppo da parte del programmatore. Alla base di un framework c'è sempre una serie di librerie di codice utilizzabili in fase di linking con uno o più linguaggi di programmazione, spesso corredate da una serie di strumenti di supporto allo sviluppo del software, come ad esempio un \insglo{IDE}, un \insglo{debugger} o altri strumenti ideati per aumentare la velocità di sviluppo del prodotto finito. L'utilizzo di un framework impone dunque al programmatore una precisa metodologia di sviluppo del software.
 	</entry>
 
 	<entry name="Event-driven">
@@ -72,21 +72,21 @@
 	</entry>
 
 	<entry name="Express.js">
-		Framework di Node.js che facilita la creazione di applicazioni web, fornendo una maggiore astrazione.
+		\insglo{Framework} di Node.js che facilita la creazione di applicazioni web, fornendo una maggiore astrazione.
 	</entry>
 
 	<entry name="GitHub">
-		Servizio web di hosting per lo sviluppo di progetti software che usa il sistema di controllo di versione Git. GitHub offre diversi piani per repository privati sia a pagamento, sia gratuiti, molto utilizzati per lo sviluppo di progetti open-source.
+		Servizio web di hosting per lo sviluppo di progetti software che usa il sistema di controllo di versione \insglo{Git}. GitHub offre diversi piani per repository privati sia a pagamento, sia gratuiti, molto utilizzati per lo sviluppo di progetti \insglo{open source}.
 	</entry>
 
 	<entry name="Header">Intestazione</entry>
 
 	<entry name="HTTP">
-		L'HyperText Transfer Protocol (HTTP), letteralmente "protocollo di trasferimento di un ipertesto", è usato come principale sistema per la trasmissione di informazioni sul web, ovvero in un'architettura tipica client-server. Le specifiche del protocollo sono gestite dal World Wide Web Consortium (W3C). Un server HTTP generalmente resta in ascolto delle richieste dei client sulla porta 80 usando il protocollo TCP a livello di trasporto.
+		L'HyperText Transfer Protocol (HTTP), letteralmente "protocollo di trasferimento di un ipertesto", è usato come principale sistema per la trasmissione di informazioni sul web, ovvero in un'architettura tipica client-server. Le specifiche del protocollo sono gestite dal World Wide Web Consortium (W3C). Un \insglo{server} HTTP generalmente resta in ascolto delle richieste dei \insglo{client} sulla porta 80 usando il protocollo \insglo{TCP} a livello di trasporto.
 	</entry>
 
 	<entry name="IDE">
-		Un Integrated Development Environment, letteralmente ambiente di sviluppo integrato, fornisce un insieme di strumenti di ausilio alla programmazione quali un editor, un compilatore e/o interprete e un debugger.
+		Un Integrated Development Environment, letteralmente ambiente di sviluppo integrato, fornisce un insieme di strumenti di ausilio alla programmazione quali un editor, un compilatore e/o interprete e un \insglo{debugger}.
 	</entry>
 
 	<entry name="Indice Gulpease">
@@ -102,7 +102,7 @@
 	</entry>
 
 	<entry name="Latex">
-		Linguaggio di markup, basato sul principio WYSIWYM (What You See Is What You Mean), e utilizzato per la composizione di testi. Si presta particolarmente alla stesura di documenti tecnici molto lunghi, in modo concorrente, da parte di persone diverse.
+		Li\insglo{nguaggio di markup}, basato sul principio WYSIWYM (What You See Is What You Mean), e utilizzato per la composizione di testi. Si presta particolarmente alla stesura di documenti tecnici molto lunghi, in modo concorrente, da parte di persone diverse.
 	</entry>
 
 	<entry name="Line Chart">
@@ -138,11 +138,11 @@
 	</entry>
 
 	<entry name="Script">
-		Per "script" in informatica si intende un piccolo programma sequenziale, scritto in linguaggio interpretato, destinato all'automazione di attività ripetitive.
+		Piccolo programma sequenziale, scritto in linguaggio interpretato, destinato all'automazione di attività ripetitive.
 	</entry>
 
 	<entry name="Server">
-		Componente o sottosistema informatico di elaborazione che fornisce, a livello logico e a livello fisico, un qualunque tipo di servizio ad altre componenti (tipicamente chiamate client, cioè "cliente") che ne fanno richiesta attraverso una rete di computer, all'interno di un sistema informatico o direttamente in locale su un computer.
+		Componente o sottosistema informatico di elaborazione che fornisce, a livello logico e a livello fisico, un qualunque tipo di servizio ad altre componenti (tipicamente chiamate \insglo{client}, cioè "cliente") che ne fanno richiesta attraverso una rete di computer, all'interno di un sistema informatico o direttamente in locale su un computer.
 	</entry>
 
 	<entry name="Table">
@@ -158,10 +158,10 @@
 	</entry>
 
 	<entry name="Web Socket">
-		Tecnologia web che fornisce canali di comunicazione bidirezionali attraverso una singola connessione TCP. L'API del WebSocket è stata standardizzata dal W3C e il protocollo WebSocket è stato standardizzato dall'IETF.
+		Tecnologia web che fornisce canali di comunicazione bidirezionali attraverso una singola connessione \insglo{TCP}. L'\insglo{API} del WebSocket è stata standardizzata dal W3C e il protocollo WebSocket è stato standardizzato dall'IETF.
 	</entry>
 	<entry name="Cloud Storage">
-		Modello di conservazione dati su computer in rete dove i dati stessi sono memorizzati su molteplici server virtuali, generalmente ospitati presso strutture di terze parti o su server dedicati.
+		Modello di conservazione dati su computer in rete dove i dati stessi sono memorizzati su molteplici \insglo{server} virtuali, generalmente ospitati presso strutture di terze parti o su \insglo{server} dedicati.
 	</entry>
 	
 	<entry name="Design Pattern">
@@ -169,7 +169,7 @@
 	</entry>
 	
 	<entry name="Dropbox">
-		Servizio di cloud storage multipiattaforma, che offre un servizio di file hosting e sincronizzazione automatica di file tramite web.
+		Servizio di \insglo{cloud storage} multipiattaforma, che offre un servizio di \insglo{file hosting} e sincronizzazione automatica di file tramite web.
 	</entry>
 	
 	<entry name="File Hosting">
