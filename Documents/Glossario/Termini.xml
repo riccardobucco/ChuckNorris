@@ -22,6 +22,10 @@
 		Strumento di correzione ortografica multilingue.
 	</entry>
 
+	<entry name="Astah">
+		Astah, formalmente conosciuto come JUDE (Java and UML Developer's Environment), è uno strumento per la modellazione di diagrammi UML. Fra le varie funzionalità, questo software supporta la creazione di: diagrammi delle classi, diagrammi dei casi d'uso, diagrammi delle attività, diagrammi di sequenza e diagrammi dei componenti.
+	</entry>
+	
 	<entry name="API">
 		Acronimo di "Application Programming Interface". Si tratta di \insglo{procedure} disponibili al programmatore, utili per l'implementazione di un certo compito all'interno di un programma.
 	</entry>
@@ -103,6 +107,10 @@
 
 	<entry name="Express.js">
 		\insglo{Framework} di Node.js che facilita la creazione di applicazioni web, fornendo una maggiore astrazione.
+	</entry>
+	
+	<entry name="GanttProject">
+		GanttProject è software open-source multipiattaforma, implementato in Java, per la gestione dei progetti. Fra le sue funzioni principali rientrano la creazione dei diagrammi di Gantt e di Pert per la schedulazione dei compiti nei progetti.
 	</entry>
 	
 	<entry name="Git">
@@ -219,6 +227,10 @@
 	<entry name="Server">
 		Componente o sottosistema informatico di elaborazione che fornisce, a livello logico e a livello fisico, un qualunque tipo di servizio ad altre componenti (tipicamente chiamate \insglo{client}, cioè "cliente") che ne fanno richiesta attraverso una rete di computer, all'interno di un sistema informatico o direttamente in locale su un computer.
 	</entry>
+	
+	<entry name="Software">
+		Un software, in informatica, è l'informazione o le informazioni utilizzate da uno o più sistemi informatici e memorizzate su uno o più supporti informatici. Tali informazioni possono essere quindi rappresentate da uno o più programmi, oppure da uno o più dati, oppure da una combinazione delle due.
+	</entry>
 
 	<entry name="Table">
 		La rappresentazione dei dati a tabella è costituita da una comune griglia sulla quale vengono visualizzati i valori. Nella prima riga, o header, vengono messe le etichette esplicative del tipo di dato colonnato, mentre nelle varie righe sono elencati i vari dati.
@@ -239,7 +251,10 @@
 	<entry name="UML">
 		L'"Unified Modelling Language" è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. Attraverso tale linguaggio è possibile definire i diagrammi dei casi d'uso, delle attività e delle classi.
 	</entry>
-
+	
+	<entry name="Walkthrough">
+		Walkthrough è una forma di analisi statica di un prodotto non compilabile, o del quale non si vuole o non si può fare un'analisi dinamica, che prevede un esame accurato dell'oggetto dell'analisi alla ricerca di ogni possibile errore. Questa tecnica viene applicata quando non si ha un'idea precisa della tipologia di errori che possono verificarsi.
+	</entry>
 	<entry name="Web Socket">
 		Tecnologia web che fornisce canali di comunicazione bidirezionali attraverso una singola connessione \insglo{TCP}. L'\insglo{API} del WebSocket è stata standardizzata dal W3C e il protocollo WebSocket è stato standardizzato dall'IETF.
 	</entry>
