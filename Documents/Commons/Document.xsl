@@ -14,12 +14,14 @@
 		\usepackage{graphicx}
 		\usepackage{fancyhdr}
 		\usepackage{lastpage}
+		\usepackage{longtable}
 		\usepackage{tabu}
 		\usepackage{hyperref}
 		\usepackage{color}
 		\usepackage{eurosym}
 		\usepackage{abstract}
 		\usepackage{float}
+		
 
 		%macro definitions
 		\newcommand{\groupname}{Kaizen Team}
@@ -44,7 +46,6 @@
 		%defining abstract font
 		\renewcommand{\abstractnamefont}{\huge\bfseries}
 		\renewcommand{\abstracttextfont}{\large}
-
 
 		%config
 		\hypersetup{linktoc=all}
@@ -116,7 +117,9 @@
 	<xsl:template name="changes">
 			\section*{Diario delle modifiche}
 			\begin{center}
-				\begin{tabu} to \textwidth {|X[c]|X[c]|X[c]|X[c]|X[c]|}
+				\tabulinesep=3pt
+				\begin{longtabu} to \textwidth {|X[c,m]|X[c,m]|X[c,m]|X[c,m]|X[c,m]|}
+					\tabulinesep=3pt
 					\hline
 					\rowfont{\bf}
 					Versione &amp;
@@ -125,6 +128,7 @@
 					Ruolo &amp;
 					Descrizione \\
 					\hline
+					\endhead
 					<xsl:for-each select="changes/version">
 						<xsl:value-of select="id"/> &amp;
 						<xsl:value-of select="date"/> &amp;
@@ -133,7 +137,7 @@
 						<xsl:value-of select="description"/> \\
 						\hline
 					</xsl:for-each>
-				\end{tabu}
+				\end{longtabu}
 			\end{center}
 	</xsl:template>
 	
