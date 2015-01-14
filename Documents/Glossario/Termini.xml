@@ -196,6 +196,10 @@
 		Funzione che raggruppa al suo interno una sequenza di istruzioni. Una procedura è chiamabile più volte all'interno di un programma, permettendo così il riuso del codice e facilitando la manutenibilità dello stesso.
 	</entry>
 	
+	<entry name="TCP">
+		Acronimo di Transfer Control Protocol, un protocollo di rete che si occupa di controllo di trasmissione, rendendo affidabile la comunicazione dati in rete tra mittente e destinatario.
+	</entry>
+
 	<entry name="Ticket">
 		Associazione tra una persona e un obbligo o attività.
 	</entry>
