@@ -160,5 +160,48 @@
 	<entry name="Web Socket">
 		Tecnologia web che fornisce canali di comunicazione bidirezionali attraverso una singola connessione TCP. L'API del WebSocket è stata standardizzata dal W3C e il protocollo WebSocket è stato standardizzato dall'IETF.
 	</entry>
+	<entry name="Cloud Storage">
+		Modello di conservazione dati su computer in rete dove i dati stessi sono memorizzati su molteplici server virtuali, generalmente ospitati presso strutture di terze parti o su server dedicati.
+	</entry>
+	
+	<entry name="Design Pattern">
+		Soluzione progettuale generale ad un problema ricorrente.
+	</entry>
+	
+	<entry name="Dropbox">
+		Servizio di cloud storage multipiattaforma, che offre un servizio di file hosting e sincronizzazione automatica di file tramite web.
+	</entry>
+	
+	<entry name="File Hosting">
+		Servizio di archiviazione su Internet, appositamente progettato per ospitare i file degli utenti. Solitamente il servizio viene utilizzato per la condivisione di file, che possono essere scaricati anche da altri utenti.
+	</entry>
+	
+	<entry name="Git">
+		Sistema software di controllo di versione distribuito, utilizzabile da riga di comando.
+	</entry>
+	
+	<entry name="Linguaggio di markup">
+		Insieme di regole che descrivono i meccanismi di rappresentazione (strutturali, semantici o presentazionali) di un testo.
+	</entry>
+	
+	<entry name="Mercurial">
+		Software multipiattaforma di controllo di versione distribuito, utilizzabile da riga di comando.
+	</entry>
+	
+	<entry name="Open source">
+		Software di cui gli autori (più precisamente i detentori dei diritti) rendono pubblico il codice sorgente, permettendo a programmatori indipendenti di apportarvi modifiche. Questa possibilità è regolata tramite l'applicazione di apposite licenze d'uso.
+	</entry>
+	
+	<entry name="Procedura">
+		Funzione che raggruppa al suo interno una sequenza di istruzioni. Una procedura è chiamabile più volte all'interno di un programma, permettendo così il riuso del codice e facilitando la manutenibilità dello stesso.
+	</entry>
+	
+	<entry name="Ticket">
+		Associazione tra una persona e un obbligo o attività.
+	</entry>
+	
+	<entry name="WhatsApp">
+		Applicazione di messaggistica istantanea multipiattaforma per smartphone. Oltre allo scambio di messaggi testuali, permette di inviare immagini, video, file audio e la propria posizione.
+	</entry>
 	
 </terms>
