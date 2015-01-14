@@ -53,12 +53,26 @@
 	<entry name="Client">
 		Componente di un sistema informatico che accede ai servizi o alle risorse di un’altra componente del sistema, detta \insglo{server}.
 	</entry>
-
+	
+	<entry name="Dashboard">
+		Nei sistemi di gestione dell'informazione, una dashboard è una interfaccia ad aggiornamento in tempo reale che mostra presentazioni grafiche dello stato corrente e di andamenti temporali di indicatori strategici per le performance organizzative, per consentire di avere una visione immediata della situazione.
+	</entry>
+	
 	<entry name="Database">
 		È una base di dati, cioè un archivio o un insieme di archivi contenenti informazioni strutturate e collegate tra loro secondo un particolare modello logico (relazionale, gerarchico, a oggetti, etc.), offrendo una gestione efficiente dei dati che vi sono contenuti.
 	</entry>
+	
 	<entry name="Debugger">
 		 Software specificatamente progettato per l'analisi e l'eliminazione dei bug, ovvero errori di programmazione interni al codice di altri programmi.
+	</entry>
+	
+	<entry name="Diagramma di Gantt">
+		Il diagramma di Gantt è uno strumento di supporto alla gestione dei progetti. Usato principalmente nelle attività di project management, è costruito partendo da un asse orizzontale, usato per rappresentare l'arco temporale totale del progetto, suddiviso in fasi incremental, e da un asse verticale, usato per rappresentare delle mansioni o attività che costituiscono il progetto.
+		Un diagramma di Gantt permette dunque la rappresentazione grafica di un calendario di attività, utile al fine di pianificare, coordinare e tracciare specifiche attività in un progetto dando una chiara illustrazione dello stato d'avanzamento del progetto rappresentato.
+	</entry>
+	
+	<entry name="Fase">
+		Nei documenti del progetto Norris, e in generale nell'ambito dell'ingegneria del software, per fase si intende un segmento temporale che cattura stati e/o transizioni di un ciclo di vita.
 	</entry>
 
 	<entry name="Firefox">\insglo{Browser} web.</entry>
@@ -124,9 +138,22 @@
 	<entry name="Milestone">
 		In italiano "Pietra miliare". Questo termine indica importanti traguardi in termini di tempo o di attività, che sanciscono una metrica di avanzamento del progetto.
 	</entry>
+	
+	<entry name="Modello incrementale">
+		Per modello incrementale o modello iterativo, nell'ambito dell'ingegneria del software, si intende un modello di sviluppo di un progetto software basato sulla successione dei seguenti passi principali: pianificazione, analisi dei requisiti, progetto,    implementazione, verifica, valutazione.
+		Questo ciclo può essere ripetuto diverse volte fino a che la valutazione del prodotto diviene soddisfacente rispetto ai requisiti richiesti.
+	</entry>
 
 	<entry name="Monospace">
 		Stile di scrittura che utilizza i caratteri monospaziati, cioè quei caratteri che, indipendentemente dalla lettera, occupano la stessa larghezza.
+	</entry>
+	
+	<entry name="Node.js">
+		Node.js è un framework event-driven per il motore JavaScript V8, su piattaforme UNIX like, si tratta cioè di un framework relativo all'utilizzo server-side di JavaScript.
+	</entry>
+	
+	<entry nome="Norris">
+		Norris è l'oggetto del capitolato e quindi di questo progetto. Norris è un framework che permette di raccogliere dati provenienti da sorgenti arbitrarie e realizzarli come grafici in modo semplice e veloce. Norris fornisce API con le quali è possibile configurare la veste grafica dei dati e indicare diversi metodi di aggiornamento dei dati stessi.
 	</entry>
 
 	<entry name="PDCA">
