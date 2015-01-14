@@ -20,6 +20,7 @@
 		\usepackage{color}
 		\usepackage{eurosym}
 		\usepackage{abstract}
+		\usepackage{float}
 
 		%macro definitions
 		\newcommand{\groupname}{Kaizen Team}
