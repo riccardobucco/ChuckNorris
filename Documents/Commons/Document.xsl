@@ -92,16 +92,16 @@
 	
 	<xsl:template name="description">
 
-		
 				\begin{center}
-					\begin{tabu}{r|l}
+					\tabulinesep=6pt
+					\begin{tabu} {X[r]|X[l]}
 						\textbf{Versione} &amp; <xsl:value-of select="changes/version[1]/id"/> \\
 						\textbf{Data redazione} &amp; <xsl:value-of select="changes/version[1]/date"/> \\
-						\textbf{Redazione} &amp; <xsl:value-of select="redactedby"/> \\
-						\textbf{Verifica} &amp; <xsl:value-of select="verifiedby"/> \\
-						\textbf{Approvazione} &amp; <xsl:value-of select="approvedby"/> \\
-						\textbf{Uso} &amp; <xsl:value-of select="type"/> \\
-						\textbf{Distribuzione} &amp; <xsl:value-of select="distribution"/> \\
+						\textbf{Redazione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="redactedby"/>} \\
+						\textbf{Verifica} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="verifiedby"/>} \\
+						\raggedleft \textbf{Approvazione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="approvedby"/>} \\
+						\raggedleft \textbf{Uso} &amp; <xsl:value-of select="type"/> \\
+						\raggedleft \textbf{Distribuzione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="distribution"/>} \\
 					\end{tabu}
 				\end{center}
 
