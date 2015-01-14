@@ -119,7 +119,6 @@
 			\begin{center}
 				\tabulinesep=3pt
 				\begin{longtabu} to \textwidth {|X[c,m]|X[c,m]|X[c,m]|X[c,m]|X[c,m]|}
-					\tabulinesep=3pt
 					\hline
 					\rowfont{\bf}
 					Versione &amp;
