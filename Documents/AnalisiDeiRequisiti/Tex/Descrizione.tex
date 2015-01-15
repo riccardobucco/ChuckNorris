@@ -1,34 +1,43 @@
 \section{Descrizione generale}
-
-
-\subsection{Obiettivi del prodotto}
-Norris è un framework per node.js che permette la creazione ad alto livello di grafici visualizzabili tramite un browser. Norris dispone inoltre di alcune API per aggiornare i grafici in tempo reale attraverso dei WebSocket, senza dover effettuare una nuova richiesta HTTP al webserver.
-
-
-\subsection{Funzioni del prodotto}
-Il framework svolge principalmente due funzioni:
-\begin{itemize}
-	\item Creazione di un grafico di tipo:
-	\begin{description}
-		\item[Bar chart] Il grafico \emph{bar chart} è il grafico a barre. L'unico aggiornamento consentito è quello in place;
-		\item[Line chart] Il grafico \emph{line chart} è il grafico a linea. Consente gli aggiornamenti in place e stream;
-		\item[Map chart] Il grafico \emph{map chart} è una mappa geografica con rappresentati dei dati in sovraimpressione. Consente gli aggiornamenti in place e movie;
-		\item[Table] Il grafico \emph{table} è una rappresentazioni di dati in forma tabellare. Consente gli aggiornamenti in place e stream.
-	\end{description}
-	\item Aggiornamento del grafico di tipo:
-	\begin{description}
-		\item[In place] I nuovi valori sostituiscono quelli vecchi;
-		\item[Stream] I nuovi dati si aggiungono a quelli vecchi;
-		\item[Movie] Vengono aggiunti nuovi dati e i valori dei vecchi dati possono essere modificati.
-	\end{description}
-\end{itemize}
-
-
-\subsection{Caratteristiche degli utenti}
-Il prodotto è rivolto a tutti gli sviluppatori di node.js con conoscenza del framework express.js
-
-\subsection{Piattaforma di esecuzione}
-Il framework è scritto in node.js e funziona in qualsiasi piattaforma dove sia presente l'interprete.
-
-\subsection{Vincoli generali}
-Per la corretta visualizzazione dei grafici è richiesto \emph{Google Chrome} v38.0.X o superiori oppure \emph{Mozilla Firefox} v32.X o superiori.
+	\subsection{Scopo del prodotto}
+		Norris è un framework per Node.js che permette di raccogliere dati provenienti da sorgenti arbitrarie e visualizzarli come grafici in modo semplice e veloce. Esso, in particolare, permette di configurare programmaticamente la veste grafica assunta dai dati. Inoltre, il framework mette a disposizione la possibilità di aggiornare i chart lato server tramite tecnologia WebSocket: in questo modo si permette all'utente che utilizza il grafico di ricevere aggiornamenti in real-time.
+	\subsection{Funzioni del prodotto}
+		Norris svolge principalmente due funzioni:
+		\begin{itemize}
+			\item creazione di un grafico;
+			\item aggiornamento di un grafico.
+		\end{itemize}
+		La sorgente a partire dalla quale si ricavano i dati per creare e aggiornare il grafico è del tutto arbitraria.\\
+		I tipi di chart supportati dal framework sono i seguenti:
+		\begin{itemize}
+			\item bar chart;
+			\item line chart;
+			\item map chart;
+			\item table.
+		\end{itemize}
+		Vi sono tre modi in cui un grafico può essere aggiornato (ogni tipo di grafico supporta solo alcune forme di aggiornamento):
+		\begin{itemize}
+			\item in place (supportato da tutti i tipi di chart);
+			\item stream (supportato da line chart, da bar chart e da table);
+			\item movie (supportato da map chart).
+		\end{itemize}
+	\subsection{Caratteristiche degli utenti}
+		Gli utenti che utilizzano questo prodotto possono essere suddivisi in due grandi insiemi:
+		\begin{enumerate}
+			\item sviluppatori di istanze di Norris, ovvero tutti gli utenti che, utilizzando le API interne fornite dal framework, si occupano di creare, rendere disponibili e aggiornare i grafici;
+			\item sviluppatori di prodotti terzi, ovvero tutti gli utenti che, utilizzando le API esterne fornite dal framework, si occupano di inserire i grafici resi disponibili all'interno di prodotti terzi;
+			\item utenti finali, ovvero gli utenti che fanno uso in modo diretto dei grafici resi disponibili dagli sviluppatori di istanze di Norris.
+		\end{enumerate}
+		Gli utenti appartenenti alla prima tipologia, per poter essere in grado di utilizzare il presente prodotto, deve possedere:
+		\begin{itemize}
+			\item conoscenza di Node.js, essendo Norris un framework per questo linguaggio;
+		\end{itemize}
+		Agli utenti appartenenti alla seconda tipologia è richiesto di saper utilizzare le seguenti tecnologie:
+		\begin{itemize}
+			\item DA FARE
+		\end{itemize}
+		Un utente finale, invece, non deve avere conoscenze tecniche di alcun tipo. Infatti, Norris nasce come strumento per facilitare la lettura dei dati provenienti da sorgenti arbitrarie da parte di utenti che non posseggono specifiche abilità. Dunque, un utente finale, per accedere direttamente ai grafici forniti da un'istanza di Norris, deve essere semplicemente in grado di utilizzare un browser.\\
+	\subsection{Piattaforma di esecuzione}
+		Il framework è scritto in node.js e funziona in qualsiasi piattaforma dove sia presente l'interprete.
+	\subsection{Vincoli generali}
+		Per la corretta visualizzazione dei grafici è richiesto \emph{Google Chrome} v38.0.X o superiori oppure \emph{Mozilla Firefox} v32.X o superiori.
