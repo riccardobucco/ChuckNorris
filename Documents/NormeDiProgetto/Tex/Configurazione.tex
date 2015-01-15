@@ -1,0 +1,66 @@
+\section{Configurazione}
+	\subsection{Attività}
+		\subsubsection{Identificazione di configurazione}
+		\subsubsection{Controllo di baseline}
+		\subsubsection{Gestione modifiche}
+		\subsubsection{Controllo di versione}
+
+	\subsection{Procedure}
+		\subsubsection{Aggiornamento del repository}
+				Per aggiornare il repository è prevista una procedura ben definita:
+				\begin{enumerate}
+					\item pull del repository tramite comando git pull;
+					\item eventuale merge tramite comando git merge;
+					\item stage dei file da aggiornare tramite comando git add [files];
+					\item commit tramite comando git commit -m ‘messaggio’;
+					\item push del repository tramite comando git push.
+				\end{enumerate}
+		
+	\subsection{Norme}
+		\subsubsection{Struttura del repository}
+				I file all’interno del repository sono organizzati secondo la seguente struttura:
+				\begin{itemize}
+					\item /Documents
+					\begin{itemize}
+						\item Commons
+						\item NormeDiProgetto
+						\item StudioDiFattibilità
+						\item AnalisiDeiRequisiti
+						\item PianoDiProgetto
+						\item PianoDiQualifica
+						\item SpecificaTecnica
+						\item Glossario
+					\end{itemize}
+					\item /Source
+				\end{itemize}
+				La struttura di /Source viene definita prima della progettazione architetturale.
+
+		\subsubsection{Nomi dei file}
+				I nomi dei file all’interno del repository sono soggetti alle seguenti norme:
+				\begin{itemize}
+					\item devono contenere solamente lettere, numeri, il carattere underscore U+005F, il segno meno U+2212 e il punto U+002E;
+					\item devono avere una lunghezza minima di 3 caratteri;
+					\item devono contenere le informazioni sufficienti per distinguere il file in modo non ambiguo;
+					\item le informazioni devono essere riportate dal generale al particolare;
+					\item le date devono essere specificate nel formato YYYYMMDD.
+				\end{itemize}
+				Si consiglia inoltre:
+				\begin{itemize}
+					\item di utilizzare il meno possibile i caratteri underscore e segno meno, utilizzando al loro posto la notazione camel case;
+					\item di utilizzare nomi con una lunghezza compresa tra i 5 e i 25 caratteri;
+					\item di specificare sempre l’estensione quando possibile.
+				\end{itemize}
+			\subsubsection{Commit}
+				L'esecuzione di un comando di commit implica il rispetto delle seguenti norme:
+				\begin{itemize}
+					\item quando si effettua un commit è necessario specificare nel messaggio una descrizione sintetica e non ambigua delle modifiche apportate;
+					\item le modifiche apportate con un commit devono essere complete e testate con successo;
+					\item le modifiche apportate con un commit devono essere logicamente correlate tra di loro.
+				\end{itemize}
+		
+	\subsection{Strumenti}	
+		\subsubsection{Repository}
+			Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git. AGGIUNGERE MOTIVAZIONI TECNICHE CHE HANNO PORTATO A QUESTA SCELTA
+				\paragraph{Visibilità del repository}
+				Per la condivisione e il versionamento dei configuration item è stato creato un repository privato su GitHub, raggiungibile all’indirizzo https://github.com/marcorubin/kaizen-team/. L’accesso è consentito solamente agli utenti approvati dal Project Manager.
+						
