@@ -14,12 +14,14 @@
 		\usepackage{graphicx}
 		\usepackage{fancyhdr}
 		\usepackage{lastpage}
+		\usepackage{longtable}
 		\usepackage{tabu}
 		\usepackage{hyperref}
 		\usepackage{color}
 		\usepackage{eurosym}
 		\usepackage{abstract}
 		\usepackage{float}
+		
 
 		%macro definitions
 		\newcommand{\groupname}{Kaizen Team}
@@ -44,7 +46,6 @@
 		%defining abstract font
 		\renewcommand{\abstractnamefont}{\huge\bfseries}
 		\renewcommand{\abstracttextfont}{\large}
-
 
 		%config
 		\hypersetup{linktoc=all}
@@ -91,16 +92,16 @@
 	
 	<xsl:template name="description">
 
-		
 				\begin{center}
-					\begin{tabu}{r|l}
+					\tabulinesep=6pt
+					\begin{tabu} {X[r]|X[l]}
 						\textbf{Versione} &amp; <xsl:value-of select="changes/version[1]/id"/> \\
 						\textbf{Data redazione} &amp; <xsl:value-of select="changes/version[1]/date"/> \\
-						\textbf{Redazione} &amp; <xsl:value-of select="redactedby"/> \\
-						\textbf{Verifica} &amp; <xsl:value-of select="verifiedby"/> \\
-						\textbf{Approvazione} &amp; <xsl:value-of select="approvedby"/> \\
-						\textbf{Uso} &amp; <xsl:value-of select="type"/> \\
-						\textbf{Distribuzione} &amp; <xsl:value-of select="distribution"/> \\
+						\textbf{Redazione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="redactedby"/>} \\
+						\textbf{Verifica} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="verifiedby"/>} \\
+						\raggedleft \textbf{Approvazione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="approvedby"/>} \\
+						\raggedleft \textbf{Uso} &amp; <xsl:value-of select="type"/> \\
+						\raggedleft \textbf{Distribuzione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="distribution"/>} \\
 					\end{tabu}
 				\end{center}
 
@@ -116,7 +117,8 @@
 	<xsl:template name="changes">
 			\section*{Diario delle modifiche}
 			\begin{center}
-				\begin{tabu} to \textwidth {|X[c]|X[c]|X[c]|X[c]|X[c]|}
+				\tabulinesep=3pt
+				\begin{longtabu} to \textwidth {|X[c,m]|X[c,m]|X[c,m]|X[c,m]|X[c,m]|}
 					\hline
 					\rowfont{\bf}
 					Versione &amp;
@@ -125,6 +127,7 @@
 					Ruolo &amp;
 					Descrizione \\
 					\hline
+					\endhead
 					<xsl:for-each select="changes/version">
 						<xsl:value-of select="id"/> &amp;
 						<xsl:value-of select="date"/> &amp;
@@ -133,7 +136,7 @@
 						<xsl:value-of select="description"/> \\
 						\hline
 					</xsl:for-each>
-				\end{tabu}
+				\end{longtabu}
 			\end{center}
 	</xsl:template>
 	
