@@ -17,10 +17,12 @@
 		\usepackage{longtable}
 		\usepackage{tabu}
 		\usepackage{hyperref}
+		\usepackage[hypcap]{caption}
 		\usepackage{color}
 		\usepackage{eurosym}
 		\usepackage{abstract}
 		\usepackage{float}
+		
 		
 
 		%macro definitions
@@ -43,12 +45,14 @@
 		\newcommand{\insphase}[1]{\texttt{#1}}
 
 
-		%defining abstract font
+		%abstract font
 		\renewcommand{\abstractnamefont}{\huge\bfseries}
 		\renewcommand{\abstracttextfont}{\large}
 
-		%config
+		%hyperred
 		\hypersetup{linktoc=all}
+
+		%section counters
 		\setcounter{tocdepth}{5}
 		\setcounter{secnumdepth}{5}
 
@@ -60,7 +64,8 @@
 		\fancyfoot{}
 		\fancyfoot[C]{\thepage}
 		
-		
+		%space between paragraph
+		\raggedbottom
 		
 
 
@@ -99,9 +104,9 @@
 						\textbf{Data redazione} &amp; <xsl:value-of select="changes/version[1]/date"/> \\
 						\textbf{Redazione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="redactedby"/>} \\
 						\textbf{Verifica} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="verifiedby"/>} \\
-						\raggedleft \textbf{Approvazione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="approvedby"/>} \\
-						\raggedleft \textbf{Uso} &amp; <xsl:value-of select="type"/> \\
-						\raggedleft \textbf{Distribuzione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="distribution"/>} \\
+						\textbf{Approvazione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="approvedby"/>} \\
+						\textbf{Uso} &amp; <xsl:value-of select="type"/> \\
+						\textbf{Distribuzione} &amp; \parbox[t]{0.4\textwidth}{<xsl:value-of select="distribution"/>} \\
 					\end{tabu}
 				\end{center}
 
