@@ -4,19 +4,20 @@
 		\subsubsection{Controllo di baseline}
 		\subsubsection{Gestione modifiche}
 		\subsubsection{Controllo di versione}
-
-	\subsection{Procedure}
-		\subsubsection{Aggiornamento del repository}
-				Per aggiornare il repository è prevista una procedura ben definita:
-				\begin{enumerate}
-					\item pull del repository tramite comando git pull;
-					\item eventuale merge tramite comando git merge;
-					\item stage dei file da aggiornare tramite comando git add [files];
-					\item commit tramite comando git commit -m ‘messaggio’;
-					\item push del repository tramite comando git push.
-				\end{enumerate}
-		
+	
 	\subsection{Norme}
+		\subsection{Struttura di una richiesta di modifica}
+			Ogni richiesta di modifica è costituita dai seguenti campi:
+			\begin{itemize}
+				\item Autore
+				\item Motivo
+				\item Urgenza
+			\end{itemize}
+			In seguito alla decisione del \insrole{Responsabile} di approvare o meno la richiesta, va aggiunto il campo:
+			\begin{itemize}
+				\item Decisione del \insrole{Responsabile di Progetto}
+			\end{itemize}
+			
 		\subsubsection{Struttura del repository}
 				I file all’interno del repository sono organizzati secondo la seguente struttura:
 				\begin{itemize}
@@ -57,6 +58,17 @@
 					\item le modifiche apportate con un commit devono essere complete e testate con successo;
 					\item le modifiche apportate con un commit devono essere logicamente correlate tra di loro.
 				\end{itemize}
+	
+	\subsection{Procedure}
+		\subsubsection{Aggiornamento del repository}
+				Per aggiornare il repository è prevista una procedura ben definita:
+				\begin{enumerate}
+					\item pull del repository tramite comando git pull;
+					\item eventuale merge tramite comando git merge;
+					\item stage dei file da aggiornare tramite comando git add [files];
+					\item commit tramite comando git commit -m ‘messaggio’;
+					\item push del repository tramite comando git push.
+				\end{enumerate}
 		
 	\subsection{Strumenti}	
 		\subsubsection{Repository}
