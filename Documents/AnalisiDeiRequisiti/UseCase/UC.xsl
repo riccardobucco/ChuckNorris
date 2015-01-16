@@ -19,8 +19,8 @@
 		<xsl:apply-templates select="estensioni"/>
 		<xsl:apply-templates select="precondizione"/>
 		<xsl:apply-templates select="postcondizione"/>
-		<xsl:apply-templates select="scenariop"/>
-		<xsl:apply-templates select="scenarioa"/>
+		<xsl:apply-templates select="principale"/>
+		<xsl:apply-templates select="alternativi"/>
 		\end{itemize}
 
 	</xsl:template>
@@ -66,7 +66,7 @@
 		\item \textbf{Postcondizione:} <xsl:value-of select="."/>
 	</xsl:template>
 
-	<xsl:template match="scenariop">
+	<xsl:template match="principale">
 		\item \textbf{Scenario principale}
 
 		\begin{enumerate}
@@ -81,9 +81,24 @@
 
 	</xsl:template>
 
-	<xsl:template match="scenarioa">
-		\item \textbf{Scenario alternativo}	<xsl:value-of select="."/>
+	<xsl:template match="alternativi">
+		\item \textbf{Scenari alternativi} \\
+		<xsl:apply-templates select="scenario"/>
 	</xsl:template>
+
+	<xsl:template match="scenario">
+		\emph{<xsl:value-of select="descrizione"/>}
+
+		\begin{enumerate}
+
+		<xsl:for-each select="item">
+
+			\item <xsl:value-of select="."/>
+
+		</xsl:for-each>
+
+		\end{enumerate}
+	</xsl:template>	
 	
 
 </xsl:stylesheet>
