@@ -1,0 +1,13 @@
+<usecase>
+	<titolo>UC1.1.2.1 Scegliere se la legenda è visualizzata</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>E’ stata creata un’istanza di Norris. Il grafico non è di tipo Table.</precondizione>
+	<postcondizione>E’ stato impostato se la legenda è visualizzata o meno.</postcondizione>
+	<scenariop>
+		<item>Lo sviluppatore imposta se la legenda è visualizzata o nascota.</item>
+	</scenariop>
+	<scenarioa>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:
+		<item>il sistema segnala un errore.</item>
+	</scenarioa>
+</usecase>
+
