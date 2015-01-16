@@ -3,21 +3,32 @@
 		\subsubsection{Identificazione di configurazione}
 		\subsubsection{Controllo di baseline}
 		\subsubsection{Gestione modifiche}
+		Per effettuare una modifica ad un qualsiasi documento è necessario inoltrare una richiesta formale di modifica al \insrole{Responsabile di Progetto}, il quale si preoccuperà di avviare le procedure necessarie alla gestione di tale modifica.
 		\subsubsection{Controllo di versione}
 	
 	\subsection{Norme}
 		\subsubsection{Struttura di una richiesta di modifica}
 			Ogni richiesta di modifica è costituita dai seguenti campi:
-			\begin{itemize}
-				\item Autore
-				\item Motivo
-				\item Urgenza
-			\end{itemize}
+			\begin{enumerate}
+				\item Autore: contiene nome e cognome di colui che richiede la modifica;
+				\item Documento: contiene il nome del documento di cui si richiede la modifica;
+				\item Motivo: contiene la spiegazione chiara e concisa delle motivazioni per cui si sta richiedendo una modifica;
+				\item Urgenza: può assumere uno dei seguenti valori:
+					\begin{itemize}
+						\item [-] Alta: si tratta di una modifica importante, con forti conseguenze nell'organizzazione e nello svolgimento delle attività future del progetto;
+						\item [-] Media: si tratta di una modifica importante, ma che non comporta grandi modifiche alle attività del progetto;
+						\item [-] Bassa: si tratta di una modifica di importanza secondaria, che può essere rimandata ad un secondo momento senza che ciò influisca in alcun modo sullo svoglimento delle attività.
+					\end{itemize}
+			\end{enumerate}
 			In seguito alla decisione del \insrole{Responsabile} di approvare o meno la richiesta, va aggiunto il campo:
 			\begin{itemize}
-				\item Decisione del \insrole{Responsabile di Progetto}
+				\item [5.] Decisione del \insrole{Responsabile di Progetto}: contiene uno dei seguenti valori:
+					\begin{itemize}
+						\item [-] Approvata
+						\item [-] Respinta
+					\end{itemize}
 			\end{itemize}
-			
+	
 		\subsubsection{Struttura del repository}
 				I file all’interno del repository sono organizzati secondo la seguente struttura:
 				\begin{itemize}
@@ -60,6 +71,9 @@
 				\end{itemize}
 	
 	\subsection{Procedure}
+		\subsubsection{Richiesta di modifica}
+		Ogni richiesta di modifica va inoltrata in modo formale al \insrole{Responsabile di Progetto}, affichè venga sottoposta ad un rigoroso processo di analisi. Dopodichè il \insrole{Responsabile di Progetto} decide se approvarla o meno. Nel primo caso assegna la realizzazione della modifica ad un membro del gruppo. Una volta effettuata la modifica, questa deve essere sottoposta a verifica. Tutto ciò deve avvenire mantenendo traccia dello stato precedente.
+		
 		\subsubsection{Aggiornamento del repository}
 				Per aggiornare il repository è prevista una procedura ben definita:
 				\begin{enumerate}
