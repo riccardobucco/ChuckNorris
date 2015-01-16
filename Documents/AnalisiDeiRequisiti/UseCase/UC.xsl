@@ -59,11 +59,11 @@
 	</xsl:template>
 
 	<xsl:template match="precondizione">
-		\item \textbf{Estensioni:} <xsl:value-of select="."/>
+		\item \textbf{Precondizione:} <xsl:value-of select="."/>
 	</xsl:template>
 
 	<xsl:template match="postcondizione">
-		\item \textbf{Estensioni:} <xsl:value-of select="."/>
+		\item \textbf{Postcondizione:} <xsl:value-of select="."/>
 	</xsl:template>
 
 	<xsl:template match="scenariop">
