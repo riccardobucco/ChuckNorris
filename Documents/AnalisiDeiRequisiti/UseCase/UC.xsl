@@ -6,7 +6,7 @@
 	<xsl:template match="/usecase">
 
 
-		\section{<xsl:value-of select="titolo"/>}
+		\subsection{<xsl:value-of select="titolo"/>}
 
 		\begin{itemize}
 
@@ -67,17 +67,7 @@
 	</xsl:template>
 
 	<xsl:template match="scenarioa">
-		\item \textbf{Scenario principale}
-
-		\begin{enumerate}
-
-		<xsl:for-each select="item">
-
-			\item <xsl:value-of select="."/>
-
-		</xsl:for-each>
-
-		\end{enumerate}
+		\item \textbf{Scenario alternativo}	<xsl:value-of select="."/>
 	</xsl:template>
 	
 

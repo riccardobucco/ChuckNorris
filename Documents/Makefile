@@ -23,6 +23,8 @@ Glossario: FORCE
 	@ #compilazione file latex
 	@ make $@/$@.pdf
 
+UseCase: FORCE
+	@ find AnalisiDeiRequisiti/UseCase -name '*.xml' -exec xsltproc AnalisiDeiRequisiti/UseCase/UC.xsl {} \; > AnalisiDeiRequisiti/UseCase/UC.tex
 
 $(DOCUMENTI): FORCE
 	@ #validazione schema
