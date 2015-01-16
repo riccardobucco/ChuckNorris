@@ -62,7 +62,7 @@
 		\fancyhead[RO,LE]{\doctitle}
 
 		\fancyfoot{}
-		\fancyfoot[C]{\thepage}
+		\fancyfoot[C]{\thepage{} di \pageref{LastPage}}
 		
 		%space between paragraph
 		\raggedbottom
