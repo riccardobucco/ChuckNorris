@@ -1,0 +1,16 @@
+<usecase>
+	<titolo>UC1.1.3.1.1 Scegliere il nome dell'asse dei valori indipendenti</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>E’ stata creata un’istanza di Norris. Il grafico non è di tipo Table e Map Chart.</precondizione>
+	<postcondizione>E’ stato impostato il nome dell’asse dei valori indipendenti.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore imposta il nome dell’asse dei valori indipendenti.</item>
+	</principale>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
+			<item>il sistema segnala un errore.</item>
+		</scenario>
+	</alternativi>
+</usecase>
+
