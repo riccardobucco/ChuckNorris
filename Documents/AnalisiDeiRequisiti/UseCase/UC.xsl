@@ -8,24 +8,31 @@
 
 		\subsection{<xsl:value-of select="titolo"/>}
 
-		\begin{itemize}
+		<xsl:apply-templates select="immagine"/>
 
+		\begin{itemize}
 		<xsl:apply-templates select="attorip"/>
 		<xsl:apply-templates select="attoris"/>
 		<xsl:apply-templates select="generalizzazionedi"/>
 		<xsl:apply-templates select="specializzazionedi"/>
 		<xsl:apply-templates select="inclusioni"/>
 		<xsl:apply-templates select="estensioni"/>
+		<xsl:apply-templates select="precondizione"/>
+		<xsl:apply-templates select="postcondizione"/>
 		<xsl:apply-templates select="scenariop"/>
 		<xsl:apply-templates select="scenarioa"/>
-
 		\end{itemize}
 
 	</xsl:template>
 
-
-
-
+	<xsl:template match="immagine">
+		\begin{figure}[H]
+			\centering
+			\Huge{IMMAGINE} \\
+			\Large{Da Fare}
+			\caption{<xsl:value-of select="//titolo"/>}
+		\end{figure}
+	</xsl:template>
 
 	<xsl:template match="attorip">
 		\item \textbf{Attori principali:} <xsl:value-of select="."/>
@@ -48,6 +55,14 @@
 	</xsl:template>
 
 	<xsl:template match="estensioni">
+		\item \textbf{Estensioni:} <xsl:value-of select="."/>
+	</xsl:template>
+
+	<xsl:template match="precondizione">
+		\item \textbf{Estensioni:} <xsl:value-of select="."/>
+	</xsl:template>
+
+	<xsl:template match="postcondizione">
 		\item \textbf{Estensioni:} <xsl:value-of select="."/>
 	</xsl:template>
 
