@@ -28,8 +28,7 @@
 	<xsl:template match="immagine">
 		\begin{figure}[H]
 			\centering
-			\Huge{IMMAGINE} \\
-			\Large{Da Fare}
+			\includegraphics[width=0.5\textwidth]{AnalisiDeiRequisiti/Pics/UseCase/<xsl:value-of select="."/>}
 			\caption{<xsl:value-of select="//titolo"/>}
 		\end{figure}
 	</xsl:template>
