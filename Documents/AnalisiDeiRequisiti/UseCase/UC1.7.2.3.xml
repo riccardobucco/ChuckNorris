@@ -2,11 +2,7 @@
 
 <usecase>
 	<titolo>UC1.7.2.3 Aggiungere una nuova riga.</titolo>
-	<immagine>InserireNuovaRiga</immagine>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno inserendo i dati di una Table.</precondizione>
-	<postcondizione>È stata aggiunta una riga alla tabella.</postcondizione>
-	<principale>
-		<item>Lo sviluppatore scegliere un valore per ciascuna colonna della tabella (UC1.7.2.3.1).</item>
-	</principale>
+	<postcondizione>È stata aggiunta una riga alla tabella, ovvero è stato inserito un valore per ciascuna colonna della tabella.</postcondizione>
 </usecase>

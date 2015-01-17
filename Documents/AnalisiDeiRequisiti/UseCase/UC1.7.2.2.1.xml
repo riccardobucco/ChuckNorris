@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UC1.7.2.2.1 Scegliere una colonna a cui associare un header</titolo>
+	<titolo>UC1.7.2.2.1 Selezionare una colonna a cui associare un header</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta impostando l'intestazione di ogni colonna.</precondizione>
-	<postcondizione>È stata selezionata una colonna.</postcondizione>
+	<precondizione>Si sta impostata l'intestazione di ogni colonna.</precondizione>
+	<postcondizione>E' stata selezionata una colonna. </postcondizione>
 </usecase>
 
