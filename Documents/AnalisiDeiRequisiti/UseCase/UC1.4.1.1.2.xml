@@ -1,18 +1,16 @@
 <usecase>
-	<titolo>UC1.4.1.1 Scegliere il colore di ciascun set di barre</titolo>
+	<titolo>UC1.4.1.1.2 Scegliere il colore da associare a un set di barre selezionato</titolo>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>E’ stata creata un’istanza di Norris.</precondizione>
-	<postcondizione>E’ stato scelto il colore di ciascun set di barre.</postcondizione>
+	<postcondizione>E’ stato scelto il colore da associare ad un set di barre selezionato.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore seleziona il set di barre a cui associare un colore (UC1.4.1.1.1);</item>
-		<item>Lo sviluppatore sceglie il colore da associare a un set di barre selezionato (UC1.4.1.1.2).</item>
+		<item>Lo sviluppatore sceglie un colore.</item>
 	</principale>
 	<alternativi>
 		<scenario>
 			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
 			<item>il sistema segnala un errore.</item>
 		</scenario>
-
 	</alternativi>
 </usecase>
 

@@ -1,0 +1,24 @@
+<usecase>
+	<titolo>UC1.4.2 Inserire dati Bar Chart</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>E’ stata creata un’istanza di Norris. I dati sono nel formato richiesto dal framework.</precondizione>
+	<postcondizione>Sono stati impostati i dati che si vogliono rappresentare nel grafico. Per ogni valore indipendente, esiste un valore dipendente corrispondente per ogni set di barre.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie quanti set di barre inserire (UC1.4.2.1);</item>
+		<item>Lo sviluppatore sceglie il nome di ciascun set di barre (UC1.4.2.2);</item>
+		<item>Lo sviluppatore inserisce un valore indipendente nel Bar Chart (UC1.4.2.3);</item>
+		<item>Lo sviluppatore inserisce un valore dipendente per ciascun set di barre (UC1.4.2.1).</item>
+	</principale>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
+			<item>il sistema segnala un errore.</item>
+		</scenario>
+
+		<scenario>
+			<descrizione>Nel caso in cui non tutti i valori indipendenti abbiano un valore dipendente corrispondente per ogni set di barre (o viceversa):</descrizione>
+			<item>il sistema segnala un errore.</item>
+		</scenario>
+	</alternativi>
+</usecase>
+

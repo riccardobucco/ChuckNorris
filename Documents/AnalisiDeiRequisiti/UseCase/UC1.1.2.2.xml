@@ -4,7 +4,7 @@
 	<titolo>UC1.1.2.2 Scegliere la posizione in cui è visualizzata la legenda</titolo>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>E’ stata creata un’istanza di Norris. Il grafico non è di tipo Table.</precondizione>
-	<postcondizione> </postcondizione>
+	<postcondizione>E' stata scelta la posizione in cui è visualizzata la legenda. </postcondizione>
 	<principale>
 		<item>Lo sviluppatore imposta la posizione in cui è visualizzata la legenda.</item>
 	</principale>
