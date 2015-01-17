@@ -1,8 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <usecase>
 	<titolo>UC1.7.1.2 Scegliere le opzioni riguardanti il formato di una cella</titolo>
 	<immagine>SceltaFormatoCellaTable</immagine>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Nessuna.</precondizione>
+	<precondizione>Si stanno configurando le impostazioni del grafico Table.</precondizione>
 	<postcondizione>È stato definito il formato di una cella.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore sceglie la cella alla quale vuole modificare il formato (UC1.7.1.2.1);</item>
