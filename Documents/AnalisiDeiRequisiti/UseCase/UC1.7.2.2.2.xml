@@ -1,0 +1,7 @@
+<usecase>
+	<titolo>UC1.7.2.2.2 Scegliere l'header di una colonna</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>È stato scelta una colonna (UC1.7.2.2.1).</precondizione>
+	<postcondizione>È stato impostato l'header di una colonna.</postcondizione>
+</usecase>
+

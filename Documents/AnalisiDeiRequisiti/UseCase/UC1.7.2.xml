@@ -1,0 +1,13 @@
+<usecase>
+	<titolo>UC1.7.2 Inserire dati Table</titolo>
+	<immagine>InserireDatiTable</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Il grafico è di tipo Table.</precondizione>
+	<postcondizione>Sono impostati i dati della Table.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie il numero di colonne da inserire (UC1.7.2.1);</item>
+		<item>Lo sviluppatore sceglie l'intestazione di ciascuna colonna (UC1.7.2.2);</item>
+		<item>Lo sviluppatore inserisce una nuova riga (UC1.7.2.3).</item>
+	</principale>
+</usecase>
+

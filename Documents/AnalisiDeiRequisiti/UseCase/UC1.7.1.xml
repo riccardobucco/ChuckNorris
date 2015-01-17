@@ -1,0 +1,13 @@
+<usecase>
+	<titolo>UC1.7.1 Scegliere opzioni Table</titolo>
+	<immagine>OpzioniTable</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Il grafico è di tipo Table.</precondizione>
+	<postcondizione>Sono state configurate le impostazioni della Table.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie il formato dei dati contenuti nelle colonne (UC1.7.1.1);</item>
+		<item>Lo sviluppatore sceglie le opzioni riguardanti il formato di una cella (UC1.7.1.2);</item>
+		<item>Lo sviluppatore sceglie il massimo numero di righe visualizzabili (UC1.7.1.3).</item>
+	</principale>
+</usecase>
+

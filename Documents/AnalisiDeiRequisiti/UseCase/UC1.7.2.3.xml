@@ -1,0 +1,8 @@
+<usecase>
+	<titolo>UC1.7.2.3 Aggiungere una nuova riga.</titolo>
+	<immagine>InserireNuovaRiga</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>È stato scelto il numero di colonne (UC1.7.2.1).</precondizione>
+	<postcondizione>È stata aggiunta una riga alla Table.</postcondizione>
+</usecase>
+

@@ -1,0 +1,7 @@
+<usecase>
+	<titolo>UC1.7.1.1.2 Scegliere il formato di una colonna</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>È stata selezionata una colonna della tabella (UC1.7.1.1.1).</precondizione>
+	<postcondizione>È stato configurato il formato di una colonna.</postcondizione>
+</usecase>
+
