@@ -1,5 +1,6 @@
 <usecase>
 	<titolo>UC1.1.3.2 Scegliere le opzioni riguardanti l'asse dei valori dipendenti</titolo>
+	<immagine>OpzioniAsseDipendenti</immagine>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>E’ stata creata un’istanza di Norris. Il grafico non è di tipo Table e Map Chart.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti l'asse dei valori dipendenti.</postcondizione>

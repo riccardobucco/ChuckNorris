@@ -1,5 +1,6 @@
 <usecase>
 	<titolo>UC1.4.1 Scegliere opzioni Bar Chart</titolo>
+	<immagine>OpzioniBarChart</immagine>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>E’ stata creata un’istanza di Norris.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni del grafico Bar Chart.</postcondizione>

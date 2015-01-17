@@ -1,5 +1,6 @@
 <usecase>
 	<titolo>UC1.4.2 Inserire dati Bar Chart</titolo>
+	<immagine>InserireDatiBarChart</immagine>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>E’ stata creata un’istanza di Norris. I dati sono nel formato richiesto dal framework.</precondizione>
 	<postcondizione>Sono stati impostati i dati che si vogliono rappresentare nel grafico. Per ogni valore indipendente, esiste un valore dipendente corrispondente per ogni set di barre.</postcondizione>

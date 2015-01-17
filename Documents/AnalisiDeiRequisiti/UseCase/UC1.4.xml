@@ -1,5 +1,6 @@
 <usecase>
 	<titolo>UC1.4 Creare modello Bar Chart</titolo>
+	<immagine>CreareModelloBarChart</immagine>
 	<attorip>Sviluppatore</attorip>
 	<specializzazionedi>UC1.1</specializzazionedi>
 	<precondizione>E’ stata creata un’istanza di Norris.</precondizione>

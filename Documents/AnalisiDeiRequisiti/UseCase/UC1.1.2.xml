@@ -2,6 +2,7 @@
 
 <usecase>
 	<titolo>UC1.1.2 Scegliere le opzioni riguardanti la legenda</titolo>
+	<immagine>OpzioniLegenda</immagine>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>E’ stata creata un’istanza di Norris. Il grafico non è di tipo Table.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti la legenda.</postcondizione>
