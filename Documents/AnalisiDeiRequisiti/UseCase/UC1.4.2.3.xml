@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.4.2.3 Inserire un valore indipendente nel Bar Chart</titolo>
+	<immagine>SceltaNomeSetBarre</immagine>
+	<inclusioni>UC1.4.2.4</inclusioni>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno inserendo i dati di un Bar Chart.</precondizione>
+	<postcondizione>E’ stato inserito un valore indipendente nel Bar Chart.</postcondizione>
+</usecase>
+
