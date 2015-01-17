@@ -1,0 +1,16 @@
+<usecase>
+	<titolo>UC1.4.2.1 Scegliere quanti set di barre inserire</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>E’ stata creata un’istanza di Norris.</precondizione>
+	<postcondizione>E’ stato impostato il numero di set di barre da inserire nel grafico.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore imposta il numero di set di barre.</item>
+	</principale>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
+			<item>il sistema segnala un errore.</item>
+		</scenario>
+	</alternativi>
+</usecase>
+
