@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.7.1.2.3 Scegliere il colore dello sfondo di una cella</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno configurando le opzioni inerenti al formato di una cella. E'stata selezionata una cella della tabella.</precondizione>
+	<postcondizione>E' stato impostato il colore dello sfondo della cella selezionata.</postcondizione>
+</usecase>
+
