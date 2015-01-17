@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UC1.7.2.1 Scegliere il numero di colonne da inserire</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>E’ stata creata un’istanza di Norris.</precondizione>
-	<postcondizione>È stato impostato il numero di colonna da inserire.</postcondizione>
+	<precondizione>Si stanno inserendo i dati di una Table.</precondizione>
+	<postcondizione>È stato impostato il numero di colonne da inserire.</postcondizione>
 </usecase>
 
