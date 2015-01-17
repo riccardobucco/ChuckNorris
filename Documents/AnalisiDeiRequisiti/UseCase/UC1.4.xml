@@ -1,11 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <usecase>
 	<titolo>UC1.4 Creare modello Bar Chart</titolo>
 	<immagine>CreareModelloBarChart</immagine>
 	<attorip>Sviluppatore</attorip>
 	<specializzazionedi>UC1.1</specializzazionedi>
-	<precondizione>E’ stata creata un’istanza di Norris.</precondizione>
+	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>E’ stato creato il modello di un grafico di tipo Bar Chart.</postcondizione>
 	<principale>
+		<item>INSERIRE PASSI DI UC1.1</item>
 		<item>Lo sviluppatore sceglie le opzioni del Bar Chart (UC1.4.1);</item>
 		<item>Lo sviluppatore inserisce i dati del Bar Chart (UC1.4.2).</item>
 	</principale>
