@@ -8,11 +8,5 @@
 	<principale>
 		<item>Lo sviluppatore imposta il nome dell’asse dei valori dipendenti.</item>
 	</principale>
-	<alternativi>
-		<scenario>
-			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
-			<item>il sistema segnala un errore.</item>
-		</scenario>
-	</alternativi>
 </usecase>
 

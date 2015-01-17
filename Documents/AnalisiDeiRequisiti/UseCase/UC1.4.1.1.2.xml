@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UC1.4.1.1.2 Scegliere il colore da associare a un set di barre selezionato</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta configurando il colore di ciascun set di barre.</precondizione>
-	<postcondizione>E’ stato scelto il colore da associare ad un set di barre selezionato.</postcondizione>
+	<precondizione>Si sta configurando il colore di ciascun set di barre. E’ stato selezionato il set di barre a cui associare un colore.</precondizione>
+	<postcondizione>E’ stato scelto il colore da associare al set di barre selezionato.</postcondizione>
 </usecase>
 
