@@ -110,13 +110,6 @@
 					\end{tabu}
 				\end{center}
 
-				\vspace{4cm}
-
-				\begin{abstract} \noindent
-					\input{Tex/Abstract.tex}
-				\end{abstract}
-
-				
 	</xsl:template>
 	
 	<xsl:template name="changes">
