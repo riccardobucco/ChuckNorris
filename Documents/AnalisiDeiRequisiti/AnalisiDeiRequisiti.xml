@@ -3,10 +3,10 @@
 <document>
 	<title>Analisi Dei Requisiti</title>
 	<type>Esterno</type>
-	<redactedby>redazione</redactedby>
-	<verifiedby>verifica</verifiedby>
-	<approvedby>approvazione</approvedby>
-	<distribution>distribuzione</distribution>
+	<redactedby>Bucco Riccardo \\ Dal Bianco Davide \\ Bigarella Chiara \\ Carlon Chiara</redactedby>
+	<verifiedby>Moretto Alessandro \\ Pavanello Fabio Matteo \\ Rubin Marco</verifiedby>
+	<approvedby>Moretto Alessandro</approvedby>
+	<distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<include>
 		<name>Tex/Introduzione</name>
@@ -16,7 +16,7 @@
 
 	<changes>
 		<version>
-			<id>0.0.1</id>
+			<id>0.01</id>
 			<date>2014-12-18</date>
 			<author>autore</author>
 			<role>ruolo</role>
