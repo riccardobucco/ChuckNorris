@@ -4,17 +4,11 @@
 	<titolo>UC1.1.2 Scegliere le opzioni riguardanti la legenda</titolo>
 	<immagine>OpzioniLegenda</immagine>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>E’ stata creata un’istanza di Norris. Il grafico non è di tipo Table.</precondizione>
+	<precondizione>Si vuole creare un grafico. Il grafico non è di tipo Table.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti la legenda.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore sceglie se la legenda è visualizzata (UC1.1.2.1);</item>
 		<item>Lo sviluppatore sceglie la posizione in cui è visualizzata la legenda (UC1.1.2.2).</item>
 	</principale>
-	<alternativi>
-		<scenario>
-			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
-			<item>il sistema segnala un errore.</item>
-		</scenario>
-	</alternativi>
 </usecase>
 

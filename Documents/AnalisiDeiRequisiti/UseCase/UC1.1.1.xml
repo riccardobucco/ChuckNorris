@@ -3,16 +3,7 @@
 <usecase>
 	<titolo>UC1.1.1 Inserire il titolo del chart</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>E’ stata creata un’istanza di Norris.</precondizione>
+	<precondizione>Si vuole creare un grafico.</precondizione>
 	<postcondizione>E’ stato impostato il titolo del grafico.</postcondizione>
-	<principale>
-		<item>Lo sviluppatore inserisce il titolo del grafico.</item>
-	</principale>
-	<alternativi>
-		<scenario>
-			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
-			<item>il sistema segnala un errore.</item>
-		</scenario>
-	</alternativi>
 </usecase>
 
