@@ -10,8 +10,7 @@
 	Una volta creati, i diversi componenti del prodotto finale verranno testati per garantire che il loro funzionamento risulti deterministico.\\
 	A conclusione delle attività di controllo della qualità di prodotto verrà effettuata l'attività di validazione del framework, che confermerà se i requisiti saranno stati rispettati o meno.
 \subsection{Organizzazione}
-	Il gruppo \groupname{} ha deciso di organizzare la strategia di verifica sulla base  di verifiche delle diverse attività del processo di sviluppo.\\
-	...
+	Come indicato nel \insdoc{Piano di Progetto v1.0} si è scelto di utilizzare un modello di ciclo di vita incrementale. Caratteristica di questo modello è quella di far avanzare il progetto a partire da miglioramenti consolidati, pertanto il gruppo \groupname{} ha deciso di organizzare la strategia di verifica sulla base di verifiche delle diverse attività del processo di sviluppo, le quali avranno lo scopo di garantire la qualità dei risultati ottenuti e, di conseguenza la sicurezza nei miglioramenti raggiunti.\\
 	Il compito di effettuare le verifiche, personalmente e attraverso gli strumenti individuati, spetterà al verificatore in carica nei momenti definiti dal Responsabile di Progetto.\\
 	L'attività di verifica si estenderà sulle attività di processo in questo modo:
 	\begin{itemize}
@@ -29,10 +28,6 @@
 		\item progettazione architetturale:
 			\begin{itemize}
 				\item la qualità della fase di progettazione architetturale verrà garantita dal controllo del tracciamento bidirezionale dei requisiti (fonte-requisito, requisito-fonte) e della corretta mappatura dei requisiti nelle parti del sistema.
-			\end{itemize}
-		\item progettazione di dettaglio dei requisiti che si è deciso di implementare: 
-			\begin{itemize}
-				\item ???
 			\end{itemize}
 		\item codifica: 
 			\begin{itemize}
@@ -66,7 +61,7 @@
 		\subparagraph{Risorse software}
 		Di esse fanno parte:
 			\begin{itemize}
-				\item software per la documentazione in formato LATEX;
+				\item software per la documentazione nel linguaggio \LaTeX{};
 				\item software per la creazione di diagrammi UML;
 				\item IDE per lo sviluppo nei linguaggi di programmazione indicati nel capitolato;
 				\item script per l'automazione di attività di verifica;
@@ -111,13 +106,14 @@
 	\end{itemize}
 	\subsubsection{Metriche per i processi}
 		Per il controllo della qualità dei processi è stato deciso di adottare il modello CMM. Questo modello ha lo scopo di migliorare i processi e, più in generale, di aiutare una organizzazione a migliorare le sue prestazioni.\\
-		Per ogni processo vengono valutati i livelli di "Capability" e "Maturity" cioè, rispettivamente, la misura dell'adeguatezza del processo  rispetto agli scopi per cui è stato definito e il grado di consolidamento di un processo all'interno dell'organizzazione. I valori possono oscillare tra 1 e 5.\\
+		Per ogni processo vengono valutati i livelli di "\textit{Capability}" e "\textit{Maturity}" cioè, rispettivamente, la misura dell'adeguatezza del processo  rispetto agli scopi per cui è stato definito e il grado di consolidamento di un processo all'interno dell'organizzazione. I valori possono oscillare tra 1 e 5.\\
 		La scelta del team è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del team di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in quanto, nella sua versione pura, non prevede il consolidamento delle best practice.\\
 		I range stabiliti per questa metrica sono:
 		\begin{itemize}
 			\item Range di accettazione: 3 - 5;
 			\item Range ottimale: 4 - 5;
 		\end{itemize}	
+		La valutazione rispetto ai processi viene fornita solo dopo l'esito della revisione da parte del committente.
 	\subsubsection{Metriche per i documenti}
 		Per il controllo della qualità dei documenti è stato deciso di adottare l'indice Gulpease, un indice di leggibilità del testo tarato sulla lingua italiana.\\
 		Questo particolare indice si basa sulla lunghezza della parola e sulla lunghezza della frase rispetto al numero di lettere.\\
