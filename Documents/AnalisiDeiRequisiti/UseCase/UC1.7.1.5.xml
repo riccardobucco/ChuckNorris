@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.7.1.5 Scegliere la posizione in cui vengono aggiunte nuove righe</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno configurando le impostazioni della Table.</precondizione>
+	<postcondizione>E' stata scelta la posizione in cui vengono aggiunte nuove righe.</postcondizione>
+</usecase>
+
+
+
+
+
