@@ -1,7 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <usecase>
 	<titolo>UC1.7.2.3.1 Scegliere un valore per ogni colonna della Table</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Nessuna.</precondizione>
+	<precondizione>Si sta aggiungendo una riga alla tabella.</precondizione>
 	<postcondizione>È stato scelto il valore di una cella della Table.</postcondizione>
 </usecase>
 

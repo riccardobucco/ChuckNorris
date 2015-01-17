@@ -4,7 +4,7 @@
 	<titolo>UC1.7.2.2 Scegliere l'intestazione di ciascuna colonna</titolo>
 	<immagine>SceltaIntestazioneColonnaTable</immagine>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno inserendo i dati di una Table.</precondizione>
+	<precondizione>Si stanno inserendo i dati di una Table. È stato scelto il numero di colonne da inserire (UC1.7.2.1).</precondizione>
 	<postcondizione>E' stata impostata l'intestazione di ogni colonna.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore sceglie la colonna alla quale associare un'intestazione (UC1.7.2.2.1);</item>
