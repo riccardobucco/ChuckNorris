@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.6.2 Inserire dati Map Chart</titolo>
+	<immagine>InserireDatiMapChart</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si vuole creare un grafico di tipo Map Chart. I dati sono nel formato richiesto dal framework.</precondizione>
+	<postcondizione>Sono stati impostati i dati che si vogliono rappresentare nel grafico.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie le coordinate di un nuovo punto sulla mappa (UC1.6.2.1);</item>
+		<item>Lo sviluppatore inserisce l'etichetta di un punto sulla mappa (UC1.6.2.2).</item>
+	</principale>
+</usecase>
