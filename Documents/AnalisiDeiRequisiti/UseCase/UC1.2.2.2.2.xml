@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.2.2.2.2 Per ogni linea scegliere un nuovo valore dipendente in corrispondenza del valore indipendente scelto</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si sta aggiornando il modello di un line chart con metodo stream. È stato selezionato il modello di un line chart. ' stato impostato un nuovo valore indipendente da aggiungere al line chart.</precondizione>
+	<postcondizione>E' stato impostato per ogni linea un nuovo valore dipendente in corrispondenza del valore indipendente scelto.</postcondizione>
+</usecase>
