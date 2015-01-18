@@ -16,13 +16,90 @@
 		<name>Tex/Sviluppo</name>
 	</include>
     
-	<changes>
+    <changes>
+        <version>
+            <id>1.00</id>
+            <date>2014-12-17</date>
+            <author>Moretto Alessandro</author>
+            <role>Product Manager</role>
+            <description>Approvazione documento</description>
+        </version>
+        <version>
+            <id>0.11</id>
+            <date>2014-12-17</date>
+            <author>Davide Dal Bianco, Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verificata sezione Documentazione</description>
+        </version>
+        <version>
+            <id>0.10</id>
+            <date>2014-12-16</date>
+            <author>Riccardo Bucco</author>
+            <role>Amministratore</role>
+            <description>Modifica sezione Documentazione</description>
+        </version>
+        <version>
+            <id>0.09</id>
+            <date>2014-12-15</date>
+            <author>Chiara Bigarella</author>
+            <role>Verificatore</role>
+            <description>Verificata sezione Sviluppo</description>
+        </version>
+        <version>
+            <id>0.08</id>
+            <date>2014-12-15</date>
+            <author>Carlon Chiara, Riccardo Bucco</author>
+            <role>Verificatore</role>
+            <description>Verificata sezione Configurazione</description>
+        </version>
+        <version>
+            <id>0.07</id>
+            <date>2014-12-14</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verificata sezione Organizzazione</description>
+        </version>
 		<version>
-			<id>0.01</id>
-			<date>2014-12-18</date>
-			<author>autore</author>
-			<role>ruolo</role>
-			<description>descrizione</description>
-		</version>
+			<id>0.06</id>
+			<date>2014-12-13</date>
+			<author>Davide Dal Bianco, Rubin Marco</author>
+			<role>Amministratore</role>
+			<description>Terminata stesura Sviluppo</description>
+        </version>
+        <version>
+            <id>0.05</id>
+            <date>2014-12-13</date>
+            <author>Chiara Bigarella</author>
+            <role>Amministratore</role>
+            <description>Terminata stesura Configurazione</description>
+        </version>
+        <version>
+            <id>0.04</id>
+            <date>2014-12-13</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verificata sezione Introduzione</description>
+        </version>
+        <version>
+            <id>0.03</id>
+            <date>2014-12-13</date>
+            <author>Riccardo Bucco</author>
+            <role>Amministratore</role>
+            <description>Terminata stesura Documentazione</description>
+        </version>
+        <version>
+            <id>0.02</id>
+            <date>2014-12-12</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Amministratore</role>
+            <description>Terminata stesura Organizzazione</description>
+        </version>
+        <version>
+            <id>0.01</id>
+            <date>2014-12-12</date>
+            <author>Carlon Chiara</author>
+            <role>Amministratore</role>
+            <description>Terminata stesura Introduzione</description>
+        </version>
 	</changes>
 </document>
