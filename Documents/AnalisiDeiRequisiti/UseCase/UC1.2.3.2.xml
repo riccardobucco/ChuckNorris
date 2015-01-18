@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.2.3.2 Aggiornare un modello map chart con metodo movie</titolo>
+	<immagine>AggiornareMapChartMovie</immagine>
+	<attorip>Sviluppatore</attorip>
+	<specializzazionedi> UC1.2.3.1 </specializzazionedi>
+	<inclusioni>UC1.2.3.3</inclusioni>
+	<precondizione>Si sta aggiornando il modello di un map chart.</precondizione>
+	<postcondizione>È stato aggiornato il modello di un map chart con metodo movie.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore seleziona un modello map chart da aggiornare (UC1.2.3.3);</item>
+		<item>Lo sviluppatore seleziona un punto che si vuole modificare dal modello selezionato (UC1.2.3.1.1);</item>
+		<item>Lo sviluppatore imposta la nuova longitudine e latitudine di un punto selezionato (UC1.2.3.1.2);</item>
+		<item>Lo sviluppatore sceglie un nuovo punto da aggiungere al map chart selezionato (UC1.2.3.2.1);</item>
+		<item>Lo sviluppatore sceglie un punto da rimuovere dal map chart selezionato (UC1.2.3.2.2).</item>
+	</principale>
+</usecase>
