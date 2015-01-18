@@ -4,6 +4,12 @@
 	<titolo>UC1.1 Creare modello chart</titolo>
 	<immagine>CreareModelloBarChart</immagine>
 	<attorip>Sviluppatore</attorip>
+	<generalizzazionedi>
+		<item>UC1.4 Creare modello bar chart</item>
+		<item>UC1.5 Creare modello line chart</item>
+		<item>UC1.6 Creare modello map chart</item>
+		<item>UC1.7 Creare modello table</item>
+	</generalizzazionedi>
 	<precondizione>Si stanno utilizzando le API interne. Si sta eseguendo uno dei casi d'uso che specializzano il presente caso d'uso (UC1.4, UC1.5, UC1.6, UC1.7).</precondizione>
 	<postcondizione>È stato creato un modello di un grafico. Tale modello può essere di tipo bar chart, line chart, map chart o table: questo dipende dal caso d'uso specializzato che è stato eseguito.</postcondizione>
 	<principale>

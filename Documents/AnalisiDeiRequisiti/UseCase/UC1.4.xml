@@ -4,7 +4,9 @@
 	<titolo>UC1.4 Creare modello bar chart</titolo>
 	<immagine>CreareModelloBarChart</immagine>
 	<attorip>Sviluppatore</attorip>
-	<specializzazionedi>UC1.1</specializzazionedi>
+	<specializzazionedi>
+		<item>UC1.1 Creare modello chart</item>
+	</specializzazionedi>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato creato un modello di un grafico di tipo bar chart.</postcondizione>
 	<principale>

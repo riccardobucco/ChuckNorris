@@ -4,7 +4,9 @@
 	<titolo>UC1.5 Creare modello line chart</titolo>
 	<immagine>CreareModelloLineChart</immagine>
 	<attorip>Sviluppatore</attorip>
-	<specializzazionedi>UC1.1</specializzazionedi>
+	<specializzazionedi>
+		<item>UC1.1 Creare modello chart</item>
+	</specializzazionedi>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato creato un modello di un grafico di tipo line chart.</postcondizione>
 	<principale>
