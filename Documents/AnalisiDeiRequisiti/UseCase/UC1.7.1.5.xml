@@ -3,11 +3,6 @@
 <usecase>
 	<titolo>UC1.7.1.5 Scegliere la posizione in cui vengono aggiunte nuove righe</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni della Table.</precondizione>
-	<postcondizione>E' stata scelta la posizione in cui vengono aggiunte nuove righe.</postcondizione>
+	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table.</precondizione>
+	<postcondizione>È stata scelta la posizione in cui vengono aggiunte nuove righe (nel caso vengano eseguiti solo aggiornamenti di tipo stream). In particolare è stato scelto se le righe vanno aggiunte alla fine o all'inizio della table.</postcondizione>
 </usecase>
-
-
-
-
-

@@ -4,12 +4,11 @@
 	<titolo>UC1.7.1.2 Scegliere le opzioni riguardanti il formato di una cella</titolo>
 	<immagine>SceltaFormatoCellaTable</immagine>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni del grafico Table.</precondizione>
+	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table.</precondizione>
 	<postcondizione>È stato definito il formato di una cella.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore sceglie la cella alla quale vuole modificare il formato (UC1.7.1.2.1);</item>
-		<item>Lo sviluppatore sceglie il colore del testo (UC1.7.1.2.2);</item>
-		<item>Lo sviluppatore sceglie il il colore dello sfonto (UC1.7.1.2.3).</item>
+		<item>Lo sviluppatore sceglie il colore del testo contenuto nella cella selezionata (UC1.7.1.2.2);</item>
+		<item>Lo sviluppatore sceglie il colore dello sfondo della cella selezionata (UC1.7.1.2.3).</item>
 	</principale>
 </usecase>
-

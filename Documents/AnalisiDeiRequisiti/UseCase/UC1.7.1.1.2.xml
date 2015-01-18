@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UC1.7.1.1.2 Scegliere il formato di una colonna</titolo>
+	<titolo>UC1.7.1.1.2 Scegliere il formato di una colonna selezionata</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni riguardanti il formato dei dati contenuti nelle colonne di una Table. È stata selezionata una colonna della tabella (UC1.7.1.1.1).</precondizione>
+	<precondizione>Si stanno configurando le impostazioni riguardanti il formato dei dati contenuti nelle colonne di un grafico di tipo table. È stata selezionata una colonna della tabella.</precondizione>
 	<postcondizione>È stato configurato il formato della colonna selezionata.</postcondizione>
 </usecase>
-

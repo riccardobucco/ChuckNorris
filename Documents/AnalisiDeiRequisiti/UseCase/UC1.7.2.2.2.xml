@@ -3,7 +3,6 @@
 <usecase>
 	<titolo>UC1.7.2.2.2 Scegliere l'header di una colonna selezionata</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta impostando l'intestazione di ogni colonna. E' stata selezionata una colonna.</precondizione>
-	<postcondizione>Si è impostato l'header della colonna selezionata.</postcondizione>
+	<precondizione>Si sta scegliendo l'intestazione di ogni colonna. È stata selezionata una colonna a cui dare un nome.</precondizione>
+	<postcondizione>È stato impostato l'header della colonna selezionata.</postcondizione>
 </usecase>
-

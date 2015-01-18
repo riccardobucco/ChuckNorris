@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UC1.7.2 Inserire dati Table</titolo>
+	<titolo>UC1.7.2 Inserire dati table</titolo>
 	<immagine>InserireDatiTable</immagine>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Il grafico è di tipo Table.</precondizione>
-	<postcondizione>Sono stati inseriti i dati della Table.</postcondizione>
+	<precondizione>Si vuole creare un grafico di tipo table</precondizione>
+	<postcondizione>Sono stati impostati i dati che si vogliono inserire nella table. Nessuna cella è vuota.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il numero di colonne da inserire (UC1.7.2.1);</item>
+		<item>Lo sviluppatore sceglie quante colonne inserire (UC1.7.2.1);</item>
 		<item>Lo sviluppatore sceglie l'intestazione di ciascuna colonna (UC1.7.2.2);</item>
-		<item>Lo sviluppatore inserisce una nuova riga (UC1.7.2.3).</item>
+		<item>Lo sviluppatore inserisce una nuova riga (UC1.7.2.3);</item>
+		<item>Lo sviluppatore esegue il passo precedente per un numero di volte pari al numero di righe che desidera inserire nel chart.</item>
 	</principale>
 </usecase>
-
