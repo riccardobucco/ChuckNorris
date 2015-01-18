@@ -42,11 +42,21 @@
 	</xsl:template>
 
 	<xsl:template match="generalizzazionedi">
-		\item \textbf{Generalizzazione di:} <xsl:value-of select="."/>
+		\item \textbf{Generalizzazione di:}
+		
+		\begin{itemize}
+		<xsl:apply-templates select="item"/>
+		\end{itemize}
+
 	</xsl:template>
 
 	<xsl:template match="specializzazionedi">
-		\item \textbf{Specializzazione di:} <xsl:value-of select="."/>
+		\item \textbf{Specializzazione di:}
+
+		\begin{itemize}
+		<xsl:apply-templates select="item"/>
+		\end{itemize}
+
 	</xsl:template>
 
 	<xsl:template match="inclusioni">
@@ -62,20 +72,14 @@
 	</xsl:template>
 
 	<xsl:template match="postcondizione">
-		\item \textbf{Postcondizione:} <xsl:value-of select="."/>
+		\item \textbf{Postcondizione:}<xsl:value-of select="."/>
 	</xsl:template>
 
 	<xsl:template match="principale">
 		\item \textbf{Scenario principale}
 
 		\begin{enumerate}
-
-		<xsl:for-each select="item">
-
-			\item <xsl:value-of select="."/>
-
-		</xsl:for-each>
-
+		<xsl:apply-templates select="item"/>
 		\end{enumerate}
 
 	</xsl:template>
@@ -89,15 +93,16 @@
 		\emph{<xsl:value-of select="descrizione"/>}
 
 		\begin{enumerate}
-
-		<xsl:for-each select="item">
-
-			\item <xsl:value-of select="."/>
-
-		</xsl:for-each>
-
+		<xsl:apply-templates select="item"/>
 		\end{enumerate}
-	</xsl:template>	
+	</xsl:template>
+
+
+
+
+	<xsl:template match="item">
+		\item <xsl:value-of select="."/>
+	</xsl:template>
 	
 
 </xsl:stylesheet>
