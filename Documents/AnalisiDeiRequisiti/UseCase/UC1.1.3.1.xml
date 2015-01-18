@@ -5,10 +5,9 @@
 	<immagine>OpzioniAsseIndipendenti</immagine>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno configurando le impostazioni riguardanti il piano cartesiano.</precondizione>
-	<postcondizione> Sono state configurate le impostazioni riguardanti l'asse dei valori indipendenti. </postcondizione>
+	<postcondizione>Sono state configurate le impostazioni riguardanti l'asse dei valori indipendenti. </postcondizione>
 	<principale>
 		<item>Lo sviluppatore sceglie il nome dell'asse dei valori indipendenti (UC1.1.3.1.1);</item>
 		<item>Lo sviluppatore sceglie il formato dei valori indipendenti (UC1.1.3.1.2).</item>
 	</principale>
 </usecase>
-

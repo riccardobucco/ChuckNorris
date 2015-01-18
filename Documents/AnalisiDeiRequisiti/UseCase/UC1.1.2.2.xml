@@ -3,7 +3,6 @@
 <usecase>
 	<titolo>UC1.1.2.2 Scegliere la posizione in cui è visualizzata la legenda</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni riguardanti la legenda. La legenda è visualizzata. </precondizione>
-	<postcondizione>E' stata scelta la posizione in cui è visualizzata la legenda. </postcondizione>
+	<precondizione>Si stanno configurando le impostazioni riguardanti la legenda.</precondizione>
+	<postcondizione>È stata impostata la posizione in cui è visualizzata la legenda. L'impostazione viene ignorata se la legenda non è visualizzabile.</postcondizione>
 </usecase>
-

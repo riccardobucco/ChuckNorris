@@ -7,7 +7,7 @@
 	<precondizione>Si stanno configurando le impostazioni riguardanti il piano cartesiano.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti l'asse dei valori dipendenti.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il nome dell'asse dei valori dipendenti (UC1.1.3.2.1).</item>
+		<item>Lo sviluppatore sceglie il nome dell'asse dei valori dipendenti (UC1.1.3.2.1);</item>
+		<item>Viene impostato automaticamente il formato dei valori dipendenti (numero).</item>
 	</principale>
 </usecase>
-
