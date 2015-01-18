@@ -1,22 +1,26 @@
 % !TEX encoding = UTF-8 Unicode
 
 \section{Domande e risposte}
-	Vengono riportate le domande effettuate dal gruppo \groupname\ e le relative risposte date dal proponente \proponente\, nel corso della videoconferenza avvenuta in data \insdate{20}{12}{2014}.\\
+Vengono riportate le domande effettuate dal gruppo \groupname{} e le relative risposte date dal proponente \proponente{}, nel corso della videoconferenza avvenuta in data \insdate{20}{12}{2014}.\\
 	
-	\textbf{Chi decide il formato con cui \projectname\ consuma i dati?}\\
-	\textit{Il formato con cui Norris legge i dati lo decidete voi. Il cliente si aspetta di leggere nella documentazione il formato in cui \projectname\ consuma i dati.}\\
+	\textbf{Da quello che il team ha capito: \projectname{} dovrebbe essere un modulo di Node.js, con cui l'utilizzatore esterno, includendolo, ha la possibilità di creare nuovi grafici. L'applicazione dello sviluppatore dovrà, quindi, fare polling alla sorgente e una volta che verrà rilevata una modifica, essa verrà comunicata al modulo di \projectname{}; si dovrà, poi, provvedére un modulo, lato client, che riceverà i pacchetti dal server e creerà il codice html da aggiungere alla pagina. \`{E} corretta tale interpretazione?}\\
+	\textit{L'interpretazione è corretta, a parte alcuni aspetti. Non è detto che il server che utilizza \projectname{} debba fare polling, ma \projectname{} stesso dovrà mettere a disposizione dei metodi che lo sviluppatore utlizzerà per comunicare a \projectname{} che ci sono nuovi dati, quindi, la responsabilità di dichiarare che ci sono nuovi dati è dell'utilizzatore di \projectname{}.\\
+	Inoltre, front-end e back-end sono solitamente separati, comunicano tramite API, quindi quello che viene spostato, la prima volta viene spostato nell'html, le volte successive viene spostato come trasferimento dei dati in JSON, quindi, solo l'informazione cambiata.}\\
 	
-	\textbf{\projectname\, dal lato client, una volta ricevuti i dati, costruisce solo l'astrazione dei grafici o anche la loro visualizzazione?}\\
-	\textit{Per quanto riguarda la parte front-end, \projectname\ deve visualizzare il grafico utilizzando librerie come chart.js. All'utente finale serve costruire grafici in maniera semplice senza dover scrivere codice html.}\\
+	\textbf{Chi decide il formato con cui \projectname{} consuma i dati?}\\
+	\textit{Il formato con cui \projectname{} legge i dati lo decidete voi. Il cliente si aspetta di leggere nella documentazione il formato in cui \projectname{} consuma i dati.}\\
+	
+	\textbf{\projectname{}, dal lato client, una volta ricevuti i dati, costruisce solo l'astrazione dei grafici o anche la loro visualizzazione?}\\
+	\textit{Per quanto riguarda la parte front-end, \projectname{} deve visualizzare il grafico utilizzando librerie come chart.js. All'utente finale serve costruire grafici in maniera semplice senza dover scrivere codice html.}\\
 	
 	\textbf{Quale ruolo deve rivestire Heroku all'interno del progetto?}\\
-	\textit{Heroku è un servizio di hosting ed un esecutore di progetti web. Il progetto viene caricato, tramite Git, su Heroku, il quale si prende il compito di eseguirlo.}\\
+	\textit{Heroku è un servizio di hosting ed un esecutore di progetti web. Il progetto viene caricato, tramite Git, su Heroku, il quale si prende il compito di eseguirlo. Il fatto di mettere il progetto su Heroku, pone alcuni vincoli: per esempio, non c'è garanzia che rimangano i file scritti nel file system. Questo vuol dire che voi non potete generare dei file, lato server, a run-time.}\\
 	
 	\textbf{Per quanto riguarda gli aggiornamenti dei grafici, occorre che sia rilevato in automatico il tipo di aggiornamento a cui sono soggetti i dati?}\\
 	\textit{Si consiglia di lasciare all'utente finale la possibilità di scegliere il tipo di aggiornamento da utilizzare tra quelli messi a disposizione.}\\
 	
 	\textbf{Per la rappresentazione dei grafici dobbiamo far uso di strumenti già esistenti?}\\
-	\textit{La visualizzazione dei grafici avviene utilizzando librerie già esistenti come chart.js, quindi, una volta che si passano i dati esi vengono visualizzati. Usate quello che già esiste, non è richiesto voi scriviate funzioni per visualizzare i dati.}\\
+	\textit{La visualizzazione dei grafici avviene utilizzando librerie già esistenti come chart.js, quindi, una volta che si passano i dati essi vengono visualizzati. Usate quello che già esiste, non è richiesto voi scriviate funzioni per visualizzare i dati.}\\
 	
 	\textbf{Nel capitolato si parla di composizione di più grafici nella stessa pagina. Qual'è il motivo di tale richiesta?}\\
 	\textit{Si vuole sia possibile raggruppare più grafici lato server semplicemente chiamando dei metodi per gestire il layout, senza dover far scrivere codice html all'utente finale.}\\
