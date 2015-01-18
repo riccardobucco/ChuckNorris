@@ -8,8 +8,7 @@
 	<postcondizione>È stato aggiornato il modello di un line chart.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore seleziona un modello line chart da aggiornare (UC1.2.2.3);</item>
-		<item>Lo sviluppatore aggiorna il modello line chart selezionato con metodo in place(UC1.2.2.1);</item>
-		<item>Lo sviluppatore aggiorna il modello line chart selezionato con metodo stream(UC1.2.2.2).</item>
+		<item>Lo sviluppatore aggiorna con metodo in place(UC1.2.2.1) o con metodo stream(UC1.2.2.2) il modello line chart selezionato.</item>
 	</principale>
 </usecase>
 
