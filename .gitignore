@@ -1,7 +1,9 @@
 
 #pdflatex files
-Documents/*/*.tex
-Documents/*/*.pdf
+**/*.tex
+!Documents/*/Tex/**/*.tex
+**/*.pdf
+!Documents/*/Pics/**/*.pdf
 **/*.aux
 **/*.toc
 **/*.lof
