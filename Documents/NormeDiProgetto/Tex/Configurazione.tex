@@ -75,14 +75,12 @@
 		Ogni richiesta di modifica va inoltrata in modo formale al \insrole{Responsabile di Progetto}, affichè venga sottoposta ad un rigoroso processo di analisi. Dopodichè il \insrole{Responsabile di Progetto} decide se approvarla o meno. Nel primo caso assegna la realizzazione della modifica ad un membro del gruppo. Una volta effettuata la modifica, questa deve essere sottoposta a verifica. Tutto ciò deve avvenire mantenendo traccia dello stato precedente.
 		
 		\subsubsection{Aggiornamento del repository}
-				Per aggiornare il repository è prevista una procedura ben definita:
-				\begin{enumerate}
-					\item pull del repository tramite comando git pull;
-					\item eventuale merge tramite comando git merge;
-					\item stage dei file da aggiornare tramite comando git add [files];
-					\item commit tramite comando git commit -m ‘messaggio’;
-					\item push del repository tramite comando git push.
-				\end{enumerate}
+				Per aggiornare il repository è prevista una procedura ben definita, riportata nel seguente diagramma:
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{NormeDiProgetto/Pics/Commit}
+					\caption{Procedura di aggiornamento del repository}
+				\end{figure}
 		
 	\subsection{Strumenti}	
 		\subsubsection{Repository}
