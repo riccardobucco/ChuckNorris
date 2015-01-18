@@ -4,7 +4,7 @@
 	<title>Studio di Fattibilit\'{a}</title>
 	<type>Interno</type>
 	<redactedby>Pavanello Fabio Matteo \\ Carlon Chiara</redactedby>
-	<verifiedby>Bucco Riccardo \\ Dal Bianco Davide \\ Bigarella Chiara \\ Moretto Alessandro \\ Rubin Marco</verifiedby>
+	<verifiedby>Dal Bianco Davide \\ Rubin Marco</verifiedby>
 	<approvedby>Moretto Alessandro</approvedby>
 	<distribution>distribuzione</distribution>
 
@@ -15,12 +15,33 @@
 	</include>
 
 	<changes>
+        <version>
+            <id>1.00</id>
+            <date>2015-01-18</date>
+            <author>Moretto Alessandro</author>
+            <role>Product Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
 		<version>
-			<id>0.0.1</id>
-			<date>2014-12-18</date>
-			<author>autore</author>
-			<role>ruolo</role>
-			<description>descrizione</description>
-		</version>
+			<id>0.03</id>
+			<date>2014-12-17</date>
+			<author>Pavanello Fabio Matteo</author>
+			<role>Verificatore</role>
+			<description>Verifica intero documento</description>
+        </version>
+        <version>
+            <id>0.02</id>
+            <date>2014-12-16</date>
+            <author>Carlon Chiara</author>
+            <role>Analista</role>
+            <description>Terminazione studio fattibilità capitolati scartati</description>
+        </version>
+        <version>
+            <id>0.01</id>
+            <date>2014-12-16</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Analista</role>
+            <description>Terminazione studio fattibilità capitolato scelto</description>
+        </version>
 	</changes>
 </document>
