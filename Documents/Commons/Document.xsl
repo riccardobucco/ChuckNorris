@@ -136,6 +136,7 @@
 					</xsl:for-each>
 				\end{longtabu}
 			\end{center}
+			\addtocounter{table}{-1}
 	</xsl:template>
 	
 
