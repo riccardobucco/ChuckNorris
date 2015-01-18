@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UC1.6 Creare modello Map Chart</titolo>
+	<titolo>UC1.6 Creare modello map chart</titolo>
 	<immagine>CreareModelloMapChart</immagine>
 	<attorip>Sviluppatore</attorip>
 	<specializzazionedi>UC1.1</specializzazionedi>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
-	<postcondizione>E’ stato creato il modello di un grafico di tipo Map Chart.</postcondizione>
+	<postcondizione>È stato creato un modello di un grafico di tipo map chart.</postcondizione>
 	<principale>
-		<item>INSERIRE PASSI DI UC1.1</item>
-		<item>Lo sviluppatore sceglie le opzioni di Map Chart (UC1.6.1);</item>
-		<item>Lo sviluppatore inserisce i dati di Map Chart (UC1.6.2).</item>
+		<item>Lo sviluppatore sceglie il titolo del chart (UC1.1.1);</item>
+		<item>Lo sviluppatore sceglie le opzioni riguardanti la legenda, essendo il grafico non di tipo table (UC1.1.2);</item>
+		<item>Lo sviluppatore sceglie la descrizione del chart (UC1.1.4);</item>
+		<item>Lo sviluppatore inserisce i dati di map chart (UC1.6.2);</item>
+		<item>Lo sviluppatore sceglie le opzioni del map chart (UC1.6.1).</item>		
 	</principale>
 	<alternativi>
 		<scenario>
-			<descrizione>Nel caso in cui le impostazioni scelte non corrispondano alle impostazioni di Map Chart:</descrizione>
+			<descrizione>Nel caso in cui le impostazioni scelte non corrispondano alle impostazioni del map chart:</descrizione>
 			<item>il sistema segnala un errore.</item>
 		</scenario>
 		<scenario>
@@ -27,4 +29,3 @@
 		</scenario>
 	</alternativi>
 </usecase>
-

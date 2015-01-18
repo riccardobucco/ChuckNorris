@@ -3,6 +3,6 @@
 <usecase>
 	<titolo>UC1.6.1.1 Scegliere il modo in cui vengono rappresentati i punti</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni del grafico map chart.</precondizione>
-	<postcondizione>È stato scelto il modo in cui vengono rappresentati i punti. </postcondizione>
+	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
+	<postcondizione>È stato scelto il modo in cui vengono rappresentati i punti.</postcondizione>
 </usecase>

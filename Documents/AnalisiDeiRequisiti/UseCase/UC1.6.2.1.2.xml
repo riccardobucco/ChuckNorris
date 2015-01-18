@@ -4,5 +4,5 @@
 	<titolo>UC1.6.2.1.2 Inserire il valore della longitudine in cui si trova un punto</titolo>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno impostando le coordinate di un nuovo punto sulla mappa.</precondizione>
-	<postcondizione> E' stata impostata la longitudine in cui si trova un punto.</postcondizione>
+	<postcondizione>È stata impostata la longitudine in cui si trova un nuovo punto.</postcondizione>
 </usecase>
