@@ -249,7 +249,7 @@
 					\end{itemize}
 					Se si vuole includere il numero nella forma X.Y che indica l’ultima versione del documento si deve utilizzare il comando \LaTeX{} \textbackslash lastversion\{\}.
 				\subparagraph{Nomi dei file}
-					Per fare riferimento a un file è necessario utilizzare il comando \LaTeX{} apposito: \textbackslash file\{nome\_file\}. Esso garantisce la corretta scrittura del file secondo le norme seguenti:
+					Per fare riferimento a un file è necessario utilizzare il comando \LaTeX{} apposito: \textbackslash insfile\{nome\_file\}. Esso garantisce la corretta scrittura del file secondo le norme seguenti:
 					\begin{itemize}
 						\item si adotta lo stile corsivo;
 						\item il nome del file va racchiuso tra virgolette inglesi (aperte: “; chiuse:”).
@@ -309,7 +309,7 @@
 			\paragraph{Immagini}
 				L’inserimento di immagini all’interno di un qualsiasi documento è regolamentato dalle seguenti norme:
 				\begin{itemize}
-					\item l’unico formato ammissibile è il PNG e il PDF;
+					\item gli unici formati ammessi sono il PDF e il PNG;
 					\item tutte le immagini all’interno di un documento devono essere numerate in modo crescente;
 					\item tutte le immagini all’interno di un documento devono essere accompagnate da una breve descrizione.
 				\end{itemize}
@@ -365,21 +365,18 @@
 					\end{itemize}
 		\subsubsection{Versionamento dei documenti}
 			Ogni tipo di documento (tranne i verbali) è sottoposto a versionamento. La versione di un documento avanza ogniqualvolta viene fatta una modifica (ovvero quando viene aggiornata la tabella delle modifiche).\\
-			La versione di un documento viene indicata con la seguente sintassi: vX.Y. Tali lettere vanno interpretate nel seguente modo:
+			La versione di un documento viene indicata con la seguente sintassi: vX.YY. Tali lettere vanno interpretate nel seguente modo:
 			\begin{itemize}
 				\item ‘v’ è un carattere che indica la parola “versione”, esso rimane inalterato;
 				\item X è un numero che indica quante volte il documento in esame è stato formalizzato;
-				\item Y è u numero che indica quante modifiche sono avvenute a partire dall’ultima formalizzazione del documento.
+				\item YY è un numero di due cifre che indica quante modifiche sono avvenute a partire dall’ultima formalizzazione del documento.
 			\end{itemize}
 			L’avanzamento di versione avviene nel seguente modo:
 			\begin{enumerate}
 				\item X parte da 0 e non ha limiti superiori. Esso viene incrementato di 1 ogni volta che il Responsabile di Progetto formalizza il documento.
-				\item Y parte da 0 e non ha limiti superiori. Esso viene incrementato di 1 ogni volta che viene apportata una modifica al documento e viene riportato a 0 ogni volta che il documento è stato formalizzato.
+				\item YY parte da 00 e non ha limiti superiori. Esso viene incrementato di 1 ogni volta che viene apportata una modifica al documento e viene riportato a 00 ogni volta che il documento è stato formalizzato.
 			\end{enumerate}
-			La prima versione di ogni documento è la v0.1
-		\subsubsection{Codifica dei file}
-			Tutti i file contenenti codice o documentazione dovranno utilizzare la codifica UTF-8 senza BOM.\\
-			Per andare a capo si userà LF (Line Feed), carattere '\textbackslash n'.
+			La prima versione di ogni documento è la v0.01
 	\subsection{Procedure}
 		\subsubsection{Procedura di formalizzazione dei documenti}
 			Di seguito viene riportata la procedura alla quale deve essere sottoposto un documento prima di essere definitivamente formalizzato:
