@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.2.4.3 Selezionare un modello table da aggiornare</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si sta aggiornando il modello di una table.</precondizione>
+	<postcondizione>È stato selezionato un modello table.</postcondizione>
+</usecase>
