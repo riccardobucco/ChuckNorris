@@ -11,6 +11,6 @@
 		<item>Lo sviluppatore sceglie il nome di ciascun set di barre (UC1.4.2.2);</item>
 		<item>Lo sviluppatore inserisce un valore indipendente nel bar chart (UC1.4.2.3);</item>
 		<item>Lo sviluppatore inserisce un valore dipendente in corrispondenza del valore indipendente per ciascun set di barre (UC1.4.2.4);</item>
-		<item>Lo sviluppatore esegue i due passi precedenti per un numero di volte a pari al numero di valori indipendenti che desidera inserire nel chart.</item>
+		<item>Lo sviluppatore esegue i due passi precedenti per un numero di volte pari al numero di valori indipendenti che desidera inserire nel chart.</item>
 	</principale>
 </usecase>

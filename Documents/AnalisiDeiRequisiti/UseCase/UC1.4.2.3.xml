@@ -2,7 +2,6 @@
 
 <usecase>
 	<titolo>UC1.4.2.3 Inserire un valore indipendente nel bar chart</titolo>
-	<inclusioni>UC1.4.2.4</inclusioni>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno inserendo i dati di un bar chart.</precondizione>
 	<postcondizione>È stato inserito un valore indipendente nel bar chart.</postcondizione>

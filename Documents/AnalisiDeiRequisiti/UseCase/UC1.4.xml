@@ -9,8 +9,8 @@
 	<postcondizione>È stato creato un modello di un grafico di tipo bar chart.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore sceglie il titolo del chart (UC1.1.1);</item>
-		<item>Lo sviluppatore sceglie le opzioni riguardanti la legenda (UC1.1.2);</item>
-		<item>Lo sviluppatore sceglie le opzioni riguardanti il piano cartesiano (UC1.1.3);</item>
+		<item>Lo sviluppatore sceglie le opzioni riguardanti la legenda, essendo il grafico non di tipo table (UC1.1.2);</item>
+		<item>Lo sviluppatore sceglie le opzioni riguardanti il piano cartesiano, essendo il grafico non di tipo map chart o table (UC1.1.3);</item>
 		<item>Lo sviluppatore sceglie la descrizione del chart (UC1.1.4);</item>
 		<item>Lo sviluppatore inserisce i dati del bar chart (UC1.4.2);</item>
 		<item>Lo sviluppatore sceglie le opzioni del bar chart (UC1.4.1).</item>
