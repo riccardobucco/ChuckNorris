@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.5.2 Inserire dati Line Chart</titolo>
+	<immagine>InserireDatiLineChart</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si vuole creare un grafico di tipo Line Chart. I dati sono nel formato richiesto dal framework.</precondizione>
+	<postcondizione>Sono stati impostati i dati che si vogliono rappresentare nel grafico. Per ogni valore indipendente, esiste un valore dipendente corrispondente per ciascuna linea.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie quante linee inserire (UC1.5.2.1);</item>
+		<item>Lo sviluppatore sceglie il nome di ciascuna linea (UC1.5.2.2);</item>
+		<item>Lo sviluppatore inserisce un valore indipendente nel Line Chart (UC1.5.2.3);</item>
+		<item>Lo sviluppatore inserisce un valore dipendente per ciascuna linea (UC1.5.2.1).</item>
+	</principale>
+</usecase>
