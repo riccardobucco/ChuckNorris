@@ -3,7 +3,6 @@
 <usecase>
 	<titolo>UC1.4.1.2 Scegliere l'orientamento delle barre</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni del grafico Bar Chart.</precondizione>
-	<postcondizione>E’ stato scelto l’orientamento delle barre.</postcondizione>
+	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo bar chart.</precondizione>
+	<postcondizione>È stato scelto se le barre devono essere verticali o orizzontali.</postcondizione>
 </usecase>
-

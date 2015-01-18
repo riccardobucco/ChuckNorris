@@ -3,7 +3,6 @@
 <usecase>
 	<titolo>UC1.4.1.1.1 Selezionare il set di barre a cui associare un colore</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta configurando il colore di ciascun set di barre.</precondizione>
-	<postcondizione>E’ stato selezionato il set di barre a cui associare un colore.</postcondizione>
+	<precondizione>Si sta configurando il colore di ciascun set di barre di un grafico di tipo bar chart.</precondizione>
+	<postcondizione>È stato selezionato il set di barre a cui associare un colore.</postcondizione>
 </usecase>
-
