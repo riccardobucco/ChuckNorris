@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC3.5.1.1 Selezionare la linea a cui cambiare il colore</titolo>
+	<attorip>Client</attorip>
+	<precondizione>Si sta modificando il colore di una linea.</precondizione>
+	<postcondizione>É stata selezionata la linea a cui cambiare il colore.</postcondizione>
+</usecase>

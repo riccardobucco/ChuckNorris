@@ -6,7 +6,7 @@
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di un bar chart.</precondizione>
 	<postcondizione>É stato modificato il colore di un set di barre.</postcondizione>
 	<principale>
-		<item>Il client selezionare il set di barre a cui cambiare il colore (UC3.4.1.1);</item>
+		<item>Il client sta selezionando il set di barre a cui cambiare il colore (UC3.4.1.1);</item>
 		<item>Il client sceglie il nuovo colore da associare al set di barre selezionato (UC3.4.1.2).</item>
 	</principale>
 </usecase>
