@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.1.4 Scegliere una descrizione per il chart</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si vuole creare un modello di chart.</precondizione>
-	<postcondizione>È stata impostata la descrizione del grafico.</postcondizione>
-</usecase>

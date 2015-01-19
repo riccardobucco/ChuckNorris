@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC2.3.1 Selezionare l'ID del grafico che si vuole ottenere</titolo>
-	<attorip>Client</attorip>
-	<precondizione>Si sta ottenendo un grafico presente in un'istanza di Norris. È stata selezionata un'istanza esistente di Norris.</precondizione>
-	<postcondizione>È stato selezionato l'ID del grafico che si vuole ottenere.</postcondizione>
-</usecase>

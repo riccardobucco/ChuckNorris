@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.2.4.2.1 Aggiungere una nuova riga con un valore per ogni colonna della table</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta aggiornando un modello table con metodo stream. È stato selezionato un modello table da aggiornare.</precondizione>
-	<postcondizione>È stato aggiornato un modello table .</postcondizione>
-</usecase>

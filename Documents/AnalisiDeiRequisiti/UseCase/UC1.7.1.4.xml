@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.7.1.4 Scegliere se è possibile ordinare le righe rispetto ai valori di una colonna</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table.</precondizione>
-	<postcondizione>È stato scelto se è possibile ordinare le righe rispetto ai valori di una colonna (nel caso vengano eseguiti solo aggiornamenti di tipo in place).</postcondizione>
-</usecase>

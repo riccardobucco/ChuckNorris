@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC3.1 Selezionare il modello di grafico che si vuole rappresentare</titolo>
-	<attorip>Client</attorip>
-	<precondizione>Si stanno utilizzando le API della libreria grafica.</precondizione>
-	<postcondizione>È stato selezionato il modello di grafico che si vuole rappresentare.</postcondizione>
-</usecase>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.8 Ottenere middleware</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno utilizzando le API interne.</precondizione>
-	<postcondizione>È stato ottenuto un middleware per Express.js.</postcondizione>
-</usecase>

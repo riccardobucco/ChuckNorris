@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.3 Creare pagina</titolo>
+	<immagine>CrearePagina</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno utilizzando le API interne.</precondizione>
+	<postcondizione>È stata creata una pagina.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore inserisce il titolo della pagina (UCN1.3.1);</item>
+		<item>Lo sviluppatore sceglie le opzioni di visualizzazione della pagina (UCN1.3.2);</item>
+		<item>Lo sviluppatore aggiunge grafici alla pagina (UCN1.3.3).</item>
+	</principale>
+</usecase>

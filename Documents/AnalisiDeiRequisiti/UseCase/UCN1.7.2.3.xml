@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.7.2.3 Inserire una nuova riga.</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno inserendo i dati di una table. Si è scelto quante colonne si devono inserire nella table.</precondizione>
+	<postcondizione>È stata aggiunta una riga alla tabella, ovvero è stato inserito un valore per ciascuna colonna della tabella.</postcondizione>
+</usecase>

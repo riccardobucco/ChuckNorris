@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.6.2.1 Scegliere le coordinate di un nuovo punto sulla mappa</titolo>
+	<immagine>SceltaCoordinateNuovoPunto</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno inserendo i dati di un map chart.</precondizione>
+	<postcondizione>Sono state impostate le coordinate di un nuovo punto sulla mappa.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore inserisce il valore della latitudine in cui si trova un punto (UCN1.6.2.1.1);</item>
+		<item>Lo sviluppatore inserisce il valore della longitudine in cui si trova un punto (UCN1.6.2.1.2).</item>
+	</principale>
+</usecase>

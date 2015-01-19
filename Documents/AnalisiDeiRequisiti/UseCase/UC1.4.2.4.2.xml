@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.4.2.4.2 Scegliere il valore dipendente da inserire in un set di barre selezionato</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta inserendo un valore dipendente in corrispondenza di un valore indipendente per ciascun set di barre. Si è selezionato un set di barre in cui fare ciò.</precondizione>
-	<postcondizione>È stato inserito il valore dipendente in corrispondenza di un valore indipendente nel set di barre selezionato.</postcondizione>
-</usecase>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.2.2.1.1.2 Selezionare il valore indipendente corrispondente al punto da modificare</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta selezionando un punto da modificare. È stata selezionata la linea a cui appartiene il punto da modificare.</precondizione>
-	<postcondizione>È stato selezionato il valore indipendente corrispondente al punto da modificare.</postcondizione>
-</usecase>

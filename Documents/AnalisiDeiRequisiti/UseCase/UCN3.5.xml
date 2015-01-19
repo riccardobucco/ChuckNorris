@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN3.5 Cambiare opzioni di visualizzazione di un line chart</titolo>
+	<attorip>Client</attorip>
+	<specializzazionedi>
+		<item>UCN3.3</item>
+	</specializzazionedi>
+	<precondizione>Si stanno utilizzando le API della libreria grafica. È stato selezionato il modello di grafico che si vuole rappresentare. Il grafico selezionato è di tipo line chart.</precondizione>
+	<postcondizione>Sono state modificate le opzioni di visualizzazione del line chart selezionato.</postcondizione>
+	<principale>
+		<item>Il client modifica le opzioni riguardanti la legenda (UCN3.3.1);</item>
+		<item>Il client modifica il fatto che la griglia di un piano cartesiano sia visualizzata o meno (UCN3.3.2);</item>
+		<item>Il client modifica il colore di una linea (UCN3.5.1).</item>
+	</principale>
+</usecase>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.5 Creare modello line chart</titolo>
+	<immagine>CreareModelloLineChart</immagine>
+	<attorip>Sviluppatore</attorip>
+	<specializzazionedi>
+		<item>UCN1.1 Creare modello chart</item>
+	</specializzazionedi>
+	<precondizione>Si stanno utilizzando le API interne.</precondizione>
+	<postcondizione>È stato creato un modello di un grafico di tipo line chart.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie il titolo del chart (UCN1.1.1);</item>
+		<item>Lo sviluppatore sceglie le opzioni riguardanti la legenda, essendo il grafico non di tipo table (UCN1.1.2);</item>
+		<item>Lo sviluppatore sceglie le opzioni riguardanti il piano cartesiano, essendo il grafico non di tipo map chart o table (UCN1.1.3);</item>
+		<item>Lo sviluppatore sceglie la descrizione del chart (UCN1.1.4);</item>
+		<item>Lo sviluppatore inserisce i dati del line chart (UCN1.5.2);</item>
+		<item>Lo sviluppatore sceglie le opzioni del line chart (UCN1.5.1).</item>
+	</principale>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui le impostazioni scelte non corrispondano alle impostazioni del line chart:</descrizione>
+			<item>il sistema segnala un errore.</item>
+		</scenario>
+		<scenario>
+			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
+			<item>il sistema segnala un errore.</item>
+		</scenario>
+		<scenario>
+			<descrizione>Nel caso in cui i dati non siano nel formato corretto:</descrizione>
+			<item>il sistema segnala un errore.</item>
+		</scenario>
+	</alternativi>
+</usecase>

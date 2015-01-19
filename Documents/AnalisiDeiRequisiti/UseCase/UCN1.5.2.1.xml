@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.5.2.1 Scegliere quante linee inserire</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno inserendo i dati di un line chart.</precondizione>
+	<postcondizione>È stato impostato il numero di linee da inserire nel grafico.</postcondizione>
+</usecase>

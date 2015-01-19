@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.2.4.1 Aggiornare un modello table con metodo in place</titolo>
+	<immagine>AggiornareTableInPlace</immagine>
+	<attorip>Sviluppatore</attorip>
+	<inclusioni>UCN1.2.2.3</inclusioni>
+	<precondizione>Si sta aggiornando un modello table.</precondizione>
+	<postcondizione>È stato aggiornato un modello table con metodo in place.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore seleziona un modello table da aggiornare (UCN1.2.4.3);</item>
+		<item>Lo sviluppatore seleziona una cella che si vuole modificare (UCN1.2.4.1.1);</item>
+		<item>Lo sviluppatore imposta il nuovo contenuto della cella selezionata (UCN1.2.4.1.2).</item>
+	</principale>
+</usecase>
+
+

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.3.1 Inserire il titolo della pagina</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta creando una pagina.</precondizione>
-	<postcondizione>È stato inserito il titolo della pagina.</postcondizione>
-</usecase>
-

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN3.3 Cambiare opzioni di visualizzazione di un grafico</titolo>
+	<attorip>Client</attorip>
+	<generalizzazionedi>
+		<item>UCN3.4</item>
+		<item>UCN3.5</item>
+		<item>UCN3.6</item>
+		<item>UCN3.7</item>
+	</generalizzazionedi>
+	<precondizione>Si stanno utilizzando le API della libreria grafica. È stato selezionato il modello di grafico che si vuole rappresentare.</precondizione>
+	<postcondizione>Sono state modificate le opzioni di visualizzazione del grafico selezionato.</postcondizione>
+	<principale>
+		<item>Il client modifica le opzioni riguardanti la legenda (UCN3.3.1);</item>
+		<item>Il client modifica il fatto che la griglia di un piano cartesiano sia visualizzata o meno (UCN3.3.2).</item>
+	</principale>
+</usecase>

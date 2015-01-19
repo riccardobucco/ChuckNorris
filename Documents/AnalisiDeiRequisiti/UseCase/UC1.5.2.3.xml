@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.5.2.3 Inserire un valore indipendente nel line chart</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno inserendo i dati di un line chart.</precondizione>
-	<postcondizione>È stato inserito un valore indipendente nel line chart.</postcondizione>
-</usecase>
