@@ -1,0 +1,63 @@
+\section{Verifica}
+	\subsection{Attività}
+		\subsubsection{Analisi}
+			Per poter determinare il livello di qualità del prodotto il team di sviluppo utilizza diversi tipi di tecniche di analisi dei dati.\\
+			Queste possono essere suddivise in due grandi categorie:
+			\begin{itemize}
+				\item analisi statica;
+				\item analisi dinamica.
+			\end{itemize}
+			\paragraph{Analisi statica}
+				L'analisi statica è una forma di valutazione di un sistema o di un suo componente basato sulla sua forma, struttura, contenuto, 
+				documentazione senza che esso sia eseguito. Tali tecniche, dunque, sono applicabili tanto al codice quanto alla documentazione.
+				Verranno usate le seguenti tecniche di analisi statica:
+				\begin{description}
+					\item[walkthrough] Tale tecnica viene utilizzata quando non si sa realmente cosa si sta cercando. Essa, infatti, consiste in una 
+					lettura da cima a fondo del documento/codice. Tale lettura ha lo scopo di trovare anomalie di tipo qualsiasi.
+					\item[inspection] Tale tecnica viene utilizzata quando si ha un'idea di cosa si sta cercando e di cosa si potrebbe trovare. Essa 
+					consiste in una lettura mirata del documento/codice, sulla base di una lista degli errori comuni stilata in precedenza.
+				\end{description}
+				Applicare in modo fruttuoso la tecnica del walkthrough è molto oneroso e dispendioso. Tuttavia, quando non si possiede una lista degli
+				errori comuni (per esempio a inizio progetto), essa è l'unica soluzione. L'obiettivo è quello di formare una lista quanto più completa 
+				possibile di errori comuni in modo tale che possa essere eseguita quasi sempre la tecnica dell'inspection.
+			\paragraph{Analisi dinamica}
+				L'analisi dinamica è una forma di valutazione di un sistema software o di un suo componente basato sulla osservazione del suo 
+				comportamento in esecuzione. Tali tecniche, dunque, sono applicabili solo a componenti software e vengono svolte tramite l'esecuzione 
+				di test su essi.\\
+				Deve essere preoccupazione di chi scrive i test fare in modo che essi siano di grande valore dimostrativo, in quanto il numero di test 
+				che devono essere effettuati è per forza di cose in numero finito e relativamente piccolo.
+	\subsection{Procedure}
+		\subsubsection{Verifica dei documenti}
+			Dare inizio all'attività di verifica di un documento è compito del Responsabile di Progetto: esso assegna il compito a uno o più Verificatori. 
+			Questi, con l'aiuto del diario delle modifiche, focalizzano la loro attenzione sulle sezioni del documento che sono state modificate.\\
+			Per eseguire una verifica quanto più accurate e completa possibile è necessario controllare che sia stato rispettato quanto segue:
+			\begin{enumerate}
+				\item sintassi;
+				\item eccessiva lunghezza e/o complessità dei periodi;
+				\item struttura del documento;
+				\item norme tipografiche;
+				\item proprietà di glossario;
+				\item indice di Gulpease;
+			\end{enumerate}
+			\paragraph{Controllo della sintassi}
+				I Verificatori devono preoccuparsi di individuare gli errori sintattici all'interno dei testi del documento. Tale compito può essere in 
+				parte attuato tramite strumenti automatici. È tuttavia necessario che un documento sia sempre sottoposto a walkthrough, in quanto gli 
+				strumenti automatici non sono in grado di individuare parole corrette che sono utilizzate al di fuori del loro contesto.
+			\paragraph{Periodi lunghi e/o complessi}
+				I Verificatori devono applicare il walthrough al documento con l'intento di trovare frasi troppo lunghe (e che dunque possono essere di 
+				difficile comprensione). Inoltre, essi devono cercare tutti quei periodi resi troppo complessi a causa dell'uso di parole poco frequenti o 
+				che possono generare fraintendimenti e incomprensioni.
+			\paragraph{Struttura del documento}
+				I Verificatori controllano con l'ausilio di strumenti automatici che la struttura del documento rispetti quanto descritto nel presente 
+				documento.
+			\paragraph{Norme tipografiche}
+				Nel presente documento sono state definite delle norme tipografiche di carattere generale. Molte di esse sono verificabili tramite 
+				strumenti automatici. Per le restanti è necessario che i Verificatori applichino una fra le tecniche di inspection e walkthrough 
+				(si preferisce la prima nel momento in cui tramite la lista di controllo si riesce a trovare la grande maggioranza degli errori).
+			\paragraph{Proprietà di glossario}
+				È necessario che tutte le parole presenti all'interno del Glossario siano marcate appropriatamente (come descritto nel presente 
+				documento). Ciò viene fatto con l'ausilio di strumenti automatici. Inoltre, è compito dei Verificatori trovare tutti quei termini che 
+				dovrebbero essere inclusi nel Glossario ma che ancora non lo sono. Per tale compito si deve utilizzare walthrough delle sezioni che sono 
+				state soggette a modifica prima dell'ultima verifica.
+	\subsection{Strumenti}
+		
