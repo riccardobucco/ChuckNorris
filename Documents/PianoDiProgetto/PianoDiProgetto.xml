@@ -4,7 +4,7 @@
 	<title>Piano di Progetto</title>
 	<type>Esterno</type>
 	<redactedby>Moretto Alessandro \\ Rubin Marco \\Carlon Chiara</redactedby>
-	<verifiedby>Bucco Riccardo \\ Dal Bianco Davide \\ Bigarella Chiara \\ Carlon Chiara \\ Pavanello Fabio Matteo</verifiedby>
+	<verifiedby>Bucco Riccardo \\ Dal Bianco Davide \\ Bigarella Chiara \\ Pavanello Fabio Matteo</verifiedby>
     <approvedby>Moretto Alessandro</approvedby>
     <distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
@@ -16,8 +16,11 @@
         <name>Tex/Pianificazione.tex</name>
         <name>Tex/Preventivo.tex</name>
         <name>Tex/Consuntivo.tex</name>
-        <name>Tex/Organigramma.tex</name>
     </sections>
+
+    <appendix>
+        <name>Tex/Organigramma.tex</name>
+    </appendix>
 
 	<changes>
         <version>
@@ -58,7 +61,7 @@
         <version>
             <id>0.15</id>
             <date>2015-01-10</date>
-            <author>Chiara Carlon, Bucco Riccardo</author>
+            <author>Bucco Riccardo</author>
             <role>Verificatore</role>
             <description>Verifica pianificazione fasi PROP e V</description>
         </version>
