@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC3.3.2 Cambiare il fatto che la griglia di un piano cartesiano sia visualizzata o meno</titolo>
+	<attorip>Client</attorip>
+	<precondizione>Si stanno modificando le opzioni di visualizzazione di un grafico. Il grafico non è di tipo table o map chart.</precondizione>
+	<postcondizione>É stato modificato il fatto che la griglia di un piano cartesiano sia visualizzata o meno.</postcondizione>
+</usecase>

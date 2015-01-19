@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC3.3.1 Cambiare le opzioni riguardanti la legenda</titolo>
+	<attorip>Client</attorip>
+	<precondizione>Si stanno modificando le opzioni di visualizzazione di un grafico. Il grafico non è di tipo table.</precondizione>
+	<postcondizione>Sono state modificate le opzioni riguardanti la legenda.</postcondizione>
+	<principale>
+		<item>Il client modifica il fatto che la legenda sia visualizzata o meno (UC3.3.1.1);</item>
+		<item>Il client modifica la posizione in cui è visualizzata la legenda (UC3.3.1.2).</item>
+	</principale>
+</usecase>
