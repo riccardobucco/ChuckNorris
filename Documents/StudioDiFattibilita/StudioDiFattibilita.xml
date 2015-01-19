@@ -8,11 +8,11 @@
 	<approvedby>Moretto Alessandro</approvedby>
 	<distribution>distribuzione</distribution>
 
-	<include>
-		<name>Tex/Introduzione</name>
-		<name>Tex/StudioDiFattibilitaC3</name>
-		<name>Tex/StudioDiFattibilitaAltriCapitolati</name>
-	</include>
+	<sections>
+		<name>Tex/Introduzione.tex</name>
+		<name>Tex/StudioDiFattibilitaC3.tex</name>
+		<name>Tex/StudioDiFattibilitaAltriCapitolati.tex</name>
+	</sections>
 
 	<changes>
         <version>

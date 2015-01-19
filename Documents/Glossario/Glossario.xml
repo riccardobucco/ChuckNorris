@@ -8,9 +8,9 @@
 	<approvedby>Moretto Alessandro</approvedby>
     <distribution>\groupname{}</distribution>
 
-	<include>
-		<name>Termini</name>
-	</include>
+	<sections>
+		<name>Termini.tex</name>
+	</sections>
 
 	<changes>
         <version>

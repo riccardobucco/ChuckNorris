@@ -87,9 +87,8 @@
 			\listoffigures
 			\newpage
 
-			<xsl:for-each select="include/name">
-			\input{<xsl:value-of select="."/>.tex}
-			</xsl:for-each>
+			<xsl:apply-templates select="sections/name"/>
+			<xsl:apply-templates select="appendix"/>
 
 		\end{document}
 
@@ -137,6 +136,15 @@
 				\end{longtabu}
 			\end{center}
 			\addtocounter{table}{-1}
+	</xsl:template>
+
+	<xsl:template match="appendix">
+		\appendix
+		<xsl:apply-templates select="name"/>
+	</xsl:template>
+
+	<xsl:template match="name">
+		\input{<xsl:value-of select="."/>}
 	</xsl:template>
 	
 

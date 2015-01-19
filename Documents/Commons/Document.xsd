@@ -13,13 +13,21 @@
   		<xsd:element name="approvedby" type="xsd:string"/>
       <xsd:element name="distribution" type="xsd:string"/>
 
-  		<xsd:element name="include">
+  		<xsd:element name="sections">
   			<xsd:complexType>
   				<xsd:sequence maxOccurs="unbounded">
   					<xsd:element name="name" type="xsd:string"/>
   				</xsd:sequence>
   			</xsd:complexType>
   		</xsd:element>
+
+      <xsd:element name="appendix" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="name" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
 
       <xsd:element name="changes">
   			<xsd:complexType>

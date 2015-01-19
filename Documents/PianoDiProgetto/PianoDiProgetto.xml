@@ -8,16 +8,16 @@
     <approvedby>Moretto Alessandro</approvedby>
     <distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
-    <include>
-        <name>Tex/Introduzione</name>
-        <name>Tex/CicloDiVita</name>
-        <name>Tex/Scadenze</name>
-        <name>Tex/AnalisiDeiRischi</name>
-        <name>Tex/Pianificazione</name>
-        <name>Tex/Preventivo</name>
-        <name>Tex/Consuntivo</name>
-        <name>Tex/Organigramma</name>
-    </include>
+    <sections>
+        <name>Tex/Introduzione.tex</name>
+        <name>Tex/CicloDiVita.tex</name>
+        <name>Tex/Scadenze.tex</name>
+        <name>Tex/AnalisiDeiRischi.tex</name>
+        <name>Tex/Pianificazione.tex</name>
+        <name>Tex/Preventivo.tex</name>
+        <name>Tex/Consuntivo.tex</name>
+        <name>Tex/Organigramma.tex</name>
+    </sections>
 
 	<changes>
         <version>

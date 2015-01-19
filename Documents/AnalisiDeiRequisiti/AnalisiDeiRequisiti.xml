@@ -8,11 +8,11 @@
 	<approvedby>Moretto Alessandro</approvedby>
 	<distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
-	<include>
-		<name>Tex/Introduzione</name>
-		<name>Tex/Descrizione</name>
-		<name>Tex/UseCase</name>
-	</include>
+	<sections>
+		<name>Tex/Introduzione.tex</name>
+		<name>Tex/Descrizione.tex</name>
+		<name>Tex/UseCase.tex</name>
+	</sections>
 
     <changes>
         <version>

@@ -8,13 +8,13 @@
 	<approvedby>Moretto Alessandro</approvedby>
 	<distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
-	<include>
-		<name>Tex/Introduzione</name>
-		<name>Tex/Qualita</name>
-		<name>Tex/Strategia</name>
-		<name>Tex/Gestione</name>
-		<name>Tex/Esiti</name>
-	</include>
+	<sections>
+		<name>Tex/Introduzione.tex</name>
+		<name>Tex/Qualita.tex</name>
+		<name>Tex/Strategia.tex</name>
+		<name>Tex/Gestione.tex</name>
+		<name>Tex/Esiti.tex</name>
+	</sections>
 
     <changes>
         <version>
