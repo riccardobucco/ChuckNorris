@@ -2,97 +2,114 @@
 \section{Analisi dei rischi}
 	Al fine di realizzare un buon progetto software è opportuno individuare i rischi, comprenderli e prendere le misure preventive per gestirli. A tale scopo si è deciso di procedere per fasi ben precise:
 	\begin{itemize}
-		\item \textbf{Identificazione:} individuare i rischi potenziali che si possono presentare durante lo sviluppo del progetto.
-		\item \textbf{Analisi:} stimare la probabilità che un rischio si manifesti e valutarne le possibili conseguenze sul progetto.
-		\item \textbf{Pianificazione:} predisporre un piano che permetta di reagire, in caso un rischio si manifesti, in modo controllato ed efficace. L'obiettivo primario è quello di evitare i rischi, ma poichè non tutti sono evitabili, si cerca di mitigarne gli effetti.
-		\item \textbf{Controllo:} tenere sotto controllo i rischi in modo tale da poterli prevenire o poter attuare contromisure pianificate.
+		\item \textbf{Identificazione}: individuare i rischi potenziali che si possono presentare durante lo sviluppo del progetto.
+		\item \textbf{Analisi}: stimare la probabilità che un rischio si manifesti e valutarne le possibili conseguenze sul progetto.
+		\item \textbf{Pianificazione}: predisporre un piano che permetta di reagire, in caso un rischio si manifesti, in modo controllato ed efficace. L'obiettivo primario è quello di evitare i rischi, ma poichè non tutti sono evitabili, si cerca di mitigarne gli effetti.
+		\item \textbf{Controllo}: tenere sotto controllo i rischi in modo tale da poterli prevenire o poter attuare contromisure pianificate.
 	\end{itemize}
+	Nella tabella sottostante si rappresentano i rischi individuati con la loro probabilità di occorrenza e i relativi livelli di rischio.
+	Una descrizione esaustiva e dettagliata viene fatta nelle sottosezioni a seguire.
+	\begin{table}[H]\centering \tabulinesep=3pt
+			\begin{tabu}to \textwidth {|X[4]|X[3c]|X[4]|X[4]|}
+				\hline
+				Livello 			& Tipologia					& Probabilità di occorrenza 	& Livello di rischio  \\ \hline
+
+				Tecnologico		& Tecnologie adottate sconosciute			& media 					& alto 		 \\ \cline{2-4}
+				  				& Guasti hardware						& bassa 					& basso 		 \\ \hline
+				Personale		 	& Problemi personali dei componenti del team	& media 					& medio 		 \\ \cline{2-4}
+								& Problemi tra i componenti del team		& bassa 					& alto 		 \\ \hline
+				Organizzativo	 	& Valutazione dei costi					& media 					& alto 		 \\ \hline
+				Strumenti			& Inesperienza nell'utilizzo				& alta 					& alto 		 \\ \hline
+				Requisiti		 	& Comprensione 						& media					& alto 		 \\ \hline
+			\end{tabu}
+		\caption{Riassunto analisi dei rischi}
+	\end{table}
 	\subsection{Livello tecnologico}
 		\subsubsection{Tecnologie adottate sconosciute}
 			\begin{itemize}
-				\item \textbf{Descrizione:} le tecnologie adottate per lo sviluppo del progetto sono, in buona parte, sconosciute al gruppo. Non si esclude, quindi, la possibilità di trovare ostacoli nell'utilizzo di tali tecnologie.
-				\item \textbf{Analisi:}
+				\item \textbf{Descrizione}: le tecnologie adottate per lo sviluppo del progetto sono, in buona parte, sconosciute al gruppo. Non si esclude, quindi, la possibilità di trovare ostacoli nell'utilizzo di tali tecnologie.
+				\item \textbf{Analisi}:
 					\begin{itemize}
-						\item \textit{Livello di rischio:} alto;
-						\item \textit{Probabilità di occorrenza:} media;
-						\item \textit{Possibili conseguenze:} possibili ritardi sulle date di consegna.
+						\item \textit{Livello di rischio}: alto;
+						\item \textit{Probabilità di occorrenza}: media;
+						\item \textit{Possibili conseguenze}: possibili ritardi sulle date di consegna.
 					\end{itemize}
-				\item \textbf{Pianificazione:} sarà compito dell'\insrole{Amministratore} mettere a disposizione il materiale necessario ad ogni membro del gruppo, che si impegnerà a documentarsi, in maniera autonoma e il più completa possibile, sulle tecnologie da utilizzare.
-				\item \textbf{Controllo:} il \insrole{Responsabile di progetto} ha il compito di monitorare costantemente il grado di conoscenza di ogni componente del team riguardo le tecnologie adottate.
+				\item \textbf{Pianificazione}: sarà compito dell'\insrole{Amministratore} mettere a disposizione il materiale necessario ad ogni membro del gruppo, che si impegnerà a documentarsi, in maniera autonoma e il più completa possibile, sulle tecnologie da utilizzare.
+				\item \textbf{Controllo}: il \insrole{Responsabile di progetto} ha il compito di monitorare costantemente il grado di conoscenza di ogni componente del team riguardo le tecnologie adottate.
 			\end{itemize}
 		\subsubsection{Guasti hardware}
 			\begin{itemize}
-				\item \textbf{Descrizione:} è possibile che si incontrino problemi con le attrezzature hardware durante lo sviluppo del progetto che può portare alla perdita di dati.
-				\item \textbf{Analisi:}
+				\item \textbf{Descrizione}: è possibile che si incontrino problemi con le attrezzature hardware durante lo sviluppo del progetto che può portare alla perdita di dati.
+				\item \textbf{Analisi}:
 				\begin{itemize}
-					\item \textit{Livello di rischio:} basso;
-					\item \textit{Probabilità di occorrenza:} bassa;
-					\item \textit{Possibili conseguenze:} difficoltà nel proseguimento del progetto e sostanziale rallentamento delle attività.
+					\item \textit{Livello di rischio}: basso;
+					\item \textit{Probabilità di occorrenza}: bassa;
+					\item \textit{Possibili conseguenze}: difficoltà nel proseguimento del progetto e sostanziale rallentamento delle attività.
 				\end{itemize}
-				\item \textbf{Pianificazione:} allo scopo di evitare tale rischio si fa uso di \textit{Dropbox} e \textit{repository} per il backup dei dati. In questo modo ogni componente del team possiede una copia condivisa del lavoro svolto. In caso di guasto hardware verranno utilizzate le macchine messe a disposizione dai laboratori informatici o altri strumenti personali.
-				\item \textbf{Controllo:} ogni componente ha il compito di curare la propria strumentazione hardware e di effettuare il backup dei dati ad ogni aggiornamento importante. Inoltre, è utile controllare frequemtemente che i dati di backup siano presenti ed aggiornati all'ultima versione.
+				\item \textbf{Pianificazione}: allo scopo di evitare tale rischio si fa uso di \textit{Dropbox} e \textit{repository} per il backup dei dati. In questo modo ogni componente del team possiede una copia condivisa del lavoro svolto. In caso di guasto hardware verranno utilizzate le macchine messe a disposizione dai laboratori informatici o altri strumenti personali.
+				\item \textbf{Controllo}: ogni componente ha il compito di curare la propria strumentazione hardware e di effettuare il backup dei dati ad ogni aggiornamento importante. Inoltre, è utile controllare frequemtemente che i dati di backup siano presenti ed aggiornati all'ultima versione.
 			\end{itemize}
 	\subsection{Livello personale}
 		\subsubsection{Problemi personali dei componenti del team}
 			\begin{itemize}
-				\item \textbf{Descrizione:} ciascun componente del team ha impegni e necessità personali. Nel gruppo c'è, inoltre, uno studente lavoratore che può non essere sempre disponibile a causa di impegni relativi al lavoro. E' quindi inevitabile prevedere che alcuni membri del gruppo non siano disponibili in certi momenti.
-				\item \textbf{Analisi:}
+				\item \textbf{Descrizione}: ciascun componente del team ha impegni e necessità personali. Nel gruppo c'è, inoltre, uno studente lavoratore che può non essere sempre disponibile a causa di impegni relativi al lavoro. E' quindi inevitabile prevedere che alcuni membri del gruppo non siano disponibili in certi momenti.
+				\item \textbf{Analisi}:
 				\begin{itemize}
-					\item \textit{Livello di rischio:} medio;
-					\item \textit{Probabilità di occorrenza:} media;
-					\item \textit{Possibili conseguenze:} possibili ritardi nello svolgimento delle attività, in caso di impegni imprevisti da parte di qualche componente del gruppo.
+					\item \textit{Livello di rischio}: medio;
+					\item \textit{Probabilità di occorrenza}: media;
+					\item \textit{Possibili conseguenze}: possibili ritardi nello svolgimento delle attività, in caso di impegni imprevisti da parte di qualche componente del gruppo.
 				\end{itemize}
-				\item \textbf{Pianificazione:} ciascun membro del team si impegnerà ad avvertire, in caso di impegni personali, il \insrole{Responsabile di progetto}, il quale ridurrà il carico di lavoro a quel componente e lo ripartirà tra le altre risorse disponibili, eseguendo una nuova pianificazione delle attività del periodo in considerazione.
-				\item \textbf{Controllo:} il \insrole{Responsabile di progetto} verificherà costantemente se vi sono avvisi, riguardanti impegni o imprevisti, da parte dei componenti del gruppo. Tale rischio sarà, anche, controllato tramite l'uso di calendari di gruppo.
+				\item \textbf{Pianificazione}: ciascun membro del team si impegnerà ad avvertire, in caso di impegni personali, il \insrole{Responsabile di progetto}, il quale ridurrà il carico di lavoro a quel componente e lo ripartirà tra le altre risorse disponibili, eseguendo una nuova pianificazione delle attività del periodo in considerazione.
+				\item \textbf{Controllo}: il \insrole{Responsabile di progetto} verificherà costantemente se vi sono avvisi, riguardanti impegni o imprevisti, da parte dei componenti del gruppo. Tale rischio sarà, anche, controllato tramite l'uso di calendari di gruppo.
 			\end{itemize}
 		\subsubsection{Problemi tra componenti del team}
 			\begin{itemize}
-				\item \textbf{Descrizione:} per la maggior parte dei componenti del team questa è la prima esperienza di lavoro in un gruppo numeroso; ciò può  innescare problemi di collaborazione e contrasti.
-				\item \textbf{Analisi:}
+				\item \textbf{Descrizione}: per la maggior parte dei componenti del team questa è la prima esperienza di lavoro in un gruppo numeroso; ciò può  innescare problemi di collaborazione e contrasti.
+				\item \textbf{Analisi}:
 				\begin{itemize}
-					\item \textit{Livello di rischio:} alto;
-					\item \textit{Probabilità di occorrenza:} bassa;
-					\item \textit{Possibili conseguenze:} rallentamento delle attività, carico di lavoro più consistente e clima lavorativo poco proficuo.
+					\item \textit{Livello di rischio}: alto;
+					\item \textit{Probabilità di occorrenza}: bassa;
+					\item \textit{Possibili conseguenze}: rallentamento delle attività, carico di lavoro più consistente e clima lavorativo poco proficuo.
 				\end{itemize}
-				\item \textbf{Pianificazione:} il \insrole{Project manager} si dovrà occupare di risolvere eventuali contrasti o dispute, sottoponendo i componenti coinvolti ad un confronto civile per raggiungere un accordo; in caso il problema non venisse risolto dovrà pianificare le successive attività in modo da minimizzare il contatto tra le parti coinvolte.
-				\item \textbf{Controllo:} sarà compito del \insrole{Responsabile di progetto} tenere sotto controllo i rapporti tra i vari membri del team e compito di tutti i componenti di riferire al \insrole{Project manager} eventuali problemi di cui non è a conoscenza.
+				\item \textbf{Pianificazione}: il \insrole{Project manager} si dovrà occupare di risolvere eventuali contrasti o dispute, sottoponendo i componenti coinvolti ad un confronto civile per raggiungere un accordo; in caso il problema non venisse risolto dovrà pianificare le successive attività in modo da minimizzare il contatto tra le parti coinvolte.
+				\item \textbf{Controllo}: sarà compito del \insrole{Responsabile di progetto} tenere sotto controllo i rapporti tra i vari membri del team e compito di tutti i componenti di riferire al \insrole{Project manager} eventuali problemi di cui non è a conoscenza.
 			\end{itemize}
 	\subsection{Livello organizzativo}
 		\subsubsection{Valutazione dei costi}
 			\begin{itemize}
-				\item \textbf{Descrizione:} durante la fase di pianificazione è necessario definire le attività, gestire l'allocazione delle risorse e stimare le scadenze e i costi. A causa della poca esperienza da parte del team è possibile che la stima risulti sbagliata.
-				\item \textbf{Analisi:}
+				\item \textbf{Descrizione}: durante la fase di pianificazione è necessario definire le attività, gestire l'allocazione delle risorse e stimare le scadenze e i costi. A causa della poca esperienza da parte del team è possibile che la stima risulti sbagliata.
+				\item \textbf{Analisi}:
 				\begin{itemize}
-					\item \textit{Livello di rischio:} alto;
-					\item \textit{Probabilità di occorrenza:} media;
-					\item \textit{Possibili conseguenze:} possibili ritardi dovuti alla sottostima dei costi delle attività o possibili sprechi di tempo in caso di sovrastima. 
+					\item \textit{Livello di rischio}: alto;
+					\item \textit{Probabilità di occorrenza}: media;
+					\item \textit{Possibili conseguenze}: possibili ritardi dovuti alla sottostima dei costi delle attività o possibili sprechi di tempo in caso di sovrastima. 
 				\end{itemize}
-				\item \textbf{Pianificazione:} il \insrole{Project manager} verificherà ogni giorno l'avanzamento delle attività, tramite la \textit{dashboard}. Si presterà maggiore attenzione alle attività critiche, per le quali si predisporrà un periodo di slack in modo da evitare che un eventuale ritardo non posticipi le altre attività. Nel caso tale tempo di slack non bastasse, verrà rieseguita la pianificazione tenendo conto del ritardo accumulato che si dovrà recuperare.
-				\item \textbf{Controllo:} incarico del \insrole{Responsabile di progetto} sarà accertarsi che le attività procedano come pianificato. Per facilitare tale compito si utilizzerà una \textit{dashboard}, tramite la quale ogni componente saprà quali attività deve svolgere ed entro quali date.
+				\item \textbf{Pianificazione}: il \insrole{Project manager} verificherà ogni giorno l'avanzamento delle attività, tramite la \textit{dashboard}. Si presterà maggiore attenzione alle attività critiche, per le quali si predisporrà un periodo di slack in modo da evitare che un eventuale ritardo non posticipi le altre attività. Nel caso tale tempo di slack non bastasse, verrà rieseguita la pianificazione tenendo conto del ritardo accumulato che si dovrà recuperare.
+				\item \textbf{Controllo}: incarico del \insrole{Responsabile di progetto} sarà accertarsi che le attività procedano come pianificato. Per facilitare tale compito si utilizzerà una \textit{dashboard}, tramite la quale ogni componente saprà quali attività deve svolgere ed entro quali date.
 			\end{itemize}
 	\subsection{Livello degli strumenti}
 		\subsubsection{Inesperienza del team nell'utilizzo degli strumenti}
 			\begin{itemize}
-				\item \textbf{Descrizione:} è richiesto l'uso di molti strumenti software che il team non ha mai utilizzato e che non conosce. Alcuni di essi necessitano di tempo per essere appresi.
-				\item \textbf{Analisi:}
+				\item \textbf{Descrizione}: è richiesto l'uso di molti strumenti software che il team non ha mai utilizzato e che non conosce. Alcuni di essi necessitano di tempo per essere appresi.
+				\item \textbf{Analisi}:
 				\begin{itemize}
-					\item \textit{Livello di rischio:} alto;
-					\item \textit{Probabilità di occorrenza:} alta;
-					\item \textit{Possibili conseguenze:} lento avanzamento delle attività che richiedono l'utilizzo di tali strumenti.
+					\item \textit{Livello di rischio}: alto;
+					\item \textit{Probabilità di occorrenza}: alta;
+					\item \textit{Possibili conseguenze}: lento avanzamento delle attività che richiedono l'utilizzo di tali strumenti.
 				\end{itemize}
-				\item \textbf{Pianificazione:} il \insrole{Responsabile di progetto} valuterà il livello di conoscenza di ogni componente del gruppo riguardo gli strumenti utilizzati. Ogni volta che si incontrerà la necessità di fare uso di un nuovo strumento, verrà comunicato a tutti i componenti del gruppo tramite mailing list. Ogni membro dovrà documentarsi autonomamente ed imparare ad utilizzare gli strumenti richiesti.
-				\item \textbf{Controllo:} sarà compito dell' \insrole{Amministratore} verificare se qualche membro del gruppo richiede aiuto riguardo la strumentazione. Ogni componente dovrà verificare se sono stati utilizzati nuovi strumenti.
+				\item \textbf{Pianificazione}: il \insrole{Responsabile di progetto} valuterà il livello di conoscenza di ogni componente del gruppo riguardo gli strumenti utilizzati. Ogni volta che si incontrerà la necessità di fare uso di un nuovo strumento, verrà comunicato a tutti i componenti del gruppo tramite mailing list. Ogni membro dovrà documentarsi autonomamente ed imparare ad utilizzare gli strumenti richiesti.
+				\item \textbf{Controllo}: sarà compito dell' \insrole{Amministratore} verificare se qualche membro del gruppo richiede aiuto riguardo la strumentazione. Ogni componente dovrà verificare se sono stati utilizzati nuovi strumenti.
 			\end{itemize}
 	\subsection{Livello dei requisiti}
 		\subsubsection{Comprensione dei requisiti}
 			\begin{itemize}
-				\item \textbf{Descrizione:} nella fase di analisi è possibile che i requisiti del problema vengano fraintesi o non identificati correttamente. 
-				\item \textbf{Analisi:}
+				\item \textbf{Descrizione}: nella fase di analisi è possibile che i requisiti del problema vengano fraintesi o non identificati correttamente. 
+				\item \textbf{Analisi}:
 				\begin{itemize}
-					\item \textit{Livello di rischio:} alto;
-					\item \textit{Probabilità di occorrenza:} media;
-					\item \textit{Possibili conseguenze:} possibili divergenze tra la visione del problema da parte del gruppo e ciò che il Proponente ha richiesto.
+					\item \textit{Livello di rischio}: alto;
+					\item \textit{Probabilità di occorrenza}: media;
+					\item \textit{Possibili conseguenze}: possibili divergenze tra la visione del problema da parte del gruppo e ciò che il Proponente ha richiesto.
 				\end{itemize}
-				\item \textbf{Pianificazione:} durante la fase di \insphase{Analisi dei Requisiti}, il team effettuerà più incontri con il Proponente, in modo da assicurarsi di aver compreso in modo chiaro ogni requisito necessario al corretto sviluppo del progetto.
-				\item \textbf{Controllo:} ad ogni revisione verranno consegnati tutti i documenti che il Proponente valuterà e saranno corretti gli eventuali errori o imprecisioni segnalati.
+				\item \textbf{Pianificazione}: durante la fase di \insphase{Analisi dei Requisiti}, il team effettuerà più incontri con il Proponente, in modo da assicurarsi di aver compreso in modo chiaro ogni requisito necessario al corretto sviluppo del progetto.
+				\item \textbf{Controllo}: ad ogni revisione verranno consegnati tutti i documenti che il Proponente valuterà e saranno corretti gli eventuali errori o imprecisioni segnalati.
 			\end{itemize}
