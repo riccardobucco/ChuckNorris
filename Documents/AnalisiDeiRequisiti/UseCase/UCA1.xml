@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCA1 Collegamento ad un istanza di Norris</titolo>
+	<attorip>Utente</attorip>
+	<estensioni>UCA4</estensioni>
+	<precondizione>Si sta utilizzando l'applicazione.</precondizione>
+	<postcondizione>È avvenuto il collegamento ad un'istanza di Norris.</postcondizione>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui non esita l'istanza di Norris a cui si sta cercando di collegare l'applicazione:</descrizione>
+			<item>Il sistema segnala che l'indirizzo non è valido (UCA4).</item>
+		</scenario>
+	</alternativi>
+</usecase>
