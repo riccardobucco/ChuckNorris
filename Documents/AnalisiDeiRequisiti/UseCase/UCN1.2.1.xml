@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.2.1 Aggiornare un modello bar chart</titolo>
+	<immagine>AggiornareModelloBarChart</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si sta aggiornando il modello di un chart.</precondizione>
+	<postcondizione>È stato aggiornato il modello di un bar chart.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore seleziona un modello bar chart da aggiornare (UCN1.2.1.2);</item>
+		<item>Lo sviluppatore aggiorna il modello bar chart selezionato con metodo in place(UCN1.2.1.1).</item>
+	</principale>
+</usecase>

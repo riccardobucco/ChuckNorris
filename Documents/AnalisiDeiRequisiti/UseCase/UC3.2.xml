@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC3.2 Scegliere il tag HTML nel quale si vuole inserire la rappresentazione del grafico</titolo>
-	<attorip>Client</attorip>
-	<precondizione>Si stanno utilizzando le API della libreria grafica.</precondizione>
-	<postcondizione>È stato scelto il tag HTML nel quale si vuole inserire la rappresentazione del grafico.</postcondizione>
-</usecase>

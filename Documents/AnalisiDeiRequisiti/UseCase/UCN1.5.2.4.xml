@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.5.2.4 Inserire un valore dipendente per ciascuna linea</titolo>
+	<immagine>InserireValoreDipendenteLinea</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno inserendo i dati di un line chart. È stato inserito un valore indipendente nel line chart. Si è scelto quante linee si devono inserire nel line chart.</precondizione>
+	<postcondizione>È stato inserito un valore dipendente corrispondente al valore indipendente per ciascuna linea.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore seleziona una linea a cui aggiungere un valore dipendente in corrispondenza del valore indipendente (UCN1.5.2.4.1);</item>
+		<item>Lo sviluppatore sceglie il valore dipendente da inserire in una linea selezionata in corrispondenza del valore indipendente (UCN1.5.2.4.2);</item>
+		<item>Lo sviluppatore esegue i primi due passi per un numero di volte pari al numero di linee che si devono inserire nel chart.</item>
+	</principale>
+</usecase>

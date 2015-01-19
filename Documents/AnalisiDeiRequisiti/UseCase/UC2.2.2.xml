@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC2.2.2 Ottenere il titolo di ciascun grafico</titolo>
-	<attorip>Client</attorip>
-	<precondizione>Si sta ottenendo la lista dei grafici presenti in un'istanza di Norris. È stata ottenuta un'istanza esistente di Norris.</precondizione>
-	<postcondizione>È stato ottenuto il titolo di ciascun grafico della lista.</postcondizione>
-</usecase>

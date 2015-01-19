@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.6.2.2 Inserire l'etichetta di un punto sulla mappa</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno inserendo i dati di un map chart. Sono state impostate le coordinate di un nuovo punto sulla mappa.</precondizione>
-	<postcondizione>È stata impostata l'etichetta del nuovo punto.</postcondizione>
-</usecase>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.6.1.1 Scegliere il modo in cui vengono rappresentati i punti</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
+	<postcondizione>È stato scelto il modo in cui vengono rappresentati i punti.</postcondizione>
+</usecase>

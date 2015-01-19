@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.6 Creare modello map chart</titolo>
+	<immagine>CreareModelloMapChart</immagine>
+	<attorip>Sviluppatore</attorip>
+	<specializzazionedi>
+		<item>UCN1.1 Creare modello chart</item>
+	</specializzazionedi>
+	<precondizione>Si stanno utilizzando le API interne.</precondizione>
+	<postcondizione>È stato creato un modello di un grafico di tipo map chart.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie il titolo del chart (UCN1.1.1);</item>
+		<item>Lo sviluppatore sceglie le opzioni riguardanti la legenda, essendo il grafico non di tipo table (UCN1.1.2);</item>
+		<item>Lo sviluppatore sceglie la descrizione del chart (UCN1.1.4);</item>
+		<item>Lo sviluppatore inserisce i dati di map chart (UCN1.6.2);</item>
+		<item>Lo sviluppatore sceglie le opzioni del map chart (UCN1.6.1).</item>		
+	</principale>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui le impostazioni scelte non corrispondano alle impostazioni del map chart:</descrizione>
+			<item>il sistema segnala un errore.</item>
+		</scenario>
+		<scenario>
+			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
+			<item>il sistema segnala un errore.</item>
+		</scenario>
+		<scenario>
+			<descrizione>Nel caso in cui i dati non siano nel formato corretto:</descrizione>
+			<item>il sistema segnala un errore.</item>
+		</scenario>
+	</alternativi>
+</usecase>

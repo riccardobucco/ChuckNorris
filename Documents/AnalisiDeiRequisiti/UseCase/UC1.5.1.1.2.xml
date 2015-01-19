@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.5.1.1.2 Scegliere il colore da associare a una linea selezionata</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta configurando il colore di ciascuna linea di un grafico di tipo line chart. È stata selezionata la linea a cui associare un colore.</precondizione>
-	<postcondizione>È stato scelto il colore da associare alla linea selezionata.</postcondizione>
-</usecase>

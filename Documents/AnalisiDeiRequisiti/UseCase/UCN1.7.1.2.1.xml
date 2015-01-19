@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.7.1.2.1 Selezionare la cella di cui si vuole scegliere il formato</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno configurando le opzioni inerenti al formato di una cella.</precondizione>
+	<postcondizione>E'stata selezionata una cella della tabella.</postcondizione>
+</usecase>

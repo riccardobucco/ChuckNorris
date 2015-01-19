@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN3.5.1.2 Scegliere il nuovo colore da associare a una linea selezionato</titolo>
+	<attorip>Client</attorip>
+	<precondizione>Si sta modificando il colore di una linea. É stata selezionata la linea a cui cambiare il colore.</precondizione>
+	<postcondizione>È stato scelto il nuovo colore da associare alla linea selezionata.</postcondizione>
+</usecase>

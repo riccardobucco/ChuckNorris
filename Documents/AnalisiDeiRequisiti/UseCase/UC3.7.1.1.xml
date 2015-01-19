@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC3.7.1.1 Selezionare la cella di cui si vuole cambiare il formato</titolo>
-	<attorip>Client</attorip>
-	<precondizione>Si stanno modificando le opzioni riguardanti il formato di una cella.</precondizione>
-	<postcondizione>É stata selezionata la cella di cui si vuole cambiare il formato.</postcondizione>
-</usecase>

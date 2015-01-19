@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.3.3.1 Scegliere un grafico da aggiungere alla pagina</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno aggiungendo dei grafici alla pagina.</precondizione>
+	<postcondizione>È stato scelto un grafico da aggiungere alla pagina.</postcondizione>
+</usecase>
+

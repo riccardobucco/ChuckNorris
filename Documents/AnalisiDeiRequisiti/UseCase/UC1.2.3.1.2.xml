@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.2.3.1.2 Scegliere la nuova longitudine e latitudine di un punto selezionato</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta aggiornando il modello di un map chart con metodo in place. È stato selezionato il modello di un map chart.</precondizione>
-	<postcondizione>Sono state impostate la nuova longitudine e latitudine di un punto selezionato.</postcondizione>
-</usecase>

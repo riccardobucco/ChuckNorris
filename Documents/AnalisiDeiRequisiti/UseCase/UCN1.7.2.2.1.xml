@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.7.2.2.1 Selezionare una colonna a cui associare un header</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si sta scegliendo l'intestazione di ciascuna colonna.</precondizione>
+	<postcondizione>È stata selezionata una colonna a cui dare un nome.</postcondizione>
+</usecase>
+

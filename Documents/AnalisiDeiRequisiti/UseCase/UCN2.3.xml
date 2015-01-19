@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN2.3 Ottenere un grafico presente in un'istanza di Norris</titolo>
+	<attorip>Client</attorip>
+	<specializzazionedi>
+		<item>UCN2.1</item>
+	</specializzazionedi>
+	<precondizione>Si stanno utilizzando le API esterne.</precondizione>
+	<postcondizione>È stato ottenuto un grafico presente in un'istanza di Norris.</postcondizione>
+	<principale>
+		<item>Il client seleziona un'istanza esistente di Norris (UCN2.1.1);</item>
+		<item>Il client seleziona l'ID del grafico che si vuole ottenere (UCN2.3.1).</item>
+	</principale>
+</usecase>

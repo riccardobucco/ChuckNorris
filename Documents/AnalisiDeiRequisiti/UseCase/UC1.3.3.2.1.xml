@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.3.3.2.1 Scegliere la larghezza massima del grafico all'interno della pagina</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno scegliendo le opzioni di visualizzazione del grafico all'interno della pagina.</precondizione>
-	<postcondizione>È stata scelta la larghezza massima del grafico all'interno della pagina.</postcondizione>
-</usecase>
-

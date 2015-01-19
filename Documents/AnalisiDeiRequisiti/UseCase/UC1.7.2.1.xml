@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC1.7.2.1 Scegliere quante colonne inserire</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno inserendo i dati di una table.</precondizione>
-	<postcondizione>È stato impostato il numero di colonne da inserire nella table.</postcondizione>
-</usecase>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UC3.7.1.2 Cambiare il colore del testo contenuto in una cella</titolo>
-	<attorip>Client</attorip>
-	<precondizione>Si stanno modificando le opzioni riguardanti il formato di una cella. É stata selezionata la cella di cui si vuole cambiare il formato.</precondizione>
-	<postcondizione>È stato cambiato il colore del testo contenuto nella cella selezionata.</postcondizione>
-</usecase>
