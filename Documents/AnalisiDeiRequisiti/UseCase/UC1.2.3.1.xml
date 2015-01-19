@@ -4,7 +4,9 @@
 	<titolo>UC1.2.3.1 Aggiornare un modello map chart con metodo in place</titolo>
 	<immagine>AggiornareMapChartInPlace</immagine>
 	<attorip>Sviluppatore</attorip>
-	<generalizzazionedi>UC1.2.3.2</generalizzazionedi>
+	<generalizzazionedi>
+		<item>UC1.2.3.2</item>
+	</generalizzazionedi>
 	<inclusioni>UC1.2.3.3</inclusioni>
 	<precondizione>Si sta aggiornando il modello di un map chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello di un map chart con metodo in place.</postcondizione>
