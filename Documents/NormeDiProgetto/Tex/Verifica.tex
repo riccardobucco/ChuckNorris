@@ -36,8 +36,10 @@
 				\item periodi brevi e leggibili;
 				\item struttura del documento;
 				\item norme tipografiche;
-				\item proprietà di glossario;
+				\item proprietà di glossario.
 			\end{enumerate}
+			Durante l'esecuzione dell'intera procedura è importante che i Verificatori tengano traccia di tutti gli errori più comuni. In questo modo, 
+			essi potranno essere riportati sulla lista di controlla necessaria per applicare in modo fruttuoso la tecnica dell'inspection.
 			\paragraph{Sintassi}
 				I Verificatori devono preoccuparsi di individuare gli errori sintattici all'interno dei testi del documento. Tale compito può essere in 
 				parte attuato tramite strumenti automatici. È tuttavia necessario che un documento sia sempre sottoposto a walkthrough, in quanto gli 
@@ -60,5 +62,27 @@
 				documento). Ciò viene fatto con l'ausilio di strumenti automatici. Inoltre, è compito dei Verificatori trovare tutti quei termini che 
 				dovrebbero essere inclusi nel Glossario ma che ancora non lo sono. Per tale compito si deve utilizzare walthrough delle sezioni che sono 
 				state soggette a modifica prima dell'ultima verifica.
+		\subsubsection{Verifica dei diagrammi UML}
+			I Verificatori hanno il compito di controllare tutti i diagrammi UML che sono stati prodotti. I diagrammi utilizzati fino a questo momento 
+			sono i seguenti:
+			\begin{itemize}
+				\item Diagrammi dei casi d'uso.
+			\end{itemize}
+			\paragraph{Diagrammi dei casi d'uso}
+				Le verifiche che devono essere effettuate riguardano sostanzialmente i casi d'uso e gli attori.\\
+				Innanzitutto si deve controllare se un attore è davvero tale. Per fare questo può essere utile porsi domande descritte in seguito.
+				\begin{enumerate}
+					\item Il presunto attore in questione è una persona che interagisce con il sistema? Se la risposta è si allora esso probabilmente 
+					è un attore, se la risposta è no passare al punto due.
+					\item Sono in grado di modificare il presunto attore all'interno del mio sistema? Se la risposta è no allora probabilmente è un attore, 
+					se la risposta è si allora probabilmente non si tratta di un attore.
+				\end{enumerate}
+				Per quanto riguarda i casi d'uso, si controlla innanzitutto che siano utilizzate secondo lo standard UML le seguenti relazioni:
+				\begin{itemize}
+					\item inclusioni;
+					\item generalizzazioni;
+					\item estensioni
+				\end{itemize}
+				Infine, assicurarsi che i casi d'uso descrivano cosa il sistema fa e non cosa non fa.
 	\subsection{Strumenti}
 		
