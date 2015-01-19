@@ -3,8 +3,8 @@
 <document>
 	<title>Norme di Progetto</title>
 	<type>Interno</type>
-	<redactedby>Bucco Riccardo \\ Dal Bianco Davide \\ Chiara Bigarella \\ Pavanello Fabio Matteo \\ Rubin Marco \\ Carlon Chiara</redactedby>
-	<verifiedby>Moretto Alessandro \\ Bucco Riccardo \\ Dal Bianco Davide \\ Chiara Bigarella \\ Pavanello Fabio Matteo \\ Rubin Marco \\ Carlon Chiara</verifiedby>
+	<redactedby>Bucco Riccardo \\ Bigarella Chiara \\ Rubin Marco \\ Carlon Chiara</redactedby>
+	<verifiedby>Moretto Alessandro \\ Dal Bianco Davide \\ Pavanello Fabio Matteo</verifiedby>
 	<approvedby>Moretto Alessandro</approvedby>
     <distribution>\groupname{}</distribution>
 
@@ -41,14 +41,14 @@
         <version>
             <id>0.09</id>
             <date>2014-12-15</date>
-            <author>Chiara Bigarella</author>
+            <author>Pavanello Fabio Matteo</author>
             <role>Verificatore</role>
             <description>Verificata sezione Sviluppo</description>
         </version>
         <version>
             <id>0.08</id>
             <date>2014-12-15</date>
-            <author>Carlon Chiara, Riccardo Bucco</author>
+            <author>Davide Dal Bianco</author>
             <role>Verificatore</role>
             <description>Verificata sezione Configurazione</description>
         </version>
@@ -62,14 +62,14 @@
 		<version>
 			<id>0.06</id>
 			<date>2014-12-13</date>
-			<author>Davide Dal Bianco, Rubin Marco</author>
+			<author>Rubin Marco</author>
 			<role>Amministratore</role>
 			<description>Terminata stesura Sviluppo</description>
         </version>
         <version>
             <id>0.05</id>
             <date>2014-12-13</date>
-            <author>Chiara Bigarella</author>
+            <author>Bigarella Chiara</author>
             <role>Amministratore</role>
             <description>Terminata stesura Configurazione</description>
         </version>
@@ -90,7 +90,7 @@
         <version>
             <id>0.02</id>
             <date>2014-12-12</date>
-            <author>Pavanello Fabio Matteo</author>
+            <author>Bigarella Chiara</author>
             <role>Amministratore</role>
             <description>Terminata stesura Organizzazione</description>
         </version>
