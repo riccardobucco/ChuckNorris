@@ -42,24 +42,24 @@
 			essi potranno essere riportati sulla lista di controlla necessaria per applicare in modo fruttuoso la tecnica dell'inspection.
 			\paragraph{Sintassi}
 				I Verificatori devono preoccuparsi di individuare gli errori sintattici all'interno dei testi del documento. Tale compito può essere in 
-				parte attuato tramite strumenti automatici. È tuttavia necessario che un documento sia sempre sottoposto a walkthrough, in quanto gli 
+				parte attuato tramite strumenti automatici (vedi sezione 6.3 del presente documento). È tuttavia necessario che un documento sia sempre sottoposto a walkthrough, in quanto gli 
 				strumenti automatici non sono in grado di individuare parole corrette che sono utilizzate al di fuori del loro contesto.\\
 				Inoltre, i Verificatori devono cercare tutte quelle parole che sono poco frequenti o comunque complesse (possono generare fraintendimenti 
 				o incomprensioni): va applicata la tecnica del walkthrough.
 			\paragraph{Periodi lunghi}
-				I Verificatori devono calcolare l'indice Gulpease del documento (utilizzando l'appostio strumento automatico). Qualora si ottenga un 
+				I Verificatori devono calcolare l'indice Gulpease del documento (utilizzando l'appostio strumento automatico, vedi sezione 6.3 del presente documento). Qualora si ottenga un 
 				risultato inferiore alle aspettative si deve applicare il walkthrough all'interno del documento: l'obiettivo deve essere quello di 
 				individuare frasi troppo lunghe (e che dunque possono essere di difficile comprensione e/o scarsa leggibilità).
 			\paragraph{Struttura del documento}
-				I Verificatori controllano con l'ausilio di strumenti automatici che la struttura del documento rispetti quanto descritto nel presente 
+				I Verificatori controllano con l'ausilio di strumenti automatici (vedi sezione 6.3 del presente documento) che la struttura del documento rispetti quanto descritto nel presente 
 				documento.
 			\paragraph{Norme tipografiche}
 				Nel presente documento sono state definite delle norme tipografiche di carattere generale. Molte di esse sono verificabili tramite 
-				strumenti automatici. Per le restanti è necessario che i Verificatori applichino una fra le tecniche di inspection e walkthrough 
+				strumenti automatici (vedi sezione 6.3 del presente documento). Per le restanti è necessario che i Verificatori applichino una fra le tecniche di inspection e walkthrough 
 				(si preferisce la prima nel momento in cui tramite la lista di controllo si riesce a trovare la grande maggioranza degli errori).
 			\paragraph{Proprietà di glossario}
 				È necessario che tutte le parole presenti all'interno del Glossario siano marcate appropriatamente (come descritto nel presente 
-				documento). Ciò viene fatto con l'ausilio di strumenti automatici. Inoltre, è compito dei Verificatori trovare tutti quei termini che 
+				documento). Ciò viene fatto con l'ausilio di strumenti automatici (vedi sezione 6.3 del presente documento). Inoltre, è compito dei Verificatori trovare tutti quei termini che 
 				dovrebbero essere inclusi nel Glossario ma che ancora non lo sono. Per tale compito si deve utilizzare walthrough delle sezioni che sono 
 				state soggette a modifica prima dell'ultima verifica.
 		\subsubsection{Verifica dei diagrammi UML}
@@ -90,4 +90,10 @@
 				\end{itemize}
 				Infine, assicurarsi che i casi d'uso descrivano cosa il sistema fa e non cosa non fa.
 	\subsection{Strumenti}
-		
+		In questa sezione vengono descritti gli aspetti essenziali degli strumenti che i Verificatori hanno a disposizione.
+		\begin{description}
+			\item[OrtographicCheck] Tale script sfrutta il software GNU Aspell per eseguire il controllo ortografico di un documento.
+			\item[Gulpease] Tale script estrae il testo da un documento e ne calcola l'indice di leggibilità Gulpease.
+			\item[NonBreakingSpaceCheck] Tale script controlla che un numero formattato secondo lo standard [SI/ISO 31-0] utilizzi lo spazio unificatore 
+			e non quello normale (errore in cui è facile incorrere).
+		\end{description}
