@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.3.2 Scegliere le opzioni di visualizzazione della pagina</titolo>
+	<immagine>SceltaOpzioniVisualizzazionePagina</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si sta creando una pagina.</precondizione>
+	<postcondizione>Sono state scelte le opzioni di visualizzazione della pagina.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie il massimo numero di grafici visualizzabili su una riga (UC1.3.2.1);</item>
+		<item>Lo sviluppatore sceglie il massimo numero di grafici visualizzabili su una colonna (UC1.3.2.2).</item>
+	</principale>
+</usecase>

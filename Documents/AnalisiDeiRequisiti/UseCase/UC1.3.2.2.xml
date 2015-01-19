@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.3.2.2 Scegliere il massimo numero di grafici visualizzabili su una colonna</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si stanno scegliendo le opzioni di visualizzazione della pagina.</precondizione>
+	<postcondizione>È stato scelto il massimo numero di grafici visualizzabili su una colonna.</postcondizione>
+</usecase>
+

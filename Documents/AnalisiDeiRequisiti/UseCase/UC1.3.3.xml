@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UC1.3.3 Aggiungere grafici alla pagina</titolo>
+	<immagine>AggiungereGraficiPagina</immagine>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Si sta creando una pagina.</precondizione>
+	<postcondizione>Sono stati aggiunti dei grafici alla pagina.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie un grafico da aggiungere alla pagina (UC1.3.3.1);</item>
+		<item>Lo sviluppatore sceglie le opzioni di visualizzazione del grafico all'interno della pagina (UC1.3.3.2).</item>
+	</principale>
+</usecase>
+
+
+
