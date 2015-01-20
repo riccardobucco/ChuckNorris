@@ -158,7 +158,7 @@
 					La formula per il suo calcolo è la seguente:
 					\begin{equation}
 						\label{Indice Gulpease}
-						Indice\_Gulpease = 89+ \frac{300*numero\_frasi-10*numero\_lettere}{numero\_parole}
+						Indice\ Gulpease = 89 + \frac{300*numero\_frasi-10*numero\_lettere}{numero\_parole}
 					\end{equation}
 					Il risultato di tale equazione tipicamente è compreso tra 0 e 100, dove valori alti indicano leggibilità elevata e viceversa.\\
 					In generale, risulta che testi con un indice:
@@ -185,9 +185,46 @@
 						\item il valore 3 è considerato accettabile;
 						\item i valori 4 e 5 sono considerati ottimali.
 					\end{itemize}
-			La scelta del team è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del 
-			team di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in 
-			quanto, nella sua versione pura, non prevede il consolidamento delle best practice.\\
-			La valutazione rispetto ai processi viene fornita solo dopo l'esito della revisione da parte del committente.
+					La scelta del team è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del 
+					team di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in 
+					quanto, nella sua versione pura, non prevede il consolidamento delle best practice.
+				\paragraph{Produttività}
+					Si vuole cercare di calcolare la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del 
+					progetto. In generale, in una prima approssimazione, la si misura tramite la seguente formula:
+					\begin{equation}
+						Produttivita' = \frac{Quantita'\ di\ output\ ottenuto}{Quantita'\ di\ input\ utilizzato}
+						\label{Produttività}
+					\end{equation}
+					Tale parametro genera metriche differenti in base a cosa si riferiscono i termini "input" e "output". Dunque, tale formula assume 
+					aspetti diversi in base ai processi (e relative attività) ai quali viene applicata.
+					\begin{description}
+						\item[Documentazione] Il parametro "input" assume il significato di "numero di parole scritte", il parametro "output" assume il 
+						significato di "tempo necessario alla scrittura della documentazione".
+						\item[Codifica] Il parametro "input" assume il significato di "numero di linee di codice scritte", il parametro "output" assume 
+						il significato di "tempo necessario alla scrittura del codice".
+					\end{description}
+					I valori che si ottengono in tale modo sono difficilmente valutabili in modo assoluto. Piuttosto, essi assumono importanza nel 
+					momento in cui vengono confrontati fra loro in momenti diversi del progetto: in questo modo il Responsabile di Progetto può valutare 
+					più facilmente i tempi e dunque i costi delle attività che devono essere svolte.
+				\paragraph{Efficacia di una revisione}
+					Si vuiole cercare di calcolare quanto è efficace una revisione. Possiamo pensare, in modo approssimativo, che tale valore sia dato 
+					dalla seguente formula generale:
+					\begin{equation}
+						\label{Efficacia revisione}
+						Efficacia\ Revisione = \frac{Numero\ di\ errori\ rilevati}{Numero\ di\ elementi\ ispezionati}
+					\end{equation}
+					A parità di elementi ispezionati si vuole che il numero di errori rilevati sia maggiore possibile.\\
+					Anche tale indice è applicabile in modo diverso ai diversi processi: in ognuno di essi il termine "elementi" assume una connotazione 
+					diversa. Alcuni esempi sono riportati di seguito.
+					\begin{description}
+						\item[Documentazione] Il termine "elementi" assume il significato di "pagine".
+						\item[Codifica] Il termine "elementi" assume il significato di "righe di codice".
+					\end{description}
+					Anche in questo caso vale un discorso simile a quello fatto per la produttività: non siamo in grado di individuare con 
+					precisione dei valori accettabili di riferimento. Di conseguenza tali misure avranno valore relativo, in quanto usate per essere 
+					confrontate tra di loro in momenti diversi del progetto.\\
+					Notare che una verifica effettuata tramite la presente metrica permette al Responsabile di Progetto di capire quando lo sforzo per 
+					trovare gli errori diventa troppo grande (e quindi costoso). Si ricordi, infatti, che vale la legge del rendimento decrescente.
 		\subsubsection{Metriche del codice}
-			A questo punto dello sviluppo del progetto, il team non è ancora pronto per indicare delle metriche adeguate per il controllo della qualità del codice, ma si riserva di indicare tali metriche in fase di progettazione.
+			A questo punto dello sviluppo del progetto, il team non è ancora pronto per indicare delle metriche adeguate per il controllo della 
+			qualità del codice, ma si riserva di indicare tali metriche in fase di progettazione.
