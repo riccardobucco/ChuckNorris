@@ -133,42 +133,61 @@
 					\end{itemize}
 					Sono inoltre disponibili le risorse hardware messe a disposizione dal Servizio Calcolo dell'Università degli Studi di Padova.
 		\subsection{Misure e metriche}
-		Affinchè la qualità sia predittiva, è necessario che il processo di verifica sia quantificabile, e pertanto si definiscono delle metriche, cioè un sistema di misurazione formato da misure e criteri per valutarle.\\
-		Ci sono due tipi di range all'interno dei quali si collocheranno i valori delle misurazioni:
-		\begin{itemize}
-			\item range di accettazione: questi valori saranno ammessi per l'accettazione del prodotto
-			\item range ottimale: questi sono i valori ottimali in cui dovrebbe collocarsi la misurazione
-		\end{itemize}
-		\subsubsection{Metriche per i processi}
-			Per il controllo della qualità dei processi è stato deciso di adottare il modello CMM. Questo modello ha lo scopo di migliorare i processi e, più in generale, di aiutare una organizzazione a migliorare le sue prestazioni.\\
-			Per ogni processo vengono valutati i livelli di "\textit{Capability}" e "\textit{Maturity}" cioè, rispettivamente, la misura dell'adeguatezza del processo  rispetto agli scopi per cui è stato definito e il grado di consolidamento di un processo all'interno dell'organizzazione. I valori possono oscillare tra 1 e 5.\\
-			La scelta del team è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del team di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in quanto, nella sua versione pura, non prevede il consolidamento delle best practice.\\
-			I range stabiliti per questa metrica sono:
-			\begin{itemize}
-				\item Range di accettazione: 3 - 5;
-				\item Range ottimale: 4 - 5;
-			\end{itemize}	
+			L'obiettivo è quello di misurare la qualità di "cosa" si realizza (il prodotto) e "come" lo si realizza (il processo). Il problema è 
+			riuscire a stimare in modo preciso quanto si sta misurando. Per questo motivo sono necessarie delle metriche, dei criteri stabiliti a 
+			priori su cui basare la misurazione della qualità.
+			\subsubsection{Misure}
+				Le misure che vengono fatte durante tutto l'arco del progetto possono essere molto varie. Di conseguenza, non si può far altro che 
+				stabilire dei range di accettazione indipendenti dal tipo di stima che si sta effettuando. In particolare, una valore misurato può 
+				essere:
+				\begin{description}
+					\item[negativo] Un valore appartiene a questo range non può essere accettato, qualunque sia l'ambito al quale appartiene.
+					\item[accettabile] Un valore appartenente a questo range è un valore che ha raggiunto la soglia minima dell'accettazione. Può 
+					quindi ovviamente essere accettato.
+					\item[ottimale] Un valore appartenente a questo range ha raggiunto le massime aspettative del team. L'obiettivo dovrebbe essere 
+					quello di avere tutti i valori all'interno di tale range.
+				\end{description}
+			\subsubsection{Metriche per i documenti}
+				La qualità di un documento dipende prima di tutto dai suoi contenuti. La loro qualità, tuttavia, è difficilmente quantificabile allo 
+				stato attuale del progetto a causa dell'esperienza pressoché nulla del team in quest'ambito. Si è deciso dunque di limitarsi a valutare 
+				parametri maggiormente oggettivi e soprattutto misurabili automaticamente attraverso strumenti software.
+				\paragraph{Indice di leggibilità}
+					Una metrica che si è deciso di utilizzare per poter stimare la qualità di un documento è l'indice di leggibilità. In particolare, è 
+					stato considerato l'indice Gulpease, studiato appositamente per la lingua italiana.\\
+					Questo particolare indice si basa sulla lunghezza della parola e sulla lunghezza della frase rispetto al numero di lettere.\\
+					La formula per il suo calcolo è la seguente:
+					\begin{equation}
+						\label{Indice Gulpease}
+						Indice\_Gulpease = 89+ \frac{300*numero\_frasi-10*numero\_lettere}{numero\_parole}
+					\end{equation}
+					Il risultato di tale equazione tipicamente è compreso tra 0 e 100, dove valori alti indicano leggibilità elevata e viceversa.\\
+					In generale, risulta che testi con un indice:
+					\begin{itemize}
+						\item inferiore a 80 risultano difficili da leggere per chi ha la licenza elementare;
+						\item inferiore a 60 risultano difficili da leggere per chi ha la licenza media;
+						\item inferiore a 40 risultano difficili da leggere per chi ha la licenza superiore;
+					\end{itemize}
+					Vengono di seguito riportati i range stabiliti per la metrica appena introdotta. Si noti che viene tenuto in considerazione il fatto 
+					che la documentazione è destinata a persone sufficientemente preparate, competenti ed istruite.
+					\begin{itemize}
+						\item Valori minori di 35 sono considerati negativi.
+						\item Valori compresi tra 35 e 50 sono considerati accettabili.
+						\item Valori maggiori di 50 sono considerati ottimali.
+					\end{itemize}
+			\subsubsection{Metriche per i processi}
+				\paragraph{Capability Maturity Model}
+					Per valutare i processi si è deciso di fare riferimento al modello CMM. Se correttamente applicato esso ci fornisce una base 
+					concettuale molto generale su cui appoggiarsi per valutare il livello dei processi.\\
+					CMM ci consente di individuare la maturità di un processo: essa può assumere un valore da 1 (il peggiore) a 5 (il migliore). Mettendo 
+					ora in relazione i risultati di tale modello con i range da noi stabiliti otteniamo quanto segue:
+					\begin{itemize}
+						\item i valori 1 e 2 sono considerati negativi;
+						\item il valore 3 è considerato accettabile;
+						\item i valori 4 e 5 sono considerati ottimali.
+					\end{itemize}
+			La scelta del team è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del 
+			team di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in 
+			quanto, nella sua versione pura, non prevede il consolidamento delle best practice.\\
 			La valutazione rispetto ai processi viene fornita solo dopo l'esito della revisione da parte del committente.
-		\subsubsection{Metriche per i documenti}
-			Per il controllo della qualità dei documenti è stato deciso di adottare l'indice Gulpease, un indice di leggibilità del testo tarato sulla lingua italiana.\\
-			Questo particolare indice si basa sulla lunghezza della parola e sulla lunghezza della frase rispetto al numero di lettere.\\
-			
-			\begin{equation}\label{Indice Gulpease}
-			Indice\_Gulpease = 89+ \frac{300*numero\_frasi-10*numero\_lettere}{numero\_parole}
-			\end{equation}
-				
-			Il risultato è compreso tra 0 e 100, dove la leggibilità è direttamente proporzionale al valore.\\
-			Tipicamente vengono associate le seguenti soglie dell'indice Gulpease al livello di istruzione:
-			\begin{itemize}
-				\item inferiore a 80: bassa leggibilità per chi ha la licenza elementare;
-				\item inferiore a 60: bassa leggibilità per chi ha la licenza media;
-				\item inferiore a 40: bassa leggibilità per chi ha la licenza superiore.
-			\end{itemize}
-			
-			I range stabiliti per questa metrica, in considerazione del fatto che la documentazione si considera destinata a persone sufficientemente competenti, sono:
-			\begin{itemize}
-				\item range di accettazione: 35 - 100;
-				\item range ottimale: 45 - 100.
-			\end{itemize}
 		\subsubsection{Metriche del codice}
 			A questo punto dello sviluppo del progetto, il team non è ancora pronto per indicare delle metriche adeguate per il controllo della qualità del codice, ma si riserva di indicare tali metriche in fase di progettazione.
