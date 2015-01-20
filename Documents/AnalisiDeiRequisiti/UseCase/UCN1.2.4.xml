@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.2.4 Aggiornare un modello table</titolo>
-	<immagine>AggiornareModelloTable</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si sta aggiornando il modello di un chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello di una table.</postcondizione>

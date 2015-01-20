@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.3 Creare pagina</titolo>
-	<immagine>CrearePagina</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stata creata una pagina.</postcondizione>

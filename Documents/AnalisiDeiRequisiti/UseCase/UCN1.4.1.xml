@@ -2,12 +2,14 @@
 
 <usecase>
 	<titolo>UCN1.4.1 Scegliere opzioni bar chart</titolo>
-	<immagine>OpzioniBarChart</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si vuole creare un grafico di tipo bar chart. Sono stati inseriti i dati del bar chart. In particolare si conosce quanti sono i set di barre nel grafico e li si sa identificare.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni del grafico di tipo bar chart.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore sceglie il colore di ciascun set di barre (UCN1.4.1.1);</item>
-		<item>Lo sviluppatore sceglie l’orientamento delle barre (UCN1.4.1.2).</item>
+		<item>Lo sviluppatore sceglie l’orientamento delle barre (UCN1.4.1.2);</item>
+		<item>Lo sviluppatore sceglie il formato di stampa dei valori del bar chart (UCN1.4.1.3);</item>
+		<item>Lo sviluppatore sceglie il nome per ciascun set di barre (UCN1.4.1.4).</item>
 	</principale>
 </usecase>

@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.7.2 Inserire dati table</titolo>
-	<immagine>InserireDatiTable</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si vuole creare un grafico di tipo table</precondizione>
 	<postcondizione>Sono stati impostati i dati che si vogliono inserire nella table. Nessuna cella è vuota.</postcondizione>

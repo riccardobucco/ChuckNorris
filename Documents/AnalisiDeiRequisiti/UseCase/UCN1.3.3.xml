@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.3.3 Aggiungere grafici alla pagina</titolo>
-	<immagine>AggiungereGraficiPagina</immagine>
+	<titolo>UCN1.3.3 Aggiungere grafico alla pagina</titolo>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si sta creando una pagina.</precondizione>
-	<postcondizione>Sono stati aggiunti dei grafici alla pagina.</postcondizione>
+	<postcondizione>É stato aggiunto un grafico alla pagina.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie un grafico da aggiungere alla pagina (UCN1.3.3.1);</item>
-		<item>Lo sviluppatore sceglie le opzioni di visualizzazione del grafico all'interno della pagina (UCN1.3.3.2).</item>
+		<item>Lo sviluppatore sceglie la larghezza massima del grafico all'interno della pagina (UCN1.3.3.1);</item>
+		<item>Lo sviluppatore sceglie l'altezza massima del grafico all'interno della pagina (UCN1.3.3.2).</item>
 	</principale>
 </usecase>
 

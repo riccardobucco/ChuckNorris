@@ -2,14 +2,9 @@
 
 <usecase>
 	<titolo>UCN1.2.2.2 Aggiornare un modello line chart con metodo stream</titolo>
-	<immagine>AggiornareLineChartStream</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<inclusioni>UCN1.2.2.3</inclusioni>
 	<precondizione>Si sta aggiornando il modello di un line chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello di un line chart con metodo stream.</postcondizione>
-	<principale>
-		<item>Lo sviluppatore seleziona un modello line chart da aggiornare (UCN1.2.2.3);</item>
-		<item>Lo sviluppatore sceglie un nuovo valore indipendente da aggiungere al line chart (UCN1.2.2.2.1);</item>
-		<item>Lo sviluppatore scegliere per ogni linea un nuovo valore dipendente in corrispondenza del valore indipendente scelto (UCN1.2.2.2.2).</item>
-	</principale>
 </usecase>

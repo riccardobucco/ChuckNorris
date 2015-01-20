@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.2.1 Aggiornare un modello bar chart</titolo>
-	<immagine>AggiornareModelloBarChart</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si sta aggiornando il modello di un chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello di un bar chart.</postcondizione>

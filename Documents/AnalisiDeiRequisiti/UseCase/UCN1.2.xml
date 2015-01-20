@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.2 Aggiornare un modello chart</titolo>
-	<immagine>AggiornareModelloChart</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato aggiornato il modello di un chart.</postcondizione>

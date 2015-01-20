@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.5.1 Scegliere opzioni line chart</titolo>
-	<immagine>OpzioniLineChart</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si vuole creare un grafico di tipo line chart. Sono stati inseriti i dati del line chart. In particolare si conosce quante sono le linee nel grafico e le si sa identificare.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni del grafico di tipo line chart.</postcondizione>

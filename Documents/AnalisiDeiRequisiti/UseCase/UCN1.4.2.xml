@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.4.2 Inserire dati bar chart</titolo>
-	<immagine>InserireDatiBarChart</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si vuole creare un grafico di tipo bar chart.</precondizione>
 	<postcondizione>Sono stati impostati i dati che si vogliono rappresentare nel grafico. Per ogni valore indipendente, esiste un valore dipendente corrispondente per ogni set di barre.</postcondizione>

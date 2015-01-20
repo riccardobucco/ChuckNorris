@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.6.2.1 Scegliere le coordinate di un nuovo punto sulla mappa</titolo>
-	<immagine>SceltaCoordinateNuovoPunto</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno inserendo i dati di un map chart.</precondizione>
 	<postcondizione>Sono state impostate le coordinate di un nuovo punto sulla mappa.</postcondizione>

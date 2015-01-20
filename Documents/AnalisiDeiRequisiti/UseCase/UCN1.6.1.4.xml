@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.6.1.4 Scegliere le coordinate del punto centrale della mappa</titolo>
-	<immagine>SceltaCoordinateCentroMappa</immagine>
+	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
 	<postcondizione>È stato impostato il punto centrale della mappa.</postcondizione>

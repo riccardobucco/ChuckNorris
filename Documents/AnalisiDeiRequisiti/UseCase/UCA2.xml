@@ -3,6 +3,6 @@
 <usecase>
 	<titolo>UCA2 Visualizzazione elenco grafici</titolo>
 	<attorip>Utente</attorip>
-	<precondizione>Si sta utilizzando l'applicazione. È avvenuto il collegamento ad un'istanza di Norris.</precondizione>
+	<precondizione>Si sta utilizzando l'applicazione Android. È avvenuto il collegamento ad un'istanza di Norris.</precondizione>
 	<postcondizione>È stato visualizzato l'elenco dei grafici.</postcondizione>
 </usecase>
