@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.3.3.2 Scegliere le opzioni di visualizzazione del grafico all'interno della pagina</titolo>
-	<immagine>SceltaOpzioniVisualizzazioneGraficoPagina</immagine>
+	<titolo>UCN1.3.3.2 Scegliere l'altezza massima del grafico all'interno della pagina</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno aggiungendo dei grafici alla pagina. È stato scelto un grafico da aggiungere alla pagina.</precondizione>
-	<postcondizione>Sono state scelte le opzioni di visualizzazione del grafico all'interno della pagina.</postcondizione>
-	<principale>
-		<item>Lo sviluppatore sceglie la larghezza massima del grafico all'interno della pagina (UCN1.3.3.2.1);</item>
-		<item>Lo sviluppatore sceglie l'altezza massima del grafico all'interno della pagina (UCN1.3.3.2.2).</item>
-	</principale>
+	<precondizione>Si sta aggiungendo un grafico alla pagina.</precondizione>
+	<postcondizione>È stata scelta l'altezza massima del grafico all'interno della pagina.</postcondizione>
 </usecase>
+

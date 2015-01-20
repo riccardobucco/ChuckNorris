@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.3.3.1 Scegliere un grafico da aggiungere alla pagina</titolo>
+	<titolo>UCN1.3.3.1 Scegliere la larghezza massima del grafico all'interno della pagina</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno aggiungendo dei grafici alla pagina.</precondizione>
-	<postcondizione>È stato scelto un grafico da aggiungere alla pagina.</postcondizione>
+	<precondizione>Si sta aggiungendo un grafico alla pagina.</precondizione>
+	<postcondizione>È stata scelta la larghezza massima del grafico all'interno della pagina.</postcondizione>
 </usecase>
 
