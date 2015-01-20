@@ -6,9 +6,4 @@
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table. Si conosce il numero di colonne della table e le si sa identificare.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti il formato dei dati contenuti nelle colonne della table.</postcondizione>
-	<principale>
-		<item>Lo sviluppatore sceglie la colonna alla quale vuole impostare il formato (UCN1.7.1.1.1);</item>
-		<item>Lo sviluppatore sceglie il formato della colonna selezionata (UCN1.7.1.1.2);</item>
-		<item>Lo sviluppatore esegue i primi due passi per un numero di volte pari al numero di colonne presenti nel chart.</item>
-	</principale>
 </usecase>
