@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UCA3 Visualizzazione singolo grafico</titolo>
-	<attorip>Utente</attorip>
-	<precondizione>Si sta utilizzando l'applicazione. È avvenuto il collegamento ad un'istanza di Norris.</precondizione>
-	<postcondizione>È stato visualizzato un singolo grafico.</postcondizione>
-</usecase>
