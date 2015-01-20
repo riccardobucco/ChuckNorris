@@ -1,11 +1,11 @@
 \section{Configurazione}
 	\subsection{Attività}
-		\subsubsection{Identificazione di configurazione}
-		\subsubsection{Controllo di baseline}
 		\subsubsection{Gestione modifiche}
 		Per effettuare una modifica ad un qualsiasi documento è necessario inoltrare una richiesta formale di modifica al \insrole{Responsabile di Progetto}, il quale si preoccuperà di avviare le procedure necessarie alla gestione di tale modifica.
 		\subsubsection{Controllo di versione}
-	
+		Il controllo sul versionamento dei documenti e, nelle successive fasi del progetto, dei codice sorgente avviene attraverso lo strumento fornito dalla piattaforma GitHub.
+		Ogni volta che viene eseguita una modifica sostaziale deve essere assegnato un nuovo numero di versione.\\ Il numero di versione è indicato attraverso il caarattere 'v' seguito da due numeri separati da un '.', dove il primo numero indica la versione approvata e il secondo il numero della verifica apportata.\\ Questo vale sia per i documenti che per i file contenenti codice sorgente.\\
+		Per quanto riguarda il versionamento della documentazione si rimanda alla sezione Documentazione del presente documento.
 	\subsection{Norme}
 		\subsubsection{Struttura di una richiesta di modifica}
 			Ogni richiesta di modifica è costituita dai seguenti campi:
@@ -40,7 +40,7 @@
 						\item AnalisiDeiRequisiti
 						\item PianoDiProgetto
 						\item PianoDiQualifica
-						\item SpecificaTecnica
+						\item Verbali
 						\item Glossario
 					\end{itemize}
 					\item /Source
@@ -85,9 +85,20 @@
 					\caption{Procedura di aggiornamento del repository}
 				\end{figure}
 		
-	\subsection{Strumenti}	
+	\subsection{Strumenti}
+		Per agevolare lo svolgimento del progetto da parte di tutti i membri del team di sviluppo è stata predisposta una macchina virtuale contenente tutti gli strumenti software necessari, individuati fino al momento della stesura dell'ultima versione attuale del presente documento.
 		\subsubsection{Repository}
-			Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git. AGGIUNGERE MOTIVAZIONI TECNICHE CHE HANNO PORTATO A QUESTA SCELTA
+			Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git. Questa scelta è stata presa in considerazione del fatto che questa piattaforma permette, oltre al servizio di repository, il controllo di versione e la gestione di anomalie. \\
+			GitHub è anche stato suggerito dal proponente del capitolato, in quanto permette un'interazione agevolata con Heroku, altro strumento consigliato per lo svolgimento del progetto. 
 				\paragraph{Visibilità del repository}
-				Per la condivisione e il versionamento dei configuration item è stato creato un repository privato su GitHub, raggiungibile all’indirizzo \insuri{https://github.com/marcorubin/kaizen-team}. L’accesso è consentito solamente agli utenti approvati dal Project Manager.
-						
+				Per la condivisione e il versionamento dei configuration item è stato creato un repository privato su GitHub, raggiungibile all’indirizzo \insuri{https://github.com/marcorubin/kaizen-team}. L’accesso è consentito solamente agli utenti approvati dal \insrole{Project Manager}.
+		\subsubsection{Software per la stesura di documentazione nel linguaggio \LaTex{}}	
+			Per la stesura della documentazione nel linguaggio \LaTex{} è fondamentale disporre di tutti i pacchetti della distribuzione texlive. Ogni componente del gruppo \groupname{} è poi libero di utilizzare l'editor di testo o l'IDE che ritiene più opportuno.
+		\subsubsection{Software per creazione di diagrammi UML}
+			Il software prescelto per la creazione di diagrammi UML, per la sua versatilità e semplicità d'uso, è ASTAH.
+		\subsubsection{script per l'automazione di attività di verifica}
+			Gli \insrole{Amministratori di Sistema} hanno sviluppato alcuni script per l'automazione di attività di verifica come il controllo ortografico, il corretto utilizzo dei comandi \LaTex{}, il calcolo dell'indice Gulpease e la rilevazione di spazi errati.
+		\subsubsection{Strumento per il tracciamento dei requisiti}
+			A CURA DI MARCO :D
+		
+		}

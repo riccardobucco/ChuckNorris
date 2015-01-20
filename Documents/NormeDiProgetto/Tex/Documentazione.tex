@@ -1,8 +1,11 @@
 \section{Documentazione}
 	\subsection{Attività}
+	L'attività di documentazione è un'attività di supporto allo sviluppo fondamentale ai fini del progetto.
+	L'assegnazione delle stesure dei diversi documenti viene fatta dal \insrole{Responsabile di Progetto} ai diversi membri del gruppo in considerazione dei diversi ruoli che essi ricoprono.
+	La stesura dei documenti deve essere fatta nel modo più accurato e completo possibile, in modo da ridurre i tempi nella fase di verifica.
 	\subsection{Norme}
 		\subsubsection{Struttura dei documenti}
-			Tutti i documenti ufficiali dovranno possedere la seguente struttura:
+			Tutti i documenti ufficiali, ad eccezione dei verbali esterni, dovranno possedere la seguente struttura:
 			\begin{enumerate}
 				\item frontespizio;
 				\item descrizione del documento;
@@ -12,6 +15,10 @@
 				\item indice delle figure;
 				\item introduzione;
 				\item contenuto.
+			\end{enumerate}
+			La struttura dei verbali viene rimandata al paragrafo verbali della sottosezione Tipologia dei documenti del presente documento.
+			\begin{enumerate}
+			\item 
 			\end{enumerate}
 			L’ordine in cui le sezioni devono comparire all’interno di ciascun documento è fissato. Di seguito viene descritto il contenuto di ognuna di queste.
 			\paragraph{Frontespizio}
@@ -194,7 +201,7 @@
 					L’elenco puntato va utilizzato quando non conta l’ordine in cui gli elementi sono mostrati. Nell’utilizzarlo si seguono le seguenti norme:
 					\begin{enumerate}
 						\item al primo livello si utilizzano i cerchi pieni (neri);
-						\item al secondo livello si utilizzano i cerchi vuoti.
+						\item al secondo livello si utilizzano i trattini.
 					\end{enumerate}
 					Inoltre, qualsiasi tipo di elenco deve rispettare le seguenti norme:
 					\begin{itemize}
@@ -249,7 +256,7 @@
 						\item si adotta lo stile corsivo;
 						\item il nome del documento va racchiuso tra virgolette inglesi (aperte: “; chiuse:”).
 					\end{itemize}
-					Se si vuole includere il numero nella forma X.Y che indica l’ultima versione del documento si deve utilizzare il comando \LaTeX{} \textbackslash lastversion\{\}.
+					Se si vuole includere il numero nella forma X.Y che indica l’ultima versione del documento che si sta scrivendo, si deve utilizzare il comando \LaTeX{} \textbackslash lastversion\{\}.
 				\subparagraph{Nomi dei file}
 					Per fare riferimento a un file è necessario utilizzare il comando \LaTeX{} apposito: \textbackslash insfile\{nome\_file\}. Esso garantisce la corretta scrittura del file secondo le norme seguenti:
 					\begin{itemize}
@@ -346,24 +353,30 @@
 				\subparagraph{Riunione esterna}
 					Per riunione esterna si intende un incontro programmato al quale partecipano i membri del team e delle persone esterne al team (che possono essere il committente o i proponenti). I verbali di queste riunioni sono documenti ufficiali, che possono avere un potenziale valore normativo o essere fonti di requisiti. In considerazione di ciò, si è ritenuto consono che la redazione di questi verbali avvenga seguendo regole precise.\\
 					Esso è redatto da un incaricato che può variare di volta in volta, a seconda delle necessità e delle persone presenti all’incontro.\\
-					Esso deve sempre indicare quanto segue:
+					I verbali esterni devono avere questa struttura:
 					\begin{itemize}
-						\item data;
-						\item luogo (se non si tratta di incontro telematico);
-						\item orario di inizio e orario di fine;
-						\item partecipanti (esterni e interni);
-						\item resoconto di quanto è stato detto e discusso;
-						\item elenco delle conclusioni a cui si è giunti.
+						\item frontespizio;
+						\item indice;
+						\item una sezione intitolata "Estremi del verbale" dove sono riportati i seguenti dati:
+						\begin{itemize}
+							\item data;
+							\item ora;
+							\item durata;
+							\item luogo (se non si tratta di incontro telematico);
+							\item partecipanti (esterni e interni).
+						\end{itemize}
+						\item una sezione contenente le domande e le risposte fatte durante la riunione.
 					\end{itemize}
 				\subparagraph{Riunione interna}
 					Sebbene i verbali delle riunioni interne, sia ordinarie che straordinarie, siano ritenuti di carattere informale, anch'essi sono sottoposti ad alcune regole minime per quanto concerne il contenuto.  \\
-					Questi documenti dovranno presentare, nella loro introduzione, i seguenti punti:
+					Questi documenti dovranno presentare la seguente struttura:
 					\begin{itemize}
-						\item data della riunione;
-						\item orario di inizio e di fine della riunione;
-						\item luogo della riunione;
-						\item ordine del giono previsto;
-						\item elenco delle conclusioni a cui si è giunti.
+						\item frontespizio;
+						\item introduzione;
+						\item appello dei partecipanti;
+						\item ordine del giono;
+						\item verbale della riunione;
+						\item varie ed eventuali/aggiornamento.
 					\end{itemize}
 		\subsubsection{Versionamento dei documenti}
 			Ogni tipo di documento (tranne i verbali) è sottoposto a versionamento. La versione di un documento avanza ogniqualvolta viene fatta una modifica (ovvero quando viene aggiornata la tabella delle modifiche).\\
