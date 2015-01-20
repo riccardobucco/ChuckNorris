@@ -14,8 +14,11 @@
 		<name>Tex/Strategia.tex</name>
 		<name>Tex/Gestione.tex</name>
 		<name>Tex/Esiti.tex</name>
-		<name>Tex/CMM.tex</name>
 	</sections>
+    
+    <appendix>
+        <name>Tex/CMM.tex</name>
+    </appendix>
 
     <changes>
         <version>
