@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.6.2 Inserire dati Map Chart</titolo>
-	
+	<titolo>UCN1.6.2 Inserire nuova serie di punti</titolo>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si vuole creare un grafico di tipo map chart.</precondizione>
-	<postcondizione>Sono stati impostati i dati che si vogliono rappresentare nel grafico.</postcondizione>
-	<principale>
-		<item>Lo sviluppatore sceglie le coordinate di un nuovo punto sulla mappa (UCN1.6.2.1);</item>
-		<item>Lo sviluppatore inserisce l'etichetta di un punto sulla mappa (UCN1.6.2.2);</item>
-		<item>Lo sviluppatore esegue i due passi precedenti per un numero di volte pari al numero di punti che desidera inserire nel chart.</item>
-	</principale>
+	<postcondizione>È stata inserita una nuova serie di punti nel grafico.</postcondizione>
 </usecase>
