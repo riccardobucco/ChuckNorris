@@ -2,10 +2,9 @@
 
 <usecase>
 	<titolo>UCN1.2.3.1 Aggiornare un modello map chart con metodo in place</titolo>
-	
 	<attorip>Sviluppatore</attorip>
 	<generalizzazionedi>
-		<item>UCN1.2.3.2</item>
+		<item>UCN1.2.3.2 Aggiornare un modello map chart con metodo movie</item>
 	</generalizzazionedi>
 	<inclusioni>UCN1.2.3.3</inclusioni>
 	<precondizione>Si sta aggiornando il modello di un map chart.</precondizione>

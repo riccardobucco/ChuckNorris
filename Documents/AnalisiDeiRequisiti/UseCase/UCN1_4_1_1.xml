@@ -6,9 +6,4 @@
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo bar chart.</precondizione>
 	<postcondizione>Ogni set di barre è stato associato a un colore.</postcondizione>
-	<principale>
-		<item>Lo sviluppatore seleziona il set di barre a cui associare un colore (UCN1.4.1.1.1);</item>
-		<item>Lo sviluppatore sceglie il colore da associare a un set di barre selezionato (UCN1.4.1.1.2);</item>
-		<item>Lo sviluppatore esegue i primi due passi per un numero di volte pari al numero di set di barre presenti nel chart.</item>
-	</principale>
 </usecase>
