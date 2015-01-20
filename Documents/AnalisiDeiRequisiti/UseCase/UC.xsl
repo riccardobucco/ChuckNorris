@@ -11,7 +11,7 @@
 		\IfFileExists{Pics/UseCase/%filename%.pdf}{
 			\begin{figure}[H]
 				\centering
-				\includegraphics[width=0.7\textwidth]{Pics/UseCase/%filename%}
+				\includegraphics[scale=0.4]{Pics/UseCase/%filename%}
 				\caption{<xsl:value-of select="titolo"/>}
 			\end{figure}
 		}
@@ -29,14 +29,6 @@
 		<xsl:apply-templates select="alternativi"/>
 		\end{itemize}
 
-	</xsl:template>
-
-	<xsl:template match="immagine">
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.5\textwidth]{AnalisiDeiRequisiti/Pics/UseCase/<xsl:value-of select="."/>}
-			\caption{<xsl:value-of select="//titolo"/>}
-		\end{figure}
 	</xsl:template>
 
 	<xsl:template match="attorip">
@@ -78,7 +70,7 @@
 	</xsl:template>
 
 	<xsl:template match="postcondizione">
-		\item \textbf{Postcondizione:}<xsl:value-of select="."/>
+		\item \textbf{Postcondizione:} <xsl:value-of select="."/>
 	</xsl:template>
 
 	<xsl:template match="principale">

@@ -8,8 +8,6 @@
 
 			<xsd:element name="titolo" type="xsd:string"/>
 			
-			<xsd:element name="immagine" type="xsd:string" minOccurs="0"/>
-			
 			<xsd:element name="attorip" type="xsd:string"/>
 			
 			<xsd:element name="attoris" type="xsd:string" minOccurs="0"/>
