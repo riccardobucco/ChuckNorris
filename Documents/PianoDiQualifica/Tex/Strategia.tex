@@ -2,42 +2,49 @@
 
 \section{Visione generale della strategia}
 \subsection{Tecniche di controllo qualità di processo}
-	Per qualità di processo si intende la quantificazione del valore di ciò che è stato fatto. Per ottenere la qualità di processo si utilizza il principio di miglioramento continuo PDCA, da cui deriva un miglioramento di tutti i processi e quindi dei prodotti.\\
-	In particolare i processi vengono definiti in modo da poterli controllare più facilmente e con obiettivi di efficacia, efficienza ed esperienza, dove con obiettivo di esperienza si intende che si mira ad ottenere un miglioramento correttivo, derivante dalla comprensione degli errori.\\
+	Per qualità di processo si intende la quantificazione del valore di ciò che è stato fatto. Per ottenere la qualità di processo si utilizza il 
+	principio di miglioramento continuo PDCA, da cui deriva un miglioramento di tutti i processi e quindi dei prodotti.\\
+	In particolare i processi vengono definiti in modo da poterli controllare più facilmente e con obiettivi di efficacia, efficienza ed esperienza, 
+	dove con obiettivo di esperienza si intende che si mira ad ottenere un miglioramento correttivo, derivante dalla comprensione degli errori.\\
 	Il controllo dell'andamento della qualità dei processi avviene, in modo indiretto, attraverso il controllo, più pratico e veloce, della qualità dei prodotti, e in modo diretto attraverso le metriche indicate nella sottosezione ''Misure e metriche'' del presente documento.
 \subsection{Tecniche di controllo qualità di prodotto}
 	Per ottenere un prodotto con le qualità indicate nella sezione 2 il gruppo \groupname{} effettua un controllo di qualità al fine di rimuovere ogni possibile causa di alterazione del prodotto. Tale metodo di natura preventiva è chiamato Quality Assurance.\\
 	Una volta creati, i diversi componenti del prodotto finale verranno testati per garantire che il loro funzionamento risulti deterministico.\\
 	A conclusione delle attività di controllo della qualità di prodotto verrà effettuata l'attività di validazione del framework, che confermerà se i requisiti saranno stati rispettati o meno.
 \subsection{Organizzazione}
-	Come indicato nel \insdoc{Piano di Progetto v1.0} si è scelto di utilizzare un modello di ciclo di vita incrementale. Caratteristica di questo modello è quella di far avanzare il progetto a partire da miglioramenti consolidati, pertanto il gruppo \groupname{} ha deciso di organizzare la strategia di verifica sulla base di verifiche delle diverse attività del processo di sviluppo, le quali avranno lo scopo di garantire la qualità dei risultati ottenuti e, di conseguenza la sicurezza nei miglioramenti raggiunti.\\
-	Il compito di effettuare le verifiche, personalmente e attraverso gli strumenti individuati, spetterà al verificatore in carica nei momenti definiti dal Responsabile di Progetto.\\
-	L'attività di verifica si estenderà sulle attività di processo in questo modo:
-	\begin{itemize}
-		\item stesura dei documenti (ci si riferisce ad ogni documento esterno redatto durante lo svolgimento del progetto):
-			\begin{itemize}
-				\item controllo ortografico con Aspell;
-				\item controllo lessicale attraverso l'attenta rilettura dei documenti;
-				\item controllo dei contenuti attraverso la rilettura accurata dei documenti;
-				\item controllo del rispetto delle regole individuate nel documento \insdoc{Norme di Progetto v1.0}.
-			\end{itemize}
-		\item individuazione e analisi dei requisiti:
-			\begin{itemize}
-				\item controllo delle caratteristiche di essenzialità e completezza dei requisiti attraverso l'utilizzo di un'applicazione web appositamente creata per il tracciamento dei requisiti.
-			\end{itemize}
-		\item progettazione architetturale:
-			\begin{itemize}
-				\item la qualità della fase di progettazione architetturale verrà garantita dal controllo del tracciamento bidirezionale dei requisiti (fonte-requisito, requisito-fonte) e della corretta mappatura dei requisiti nelle parti del sistema.
-			\end{itemize}
-		\item codifica: 
-			\begin{itemize}
-				\item la qualità nella fase di implementazione del codice verrà garantita aderendo strettamente alle direttive dei progettisti e attuando test dei diversi componenti realizzati per garantirne il corretto funzionamento, singolarmente e in modo aggregato.
-			\end{itemize}
-		\item validazione:
-			\begin{itemize}
-				\item nella fase di validazione verrà effettuato un test finale per la verifica di tutti i requisiti obbligatori individuati e dei requisiti opzionali che si è deciso di implementare.
-			\end{itemize}
-	\end{itemize}
+	Come indicato nel \insdoc{Piano di Progetto v1.0}, all'interno del ciclo di vita possono essere individuate varie fasi. All'interno di ciascuna di 
+	esse sono pianificati più momenti di verifica, riguardanti le attività (e dunque i processi) che sono state svolte. Tuttavia, in generale, attività 
+	e processi diversi fanno ottenere prodotti differenti. Dunque, è necessario prevedere procedure di verifica differenti a seconda del processo e delle 
+	attuate e del prodotto ottenuto.\\
+	Fatta questa premessa, l'organizzazione della strategia di verifica viene suddivisa in base alle attività svolte durante specifiche fasi: per ognuna 
+	di essere viene attuata un'attività di verifica (e le relative procedure) differente. Le attività di verifica riguardano tanto i processi tanto gli 
+	eventuali prodotti ottenuti tramite essi.\\
+	Il compito di effettuare le verifiche (utilizzando gli strumenti indicati nelle Norme di Progetto) spetta ai Verificatori in carica nei momenti 
+	definiti dal Responsabile di Progetto. Le verifiche da essi svolte hanno il compito di consolidare i miglioramenti raggiunti.\\
+	Di seguito viene riportato come è organizzata l'attività di verifica.
+	\begin{description}
+		\item[Fase A] In questa fase viene prodotta molta documentazione. Tutti i documenti che sono redatti durante tale fase devono essere 
+		sottoposti a verifica. Durante questa fase, inoltre, vengono definiti i requisiti che il prodotto finale deve rispettare e i relativi casi 
+		d'uso. Anche questi devono essere sottoposti a verifica, controllando le caratteristiche di essenzialità e completezza. È previsto inoltre 
+		il controllo della corrispondenza tra fonti e requisiti obbligatori/desiderabili.\\
+		Inoltre, si deve verificare e conseguentemente migliorare la qualità dei processo di documentazione messo in pratica durante tale fase. Il 
+		principio da utilizzare è quello del PDCA (descritto in appendice NUMERO APPENDICE): essendo a inizio progetto, il modo in cui si documenta 
+		scarseggia soprattutto in efficacia. È dunque assolutamente necessario trarre profitto dagli errori e imparare da essi, in modo tale che le 
+		stesse attività vengano svolte in modo migliore durante le fasi successive.\\
+		Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
+		all'interno delle Norme di Progetto.\\
+		I risultati di tale attività di verifica sono descritti nell'appendice INSERIRE NUMERO APPENDICE.
+		\item[Fase AD] Durante questa fase vengono applicati miglioramenti alla documentazione. Anche i requisiti e i casi d'uso 
+		sono soggetti a una revisione. Dunque, quando è prevista l'attività di verifica riguardante tale fase (vedi Piano di Progetto), i Verificatori 
+		devono fare i controlli descritti al punto precedente, ponendo però particolare attenzione alle correzioni, alle segnalazioni e ai asuggerimenti 
+		dati dal committente durante la Revisione dei Requisiti.\\
+		Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
+		all'interno delle Norme di Progetto.\\
+		\item[Fase PA - PROB - PRD] Durante tali fase si progetta il sistema in modo sempre più approfondito, partendo dall'architettura e arrivando 
+		ai dettagli. Qui l'attività di verifica si deve dunque assicurare ogni requisito espresso durante le fase di Analisi sia in corrispondenza con 
+		ciascun componente sviluppato durante la fase di Progettazione. Inoltre, similmente a quanto deve essere fatto nelle fasi precedenti, i Verificatori 
+		devono assicurarsi che la documentazione (intesa sia come processo sia come prodotto) venga fatta nel modo migliore possibile.
+	\end{description}
 	\subsection{Pianificazione delle scadenze temporali}
 	L'attività di controllo della qualità deve essere svolta per garantire la sufficienza dei risultati prodotti, in modo da dare la possibilità di rispettare le scadenze fissate dal committente.\\
 	Tali scadenze si individuano nelle revisioni di seguito riportate:
