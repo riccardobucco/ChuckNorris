@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN1.7.1.2.2 Scegliere il colore dello sfondo di una cella</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le opzioni inerenti al formato di una cella. E'stata selezionata una cella della tabella.</precondizione>
+	<precondizione>Si stanno configurando le opzioni inerenti al formato di una cella.</precondizione>
 	<postcondizione>E' stato impostato il colore dello sfondo della cella selezionata.</postcondizione>
 </usecase>
 

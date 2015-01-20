@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN1.7.1.2.1 Scegliere il colore del testo contenuto in una cella</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le opzioni inerenti al formato di una cella. E'stata selezionata una cella della tabella.</precondizione>
+	<precondizione>Si stanno configurando le opzioni inerenti al formato di una cella.</precondizione>
 	<postcondizione>E' stato impostato il colore del testo della cella selezionata.</postcondizione>
 </usecase>
 
