@@ -7,9 +7,11 @@
 	<precondizione>Si vuole creare un grafico di tipo map chart.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni del grafico di tipo map chart.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il modo in cui vengono rappresentati i punti (UCN1.6.1.1);</item>
+		<item>Lo sviluppatore sceglie il formato di stampa dei valori del map chart (UCN1.6.1.1);</item>
 		<item>Lo sviluppatore sceglie le dimensioni dell'area mostrata sulla mappa (UCN1.6.1.2);</item>
 		<item>Lo sviluppatore sceglie il massimo numero di punti da visualizzare (UCN1.6.1.3);</item>
-		<item>Lo sviluppatore sceglie le coordinate del punto centrale della mappa (UCN1.6.1.4).</item>
+		<item>Lo sviluppatore sceglie le coordinate del punto centrale della mappa (UCN1.6.1.4);</item>
+		<item>Lo sviluppatore sceglie il nome di ciascuna serie di punti (UCN1.6.1.6);</item>
+		<item>Lo sviluppatore sceglie il colore di ciascuna serie di punti (UCN1.6.1.5).</item>
 	</principale>
 </usecase>
