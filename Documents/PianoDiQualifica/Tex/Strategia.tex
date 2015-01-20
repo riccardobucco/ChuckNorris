@@ -1,162 +1,183 @@
 % !TEX encoding = UTF-8 Unicode
 
 \section{Visione generale della strategia}
-\subsection{Tecniche di controllo qualità di processo}
-	Per qualità di processo si intende la quantificazione del valore di ciò che è stato fatto. Per ottenere la qualità di processo si utilizza il 
-	principio di miglioramento continuo PDCA, da cui deriva un miglioramento di tutti i processi e quindi dei prodotti.\\
-	In particolare i processi vengono definiti in modo da poterli controllare più facilmente e con obiettivi di efficacia, efficienza ed esperienza, 
-	dove con obiettivo di esperienza si intende che si mira ad ottenere un miglioramento correttivo, derivante dalla comprensione degli errori.\\
-	Il controllo dell'andamento della qualità dei processi avviene, in modo indiretto, attraverso il controllo, più pratico e veloce, della qualità dei prodotti, e in modo diretto attraverso le metriche indicate nella sottosezione ''Misure e metriche'' del presente documento.
-\subsection{Tecniche di controllo qualità di prodotto}
-	Per ottenere un prodotto con le qualità indicate nella sezione 2 il gruppo \groupname{} effettua un controllo di qualità al fine di rimuovere ogni possibile causa di alterazione del prodotto. Tale metodo di natura preventiva è chiamato Quality Assurance.\\
-	Una volta creati, i diversi componenti del prodotto finale verranno testati per garantire che il loro funzionamento risulti deterministico.\\
-	A conclusione delle attività di controllo della qualità di prodotto verrà effettuata l'attività di validazione del framework, che confermerà se i requisiti saranno stati rispettati o meno.
-\subsection{Organizzazione}
-	Come indicato nel \insdoc{Piano di Progetto v1.0}, all'interno del ciclo di vita possono essere individuate varie fasi. All'interno di ciascuna di 
-	esse sono pianificati più momenti di verifica, riguardanti le attività (e dunque i processi) che sono state svolte. Tuttavia, in generale, attività 
-	e processi diversi fanno ottenere prodotti differenti. Dunque, è necessario prevedere procedure di verifica differenti a seconda del processo e del 
-	prodotto ottenuto.\\
-	Fatta questa premessa, l'organizzazione della strategia di verifica viene suddivisa in base alle attività svolte durante specifiche fasi: per ognuna 
-	di essere viene attuata un'attività di verifica (e le relative procedure) differente. Le attività di verifica riguardano tanto i processi tanto gli 
-	eventuali prodotti ottenuti tramite essi.\\
-	Il compito di effettuare le verifiche (utilizzando gli strumenti indicati nelle Norme di Progetto) spetta ai Verificatori in carica nei momenti 
-	definiti dal Responsabile di Progetto. Le verifiche da essi svolte hanno il compito di consolidare i miglioramenti raggiunti.\\
-	Di seguito viene riportato come è organizzata l'attività di verifica.
-	\begin{description}
-		\item[Fase A] In questa fase viene prodotta molta documentazione. Tutti i documenti che sono redatti durante tale fase devono essere 
-		sottoposti a verifica. Durante questa fase, inoltre, vengono definiti i requisiti che il prodotto finale deve rispettare e i relativi casi 
-		d'uso. Anche questi devono essere sottoposti a verifica, controllando le caratteristiche di essenzialità e completezza. È previsto inoltre 
-		il controllo della corrispondenza tra fonti e requisiti obbligatori/desiderabili.\\
-		Inoltre, si deve verificare e conseguentemente migliorare la qualità dei processo di documentazione messo in pratica durante tale fase. Il 
-		principio da utilizzare è quello del PDCA (descritto in appendice NUMERO APPENDICE): essendo a inizio progetto, il modo in cui si documenta 
-		scarseggia soprattutto in efficacia. È dunque assolutamente necessario trarre profitto dagli errori e imparare da essi, in modo tale che le 
-		stesse attività vengano svolte in modo migliore durante le fasi successive.\\
-		Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
-		all'interno delle Norme di Progetto.\\
-		I risultati di tale attività di verifica sono descritti nell'appendice INSERIRE NUMERO APPENDICE.
-		\item[Fase AD] Durante questa fase vengono applicati miglioramenti alla documentazione. Anche i requisiti e i casi d'uso 
-		sono soggetti a una revisione. Dunque, quando è prevista l'attività di verifica riguardante tale fase (vedi Piano di Progetto), i Verificatori 
-		devono fare i controlli descritti al punto precedente, ponendo però particolare attenzione alle correzioni, alle segnalazioni e ai suggerimenti 
-		dati dal committente durante la Revisione dei Requisiti.\\
-		Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
-		all'interno delle Norme di Progetto.
-		\item[Fase PA] Durante tale fase si progetta l'architettura del sistema. Qui l'attività di verifica si deve dunque assicurare che ogni requisito 
-		espresso durante le fase di Analisi sia in corrispondenza con ciascun modulo progettato durante questa fase.\\
-		Inoltre, similmente a quanto deve essere fatto nelle fasi precedenti, i Verificatori devono assicurarsi che la documentazione (intesa sia 
-		come processo sia come prodotto) venga fatta nel modo migliore possibile.\\
-		Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
-		all'interno delle Norme di Progetto.
-		\item[Fase PROB - PRD - PROP] Durante tali fasi si progettano nel dettaglio e si codificano tutti requisiti obbligatori, desiderabili e 
-		opzionali. Anche qui, come nella fase precedente, si deve verificare il corretto tracciamento dei requisiti: l'intera progettazione deve 
-		riguardare tutti e soli i requisiti individuati nella fase di Analisi (in modo tale che non manchi nulla e non ci sia nulla in più).\\
-		Per quanto riguarda l'attività di codifica, è compito del Verificatore (in collaborazione con il Programmatore) eseguire i test di unità, di 
-		integrazione e di sistema: in questo modo viene testata la qualità del prodotto.\\
-		Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
-		all'interno delle Norme di Progetto.
-	\end{description}
-	\subsection{Pianificazione delle scadenze temporali}
-	L'attività di controllo della qualità deve essere svolta per garantire la sufficienza dei risultati prodotti, in modo da dare la possibilità di rispettare le scadenze fissate dal committente.\\
-	Tali scadenze si individuano nelle revisioni di seguito riportate:
-		\begin{itemize}
-			\item \insrev{Revisione dei Requisiti}: \insdate{16}{02}{2015} (revisione formale);
-			\item \insrev{Revisione di Progettazione}: \insdate{24}{04}{2015} (revisione di progresso);
-			\item \insrev{Revisione di Qualifica}: \insdate{29}{05}{2015} (revisione di progresso);
-			\item \insrev{Revisione di Accettazione}: \insdate{18}{06}{2015} (revisione formale).
-		\end{itemize}
-	La pianificazione completa delle attività di progetto è descritta in modo dettagliato nel \insdoc{Piano di Progetto v1.0}
-	\subsection{Responsabilità}
-		\begin{itemize}
-			\item Il processo di verifica deve essere efficiente. Dunque, si deve fare in modo, ove sia possibile, che esso sia quanto più automatizzabile 
-			possibile. Questa è una responsabilità dell'Amministratore di Progetto.
-			\item Il processo di verifica deve essere efficace. È compito dei Verificatori, i quali si attengono alle Norme di Progetto, fare in modo che 
-			si riesca a raggiungere l'obiettivo atteso, migliorando allo stesso tempo la qualità del processo di cui si devono occupare.
-			\item Il Responsabile di Progetto assegna ai Verificatori determinati compiti, in base al Piano di Progetto da lui stesso stilato. Egli ha la 
-			piena responsabilità delle attività di controllo del processo di verifica.
-		\end{itemize}
-		Per maggiori dettagli circa i compiti assegnati a ciascun ruolo si vedano le Norme di Progetto.
-	\subsection{Risorse}
-	\subsubsection{Risorse necessarie}
-	La realizzazione del progetto Norris necessita di risorse umane e tecnologiche.
-	\paragraph{Risorse umane}
-		Le risorse umane impiegate, intese come figure professionali, sono indicate e definite nel documento \insdoc{Norme di Progetto v1.0} alla sottosezione "Ruoli di progetto".
-	\paragraph{Risorse tecnologiche}
-		Le risorse tecnologiche, software e hardware, sono tutti gli strumenti necessari allo svolgimento efficace ed efficiente del progetto in tutte le sue componenti, dalla documentazione alla codifica, dalla verifica al coordinamento.
-		\subparagraph{Risorse software}
-		Di esse fanno parte:
+	\subsection{Tecniche di controllo qualità di processo}
+		Per qualità di processo si intende la quantificazione del valore di ciò che è stato fatto. Per ottenere la qualità di processo si utilizza il 
+		principio di miglioramento continuo PDCA, da cui deriva un miglioramento di tutti i processi e quindi dei prodotti.\\
+		In particolare i processi vengono definiti in modo da poterli controllare più facilmente e con obiettivi di efficacia, efficienza ed esperienza, 
+		dove con obiettivo di esperienza si intende che si mira ad ottenere un miglioramento correttivo, derivante dalla comprensione degli errori.\\
+		Il controllo dell'andamento della qualità dei processi avviene, in modo indiretto, attraverso il controllo, più pratico e veloce, della qualità dei prodotti, e in modo diretto attraverso le metriche indicate nella sottosezione ''Misure e metriche'' del presente documento.
+	\subsection{Tecniche di controllo qualità di prodotto}
+		Per ottenere un prodotto con le qualità indicate nella sezione 2 il gruppo \groupname{} effettua un controllo di qualità al fine di rimuovere ogni possibile causa di alterazione del prodotto. Tale metodo di natura preventiva è chiamato Quality Assurance.\\
+		Una volta creati, i diversi componenti del prodotto finale verranno testati per garantire che il loro funzionamento risulti deterministico.\\
+		A conclusione delle attività di controllo della qualità di prodotto verrà effettuata l'attività di validazione del framework, che confermerà se i requisiti saranno stati rispettati o meno.
+	\subsection{Organizzazione}
+		Come indicato nel \insdoc{Piano di Progetto v1.0}, all'interno del ciclo di vita possono essere individuate varie fasi. All'interno di ciascuna di 
+		esse sono pianificati più momenti di verifica, riguardanti le attività (e dunque i processi) che sono state svolte. Tuttavia, in generale, attività 
+		e processi diversi fanno ottenere prodotti differenti. Dunque, è necessario prevedere procedure di verifica differenti a seconda del processo e del 
+		prodotto ottenuto.\\
+		Fatta questa premessa, l'organizzazione della strategia di verifica viene suddivisa in base alle attività svolte durante specifiche fasi: per ognuna 
+		di essere viene attuata un'attività di verifica (e le relative procedure) differente. Le attività di verifica riguardano tanto i processi tanto gli 
+		eventuali prodotti ottenuti tramite essi.\\
+		Il compito di effettuare le verifiche (utilizzando gli strumenti indicati nelle Norme di Progetto) spetta ai Verificatori in carica nei momenti 
+		definiti dal Responsabile di Progetto. Le verifiche da essi svolte hanno il compito di consolidare i miglioramenti raggiunti.\\
+		Di seguito viene riportato come è organizzata l'attività di verifica.
+		\begin{description}
+			\item[Fase A] In questa fase viene prodotta molta documentazione. Tutti i documenti che sono redatti durante tale fase devono essere 
+			sottoposti a verifica. Durante questa fase, inoltre, vengono definiti i requisiti che il prodotto finale deve rispettare e i relativi casi 
+			d'uso. Anche questi devono essere sottoposti a verifica, controllando le caratteristiche di essenzialità e completezza. È previsto inoltre 
+			il controllo della corrispondenza tra fonti e requisiti obbligatori/desiderabili.\\
+			Inoltre, si deve verificare e conseguentemente migliorare la qualità dei processo di documentazione messo in pratica durante tale fase. Il 
+			principio da utilizzare è quello del PDCA (descritto in appendice NUMERO APPENDICE): essendo a inizio progetto, il modo in cui si documenta 
+			scarseggia soprattutto in efficacia. È dunque assolutamente necessario trarre profitto dagli errori e imparare da essi, in modo tale che le 
+			stesse attività vengano svolte in modo migliore durante le fasi successive.\\
+			Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
+			all'interno delle Norme di Progetto.\\
+			I risultati di tale attività di verifica sono descritti nell'appendice INSERIRE NUMERO APPENDICE.
+			\item[Fase AD] Durante questa fase vengono applicati miglioramenti alla documentazione. Anche i requisiti e i casi d'uso 
+			sono soggetti a una revisione. Dunque, quando è prevista l'attività di verifica riguardante tale fase (vedi Piano di Progetto), i Verificatori 
+			devono fare i controlli descritti al punto precedente, ponendo però particolare attenzione alle correzioni, alle segnalazioni e ai suggerimenti 
+			dati dal committente durante la Revisione dei Requisiti.\\
+			Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
+			all'interno delle Norme di Progetto.
+			\item[Fase PA] Durante tale fase si progetta l'architettura del sistema. Qui l'attività di verifica si deve dunque assicurare che ogni requisito 
+			espresso durante le fase di Analisi sia in corrispondenza con ciascun modulo progettato durante questa fase.\\
+			Inoltre, similmente a quanto deve essere fatto nelle fasi precedenti, i Verificatori devono assicurarsi che la documentazione (intesa sia 
+			come processo sia come prodotto) venga fatta nel modo migliore possibile.\\
+			Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
+			all'interno delle Norme di Progetto.
+			\item[Fase PROB - PRD - PROP] Durante tali fasi si progettano nel dettaglio e si codificano tutti requisiti obbligatori, desiderabili e 
+			opzionali. Anche qui, come nella fase precedente, si deve verificare il corretto tracciamento dei requisiti: l'intera progettazione deve 
+			riguardare tutti e soli i requisiti individuati nella fase di Analisi (in modo tale che non manchi nulla e non ci sia nulla in più).\\
+			Per quanto riguarda l'attività di codifica, è compito del Verificatore (in collaborazione con il Programmatore) eseguire i test di unità, di 
+			integrazione e di sistema: in questo modo viene testata la qualità del prodotto.\\
+			Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
+			all'interno delle Norme di Progetto.
+		\end{description}
+		\subsection{Pianificazione delle scadenze temporali}
+			L'attività di controllo della qualità deve essere svolta per garantire la sufficienza dei risultati prodotti, in modo da dare la possibilità di rispettare le scadenze fissate dal committente.\\
+			Tali scadenze si individuano nelle revisioni di seguito riportate:
 			\begin{itemize}
-				\item software per la documentazione nel linguaggio \LaTeX{};
-				\item software per la creazione di diagrammi UML;
-				\item IDE per lo sviluppo nei linguaggi di programmazione indicati nel capitolato;
-				\item script per l'automazione di attività di verifica;
-				\item software per l'analisi del codice;
-				\item software per l'automazione dei test.
+				\item \insrev{Revisione dei Requisiti}: \insdate{16}{02}{2015} (revisione formale);
+				\item \insrev{Revisione di Progettazione}: \insdate{24}{04}{2015} (revisione di progresso);
+				\item \insrev{Revisione di Qualifica}: \insdate{29}{05}{2015} (revisione di progresso);
+				\item \insrev{Revisione di Accettazione}: \insdate{18}{06}{2015} (revisione formale).
 			\end{itemize}
-		\subparagraph{Risorse hardware}
+			La pianificazione completa delle attività di progetto è descritta in modo dettagliato nel \insdoc{Piano di Progetto v1.0}
+		\subsection{Responsabilità}
 			\begin{itemize}
-				\item Computer, fissi o portatili, sufficentemente potenti da poter supportare tutte le risorse software necessarie.
+				\item Il processo di verifica deve essere efficiente. Dunque, si deve fare in modo, ove sia possibile, che esso sia quanto più automatizzabile 
+				possibile. Questa è una responsabilità dell'Amministratore di Progetto.
+				\item Il processo di verifica deve essere efficace. È compito dei Verificatori, i quali si attengono alle Norme di Progetto, fare in modo che 
+				si riesca a raggiungere l'obiettivo atteso, migliorando allo stesso tempo la qualità del processo di cui si devono occupare.
+				\item È responsabilità dei Programmatori fornire i test necessari per effettuare parte delle verifiche sulle unità software prodotte.
+				\item Il Responsabile di Progetto assegna ai Verificatori determinati compiti, in base al Piano di Progetto da lui stesso stilato. Egli ha la 
+				piena responsabilità delle attività di controllo del processo di verifica.
 			\end{itemize}
-	\subsubsection{Risorse disponibili}
-	Le risorse umane derivano dalla disponibilità dei membri del gruppo.
-	\paragraph{Risorse software}
+			Per maggiori dettagli circa i compiti assegnati a ciascun ruolo si vedano le Norme di Progetto.
+		\subsection{Risorse}
+			\subsubsection{Risorse necessarie}
+				Le risorse che allo stato attuale si ritiene essere necessarie per lo svolgimento di tutte le attività di verifica 
+				sono di tre tipi:
+				\begin{itemize}
+					\item risorse umane;
+					\item risorse software;
+					\item risorse hardware.
+				\end{itemize}
+				\paragraph{Risorse umane}
+					Le risorse umane, intese come figure professionali, che sono necessarie per applicare in modo corretto e completo il processo di 
+					verifica sono le seguenti:
+					\begin{itemize}
+						\item Responsabile di Progetto;
+						\item Amministratore di Progetto;
+						\item Verificatori;
+						\item Programmatori;
+					\end{itemize}
+					Una descrizione delle responsabilità di ciascun ruolo qui presentato è presente nella sezione INDICARE NUMERO del presente documento.\\
+					Una descrizione dettagliata di ciascun ruolo è presente all'interno delle Norme di Progetto.
+				\paragraph{Risorse software}
+					Per risorse software si intendono tutti gli strumenti software che il team intende utilizzare per attuare le attività di verifica sui 
+					prodotti e sui processi.\\
+					Allo stato attuale sono necessari software che siano in grado di verificare in modo automatico il maggior numero di norme riguardanti 
+					i documenti. Servono, per esempio, strumenti che eseguano i seguenti compiti:
+					\begin{itemize}
+						\item correggere eventuali errori ortografici;
+						\item capire se un documento possiede la struttura adatta oppure no;
+						\item trovare parti di testo che non rispettino alcune delle norme tipografiche.
+					\end{itemize}
+					Inoltre, per quanto possibile, servono software che aiutino a non commettere errori: infatti la correzione, in generale, costa 
+					molto di più della prevenzione. Quindi, ad esempio, servono software con i seguenti compiti:
+					\begin{itemize}
+						\item rilevare (durante la scrittura) eventuali errori ortografici;
+						\item costruire e visualizzare in real-time il documento scritto in Latex (in modo che sia facile accorgersi di errori 
+						nell'utilizzo dei comandi);
+						\item raccogliere tutti gli errori comuni, in modo da formare in automatico una lista alla quale possono guardare coloro che 
+						devono redigere un documento. 
+					\end{itemize}
+				\paragraph{Risorse hardware}
+					Sono necessarie macchine (computer) sufficientementi potenti da far girare tutto il software necessario durante le attività di verifica.
+		\subsubsection{Risorse disponibili}
+		Le risorse umane derivano dalla disponibilità dei membri del gruppo.
+		\paragraph{Risorse software}
+			\begin{itemize}
+				\item Gli script per l'automazione delle attività di verifica sono prodotti autonomamente dal team;
+				\item I software necessari alla documentazione nelle diverse fasi di avanzamento  del progetto e alla fase di sviluppo sono di distribuzione open-source e in possesso di ogni membro del team.
+			\end{itemize}
+		\paragraph{Risorse hardware}
+			\begin{itemize}
+				\item Ogni membro del team possiede almeno un computer portatile con il sistema operativo comune individuato;
+				\item Il team di sviluppo si appoggia, inoltre, alle risorse hardware del Servizio Calcolo del dipartimento di Matematica Pura e Applicata dell'Università degli studi di Padova, con sede in via Trieste, 63.
+			\end{itemize}
+		\subsection{Strumenti}
+		Gli strumenti utilizzati dal team per rendere la realizzazione del progetto il più efficace ed efficiente possibile sono indicati nel documento \insdoc{Norme di progetto v1.0} alla sezione "Ambiente di sviluppo".
+		\subsection{Tecniche di analisi}
+		Per poter determinare il livello di qualità del prodotto, rispetto agli obiettivi sopra indicati, il team di sviluppo utilizza diversi tipi di tecniche di analisi dei dati.\\
+		Le tecniche di analisi si possono suddividere in due grandi categorie:
+		\begin{description}
+			\item[Tecniche di analisi dinamica]: questo tipo di tecniche analizzano misurazioni effettuate durante l'esecuzione di un programma, e consentono di determinare attributi di qualità come l'efficienza e l'affidabilità. Nello specifico, di questa categoria faranno parte i test per la determinazione del tempo di latenza dei dati.
+			\item [Tecniche di analisi statica]: questo tipo di tecniche analizzano misurazioni relative a caratteristiche del progetto, del codice o della documentazione, e consentono di determinare il livello di attributi di qualità come la comprensibilità, la manutenibilità e la complessità. I metodi di acquisizione degli indici da analizzare sono:
+			\begin{itemize}
+				\item \textbf{walkthrough}, cioè la lettura dell'oggetto della misurazione per cercare qualunque possibile errore;
+				\item \textbf{inspection}, cioè la lettura mirata dell'oggetto della misurazione alla ricerca di errori ritenuti più probabili e frequenti.
+			\end{itemize}
+		\end{description}
+		\subsection{Misure e metriche}
+		Affinchè la qualità sia predittiva, è necessario che il processo di verifica sia quantificabile, e pertanto si definiscono delle metriche, cioè un sistema di misurazione formato da misure e criteri per valutarle.\\
+		Ci sono due tipi di range all'interno dei quali si collocheranno i valori delle misurazioni:
 		\begin{itemize}
-			\item Gli script per l'automazione delle attività di verifica sono prodotti autonomamente dal team;
-			\item I software necessari alla documentazione nelle diverse fasi di avanzamento  del progetto e alla fase di sviluppo sono di distribuzione open-source e in possesso di ogni membro del team.
+			\item range di accettazione: questi valori saranno ammessi per l'accettazione del prodotto
+			\item range ottimale: questi sono i valori ottimali in cui dovrebbe collocarsi la misurazione
 		\end{itemize}
-	\paragraph{Risorse hardware}
-		\begin{itemize}
-			\item Ogni membro del team possiede almeno un computer portatile con il sistema operativo comune individuato;
-			\item Il team di sviluppo si appoggia, inoltre, alle risorse hardware del Servizio Calcolo del dipartimento di Matematica Pura e Applicata dell'Università degli studi di Padova, con sede in via Trieste, 63.
-		\end{itemize}
-	\subsection{Strumenti}
-	Gli strumenti utilizzati dal team per rendere la realizzazione del progetto il più efficace ed efficiente possibile sono indicati nel documento \insdoc{Norme di progetto v1.0} alla sezione "Ambiente di sviluppo".
-	\subsection{Tecniche di analisi}
-	Per poter determinare il livello di qualità del prodotto, rispetto agli obiettivi sopra indicati, il team di sviluppo utilizza diversi tipi di tecniche di analisi dei dati.\\
-	Le tecniche di analisi si possono suddividere in due grandi categorie:
-	\begin{description}
-		\item[Tecniche di analisi dinamica]: questo tipo di tecniche analizzano misurazioni effettuate durante l'esecuzione di un programma, e consentono di determinare attributi di qualità come l'efficienza e l'affidabilità. Nello specifico, di questa categoria faranno parte i test per la determinazione del tempo di latenza dei dati.
-		\item [Tecniche di analisi statica]: questo tipo di tecniche analizzano misurazioni relative a caratteristiche del progetto, del codice o della documentazione, e consentono di determinare il livello di attributi di qualità come la comprensibilità, la manutenibilità e la complessità. I metodi di acquisizione degli indici da analizzare sono:
-		\begin{itemize}
-			\item \textbf{walkthrough}, cioè la lettura dell'oggetto della misurazione per cercare qualunque possibile errore;
-		 	\item \textbf{inspection}, cioè la lettura mirata dell'oggetto della misurazione alla ricerca di errori ritenuti più probabili e frequenti.
-		\end{itemize}
-	\end{description}
-	\subsection{Misure e metriche}
-	Affinchè la qualità sia predittiva, è necessario che il processo di verifica sia quantificabile, e pertanto si definiscono delle metriche, cioè un sistema di misurazione formato da misure e criteri per valutarle.\\
-	Ci sono due tipi di range all'interno dei quali si collocheranno i valori delle misurazioni:
-	\begin{itemize}
-		\item range di accettazione: questi valori saranno ammessi per l'accettazione del prodotto
-		\item range ottimale: questi sono i valori ottimali in cui dovrebbe collocarsi la misurazione
-	\end{itemize}
-	\subsubsection{Metriche per i processi}
-		Per il controllo della qualità dei processi è stato deciso di adottare il modello CMM. Questo modello ha lo scopo di migliorare i processi e, più in generale, di aiutare una organizzazione a migliorare le sue prestazioni.\\
-		Per ogni processo vengono valutati i livelli di "\textit{Capability}" e "\textit{Maturity}" cioè, rispettivamente, la misura dell'adeguatezza del processo  rispetto agli scopi per cui è stato definito e il grado di consolidamento di un processo all'interno dell'organizzazione. I valori possono oscillare tra 1 e 5.\\
-		La scelta del team è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del team di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in quanto, nella sua versione pura, non prevede il consolidamento delle best practice.\\
-		I range stabiliti per questa metrica sono:
-		\begin{itemize}
-			\item Range di accettazione: 3 - 5;
-			\item Range ottimale: 4 - 5;
-		\end{itemize}	
-		La valutazione rispetto ai processi viene fornita solo dopo l'esito della revisione da parte del committente.
-	\subsubsection{Metriche per i documenti}
-		Per il controllo della qualità dei documenti è stato deciso di adottare l'indice Gulpease, un indice di leggibilità del testo tarato sulla lingua italiana.\\
-		Questo particolare indice si basa sulla lunghezza della parola e sulla lunghezza della frase rispetto al numero di lettere.\\
-		
-		\begin{equation}\label{Indice Gulpease}
-		Indice\_Gulpease = 89+ \frac{300*numero\_frasi-10*numero\_lettere}{numero\_parole}
-		\end{equation}
+		\subsubsection{Metriche per i processi}
+			Per il controllo della qualità dei processi è stato deciso di adottare il modello CMM. Questo modello ha lo scopo di migliorare i processi e, più in generale, di aiutare una organizzazione a migliorare le sue prestazioni.\\
+			Per ogni processo vengono valutati i livelli di "\textit{Capability}" e "\textit{Maturity}" cioè, rispettivamente, la misura dell'adeguatezza del processo  rispetto agli scopi per cui è stato definito e il grado di consolidamento di un processo all'interno dell'organizzazione. I valori possono oscillare tra 1 e 5.\\
+			La scelta del team è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del team di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in quanto, nella sua versione pura, non prevede il consolidamento delle best practice.\\
+			I range stabiliti per questa metrica sono:
+			\begin{itemize}
+				\item Range di accettazione: 3 - 5;
+				\item Range ottimale: 4 - 5;
+			\end{itemize}	
+			La valutazione rispetto ai processi viene fornita solo dopo l'esito della revisione da parte del committente.
+		\subsubsection{Metriche per i documenti}
+			Per il controllo della qualità dei documenti è stato deciso di adottare l'indice Gulpease, un indice di leggibilità del testo tarato sulla lingua italiana.\\
+			Questo particolare indice si basa sulla lunghezza della parola e sulla lunghezza della frase rispetto al numero di lettere.\\
 			
-		Il risultato è compreso tra 0 e 100, dove la leggibilità è direttamente proporzionale al valore.\\
-		Tipicamente vengono associate le seguenti soglie dell'indice Gulpease al livello di istruzione:
-		\begin{itemize}
-			\item inferiore a 80: bassa leggibilità per chi ha la licenza elementare;
-			\item inferiore a 60: bassa leggibilità per chi ha la licenza media;
-			\item inferiore a 40: bassa leggibilità per chi ha la licenza superiore.
-		\end{itemize}
-		
-		I range stabiliti per questa metrica, in considerazione del fatto che la documentazione si considera destinata a persone sufficientemente competenti, sono:
-		\begin{itemize}
-			\item range di accettazione: 35 - 100;
-			\item range ottimale: 45 - 100.
-		\end{itemize}
-	\subsubsection{Metriche del codice}
-		A questo punto dello sviluppo del progetto, il team non è ancora pronto per indicare delle metriche adeguate per il controllo della qualità del codice, ma si riserva di indicare tali metriche in fase di progettazione.
+			\begin{equation}\label{Indice Gulpease}
+			Indice\_Gulpease = 89+ \frac{300*numero\_frasi-10*numero\_lettere}{numero\_parole}
+			\end{equation}
+				
+			Il risultato è compreso tra 0 e 100, dove la leggibilità è direttamente proporzionale al valore.\\
+			Tipicamente vengono associate le seguenti soglie dell'indice Gulpease al livello di istruzione:
+			\begin{itemize}
+				\item inferiore a 80: bassa leggibilità per chi ha la licenza elementare;
+				\item inferiore a 60: bassa leggibilità per chi ha la licenza media;
+				\item inferiore a 40: bassa leggibilità per chi ha la licenza superiore.
+			\end{itemize}
+			
+			I range stabiliti per questa metrica, in considerazione del fatto che la documentazione si considera destinata a persone sufficientemente competenti, sono:
+			\begin{itemize}
+				\item range di accettazione: 35 - 100;
+				\item range ottimale: 45 - 100.
+			\end{itemize}
+		\subsubsection{Metriche del codice}
+			A questo punto dello sviluppo del progetto, il team non è ancora pronto per indicare delle metriche adeguate per il controllo della qualità del codice, ma si riserva di indicare tali metriche in fase di progettazione.
