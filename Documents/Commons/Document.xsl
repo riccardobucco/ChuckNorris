@@ -33,7 +33,9 @@
 		\newcommand{\proponente}{Maccagnan Alessandro}
 		\newcommand{\committente}{Vardanega Tullio}
 
-		\newcommand{\insglo}[1]{#1}
+		\newcommand{\insglo}[1]{#1{\ped G}}
+		\newcommand{\ignoreglo}[1]{#1}
+		
 		\newcommand{\insdate}[3]{#3-#2-#1}
 		\newcommand{\instime}[2]{#1-#2}
 		\newcommand{\insuri}[1]{\textcolor{blue}{\texttt{\url{#1}}}}

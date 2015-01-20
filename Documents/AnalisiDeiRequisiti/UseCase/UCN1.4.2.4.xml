@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UCN1.4.2.4 Inserire i valori dipendenti per ciascun set di barre</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno inserendo i dati di un bar chart.</precondizione>
-	<postcondizione>Sono stati inseriti i valori dipendenti per ciascun set di barre.</postcondizione>
-</usecase>

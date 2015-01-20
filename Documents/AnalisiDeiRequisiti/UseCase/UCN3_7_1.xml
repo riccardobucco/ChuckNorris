@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN3.7.1 Cambiare le opzioni riguardanti il formato di una cella</titolo>
+	<attorip>Client</attorip>
+	<precondizione>Si stanno modificando le opzioni di visualizzazione di una table.</precondizione>
+	<postcondizione>Sono state modificate le opzioni riguardanti il formato di una cella.</postcondizione>
+	<principale>
+		<item>Il client selezionare la cella di cui si vuole cambiare il formato (UCN3.7.1.1);</item>
+		<item>Il client modifica il colore del testo contenuto in una cella (UCN3.7.1.1);</item>
+		<item>Il client modifica il colore di sfondo di una cella (UCN3.7.1.2).</item>
+	</principale>
+</usecase>

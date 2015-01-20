@@ -6,9 +6,15 @@
 	<xsl:template match="/usecase">
 
 
-		\subsection{<xsl:value-of select="titolo"/>}
+		\subsubsection{<xsl:value-of select="titolo"/>}
 
-		<xsl:apply-templates select="immagine"/>
+		\IfFileExists{Pics/UseCase/%filename%.pdf}{
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{Pics/UseCase/%filename%}
+				\caption{<xsl:value-of select="titolo"/>}
+			\end{figure}
+		}
 
 		\begin{itemize}
 		<xsl:apply-templates select="attorip"/>
