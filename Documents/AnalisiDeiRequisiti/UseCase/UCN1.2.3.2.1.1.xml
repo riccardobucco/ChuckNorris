@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UCN1.2.3.2.1.1 Inserire il valore della latitudine a cui si trova il punto che si vuole aggiungere</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta scegliendo un nuovo punto da aggiungere al map chart selezionato.</precondizione>
-	<postcondizione>È stato inserito il valore della latitudine a cui si trova il punto che si vuole aggiungere.</postcondizione>
-</usecase>

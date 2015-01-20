@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UCN1.4.1.1.1 Selezionare il set di barre a cui associare un colore</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta configurando il colore di ciascun set di barre di un grafico di tipo bar chart.</precondizione>
-	<postcondizione>È stato selezionato il set di barre a cui associare un colore.</postcondizione>
-</usecase>

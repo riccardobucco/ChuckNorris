@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UCN1.2.1.1.1.2 Selezionare il valore indipendente corrispondente alla barra da modificare</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta selezionando una barra da modificare.</precondizione>
-	<postcondizione>È stato selezionato il valore indipendente corrispondente alla barra da modificare.</postcondizione>
-</usecase>

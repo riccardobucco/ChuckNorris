@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UCN1.4.2.2.1 Selezionare un set di barre a cui dare il nome</titolo>
-	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta scegliendo il nome di ciascun set di barre.</precondizione>
-	<postcondizione>È stato selezionato un set di barre a cui dare un nome.</postcondizione>
-</usecase>
