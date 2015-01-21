@@ -33,10 +33,11 @@ _analisi: _force
 	@ find AnalisiDeiRequisiti/UseCase -name '*.tex' | grep -Eo '[^/]*$$' | grep -Eo '^UCD[0-9][^.]*' | sort -k 12 | sort -k 10 | sort -k 8 | sort -k 6 | sort -k 4 | xargs -I {} cat AnalisiDeiRequisiti/UseCase/{}.tex > AnalisiDeiRequisiti/UseCase/UCD.tex
 	
 	@ #download tabelle
-	@ curl http://kaizenteam.it/tracker/export/fonti.php > AnalisiDeiRequisiti/Fonti.tex
-	@ curl http://kaizenteam.it/tracker/export/requisiti.php > AnalisiDeiRequisiti/Requisiti.tex
-	@ curl http://kaizenteam.it/tracker/export/requisiti-fonti.php > AnalisiDeiRequisiti/RequisitiFonti.tex
-	@ curl http://kaizenteam.it/tracker/export/fonti-requisiti.php > AnalisiDeiRequisiti/FontiRequisiti.tex
+	@ curl http://kaizenteam.it/tracker/export/fonti.php > AnalisiDeiRequisiti/TrackerFonti.tex
+	@ curl http://kaizenteam.it/tracker/export/requisiti.php > AnalisiDeiRequisiti/TrackerRequisiti.tex
+	@ curl http://kaizenteam.it/tracker/export/requisiti-fonti.php > AnalisiDeiRequisiti/TrackerRequisitiFonti.tex
+	@ curl http://kaizenteam.it/tracker/export/fonti-requisiti.php > AnalisiDeiRequisiti/TrackerFontiRequisiti.tex
+	@ curl http://kaizenteam.it/tracker/export/riepilogo.php > AnalisiDeiRequisiti/TrackerRiepilogo.tex	
 
 _glossario: _force
 	@ #creazione file latex termini
@@ -63,7 +64,7 @@ gulpease: _force
 glossary: terms = $(shell xmllint --xpath '//entry/@name' Glossario/Termini.xml | grep -o '"[[:alpha:]|\.]*"' | grep -o '[[:alpha:]|\.]*' | tr "\n" "|" | head -c -1 | sed 's/\./\\./g')
 glossary: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics|caption
 glossary: _force
-	@ #exit 1
+	@ exit 1
 	@ #eliminazione tag
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/\\insglo\{([^\}]*)\}/\1/gi' {} \;
 	@ #aggiunta tag

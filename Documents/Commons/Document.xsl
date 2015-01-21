@@ -61,7 +61,7 @@
 		%fancyhdr config
 		\fancyhead{}
 		\fancyhead[RE,LO]{\includegraphics[scale=0.05]{Pics/Logo} \includegraphics[height=7mm]{Pics/KaizenTeam}}
-		\fancyhead[RO,LE]{\doctitle}
+		\fancyhead[RO,LE]{\Large \bfseries \doctitle \vspace{0.1mm}}
 
 		\fancyfoot{}
 		\fancyfoot[C]{\thepage{} di \pageref{LastPage}}
@@ -87,7 +87,7 @@
 			\listoftables
 			\newpage
 			\listoffigures
-			\newpage
+			
 
 			<xsl:apply-templates select="sections/name"/>
 			<xsl:apply-templates select="appendix"/>
@@ -145,6 +145,7 @@
 	</xsl:template>
 
 	<xsl:template match="name">
+		\newpage
 		\input{<xsl:value-of select="."/>}
 	</xsl:template>
 	
