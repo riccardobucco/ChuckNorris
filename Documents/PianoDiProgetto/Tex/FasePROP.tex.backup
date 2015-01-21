@@ -1,10 +1,10 @@
 % !TEX encoding = UTF-8 Unicode
-\subsection{Fase PROP: Progettazione Requisiti Opzionali}
-	\textbf{Periodo}: dal \insdate{19}{04}{2015} al \insdate{07}{05}{2015} \\Questa fase comincia subito dopo la scadenza della consegna per la \insrev{Revisione di Progetto} e termina con l'incontro con il proponente al fine di mostrare il prototipo con tutti i requisiti (obbligatori, desiderabili e opzionali) sviluppati. 
+\subsection{Fase PROP: Progettazione Requisiti OPzionali}
+	\textbf{Periodo}: dal \insdate{19}{04}{2015} al \insdate{07}{05}{2015} \\Questa fase comincia subito dopo la scadenza della consegna per la \insrev{Revisione Di Progetto} e termina con l'incontro con il proponente al fine di mostrare il prototipo con tutti i requisiti (obbligatori, desiderabili e opzionali) sviluppati. 
 	\\Le attività di questa fase saranno le seguenti:
 	\begin{itemize}
-		\item\textbf{Definizione di Prodotto}: viene steso il documento \insdoc{Definizione di Prodotto v3.0}. Esso definisce la struttura interna del sistema e le relazioni dei componenti del prodotto relativi ai requisiti opzionali.
-		\item \textbf{Codifica}: con quest'attività inizia lo sviluppo da parte dei programmatori dei requisiti opzionali. Sarà dunque seguito quanto riportato nel documento \insdoc{Definizione di Prodotto v3.0};
+		\item\textbf{Definizione Di Prodotto}: viene steso il documento \insdoc{Definizione di Prodotto v3.0}. Esso definisce la struttura interna del sistema e le relazioni dei componenti del prodotto relativi ai requisiti opzionali.
+		\item \textbf{Codifica}: con quest'attività inizia lo sviluppo da parte dei programmatori dei requisiti opzionali. Sarà dunque seguito quanto riportato nel documento \insfile{Definizione di Prodotto v3.0};
 		\item \textbf{Esecuzione test}: verranno eseguiti automaticamente tutti i test di unità e integrazione previsti dal documento \insdoc{Piano di Qualifica v 6.0};
 		\item\textbf{Manuale Utente e Manuale Amministratore}: comincia la stesura dei manuali che forniranno indicazioni agli utilizzatori del sistema.
 		\item\textbf{Incremento e Verifica Documenti}: vengono eseguite modifiche ai documenti già scritti, se necessario.

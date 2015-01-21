@@ -248,13 +248,13 @@
 				\subparagraph{Ruoli di progetto}
 					Per fare riferimento a un ruolo di progetto è necessario utilizzare il comando \LaTeX{} apposito: \textbackslash insrole\{nome\_ruolo\}. Esso garantisce la corretta scrittura del ruolo secondo le norme seguenti:
 					\begin{itemize}
-						\item la prima lettera di ogni parola è maiuscola;
+						\item la prima lettera di ogni parola è maiuscola, eccetto le preposizioni;
 						\item si adotta lo stile corsivo.
 					\end{itemize}
 				\subparagraph{Nomi dei documenti}
 					Per fare riferimento a un documento è necessario utilizzare il comando \LaTeX{} apposito: \textbackslash insdoc\{nome\_documento\}. Esso garantisce la corretta scrittura del documento secondo le norme seguenti:
 					\begin{itemize}
-						\item la prima lettera di ogni parola è maiuscola;
+						\item la prima lettera di ogni parola è maiuscola, eccetto le preposizioni;
 						\item si adotta lo stile corsivo;
 						\item il nome del documento va racchiuso tra virgolette inglesi (aperte: “; chiuse:”).
 					\end{itemize}
@@ -268,13 +268,13 @@
 				\subparagraph{Revisioni}
 					Per fare riferimento a una revisione è necessario utilizzare il comando \LaTeX{} apposito: \textbackslash insrev\{nome\_revisione\}. Esso garantisce la corretta scrittura della revisione secondo le norme seguenti:
 					\begin{itemize}
-						\item la prima lettera di ogni parola è maiuscola;
+						\item la prima lettera di ogni parola è maiuscola, eccetto le preposizioni;
 						\item si adotta lo stile grassetto.
 					\end{itemize}
 				\subparagraph{Fasi del progetto}
 					Per fare riferimento a una fase di progetto è necessario utilizzare il comando \LaTeX{} apposito: \textbackslash insphase\{nome\_fase\}. Esso garantisce la corretta scrittura della fase di progetto secondo le norme seguenti:
 					\begin{itemize}
-						\item la prima lettera di ogni parola è maiuscola;
+						\item la prima lettera di ogni parola è maiuscola, eccetto le preposizioni;
 						\item si adotta lo stile grassetto.
 					\end{itemize}
 				\subparagraph{Nome del gruppo}
@@ -390,25 +390,25 @@
 			\end{itemize}
 			L’avanzamento di versione avviene nel seguente modo:
 			\begin{enumerate}
-				\item X parte da 0 e non ha limiti superiori. Esso viene incrementato di 1 ogni volta che il Responsabile di Progetto formalizza il documento.
+				\item X parte da 0 e non ha limiti superiori. Esso viene incrementato di 1 ogni volta che il \insrole{Responsabile di Progetto} formalizza il documento.
 				\item YY parte da 00 e non ha limiti superiori. Esso viene incrementato di 1 ogni volta che viene apportata una modifica al documento e viene riportato a 00 ogni volta che il documento è stato formalizzato.
 			\end{enumerate}
-			La prima versione di ogni documento è la v0.01
+			La prima versione di ogni documento è la v0.01.
 	\subsection{Procedure}
 		\subsubsection{Procedura di formalizzazione dei documenti}
 			Di seguito viene riportata la procedura alla quale deve essere sottoposto un documento prima di essere definitivamente formalizzato:
 			\begin{enumerate}
 				\item i Redattori si occupano della stesura del documento e della correzione di eventuali errori (documento in lavorazione);
-				\item il Responsabile di Progetto assegna a uno o più Verificatori il compito di verificare che non vi siano errori nella versione consegnata dai redattori (documento in verifica);
-				\item se i Verificatori trovano degli errori, si torna al primo punto; se invece non viene rilevata alcuna anomalia il documento viene consegnato al Responsabile di Progetto;
-				\item il Responsabile di Progetto può decidere di approvare il documento (e in questo caso la procedura di formalizzazione termina, documento approvato) oppure di respingerlo (in questo caso si torna al primo punto).
+				\item il \insrole{Responsabile di Progetto} assegna a uno o più Verificatori il compito di verificare che non vi siano errori nella versione consegnata dai redattori (documento in verifica);
+				\item se i Verificatori trovano degli errori, si torna al primo punto; se invece non viene rilevata alcuna anomalia il documento viene consegnato al \insrole{Responsabile di Progetto};
+				\item il \insrole{Responsabile di Progetto} può decidere di approvare il documento (e in questo caso la procedura di formalizzazione termina, documento approvato) oppure di respingerlo (in questo caso si torna al primo punto).
 			\end{enumerate}
 	\subsection{Strumenti}
 		\subsubsection{\LaTeX{}}
 			Per la stesura dei documenti si è scelto di utilizzare il linguaggio di markup \LaTeX{}.  Il motivo principale che ha portato a questa scelta è la facilità di separazione tra contenuto e formattazione. Con \LaTeX{} è possibile scrivere testo senza doversi preoccupare di dare a esso una formattazione coerente con le norme: è infatti possibile definire un unico template, valido per qualsiasi documento, che applica le regole tipografiche in automatico.
 			\paragraph{Template}
 				Ogni documento dovrà essere realizzato a partire da un template \LaTeX{} appropriato reperibile al percorso INSERIRE PERCORSO TEMPLATE.\\
-				Grazie ai template di \LaTeX{}, non ci si deve preoccupare della formattazione del testo durante la sua stesura: infatti, basta impostare le regole all’interno di un unico file e queste verranno adottate in automatico all’interno di tutti i documenti che fanno uso del template. Inoltre, se le regole dovessero cambiare in corso d’opera (cambiamenti alle Norme di Progetto), basta modificare il singolo file contenente le regole invece che tutti i documenti scritti fino a quel determinato momento.
+				Grazie ai template di \LaTeX{}, non ci si deve preoccupare della formattazione del testo durante la sua stesura: infatti, basta impostare le regole all’interno di un unico file e queste verranno adottate in automatico all’interno di tutti i documenti che fanno uso del template. Inoltre, se le regole dovessero cambiare in corso d’opera (cambiamenti alle \insdoc{Norme di Progetto}), basta modificare il singolo file contenente le regole invece che tutti i documenti scritti fino a quel determinato momento.
 			\paragraph{Comandi personalizzati}
 				Per permettere un’adeguazione automatica alle regole imposte all’interno delle norme tipografiche si è deciso di creare dei comandi personalizzati utilizzabili in \LaTeX{}. Ogni membro del gruppo dovrà saperli usare in modo appropriato ogniqualvolta ve ne sia il bisogno.\\
 				L’elenco completo di tutti i comandi lo si può trovare a  INSERIRE PERCORSO

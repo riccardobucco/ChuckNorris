@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN0 Utilizzo del framework Norris</titolo>
+	<attorip>Sviluppatore</attorip>
+	<precondizione>Nessuna.</precondizione>
+	<postcondizione>È stato utilizzato il framework Norris.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore può utilizzare le API interne di Norris (UCN1);</item>
+		<item>Lo sviluppatore può utilizzare le API esterne di Norris (UCN2);</item>
+		<item>Lo sviluppatore può utilizzare le API della libreria grafica fornita Norris (UCN3).</item>
+	</principale>
+</usecase>
