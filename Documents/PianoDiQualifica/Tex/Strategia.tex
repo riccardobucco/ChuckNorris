@@ -22,11 +22,16 @@
 		miglioramenti in modo sistematico viene utilizzato il modello del miglioramento continuo (PDCA), che prevede una costante iterazione tra 
 		pianificazione, esecuzione del programma, controllo dei risultati e azioni correttive.\\
 	\subsection{Tecniche di controllo qualità di prodotto}
-		Per ottenere un prodotto con le qualità indicate nella sezione 2 il gruppo \groupname{} effettua un controllo di qualità al fine di rimuovere 
-		ogni possibile causa di alterazione del prodotto. Tale metodo di natura preventiva è chiamato Quality Assurance.\\
-		Una volta creati, i diversi componenti del prodotto finale verranno testati per garantire che il loro funzionamento risulti deterministico.\\
-		A conclusione delle attività di controllo della qualità di prodotto verrà effettuata l'attività di validazione del framework, che confermerà 
-		se i requisiti saranno stati rispettati o meno.
+		Il controllo della qualità del prodotto è assicurato da due tipi di processi, quello di verifica e quello di validazione.
+		\begin{description}
+			\item[Verifica] Tale processo viene applicato su qualsiasi attività o risultato che fa avanzare il progetto da una baseline all'altra: esso 
+			ci permette cioè di capire se la nuova baseline è buona.
+			\item[Validazione] Tale processo è conclusivo. Esso viene messo in atto alla fine, quando il prodotto è pronto: ci permette di capire se tale 
+			prodotto è conforme oppure no alle aspettative (ovvero ai requisiti).
+		\end{description}
+		La verifica viene messa in atto di continuuo, la validazione solo alla fine.\\
+		Le tecniche utilizzate all'interno di tali processi sono moltemplici: si usano tanto tecniche di analisi statica quanto di analisi dinamica (per 
+		una descrizione dettagliata di tali tecniche si consulti il documento Norme di Progetto).
 	\subsection{Organizzazione}
 		Come indicato nel \insdoc{Piano di Progetto v1.0}, all'interno del ciclo di vita possono essere individuate varie fasi. All'interno di ciascuna di 
 		esse sono pianificati più momenti di verifica, riguardanti le attività (e dunque i processi) che sono state svolte. Tuttavia, in generale, attività 
@@ -81,14 +86,46 @@
 			\end{itemize}
 			La pianificazione completa delle attività di progetto è descritta in modo dettagliato nel \insdoc{Piano di Progetto v1.0}
 		\subsection{Responsabilità}
+			La qualità è responsabilità di tutti, nessuno escluso. Tutti i membri del team contribuiscono con il loro lavoro a costruire (o a non 
+			costruire) la qualità del prodotto finale e dei processi attraverso i quali ci si arriva. La qualità, infatti, viene costruita nel tempo, 
+			anche grazie alla cura e all'attenzione che viene posta nello svolgere i vari compiti.
+			Di seguito vengono riportate le responsabilità riguardanti la qualità, catalogate in base al ruolo.
 			\begin{itemize}
-				\item Il processo di verifica deve essere efficiente. Dunque, si deve fare in modo, ove sia possibile, che esso sia quanto più automatizzabile 
-				possibile. Questa è una responsabilità dell'Amministratore di Progetto.
-				\item Il processo di verifica deve essere efficace. È compito dei Verificatori, i quali si attengono alle Norme di Progetto, fare in modo che 
-				si riesca a raggiungere l'obiettivo atteso, migliorando allo stesso tempo la qualità del processo di cui si devono occupare.
-				\item È responsabilità dei Programmatori fornire i test necessari per effettuare parte delle verifiche sulle unità software prodotte.
-				\item Il Responsabile di Progetto assegna ai Verificatori determinati compiti, in base al Piano di Progetto da lui stesso stilato. Egli ha la 
-				piena responsabilità delle attività di controllo del processo di verifica.
+				\item Responsabile di Progetto:
+				\begin{itemize}
+					\item deve assicurarsi che i processi siano attentamente controllati e valutati in modo oggettivo (in modo tale che essi siano 
+					migliorabili);
+					\item deve assegnare i compiti relativi alla verifica di prodotti a persone per quanto possibile indipendenti dallo sviluppo di essi 
+					(e secondo quanto descritto nel Piano di Progetto);
+					\item deve pianificare attentamente controlli sul processo di qualità stesso.
+				\end{itemize}
+				\item Amministratore di Progetto:
+				\begin{itemize}
+					\item deve assicurarsi che siano sempre disponibili le risorse necessarie, sia realizzative che di verifica e validazione;
+					\item deve fare in modo che il processo di verifica sia quanto più automatizzabile possibile (e quindi efficiente).
+				\end{itemize}
+				\item Analista:
+				\begin{itemize}
+					\item deve assicurarsi di documentare i requisiti qualitativi oltre a quelli funzionali;
+					\item deve assicurarsi di aderire agli standard e alle norme riguardanti la documentazione da lui stesso prodotta.
+				\end{itemize}
+				\item Progettista:
+				\begin{itemize}
+					\item deve indirizzare nelle specifica tecnica i requisiti di qualità;
+					\item deve realizzare la progettazione in modo da indirizzare completamente, correttamente ed efficacemente i requisiti di qualità;
+					\item deve assicurarsi di aderire agli standard applicabili nella progettazione.
+				\end{itemize}
+				\item Programmatore:
+				\begin{itemize}
+					\item deve codificare secondo le norme imposte all'interno del progetto;
+					\item deve codificare utilizzando gli standard applicabili;
+					\item deve fornire i test necessari per effettuare parte delle verifiche sulle unità software prodotte.
+				\end{itemize}
+				\item Verificatore:
+				\begin{itemize}
+					\item deve eseguire le procedure di verifica previste dal presente documento e descritte nelle Norme di Progetto;
+					\item deve tracciare gli errori rilevati durante ciascuna fase del progetto affinchè possano essere risolti.
+				\end{itemize}
 			\end{itemize}
 			Per maggiori dettagli circa i compiti assegnati a ciascun ruolo si vedano le Norme di Progetto.
 		\subsection{Risorse}
