@@ -1,17 +1,32 @@
 % !TEX encoding = UTF-8 Unicode
 
-\section{Visione generale della strategia}
+\section{Visione generale della strategia di verifica}
+	Costruire prodotti software di qualità adoperando processi controllabili (dunque migliorabili) ha un costo non trascurabile. Il livello di qualità 
+	dei prodotti e dei processi che intendiamo raggiungere deve essere garantito allo stesso modo con cui garantimo le funzionalità software che ci 
+	sono state richieste. Di conseguenza, La qualità deve essere pianificata, progettata, sviluppata. verificata, misurata e valutata durante l'intero 
+	progetto. Si noti come la qualità, se perseguita fin dall'inizio, costi meno di quanto non risulti nella maggior parte dei progetti nei quali viene 
+	trascurata all'inizio.
 	\subsection{Tecniche di controllo qualità di processo}
-		Per qualità di processo si intende la quantificazione del valore di ciò che è stato fatto. Per ottenere la qualità di processo si utilizza il 
-		principio di miglioramento continuo PDCA, da cui deriva un miglioramento di tutti i processi e quindi dei prodotti.\\
-		In particolare i processi vengono definiti in modo da poterli controllare più facilmente e con obiettivi di efficacia, efficienza ed esperienza, 
-		dove con obiettivo di esperienza si intende che si mira ad ottenere un miglioramento correttivo, derivante dalla comprensione degli errori.\\
-		Il controllo dell'andamento della qualità dei processi avviene, in modo indiretto, attraverso il controllo, più pratico e veloce, della 
-		qualità dei prodotti, e in modo diretto attraverso le metriche indicate nella sottosezione ''Misure e metriche'' del presente documento.
+		Per poter controllare un processo, e di conseguenza migliorarlo, è necessario saper misurare in modo più preciso possibile alcune sue 
+		caratteristiche di interesse e soprattutto i miglioramenti stessi.\\
+		Il team, dunque, intende misurare con continuità le caratteristiche d'interesse dei vari processi, ai fini di poterli migliorare. Per mettere in 
+		atto ciò ci si basa su quanto descritto in seguito.
+		\begin{itemize}
+			\item Ci si basa innanzitutto sul modello CMM, quindi sui concetti di "capability" e "maturity" (vedi l'appendice A del presente documento).
+			\item In secondo luogo, possono essere calcolati alcuni valori utili per confrontare le performance dello stesso processo in momenti 
+			differenti: in questo modo si possono evidenziare eventuali miglioramenti raggiunti (vedi sezione "Metriche e misure" del presente documento).
+			\item Infine, per misurare la qualità di un processo può essere utile verificare quella del suo prodotto: se essa è scarsa, ciò implica che 
+			probabilmente anche il processo dal quale deriva non è per nulla di qualità.
+		\end{itemize}
+		Una volta che le misure sono state effettuate, esse devono essere utilizzate per cercare di migliorare il processo. Per provare ad apportare 
+		miglioramenti in modo sistematico viene utilizzato il modello del miglioramento continuo (PDCA), che prevede una costante iterazione tra 
+		pianificazione, esecuzione del programma, controllo dei risultati e azioni correttive.\\
 	\subsection{Tecniche di controllo qualità di prodotto}
-		Per ottenere un prodotto con le qualità indicate nella sezione 2 il gruppo \groupname{} effettua un controllo di qualità al fine di rimuovere ogni possibile causa di alterazione del prodotto. Tale metodo di natura preventiva è chiamato Quality Assurance.\\
+		Per ottenere un prodotto con le qualità indicate nella sezione 2 il gruppo \groupname{} effettua un controllo di qualità al fine di rimuovere 
+		ogni possibile causa di alterazione del prodotto. Tale metodo di natura preventiva è chiamato Quality Assurance.\\
 		Una volta creati, i diversi componenti del prodotto finale verranno testati per garantire che il loro funzionamento risulti deterministico.\\
-		A conclusione delle attività di controllo della qualità di prodotto verrà effettuata l'attività di validazione del framework, che confermerà se i requisiti saranno stati rispettati o meno.
+		A conclusione delle attività di controllo della qualità di prodotto verrà effettuata l'attività di validazione del framework, che confermerà 
+		se i requisiti saranno stati rispettati o meno.
 	\subsection{Organizzazione}
 		Come indicato nel \insdoc{Piano di Progetto v1.0}, all'interno del ciclo di vita possono essere individuate varie fasi. All'interno di ciascuna di 
 		esse sono pianificati più momenti di verifica, riguardanti le attività (e dunque i processi) che sono state svolte. Tuttavia, in generale, attività 
