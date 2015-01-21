@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UCN2.1.1 Selezionare un'istanza esistente di Norris</titolo>
-	<attorip>Client</attorip>
-	<precondizione>Si stanno ottenendo informazioni contenute in un'istanza di Norris.</precondizione>
-	<postcondizione>È stata ottenuta un'istanza esistente di Norris.</postcondizione>
-</usecase>
-

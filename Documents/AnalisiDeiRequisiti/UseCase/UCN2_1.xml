@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN2.1 Ottenere informazioni contenute in un'istanza di Norris</titolo>
+	<titolo>UCN2.1 Ottenere informazioni contenute in un'istanza di Norris selezionata</titolo>
 	<attorip>Client</attorip>
 	<generalizzazionedi>
 		<item>UCN2.2 Ottenere lista dei grafici presenti in un’istanza di Norris</item>
 		<item>UCN2.3 Ottenere un grafico presente in un’istanza di Norris</item>
 	</generalizzazionedi>
 	<precondizione>Si stanno utilizzando le API esterne.</precondizione>
-	<postcondizione>Sono state ottenute informazioni contenute in un'istanza di Norris.</postcondizione>
-	<principale>
-		<item>Il client seleziona un'istanza esistente di Norris (UCN2.1.1).</item>
-	</principale>
+	<postcondizione>Sono state ottenute informazioni contenute nell'istanza di Norris selezionata.</postcondizione>
 </usecase>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN3.6.1 Cambiare il modo in cui vengono rappresentati i punti</titolo>
+	<titolo>UCN3.6.1 Cambiare il colorore di una serie di punti</titolo>
 	<attorip>Client</attorip>
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di un map chart.</precondizione>
-	<postcondizione>É stato modificato il modo in cui vengono rappresentati i punti.</postcondizione>
+	<postcondizione>É stato modificato il colore di una serie di punti.</postcondizione>
 </usecase>
