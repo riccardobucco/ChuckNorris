@@ -4,7 +4,7 @@
 	<titolo>UCN3.4 Cambiare opzioni di visualizzazione di un bar chart</titolo>
 	<attorip>Client</attorip>
 	<specializzazionedi>
-		<item>UCN3.3</item>
+		<item>UCN3.3 Cambiare opzioni di visualizzazione di un grafico</item>
 	</specializzazionedi>
 	<precondizione>Si stanno utilizzando le API della libreria grafica. È stato selezionato il modello di grafico che si vuole rappresentare. Il grafico selezionato è di tipo bar chart.</precondizione>
 	<postcondizione>Sono state modificate le opzioni di visualizzazione del bar chart selezionato.</postcondizione>

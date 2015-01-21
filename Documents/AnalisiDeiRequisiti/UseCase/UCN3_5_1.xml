@@ -5,8 +5,4 @@
 	<attorip>Client</attorip>
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di un line chart.</precondizione>
 	<postcondizione>É stato modificato il colore di una linea.</postcondizione>
-	<principale>
-		<item>Il client sta selezionando la linea a cui cambiare il colore (UCN3.5.1.1);</item>
-		<item>Il client sceglie il nuovo colore da associare alla linea selezionata (UCN3.5.1.2).</item>
-	</principale>
 </usecase>

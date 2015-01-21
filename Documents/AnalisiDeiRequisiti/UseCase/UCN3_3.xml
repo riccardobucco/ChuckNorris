@@ -4,10 +4,10 @@
 	<titolo>UCN3.3 Cambiare opzioni di visualizzazione di un grafico</titolo>
 	<attorip>Client</attorip>
 	<generalizzazionedi>
-		<item>UCN3.4</item>
-		<item>UCN3.5</item>
-		<item>UCN3.6</item>
-		<item>UCN3.7</item>
+		<item>UCN3.4 Cambiare opzioni di visualizzazione di un bar chart</item>
+		<item>UCN3.5 Cambiare opzioni di visualizzazione di un line chart</item>
+		<item>UCN3.6 Cambiare opzioni di visualizzazione di un map chart</item>
+		<item>UCN3.7 Cambiare opzioni di visualizzazione di una table</item>
 	</generalizzazionedi>
 	<precondizione>Si stanno utilizzando le API della libreria grafica. È stato selezionato il modello di grafico che si vuole rappresentare.</precondizione>
 	<postcondizione>Sono state modificate le opzioni di visualizzazione del grafico selezionato.</postcondizione>

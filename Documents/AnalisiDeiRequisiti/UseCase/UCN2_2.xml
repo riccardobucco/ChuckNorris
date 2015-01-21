@@ -4,7 +4,7 @@
 	<titolo>UCN2.2 Ottenere lista dei grafici presenti in un'istanza di Norris</titolo>
 	<attorip>Client</attorip>
 	<specializzazionedi>
-		<item>UCN2.1</item>
+		<item>UCN2.1 Ottenere informazioni contenute in un’istanza di Norris</item>
 	</specializzazionedi>
 	<precondizione>Si stanno utilizzando le API esterne.</precondizione>
 	<postcondizione>È stata ottenuta la lista dei grafici presenti in un'istanza di Norris</postcondizione>
