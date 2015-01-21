@@ -3,7 +3,7 @@
 \section{Visione generale della strategia di verifica}
 	Costruire prodotti software di qualità adoperando processi controllabili (dunque migliorabili) ha un costo non trascurabile. Il livello di qualità 
 	dei prodotti e dei processi che intendiamo raggiungere deve essere garantito allo stesso modo con cui garantimo le funzionalità software che ci 
-	sono state richieste. Di conseguenza, La qualità deve essere pianificata, progettata, sviluppata. verificata, misurata e valutata durante l'intero 
+	sono state richieste. Di conseguenza, La qualità deve essere pianificata, progettata, sviluppata, verificata, misurata e valutata durante l'intero 
 	progetto. Si noti come la qualità, se perseguita fin dall'inizio, costi meno di quanto non risulti nella maggior parte dei progetti nei quali viene 
 	trascurata all'inizio.
 	\subsection{Tecniche di controllo qualità di processo}
@@ -25,20 +25,22 @@
 		Il controllo della qualità del prodotto è assicurato da due tipi di processi, quello di verifica e quello di validazione.
 		\begin{description}
 			\item[Verifica] Tale processo viene applicato su qualsiasi attività o risultato che fa avanzare il progetto da una baseline all'altra: esso 
-			ci permette cioè di capire se la nuova baseline è buona.
+			ci permette cioè di capire se la nuova baseline è buona. In altre parole, la verifica si occupa di accertare che l'esecuzione delle attività 
+			di processi svolti nella fase in esame non abbia introdotto errori nel prodotto.
 			\item[Validazione] Tale processo è conclusivo. Esso viene messo in atto alla fine, quando il prodotto è pronto: ci permette di capire se tale 
 			prodotto è conforme oppure no alle aspettative (ovvero ai requisiti).
 		\end{description}
 		La verifica viene messa in atto di continuuo, la validazione solo alla fine.\\
 		Le tecniche utilizzate all'interno di tali processi sono moltemplici: si usano tanto tecniche di analisi statica quanto di analisi dinamica (per 
-		una descrizione dettagliata di tali tecniche si consulti il documento Norme di Progetto).
+		una descrizione dettagliata di tali tecniche si consulti il documento Norme di Progetto). Molto spesso si fa anche uso di test (a patto che 
+		abbiano grande valore dimostrativo).
 	\subsection{Organizzazione}
 		Come indicato nel \insdoc{Piano di Progetto v1.0}, all'interno del ciclo di vita possono essere individuate varie fasi. All'interno di ciascuna di 
 		esse sono pianificati più momenti di verifica, riguardanti le attività (e dunque i processi) che sono state svolte. Tuttavia, in generale, attività 
 		e processi diversi fanno ottenere prodotti differenti. Dunque, è necessario prevedere procedure di verifica differenti a seconda del processo e del 
 		prodotto ottenuto.\\
 		Fatta questa premessa, l'organizzazione della strategia di verifica viene suddivisa in base alle attività svolte durante specifiche fasi: per ognuna 
-		di essere viene attuata un'attività di verifica (e le relative procedure) differente. Le attività di verifica riguardano tanto i processi tanto gli 
+		di esse viene attuata un'attività di verifica (e le relative procedure) differente. Le attività di verifica riguardano tanto i processi tanto gli 
 		eventuali prodotti ottenuti tramite essi.\\
 		Il compito di effettuare le verifiche (utilizzando gli strumenti indicati nelle Norme di Progetto) spetta ai Verificatori in carica nei momenti 
 		definiti dal Responsabile di Progetto. Le verifiche da essi svolte hanno il compito di consolidare i miglioramenti raggiunti.\\
@@ -48,7 +50,7 @@
 			sottoposti a verifica. Durante questa fase, inoltre, vengono definiti i requisiti che il prodotto finale deve rispettare e i relativi casi 
 			d'uso. Anche questi devono essere sottoposti a verifica, controllando le caratteristiche di essenzialità e completezza. È previsto inoltre 
 			il controllo della corrispondenza tra fonti e requisiti obbligatori/desiderabili.\\
-			Inoltre, si deve verificare e conseguentemente migliorare la qualità dei processo di documentazione messo in pratica durante tale fase. Il 
+			Inoltre, si deve verificare e conseguentemente migliorare la qualità del processo di documentazione messo in pratica durante tale fase. Il 
 			principio da utilizzare è quello del PDCA (descritto in appendice NUMERO APPENDICE): essendo a inizio progetto, il modo in cui si documenta 
 			scarseggia soprattutto in efficacia. È dunque assolutamente necessario trarre profitto dagli errori e imparare da essi, in modo tale che le 
 			stesse attività vengano svolte in modo migliore durante le fasi successive.\\
@@ -67,7 +69,7 @@
 			come processo sia come prodotto) venga fatta nel modo migliore possibile.\\
 			Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
 			all'interno delle Norme di Progetto.
-			\item[Fase PROB - PRD - PROP] Durante tali fasi si progettano nel dettaglio e si codificano tutti requisiti obbligatori, desiderabili e 
+			\item[Fase PROB - PRD - PROP] Durante tali fasi si progettano nel dettaglio e si codificano tutti i requisiti obbligatori, desiderabili e 
 			opzionali. Anche qui, come nella fase precedente, si deve verificare il corretto tracciamento dei requisiti: l'intera progettazione deve 
 			riguardare tutti e soli i requisiti individuati nella fase di Analisi (in modo tale che non manchi nulla e non ci sia nulla in più).\\
 			Per quanto riguarda l'attività di codifica, è compito del Verificatore (in collaborazione con il Programmatore) eseguire i test di unità, di 
@@ -138,13 +140,15 @@
 					\item risorse hardware.
 				\end{itemize}
 				\paragraph{Risorse umane}
-					Le risorse umane, intese come figure professionali, che sono necessarie per applicare in modo corretto e completo il processo di 
-					verifica sono le seguenti:
+					Le risorse umane (intese come figure professionali) che sono necessarie per svolgere il progetto in modo corretto e completo 
+					rispetto agli obiettivi di qualità sono le seguenti:
 					\begin{itemize}
 						\item Responsabile di Progetto;
 						\item Amministratore di Progetto;
+						\item Analista;
+						\item Progettista;
 						\item Verificatori;
-						\item Programmatori;
+						\item Programmatori.
 					\end{itemize}
 					Una descrizione delle responsabilità di ciascun ruolo qui presentato è presente nella sezione INDICARE NUMERO del presente documento.\\
 					Una descrizione dettagliata di ciascun ruolo è presente all'interno delle Norme di Progetto.
@@ -168,7 +172,8 @@
 						devono redigere un documento. 
 					\end{itemize}
 				\paragraph{Risorse hardware}
-					Sono necessarie macchine (computer) sufficientementi potenti da far girare tutto il software necessario durante le attività di verifica.
+					Sono necessarie macchine (computer) sufficientementi potenti da far girare tutto il software necessario durante le attività da
+					svolgere nell'arco del progetto.
 			\subsubsection{Risorse disponibili}
 				\paragraph{Risorse umane}
 					Le risorse umane disponibili per mettere in pratica le attività di verifica sono date dai componenti del team. Essi svolgono le 
@@ -194,7 +199,7 @@
 				stabilire dei range di accettazione indipendenti dal tipo di stima che si sta effettuando. In particolare, una valore misurato può 
 				essere:
 				\begin{description}
-					\item[negativo] Un valore appartiene a questo range non può essere accettato, qualunque sia l'ambito al quale appartiene.
+					\item[negativo] Un valore appartenente a questo range non può essere accettato, qualunque sia l'ambito dal quale provenga.
 					\item[accettabile] Un valore appartenente a questo range è un valore che ha raggiunto la soglia minima dell'accettazione. Può 
 					quindi ovviamente essere accettato.
 					\item[ottimale] Un valore appartenente a questo range ha raggiunto le massime aspettative del team. L'obiettivo dovrebbe essere 
