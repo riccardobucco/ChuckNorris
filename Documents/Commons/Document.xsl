@@ -115,7 +115,7 @@
 	
 	<xsl:template name="changes">
 			\section*{Diario delle modifiche}
-			\begin{center}
+				\addtocounter{table}{-1}
 				\tabulinesep=3pt
 				\begin{longtabu} to \textwidth {|X[c,m]|X[c,m]|X[c,m]|X[c,m]|X[c,m]|}
 					\hline
@@ -136,8 +136,7 @@
 						\hline
 					</xsl:for-each>
 				\end{longtabu}
-			\end{center}
-			\addtocounter{table}{-1}
+
 	</xsl:template>
 
 	<xsl:template match="appendix">
