@@ -17,18 +17,4 @@
 		<item>Lo sviluppatore inserisce i dati del bar chart (UCN1.4.2);</item>
 		<item>Lo sviluppatore sceglie le opzioni del bar chart (UCN1.4.1).</item>
 	</principale>
-	<alternativi>
-		<scenario>
-			<descrizione>Nel caso in cui le impostazioni scelte non corrispondano alle impostazioni del bar chart:</descrizione>
-			<item>il sistema segnala un errore.</item>
-		</scenario>
-		<scenario>
-			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
-			<item>il sistema segnala un errore.</item>
-		</scenario>
-		<scenario>
-			<descrizione>Nel caso in cui i dati non siano nel formato corretto:</descrizione>
-			<item>il sistema segnala un errore.</item>
-		</scenario>
-	</alternativi>
 </usecase>

@@ -10,6 +10,7 @@
 		<item>UCN1.6 Creare modello map chart</item>
 		<item>UCN1.7 Creare modello table</item>
 	</generalizzazionedi>
+	<estensioni>UCN1.9 Visualizzazione errore</estensioni>
 	<precondizione>Si stanno utilizzando le API interne. Si sta eseguendo uno dei casi d'uso che specializzano il presente caso d'uso (UCN1.4, UCN1.5, UCN1.6, UCN1.7).</precondizione>
 	<postcondizione>È stato creato un modello di un grafico. Tale modello può essere di tipo bar chart, line chart, map chart o table: questo dipende dal caso d'uso specializzato che è stato eseguito.</postcondizione>
 	<principale>
@@ -18,4 +19,11 @@
 		<item>Lo sviluppatore sceglie le opzioni riguardanti il piano cartesiano (UCN1.1.3);</item>
 		<item>Lo sviluppatore sceglie la descrizione del chart (UCN1.1.4).</item>
 	</principale>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui la creazione del grafico non sia avvenuta nel modo corretto:</descrizione>
+			<item>il sistema segnala un errore (UCN1.9).</item>
+		</scenario>
+	</alternativi>
+
 </usecase>

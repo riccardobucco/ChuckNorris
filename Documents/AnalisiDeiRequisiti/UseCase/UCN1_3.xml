@@ -2,8 +2,8 @@
 
 <usecase>
 	<titolo>UCN1.3 Creare pagina</titolo>
-	
 	<attorip>Sviluppatore</attorip>
+	<estensioni>UCN1.9 Visualizzazione errore</estensioni>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stata creata una pagina.</postcondizione>
 	<principale>
@@ -11,4 +11,10 @@
 		<item>Lo sviluppatore sceglie le opzioni di visualizzazione della pagina (UCN1.3.2);</item>
 		<item>Lo sviluppatore aggiunge grafici alla pagina (UCN1.3.3).</item>
 	</principale>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui la creazione della pagina non sia avvenuta nel modo corretto:</descrizione>
+			<item>il sistema segnala un errore (UCN1.9).</item>
+		</scenario>
+	</alternativi>
 </usecase>

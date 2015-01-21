@@ -4,6 +4,7 @@
 	<titolo>UCN1.2 Aggiornare un modello chart</titolo>
 	
 	<attorip>Sviluppatore</attorip>
+	<estensioni>UCN1.9 Visualizzazione errore</estensioni>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato aggiornato il modello di un chart.</postcondizione>
 	<principale>
@@ -12,4 +13,11 @@
 		<item>Lo sviluppatore aggiorna un modello map chart (UCN1.2.3);</item>
 		<item>Lo sviluppatore aggiorna un modello table (UCN1.2.4).</item>
 	</principale>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui l'aggiornamento non avviene correttamente:</descrizione>
+			<item>il sistema segnala un errore (UCN1.9).</item>
+		</scenario>
+	</alternativi>
+
 </usecase>

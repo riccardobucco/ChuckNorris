@@ -15,18 +15,4 @@
 		<item>Lo sviluppatore inserisce i dati della table (UCN1.7.2);</item>
 		<item>Lo sviluppatore sceglie le opzioni della table (UCN1.7.1).</item>
 	</principale>
-	<alternativi>
-		<scenario>
-			<descrizione>Nel caso in cui le impostazioni scelte non corrispondano alle impostazioni della Table:</descrizione>
-			<item>il sistema segnala un errore.</item>
-		</scenario>
-		<scenario>
-			<descrizione>Nel caso in cui i parametri inseriti non corrispondano a nessuna impostazione:</descrizione>
-			<item>il sistema segnala un errore.</item>
-		</scenario>
-		<scenario>
-			<descrizione>Nel caso in cui i dati non siano nel formato corretto:</descrizione>
-			<item>il sistema segnala un errore.</item>
-		</scenario>
-	</alternativi>
 </usecase>
