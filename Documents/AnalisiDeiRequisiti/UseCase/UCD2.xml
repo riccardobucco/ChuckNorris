@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCD2 Visualizzazione numero di autobus attivi per ciascuna linea</titolo>
+	<attorip>Utente</attorip>
+	<attoris>Norris</attoris>
+	<inclusioni>UCD3</inclusioni>
+	<precondizione>Si sta utilizzando la dashboard.</precondizione>
+	<postcondizione>È stato visualizzato il numero di autobus attivi per ciascuna linea.</postcondizione>
+	<principale>
+			<item>Norris invia i dati relativi ai grafici che verranno visualizzati (UCD3);</item>
+	</principale>
+</usecase>

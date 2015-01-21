@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCD1 Visualizzazione posizione autobus APS in tempo reale</titolo>
+	<attorip>Utente</attorip>
+	<attoris>Norris</attoris>
+	<inclusioni>UCD3</inclusioni>
+	<precondizione>Si sta utilizzando la dashboard.</precondizione>
+	<postcondizione>È stata visualizzata la posizione degli autobus APS.</postcondizione>
+	<principale>
+		<item>Norris invia i dati relativi ai grafici che verranno visualizzati (UCD3);</item>
+		<item>L'utente può filtrare per linea la visualizazione degli autobus attivi (UCD1.1).</item>
+	</principale>
+</usecase>
