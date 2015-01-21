@@ -42,7 +42,7 @@
 		\newcommand{\inspath}[1]{\texttt{#1}}
 		\newcommand{\insrole}[1]{\textit{#1}}
 		\newcommand{\insdoc}[1]{\textit{“#1”}}
-		\newcommand{\insfile}[1]{\textit{“#1”}}
+		\newcommand{\insfile}[1]{“\texttt{#1}”}
 		\newcommand{\insrev}[1]{\texttt{#1}}
 		\newcommand{\insphase}[1]{\texttt{#1}}
 
