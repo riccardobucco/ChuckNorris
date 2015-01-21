@@ -60,7 +60,7 @@
 
 		%fancyhdr config
 		\fancyhead{}
-		\fancyhead[RE,LO]{\includegraphics[scale=0.05]{Pics/Logo}}
+		\fancyhead[RE,LO]{\includegraphics[scale=0.05]{Pics/Logo} \includegraphics[height=7mm]{Pics/KaizenTeam}}
 		\fancyhead[RO,LE]{\doctitle}
 
 		\fancyfoot{}
