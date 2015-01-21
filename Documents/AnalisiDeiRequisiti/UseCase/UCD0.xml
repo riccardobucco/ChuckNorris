@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCD0 Utilizzo della dashboard</titolo>
+	<attorip>Utente</attorip>
+	<attoris>Norris</attoris>
+	<precondizione>È necessario essere connessi a Internet.</precondizione>
+	<postcondizione>È stata utilizzata la dashboard.</postcondizione>
+	<principale>
+		<item>Norris invia i dati relativi ai grafici che verranno visualizzati (UCD3);</item>
+		<item>L'utente visualizza la posizione degli autobus APS in tempo reale (UCD1);</item>
+		<item>L'utente visualizza il numero di autobus attivi per ogni linea (UCD2).</item>
+	</principale>
+</usecase>
