@@ -12,6 +12,8 @@
 		<item>Lo sviluppatore esegue il passo precedente per un numero di volte pari al numero celle che intende modificare;</item>
 		<item>Lo sviluppatore sceglie il massimo numero di righe visualizzabili (UCN1.7.1.3);</item>
 		<item>Lo sviluppatore sceglie se è possibile ordinare le righe rispetto ai valori di una colonna (UCN1.7.1.4);</item>
-		<item>Lo sviluppatore sceglie la posizione in cui vengono aggiunte nuove righe (UCN1.7.1.5).</item>
+		<item>Lo sviluppatore sceglie la posizione in cui vengono aggiunte nuove righe (UCN1.7.1.5);</item>
+		<item>Lo sviluppatore sceglie l'intestazione di ciascuna colonna (UCN1.7.1.6);.</item>
+		<item>Lo sviluppatore sceglie se le linee della tabella sono visualizzate (UCN1.7.1.7).</item>
 	</principale>
 </usecase>
