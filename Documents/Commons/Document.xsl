@@ -4,7 +4,7 @@
 	<xsl:output method="text"/>
 	
 	<xsl:template match="/document">
-		\documentclass[a4paper,twoside]{article}
+		\documentclass[a4paper]{article}
 		
 		%package include
 		\usepackage[margin=3cm]{geometry}
@@ -43,12 +43,18 @@
 		\setcounter{secnumdepth}{5}
 
 		%fancyhdr config
-		\fancyhead{}
+		\fancyhf{}
 		\fancyhead[L]{\includegraphics[scale=0.05]{Pics/Logo} \includegraphics[height=7mm]{Pics/KaizenTeam}}
 		\fancyhead[R]{\Large \bfseries \doctitle \vspace{0.1mm}}
+		\fancypagestyle{roman}{
+			\pagenumbering{Roman}
+			\fancyfoot[C]{\thepage{}}
+		}
+		\fancypagestyle{plain}{
+			\pagenumbering{arabic}
+			\fancyfoot[C]{\thepage{} di \pageref{LastPage}}
+		}
 
-		\fancyfoot{}
-		\fancyfoot[C]{\thepage{} di \pageref{LastPage}}
 		
 		%space between paragraph
 		\raggedbottom
@@ -57,7 +63,7 @@
 
 		\begin{document}
 
-			\pagestyle{fancy}
+			\pagestyle{roman}
 			\input{Tex/Titlepage.tex}
 			\newpage
 			<xsl:call-template name="description"/>
@@ -71,7 +77,8 @@
 			\listoftables
 			\newpage
 			\listoffigures
-			
+			\newpage
+			\pagestyle{plain}
 
 			<xsl:apply-templates select="sections/name"/>
 			<xsl:apply-templates select="appendix"/>
