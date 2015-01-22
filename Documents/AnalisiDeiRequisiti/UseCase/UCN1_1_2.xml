@@ -2,7 +2,6 @@
 
 <usecase>
 	<titolo>UCN1.1.2 Scegliere le opzioni riguardanti la legenda</titolo>
-	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si sta creando un modello di chart. Il chart che si desidera creare non è di tipo table.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti la legenda.</postcondizione>

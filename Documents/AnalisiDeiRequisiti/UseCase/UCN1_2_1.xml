@@ -7,7 +7,7 @@
 	<precondizione>Si sta aggiornando il modello di un chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello di un bar chart.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore seleziona un modello line chart da aggiornare;</item>
-		<item>Lo sviluppatore aggiorna il modello bar chart selezionato con metodo in place(UCN1.2.1.1).</item>
+		<item>Lo sviluppatore seleziona un modello bar chart da aggiornare;</item>
+		<item>Lo sviluppatore aggiorna il modello bar chart selezionato con metodo in place (UCN1.2.1.1).</item>
 	</principale>
 </usecase>
