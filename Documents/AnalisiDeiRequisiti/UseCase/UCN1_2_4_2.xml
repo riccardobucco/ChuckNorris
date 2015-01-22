@@ -2,9 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.2.4.2 Aggiornare un modello table con metodo stream</titolo>
-	
 	<attorip>Sviluppatore</attorip>
-	<inclusioni>UCN1.2.4.3</inclusioni>
 	<precondizione>Si sta aggiornando un modello table.</precondizione>
 	<postcondizione>È stato aggiornato un modello table con metodo stream.</postcondizione>
 </usecase>

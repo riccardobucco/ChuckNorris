@@ -6,7 +6,6 @@
 	<generalizzazionedi>
 		<item>UCN1.2.3.2 Aggiornare un modello map chart con metodo movie</item>
 	</generalizzazionedi>
-	<inclusioni>UCN1.2.3.3</inclusioni>
 	<precondizione>Si sta aggiornando il modello di un map chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello di un map chart con metodo in place.</postcondizione>
 </usecase>
