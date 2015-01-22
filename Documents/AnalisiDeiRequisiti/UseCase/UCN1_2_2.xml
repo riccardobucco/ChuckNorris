@@ -2,12 +2,11 @@
 
 <usecase>
 	<titolo>UCN1.2.2 Aggiornare un modello line chart</titolo>
-	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si sta aggiornando il modello di un chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello di un line chart.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore seleziona un modello line chart da aggiornare (UCN1.2.2.3);</item>
+		<item>Lo sviluppatore seleziona un modello line chart da aggiornare;</item>
 		<item>Lo sviluppatore aggiorna con metodo in place(UCN1.2.2.1) o con metodo stream(UCN1.2.2.2) il modello line chart selezionato.</item>
 	</principale>
 </usecase>
