@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCA1 Collegamento ad un istanza di Norris</titolo>
 	<attorip>Utente</attorip>
-	<estensioni>UCA4</estensioni>
+	<estensioni>UCA4 Visualizzazione errore di indirizzo non valido</estensioni>
 	<precondizione>Si sta utilizzando l'applicazione.</precondizione>
 	<postcondizione>È avvenuto il collegamento ad un'istanza di Norris.</postcondizione>
 </usecase>
