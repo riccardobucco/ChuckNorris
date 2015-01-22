@@ -4,7 +4,7 @@
 	<titolo>UCN1.1.3 Scegliere le opzioni riguardanti il piano cartesiano</titolo>
 	
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si vuole creare un modello di chart. Il chart che si desidera creare non è di tipo table o map chart.</precondizione>
+	<precondizione>Si sta creando un modello di chart. Il chart che si desidera creare non è di tipo table o map chart.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti il piano cartesiano.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore sceglie il nome degli assi (UCN1.1.3.1);</item>

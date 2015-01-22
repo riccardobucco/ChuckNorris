@@ -3,6 +3,6 @@
 <usecase>
 	<titolo>UCN1.1.4 Scegliere una descrizione per il chart</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si vuole creare un modello di chart.</precondizione>
+	<precondizione>Si sta creando un modello di chart.</precondizione>
 	<postcondizione>È stata impostata la descrizione del grafico.</postcondizione>
 </usecase>
