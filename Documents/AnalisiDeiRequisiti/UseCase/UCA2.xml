@@ -4,5 +4,5 @@
 	<titolo>UCA2 Visualizzazione elenco grafici</titolo>
 	<attorip>Utente</attorip>
 	<precondizione>Si sta utilizzando l'applicazione. È avvenuto il collegamento ad un'istanza di Norris.</precondizione>
-	<postcondizione>È stato visualizzato l'elenco dei grafici.</postcondizione>
+	<postcondizione>È visualizzato l'elenco dei grafici presenti nell'istanza di Norris.</postcondizione>
 </usecase>

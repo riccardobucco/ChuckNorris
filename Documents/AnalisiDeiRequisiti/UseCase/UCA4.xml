@@ -4,5 +4,5 @@
 	<titolo>UCA4 Visualizzazione errore di indirizzo non valido</titolo>
 	<attorip>Utente</attorip>
 	<precondizione>Si sta utilizzando l'applicazione. Sì è cercato di collegare l'applicazione ad un'istanza di Norris non valida.</precondizione>
-	<postcondizione>È stato visualizzato un messaggio di errore di indirizzo non valido.</postcondizione>
+	<postcondizione>È visualizzato un messaggio di errore di indirizzo non valido.</postcondizione>
 </usecase>

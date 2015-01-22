@@ -4,8 +4,8 @@
 	<titolo>UCD0 Utilizzo della dashboard</titolo>
 	<attorip>Utente</attorip>
 	<attoris>Norris</attoris>
-	<precondizione>È necessario essere connessi a Internet.</precondizione>
-	<postcondizione>È stata utilizzata la dashboard.</postcondizione>
+	<precondizione>È necessario utilizzare un browser supportato dal prodotto ed essere connessi a Internet.</precondizione>
+	<postcondizione>Sono state utilizzate le funzioni della dashboard.</postcondizione>
 	<principale>
 		<item>Norris invia i dati relativi ai grafici che verranno visualizzati (UCD3);</item>
 		<item>L'utente visualizza la posizione degli autobus APS in tempo reale (UCD1);</item>

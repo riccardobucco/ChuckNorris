@@ -4,11 +4,16 @@
 	<titolo>UCA0 Utilizzo dell'applicazione Android</titolo>
 	<attorip>Utente</attorip>
 	<precondizione>È necessario aver installato l'applicazione in uno smartphone o tablet Android. È inoltre necessario essere connessi a Internet.</precondizione>
-	<postcondizione>È stata utilizzata l'applicazione Android.</postcondizione>
+	<postcondizione>Sono state utilizzate le funzioni dell'applicazione Android.</postcondizione>
 	<principale>
 		<item>L'utente si collega ad un'istanza di Norris (UCA1);</item>
-		<item>L'utente visualizza la lista dei grafici (UCA2);</item>
-		<item>L'utente visualizza un singolo grafico (UCA3);</item>
-		<item>L'utente visualizza un errore di indirizzo non valdo (UCA4).</item>
+		<item>L'utente può visualizzare la lista dei grafici presenti nell'istanza di Norris selezionata (UCA2);</item>
+		<item>L'utente può visualizzare un singolo grafico presente nell'istanza di Norris selezionata (UCA3).</item>
 	</principale>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui l'indirizzo dell'istanza Norris che è stato inserito non risulti valido:</descrizione>
+			<item>il sistema segnala che è stato inserito un indirizzo nel quale non è presente un'istanza Norris (UCA3).</item>
+		</scenario>
+	</alternativi>
 </usecase>
