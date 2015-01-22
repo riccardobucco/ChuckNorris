@@ -2,9 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.2.1.1 Aggiornare un modello bar chart selezionato con metodo in place</titolo>
-	
 	<attorip>Sviluppatore</attorip>
-	<inclusioni>UCN1.2.1.2</inclusioni>
 	<precondizione>Si sta aggiornando il modello di un bar chart. È stato selezionato il modello di un bar chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello del bar chart selezionato con metodo in place.</postcondizione>
 </usecase>
