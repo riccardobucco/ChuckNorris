@@ -4,7 +4,7 @@
 	<titolo>UCN2 Utilizzo API esterne di Norris</titolo>
 	<attorip>Client</attorip>
 	<precondizione>Si sta utilizzando Norris.</precondizione>
-	<postcondizione>Sono state utilizzate le API esterne di Norris.</postcondizione>
+	<postcondizione>Sono state utilizzate funzioni offerte dalle API esterne di Norris.</postcondizione>
 	<principale>
 		<item>Il client può ottenere informazioni contenute in un'istanza di Norris (UCN2.1);</item>
 		<item>Il client può ottenere la lista dei grafici presenti in un'istanza di Norris (UCN2.2);</item>

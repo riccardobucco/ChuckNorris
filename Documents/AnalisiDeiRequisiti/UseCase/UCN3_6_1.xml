@@ -3,6 +3,10 @@
 <usecase>
 	<titolo>UCN3.6.1 Cambiare il colorore di una serie di punti</titolo>
 	<attorip>Client</attorip>
-	<precondizione>Si stanno modificando le opzioni di visualizzazione di un map chart.</precondizione>
+	<precondizione>Si stanno modificando le opzioni di visualizzazione di un map chart selezionato.</precondizione>
 	<postcondizione>É stato modificato il colore di una serie di punti.</postcondizione>
+	<principale>
+		<item>Il client sceglie una serie di punti alla quale vuole modificare il colore;</item>
+		<item>Il client sceglie un colore da associare alla serie di punti selezionata.</item>
+	</principale>
 </usecase>

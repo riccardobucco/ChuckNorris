@@ -9,6 +9,6 @@
 	<precondizione>Si stanno utilizzando le API della libreria grafica. È stato selezionato il modello di grafico che si vuole rappresentare. Il grafico selezionato è di tipo table.</precondizione>
 	<postcondizione>Sono state modificate le opzioni di visualizzazione della table selezionata.</postcondizione>
 	<principale>
-		<item>Il client modifica le opzioni riguardanti il formato di una cella (UCN3.7.1).</item>
+		<item>Il client modifica le opzioni riguardanti il formato di una o più celle (UCN3.7.1).</item>
 	</principale>
 </usecase>

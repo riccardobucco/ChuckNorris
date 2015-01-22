@@ -3,6 +3,10 @@
 <usecase>
 	<titolo>UCN3.5.1 Cambiare il colore di una linea</titolo>
 	<attorip>Client</attorip>
-	<precondizione>Si stanno modificando le opzioni di visualizzazione di un line chart.</precondizione>
+	<precondizione>Si stanno modificando le opzioni di visualizzazione di un line chart selezionato.</precondizione>
 	<postcondizione>É stato modificato il colore di una linea.</postcondizione>
+	<principale>
+		<item>Il client sceglie una linea alla quale vuole modificare il colore;</item>
+		<item>Il client sceglie un colore da associare alla linea selezionata.</item>
+	</principale>
 </usecase>

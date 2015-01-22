@@ -7,6 +7,9 @@
 		<item>UCN2.2 Ottenere lista dei grafici presenti in un’istanza di Norris</item>
 		<item>UCN2.3 Ottenere un grafico presente in un’istanza di Norris</item>
 	</generalizzazionedi>
-	<precondizione>Si stanno utilizzando le API esterne.</precondizione>
+	<precondizione>Si stanno utilizzando le API esterne. Si sta eseguendo uno dei casi d'uso che specializzano il presente caso d'uso (UCN2.2, UCN2.3).</precondizione>
 	<postcondizione>Sono state ottenute informazioni contenute nell'istanza di Norris selezionata.</postcondizione>
+	<principale>
+		<item>Il client indica l'indirizzo dell'istanza Norris al quale vuole fare riferimento.</item>
+	</principale>
 </usecase>

@@ -9,8 +9,8 @@
 	<precondizione>Si stanno utilizzando le API della libreria grafica. È stato selezionato il modello di grafico che si vuole rappresentare. Il grafico selezionato è di tipo bar chart.</precondizione>
 	<postcondizione>Sono state modificate le opzioni di visualizzazione del bar chart selezionato.</postcondizione>
 	<principale>
-		<item>Il client modifica le opzioni riguardanti la legenda (UCN3.3.1);</item>
-		<item>Il client modifica il fatto che la griglia di un piano cartesiano sia visualizzata o meno (UCN3.3.2);</item>
-		<item>Il client modifica il colore di un set di barre (UCN3.4.1).</item>
+		<item>Il client modifica le opzioni riguardanti la legenda del grafico selezionato (UCN3.3.1);</item>
+		<item>Il client modifica il fatto che la griglia di un piano cartesiano sia visualizzata o meno nel grafico selezionato (UCN3.3.2);</item>
+		<item>Il client modifica il colore di uno o più set di barre del bar chart selezionato (UCN3.4.1).</item>
 	</principale>
 </usecase>
