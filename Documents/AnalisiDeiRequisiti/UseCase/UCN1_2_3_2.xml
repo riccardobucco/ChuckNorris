@@ -2,11 +2,17 @@
 
 <usecase>
 	<titolo>UCN1.2.3.2 Aggiornare un modello map chart con metodo movie</titolo>
-	
 	<attorip>Sviluppatore</attorip>
 	<specializzazionedi>
 		<item>UCN1.2.3.1 Aggiornare un modello map chart con metodo in place</item>
 	</specializzazionedi>
-	<precondizione>Si sta aggiornando il modello di un map chart.</precondizione>
-	<postcondizione>È stato aggiornato il modello di un map chart con metodo movie.</postcondizione>
+	<precondizione>Si sta aggiornando il modello di un map chart. È stato selezionato il modello di un map chart.</precondizione>
+	<postcondizione>È stato aggiornato il modello del map chart selezionato con metodo movie.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie i punti del grafico che intende modificare;</item>
+		<item>Lo sviluppatore inserisce la nuova posizione che devono assumere i punti che vuole modificare;</item>
+		<item>Lo sviluppatore inserisce le posizioni dei nuovi punti che intende aggiungere al grafico;</item>
+		<item>Lo sviluppatore sceglie i punti che intende eliminare dal grafico;</item>
+		<item>I punti vengono modificati, aggiunti al grafico o eliminati dal grafico secondo le istruzioni dello sviluppatore.</item>
+	</principale>
 </usecase>

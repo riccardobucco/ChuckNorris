@@ -5,11 +5,10 @@
 	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si sta aggiornando il modello di un chart.</precondizione>
-	<postcondizione>È stato aggiornato il modello di un line chart.</postcondizione>
+	<postcondizione>È stato aggiornato il modello di un map chart.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore seleziona un modello map chart da aggiornare;</item>
-		<item>Lo sviluppatore aggiorna il modello map chart selezionato con metodo in place(UCN1.2.3.1);</item>
-		<item>Lo sviluppatore aggiorna il modello map chart selezionato con metodo movie(UCN1.2.3.2).</item>
+		<item>Lo sviluppatore aggiorna con metodo in place (UCN1.2.3.1) o con metodo movie (UCN1.2.3.2) il modello map chart selezionato.</item>
 	</principale>
 </usecase>
 

@@ -3,6 +3,11 @@
 <usecase>
 	<titolo>UCN1.2.2.2 Aggiornare un modello line chart con metodo stream</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta aggiornando il modello di un line chart.</precondizione>
-	<postcondizione>È stato aggiornato il modello di un line chart con metodo stream.</postcondizione>
+	<precondizione>Si sta aggiornando il modello di un line chart. È stato selezionato il modello di un line chart.</precondizione>
+	<postcondizione>È stato aggiornato il modello del line chart selezionato con metodo stream.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie un nuovo valore indipendente al quale vuole associare dei nuovi punti sul grafico;</item>
+		<item>Lo sviluppatore inserisce un nuovo valore dipendente per ciascuna linea presente nel grafico selezionato (in corrispondenza del valore indipendente scelto in precedenza);</item>
+		<item>I nuovi punti vengono aggiunti al grafico.</item>
+	</principale>
 </usecase>

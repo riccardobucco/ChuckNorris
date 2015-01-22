@@ -6,6 +6,11 @@
 	<generalizzazionedi>
 		<item>UCN1.2.3.2 Aggiornare un modello map chart con metodo movie</item>
 	</generalizzazionedi>
-	<precondizione>Si sta aggiornando il modello di un map chart.</precondizione>
-	<postcondizione>È stato aggiornato il modello di un map chart con metodo in place.</postcondizione>
+	<precondizione>Si sta aggiornando il modello di un map chart. È stato selezionato il modello di un map chart.</precondizione>
+	<postcondizione>È stato aggiornato il modello del map chart selezionato con metodo in place.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie i punti del grafico che intende modificare;</item>
+		<item>Lo sviluppatore inserisce la nuova posizione che devono assumere i punti che vuole modificare;</item>
+		<item>Le posizioni dei punti scelti vengono modificate.</item>
+	</principale>
 </usecase>

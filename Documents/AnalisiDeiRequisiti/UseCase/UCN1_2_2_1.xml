@@ -3,6 +3,11 @@
 <usecase>
 	<titolo>UCN1.2.2.1 Aggiornare un modello line chart con metodo in place</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta aggiornando il modello di un line chart.</precondizione>
-	<postcondizione>È stato aggiornato il modello di un line chart con metodo in place.</postcondizione>
+	<precondizione>Si sta aggiornando il modello di un line chart. È stato selezionato il modello di un line chart.</precondizione>
+	<postcondizione>È stato aggiornato il modello del line chart selezionato con metodo in place.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie i punti del grafico che intende modificare;</item>
+		<item>Lo sviluppatore inserisce i nuovi valori che devono assumere i punti che vuole modificare;</item>
+		<item>I valori dei punti scelti vengono modificati.</item>
+	</principale>
 </usecase>
