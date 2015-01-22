@@ -102,7 +102,9 @@
 	<entry name="Dropbox">
 		Servizio di \insglo{cloud storage} multipiattaforma, che offre un servizio di \insglo{file hosting} e sincronizzazione automatica di file tramite web.
 	</entry>
-	
+	<entry name="Facebook">
+		Servizio di rete sociale che offre diversi servizi di messaggistica privata, tra cui una chat.
+	</entry>
 	<entry name="Fase">
 		Nei documenti del progetto Norris, e in generale nell'ambito dell'ingegneria del software, per fase si intende un segmento temporale che cattura stati e/o transizioni di un ciclo di vita.
 	</entry>
@@ -116,7 +118,10 @@
 	<entry name="Framework">
 		Architettura logica di supporto (spesso un'implementazione logica di un particolare \insglo{design pattern}) su cui un software può essere progettato e realizzato, spesso facilitandone lo sviluppo da parte del programmatore. Alla base di un framework c'è sempre una serie di librerie di codice utilizzabili in fase di linking con uno o più linguaggi di programmazione, spesso corredate da una serie di strumenti di supporto allo sviluppo del software, come ad esempio un \insglo{IDE}, un \insglo{debugger} o altri strumenti ideati per aumentare la velocità di sviluppo del prodotto finito. L'utilizzo di un framework impone dunque al programmatore una precisa metodologia di sviluppo del software.
 	</entry>
-
+	
+	<entry name="Front end">
+		Parte di un sistema software che gestisce l'interazione con l'utente o con sistemi esterni che producono dati di ingresso.
+	</entry>
 	<entry name="Event-driven">
 		Il modello event-driven, o "programmazione ad eventi", si basa su un concetto piuttosto semplice: un'azione viene effettuata in seguito al verificarsi di eventi esterni. Ogni azione quindi risulta asincrona, a differenza dei pattern di programmazione più comuni, in cui un'azione succede ad un'altra solo dopo che essa è stata completata.
 	</entry>
