@@ -1,20 +1,81 @@
 % !TEX encoding = UTF-8 Unicode
-\section{Resoconto delle varie attività di verifica}
-		\subsection{Fase A}
-			\subsubsection{Documenti}
-				\paragraph{Verifiche manuali}
-					Durante questa fase sono stati verificati i documenti seguendo le procedure presenti nella sezione Verifica nel documento \insdoc{Norme di Progetto}.\\\\
-					É stata quindi applicata un'analisi  statica di tutti i documenti con lo scopo di rilevare errori di struttura, forma e contenuto in esso contenuti. Poichè in questa fase iniziale i documenti dovevano ancora essere verificati interamente, si è proceduto con una verifica di tipo \textit{walkthrough}. Durante questa attività sono emersi alcuni errori che sono stati segnalati. Si è quindi cercato di capire il problema e di trovarne una soluzione, per poi passare alla sua correzione.\\ \\%nelle prossime fasi verificherò solo dove sono avvenute modifiche quindi un controllo semi-mirato
-					In questa prima fase sono stati nuovamente analizzati attraverso \textit{walkthrough} tutti i documenti alla ricerca dei termini che dovrebbero essere inclusi nel \insdoc{Glossario} ma che ancora non lo erano. Trovati, sono stati quindi segnalati e di conseguenza aggiunti. Da questa attività sono stati segnalati 7 termini, ma gli \insrole{Amministratori} hanno ritenuto più opportuno aggiungere solamente 5 di essi al \insdoc{Glossario} .\\\\
-					Vengono poi analizzati anche i diagrammi dei casi d'uso cercando di capire se i vari attori erano davvero tali. Si è fatto riferimento alla sezione 6.2.2.1 del documento \insdoc{Norme di Progetto}. Non sono stati rilevati problemi di questo genere.\\\\
-					É stato quindi verificato che per ogni diagramma siano state utilizzate secondo lo standard UML le relazioni di inclusione, generalizzazione ed estensione. Nemmeno da questa verifica sono emersi errori.\\\\
-					Sono stati infine valutate le descrizioni dei casi d'uso con lo scopo di assicurarsi che sia stato descritto cosa il sistema fa e non cosa non fa. Anche questa verifica si è conclusa positivamente.
-				\paragraph{Verifiche automatizzate}
-					Gli strumenti utilizzati per la verifica automatica dei documenti si trovano nella sezione 6.3 del documento \insdoc{Norme di Progetto}.\\\\
-					É stato sfruttato lo script \textit{OrtographicCheck} per  il controllo ortografico di tutti i documenti. Esso ha evidenziato alcuni errori di battitura che sono stati subito corretti.\\\\
-					É stato poi eseguito lo script \textit{Gulpease} per calcolare l'indice di leggibilità di ogni documento. Di seguito si riportano, in formato tabellare, gli esiti ritornati dallo script.
-					\begin{table}[H]\centering
-						\begin{tabu}{| l | c | c |}
+\section{Resoconto delle varie attività di verifica - Fase A}
+	All'interno di questa prima fase, secondo quanto riportato dal \insdoc{Piano di Progetto}, sono previsti più momenti in cui viene attivato il 
+	processo di verifica. Si è cercato di riportare in questa sezione tutti i risultati che sono stati ottenuti durante questi momenti. Ove fosse 
+	necessario, si sono tratte anche delle conclusioni sui risultati ottenuti e su come essi possono essere migliorati.
+	\subsection{Verifica dei prodotti}
+		\subsubsection{Documenti}
+			In questa sezione vengono riportati i risultati delle attività di verifica svolte sui documenti. Esse sono di due tipi:
+			\begin{itemize}
+				\item verifiche manuali;
+				\item verifiche automatizzate.
+			\end{itemize}
+			\paragraph{Verifiche manuali}
+				Le attività di verifica manuale della documentazione prodotta sono state svolte in base alle procedura riguardante la verifica dei 
+				documenti che è descritta del documento \insdoc{Norme di Progetto}.\\
+				La verifica manuale ha permesso di individuare soprattutto errori che riguardano le seguenti tipologie:
+				\begin{itemize}
+					\item periodi troppo lunghi e complessi da capire e interpretare;
+					\item aggettivi o verbi utilizzati in modo non appropriato;
+					\item incongruenze tra parti diverse dello stesso documento o appartenenti a documenti diversi;
+					\item errori nei concetti esposti.
+				\end{itemize}
+				Di seguito è presentato un riassunto della quantità di errori trovati (e successivamente risolti) utilizzando la verifica manuale durante 
+				l'intera Fase A.
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c |}
+						\hline
+						Periodi lunghi o complessi	&83	\\ \hline
+						Parole non appropriate	&59	\\ \hline
+						Incongruenze	&15	\\ \hline
+						Errori concettuali	&25	\\ \hline
+					\end{tabu}
+					\caption{Errori trovati tramite verifica manuale dei documenti durante la Fase A}
+				\end{table}
+				La verifica manuale, in aggiunta, ha permesso di individuare nuovi termini da aggiungere al \insdoc{Glossario}. Di seguito è presentato un 
+				riassunto della quantità di nuovi termini da aggiungere al \insdoc{Glossario} che sono stati individuati.
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c |}
+						\hline
+						Termini candidati ad essere aggiunti	&38	\\ \hline
+						Termini aggiunti al \insdoc{Glossario}	&27	\\ \hline
+					\end{tabu}
+					\caption{Nuovi termini da inserire nel Glossario individuati tramite verifica manuale dei documenti durante la Fase A}
+				\end{table}
+				È stata infine verificata la correttezza dei diagrammi UML utilizzati all'interno dei vari documenti, sempre seguendo le procedure 
+				contenute nel documento \insdoc{Norme di Progetto}. Qui si sono riscontrati grossi problemi. Infatti, in seguito ad un confronto con il 
+				committente, e in seguito a una successiva verifica dei documenti prodotti fino a quel momento, si è realizzato che si era capita male 
+				la funzione dei diagrammi dei casi d'uso. Ciò ha comportato cambiamenti radicali all'interno del documento \insdoc{Analisi dei Requisiti} 
+				e un conseguente allungamento dei tempi rispetto alla pianificazione fatta nel \insdoc{Piano di Progetto}.
+			\paragraph{Verifiche automatizzate}
+				Le attività di verifica automatizzate, oltre a rispettare le procedure descritte all'interno dell \insdoc{Norme di Progetto}, fanno uso 
+				degli strumenti automatici previsti all'interno dello stesso documento. Questi hanno permesso di individuare numerosi errori che 
+				riguardano le seguenti tipologie:
+				\begin{itemize}
+					\item ortografia errata;
+					\item utilizzo errato dei comandi \LaTeX{} previsti dalle \insdoc{Norme di Progetto};
+					\item norme tipografiche non rispettate (esempio: i ";" necessari alla fine degli elenchi puntati o numerati).
+				\end{itemize}
+				Di seguito è presentato un riassunto della quantità di errori trovati (e successivamente risolti) utilizzando la verifica automatica. Si 
+				tenga in considerazione il fatto che alcuni degli strumenti automatici utilizzati non sono stati disponibili fin dall'inizio.
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c |}
+						\hline
+						Errori ortografici	&132	\\ \hline
+						Utilizzo errato \LaTeX{}	&8	\\ \hline
+						Errori riguardanti norme tipografiche	&23	\\ \hline
+					\end{tabu}
+					\caption{Errori trovati tramite verifica automatica dei documenti durante la Fase A}
+				\end{table}
+				Merita un discorso a parte il calcolo dell'indice di leggibilità, per il quale sono stati imposti nel presente documento dei range che 
+				determinano se un documento è accettabile o meno. Di seguito sono stati riportati gli indici ottenuti (relativi ai documenti completi).
+				Di seguito è presentato un riassunto della quantità di errori trovati (e successivamente risolti) utilizzando la verifica manuale.
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
 							\hline
 							Documenti 				& Gulpease	& Esito  \\ \hline
 							
@@ -26,229 +87,128 @@
 							Verbale esterno del 2014/12/22	 	& 95		& Superato 	\\ 
 							Verbale esterno del 2015/01/05		& 69		& Superato\\ \hline 
 						\end{tabu}
-						\caption{Esiti verifica del grado di leggibilità dei documenti esterni prodotti}
-					\end{table}
-					É stato eseguito anche lo script per marcare automaticamente tutti i termini presenti nel glossario. Tale esecuzione ha evitato una verifica successiva.\\\\
-					É stato eseguito poi lo script \textit{LatexCommandCheck}. Questo script restituisce le stringhe contenenti comandi latex in cui sono presenti spazi prima o dopo il comando. Sono stati ritornati alcuni problemi che sono stati immediatamente risolti attraverso la tecnica di analisi statica \textit{inspection}.\\\\
-					L'esecuzione dello script \textit{NonBreakingSpaceCheck} ci ha garantito che ogni numero formattato secondo lo standard [SI/ISO 31-0] utilizza lo spazio unificatore e non quello normale.
-				\subsubsection{Processi}
-					\paragraph{PDCA}
-						Il grafico PDCA per la \insphase{Fase A} è il seguente:
-						\begin{figure}[H]\centering
-							\includegraphics[width=\textwidth]{PianoDiQualifica/Pics/PDCAFaseA.pdf}
-							\caption{PDCA Fase A}
-						\end{figure}
-						Guardando il grafico possiamo notare nella parte centrale un mutamento dei processi pianificati. Le cause di questa mutazione è l'inesperienza pianificazione e dei problemi nella creazione degli Use Case per il documento \insdoc{Analisi dei Requisiti}.\\
-						Si può notare inoltre un lieve rallentamento nella parte finale causato dalla vicinanza della sessione di esami e quindi l'aumento degli impegni dei componenti del team.
-					\paragraph{Produttività documenti}
-						Per le metriche di produttività ed efficacia sulla documentazione si rimanda alla sezione 3.7.3.2 di questo documento.\\
-						Sono stati calcolati quindi gli indici di produttività per ogni fase di verifica di ogni documento. A seguito verranno riportate per ogni documento le tabelle con tali valori ed il grafici associati se il periodo di stesura è stato diviso in più fasi incrementali. Fare quindi riferimento al \insdoc{Piano di Progetto}.\\ \\
-						Per il documento \insdoc{Norme di Progetto} ho i seguenti valori:				
-						\begin{table}[H]\centering
-							\begin{tabu}{| l | c |}
-								\hline
-													&Prima Fase   \\ \hline
-												
-								Parole scritte				& 3674	 \\ \hline
-								Ore Impiegate				& 30	 \\ \hline\hline
-							
-								Indice di produttività 			 & 122,47 	 \\ \hline
-							\end{tabu}
-							\caption{Indici di produttività Norme di Progetto}
-						\end{table}
-						In questo caso non ha senso associare un grafico perché la creazione delle norme di progetto non è stata fatta per incrementi, essendo i tempi di pianificazione stretti e l'impossibilità di scrivere in parallelo altri documenti.\\
-					
-						Per il documento \insdoc{Studio di Fattibilità} ho i seguenti valori:			
-						\begin{table}[H]\centering
-							\begin{tabu}{| l | c |}
-								\hline
-													&Prima Fase   \\ \hline
-													
-								Parole scritte				& 1507	 \\ \hline
-								Ore Impiegate				& 12	 \\ \hline\hline
-								
-								Indice di produttività 			 & 121,58	  \\ \hline
-							\end{tabu}
-							\caption{Indici di produttività Studio di Fattibilità}
-						\end{table}
-						Anche in questo caso è inutile inserire un grafico data la presenza di una singola fase di verifica.\\
-					
-						Per il documento \insdoc{Analisi dei Requisiti} ho i seguenti valori:	
-						\begin{table}[H]\centering
-							\begin{tabu}{| l | c | c | c | c |}
-								\hline
-													&Prima Fase 	& Seconda Fase	& Terza Fase	& Quarta Fase  \\ \hline
-												
-								Parole scritte				& 730		& 135 		& 3485			& 3288 	 \\ \hline
-								Ore Impiegate				& 730		& 135 		& 3485			& 3288 	 \\ \hline\hline
-							
-								Indice di produttività 			 & 121,67		& 19,29 		& 77,44			& 131,52 	 \\ \hline
-							\end{tabu}
-							\caption{Indici di produttività Analisi dei Requisiti}
-						\end{table}
-						Il grafico associato è il seguente:
-						\begin{figure}[H]\centering
-							\includegraphics[width=12cm]{PianoDiQualifica/Pics/ProduttivitaAdRFaseA.pdf}
-							\caption{Produttività Fase A Analisi dei Requisiti}
-						\end{figure}
-						In questa fase notiamo un crollo della produttività causato dalla difficoltà riscontrata nella costruzione degli user case dunque alla stesura della loro descrizione e nella stesura dei requisiti.\\
-					
-						Per il documento \insdoc{Piano di Progetto} ho i seguenti valori:
-						\begin{table}[H]\centering
-							\begin{tabu}{| X[4] | c | c | c | c | c |}
-								\hline
-													&Prima Fase 	& Seconda Fase	& Terza Fase	& Quarta Fase 	& Quinta Fase  \\ \hline
-												
-								Parole scritte				& 1003		& 635 		& 385			& 387 		& 1789 	 \\ \hline
-								Ore Impiegate				& 8			& 5 			& 3				& 3	 		& 13	 	  \\ \hline\hline
-							
-								Indice di produttività 			 & 125,37		& 127 		& 128,33			& 129 		& 137,62 	  \\ \hline
-							\end{tabu}
-							\caption{Indici di produttività Piano di Progetto}
-						\end{table}
-						Il grafico associato è il seguente:
-						\begin{figure}[H]\centering
-							\includegraphics[width=12cm]{PianoDiQualifica/Pics/ProduttivitaPdPFaseA.pdf}
-							\caption{Produttività Fase A Piano di Progetto}
-						\end{figure}
-						Notiamo un miglioramento della produttività, seppur leggero.\\
-					
-						Per il documento \insdoc{Piano di Qualifica} ho i seguenti valori:	
-						\begin{table}[H]\centering
-							\begin{tabu}{| l | c | c | c | c |}
-								\hline
-													&Prima Fase 	& Seconda Fase	& Terza Fase	& Quarta Fase  \\ \hline
-												
-								Parole scritte				& 378		& 883 		& 760			& 523 	 \\ \hline
-								Ore Impiegate				& 3			& 7 			& 6				& 4	 	 \\ \hline\hline
-								
-								Indice di produttività 			 & 126		& 126,14 		& 126,67			& 130,75 	 \\ \hline
-							\end{tabu}
-							\caption{Indici di produttività Piano di Qualifica}
-						\end{table}
-						Il grafico associato è il seguente:
-						\begin{figure}[H]\centering
-							\includegraphics[width=12cm]{PianoDiQualifica/Pics/ProduttivitaPdQFaseA.pdf}
-							\caption{Produttività Fase A Piano di Qualifica}
-						\end{figure}
-						Anche nella stesura di questo documento notiamo gli stessi leggeri miglioramenti avvenuti per il documento precedente.\\
-						
-						Il grafico seguente rappresenta in ordine cronologico tutti gli indici di produttività calcolati nella fase \insphase{Fase A}.
-						\begin{figure}[H]\centering
-							\includegraphics[width=12cm]{PianoDiQualifica/Pics/ProduttivitaTotaleFaseA.pdf}
-							\caption{Produttività totale Fase A}
-						\end{figure}
-						Le cause di questo leggero miglioramento generale sono molto probabilmente le seguenti:
-						\begin{itemize}
-							\item i componenti del team stanno assimilando le norme di progetto e non devono continuamente far riferimento al documento \insdoc{Norme di Progetto v1.0};
-							\item il gruppo sta imparando i comandi \LaTeX{} e di conseguenza la stesura risulta più veloce.
-						\end{itemize}						
-						Si notano anche i due picchi verso il basso causati dalle iterazioni creatisi nella stesura dell'\insdoc{Analisi dei Requisiti}.
-						
-					\paragraph{Efficacia della revisione dei documenti}
-						Per le metriche di efficacia della revisione sui documenti si rimanda alla sezione 3.7.3.3 di questo documento.\\
-						Calcolati questi valori abbiamo quindi quantificato l'efficacia della revisione.
-						Sono stati calcolati gli indici di efficacia della revisione per ogni fase di verifica di ogni documento. A seguito verranno riportate per ogni documento le tabelle con tali valori ed il grafici associati se il periodo di stesura è stato diviso in più fasi incrementali. Fare quindi riferimento al \insdoc{Piano di Progetto}.\\ \\
-						Per il documento \insdoc{Norme di Progetto} ho i seguenti valori:				
-						\begin{table}[H]\centering
-							\begin{tabu}{| l | c |}
-								\hline
-													&Prima Fase   \\ \hline
-												
-								Errori rilevati				& 311	 \\ \hline
-								Pagine ispezionate			& 32		 \\ \hline\hline
-							
-								Indice di efficacia della revisione 			& 9,72 	 \\ \hline
-							\end{tabu}
-							\caption{Indici di efficacia della revisione sul documento Norme di Progetto}
-						\end{table}
-						In questo caso non ha senso associare un grafico per mostrare la variazione di efficacia.
-					
-						Per il documento \insdoc{Studio di Fattibilità} ho i seguenti valori:			
-						\begin{table}[H]\centering
-							\begin{tabu}{| l | c |}
-								\hline
-													&Prima Fase   \\ \hline
-												
-								Errori rilevati				& 104	 \\ \hline
-								Pagine ispezionate			& 11	 \\ \hline\hline
-							
-								Indice di efficacia della revisione 			 & 9,45	  \\ \hline
-							\end{tabu}
-							\caption{Indici di efficacia della revisione sul documento Studio di Fattibilità}
-						\end{table}
-						Anche in questo caso è inutile inserire un grafico data la presenza di una singola fase di verifica.\\
-					
-						Per il documento \insdoc{Analisi dei Requisiti} ho i seguenti valori:	
-						\begin{table}[H]\centering
-							\begin{tabu}{| l | c | c | c | c |}
-								\hline
-													&Prima Fase 	& Seconda Fase	& Terza Fase	& Quarta Fase  \\ \hline
-												
-								Errori rilevati				& 71		& 12 		& 332			& 234 	 \\ \hline
-								Pagine ispezionate			& 7		& 1 		& 30			& 20 	 \\ \hline\hline
-							
-								Indice di efficacia della revisione 	 & 10,14		& 12 		& 11,07			& 11,7 	 \\ \hline
-							\end{tabu}
-							\caption{Indici di efficacia della revisione sul documento Analisi dei Requisiti}
-						\end{table}
-						Il grafico associato è il seguente:
-						\begin{figure}[H]\centering
-							\includegraphics[width=12cm]{PianoDiQualifica/Pics/EfficaciaAdRFaseA.pdf}
-							\caption{Efficacia della revisione Fase A Analisi dei Requisiti}
-						\end{figure}
-						Notiamo un aumento generale dell'efficacia della revisione. Nella seconda fase notiamo un picco verso l'alto semplicemente perchè avendo un numero di pagine bassissimo ogni errore rilevato fa schizzare verso l'alto l'indice di efficacia. Sarebbe quindi un valore da scartare essendo che ci interessa un valore medio.\\
-					
-						Per il documento \insdoc{Piano di Progetto} ho i seguenti valori:
-						\begin{table}[H]\centering
-							\begin{tabu}{| X[4] | c | c | c | c | c |}
-								\hline
-												&Prima Fase 	& Seconda Fase	& Terza Fase	& Quarta Fase 	& Quinta Fase  \\ \hline
-												
-								Errori rilevati				& 68		& 51 		& 46			& 47 		& 109 	 \\ \hline
-								Pagine ispezionate			& 7			& 5 			& 4				& 4	 		& 9	 	  \\ \hline\hline
-							
-								Indice di efficacia della revisione 	 & 9,71		& 10,2 		& 11,5			& 11,75 		& 12,11 	  \\ \hline
-							\end{tabu}
-							\caption{Indici di efficacia della revisione sul documento Piano di Progetto}
-						\end{table}
-						Il grafico associato è il seguente:
-						\begin{figure}[H]\centering
-							\includegraphics[width=12cm]{PianoDiQualifica/Pics/EfficaciaPdPFaseA.pdf}
-							\caption{Efficacia della revisione sul documento Fase A Piano di Progetto}
-						\end{figure}
-						Notiamo un aumento uniforme dell'efficacia della revisione.
-					
-						Per il documento \insdoc{Piano di Qualifica} ho i seguenti valori:	
-						\begin{table}[H]\centering
-							\begin{tabu}{| l | c | c | c | c |}
-								\hline
-													&Prima Fase 	& Seconda Fase	& Terza Fase	& Quarta Fase  \\ \hline
-												
-								Errori rilevati				& 27		& 72 		& 60			& 51 	 \\ \hline
-								Pagine ispezionate			& 3			& 7 			& 5				& 4	 	 \\ \hline\hline
-							
-								Indice di efficacia della revisione 	& 9		& 10,29 		& 12			& 12,75 	 \\ \hline
-							\end{tabu}
-							\caption{Indici di efficacia della revisione sul documento Piano di Qualifica}
-						\end{table}
-						Il grafico associato è il seguente:
-						\begin{figure}[H]\centering
-							\includegraphics[width=12cm]{PianoDiQualifica/Pics/EfficaciaPdQFaseA.pdf}
-							\caption{Efficacia della revisione Fase A Piano di Qualifica}
-						\end{figure}
-						Anche nella fase di verifica di questo documento notiamo gli stessi miglioramenti avvenuti durante la revisione del documento precedente anche se più accentuati.\\
-						
-						Il grafico seguente rappresenta in ordine cronologico tutti gli indici di efficacia della revisione calcolati nella fase \insphase{Fase A}.
-						\begin{figure}[H]\centering
-							\includegraphics[width=12cm]{PianoDiQualifica/Pics/EfficaciaTotaleFaseA.pdf}
-							\caption{Efficacia totale della revisione Fase A}
-						\end{figure}
-						Questo aumento generale dell'efficacia della revisione è molto probabilmente imputabile all'utilizzo di una lista di controllo (messa in appendice al documento \insdoc{Norme di Progetto}). Si sta infatti cercando di trasformare la fase di verifica da una tecnica walkthrough ad una di tipo inspection rendendoci così più veloci nella ricerca e ciò comporta l'aumento degli errori rilevati.
-						
-					\paragraph{Produttività casi d'uso}
-						Per le metriche di produttività sui casi d'uso si rimanda alla sezione 3.7.3.2 di questo documento.\\
-						%TODO
-						
-						
-						 
+					\caption{Esiti del calcolo dell'indice di leggibilità effettuato tramite strumenti automatici durante la Fase A}
+				\end{table}
+	\subsection{Verifica dei processi}
+		\subsubsection{Processo di documentazione}
+			\paragraph{Livello CMM}
+				L'obiettivo, fin da subito, è stato quello di realizzare un processo di documentazione di qualità: ciò avrebbe aiutato enormemente a 
+				ottenere prodotti soddisfacenti.\\
+				Il team ha cercato di valutare la qualità del processo di documentazione secondo le metriche stabilite dal modello CMM. Ovviamente, quando 
+				il progetto è cominciato si era al livello 1 della scala prevista: le procedure e le norme erano completamente informali, dunque non 
+				ripetibili in modo certo.\\
+				In seguito alla redazione del documento \insdoc{Norme di Progetto} (uno dei primi ad essere realizzato) si ha avuto a disposizione norme 
+				valide per ogni tipo di documentazione, strumenti comuni da poter utilizzare e procedure da seguire per effettuare determinate attività. 
+				In questo modo si è riusciti a controllare maggiormente il processo di documentazione, con il risultato che il Responsabile di Progetto 
+				non ha più dovuto seguire personalmente gli sviluppi giornalieri di ciascun gruppo di lavoro. Il processo di documentazione ha in questo 
+				modo guadagnato ripetibilità (richiesta dal livello 2 di CMM).\\
+				Possiamo dunque concludere di esserci per ora fermati al livello 2 previsto da CMM, in quanto il processo di documentazione non possiede 
+				ancora la principale caratteristica richiesta dal terzo livello, ovvero la proattività. Infatti, è capitato durante la Fase A che 
+				venissero riscontrati dei problemi che non erano stati previsti: a questi si è reagito (e qui sta il problema) trovando delle soluzioni 
+				ad hoc.\\
+				Quanto detto è un dato di fatto, quindi non si può che prenderne atto. Tuttavia questo livello non è ritenuto accettabile (secondo quanto 
+				descritto nel presente documento alla sezione "Misure e metriche") e durante le prossime fasi si prevede di continuare a lavorare per 
+				poter ottenere miglioramenti sotto questi punti di vista (sfruttando PDCA).
+			\paragraph{Produttività}
+				Utilizzando la formula descritta all'interno del presente documento (sezione "Metriche e misure") è stata calcolata la produttività del 
+				processo di documentazione. Tale indice è stato calcolato durante tutti i momenti di verifica previsti dal \insdoc{Piano di Progetto} per 
+				la Fase A, e ciò è stato fatto per ogni documento che era stato redatto nel periodo antecedente la verifica. Ogni documento è stato 
+				sottoposto a processo di verifica al più cinque volte.\\
+				Si noti che il calcolo fatto di volta in volta sullo stesso documento tiene conto solo delle nuove sezioni introdotte in esso.\\
+				Segue un riassunto di quanto è stato fatto.
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c | c | c | c |}
+						\hline
+							&1	&2	&3	&4	&5	\\ \hline
+						Norme di Progetto	&216 &	&	&	& \\ \hline
+						Studio di Fattibilità	&100	&	&	&	& \\ \hline
+						Analisi dei Requisiti	&160	&178	&39	&194	& \\ \hline
+						Piano di Progetto	&144	&98	&168	&129	&155 \\ \hline
+						Piano di Qualifica	&126	&152	&142	&195	&\\ \hline
+					\end{tabu}
+					\caption{Produttività delle varie attività del processo di documentazione durante la fase A}
+				\end{table}
+				Di seguito vengono riportati in un grafico i valori della produttività del processo di documentazione rilevati nei vari periodi della 
+				Fase A nei quali è stato applicato il processo di verifica. Il grafico fa riferimento alla tabella precedente.
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=12cm]{PianoDiQualifica/Pics/ProduttivitaDocumentazioneFaseA.pdf}
+					\caption{Produttività del processo di documentazione durante la Fase A}
+				\end{figure}
+				Si può, in generale, notare un miglioramento nella produttività. Questo, probabilmente, è imputabile ai seguenti fatti:
+				\begin{itemize}
+					\item i componenti del team hanno assimilato i contenuti delle \insdoc{Norme di Progetto} e non devono continuamente far 
+					riferimento ad esse;
+					\item il gruppo sta imparando i comandi \LaTeX{} previsti per la stesura dei documenti e di conseguenza la stesura risulta più veloce;
+					\item è stata imposta una struttura prefissata ai documenti, togliendo di conseguenza questa responsabilità dai redattori.
+				\end{itemize}
+				Il picco negativo nella produttività del documento \insdoc{Analisi dei Requisiti} è imputabile ai problemi avuti dagli Analisti durante 
+				la loro attività: il loro lavoro infatti è stato rallentato a causa di una cattiva comprensione dei diagrammi dei casi d'uso.
+		\subsubsection{Processo di verifica}
+			\paragraph{Livello CMM}
+				L'obiettivo, fin da subito, è stato quello di realizzare un processo di verifica di qualità. La principale ragione per fare ciò è che la 
+				verifica occupa una parte cospicua del progetto: di conseguenza essa è molto costosa. La si vuole rendere più efficace e allo stesso 
+				tempo efficiente possibile. Per ottenere tali obiettivi si deve rendere il processo controllabile.\\
+				Anche per quanto riguarda questo processo, come per quello di documentazione, siamo in grado di dire che è stato raggiunto il livello 2 
+				nella scala prevista da CMM. Il processo ha infatti superato l'iniziale stato caotico nel quale si trovava all'inizio della Fase A
+				(grazie, per esempio, all'introduzione di una lista di controllo per gli errori comuni o all'utilizzo sistematico di strumenti 
+				automatici e di procedure). Tuttavia il team non può ancora affermare che il processo di verifica adottato abbia raggiunto un livello di 
+				maturità 3, in quanto è stata documentata in modo accettabile solo l'attività di realizzazione del processo, e non quella di gestione 
+				dello stesso.
+			\paragraph{Produttività}
+				Utilizzando la formula descritta all'interno del presente documento (sezione "Metriche e misure") è stata calcolata la produttività del 
+				processo di verifica. Tale indice è stato calcolato in seguito a tutti i momenti di verifica previsti dal \insdoc{Piano di Progetto} per 
+				la Fase A. Di seguito vengono riportati i valori calcolati e una loro rappresentazione grafica.
+				\begin{table}[H]
+					\centering
+						\begin{tabu}{| l | c | c | c | c | c | c | c |}
+							\hline
+								&14-17/12	&21-24/12	&27-31/12 	&01-04/01	&09-12/01	&13-16/01	&17-19/01	\\ \hline
+							Produttività	&15	&9	&16	&18	&15	&14	&16\\ \hline
+						\end{tabu}
+					\caption{Produttività del processo di verifica durante la fase A}
+				\end{table}
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=12cm]{PianoDiQualifica/Pics/ProduttivitaVerificaFaseA.pdf}
+					\caption{Produttività del processo di verifica durante la Fase A}
+				\end{figure}
+				Dai dati si può notare come la produttività del processo di verifica non sia aumentata in modo sostanziale durante la Fase A, nonostante 
+				i miglioramenti apportati in termini di procedure e strumenti. Probabilmente questo è dovuto ad un aumento della qualità dei prodotti 
+				ispezionati di volta in volta. Infatti, i redattori si sono adeguati a perseguire con maggior rigore gli obiettivi di qualità che il team 
+				si è imposto (e che sono descritti all'interno del presente documento), secondo il principio che la qualità è una responsabilità di tutti.
+			\paragraph{Efficacia di una revisione}
+				Utilizzando la formula descritta all'interno del presente documento (sezione "Metriche e misure") è stata calcolata l'efficacia delle 
+				varie revisioni che sono state fatte durante la Fase A. Di seguito vengono riportati i valori calcolati e una loro rappresentazione grafica.
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c | c | c | c | c | c |}
+						\hline
+							&14-17/12	&21-24/12	&27-31/12 	&01-04/01	&09-12/01	&13-16/01	&17-19/01	\\ \hline
+						Efficacia	&9	&6	&7	&5	&7	&7	&8 \\ \hline
+					\end{tabu}
+					\caption{Efficacia delle revisioni durante la fase A}
+				\end{table}
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=12cm]{PianoDiQualifica/Pics/EfficaciaRevisioniFaseA.pdf}
+					\caption{Efficacia delle revisioni durante la Fase A}
+				\end{figure}
+				Dal grafico sopra presentato si può notare come non via sia stato un miglioramento tangibile dell'efficacia delle revisioni che sono 
+				state fatte durante la Fase A. I motivi non sono facilmente comprensibili a causa dell'inesperienza del team, ma si può azzardare 
+				l'ipotesi che non siano stati utilizzati sufficienti strumenti in grado di automatizzare la verifica. Infatti, è molto più facile 
+				aumentare l'efficacia di una revisione se questa viene fatta in modo automatico piuttosto che aumentare l'efficacia di una revisione 
+				eseguita perlopiù manualmente. Il team, dunque, per le prossime fasi, si impegna a includere un maggior numero di strumenti di supporto 
+				al processo di verifica (in particolare per quanto riguarda la verifica della documentazione).
+		\subsubsection{PDCA}
+			In questa sezione viene riportato il grafico PDCA della Fase A. In ascissa è rappresentato il tempo, in ordinata le attività.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.6\textwidth]{PianoDiQualifica/Pics/GraficoPDCAFaseA.pdf}
+				\caption{PDCA Fase A}
+			\end{figure}
+			Guardando il grafico si può notare come nella parte centrale vi sia un mutamento dei processi pianificati. Le cause di questo evento 
+			inaspettato	risiedono principalmente nell'inesperienza in un'attività come la pianificazione. Inoltre ciò è stato dovuto a dei problemi 
+			riscontrati dagli Analisti nella creazione dei diagrammi dei casi d'uso per il documento \insdoc{Analisi dei Requisiti}.\\
+			Si può infine notare come vi sia un lieve rallentamento delle attività nella parte finale causato dalla vicinanza della sessione di esami.
