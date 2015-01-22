@@ -36,7 +36,12 @@
 		\renewcommand{\abstracttextfont}{\large}
 
 		%hyperred
-		\hypersetup{linktoc=all}
+		\hypersetup{
+			linktoc=all,
+			colorlinks=true,
+			allcolors=black,
+			urlcolor=blue
+		}
 
 		%section counters
 		\setcounter{tocdepth}{5}
@@ -46,11 +51,15 @@
 		\fancyhf{}
 		\fancyhead[L]{\includegraphics[scale=0.05]{Pics/Logo} \includegraphics[height=7mm]{Pics/KaizenTeam}}
 		\fancyhead[R]{\Large \bfseries \doctitle \vspace{0.1mm}}
+
 		\fancypagestyle{roman}{
+			\hypersetup{linkcolor=black}
 			\pagenumbering{Roman}
 			\fancyfoot[C]{\thepage{}}
 		}
+
 		\fancypagestyle{plain}{
+			\hypersetup{linkcolor=blue}
 			\pagenumbering{arabic}
 			\fancyfoot[C]{\thepage{} di \pageref{LastPage}}
 		}

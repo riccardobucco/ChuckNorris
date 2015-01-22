@@ -4,16 +4,29 @@
 	<titolo>UCN1 Utilizzo API interne di Norris</titolo>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si sta utilizzando Norris.</precondizione>
-	<postcondizione>Sono state utilizzate le API interne di Norris.</postcondizione>
+	<postcondizione>Sono state utilizzate funzioni offerte dalle API interne di Norris.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore crea un modello chart (UCN1.1);</item>
-		<item>Lo sviluppatore aggiorna un modello chart (UCN1.2);</item>
-		<item>Lo sviluppatore crea una pagina (UCN1.3);</item>
-		<item>Lo sviluppatore crea un modello bar chart (UCN1.4);</item>
-		<item>Lo sviluppatore crea un modello line chart (UCN1.5);</item>
-		<item>Lo sviluppatore crea un modello map chart (UCN1.6);</item>
-		<item>Lo sviluppatore crea un modello table (UCN1.7);</item>
-		<item>Lo sviluppatore ottiene un middleware per Express.js (UCN1.8);</item>
-		<item>Lo sviluppatore visualizza un errore (UCN1.9). </item>
+		<item>Lo sviluppatore può creare un modello chart (UCN1.1);</item>
+		<item>Lo sviluppatore può aggiornare un modello chart (UCN1.2);</item>
+		<item>Lo sviluppatore può creare una pagina (UCN1.3);</item>
+		<item>Lo sviluppatore può creare un modello bar chart (UCN1.4);</item>
+		<item>Lo sviluppatore può creare un modello line chart (UCN1.5);</item>
+		<item>Lo sviluppatore può creare un modello map chart (UCN1.6);</item>
+		<item>Lo sviluppatore può creare un modello table (UCN1.7);</item>
+		<item>Lo sviluppatore può ottenere un middleware per Express.js (UCN1.8).</item>
 	</principale>
+	<alternativi>
+		<scenario>
+			<descrizione>Nel caso in cui la creazione del grafico non sia avvenuta nel modo corretto:</descrizione>
+			<item>il sistema segnala un errore (UCN1.9).</item>
+		</scenario>
+		<scenario>
+			<descrizione>Nel caso in cui l'aggiornamento del grafico non sia avvenuta nel modo corretto:</descrizione>
+			<item>il sistema segnala un errore (UCN1.9).</item>
+		</scenario>
+		<scenario>
+			<descrizione>Nel caso in cui la creazione della pagina non sia avvenuta nel modo corretto:</descrizione>
+			<item>il sistema segnala un errore (UCN1.9).</item>
+		</scenario>
+	</alternativi>
 </usecase>
