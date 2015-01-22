@@ -6,7 +6,10 @@ DOCUMENTI =	AnalisiDeiRequisiti \
 		StudioDiFattibilita
 
 
-all: $(DOCUMENTI)
+all: $(DOCUMENTI) LetteraDiPresentazione
+
+LetteraDiPresentazione: _force
+	@ make $@/$@.pdf
 
 
 $(DOCUMENTI): _force
@@ -77,7 +80,9 @@ glossary: _force
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/(\\($(skip))(\[[^\]*\])?\{[^}]*)\\insglo\{([^}]*)\}/\1\4/gi' {} \;
 	
 clean: _force
-	@ rm -f */*.tex */*.out */*.log */*.aux */*.toc */*.lof */*.lot
 	@ rm -f AnalisiDeiRequisiti/UseCase/*.tex
+	@ rm -f $(DOCUMENTI:%=%/*.tex)
+
+	@ rm -f */*.out */*.log */*.aux */*.toc */*.lof */*.lot
 
 _force:

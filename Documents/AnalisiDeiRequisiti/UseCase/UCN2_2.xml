@@ -9,7 +9,6 @@
 	<precondizione>Si stanno utilizzando le API esterne.</precondizione>
 	<postcondizione>È stata ottenuta la lista dei grafici presenti in un'istanza di Norris</postcondizione>
 	<principale>
-		<item>Il client seleziona un'istanza esistente di Norris (UCN2.1.1);</item>
 		<item>Il client ottiene l'ID di ciascun grafico (UCN2.2.1);</item>
 		<item>Il client ottiene il titolo di ciascun grafico (UCN2.2.2);</item>
 		<item>Il client ottiene il tipo di ciascun grafico (UCN2.2.3);</item>

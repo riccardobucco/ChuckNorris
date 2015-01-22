@@ -3,8 +3,6 @@
 <usecase>
 	<titolo>UCD1.1 Filtraggio autobus per linea</titolo>
 	<attorip>Utente</attorip>
-	<attoris>Norris</attoris>
-	<inclusioni>UCD3</inclusioni>
 	<precondizione>Si sta visualizzando la posizione degli autobus APS in tempo reale.</precondizione>
 	<postcondizione>È stata effettuato un filtraggio per linea degli autobus visualizzati.</postcondizione>
 </usecase>

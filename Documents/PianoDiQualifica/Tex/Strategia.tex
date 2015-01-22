@@ -2,50 +2,35 @@
 
 \section{Visione generale della strategia di verifica}
 	Costruire prodotti software di qualità adoperando processi controllabili (dunque migliorabili) ha un costo non trascurabile. Il livello di qualità 
-	dei prodotti e dei processi che intendiamo raggiungere deve essere garantito allo stesso modo con cui garantimo le funzionalità software che ci 
-	sono state richieste. Di conseguenza, La qualità deve essere pianificata, progettata, sviluppata, verificata, misurata e valutata durante l'intero 
-	progetto. Si noti come la qualità, se perseguita fin dall'inizio, costi meno di quanto non risulti nella maggior parte dei progetti nei quali viene 
-	trascurata all'inizio.
+	dei prodotti e dei processi che intendiamo raggiungere deve essere garantito allo stesso modo con cui garantimo le funzionalità software che ci sono state richieste. Di conseguenza, la qualità deve essere pianificata, progettata, sviluppata, verificata, misurata e valutata durante l'intero progetto. Si noti come la qualità, se perseguita fin dall'inizio, costi meno di quanto non risulti nella maggior parte dei progetti nei quali viene trascurata all'inizio.
 	\subsection{Tecniche di controllo qualità di processo}
 		Per poter controllare un processo, e di conseguenza migliorarlo, è necessario saper misurare in modo più preciso possibile alcune sue 
 		caratteristiche di interesse e soprattutto i miglioramenti stessi.\\
-		Il team, dunque, intende misurare con continuità le caratteristiche d'interesse dei vari processi, ai fini di poterli migliorare. Per mettere in 
-		atto ciò ci si basa su quanto descritto in seguito.
+		Il team, dunque, intende misurare con continuità le caratteristiche d'interesse dei vari processi, ai fini di poterli migliorare. Per mettere in atto ciò ci si basa su quanto descritto in seguito.
 		\begin{itemize}
-			\item Ci si basa innanzitutto sul modello CMM, quindi sui concetti di "capability" e "maturity" (vedi l'appendice A del presente documento).
-			\item In secondo luogo, possono essere calcolati alcuni valori utili per confrontare le performance dello stesso processo in momenti 
-			differenti: in questo modo si possono evidenziare eventuali miglioramenti raggiunti (vedi sezione "Metriche e misure" del presente documento).
-			\item Infine, per misurare la qualità di un processo può essere utile verificare quella del suo prodotto: se essa è scarsa, ciò implica che 
-			probabilmente anche il processo dal quale deriva non è per nulla di qualità.
+			\item Ci si basa innanzitutto sul modello CMM, quindi sui concetti di ``\textit{capability}'' e ``\textit{maturity}'' (vedi l'appendice A del presente documento).
+			\item In secondo luogo, possono essere calcolati alcuni valori utili per confrontare le performance dello stesso processo in momenti differenti: in questo modo si possono evidenziare eventuali miglioramenti raggiunti (vedi sezione ``Metriche e misure'' del presente documento).
+			\item Infine, per misurare la qualità di un processo può essere utile verificare quella del suo prodotto: se essa è scarsa, ciò implica che probabilmente anche il processo dal quale deriva non è per nulla di qualità.
 		\end{itemize}
-		Una volta che le misure sono state effettuate, esse devono essere utilizzate per cercare di migliorare il processo. Per provare ad apportare 
-		miglioramenti in modo sistematico viene utilizzato il modello del miglioramento continuo (PDCA), che prevede una costante iterazione tra 
-		pianificazione, esecuzione del programma, controllo dei risultati e azioni correttive.\\
+		Una volta che le misure sono state effettuate, esse devono essere utilizzate per cercare di migliorare il processo. Per provare ad apportare miglioramenti in modo sistematico viene utilizzato il modello del miglioramento continuo (PDCA), che prevede una costante iterazione tra pianificazione, esecuzione del programma, controllo dei risultati e azioni correttive.\\
 	\subsection{Tecniche di controllo qualità di prodotto}
 		Il controllo della qualità del prodotto è assicurato da due tipi di processi, quello di verifica e quello di validazione.
 		\begin{description}
 			\item[Verifica] Tale processo viene applicato su qualsiasi attività o risultato che fa avanzare il progetto da una baseline all'altra: esso 
 			ci permette cioè di capire se la nuova baseline è buona. In altre parole, la verifica si occupa di accertare che l'esecuzione delle attività 
 			di processi svolti nella fase in esame non abbia introdotto errori nel prodotto.
-			\item[Validazione] Tale processo è conclusivo. Esso viene messo in atto alla fine, quando il prodotto è pronto: ci permette di capire se tale 
-			prodotto è conforme oppure no alle aspettative (ovvero ai requisiti).
+			\item[Validazione] Tale processo è conclusivo. Esso viene messo in atto alla fine, quando il prodotto è pronto: ci permette di capire se tale prodotto è conforme oppure no alle aspettative (ovvero ai requisiti).
 		\end{description}
-		La verifica viene messa in atto di continuuo, la validazione solo alla fine.\\
-		Le tecniche utilizzate all'interno di tali processi sono moltemplici: si usano tanto tecniche di analisi statica quanto di analisi dinamica (per 
-		una descrizione dettagliata di tali tecniche si consulti il documento Norme di Progetto). Molto spesso si fa anche uso di test (a patto che 
-		abbiano grande valore dimostrativo).\\
-		In aggiunta a tali tecniche, possono essere effettuate delle misure (sulla base delle relative metriche): per maggiori dettagli si consulti la 
-		sezione "Misure e metriche" contenuta nel presente documento.
+		La verifica viene messa in atto di continuo, la validazione solo alla fine.\\
+		Le tecniche utilizzate all'interno di tali processi sono moltemplici: si usano tanto tecniche di analisi statica quanto di analisi dinamica (per una descrizione dettagliata di tali tecniche si consulti il documento \insdoc{Norme di Progetto}). Molto spesso si fa anche uso di test (a patto che abbiano grande valore dimostrativo).\\
+		In aggiunta a tali tecniche, possono essere effettuate delle misure (sulla base delle relative metriche): per maggiori dettagli si consulti la sezione ``Misure e metriche'' contenuta nel presente documento.
 	\subsection{Organizzazione}
-		Come indicato nel \insdoc{Piano di Progetto v1.0}, all'interno del ciclo di vita possono essere individuate varie fasi. All'interno di ciascuna di 
-		esse sono pianificati più momenti di verifica, riguardanti le attività (e dunque i processi) che sono state svolte. Tuttavia, in generale, attività 
-		e processi diversi fanno ottenere prodotti differenti. Dunque, è necessario prevedere procedure di verifica differenti a seconda del processo e del 
-		prodotto ottenuto.\\
+		Come indicato nel \insdoc{Piano di Progetto v1.0}, all'interno del ciclo di vita possono essere individuate varie fasi. All'interno di ciascuna di esse sono pianificati più momenti di verifica, riguardanti le attività (e dunque i processi) che sono state svolte. Tuttavia, in generale, attività e processi diversi fanno ottenere prodotti differenti. Dunque, è necessario prevedere procedure di verifica differenti a seconda del processo e del prodotto ottenuto.\\
 		Fatta questa premessa, l'organizzazione della strategia di verifica viene suddivisa in base alle attività svolte durante specifiche fasi: per ognuna 
 		di esse viene attuata un'attività di verifica (e le relative procedure) differente. Le attività di verifica riguardano tanto i processi tanto gli 
 		eventuali prodotti ottenuti tramite essi.\\
 		Il compito di effettuare le verifiche (utilizzando gli strumenti indicati nelle Norme di Progetto) spetta ai Verificatori in carica nei momenti 
-		definiti dal Responsabile di Progetto. Le verifiche da essi svolte hanno il compito di consolidare i miglioramenti raggiunti.\\
+		definiti dal \insrole{Responsabile di Progetto}. Le verifiche da essi svolte hanno il compito di consolidare i miglioramenti raggiunti.\\
 		Di seguito viene riportato come è organizzata l'attività di verifica.
 		\begin{description}
 			\item[Fase A] In questa fase viene prodotta molta documentazione. Tutti i documenti che sono redatti durante tale fase devono essere 
@@ -62,19 +47,19 @@
 			\item[Fase AD] Durante questa fase vengono applicati miglioramenti alla documentazione. Anche i requisiti e i casi d'uso 
 			sono soggetti a una revisione. Dunque, quando è prevista l'attività di verifica riguardante tale fase (vedi Piano di Progetto), i Verificatori 
 			devono fare i controlli descritti al punto precedente, ponendo però particolare attenzione alle correzioni, alle segnalazioni e ai suggerimenti 
-			dati dal committente durante la Revisione dei Requisiti.\\
+			dati dal committente durante la \insrev{Revisione dei Requisiti}.\\
 			Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
 			all'interno delle Norme di Progetto.
 			\item[Fase PA] Durante tale fase si progetta l'architettura del sistema. Qui l'attività di verifica si deve dunque assicurare che ogni requisito 
 			espresso durante le fase di Analisi sia in corrispondenza con ciascun modulo progettato durante questa fase.\\
-			Inoltre, similmente a quanto deve essere fatto nelle fasi precedenti, i Verificatori devono assicurarsi che la documentazione (intesa sia 
+			Inoltre, similmente a quanto deve essere fatto nelle fasi precedenti, i \insorle{Verificatori} devono assicurarsi che la documentazione (intesa sia 
 			come processo sia come prodotto) venga fatta nel modo migliore possibile.\\
 			Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
 			all'interno delle Norme di Progetto.
 			\item[Fase PROB - PRD - PROP] Durante tali fasi si progettano nel dettaglio e si codificano tutti i requisiti obbligatori, desiderabili e 
 			opzionali. Anche qui, come nella fase precedente, si deve verificare il corretto tracciamento dei requisiti: l'intera progettazione deve 
 			riguardare tutti e soli i requisiti individuati nella fase di Analisi (in modo tale che non manchi nulla e non ci sia nulla in più).\\
-			Per quanto riguarda l'attività di codifica, è compito del Verificatore (in collaborazione con il Programmatore) eseguire i test di unità, di 
+			Per quanto riguarda l'attività di codifica, è compito del \insrole{Verificatore} (in collaborazione con il \insrole{Programmatore}) eseguire i test di unità, di 
 			integrazione e di sistema: in questo modo viene testata la qualità del prodotto.\\
 			Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
 			all'interno delle Norme di Progetto.
@@ -100,7 +85,7 @@
 					\item deve assicurarsi che i processi siano attentamente controllati e valutati in modo oggettivo (in modo tale che essi siano 
 					migliorabili);
 					\item deve assegnare i compiti relativi alla verifica di prodotti a persone per quanto possibile indipendenti dallo sviluppo di essi 
-					(e secondo quanto descritto nel Piano di Progetto);
+					(e secondo quanto descritto nel \insdoc{Piano di Progetto});
 					\item deve pianificare attentamente controlli sul processo di qualità stesso.
 				\end{itemize}
 				\item Amministratore di Progetto:
@@ -168,7 +153,7 @@
 					molto di più della prevenzione. Quindi, ad esempio, servono software con i seguenti compiti:
 					\begin{itemize}
 						\item rilevare (durante la scrittura) eventuali errori ortografici;
-						\item costruire e visualizzare in real-time il documento scritto in Latex (in modo che sia facile accorgersi di errori 
+						\item costruire e visualizzare in real-time il documento scritto in \LaTex{} (in modo che sia facile accorgersi di errori 
 						nell'utilizzo dei comandi);
 						\item raccogliere tutti gli errori comuni, in modo da formare in automatico una lista alla quale possono guardare coloro che 
 						devono redigere un documento. 
@@ -180,7 +165,7 @@
 				\paragraph{Risorse umane}
 					Le risorse umane disponibili per mettere in pratica le attività di verifica sono date dai componenti del team. Essi svolgono le 
 					mansioni dei vari ruoli necessari (indicati nel paragrafo riguardante le risorse umane necessarie) in accordo con quanto descritto 
-					nel Piano di Progetto e in generale in base alle decisioni del Responsabile di Progetto.
+					nel Piano di Progetto e in generale in base alle decisioni del \insrole{Responsabile di Progetto}.
 				\paragraph{Risorse software}
 					Il team si è dotato di alcuni script che eseguono controlli automatici di diverso tipo. Alcuni di questi programmi (come il 
 					correttore ortografico automatico) sono stati rinvenuti sulla rete. Quando ciò non è stato possibile, il team ha provveduto esso 
@@ -193,7 +178,7 @@
 					\end{itemize}
 					Sono inoltre disponibili le risorse hardware messe a disposizione dal Servizio Calcolo dell'Università degli Studi di Padova.
 		\subsection{Misure e metriche}
-			L'obiettivo è quello di misurare la qualità di "cosa" si realizza (il prodotto) e "come" lo si realizza (il processo). Il problema è 
+			L'obiettivo è quello di misurare la qualità di ``cosa'' si realizza (il prodotto) e ``come'' lo si realizza (il processo). Il problema è 
 			riuscire a stimare in modo preciso quanto si sta misurando. Per questo motivo sono necessarie delle metriche, dei criteri stabiliti a 
 			priori su cui basare la misurazione della qualità.
 			\subsubsection{Misure}
@@ -255,15 +240,15 @@
 						Produttivita' = \frac{Quantita'\ di\ output\ ottenuto}{Quantita'\ di\ input\ utilizzato}
 						\label{Produttività}
 					\end{equation}
-					Tale parametro genera metriche differenti in base a cosa si riferiscono i termini "input" e "output". Dunque, tale formula assume 
+					Tale parametro genera metriche differenti in base a cosa si riferiscono i termini ``input'' e ``output''. Dunque, tale formula assume 
 					aspetti diversi in base ai processi (e relative attività) ai quali viene applicata.
 					\begin{description}
-						\item[Documentazione] Il parametro "input" assume il significato di "numero di parole scritte", il parametro "output" assume il 
-						significato di "tempo necessario alla scrittura della documentazione".
-						\item[Codifica] Il parametro "input" assume il significato di "numero di linee di codice scritte", il parametro "output" assume 
-						il significato di "tempo necessario alla scrittura del codice".
-						\item[Verifica] Il parametro "input" assume il significato di "numero di anomalie rilevate", il parametro "output" assume il 
-						significato di "tempo necessario alle attività di verifica".
+						\item[Documentazione] Il parametro ``input'' assume il significato di ``numero di parole scritte'', il parametro ``output'' assume il 
+						significato di ``ore necessarie alla scrittura della documentazione''.
+						\item[Codifica] Il parametro ``input'' assume il significato di ``numero di linee di codice scritte'', il parametro ``output'' assume 
+						il significato di ``ore necessarie alla scrittura del codice''.
+						\item[Verifica] Il parametro ``input'' assume il significato di ``numero di anomalie rilevate'', il parametro ``output'' assume il 
+						significato di ``ore necessarie alle attività di verifica''.
 					\end{description}
 					I valori che si ottengono in tale modo sono difficilmente valutabili in modo assoluto. Piuttosto, essi assumono importanza nel 
 					momento in cui vengono confrontati fra loro in momenti diversi del progetto: in questo modo il Responsabile di Progetto può valutare 
@@ -277,10 +262,10 @@
 					\end{equation}
 					A parità di elementi ispezionati si vuole che il numero di errori rilevati sia maggiore possibile.\\
 					Tale indice è valido per il processo di verifica. Tuttavia, a seconda dell'ambito a cui viene applicata la verifica, il termine 
-					"elementi" assume una connotazione diversa. Alcuni esempi sono riportati di seguito.
+					``elementi'' assume una connotazione diversa. Alcuni esempi sono riportati di seguito.
 					\begin{description}
-						\item[Documentazione] Il termine "elementi" assume il significato di "pagine".
-						\item[Codifica] Il termine "elementi" assume il significato di "righe di codice".
+						\item[Documentazione] Il termine ``elementi'' assume il significato di ``pagine''.
+						\item[Codifica] Il termine ``elementi'' assume il significato di ``righe di codice''.
 					\end{description}
 					Anche in questo caso vale un discorso simile a quello fatto per la produttività: non siamo in grado di individuare con 
 					precisione dei valori accettabili di riferimento. Di conseguenza tali misure avranno valore relativo, in quanto usate per essere 

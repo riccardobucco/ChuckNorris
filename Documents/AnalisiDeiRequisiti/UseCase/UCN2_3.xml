@@ -8,8 +8,4 @@
 	</specializzazionedi>
 	<precondizione>Si stanno utilizzando le API esterne.</precondizione>
 	<postcondizione>È stato ottenuto un grafico presente in un'istanza di Norris.</postcondizione>
-	<principale>
-		<item>Il client seleziona un'istanza esistente di Norris (UCN2.1.1);</item>
-		<item>Il client seleziona l'ID del grafico che si vuole ottenere.</item>
-	</principale>
 </usecase>

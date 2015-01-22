@@ -4,7 +4,7 @@
 	<xsl:output method="text"/>
 	
 	<xsl:template match="/document">
-		\documentclass[a4paper,twoside]{article}
+		\documentclass[a4paper]{article}
 		
 		%package include
 		\usepackage[margin=3cm]{geometry}
@@ -26,26 +26,10 @@
 		
 
 		%macro definitions
-		\newcommand{\groupname}{Kaizen Team}
-		\newcommand{\projectname}{Norris}
+		\input{Tex/Macro.tex}
 		\newcommand{\doctitle}{<xsl:value-of select="title"/>}
 		\newcommand{\lastversion}{<xsl:value-of select="changes/version[1]/id"/>}
-		\newcommand{\proponente}{Maccagnan Alessandro}
-		\newcommand{\committente}{Vardanega Tullio}
-
-		\newcommand{\insglo}[1]{#1{\ped G}}
-		\newcommand{\ignoreglo}[1]{#1}
 		
-		\newcommand{\insdate}[3]{#3-#2-#1}
-		\newcommand{\instime}[2]{#1-#2}
-		\newcommand{\insuri}[1]{\textcolor{blue}{\texttt{\url{#1}}}}
-		\newcommand{\inspath}[1]{\texttt{#1}}
-		\newcommand{\insrole}[1]{\textit{#1}}
-		\newcommand{\insdoc}[1]{\textit{“#1”}}
-		\newcommand{\insfile}[1]{“\texttt{#1}”}
-		\newcommand{\insrev}[1]{\texttt{#1}}
-		\newcommand{\insphase}[1]{\texttt{#1}}
-
 
 		%abstract font
 		\renewcommand{\abstractnamefont}{\huge\bfseries}
@@ -59,12 +43,18 @@
 		\setcounter{secnumdepth}{5}
 
 		%fancyhdr config
-		\fancyhead{}
-		\fancyhead[RE,LO]{\includegraphics[scale=0.05]{Pics/Logo} \includegraphics[height=7mm]{Pics/KaizenTeam}}
-		\fancyhead[RO,LE]{\Large \bfseries \doctitle \vspace{0.1mm}}
+		\fancyhf{}
+		\fancyhead[L]{\includegraphics[scale=0.05]{Pics/Logo} \includegraphics[height=7mm]{Pics/KaizenTeam}}
+		\fancyhead[R]{\Large \bfseries \doctitle \vspace{0.1mm}}
+		\fancypagestyle{roman}{
+			\pagenumbering{Roman}
+			\fancyfoot[C]{\thepage{}}
+		}
+		\fancypagestyle{plain}{
+			\pagenumbering{arabic}
+			\fancyfoot[C]{\thepage{} di \pageref{LastPage}}
+		}
 
-		\fancyfoot{}
-		\fancyfoot[C]{\thepage{} di \pageref{LastPage}}
 		
 		%space between paragraph
 		\raggedbottom
@@ -73,7 +63,7 @@
 
 		\begin{document}
 
-			\pagestyle{fancy}
+			\pagestyle{roman}
 			\input{Tex/Titlepage.tex}
 			\newpage
 			<xsl:call-template name="description"/>
@@ -87,7 +77,8 @@
 			\listoftables
 			\newpage
 			\listoffigures
-			
+			\newpage
+			\pagestyle{plain}
 
 			<xsl:apply-templates select="sections/name"/>
 			<xsl:apply-templates select="appendix"/>
