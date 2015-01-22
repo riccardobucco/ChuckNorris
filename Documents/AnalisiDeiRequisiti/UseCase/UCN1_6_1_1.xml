@@ -4,5 +4,5 @@
 	<titolo>UCN1.6.1.1 Scegliere il formato di stampa dei valori del map chart</titolo>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
-	<postcondizione>È stato scelto il formato di stampa dei valori del map chart.</postcondizione>
+	<postcondizione>È stato scelto il modo in cui vengono rappresentati i punti sul map chart.</postcondizione>
 </usecase>

@@ -3,6 +3,6 @@
 <usecase>
 	<titolo>UCN1.6.1.6 Scegliere il nome di ciascuna serie di punti</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
+	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart. Si conosce quante sono le serie di punti e le si sa identificare</precondizione>
 	<postcondizione>È stato impostato il nome di ciascuna serie di punti.</postcondizione>
 </usecase>

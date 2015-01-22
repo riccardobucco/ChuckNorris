@@ -4,5 +4,10 @@
 	<titolo>UCN1.6.2 Inserire nuova serie di punti</titolo>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si vuole creare un grafico di tipo map chart.</precondizione>
-	<postcondizione>È stata inserita una nuova serie di punti nel grafico.</postcondizione>
+	<postcondizione>È stata inserita una serie di punti nel grafico.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie quanti punti inserire nel grafico;</item>
+		<item>Lo sviluppatore inserisce la posizione (data da longitudine e latitudine) di ciascun punto;</item>
+		<item>La serie di punti viene inserita nel grafico.</item>
+	</principale>
 </usecase>
