@@ -56,20 +56,6 @@
 					\includegraphics[width=0.6\textwidth]{NormeDiProgetto/Pics/ProceduraDecrementoErrori}
 					\caption{Procedura per tracciamento errori comuni}
 			\end{figure}
-			
-			\paragraph{Sintassi}
-				I \insrole{Verificatori} devono preoccuparsi di individuare gli errori sintattici all'interno dei testi del documento. Tale compito può essere in 
-				parte attuato tramite strumenti automatici (vedi sezione 6.3 del presente documento). È tuttavia necessario che un documento sia sempre sottoposto a \textit{walkthrough}, in quanto gli strumenti automatici non sono in grado di individuare parole corrette che sono utilizzate al di fuori del loro contesto.\\
-			\paragraph{Tracciamento degli errori più comuni nei documenti}
-				Durante l'esecuzione dell'intera procedura di verifica dei documenti è importante che i \insrole{Verificatori} tengano traccia di tutte le tipologie di errori più comuni. \\
-			È stata predisposta nell'applicativo Tracker una scheda con la possibilità di vedere e gestire la lista di controllo. Durante la procedura il \insrole{Verificatore} andrà ad incrementare il counter della voce relativa alla tipologia di errore trovato, contribuendo a creare una statistica degli errori. Ci sarà quindi la possibilità per il \insrole{Responsabile di Progetto} di studiare l'andamento di questi ultimi e agire di conseguenza nel segnalare ai componenti del team eventuali situazioni particolarmente frequenti da evitare mentre si incrementano i documenti.\\
-			Il tracciamento costruito appositamente permetterà sia di applicare in modo fruttuoso la tecnica dell'\textit{inspection} grazie alla lista di controllo, sia di migliorare la prevenzione sistematica degli errori più critici in fase di creazione dei documenti di progetto.
-			Il seguente diagramma di attività rappresenta la procedura appena descritta:
-				\begin{figure}[H]
-					\centering
-					\includegraphics[width=0.6\textwidth]{NormeDiProgetto/Pics/ProceduraDecrementoErrori.pdf}
-					\caption{Procedura per tracciamento errori comuni}
-				\end{figure}
 			\paragraph{Sintassi}
 				I \insrole{Verificatori} devono preoccuparsi di individuare gli errori sintattici all'interno dei testi del documento. Tale compito può essere in parte attuato tramite strumenti automatici (vedi sottosezione Strumenti del presente documento). È tuttavia necessario che un documento sia sempre sottoposto a \textit{walkthrough}, in quanto gli strumenti automatici non sono in grado di individuare parole corrette che sono utilizzate al di fuori del loro contesto.\\
 				Inoltre, i \insrole{Verificatori} devono cercare tutte quelle parole che sono poco frequenti o comunque complesse (possono generare fraintendimenti o incomprensioni): va applicata la tecnica del \textit{walkthrough}.
@@ -111,12 +97,12 @@
 				Infine, assicurarsi che i casi d'uso descrivano cosa il sistema fa e non cosa non fa.
 			\paragraph{Diagrammi di attività}
 				I diagrammi delle attività allo stato attuale delle cose sono stati usati esclusivamente per creare figure facilmente comprensibili che illustrino le procedure contenute nel presente documento. È dunque necessario verificare unicamente che tali diagrammi siano conformi allo standard UML.
-		\subsubsection{Issues di verifica}
+		\subsubsection{Segnalazione modifica con issue}
 			La corretta procedura per effettuare una modifica è la seguente:
 			\begin{enumerate}
 				\item creazione della issue su GitHub (rispettando le norme per una issue di verifica);
 				\item quando viene accettata dal \insrole{Project Manager} si procede ad inserire la tipologia dell'errore sul \textit{Tracker};
-				\item viene incremenato il count per la tipologia di errore rilevata;
+				\item viene incrementato il count per la tipologia di errore rilevata;
 				\item viene effettuata la modifica;
 			\end{enumerate}
 			Il seguente diagramma delle attività rappresenta tale procedura.
@@ -125,12 +111,6 @@
 				\caption{Procedure issue di verifica}
 			\end{figure}
 	\subsection{Strumenti}
-		In questa sezione vengono descritti gli aspetti essenziali degli strumenti che i Verificatori hanno a disposizione.
-		\begin{description}
-			\item[OrtographicCheck] Questo script sfrutta il software GNU Aspell per eseguire il controllo ortografico di un documento.
-			\item[Gulpease] Questo script estrae il testo da un documento e ne calcola l'indice di leggibilità Gulpease.
-			\item[NonBreakingSpaceCheck] Questo script controlla che un numero formattato secondo lo standard [SI/ISO 31-0] utilizzi lo spazio unificatore e non quello normale (errore in cui è facile incorrere).
-		\end{description}
 		\subsubsection{Script di verifica}
 			In questa sezione vengono descritti gli aspetti essenziali degli strumenti che i \insrole{Verificatori} hanno a disposizione.
 			\begin{description}
@@ -139,4 +119,5 @@
 				\item[NonBreakingSpaceCheck] Questo script controlla che un numero formattato secondo lo standard [SI/ISO 31-0] utilizzi lo spazio unificatore e non quello normale (errore in cui è facile incorrere).
 			\end{description}
 		\subsubsection{Issue tracking}
-			Nel capitolato è esplicitamente richiesto l'utilizzo delle issue di GitHub o Bitbucket per la segnalazione di bug. Essendo che il gruppo \groupname{} ha deciso di utilizzare GitHub come repository (vedi il seguente riferimento \autoref{sec:SceltaRepository}) si ha optato per utilizzarlo anche come gestore delle issue.
+			Nel capitolato è esplicitamente richiesto l'utilizzo delle issue di GitHub o Bitbucket per la segnalazione di bug. Essendo che il gruppo \groupname{} ha deciso di utilizzare GitHub come repository (vedi il seguente riferimento \autoref{sec:SceltaRepository}) si ha optato per utilizzarlo anche come gestore delle issue.\\
+			Viene poi utilizzato un servizio fornito da \textit{Tracker}, ovvero un'applicazione web creata dal \groupname, per permettere al \insrole{Project Manager} di avere una visione statistica degli errori effettuati dal team.
