@@ -19,11 +19,4 @@
 		<item>Lo sviluppatore sceglie le opzioni riguardanti il piano cartesiano (UCN1.1.3);</item>
 		<item>Lo sviluppatore sceglie la descrizione del chart (UCN1.1.4).</item>
 	</principale>
-	<alternativi>
-		<scenario>
-			<descrizione>Nel caso in cui la creazione del grafico non sia avvenuta nel modo corretto:</descrizione>
-			<item>il sistema segnala un errore (UCN1.9).</item>
-		</scenario>
-	</alternativi>
-
 </usecase>

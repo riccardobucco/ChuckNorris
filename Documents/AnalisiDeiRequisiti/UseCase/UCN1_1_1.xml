@@ -3,6 +3,6 @@
 <usecase>
 	<titolo>UCN1.1.1 Inserire il titolo del chart</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si vuole creare un modello di chart.</precondizione>
+	<precondizione>Si sta creando un modello di chart.</precondizione>
 	<postcondizione>È stato impostato il titolo del grafico.</postcondizione>
 </usecase>
