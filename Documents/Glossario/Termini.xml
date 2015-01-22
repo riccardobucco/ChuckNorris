@@ -18,6 +18,14 @@
 		L’\insglo{aggiornamento stream} aggiunge nuovi valori al grafico. Il grafico mantiene la visualizzazione dei dati già presenti, aggiungendo nuove rappresentazioni grafiche per i nuovi dati aggiunti.
 	</entry>
 
+	<entry name="Android">
+		È un sistema operativo open source per dispositivi mobili sviluppato da Google.
+	</entry>
+
+	<entry name="Angular.js">
+		Angular.js è un framework JavaScript utile a semplificare la realizzazione di applicazioni Web single page. Si tratta di un template-engine lato client che implementa il pattern MVC.
+	</entry>
+
 	<entry name="Aspell">
 		Strumento di correzione ortografica multilingue.
 	</entry>
@@ -48,6 +56,10 @@
 
 	<entry name="Capitolato">
 		Documento tecnico, in genere allegato ad un contratto di appalto, che vi fa riferimento per definire in quella sede le specifiche tecniche delle opere che andranno ad eseguirsi per effetto del contratto stesso.
+	</entry>
+
+	<entry name="Chart.js">
+		Libreria \insglo{JavaScript} open source per la realizzazione di grafici in HTML5.
 	</entry>
 
 	<entry name="Chrome">
@@ -114,7 +126,7 @@
 	</entry>
 	
 	<entry name="GanttProject">
-		GanttProject è software open-source multipiattaforma, implementato in Java, per la gestione dei progetti. Fra le sue funzioni principali rientrano la creazione dei diagrammi di Gantt e di Pert per la schedulazione dei compiti nei progetti.
+		GanttProject è software open source multipiattaforma, implementato in Java, per la gestione dei progetti. Fra le sue funzioni principali rientrano la creazione dei diagrammi di Gantt e di Pert per la schedulazione dei compiti nei progetti.
 	</entry>
 	
 	<entry name="Git">
@@ -126,6 +138,10 @@
 	</entry>
 
 	<entry name="Header">Intestazione</entry>
+
+	<entry name="HTML5">
+		L'HTML5 è un linguaggio di markup per la strutturazione delle pagine web divenuto standard W3C nell'ottobre 2014.
+	</entry>
 
 	<entry name="HTTP">
 		L'HyperText Transfer Protocol (HTTP), letteralmente "protocollo di trasferimento di un ipertesto", è usato come principale sistema per la trasmissione di informazioni sul web, ovvero in un'architettura tipica client-server. Le specifiche del protocollo sono gestite dal World Wide Web Consortium (W3C). Un \insglo{server} HTTP generalmente resta in ascolto delle richieste dei \insglo{client} sulla porta 80 usando il protocollo \insglo{TCP} a livello di trasporto.
@@ -145,6 +161,10 @@
 
 	<entry name="Issue">
 		Unità di lavoro per realizzare un miglioramento in un progetto software. Un issue potrebbe essere un bug, una funzione richiesta, un compito, una documentazione mancante e così via.
+	</entry>
+
+	<entry name="JavaScript">
+		Linguaggio di programmazione interpretato, generalmente utilizzato nella gestione degli eventi. Implementa un paradigma basato sia sugli oggetti che sulla programmazione funzionale.
 	</entry>
 
 	<entry name="JSON">
@@ -215,6 +235,14 @@
 	<entry name="PDCA">
 		Il "Plan-Do-Check-Act", detto anche Ciclo di Deming o Ciclo di Miglioramento Continuo, è un metodo che permette di perseguire un continuo miglioramento della qualità nei processi.
 	</entry>
+
+	<entry name="PDF">
+		Il Portable Document Format è un formato sviluppato da Adobe Systems per la rappresentazione di documenti in modo indipendente dall'hardware e dal software utilizzati per visualizzarli o generarli.
+	</entry>
+
+	<entry name="PNG">
+		Il Portable Network Graphics è un formato per la memorizzazione di immagini.
+	</entry>
 	
 	<entry name="Procedura">
 		Funzione che raggruppa al suo interno una sequenza di istruzioni. Una procedura è chiamabile più volte all'interno di un programma, permettendo così il riuso del codice e facilitando la manutenibilità dello stesso.
@@ -226,6 +254,10 @@
 	
 	<entry name="Repository">
 		Un repository è un ambiente di un sistema informativo in cui vengono gestiti metadati attraverso tabelle relazionali. Il repository utilizzato dal gruppo Kaizen-Team è fornito dalla piattaforma GitHub.
+	</entry>
+
+	<entry name="Socket.io">
+		Libreria \insglo{JavaScript} per applicazioni web real-time. Utilizza il protocollo \insglo{WebSocket} per implementare una comunicazione bidirezionale orientata agli eventi.
 	</entry>
 
 	<entry name="Script">
@@ -269,6 +301,10 @@
 	
 	<entry name="WhatsApp">
 		Applicazione di messaggistica istantanea multipiattaforma per smartphone. Oltre allo scambio di messaggi testuali, permette di inviare immagini, video, file audio e la propria posizione.
+	</entry>
+
+	<entry name="XML">
+		XML è un linguaggio di markup, ovvero un linguaggio che permette di marcare sintatticamente degli elementi contenuti in un documento.
 	</entry>
 	
 </terms>
