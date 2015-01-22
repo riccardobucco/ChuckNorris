@@ -3,6 +3,6 @@
 <usecase>
 	<titolo>UCN1.4.2.2 Inserire i valori dipendenti per ciascun set di barre</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno inserendo i dati di un bar chart.</precondizione>
-	<postcondizione>Sono stati inseriti i valori dipendenti per ciascun set di barre.</postcondizione>
+	<precondizione>Si stanno inserendo i dati di un bar chart. Si conosce quanti sono i set di barre nel grafico e li si sa identificare. Sono stati inseriti nel grafico i valori indipendenti.</precondizione>
+	<postcondizione>Sono stati inseriti valori dipendenti in corrispondenza di tutti i valori indipendenti per ciascun set di barre.</postcondizione>
 </usecase>

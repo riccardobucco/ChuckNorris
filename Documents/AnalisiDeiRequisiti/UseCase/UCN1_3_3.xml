@@ -2,14 +2,9 @@
 
 <usecase>
 	<titolo>UCN1.3.3 Aggiungere grafico alla pagina</titolo>
-	
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si sta creando una pagina.</precondizione>
 	<postcondizione>É stato aggiunto un grafico alla pagina.</postcondizione>
-	<principale>
-		<item>Lo sviluppatore sceglie la larghezza massima del grafico all'interno della pagina (UCN1.3.3.1);</item>
-		<item>Lo sviluppatore sceglie l'altezza massima del grafico all'interno della pagina (UCN1.3.3.2).</item>
-	</principale>
 </usecase>
 
 

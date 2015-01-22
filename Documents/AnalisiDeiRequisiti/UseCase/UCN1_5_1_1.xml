@@ -3,6 +3,6 @@
 <usecase>
 	<titolo>UCN1.5.1.1 Scegliere il colore di ciascuna linea</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo line chart. È stato impostato il nome di ciascuna linea.</precondizione>
+	<precondizione>Si stanno configurando le impostazioni di un line chart. Si conosce quante sono le linee nel grafico e le si sa identificare.</precondizione>
 	<postcondizione>Ogni linea è stata associata a un colore.</postcondizione>
 </usecase>

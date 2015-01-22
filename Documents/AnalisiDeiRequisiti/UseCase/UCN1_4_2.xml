@@ -7,7 +7,8 @@
 	<precondizione>Si vuole creare un grafico di tipo bar chart.</precondizione>
 	<postcondizione>Sono stati impostati i dati che si vogliono rappresentare nel grafico. Per ogni valore indipendente, esiste un valore dipendente corrispondente per ogni set di barre.</postcondizione>
 	<principale>
+		<item>Lo sviluppatore sceglie quanti set di barre inserire nel grafico;</item>
 		<item>Lo sviluppatore inserisce i valori indipendenti nel bar chart (UCN1.4.2.1);</item>
-		<item>Lo sviluppatore inserisce i valori dipendenti per ciascun set di barre (UCN1.4.2.2).</item>
+		<item>Lo sviluppatore inserisce un valore dipendente in corrispondenza di tutti i valori dipendenti. E fa questo per ciascun set di barre (UCN1.4.2.2).</item>
 	</principale>
 </usecase>

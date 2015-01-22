@@ -3,6 +3,6 @@
 <usecase>
 	<titolo>UCN1.4.1.4 Scegliere il nome di ciascun set di barre</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni di un bar chart.</precondizione>
+	<precondizione>Si stanno configurando le impostazioni di un bar chart. Si conosce quanti sono i set di barre nel grafico e li si sa identificare.</precondizione>
 	<postcondizione>È stato impostato il nome di ciascun set di barre.</postcondizione>
 </usecase>
