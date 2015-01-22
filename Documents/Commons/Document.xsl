@@ -44,8 +44,8 @@
 
 		%fancyhdr config
 		\fancyhead{}
-		\fancyhead[RE,LO]{\includegraphics[scale=0.05]{Pics/Logo} \includegraphics[height=7mm]{Pics/KaizenTeam}}
-		\fancyhead[RO,LE]{\Large \bfseries \doctitle \vspace{0.1mm}}
+		\fancyhead[L]{\includegraphics[scale=0.05]{Pics/Logo} \includegraphics[height=7mm]{Pics/KaizenTeam}}
+		\fancyhead[R]{\Large \bfseries \doctitle \vspace{0.1mm}}
 
 		\fancyfoot{}
 		\fancyfoot[C]{\thepage{} di \pageref{LastPage}}
