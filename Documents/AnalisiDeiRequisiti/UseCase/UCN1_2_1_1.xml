@@ -5,4 +5,9 @@
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si sta aggiornando il modello di un bar chart. È stato selezionato il modello di un bar chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello del bar chart selezionato con metodo in place.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie le barre del grafico che intende modificare;</item>
+		<item>Lo sviluppatore inserisce i nuovi valori che devono assumere le barre che vuole modificare;</item>
+		<item>I valori delle barre scelte vengono modificati.</item>
+	</principale>
 </usecase>
