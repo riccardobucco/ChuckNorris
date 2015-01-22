@@ -18,6 +18,21 @@
 			\paragraph{Analisi dinamica}
 				L'analisi dinamica è una forma di valutazione di un sistema software o di un suo componente basato sulla osservazione del suo comportamento in esecuzione. Tali tecniche, dunque, sono applicabili solo a componenti software e vengono svolte tramite l'esecuzione di test su essi.\\
 				Deve essere preoccupazione di chi scrive i test fare in modo che essi siano di grande valore dimostrativo, in quanto il numero di test che devono essere effettuati è per forza di cose in numero finito e relativamente piccolo.
+				
+	\subsection{Issue di verifica}
+		Una issue è una issue di verifica se e solo se ad essa è stata assegnata un'etichetta di tipo \textit{Verifica}. Si può immaginare come una richiesta da parte di un \insrole{Verificatore} verso il \insrole{Project Manager} di modifica di un documento. Ogni \insrole{Verificatore} prima di compiere una modifica dovrà infatti creare una issue di verifica e potrà eseguirla solamente se accettata.\\
+		\subsubsection{Sintassi}
+			Il nome della issue dovrà esser così formato: [X][Y]Z.
+			Di seguito le norme per interpretare tale sintassi:
+			\begin{itemize}
+				\item X rappresenta la sigla (vedi sezione sigle di questo documento) del documento interessato alla modifica;
+				\item Y rappresenta il percorso assoluto di sezioni in cui si trova il presunto errore separando le sezioni con un \textit{backslash};
+				\item Z rappresenta la tipologia di errore rilevata. Le tipologie di errori sono collocate nel \textit{Tracker}.
+			\end{itemize}
+			La descrizione della issue dovrà seguire il seguente formato:\\
+			\textit{Testo criticato}=esatto testo presente nel documento.\\
+			\textit{Testo proposto}=ridefinizione del testo da sostituire.
+			
 	\subsection{Procedure}
 		\subsubsection{Verifica dei documenti}
 			Dare inizio all'attività di verifica di un documento è compito del \insrole{Responsabile di Progetto}: esso assegna il compito a uno o più \insrole{Verificatori}. 
@@ -96,6 +111,19 @@
 				Infine, assicurarsi che i casi d'uso descrivano cosa il sistema fa e non cosa non fa.
 			\paragraph{Diagrammi di attività}
 				I diagrammi delle attività allo stato attuale delle cose sono stati usati esclusivamente per creare figure facilmente comprensibili che illustrino le procedure contenute nel presente documento. È dunque necessario verificare unicamente che tali diagrammi siano conformi allo standard UML.
+		\subsubsection{Issues di verifica}
+			La corretta procedura per effettuare una modifica è la seguente:
+			\begin{enumerate}
+				\item creazione della issue su GitHub (rispettando le norme per una issue di verifica);
+				\item quando viene accettata dal \insrole{Project Manager} si procede ad inserire la tipologia dell'errore sul \textit{Tracker};
+				\item viene incremenato il count per la tipologia di errore rilevata;
+				\item viene effettuata la modifica;
+			\end{enumerate}
+			Il seguente diagramma delle attività rappresenta tale procedura.
+			\begin{figure}[H]\centering
+				\includegraphics[width=\textwidth]{NormeDiProgetto/Pics/ProceduraIssueDiVerifica.pdf}
+				\caption{Procedure issue di verifica}
+			\end{figure}
 	\subsection{Strumenti}
 		In questa sezione vengono descritti gli aspetti essenziali degli strumenti che i Verificatori hanno a disposizione.
 		\begin{description}
@@ -110,5 +138,5 @@
 				\item[Gulpease] Questo script estrae il testo da un documento e ne calcola l'indice di leggibilità Gulpease.
 				\item[NonBreakingSpaceCheck] Questo script controlla che un numero formattato secondo lo standard [SI/ISO 31-0] utilizzi lo spazio unificatore e non quello normale (errore in cui è facile incorrere).
 			\end{description}
-		\subsubsection{Tracciamento degli errori}
-			Per tracciare gli errori rilevati si è deciso di utilizzare un servizio fornito da \textit{Tracker} ovvero un'applicazione web creata dal \groupname. Si fa dunque riferimento all'appendice Tracker di questo documento.
+		\subsubsection{Issue tracking}
+			Nel capitolato è esplicitamente richiesto l'utilizzo delle issue di GitHub o Bitbucket per la segnalazione di bug. Essendo che il gruppo \groupname{} ha deciso di utilizzare GitHub come repository (vedi il seguente riferimento \autoref{sec:SceltaRepository}) si ha optato per utilizzarlo anche come gestore delle issue.
