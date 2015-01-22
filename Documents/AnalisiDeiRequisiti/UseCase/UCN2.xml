@@ -6,8 +6,8 @@
 	<precondizione>Si sta utilizzando Norris.</precondizione>
 	<postcondizione>Sono state utilizzate le API esterne di Norris.</postcondizione>
 	<principale>
-		<item>Il client ottiene informazioni contenute in un'istanza di Norris (UCN2.1);</item>
-		<item>Il client ottiene la lista dei grafici presenti in un'istanza di Norris (UCN2.2);</item>
-		<item>Il client ottiene un grafico presente in un'istanza di Norris (UCN2.3).</item>
+		<item>Il client può ottenere informazioni contenute in un'istanza di Norris (UCN2.1);</item>
+		<item>Il client può ottenere la lista dei grafici presenti in un'istanza di Norris (UCN2.2);</item>
+		<item>Il client può ottenere un grafico presente in un'istanza di Norris (UCN2.3).</item>
 	</principale>
 </usecase>

@@ -12,7 +12,8 @@
 	<principale>
 		<item>Lo sviluppatore sceglie il titolo del chart (UCN1.1.1);</item>
 		<item>Lo sviluppatore sceglie la descrizione del chart (UCN1.1.4);</item>
-		<item>Lo sviluppatore inserisce i dati della table (UCN1.7.2);</item>
+		<item>Lo sviluppatore sceglie quante colonne hanno le righe della table;</item>
+		<item>Lo sviluppatore inserisce una o più righe nella table (UCN1.7.2);</item>
 		<item>Lo sviluppatore sceglie le opzioni della table (UCN1.7.1).</item>
 	</principale>
 </usecase>

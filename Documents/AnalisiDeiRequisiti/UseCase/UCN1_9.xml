@@ -3,6 +3,6 @@
 <usecase>
 	<titolo>UCN1.9 Visualizzazione errore</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>La creazione o l'aggiornamento del grafico oppure la creazione della pagina non sono avvenuti nel modo corretto.</precondizione>
+	<precondizione>La creazione del grafico, l'aggiornamento del grafico o la creazione della pagina non sono avvenuti nel modo corretto.</precondizione>
 	<postcondizione>È stato visualizzato un messaggio di errore.</postcondizione>
 </usecase>
