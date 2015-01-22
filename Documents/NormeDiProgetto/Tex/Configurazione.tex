@@ -4,30 +4,28 @@
 		Per effettuare una modifica ad un qualsiasi documento è necessario inoltrare una richiesta formale di modifica al \insrole{Responsabile di Progetto}, il quale si preoccuperà di avviare le procedure necessarie alla gestione di tale modifica.
 		\subsubsection{Controllo di versione}
 		Il controllo sul versionamento dei documenti e, nelle successive fasi del progetto, dei codice sorgente avviene attraverso lo strumento fornito dalla piattaforma GitHub.
-		Ogni volta che viene eseguita una modifica sostaziale deve essere assegnato un nuovo numero di versione.\\ Il numero di versione è indicato attraverso il caarattere 'v' seguito da due numeri separati da un '.', dove il primo numero indica la versione approvata e il secondo il numero della verifica apportata.\\ Questo vale sia per i documenti che per i file contenenti codice sorgente.\\
+		Ogni volta che viene eseguita una modifica sostaziale deve essere assegnato un nuovo numero di versione.\\ Il numero di versione è indicato attraverso il carattere 'v' seguito da due numeri separati da un '.', dove il primo numero indica la versione approvata e il secondo il numero della verifica apportata.\\ Questo vale sia per i documenti che per i file contenenti codice sorgente.\\
 		Per quanto riguarda il versionamento della documentazione si rimanda alla sezione Documentazione del presente documento.
 	\subsection{Norme}
 		\subsubsection{Struttura di una richiesta di modifica}
 			Ogni richiesta di modifica è costituita dai seguenti campi:
 			\begin{enumerate}
-				\item Autore: contiene nome e cognome di colui che richiede la modifica;
-				\item Documento: contiene il nome del documento di cui si richiede la modifica;
-				\item Motivo: contiene la spiegazione chiara e concisa delle motivazioni per cui si sta richiedendo una modifica;
-				\item Urgenza: può assumere uno dei seguenti valori:
+				\item autore: contiene nome e cognome di colui che richiede la modifica;
+				\item documento: contiene il nome del documento di cui si richiede la modifica;
+				\item motivo: contiene la spiegazione chiara e concisa delle motivazioni per cui si sta richiedendo una modifica;
+				\item urgenza: può assumere uno dei seguenti valori:
 					\begin{enumerate}
-						\item Alta: si tratta di una modifica importante, con forti conseguenze nell'organizzazione e nello svolgimento delle attività future del progetto;
-						\item Media: si tratta di una modifica importante, ma che non comporta grandi modifiche alle attività del progetto;
-						\item Bassa: si tratta di una modifica di importanza secondaria, che può essere rimandata ad un secondo momento senza che ciò influisca in alcun modo sullo svoglimento delle attività.
+						\item alta: si tratta di una modifica importante, con forti conseguenze nell'organizzazione e nello svolgimento delle attività future del progetto;
+						\item edia: si tratta di una modifica importante, ma che non comporta grandi modifiche alle attività del progetto;
+						\item bassa: si tratta di una modifica di importanza secondaria, che può essere rimandata ad un secondo momento senza che ciò influisca in alcun modo sullo svoglimento delle attività.
+					\end{enumerate}
+			In seguito alla decisione del \insrole{Responsabile} di approvare o meno la richiesta, va aggiunto il campo:
+				\item Decisione del \insrole{Responsabile di Progetto}: contiene uno dei seguenti valori:
+					\begin{enumerate}
+						\item approvata
+						\item respinta
 					\end{enumerate}
 			\end{enumerate}
-			In seguito alla decisione del \insrole{Responsabile} di approvare o meno la richiesta, va aggiunto il campo:
-			\begin{itemize}
-				\item [5.] Decisione del \insrole{Responsabile di Progetto}: contiene uno dei seguenti valori:
-					\begin{itemize}
-						\item [-] Approvata
-						\item [-] Respinta
-					\end{itemize}
-			\end{itemize}
 	
 		\subsubsection{Struttura del repository}
 				I file all’interno del repository sono organizzati secondo la seguente struttura:
@@ -88,8 +86,8 @@
 	\subsection{Strumenti}
 		Per agevolare lo svolgimento del progetto da parte di tutti i membri del team di sviluppo è stata predisposta una macchina virtuale contenente tutti gli strumenti software necessari, individuati fino al momento della stesura dell'ultima versione attuale del presente documento.
 		\subsubsection{Repository}\label{sec:SceltaRepository}
-			Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git. Questa scelta è stata presa in considerazione del fatto che questa piattaforma permette, oltre al servizio di \textit{repository}, il controllo di versione e la gestione di anomalie. \\
+			Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git. Questa scelta è stata presa in considerazione del fatto che questa piattaforma permette, oltre al servizio di repository, il controllo di versione e la gestione di anomalie. \\
 			GitHub è anche stato suggerito dal proponente del capitolato, in quanto permette un'interazione agevolata con Heroku, altro strumento consigliato per lo svolgimento del progetto. 
 				\paragraph{Visibilità del repository}
-				Per la condivisione e il versionamento dei configuration item è stato creato un repository privato su GitHub, raggiungibile all’indirizzo \insuri{https://github.com/marcorubin/kaizen-team}. L’accesso è consentito solamente agli utenti approvati dal \insrole{Project Manager}.
+				Per la condivisione e il versionamento dei \textit{configuration item} è stato creato un repository privato su GitHub, raggiungibile all’indirizzo \insuri{https://github.com/marcorubin/kaizen-team}. L’accesso è consentito solamente agli utenti approvati dal \insrole{Project Manager}.
 				
