@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN0 Utilizzo del framework Norris</titolo>
 	<attorip>Sviluppatore, Client</attorip>
-	<precondizione>Nessuna.</precondizione>
+	<precondizione>Un'istanza di Norris esiste, è in funzione ed è raggiungibile.</precondizione>
 	<postcondizione>Sono state utilizzate le funzioni offerte da Norris.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore può utilizzare le API interne di Norris (UCN1);</item>

@@ -6,8 +6,9 @@
 	<attoris>Norris</attoris>
 	<inclusioni>UCD3</inclusioni>
 	<precondizione>Si sta utilizzando la dashboard.</precondizione>
-	<postcondizione>È stato visualizzato il numero di autobus attivi per ciascuna linea.</postcondizione>
+	<postcondizione>È visualizzato il numero di autobus attivi per ciascuna linea.</postcondizione>
 	<principale>
-			<item>Norris invia i dati relativi ai grafici che verranno visualizzati (UCD3);</item>
+		<item>Norris invia i dati relativi ai grafici che devono essere visualizzati (UCD3);</item>
+		<item>L'utente sceglie la linea della quale vuole visualizzare il numero di bus.</item>
 	</principale>
 </usecase>

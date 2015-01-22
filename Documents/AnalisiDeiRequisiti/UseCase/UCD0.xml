@@ -7,7 +7,7 @@
 	<precondizione>È necessario utilizzare un browser supportato dal prodotto ed essere connessi a Internet.</precondizione>
 	<postcondizione>Sono state utilizzate le funzioni della dashboard.</postcondizione>
 	<principale>
-		<item>Norris invia i dati relativi ai grafici che verranno visualizzati (UCD3);</item>
+		<item>Norris invia i dati relativi ai grafici che devono essere visualizzati dall'utente (UCD3);</item>
 		<item>L'utente visualizza la posizione degli autobus APS in tempo reale (UCD1);</item>
 		<item>L'utente visualizza il numero di autobus attivi per ogni linea (UCD2).</item>
 	</principale>
