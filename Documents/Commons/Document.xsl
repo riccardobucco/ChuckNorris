@@ -61,7 +61,7 @@
 		\fancypagestyle{plain}{
 			\hypersetup{linkcolor=blue}
 			\pagenumbering{arabic}
-			\fancyfoot[C]{\thepage{} di \pageref{LastPage}}
+			\fancyfoot[C]{\thepage{} di \pageref*{LastPage}}
 		}
 
 		
