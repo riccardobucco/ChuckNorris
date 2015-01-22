@@ -1,45 +1,42 @@
 % !TEX encoding = UTF-8 Unicode
 \section{Descrizione generale}
 	\subsection{Scopo del prodotto}
-		Norris è un framework per Node.js che permette di raccogliere dati provenienti da sorgenti arbitrarie e visualizzarli come grafici in modo semplice e veloce. Esso, in particolare, permette di configurare programmaticamente la veste grafica assunta dai dati. Inoltre, il framework mette a disposizione la possibilità di aggiornare i chart lato server tramite tecnologia WebSocket: in questo modo si permette all'utente che utilizza il grafico di ricevere aggiornamenti in real-time.
+		\insglo{Norris} è un \insglo{framework} per \insglo{Node.js} che permette di raccogliere dati provenienti da sorgenti arbitrarie e visualizzarli come grafici in modo semplice e veloce. Esso, in particolare, permette di configurare programmaticamente la veste grafica assunta dai dati. Inoltre, il \insglo{framework} mette a disposizione la possibilità di aggiornare i chart lato \insglo{server} tramite tecnologia WebSocket: in questo modo si permette all'utente che utilizza il grafico di ricevere aggiornamenti in real-time.
 	\subsection{Funzioni del prodotto}
-		Norris svolge principalmente due funzioni:
+		\insglo{Norris} svolge principalmente due funzioni:
 		\begin{itemize}
 			\item creazione di un grafico;
 			\item aggiornamento di un grafico.
 		\end{itemize}
 		La sorgente a partire dalla quale si ricavano i dati per creare e aggiornare il grafico è del tutto arbitraria.\\
-		I tipi di chart supportati dal framework sono i seguenti:
+		I tipi di chart supportati dal \insglo{framework} sono i seguenti:
 		\begin{itemize}
 			\item bar chart;
 			\item line chart;
 			\item map chart;
-			\item table.
+			\item \insglo{table}.
 		\end{itemize}
 		Vi sono tre modi in cui un grafico può essere aggiornato (ogni tipo di grafico supporta solo alcune forme di aggiornamento):
 		\begin{itemize}
 			\item in place (supportato da tutti i tipi di chart);
-			\item stream (supportato da line chart, da bar chart e da table);
+			\item stream (supportato da line chart, da bar chart e da \insglo{table});
 			\item movie (supportato da map chart).
 		\end{itemize}
 	\subsection{Caratteristiche degli utenti}
-		Gli utenti che utilizzano questo prodotto possono essere suddivisi in tre grandi insiemi:
+		Gli utenti che utilizzano questo \insglo{prodotto} possono essere suddivisi in tre grandi insiemi:
 		\begin{enumerate}
-			\item sviluppatori di istanze di Norris, ovvero tutti gli utenti che, utilizzando le API interne fornite dal framework, si occupano di creare, rendere disponibili e aggiornare i grafici;
-			\item sviluppatori di prodotti terzi, ovvero tutti gli utenti che, utilizzando le API esterne fornite dal framework, si occupano di inserire i grafici resi disponibili all'interno di prodotti terzi;
-			\item utenti finali, ovvero gli utenti che fanno uso in modo diretto dei grafici resi disponibili dagli sviluppatori di istanze di Norris.
+			\item sviluppatori di istanze di \insglo{Norris}, ovvero tutti gli utenti che, utilizzando le \insglo{API} interne fornite dal \insglo{framework}, si occupano di creare, rendere disponibili e aggiornare i grafici;
+			\item utenti client, ovvero sviluppatori lato client o applicazioni (web o mobile) che, utilizzando le API esterne fornite dal framework, permettono la visualizzazione dei grafici all'interno di prodotti terzi. Nel caso in cui si voglia inserire i grafici in un sito web, questa tipologia di utenti può utilizzare anche le API della libreria grafica fornita da Norris per la manipolazione lato client di grafici esistenti;
+			\item utenti finali, ovvero gli utenti che fanno uso in modo diretto dei grafici resi disponibili dagli sviluppatori di istanze di \insglo{Norris}.
 		\end{enumerate}
-		Gli utenti appartenenti alla prima tipologia, per poter essere in grado di utilizzare il presente prodotto, devono possedere:
+		Gli utenti appartenenti alla prima tipologia, per poter essere in grado di utilizzare il presente \insglo{prodotto}, devono possedere:
 		\begin{itemize}
-			\item conoscenza di Node.js, essendo Norris un framework per questo linguaggio;
-			\item conoscenza di Express.js, in quanto Norris deve essere usato come middleware di tale framework.
+			\item conoscenza di \insglo{Node.js}, essendo \insglo{Norris} un \insglo{framework} per questo linguaggio;
+			\item conoscenza di \insglo{Express.js}, in quanto \insglo{Norris} deve essere usato come \insglo{middleware} di tale \insglo{framework}.
 		\end{itemize}
-		Agli utenti appartenenti alla seconda tipologia è richiesto di saper utilizzare le seguenti tecnologie:
-		\begin{itemize}
-			\item 
-		\end{itemize}
-		Un utente finale, invece, non deve avere conoscenze tecniche di alcun tipo. Infatti, Norris nasce come strumento per facilitare la lettura dei dati provenienti da sorgenti arbitrarie da parte di utenti che non posseggono specifiche abilità. Dunque, un utente finale, per accedere direttamente ai grafici forniti da un'istanza di Norris, deve essere semplicemente in grado di utilizzare un browser.\\
+		Agli utenti appartenenti alla seconda tipologia è richiesto di essere in grado di utilizzare correttamente JavaScript.\\
+		Un utente finale, invece, non deve avere conoscenze tecniche di alcun tipo. Infatti, \insglo{Norris} nasce come strumento per facilitare la lettura dei dati provenienti da sorgenti arbitrarie da parte di utenti che non posseggono specifiche abilità. Dunque, un utente finale, per accedere direttamente ai grafici forniti da un'istanza di \insglo{Norris}, deve essere semplicemente in grado di utilizzare un \insglo{browser} o uno smartphone Android (nel caso in cui utilizzi l'applicazione Android per la visualizzazione dei grafici).\\
 	\subsection{Piattaforma di esecuzione}
-		Il framework è scritto in node.js e funziona in qualsiasi piattaforma dove sia presente l'interprete.
+		Il \insglo{framework} è scritto in \insglo{node.js} e funziona in qualsiasi piattaforma dove sia presente l'interprete.
 	\subsection{Vincoli generali}
-		Per la corretta visualizzazione dei grafici è richiesto \emph{Google Chrome} v38.0.X o superiori oppure \emph{Mozilla Firefox} v32.X o superiori.
+		Per la corretta visualizzazione dei grafici è richiesto \emph{Google \insglo{Chrome}} v38.0.X o superiori oppure \emph{Mozilla \insglo{Firefox}} v32.X o superiori.
