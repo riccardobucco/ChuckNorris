@@ -2,12 +2,12 @@
 
 <usecase>
 	<titolo>UCN0 Utilizzo del framework Norris</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Sviluppatore, Client</attorip>
 	<precondizione>Nessuna.</precondizione>
-	<postcondizione>È stato utilizzato il framework Norris.</postcondizione>
+	<postcondizione>Sono state utilizzate le funzioni offerte da Norris.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore può utilizzare le API interne di Norris (UCN1);</item>
-		<item>Lo sviluppatore può utilizzare le API esterne di Norris (UCN2);</item>
-		<item>Lo sviluppatore può utilizzare le API della libreria grafica fornita Norris (UCN3).</item>
+		<item>Il client può utilizzare le API esterne di Norris (UCN2);</item>
+		<item>Il client può utilizzare le API della libreria grafica fornita da Norris (UCN3).</item>
 	</principale>
 </usecase>
