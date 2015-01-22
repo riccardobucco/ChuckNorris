@@ -65,12 +65,14 @@ gulpease: _force
 	@ exit 1
 
 glossary: terms = $(shell xmllint --xpath '//entry/@name' Glossario/Termini.xml | grep -o '"[[:alpha:]|\.]*"' | grep -o '[[:alpha:]|\.]*' | tr "\n" "|" | head -c -1 | sed 's/\./\\./g')
-glossary: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics[^{]*|caption|ref|nameref|pageref|hyperref
+glossary: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics[^{]*|caption|label|ref|nameref|pageref|hyperref
 glossary: _force
 	@ #eliminazione tag
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/\\insglo\{([^\}]*)\}/\1/gi' {} \;
 	@ #aggiunta tag
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/\b($(terms))\b/\\insglo\{\1\}/gi' {} \;
+	@ #eliminazione tag su parole comandi
+	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/\\\\insglo\{($(terms))\}/\\\1/gi' {} \;
 	@ #eliminazione tag su comandi skip
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/(\\($(skip))\{[^}]*)\\insglo\{([^}]*)\}/\1\3/gi' {} \;
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/(\\($(skip))\{[^}]*)\\insglo\{([^}]*)\}/\1\3/gi' {} \;
