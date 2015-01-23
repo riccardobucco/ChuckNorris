@@ -163,6 +163,10 @@
 	<entry name="Indice Gulpease">
 		L'Indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico.
 	</entry>
+	
+	<entry name="In place">
+		L'aggiornamento in place sostituisce valori già presenti nel grafico con valori nuovi.
+	</entry>
 
 	<entry name="Inspection">
 		Tecnica di analisi statica basata sulla lettura mirata dei documenti/codice in cerca di errori specifici.
@@ -220,6 +224,10 @@
 	<entry name="Monospace">
 		Stile di scrittura che utilizza i caratteri monospaziati, cioè quei caratteri che, indipendentemente dalla lettera, occupano la stessa larghezza.
 	</entry>
+	
+	<entry name="Movie">
+		Il metodo di aggiornamento movie, combina i due metodi in place e stream. Questo aggiornamento gestisce la transizione della rappresentazione del grafico in due momenti successivi. Analogamente ai film, i quali sono composti da sequenze di fotogrammi. Questo tipo di aggiornamento permette di: sostituire i valori già rappresentati, aggiungere nuovi valori al grafico, togliere valori rappresentati nel grafico. 
+	</entry>	
 	
 	<entry name="Node.js">
 		Node.js è un framework event-driven per il motore JavaScript V8, su piattaforme UNIX like, si tratta cioè di un framework relativo all'utilizzo server-side di JavaScript.
@@ -279,6 +287,10 @@
 	
 	<entry name="Software">
 		Un software, in informatica, è l'informazione o le informazioni utilizzate da uno o più sistemi informatici e memorizzate su uno o più supporti informatici. Tali informazioni possono essere quindi rappresentate da uno o più programmi, oppure da uno o più dati, oppure da una combinazione delle due.
+	</entry>
+	
+	<entry name="Stream">
+		L'aggiornamento in stream aggiunge nuovi valori al grafico. Il grafico mantiene la visualizzazione dei dati già presenti aggiungendo nuove rappresentazioni grafiche dei nuovi dati aggiunti.
 	</entry>
 
 	<entry name="Table">
