@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <terms>
+	
 	<entry name="Aggiornamento in place">
 		Questo tipo di aggiornamento sostituisce valori già presenti con valori nuovi e aggiornati.
 	</entry>
@@ -102,9 +103,11 @@
 	<entry name="Dropbox">
 		Servizio di \insglo{cloud storage} multipiattaforma, che offre un servizio di \insglo{file hosting} e sincronizzazione automatica di file tramite web.
 	</entry>
+
 	<entry name="Facebook">
 		Servizio di rete sociale che offre diversi servizi di messaggistica privata, tra cui una chat.
 	</entry>
+
 	<entry name="Fase">
 		Nei documenti del progetto Norris, e in generale nell'ambito dell'ingegneria del software, per fase si intende un segmento temporale che cattura stati e/o transizioni di un ciclo di vita.
 	</entry>
@@ -113,7 +116,9 @@
 		Servizio di archiviazione su Internet, appositamente progettato per ospitare i file degli utenti. Solitamente il servizio viene utilizzato per la condivisione di file, che possono essere scaricati anche da altri utenti.
 	</entry>
 	
-	<entry name="Firefox">\insglo{Browser} web.</entry>
+	<entry name="Firefox">
+		\insglo{Browser} web open source sviluppato da Mozilla Foundation. Risulta essere il terzo browser più diffuso.
+	</entry>
 
 	<entry name="Framework">
 		Architettura logica di supporto (spesso un'implementazione logica di un particolare \insglo{design pattern}) su cui un software può essere progettato e realizzato, spesso facilitandone lo sviluppo da parte del programmatore. Alla base di un framework c'è sempre una serie di librerie di codice utilizzabili in fase di linking con uno o più linguaggi di programmazione, spesso corredate da una serie di strumenti di supporto allo sviluppo del software, come ad esempio un \insglo{IDE}, un \insglo{debugger} o altri strumenti ideati per aumentare la velocità di sviluppo del prodotto finito. L'utilizzo di un framework impone dunque al programmatore una precisa metodologia di sviluppo del software.
@@ -122,6 +127,7 @@
 	<entry name="Front end">
 		Parte di un sistema software che gestisce l'interazione con l'utente o con sistemi esterni che producono dati di ingresso.
 	</entry>
+
 	<entry name="Event-driven">
 		Il modello event-driven, o “programmazione ad eventi”, si basa su un concetto piuttosto semplice: un'azione viene effettuata in seguito al verificarsi di eventi esterni. Ogni azione quindi risulta asincrona, a differenza dei pattern di programmazione più comuni, in cui un'azione succede ad un'altra solo dopo che essa è stata completata.
 	</entry>
@@ -141,8 +147,6 @@
 	<entry name="GitHub">
 		Servizio web di hosting per lo sviluppo di progetti software che usa il sistema di controllo di versione \insglo{Git}. GitHub offre diversi piani per repository privati sia a pagamento, sia gratuiti, molto utilizzati per lo sviluppo di progetti \insglo{open source}.
 	</entry>
-
-	<entry name="Header">Intestazione</entry>
 
 	<entry name="HTML5">
 		L'HTML5 è un linguaggio di markup per la strutturazione delle pagine web divenuto standard W3C nell'ottobre 2014.
@@ -173,11 +177,11 @@
 	</entry>
 
 	<entry name="JSON">
-		JSON, acronimo di JavaScript Object Notation, è un formato per lo scambio dei dati in applicazioni client-server basato sul linguaggio JavaScript.
+		Acronimo di JavaScript Object Notation, è un formato per lo scambio dei dati in applicazioni client-server basato sul linguaggio JavaScript.
 	</entry>
 
 	<entry name="Latex">
-		Li\insglo{nguaggio di markup}, basato sul principio WYSIWYM (What You See Is What You Mean), e utilizzato per la composizione di testi. Si presta particolarmente alla stesura di documenti tecnici molto lunghi, in modo concorrente, da parte di persone diverse.
+		L'\insglo{inguaggio di markup}, basato sul principio WYSIWYM (What You See Is What You Mean), e utilizzato per la composizione di testi. Si presta particolarmente alla stesura di documenti tecnici molto lunghi, in modo concorrente, da parte di persone diverse.
 	</entry>
 
 	<entry name="Line Chart">
@@ -309,7 +313,7 @@
 	</entry>
 
 	<entry name="XML">
-		XML è un linguaggio di markup, ovvero un linguaggio che permette di marcare sintatticamente degli elementi contenuti in un documento.
+		È un linguaggio di markup, ovvero un linguaggio che permette di marcare sintatticamente degli elementi contenuti in un documento.
 	</entry>
 	
 </terms>
