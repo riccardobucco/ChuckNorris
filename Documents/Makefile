@@ -18,8 +18,10 @@ $(DOCUMENTI): _force
 	@ xsltproc -o $@/$@.tex Commons/Document.xsl $@/$@.xml
 
 	@ #documenti specifici
-	@ test "$@" = "Glossario" && make _glossario; exit 0
 	@ test "$@" = "AnalisiDeiRequisiti" && make _analisi; exit 0
+	@ test "$@" = "Glossario" && make _glossario; exit 0
+	@ test "$@" = "NormeDiProgetto" && make _norme; exit 0
+	@ test "$@" = "StudioDiFattibilita" && make _studio; exit 0
 
 	@ #compilazione file latex
 	@ make $@/$@.pdf
@@ -40,7 +42,7 @@ _analisi: _force
 	@ curl http://kaizenteam.it/tracker/export/requisiti.php > AnalisiDeiRequisiti/TrackerRequisiti.tex
 	@ curl http://kaizenteam.it/tracker/export/requisiti-fonti.php > AnalisiDeiRequisiti/TrackerRequisitiFonti.tex
 	@ curl http://kaizenteam.it/tracker/export/fonti-requisiti.php > AnalisiDeiRequisiti/TrackerFontiRequisiti.tex
-	@ curl http://kaizenteam.it/tracker/export/riepilogo.php > AnalisiDeiRequisiti/TrackerRiepilogo.tex	
+	@ curl http://kaizenteam.it/tracker/export/riepilogo.php > AnalisiDeiRequisiti/TrackerRiepilogo.tex
 
 _glossario: _force
 	@ #creazione file latex termini
@@ -48,7 +50,15 @@ _glossario: _force
 	@ xsltproc -o Glossario/Termini.tex Glossario/Termini.xsl Glossario/Termini.xml
 
 	@ #eliminazione toc, lot, lof
-	@ sed -ri 's/\\tableofcontents//g;s/\\listoftables//g;s/\\listoffigures//g' Glossario/Glossario.tex
+	@ sed -ri 's/\\tableofcontents//;s/\\listoftables//;s/\\listoffigures//' Glossario/Glossario.tex
+
+_norme: _force
+	@ #eliminazione lot
+	@ sed -ri 's/\\listoftables//' NormeDiProgetto/NormeDiProgetto.tex
+
+_studio: _force
+	@ #eliminazione lot, lof
+	@ sed -ri 's/\\listoftables//;s/\\listoffigures//' StudioDiFattibilita/StudioDiFattibilita.tex
 
 %.pdf: _force
 	@ export TEXINPUTS=":`dirname $*`:Commons"; pdflatex -output-directory `dirname $*` `echo $* | grep -Eo '[^/]*$$'`.tex
