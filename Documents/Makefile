@@ -67,6 +67,8 @@ _studio: _force
 
 spell: _force
 	@ find . -name '*.tex' -exec aspell --mode=tex --lang=it check {} \;
+	@ find . -name '*.xml' -exec aspell --mode=tex --lang=it check {} \;
+	@ find . -name '*.xsl' -exec aspell --mode=tex --lang=it check {} \;
 
 gulpease: chars = 1
 gulpease: words = 1
