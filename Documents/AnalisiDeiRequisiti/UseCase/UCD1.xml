@@ -9,6 +9,6 @@
 	<postcondizione>È visualizzata la posizione degli autobus APS.</postcondizione>
 	<principale>
 		<item>Norris invia i dati relativi ai grafici che devono essere visualizzati dall'utente (UCD3);</item>
-		<item>L'utente può filtrare per linea la visualizazione degli autobus attivi (UCD1.1).</item>
+		<item>L'utente può filtrare per linea la visualizzazione degli autobus attivi (UCD1.1).</item>
 	</principale>
 </usecase>
