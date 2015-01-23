@@ -24,23 +24,25 @@
 				Tali requisiti sono raccolti all'interno del documento \insdoc{Analisi dei Requisiti}. All'interno di tale documento è anche indicato un modo per verificare i requisiti in esso raccolti.
 		\subsubsection{Norme}
 			\paragraph{Classificazione dei casi d'uso}
-				I casi d'uso vengono identificati univocamente da una sigla nella forma UCX, dove X è un codice gerarchico. Sarà compito degli \insrole{analisti} identificare i casi d'uso e essi dovranno preoccuparsi di fornire un diagramma conforme allo standard UML per ogni caso d'uso non foglia. Quì di seguito sono riportate le informazioni da inserire nella parte testuale:
+				I casi d'uso vengono identificati univocamente da una sigla nella forma UCYX.
+				\begin{itemize}
+					\item Y può assumere tre valori: N, A o D. N rappresenta tutti i casi d'uso inerenti a Norris, A rappresenta quelli inerenti l'applicazione Android e D rappresenta quelli che riguardano la Dashboard.
+					\item X è un codice gerarchico numerico.
+				\end{itemize}
+				Sarà compito degli \insrole{analisti} identificare i casi d'uso e essi dovranno preoccuparsi di fornire un diagramma conforme allo standard UML per ogni caso d'uso non foglia. Quì di seguito sono riportate le informazioni da inserire nella parte testuale:
 				\begin{itemize}
 					\item titolo;
 					\item attori (principali e secondari);
-					\item descrizione testuale;
 					\item precondizione;
 					\item postcondizione;
 					\item flusso principale degli eventi, dove si descrive il flusso dei casi d'uso figli; per ogni evento va specificato quanto segue:
 					\begin{itemize}
-						\item titolo;
 						\item descrizione testuale;
 						\item attori coinvolti;
 						\item se l’evento è descritto nel dettaglio da un altro caso d’uso;
 					\end{itemize}
 					\item scenari alternativi; per ognuno di essi va specificato quanto segue:
 					\begin{itemize}
-						\item titolo;
 						\item descrizione testuale;
 						\item attori coinvolti;
 						\item se lo scenario è descritto nel dettaglio da un altro caso d’uso.
@@ -65,7 +67,6 @@
 					\end{itemize}
 					\item Z indica il codice gerarchico che identifica un requisito e dev'essere univoco.
 				\end{enumerate}
-		\subsubsection{Procedure}
 		\subsubsection{Strumenti}
 			\paragraph{Software per creazione di diagrammi UML}
 			Per la modellazione di diagrammi UML (ad esempio diagrammi per use case) sono stati presi in considerazione soprattutto tre editor: Dia, Microsoft Visio, Astah community. Infine i membri del gruppo \groupname{} ha optato per adottare Astah community in quanto si tratta di un software open source, con supporto di UML 2.x e secondo una veloce analisi del team si è notato che esso ha un interfaccia più responsiva ed intuitiva degli altri software.

@@ -19,11 +19,11 @@
 				L'analisi dinamica è una forma di valutazione di un sistema software o di un suo componente basato sulla osservazione del suo comportamento in esecuzione. Tali tecniche, dunque, sono applicabili solo a componenti software e vengono svolte tramite l'esecuzione di test su essi.\\
 				Deve essere preoccupazione di chi scrive i test fare in modo che essi siano di grande valore dimostrativo, in quanto il numero di test che devono essere effettuati è per forza di cose in numero finito e relativamente piccolo.
 		\subsubsection{Issue tracking}
-			L'issue tracking è un attività di supporto dei \insrole{Verificatori}. Essa permettere non di tracciare tutti i potenziali difetti dalla comparsa fino alla risoluzione, ma consente al \insrole{Responsabile di Progetto} di assegnare i compiti di correzione ai singoli membri del team.
+			L'issue tracking è un attività di supporto dei \insrole{Verificatori}. Essa permettere non solo di tracciare tutti i potenziali difetti dalla comparsa fino alla risoluzione, ma consente al \insrole{Responsabile di Progetto} di assegnare i compiti di correzione ai singoli membri del team.
 		
 
 	\subsection{Norme}
-		\subsubsection{Sintassi}
+		\subsubsection{Sintassi di una issue}
 			Il nome delle issue dovrà seguire la seguente sintassi: [S]: [T] - [Descrizione]
 			\begin{itemize}
 				\item S rappresenta la sigla (vedi sezione \nameref{sec:sigle}) del documento interessato alla modifica;
@@ -37,11 +37,10 @@
 			\end{itemize}
 			
 	\subsection{Procedure}
-		
 		\subsubsection{Verifica dei documenti}
 			Dare inizio all'attività di verifica di un documento è compito del \insrole{Responsabile di Progetto}: esso assegna il compito a uno o più \insrole{Verificatori}. 
 			Questi, con l'aiuto del diario delle modifiche, focalizzano la loro attenzione sulle sezioni del documento che sono state modificate.\\
-			Per eseguire una verifica quanto più accurate e completa possibile è necessario controllare che sia stato rispettato quanto segue:
+			Per eseguire una verifica quanto più accurata e completa possibile è necessario controllare che sia stato rispettato quanto segue:
 			\begin{enumerate}
 				\item sintassi semplice e corretta;
 				\item periodi brevi e leggibili;
@@ -49,8 +48,6 @@
 				\item norme tipografiche;
 				\item proprietà di glossario.
 			\end{enumerate}
-			Durante l'esecuzione dell'intera procedura è importante che i \insrole{Verificatori} tengano traccia di tutti gli errori più comuni. In questo modo, 
-			essi potranno essere riportati sulla lista di controlla necessaria per applicare in modo fruttuoso la tecnica dell'\textit{inspection}.
 			\paragraph{Tracciamento degli errori più comuni nei documenti}
 			Durante l'esecuzione dell'intera procedura di verifica dei documenti è importante che i \insrole{Verificatori} tengano traccia di tutti gli errori pi\'u comuni. \\
 			\'E stata predisposta nell'applicativo Tracker una scheda con la possibilit\'a di vedere e gestire la lista di controllo. Durante la procedura il \insrole{Verificatore} andr\'a ad incrementare il counter della voce relativa all'errore trovato, contribuendo a creare una statistica degli errori. Ci sar\'a quindi la possibilit\'a per il \insrole{Responsabile di Progetto} di studiare l'andamento di questi ultimi e agire di conseguenza nel segnalare ai componenti del team eventuali situazioni particolarmente frequenti da evitare mentre si incrementano i documenti.\\
@@ -103,7 +100,7 @@
 			\paragraph{Diagrammi di attività}
 				I diagrammi delle attività allo stato attuale delle cose sono stati usati esclusivamente per creare figure facilmente comprensibili che illustrino le procedure contenute nel presente documento. È dunque necessario verificare unicamente che tali diagrammi siano conformi allo standard UML.
 		
-		\subsubsection{Segnalazione modifica con issue}
+		\subsubsection{Segnalazione di un'anomalia}
 			La corretta procedura la gestione delle issue è descritta dal seguente diagramma:
 			\begin{figure}[H]\centering
 				\includegraphics[width=\textwidth]{NormeDiProgetto/Pics/ProceduraIssueDiVerifica.pdf}
