@@ -51,6 +51,10 @@
 		Servizio web di hosting per lo sviluppo di progetti software che usa i sistemi di controllo di versione \insglo{Git} e \insglo{Mercurial}.
 	</entry>
 
+	<entry name="BOM">
+		Il Byte Order Mark (BOM) è una piccola sequenza di byte che viene posizionata all'inizio di un flusso di dati di puro testo (tipicamente un file) per indicarne il tipo di codifica Unicode.
+	</entry>
+
 	<entry name="Browser">
 		Programma che consente di usufruire dei servizi di connettività in Internet, o di una rete di computer.
 	</entry>
@@ -148,6 +152,10 @@
 		Servizio web di hosting per lo sviluppo di progetti software che usa il sistema di controllo di versione \insglo{Git}. GitHub offre diversi piani per repository privati sia a pagamento, sia gratuiti, molto utilizzati per lo sviluppo di progetti \insglo{open source}.
 	</entry>
 
+	<entry name="Heroku">
+		Heroku è una piattaforma cloud di programmazione progettata per aiutare a realizzare e distribuire applicazioni online. Lo scopo della piattaforma è quello di fornire agli utenti le risorse informatiche (sia hardware sia software) necessarie a distribuire e far “girare” app web-based su svariate piattaforme (ad esempio Facebook). In questo modo gli sviluppatori non dovranno preoccuparsi di avere un'adeguata infrastruttura informatica a supporto della loro creatura, ma potranno affittarla da Heroku.
+	</entry>
+
 	<entry name="HTML5">
 		L'HTML5 è un linguaggio di markup per la strutturazione delle pagine web divenuto standard W3C nell'ottobre 2014.
 	</entry>
@@ -237,6 +245,10 @@
 		Norris è l'oggetto del capitolato e quindi di questo progetto. Norris è un framework che permette di raccogliere dati provenienti da sorgenti arbitrarie e realizzarli come grafici in modo semplice e veloce. Norris fornisce API con le quali è possibile configurare la veste grafica dei dati e indicare diversi metodi di aggiornamento dei dati stessi.
 	</entry>
 	
+	<entry name="notazione CamelCase">
+		La Notazione a Cammello o in inglese CamelCase è la pratica di scrivere parole composte o frasi unendo tutte le parole tra loro, ma lasciando le loro iniziali maiuscole. Tale notazione aiuta notevolmente la lettura di una frase così formata.
+	</entry>
+
 	<entry name="Open source">
 		Software di cui gli autori (più precisamente i detentori dei diritti) rendono pubblico il codice sorgente, permettendo a programmatori indipendenti di apportarvi modifiche. Questa possibilità è regolata tramite l'applicazione di apposite licenze d'uso.
 	</entry>
@@ -255,6 +267,10 @@
 
 	<entry name="PDF">
 		Il Portable Document Format è un formato sviluppato da Adobe Systems per la rappresentazione di documenti in modo indipendente dall'hardware e dal software utilizzati per visualizzarli o generarli.
+	</entry>
+
+	<entry name="PERT">
+		Il Metodo PERT (Program Evaluation and Review Technique) è una tecnica che permette di gestire la pianificazione in un progetto. Il metodo PERT consiste nel rappresentare in un grafico una rete di azioni il cui svolgimento permette di arrivare al raggiungimento degli obiettivi di un progetto. 
 	</entry>
 
 	<entry name="PNG">
@@ -311,6 +327,10 @@
 	
 	<entry name="UML">
 		L'“Unified Modelling Language” è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. Attraverso tale linguaggio è possibile definire i diagrammi dei casi d'uso, delle attività e delle classi.
+	</entry>
+
+	<entry name="URI">
+		La locuzione Uniform Resource Identifier (in acronimo URI) in informatica, si riferisce a una stringa che identifica univocamente una risorsa generica che può essere un indirizzo Web, un documento, un'immagine, un file, un servizio, un indirizzo di posta elettronica, ecc.
 	</entry>
 	
 	<entry name="Walkthrough">
