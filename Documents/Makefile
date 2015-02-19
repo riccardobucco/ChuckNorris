@@ -76,8 +76,8 @@ gulpease: sentences = 1
 gulpease: _force
 	@ exit 1
 
-glossary: terms = $(shell xmllint --xpath '//entry/@name' Glossario/Termini.xml | grep -o '"[[:alpha:]|\.]*"' | grep -o '[[:alpha:]|\.]*' | tr "\n" "|" | head -c -1 | sed 's/\./\\./g')
-glossary: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics[^{]*|caption|label|ref|nameref|pageref|hyperref
+glossary: terms = $(shell xmllint --xpath '//entry/@name' Glossario/Termini.xml | grep -o '"[[:alpha:]|\.| ]*"' | grep -o '[[:alpha:]|\.| ]*' | tr "\n" "|" | head -c -1 | sed 's/\./\\./g')
+glossary: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics[^{]*|caption|label|ref|nameref|pageref|hyperref|addtocounter
 glossary: _force
 	@ #eliminazione tag
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/\\insglo\{([^\}]*)\}/\1/gi' {} \;
