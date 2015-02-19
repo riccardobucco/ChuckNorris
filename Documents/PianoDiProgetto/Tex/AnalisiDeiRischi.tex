@@ -12,18 +12,19 @@
 	\begin{table}[H]\centering \tabulinesep=3pt
 			\begin{tabu}to \textwidth {|X[4]|X[3c]|X[4]|X[4]|}
 				\hline
-				Livello 			& Tipologia					& Probabilità di occorrenza 	& Livello di rischio  \\ \hline
+				Livello 			& Tipologia					& Probabilità di occorrenza 		& Livello di rischio  \\ \hline
 
-				Tecnologico		& Tecnologie adottate sconosciute			& media 					& alto 		 \\ \cline{2-4}
-				  				& Guasti hardware						& bassa 					& basso 		 \\ \hline
-				Personale		 	& Problemi personali dei componenti del team	& media 					& medio 		 \\ \cline{2-4}
-								& Problemi tra i componenti del team		& bassa 					& alto 		 \\ \hline
-				Organizzativo	 	& Valutazione dei costi					& media 					& alto 		 \\ \hline
-				Strumenti			& Inesperienza nell'utilizzo				& alta 					& alto 		 \\ \hline
-				Requisiti		 	& Comprensione 						& media					& alto 		 \\ \hline
+				Tecnologico			& Tecnologie adottate sconosciute				& media 					& alto 		 \\ \cline{2-4}
+				  					& Guasti hardware								& bassa 					& basso 	 \\ \hline
+				Personale		 	& Problemi personali dei componenti del team	& media 					& medio 	 \\ \cline{2-4}
+									& Problemi tra i componenti del team			& bassa 					& alto 		 \\ \hline
+				Organizzativo	 	& Valutazione dei costi							& media 					& alto 		 \\ \hline
+				Strumenti			& Inesperienza nell'utilizzo					& alta 						& alto 		 \\ \hline
+				Requisiti		 	& Comprensione 									& media						& alto 		 \\ \hline
 			\end{tabu}
 		\caption{Riassunto analisi dei rischi}
 	\end{table}
+
 	\subsection{Livello tecnologico}
 		\subsubsection{Tecnologie adottate sconosciute}
 			\begin{itemize}
@@ -36,6 +37,7 @@
 					\end{itemize}
 				\item \textbf{Pianificazione}: sarà compito dell'\insrole{Amministratore} mettere a disposizione il materiale necessario ad ogni membro del gruppo, che si impegnerà a documentarsi, in maniera autonoma e il più completa possibile, sulle tecnologie da utilizzare.
 				\item \textbf{Controllo}: il \insrole{Responsabile di Progetto} ha il compito di monitorare costantemente il grado di conoscenza di ogni componente del team riguardo le tecnologie adottate.
+				\item \textbf{Riscontro}: durante le prime due fasi non si è verificato questo problema in quanto le tecnologie utilizzate in tali fasi sono di facile comprensione ed in parte già conosciute.
 			\end{itemize}
 		\subsubsection{Guasti hardware}
 			\begin{itemize}
@@ -48,6 +50,7 @@
 				\end{itemize}
 				\item \textbf{Pianificazione}: allo scopo di evitare tale rischio si fa uso di \textit{Dropbox} e \textit{repository} per il backup dei dati. In questo modo ogni componente del team possiede una copia condivisa del lavoro svolto. In caso di guasto hardware verranno utilizzate le macchine messe a disposizione dai laboratori informatici o altri strumenti personali.
 				\item \textbf{Controllo}: ogni componente ha il compito di curare la propria strumentazione hardware e di effettuare il backup dei dati ad ogni aggiornamento importante. Inoltre, è utile controllare frequentemente che i dati di backup siano presenti ed aggiornati all'ultima versione.
+				\item \textbf{Riscontro}: durante le prime due fasi ogni componente si è preso cura del proprio materiale e ciò ha favorito il fatto che non si siano verificati guasti hardware.
 			\end{itemize}
 	\subsection{Livello personale}
 		\subsubsection{Problemi personali dei componenti del team}
@@ -61,6 +64,7 @@
 				\end{itemize}
 				\item \textbf{Pianificazione}: ciascun membro del team si impegnerà ad avvertire, in caso di impegni personali, il \insrole{Responsabile di Progetto}, il quale ridurrà il carico di lavoro a quel componente e lo ripartirà tra le altre risorse disponibili, eseguendo una nuova pianificazione delle attività del periodo in considerazione.
 				\item \textbf{Controllo}: il \insrole{Responsabile di Progetto} verificherà costantemente se vi sono avvisi, riguardanti impegni o imprevisti, da parte dei componenti del gruppo. Tale rischio sarà, anche, controllato tramite l'uso di calendari di gruppo.
+				\item \textbf{Riscontro}: durante le prime due fasi ogni componente ha avvertito il \insrole{Responsabile di Progetto} con largo  anticipo in caso di impegni personali. Ognuno di questi rischi è stato ben gestito ed eliminato.
 			\end{itemize}
 		\subsubsection{Problemi tra componenti del team}
 			\begin{itemize}
@@ -73,6 +77,7 @@
 				\end{itemize}
 				\item \textbf{Pianificazione}: il \insrole{Project Manager} si dovrà occupare di risolvere eventuali contrasti o dispute, sottoponendo i componenti coinvolti ad un confronto civile per raggiungere un accordo; in caso il problema non venisse risolto dovrà pianificare le successive attività in modo da minimizzare il contatto tra le parti coinvolte.
 				\item \textbf{Controllo}: sarà compito del \insrole{Responsabile di Progetto} tenere sotto controllo i rapporti tra i vari membri del team e compito di tutti i componenti di riferire al \insrole{Project Manager} eventuali problemi di cui non è a conoscenza.
+				\item \textbf{Riscontro}: durante le prime due fasi non si sono mai verificati problemi di questo tipo.
 			\end{itemize}
 	\subsection{Livello organizzativo}
 		\subsubsection{Valutazione dei costi}
@@ -86,6 +91,8 @@
 				\end{itemize}
 				\item \textbf{Pianificazione}: il \insrole{Project Manager} verificherà ogni giorno l'avanzamento delle attività, tramite la \textit{dashboard}. Si presterà maggiore attenzione alle attività critiche, per le quali si predisporrà un periodo di slack in modo da evitare che un eventuale ritardo non posticipi le altre attività. Nel caso tale tempo di slack non bastasse, verrà rieseguita la pianificazione tenendo conto del ritardo accumulato che si dovrà recuperare.
 				\item \textbf{Controllo}: incarico del \insrole{Responsabile di Progetto} sarà accertarsi che le attività procedano come pianificato. Per facilitare tale compito si utilizzerà una \textit{dashboard}, tramite la quale ogni componente saprà quali attività deve svolgere ed entro quali date.
+				\item \textbf{Riscontro}: durante la prima fase si è verificato un ritardo sull'attività di analisi. Tuttavia, grazie ad una attenta pianificazione, non si sono verificati ritardi nella consegna. 
+				%TODO: riscontro per fase AD 
 			\end{itemize}
 	\subsection{Livello degli strumenti}
 		\subsubsection{Inesperienza del team nell'utilizzo degli strumenti}
@@ -99,6 +106,7 @@
 				\end{itemize}
 				\item \textbf{Pianificazione}: il \insrole{Responsabile di Progetto} valuterà il livello di conoscenza di ogni componente del gruppo riguardo gli strumenti utilizzati. Ogni volta che si incontrerà la necessità di fare uso di un nuovo strumento, verrà comunicato a tutti i componenti del gruppo tramite mailing list. Ogni membro dovrà documentarsi autonomamente ed imparare ad utilizzare gli strumenti richiesti.
 				\item \textbf{Controllo}: sarà compito dell'\insrole{Amministratore} verificare se qualche membro del gruppo richiede aiuto riguardo la strumentazione. Ogni componente dovrà verificare se sono stati utilizzati nuovi strumenti.
+				\item \textbf{Riscontro}: durante le prime due fasi non si è verificato questo problema in quanto gli strumenti utilizzati in tali fasi sono di facile comprensione ed in parte già conosciuti.
 			\end{itemize}
 	\subsection{Livello dei requisiti}
 		\subsubsection{Comprensione dei requisiti}
@@ -112,4 +120,5 @@
 				\end{itemize}
 				\item \textbf{Pianificazione}: durante la fase di \insphase{Analisi dei Requisiti}, il team effettuerà più incontri con il Proponente, in modo da assicurarsi di aver compreso in modo chiaro ogni requisito necessario al corretto sviluppo del progetto.
 				\item \textbf{Controllo}: ad ogni revisione verranno consegnati tutti i documenti che il Proponente valuterà e saranno corretti gli eventuali errori o imprecisioni segnalati.
+				\item \textbf{Riscontro}: durante la prima fase si sono riscontrate difficoltà nella comprensione dei requisiti ma grazie agli incontri effettuati con il Proponente si è riusciti a capirli in modo chiaro.
 			\end{itemize}
