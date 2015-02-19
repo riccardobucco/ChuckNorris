@@ -152,6 +152,10 @@
 		Servizio web di hosting per lo sviluppo di progetti software che usa il sistema di controllo di versione \insglo{Git}. GitHub offre diversi piani per repository privati sia a pagamento, sia gratuiti, molto utilizzati per lo sviluppo di progetti \insglo{open source}.
 	</entry>
 
+	<entry name="Hardware">
+		In ingegneria elettronica e informatica con il termine hardware si indica la parte fisica di un computer, ovvero tutte quelle parti elettroniche, elettriche, meccaniche, magnetiche, ottiche che ne consentono il funzionamento (dette anche strumentario). Più in generale il termine si riferisce a qualsiasi componente fisico di una periferica o di una apparecchiatura elettronica.
+	</entry>
+
 	<entry name="Heroku">
 		Heroku è una piattaforma cloud di programmazione progettata per aiutare a realizzare e distribuire applicazioni online. Lo scopo della piattaforma è quello di fornire agli utenti le risorse informatiche (sia hardware sia software) necessarie a distribuire e far “girare” app web-based su svariate piattaforme (ad esempio Facebook). In questo modo gli sviluppatori non dovranno preoccuparsi di avere un'adeguata infrastruttura informatica a supporto della loro creatura, ma potranno affittarla da Heroku.
 	</entry>
@@ -216,6 +220,10 @@
 		Software multipiattaforma di controllo di versione distribuito, utilizzabile da riga di comando.
 	</entry>
 	
+	<entry name="Microsoft Project">
+		Microsoft Project (o MSP) è un software di pianificazione (utilizzato anche nel project management) sviluppato e venduto da Microsoft. È uno strumento per assistere i project manager nella pianificazione, nell'assegnazione delle risorse, nella verifica del rispetto dei tempi, nella gestione dei budget e nell'analisi dei carichi di lavoro.
+	</entry>
+	
 	<entry name="Middleware">
 		Insieme di programmi informatici che fungono da intermediari tra diverse applicazioni e componenti software. Sono spesso utilizzati come supporto per sistemi distribuiti complessi.
 	</entry>
@@ -245,7 +253,7 @@
 		Norris è l'oggetto del capitolato e quindi di questo progetto. Norris è un framework che permette di raccogliere dati provenienti da sorgenti arbitrarie e realizzarli come grafici in modo semplice e veloce. Norris fornisce API con le quali è possibile configurare la veste grafica dei dati e indicare diversi metodi di aggiornamento dei dati stessi.
 	</entry>
 	
-	<entry name="notazione CamelCase">
+	<entry name="Notazione CamelCase">
 		La Notazione a Cammello o in inglese CamelCase è la pratica di scrivere parole composte o frasi unendo tutte le parole tra loro, ma lasciando le loro iniziali maiuscole. Tale notazione aiuta notevolmente la lettura di una frase così formata.
 	</entry>
 
@@ -304,7 +312,11 @@
 	<entry name="Software">
 		Un software, in informatica, è l'informazione o le informazioni utilizzate da uno o più sistemi informatici e memorizzate su uno o più supporti informatici. Tali informazioni possono essere quindi rappresentate da uno o più programmi, oppure da uno o più dati, oppure da una combinazione delle due.
 	</entry>
-	
+
+	<entry name="Stakeholder">
+		Con il termine stakeholder (o portatore di interesse) si individua un soggetto (o un gruppo di soggetti) influente nei confronti di un'iniziativa economica, sia essa un'azienda o un progetto. Fanno, ad esempio, parte di questo insieme: i clienti, i fornitori, i finanziatori (banche e azionisti), i collaboratori, ma anche gruppi di interesse esterni, come i residenti di aree limitrofe all'azienda o gruppi di interesse locali.
+	</entry>
+
 	<entry name="Stream">
 		L'aggiornamento in stream aggiunge nuovi valori al grafico. Il grafico mantiene la visualizzazione dei dati già presenti aggiungendo nuove rappresentazioni grafiche dei nuovi dati aggiunti.
 	</entry>
