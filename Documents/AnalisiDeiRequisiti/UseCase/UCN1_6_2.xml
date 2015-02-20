@@ -6,8 +6,8 @@
 	<precondizione>Si vuole creare un grafico di tipo map chart.</precondizione>
 	<postcondizione>È stata inserita una serie di punti nel grafico.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie quanti punti deve avere la serie da inserire nel grafico;</item>
-		<item>Lo sviluppatore inserisce la posizione (data da longitudine e latitudine) di ciascun punto;</item>
+		<item>Lo sviluppatore sceglie quanti punti deve avere la serie da inserire nel map chart (UC1.6.2.1);</item>
+		<item>Lo sviluppatore inserisce la posizione (data da longitudine e latitudine) di ciascun punto della serie(UC1.6.2.2);</item>
 		<item>La serie di punti viene inserita nel grafico.</item>
 	</principale>
 </usecase>
