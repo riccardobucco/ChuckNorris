@@ -31,6 +31,8 @@
 			<xsd:element name="inclusioni" type="xsd:string" minOccurs="0"/>
 			
 			<xsd:element name="estensioni" type="xsd:string" minOccurs="0"/>
+
+			<xsd:element name="descrizione" type="xsd:string" minOccurs="0"/>
 			
 			<xsd:element name="precondizione" type="xsd:string"/>
 			

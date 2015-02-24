@@ -23,6 +23,7 @@
 		<xsl:apply-templates select="specializzazionedi"/>
 		<xsl:apply-templates select="inclusioni"/>
 		<xsl:apply-templates select="estensioni"/>
+		<xsl:apply-templates select="descrizione"/>
 		<xsl:apply-templates select="precondizione"/>
 		<xsl:apply-templates select="postcondizione"/>
 		<xsl:apply-templates select="principale"/>
@@ -63,6 +64,10 @@
 
 	<xsl:template match="estensioni">
 		\item \textbf{Estensioni:} <xsl:value-of select="."/>
+	</xsl:template>
+
+	<xsl:template match="descrizione">
+		\item \textbf{Descrizione:} <xsl:value-of select="."/>
 	</xsl:template>
 
 	<xsl:template match="precondizione">
