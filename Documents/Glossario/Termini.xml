@@ -336,10 +336,19 @@
 	<entry name="URI">
 		La locuzione Uniform Resource Identifier (in acronimo URI) in informatica, si riferisce a una stringa che identifica univocamente una risorsa generica che può essere un indirizzo Web, un documento, un'immagine, un file, un servizio, un indirizzo di posta elettronica, ecc.
 	</entry>
+
+	<entry name="Valore dipendente" equiv="valori dipendenti">
+		Data una funzione matematica, ciascun elemento del codominio viene chiamato valore dipendente.
+	</entry>
+
+	<entry name="Valore indipendente" equiv="valori indipendenti">
+		Data una funzione matematica, ciascun elemento del dominio viene chiamato valore indipendente.
+	</entry>
 	
 	<entry name="Walkthrough">
 		Walkthrough è una forma di analisi statica di un prodotto non compilabile, o del quale non si vuole o non si può fare un'analisi dinamica, che prevede un esame accurato dell'oggetto dell'analisi alla ricerca di ogni possibile errore. Questa tecnica viene applicata quando non si ha un'idea precisa della tipologia di errori che possono verificarsi.
 	</entry>
+
 	<entry name="WebSocket">
 		Tecnologia web che fornisce canali di comunicazione bidirezionali attraverso una singola connessione \insglo{TCP}. L'\insglo{API} del WebSocket è stata standardizzata dal W3C e il protocollo WebSocket è stato standardizzato dall'IETF.
 	</entry>
