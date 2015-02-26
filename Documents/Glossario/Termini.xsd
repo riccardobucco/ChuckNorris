@@ -9,8 +9,9 @@
 				<xsd:complexType>
 						<xsd:simpleContent>
 							<xsd:extension base="xsd:string">
-        				<xsd:attribute name="name" type="xsd:string" use="required"/>
-      				</xsd:extension>
+		        				<xsd:attribute name="name" type="xsd:string" use="required"/>
+		        				<xsd:attribute name="equiv" type="xsd:string"/>
+		      				</xsd:extension>
 						</xsd:simpleContent>
 				</xsd:complexType>
 			</xsd:element>

@@ -2,29 +2,12 @@
 
 <terms>
 	
-	<entry name="Aggiornamento in place">
-		Questo tipo di aggiornamento sostituisce valori già presenti con valori nuovi e aggiornati.
-	</entry>
-
-	<entry name="Aggiornamento movie">
-		L'aggiornamento movie combina i due metodi di aggiornamento \insglo{in place} e \insglo{stream}, permettendo di gestire la transizione della rappresentazione del grafico in due momenti successivi. Questo metodo di aggiornamento permette di:
-		\begin{itemize}
-			\item sostituire i valori già rappresentati;
-			\item aggiungere nuovi valori al grafico;
-			\item togliere valori rappresentati nel grafico.
-		\end{itemize}
-	</entry>
-
-	<entry name="Aggiornamento stream">
-		L’\insglo{aggiornamento stream} aggiunge nuovi valori al grafico. Il grafico mantiene la visualizzazione dei dati già presenti, aggiungendo nuove rappresentazioni grafiche per i nuovi dati aggiunti.
-	</entry>
-
 	<entry name="Android">
 		È un sistema operativo open source per dispositivi mobili sviluppato da Google.
 	</entry>
 
 	<entry name="Angular.js">
-		Angular.js è un framework JavaScript utile a semplificare la realizzazione di applicazioni Web single page. Si tratta di un template-engine lato client che implementa il pattern MVC.
+		Angular.js è un framework basato su JavaScript utile a semplificare la realizzazione di applicazioni Web single page. Si tratta di un template-engine lato client che implementa il pattern MVC.
 	</entry>
 
 	<entry name="Aspell">
@@ -59,7 +42,7 @@
 		Programma che consente di usufruire dei servizi di connettività in Internet, o di una rete di computer.
 	</entry>
 
-	<entry name="Capitolato">
+	<entry name="Capitolato" equiv="capitolati">
 		Documento tecnico, in genere allegato ad un contratto di appalto, che vi fa riferimento per definire in quella sede le specifiche tecniche delle opere che andranno ad eseguirsi per effetto del contratto stesso.
 	</entry>
 
@@ -99,7 +82,7 @@
 		Soluzione progettuale generale ad un problema ricorrente.
 	</entry>
 	
-	<entry name="Diagramma di Gantt">
+	<entry name="Diagramma di Gantt" equiv="diagrammi di gantt">
 		Il diagramma di Gantt è uno strumento di supporto alla gestione dei progetti. Usato principalmente nelle attività di project management, è costruito partendo da un asse orizzontale, usato per rappresentare l'arco temporale totale del progetto, suddiviso in fasi incrementali, e da un asse verticale, usato per rappresentare delle mansioni o attività che costituiscono il progetto.
 		Un diagramma di Gantt permette dunque la rappresentazione grafica di un calendario di attività, utile al fine di pianificare, coordinare e tracciare specifiche attività in un progetto dando una chiara illustrazione dello stato d'avanzamento del progetto rappresentato.
 	</entry>
@@ -112,7 +95,7 @@
 		Servizio di rete sociale che offre diversi servizi di messaggistica privata, tra cui una chat.
 	</entry>
 
-	<entry name="Fase">
+	<entry name="Fase" equiv="fasi">
 		Nei documenti del progetto Norris, e in generale nell'ambito dell'ingegneria del software, per fase si intende un segmento temporale che cattura stati e/o transizioni di un ciclo di vita.
 	</entry>
 	
@@ -160,7 +143,7 @@
 		Heroku è una piattaforma cloud di programmazione progettata per aiutare a realizzare e distribuire applicazioni online. Lo scopo della piattaforma è quello di fornire agli utenti le risorse informatiche (sia hardware sia software) necessarie a distribuire e far “girare” app web-based su svariate piattaforme (ad esempio Facebook). In questo modo gli sviluppatori non dovranno preoccuparsi di avere un'adeguata infrastruttura informatica a supporto della loro creatura, ma potranno affittarla da Heroku.
 	</entry>
 
-	<entry name="HTML5">
+	<entry name="HTML5" equiv="html 5">
 		L'HTML5 è un linguaggio di markup per la strutturazione delle pagine web divenuto standard W3C nell'ottobre 2014.
 	</entry>
 
@@ -246,7 +229,12 @@
 	</entry>
 	
 	<entry name="Movie">
-		Il metodo di aggiornamento movie, combina i due metodi in place e stream. Questo aggiornamento gestisce la transizione della rappresentazione del grafico in due momenti successivi. Analogamente ai film, i quali sono composti da sequenze di fotogrammi. Questo tipo di aggiornamento permette di: sostituire i valori già rappresentati, aggiungere nuovi valori al grafico, togliere valori rappresentati nel grafico. 
+		L'aggiornamento movie combina i due metodi di aggiornamento \insglo{in place} e \insglo{stream}, permettendo di gestire la transizione della rappresentazione del grafico in due momenti successivi. Questo metodo di aggiornamento permette di:
+		\begin{itemize}
+			\item sostituire i valori già rappresentati;
+			\item aggiungere nuovi valori al grafico;
+			\item togliere valori rappresentati nel grafico.
+		\end{itemize}
 	</entry>	
 	
 	<entry name="Node.js">
@@ -289,11 +277,11 @@
 		Il Portable Network Graphics è un formato per la memorizzazione di immagini.
 	</entry>
 	
-	<entry name="Procedura">
+	<entry name="Procedura" equiv="procedure">
 		Funzione che raggruppa al suo interno una sequenza di istruzioni. Una procedura è chiamabile più volte all'interno di un programma, permettendo così il riuso del codice e facilitando la manutenibilità dello stesso.
 	</entry>
 	
-	<entry name="Prodotto">
+	<entry name="Prodotto" equiv="prodotti">
 		Nei documenti del progetto Norris, il termine “prodotto” indica il risultato di una attività, sia esso un documento, del codice sorgente o un qualsiasi risultato verificabile.
 	</entry>
 	
@@ -317,7 +305,7 @@
 		Un software, in informatica, è l'informazione o le informazioni utilizzate da uno o più sistemi informatici e memorizzate su uno o più supporti informatici. Tali informazioni possono essere quindi rappresentate da uno o più programmi, oppure da uno o più dati, oppure da una combinazione delle due.
 	</entry>
 
-	<entry name="Stakeholder">
+	<entry name="Stakeholder" equiv="stakeholders">
 		Con il termine stakeholder (o portatore di interesse) si individua un soggetto (o un gruppo di soggetti) influente nei confronti di un'iniziativa economica, sia essa un'azienda o un progetto. Fanno, ad esempio, parte di questo insieme: i clienti, i fornitori, i finanziatori (banche e azionisti), i collaboratori, ma anche gruppi di interesse esterni, come i residenti di aree limitrofe all'azienda o gruppi di interesse locali.
 	</entry>
 
@@ -352,7 +340,7 @@
 	<entry name="Walkthrough">
 		Walkthrough è una forma di analisi statica di un prodotto non compilabile, o del quale non si vuole o non si può fare un'analisi dinamica, che prevede un esame accurato dell'oggetto dell'analisi alla ricerca di ogni possibile errore. Questa tecnica viene applicata quando non si ha un'idea precisa della tipologia di errori che possono verificarsi.
 	</entry>
-	<entry name="Web Socket">
+	<entry name="WebSocket">
 		Tecnologia web che fornisce canali di comunicazione bidirezionali attraverso una singola connessione \insglo{TCP}. L'\insglo{API} del WebSocket è stata standardizzata dal W3C e il protocollo WebSocket è stato standardizzato dall'IETF.
 	</entry>
 	
