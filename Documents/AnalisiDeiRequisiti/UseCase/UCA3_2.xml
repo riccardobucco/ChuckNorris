@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCA3.2 Visualizzazione del grafico selezionato</titolo>
 	<attorip>Utente</attorip>
-	<descrizione>L'utente, dopo aver selezionato un grafico dalla lista dei grafici esistenti, lo visualizza.</descrizione>
-	<precondizione>È stato selezionato un grafico dalla lista dei grafici esistenti.</precondizione>
+	<descrizione>L'utente, dopo aver selezionato un grafico dall'elenco dei grafici esistenti, lo visualizza.</descrizione>
+	<precondizione>È stato selezionato un grafico dall'elenco dei grafici esistenti.</precondizione>
 	<postcondizione>È stato visualizzato il grafico selezionato.</postcondizione>
 </usecase>

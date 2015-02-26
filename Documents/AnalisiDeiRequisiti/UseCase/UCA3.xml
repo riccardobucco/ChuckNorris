@@ -3,12 +3,13 @@
 <usecase>
 	<titolo>UCA3 Visualizzazione singolo grafico</titolo>
 	<attorip>Utente</attorip>
-	<descrizione>L'utente, dopo essersi collegato ad un'istanza di Norris, sceglie un grafico dalla lista di grafici esistenti e lo visualizza.</descrizione>
+	<inclusioni>UCA2 Visualizzazione elenco grafici</inclusioni>
+	<descrizione>L'utente, dopo essersi collegato ad un'istanza di Norris, sceglie un grafico dall'elenco di grafici esistenti e lo visualizza.</descrizione>
 	<precondizione>Si sta utilizzando l'applicazione. È avvenuto il collegamento ad un'istanza di Norris.</precondizione>
 	<postcondizione>È stato visualizzato un singolo grafico presente nell'istanza di Norris.</postcondizione>
 	<principale>
-		<item>L'utente visualizza la lista di grafici contenuti nell'istanza di Norris a cui ci si è collegati; </item>
-		<item>L'utente seleziona un grafico dalla lista di grafici (UCA3.1);</item>
+		<item>L'utente visualizza l'elenco di grafici contenuti nell'istanza di Norris a cui ci si è collegati (UCA2); </item>
+		<item>L'utente seleziona un grafico dall'elenco di grafici (UCA3.1);</item>
 		<item>L'utente visualizza il grafico selezionato (UCA3.2).</item>
 	</principale>
 </usecase>
