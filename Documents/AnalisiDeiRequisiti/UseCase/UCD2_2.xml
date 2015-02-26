@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCD2.2 Visualizzare il numero di autobus attivi per una linea</titolo>
+	<attorip>Utente</attorip>
+	<descrizione>L'utente, selezionata la linea di cui vuole avere le informazioni, visualizza il numero di autobus attivi per quella linea.</descrizione>
+	<precondizione>Si sta visualizzando il numero di autobus attivi per ciascuna linea. È stata selezionata una linea.</precondizione>
+	<postcondizione>È stato visualizzato il numero di autobus attivi della linea selezionata.</postcondizione>
+</usecase>
