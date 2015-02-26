@@ -203,7 +203,7 @@
 					La formula per il suo calcolo è la seguente:
 					\begin{equation}
 						\label{eq:gulpease}
-						Indice\ Gulpease = 89 + \frac{300*numero\_frasi-10*numero\_lettere}{numero\_parole}
+						Indice\ Gulpease = 89 + \frac{300*numero\ frasi-10*numero\ lettere}{numero\ parole}
 					\end{equation}
 					Il risultato di tale equazione tipicamente è compreso tra 0 e 100, dove valori alti indicano leggibilità elevata e viceversa.\\
 					In generale, risulta che testi con un indice:
@@ -226,8 +226,8 @@
 					CMM ci consente di individuare la maturità di un processo: essa può assumere un valore da 1 (il peggiore) a 5 (il migliore). Mettendo 
 					ora in relazione i risultati di tale modello con i range da noi stabiliti otteniamo quanto segue:
 					\begin{itemize}
-						\item i valori 1 e 2 sono considerati negativi;
-						\item il valore 3 è considerato accettabile;
+						\item il valore 1 è considerato negativo;
+						\item i valori 2 e 3 sono considerati accettabili;
 						\item i valori 4 e 5 sono considerati ottimali.
 					\end{itemize}
 					La scelta del team è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del 
@@ -237,17 +237,14 @@
 					Si vuole cercare di calcolare la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del 
 					progetto. In generale, in una prima approssimazione, la si misura tramite la seguente formula:
 					\begin{equation} \label{eq:produttivita}						
-						Produttivita' = \frac{Quantita'\ di\ output\ ottenuto}{Quantita'\ di\ input\ utilizzato}
+						Produttività = \frac{Quantità\ di\ output\ ottenuto}{Quantità\ di\ input\ utilizzato}
 					\end{equation}
 					Tale parametro genera metriche differenti in base a cosa si riferiscono i termini “input” e “output”. Dunque, tale formula assume 
 					aspetti diversi in base ai processi (e relative attività) ai quali viene applicata.
 					\begin{description}
-						\item[Documentazione] Il parametro “input” assume il significato di “numero di parole scritte”, il parametro “output” assume il 
-						significato di “ore necessarie alla scrittura della documentazione”.
-						\item[Codifica] Il parametro “input” assume il significato di “numero di linee di codice scritte”, il parametro “output” assume 
-						il significato di “ore necessarie alla scrittura del codice”.
-						\item[Verifica] Il parametro “input” assume il significato di “numero di anomalie rilevate”, il parametro “output” assume il 
-						significato di “ore necessarie alle attività di verifica”.
+						\item[Documentazione] Il parametro “input” assume il significato di “ore necessarie alla scrittura della documentazione”, il parametro “output” assume il significato di “numero di parole scritte”.
+						\item[Codifica] Il parametro “input” assume il significato di “ore necessarie alla scrittura del codice”, il parametro “output” assume il significato di “numero di linee di codice scritte”.
+						\item[Verifica] Il parametro “input” assume il significato di “ore necessarie alle attività di verifica”, il parametro “output” assume il significato di “numero di anomalie rilevate”.
 					\end{description}
 					I valori che si ottengono in tale modo sono difficilmente valutabili in modo assoluto. Piuttosto, essi assumono importanza nel 
 					momento in cui vengono confrontati fra loro in momenti diversi del progetto: in questo modo il \insrole{Responsabile di Progetto} può valutare 
