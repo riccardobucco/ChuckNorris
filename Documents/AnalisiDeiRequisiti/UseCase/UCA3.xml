@@ -7,7 +7,8 @@
 	<precondizione>Si sta utilizzando l'applicazione. È avvenuto il collegamento ad un'istanza di Norris.</precondizione>
 	<postcondizione>È stato visualizzato un singolo grafico presente nell'istanza di Norris.</postcondizione>
 	<principale>
-		<item>L'utente seleziona un grafico dalla lista di grafici;</item>
-		<item>L'utente visualizza il grafico selezionato.</item>
+		<item>L'utente visualizza la lista di grafici contenuti nell'istanza di Norris a cui ci si è collegati; </item>
+		<item>L'utente seleziona un grafico dalla lista di grafici (UCA3.1);</item>
+		<item>L'utente visualizza il grafico selezionato (UCA3.2).</item>
 	</principale>
 </usecase>
