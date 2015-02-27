@@ -3,6 +3,13 @@
 <usecase>
 	<titolo>UCA2 Visualizzazione elenco grafici</titolo>
 	<attorip>Utente</attorip>
+	<descrizione>L'utente, dopo essersi collegato ad un'istanza di Norris, visualizza la lista di grafici esistenti. La lista contiene ID, titolo, tipo e descrizione di ogni grafico</descrizione>
 	<precondizione>Si sta utilizzando l'applicazione. È avvenuto il collegamento ad un'istanza di Norris.</precondizione>
-	<postcondizione>È visualizzato l'elenco dei grafici presenti nell'istanza di Norris.</postcondizione>
+	<postcondizione>È stato visualizzato l'elenco dei grafici presenti nell'istanza di Norris.</postcondizione>
+	<principale>
+		<item>L'utente visualizza l'ID del grafico;</item>
+		<item>L'utente visualizza il titolo del grafico;</item>
+		<item>L'utente visualizza il tipo del grafico;</item>
+		<item>L'utente visualizza la descrizione del grafico.</item>
+	</principale>
 </usecase>
