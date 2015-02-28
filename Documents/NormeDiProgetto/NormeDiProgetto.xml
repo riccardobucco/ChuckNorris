@@ -10,11 +10,9 @@
 
 	<sections>
 		<name>Tex/Introduzione.tex</name>
-		<name>Tex/Organizzazione.tex</name>
-		<name>Tex/Documentazione.tex</name>
-		<name>Tex/Configurazione.tex</name>
-		<name>Tex/Sviluppo.tex</name>
-		<name>Tex/Verifica.tex</name>
+		<name>Tex/ProcessiPrimari.tex</name>
+		<name>Tex/ProcessiDiSupporto.tex</name>
+		<name>Tex/ProcessiOrganizzativi.tex</name>
 	</sections>
     
     <appendix>
