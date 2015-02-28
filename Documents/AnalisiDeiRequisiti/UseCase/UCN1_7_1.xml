@@ -2,10 +2,10 @@
 
 <usecase>
 	<titolo>UCN1.7.1 Scegliere opzioni table</titolo>
-	
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può scegliere le opzioni inerenti un grafico di tipo table.</descrizione>
 	<precondizione>Si vuole creare un grafico di tipo table. Sono stati inseriti i dati della table. In particolare si conosce quante sono le colonne e le si sa identificare.</precondizione>
-	<postcondizione>Sono state configurate le impostazioni della table.</postcondizione>
+	<postcondizione>Sono state configurate le opzioni della table.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore sceglie il formato dei dati contenuti nelle colonne (UCN1.7.1.1);</item>
 		<item>Lo sviluppatore sceglie le opzioni riguardanti il formato di una o più celle (UCN1.7.1.2);</item>
