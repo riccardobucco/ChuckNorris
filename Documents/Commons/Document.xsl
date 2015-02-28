@@ -53,27 +53,33 @@
 				\def\next{\@level{#1}}\expandafter\next
 			\fi}
 		\newcommand{\@level}[1]{%
-			\@startsection{level#1}
-				{#1}
+			\@startsection{level#1}%
+				{#1}%
 				{\z@}%
 				{-3.25ex\@plus -1ex \@minus -.2ex}%
 				{1.5ex \@plus .2ex}%
 				{\normalfont\normalsize\bfseries}}
 
-		\newdimen\@leveldim
+		\newdimen\@numsdim
 		\newdimen\@dotsdim
 		{\normalfont\normalsize
-			\sbox\z@{0}\global\@leveldim=\wd\z@
+			\sbox\z@{0}\global\@numsdim=\wd\z@
 			\sbox\z@{.}\global\@dotsdim=\wd\z@
 		}
+
+		\newdimen\@numindent
+		\newdimen\@textindent
+		\setlength{\@numindent}{15pt}
+		\setlength{\@textindent}{15pt}
+
 
 		\newcounter{level4}[subsubsection]
 		\@namedef{thelevel4}{\thesubsubsection.\arabic{level4}}
 		\@namedef{level4mark}#1{}
-		\def\l@section{\@dottedtocline{1}{0pt}{\dimexpr\@leveldim*4+\@dotsdim*1+6pt\relax}}
-		\def\l@subsection{\@dottedtocline{2}{0pt}{\dimexpr\@leveldim*5+\@dotsdim*2+6pt\relax}}
-		\def\l@subsubsection{\@dottedtocline{3}{0pt}{\dimexpr\@leveldim*6+\@dotsdim*3+6pt\relax}}
-		\@namedef{l@level4}{\@dottedtocline{4}{0pt}{\dimexpr\@leveldim*7+\@dotsdim*4+6pt\relax}}
+		\def\l@section{\@dottedtocline{1}{\dimexpr\@numindent*0\relax}{\dimexpr\@dotsdim*0+\@numsdim*1+\@textindent\relax}}
+		\def\l@subsection{\@dottedtocline{2}{\dimexpr\@numindent*1\relax}{\dimexpr\@dotsdim*1+\@numsdim*2+\@textindent\relax}}
+		\def\l@subsubsection{\@dottedtocline{3}{\dimexpr\@numindent*2\relax}{\dimexpr\@dotsdim*2+\@numsdim*3+\@textindent\relax}}
+		\@namedef{l@level4}{\@dottedtocline{4}{\dimexpr\@numindent*3\relax}{\dimexpr\@dotsdim*3+\@numsdim*4+\@textindent\relax}}
 
 		\count@=4
 		\def\@ncp#1{\number\numexpr\count@+#1\relax}
@@ -84,14 +90,17 @@
 					\noexpand\@nameuse{thelevel\@ncp{0}}.\noexpand\arabic{level\@ncp{1}}}
 				\noexpand\@namedef{level\@ncp{1}mark}####1{}%
 				\noexpand\@namedef{l@level\@ncp{1}}%
-					{\noexpand\@dottedtocline{\@ncp{1}}{0pt}{\the\dimexpr\@leveldim*\@ncp{5}+\@dotsdim*\@ncp{0}\relax}}}%
+					{\noexpand\@dottedtocline%
+						{\@ncp{1}}%
+						{\dimexpr\@numindent*\@ncp{0}\relax}%
+						{\the\dimexpr\@dotsdim*\@ncp{0}+\@numsdim*\@ncp{1}+\@textindent\relax}}}%
 			\x
 			\advance\count@\@ne
 		\repeat
 		\makeatother
 		
-		\setcounter{tocdepth}{10}
-		\setcounter{secnumdepth}{10}
+		\setcounter{tocdepth}{100}
+		\setcounter{secnumdepth}{100}
 
 		
 
