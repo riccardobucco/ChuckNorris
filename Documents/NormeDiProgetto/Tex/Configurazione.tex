@@ -79,7 +79,19 @@
 				\end{figure}
 		
 		\subsubsection{Aggiornamento del repository}
-				Per aggiornare il repository è prevista una procedura ben definita, riportata nel seguente diagramma:
+				Per aggiornare il repository è nesessario seguire correttamente la seguente procedura:
+				\begin{enumerate}
+				\item si esegue il comando git pull per aggiornare il repository locale alla commit più recente;
+				\item se sono avvenuti conflitti si passa al punto (3), altimenti si prosegue col punto (4);
+				\item con il comando git stash è possibile salvare le modifiche incomplete in uno stack separato per poterle riutilizzare in seguito; dopo aver accantonato i file è necessario aggiornare il repository col comando git pull, in questo modo si ha una directory di lavoro "pulita" e si possono inserire le modifiche prima accantonate;
+				\item si scelgono i file di cui fare il commit usando il comando git add;
+				\item si esegue il comando git commit;
+				\item si esegue git push per inviare le modifiche effettuate al repository remoto;
+				\item se il comando push fallisce si prosegue col punto (8), altrimenti si passa al punto (9);
+				\item si riaggiorna il repository locale tramite git pull, il quale creerà un merge commit, dopo di che si riesegue il comando push (si veda il punto (7));
+				\item il repository remoto è stato aggiornato.
+				\end{enumerate}
+				Si riporta la formalizzazione della procedura con un diagramma delle attività:
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.6\textwidth]{NormeDiProgetto/Pics/Commit}
