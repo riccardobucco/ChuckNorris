@@ -6,7 +6,7 @@
 	<xsl:template match="/usecase">
 
 
-		\subsubsection{<xsl:value-of select="titolo"/>}
+		\level{3}{<xsl:value-of select="titolo"/>}
 
 		\IfFileExists{Pics/UseCase/%filename%.pdf}{
 			\begin{figure}[H]

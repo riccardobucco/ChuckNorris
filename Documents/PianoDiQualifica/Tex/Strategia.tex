@@ -1,9 +1,9 @@
 % !TEX encoding = UTF-8 Unicode
 
-\section{Visione generale della strategia di verifica}
+\level{1}{Visione generale della strategia di verifica}
 	Costruire prodotti software di qualità adoperando processi controllabili (dunque migliorabili) ha un costo non trascurabile. Il livello di qualità 
 	dei prodotti e dei processi che intendiamo raggiungere deve essere garantito allo stesso modo con cui garantiamo le funzionalità software che ci sono state richieste. Di conseguenza, la qualità deve essere pianificata, progettata, sviluppata, verificata, misurata e valutata durante l'intero progetto. Si noti come la qualità, se perseguita fin dall'inizio, costi meno di quanto non risulti nella maggior parte dei progetti nei quali viene trascurata all'inizio.
-	\subsection{Tecniche di controllo qualità di processo}
+	\level{2}{Tecniche di controllo qualità di processo}
 		Per poter controllare un processo, e di conseguenza migliorarlo, è necessario saper misurare in modo più preciso possibile alcune sue 
 		caratteristiche di interesse e soprattutto i miglioramenti stessi.\\
 		Il team, dunque, intende misurare con continuità le caratteristiche d'interesse dei vari processi, ai fini di poterli migliorare. Per mettere in atto ciò ci si basa su quanto descritto in seguito.
@@ -13,7 +13,7 @@
 			\item Infine, per misurare la qualità di un processo può essere utile verificare quella del suo prodotto: se essa è scarsa, ciò implica che probabilmente anche il processo dal quale deriva non è per nulla di qualità.
 		\end{itemize}
 		Una volta che le misure sono state effettuate, esse devono essere utilizzate per cercare di migliorare il processo. Per provare ad apportare miglioramenti in modo sistematico viene utilizzato il modello del miglioramento continuo (PDCA), che prevede una costante iterazione tra pianificazione, esecuzione del programma, controllo dei risultati e azioni correttive.\\
-	\subsection{Tecniche di controllo qualità di prodotto}
+	\level{2}{Tecniche di controllo qualità di prodotto}
 		Il controllo della qualità del prodotto è assicurato da due tipi di processi, quello di verifica e quello di validazione.
 		\begin{description}
 			\item[Verifica] Tale processo viene applicato su qualsiasi attività o risultato che fa avanzare il progetto da una baseline all'altra: esso 
@@ -24,7 +24,7 @@
 		La verifica viene messa in atto di continuo, la validazione solo alla fine.\\
 		Le tecniche utilizzate all'interno di tali processi sono molteplici: si usano tanto tecniche di analisi statica quanto di analisi dinamica (per una descrizione dettagliata di tali tecniche si consulti il documento \insdoc{Norme di Progetto v1.00}). Molto spesso si fa anche uso di test (a patto che abbiano grande valore dimostrativo).\\
 		In aggiunta a tali tecniche, possono essere effettuate delle misure (sulla base delle relative metriche): per maggiori dettagli si consulti la sezione “Misure e metriche” contenuta nel presente documento.
-	\subsection{Organizzazione}
+	\level{2}{Organizzazione}
 		Come indicato nel \insdoc{Piano di Progetto v1.00}, all'interno del ciclo di vita possono essere individuate varie fasi. All'interno di ciascuna di esse sono pianificati più momenti di verifica, riguardanti le attività (e dunque i processi) che sono state svolte. Tuttavia, in generale, attività e processi diversi fanno ottenere prodotti differenti. Dunque, è necessario prevedere procedure di verifica differenti a seconda del processo e del prodotto ottenuto.\\
 		Fatta questa premessa, l'organizzazione della strategia di verifica viene suddivisa in base alle attività svolte durante specifiche fasi: per ognuna 
 		di esse viene attuata un'attività di verifica (e le relative procedure) differente. Le attività di verifica riguardano tanto i processi tanto gli 
@@ -64,7 +64,7 @@
 			Le attività da svolgere, le procedure da eseguire e gli strumenti da utilizzare per fare quanto descritto in precedenza possono essere trovati 
 			all'interno delle Norme di Progetto.
 		\end{description}
-		\subsection{Pianificazione delle scadenze temporali}
+		\level{2}{Pianificazione delle scadenze temporali}
 			L'attività di controllo della qualità deve essere svolta per garantire la sufficienza dei risultati prodotti, in modo da dare la possibilità di rispettare le scadenze fissate dal committente.\\
 			Tali scadenze si individuano nelle revisioni di seguito riportate:
 			\begin{itemize}
@@ -74,7 +74,7 @@
 				\item \insrev{Revisione di Accettazione}: \insdate{18}{06}{2015} (revisione formale).
 			\end{itemize}
 			La pianificazione completa delle attività di progetto è descritta in modo dettagliato nel \insdoc{Piano di Progetto v1.00}
-		\subsection{Responsabilità} \label{subsec:responsabilita}
+		\level{2}{Responsabilità} \label{subsec:responsabilita}
 			La qualità è responsabilità di tutti, nessuno escluso. Tutti i membri del team contribuiscono con il loro lavoro a costruire (o a non 
 			costruire) la qualità del prodotto finale e dei processi attraverso i quali ci si arriva. La qualità, infatti, viene costruita nel tempo, 
 			anche grazie alla cura e all'attenzione che viene posta nello svolgere i vari compiti.
@@ -117,8 +117,8 @@
 				\end{itemize}
 			\end{itemize}
 			Per maggiori dettagli circa i compiti assegnati a ciascun ruolo si vedano le \insdoc{Norme di Progetto v1.00}.
-		\subsection{Risorse}
-			\subsubsection{Risorse necessarie}
+		\level{2}{Risorse}
+			\level{3}{Risorse necessarie}
 				Le risorse che allo stato attuale si ritiene essere necessarie per lo svolgimento di tutte le attività di verifica 
 				sono di tre tipi:
 				\begin{itemize}
@@ -126,7 +126,7 @@
 					\item risorse software;
 					\item risorse hardware.
 				\end{itemize}
-				\paragraph{Risorse umane}
+				\level{4}{Risorse umane}
 					Le risorse umane (intese come figure professionali) che sono necessarie per svolgere il progetto in modo corretto e completo 
 					rispetto agli obiettivi di qualità sono le seguenti:
 					\begin{itemize}
@@ -139,7 +139,7 @@
 					\end{itemize}
 					Una descrizione delle responsabilità di ciascun ruolo qui presentato è presente nella sezione \nameref{subsec:responsabilita} del presente documento.\\
 					Una descrizione dettagliata di ciascun ruolo è presente all'interno delle \insdoc{Norme di Progetto v1.00}.
-				\paragraph{Risorse software}
+				\level{4}{Risorse software}
 					Per risorse software si intendono tutti gli strumenti software che il team intende utilizzare per attuare le attività di verifica sui 
 					prodotti e sui processi.\\
 					Allo stato attuale sono necessari software che siano in grado di verificare in modo automatico il maggior numero di norme riguardanti 
@@ -158,30 +158,30 @@
 						\item raccogliere tutti gli errori comuni, in modo da formare in automatico una lista alla quale possono guardare coloro che 
 						devono redigere un documento. 
 					\end{itemize}
-				\paragraph{Risorse hardware}
+				\level{4}{Risorse hardware}
 					Sono necessarie macchine (computer) sufficientementi potenti da far girare tutto il software necessario durante le attività da
 					svolgere nell'arco del progetto.
-			\subsubsection{Risorse disponibili}
-				\paragraph{Risorse umane}
+			\level{3}{Risorse disponibili}
+				\level{4}{Risorse umane}
 					Le risorse umane disponibili per mettere in pratica le attività di verifica sono date dai componenti del team. Essi svolgono le 
 					mansioni dei vari ruoli necessari (indicati nel paragrafo riguardante le risorse umane necessarie) in accordo con quanto descritto 
 					nel \insdoc{Piano di Progetto v1.00} e in generale in base alle decisioni del \insrole{Responsabile di Progetto}.
-				\paragraph{Risorse software}
+				\level{4}{Risorse software}
 					Il team si è dotato di alcuni script che eseguono controlli automatici di diverso tipo. Alcuni di questi programmi (come il 
 					correttore ortografico automatico) sono stati rinvenuti sulla rete. Quando ciò non è stato possibile, il team ha provveduto esso 
 					stesso alla creazione di programmi di utilità.\\
 					Una descrizione dettagliata di programmi e script a supporto delle attività di verifica può essere trovata nelle \insdoc{Norme di Progetto v1.00}.
-				\paragraph{Risorse hardware}
+				\level{4}{Risorse hardware}
 					Sono disponibili (e per ora sufficienti) le seguenti risorse hardware:
 					\begin{itemize}
 						\item un computer portatile per ogni membro del team (dotato del sistema operativo comune indicato nelle \insdoc{Norme di Progetto v1.00}).
 					\end{itemize}
 					Sono inoltre disponibili le risorse hardware messe a disposizione dal Servizio Calcolo dell'Università degli Studi di Padova.
-		\subsection{Misure e metriche}
+		\level{2}{Misure e metriche}
 			L'obiettivo è quello di misurare la qualità di “cosa” si realizza (il prodotto) e “come” lo si realizza (il processo). Il problema è 
 			riuscire a stimare in modo preciso quanto si sta misurando. Per questo motivo sono necessarie delle metriche, dei criteri stabiliti a 
 			priori su cui basare la misurazione della qualità.
-			\subsubsection{Misure}
+			\level{3}{Misure}
 				Le misure che vengono fatte durante tutto l'arco del progetto possono essere molto varie. Di conseguenza, non si può far altro che 
 				stabilire dei range di accettazione indipendenti dal tipo di stima che si sta effettuando. In particolare, una valore misurato può 
 				essere:
@@ -192,11 +192,11 @@
 					\item[ottimale] Un valore appartenente a questo range ha raggiunto le massime aspettative del team. L'obiettivo dovrebbe essere 
 					quello di avere tutti i valori all'interno di tale range.
 				\end{description}
-			\subsubsection{Metriche per i documenti}
+			\level{3}{Metriche per i documenti}
 				La qualità di un documento dipende prima di tutto dai suoi contenuti. La loro qualità, tuttavia, è difficilmente quantificabile allo 
 				stato attuale del progetto a causa dell'esperienza pressoché nulla del team in quest'ambito. Si è deciso dunque di limitarsi a valutare 
 				parametri maggiormente oggettivi e soprattutto misurabili automaticamente attraverso strumenti software.
-				\paragraph{Indice di leggibilità}
+				\level{4}{Indice di leggibilità}
 					Una metrica che si è deciso di utilizzare per poter stimare la qualità di un documento è l'indice di leggibilità. In particolare, è 
 					stato considerato l'indice Gulpease, studiato appositamente per la lingua italiana.\\
 					Questo particolare indice si basa sulla lunghezza della parola e sulla lunghezza della frase rispetto al numero di lettere.\\
@@ -219,8 +219,8 @@
 						\item Valori compresi tra 35 e 50 sono considerati accettabili.
 						\item Valori maggiori di 50 sono considerati ottimali.
 					\end{itemize}
-			\subsubsection{Metriche per i processi}
-				\paragraph{Capability Maturity Model}
+			\level{3}{Metriche per i processi}
+				\level{4}{Capability Maturity Model}
 					Per valutare i processi si è deciso di fare riferimento al modello CMM. Se correttamente applicato esso ci fornisce una base 
 					concettuale molto generale su cui appoggiarsi per valutare il livello dei processi.\\
 					CMM ci consente di individuare la maturità di un processo: essa può assumere un valore da 1 (il peggiore) a 5 (il migliore). Mettendo 
@@ -233,7 +233,7 @@
 					La scelta del team è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del 
 					team di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in 
 					quanto, nella sua versione pura, non prevede il consolidamento delle best practice.
-				\paragraph{Produttività}
+				\level{4}{Produttività}
 					Si vuole cercare di calcolare la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del 
 					progetto. In generale, in una prima approssimazione, la si misura tramite la seguente formula:
 					\begin{equation} \label{eq:produttivita}						
@@ -249,7 +249,7 @@
 					I valori che si ottengono in tale modo sono difficilmente valutabili in modo assoluto. Piuttosto, essi assumono importanza nel 
 					momento in cui vengono confrontati fra loro in momenti diversi del progetto: in questo modo il \insrole{Responsabile di Progetto} può valutare 
 					più facilmente i tempi e dunque i costi delle attività che devono essere svolte.
-				\paragraph{Efficacia di una revisione}
+				\level{4}{Efficacia di una revisione}
 					Si vuole cercare di calcolare quanto è efficace una revisione. Possiamo pensare, in modo approssimativo, che tale valore sia dato 
 					dalla seguente formula generale:
 					\begin{equation} \label{eq:efficaciarevisione}
@@ -267,6 +267,6 @@
 					confrontate tra di loro in momenti diversi del progetto.\\
 					Notare che una verifica effettuata tramite la presente metrica permette al \insrole{Responsabile di Progetto} di capire quando lo sforzo per 
 					trovare gli errori diventa troppo grande (e quindi costoso). Si ricordi, infatti, che vale la legge del rendimento decrescente.
-		\subsubsection{Metriche del codice}
+		\level{3}{Metriche del codice}
 			A questo punto dello sviluppo del progetto, il team non è ancora pronto per indicare delle metriche adeguate per il controllo della 
 			qualità del codice, ma si riserva di indicare tali metriche in fase di progettazione.
