@@ -93,6 +93,9 @@
 
 
 		<xsl:if test="entry[starts-with(@name,$char)]">
+			
+			\newpage
+
 			{\Huge \textbf{<xsl:value-of select="$char"/>}} \\ [1mm]
 			
 			\hrule
