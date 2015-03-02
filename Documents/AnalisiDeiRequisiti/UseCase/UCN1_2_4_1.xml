@@ -3,6 +3,7 @@
 <usecase>
 	<titolo>UCN1.2.4.1 Aggiornare un modello table con metodo in place</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore aggiorna il grafico di tipo table con metodo in place. In particolare sceglie le celle della table che intende modificare e vi inserisce i nuovi valori.</descrizione>
 	<precondizione>Si sta aggiornando un modello table. È stato selezionato un modello table.</precondizione>
 	<postcondizione>È stato aggiornato il modello table selezionato con metodo in place.</postcondizione>
 	<principale>

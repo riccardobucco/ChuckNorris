@@ -3,6 +3,7 @@
 <usecase>
 	<titolo>UCN1.2.4.2 Aggiornare un modello table con metodo stream</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore aggiorna il grafico di tipo table con metodo stream. In particolare inserisce i valori delle nuove righe che vengono aggiunte al grafico.</descrizione>
 	<precondizione>Si sta aggiornando un modello table. È stato selezionato un modello table.</precondizione>
 	<postcondizione>È stato aggiornato il modello table selezionato con metodo stream.</postcondizione>
 	<principale>
