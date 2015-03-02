@@ -10,7 +10,7 @@
 		<item>UCN1.7 Creare modello table</item>
 	</generalizzazionedi>
 	<estensioni>UCN1.9 Visualizzazione errore</estensioni>
-	<descrizione>Lo sviluppatore può creare un grafico lato server tramite l'utilizzo delle API interne. Il presente caso d'uso non può essere eseguito da solo, ma solamente quando si esegue uno dei casi d'uso che lo specializzano (UCN1.4, UCN1.5, UCN1.6, UCN1.7).</descrizione>
+	<descrizione>Lo sviluppatore può creare un grafico lato server tramite l'utilizzo delle API interne. In particolare può scegliere il titolo del chart e la sua descrizione. Il presente caso d'uso non può essere eseguito da solo, ma solamente quando si esegue uno dei casi d'uso che lo specializzano (UCN1.4, UCN1.5, UCN1.6, UCN1.7).</descrizione>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato creato un modello di un grafico. Tale modello può essere di tipo bar chart, line chart, map chart o table: questo dipende dal caso d'uso specializzato che è stato eseguito.</postcondizione>
 	<principale>
