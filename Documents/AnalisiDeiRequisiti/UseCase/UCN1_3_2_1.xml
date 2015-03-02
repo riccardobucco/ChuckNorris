@@ -3,7 +3,11 @@
 <usecase>
 	<titolo>UCN1.3.2.1 Scegliere il massimo numero di grafici visualizzabili su una riga</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può scegliere il massimo numero di grafici visualizzabili su una riga della pagina.</descrizione>
 	<precondizione>Si stanno scegliendo le opzioni di visualizzazione della pagina.</precondizione>
 	<postcondizione>È stato scelto il massimo numero di grafici visualizzabili su una riga.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie il massimo numero di grafici visualizzabili su una riga.</item>
+	</principale>
 </usecase>
 

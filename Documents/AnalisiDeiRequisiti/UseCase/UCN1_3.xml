@@ -4,6 +4,7 @@
 	<titolo>UCN1.3 Creare pagina</titolo>
 	<attorip>Sviluppatore</attorip>
 	<estensioni>UCN1.9 Visualizzazione errore</estensioni>
+	<descrizione>Lo sviluppatore può creare una pagina web. In particolare può inserire il titolo della pagina, può scegliere le impostazioni di visualizzazione e può aggiungere grafici alla pagina stessa.</descrizione>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stata creata una pagina.</postcondizione>
 	<principale>

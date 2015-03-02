@@ -3,7 +3,11 @@
 <usecase>
 	<titolo>UCN1.3.1 Inserire il titolo della pagina</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta creando una pagina.</precondizione>
+	<descrizione>Lo sviluppatore può inserire il titolo della pagina web che sta creando.</descrizione>
+	<precondizione>Si sta creando una pagina web.</precondizione>
 	<postcondizione>È stato inserito il titolo della pagina.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore inserisce il titolo della pagina.</item>
+	</principale>
 </usecase>
 
