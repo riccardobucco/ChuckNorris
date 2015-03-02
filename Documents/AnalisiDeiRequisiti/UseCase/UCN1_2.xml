@@ -6,7 +6,7 @@
 	<estensioni>UCN1.9 Visualizzazione errore</estensioni>
 	<descrizione>Lo sviluppatore può scegliere le modalità di aggiornamento del grafico che sta creando. In base alla tipologia del grafico, può scegliere come aggiornare un bar chart, un line chart, un map chart e una table.</descrizione>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
-	<postcondizione>È stato aggiornato il modello di un chart.</postcondizione>
+	<postcondizione>Sono state scelte le modalità di aggiornamento del modello di un chart.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore può aggiornare un modello bar chart (UCN1.2.1);</item>
 		<item>Lo sviluppatore può aggiornare un modello line chart (UCN1.2.2);</item>
