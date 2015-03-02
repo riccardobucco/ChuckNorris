@@ -3,7 +3,8 @@
 <usecase>
 	<titolo>UCN1.2.1.1 Aggiornare un modello bar chart con metodo in place</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si sta aggiornando il modello di un bar chart. È stato selezionato il modello di un bar chart.</precondizione>
+	<descrizione>Lo sviluppatore aggiorna il grafico bar chart con metodo in place. In particolare sceglie le barre del grafico che intende modificare e vi inserisce i nuovi valori. In genere questo avviene tramite un'applicazione esterna appositamente creata dallo sviluppatore, la quale si occupa di mandare a Norris i dati aggiornati, nel formato corretto.</descrizione>
+	<precondizione>Si sta scegliendo come aggiornare il modello di un bar chart. È stato selezionato il modello di un bar chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello del bar chart selezionato con metodo in place.</postcondizione>
 	<principale>
 		<item>Lo sviluppatore sceglie le barre del grafico che intende modificare;</item>
