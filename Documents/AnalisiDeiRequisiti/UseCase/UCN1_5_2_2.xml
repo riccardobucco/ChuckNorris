@@ -3,6 +3,10 @@
 <usecase>
 	<titolo>UCN1.5.2.2 Inserire i valori dipendenti per ciascuna linea</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può inserire i valori dipendenti per ciascuna linea del line chart che sta creando.</descrizione>
 	<precondizione>Si stanno inserendo i dati di un line chart. Si conosce quante sono le linee nel grafico e le si sa identificare. Sono stati inseriti nel grafico i valori indipendenti.</precondizione>
 	<postcondizione>Sono stati inseriti valori dipendenti in corrispondenza di tutti i valori indipendenti per ciascuna linea.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore inserisce i valori dipendenti per ciascuna linea.</item>
+	</principale>
 </usecase>

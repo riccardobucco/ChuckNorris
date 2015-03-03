@@ -2,11 +2,11 @@
 
 <usecase>
 	<titolo>UCN1.5 Creare modello line chart</titolo>
-	
 	<attorip>Sviluppatore</attorip>
 	<specializzazionedi>
 		<item>UCN1.1 Creare modello chart</item>
 	</specializzazionedi>
+	<descrizione>Lo sviluppatore può creare un grafico di tipo line chart tramite l'utilizzo delle API interne. In particolare può scegliere il titolo, la descrizione del chart e le relative opzioni. Può infine inserire i dati.</descrizione>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato creato un modello di un grafico di tipo line chart.</postcondizione>
 	<principale>

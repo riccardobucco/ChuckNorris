@@ -2,8 +2,8 @@
 
 <usecase>
 	<titolo>UCN1.5.1 Scegliere opzioni line chart</titolo>
-	
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può scegliere le opzioni del grafico line chart che sta creando. In particolare può scegliere il nome e il colore di ciascuna linea, il formato di stampa dei valori e il massimo numero di punti visualizzati sull'asse dei valori indipendenti.</descrizione>
 	<precondizione>Si vuole creare un grafico di tipo line chart. Sono stati inseriti i dati del line chart. In particolare si conosce quante sono le linee nel grafico e le si sa identificare.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni del grafico di tipo line chart.</postcondizione>
 	<principale>

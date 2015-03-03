@@ -3,6 +3,10 @@
 <usecase>
 	<titolo>UCN1.5.2.1 Inserire i valori indipendenti nel line chart</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può inserire i valori indipendenti nel line chart che sta creando.</descrizione>
 	<precondizione>Si stanno inserendo i dati di un line chart.</precondizione>
 	<postcondizione>Sono stati inseriti i valori indipendenti nel line chart.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore inserisce i valori indipendenti nel line chart.</item>
+	</principale>
 </usecase>

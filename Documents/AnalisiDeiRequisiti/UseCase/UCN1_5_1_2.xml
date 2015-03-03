@@ -3,6 +3,11 @@
 <usecase>
 	<titolo>UCN1.5.1.2 Scegliere il formato di stampa dei valori del line chart</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può scegliere il formato di stampa dei valori del line chart che sta creando.</descrizione>
+	<descrizione>lo sviluppatore può scegliere il formato di stampa dei valori del line chart.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un line chart.</precondizione>
 	<postcondizione>È stato impostato il formato di stampa dei valori del line chart.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie il formato dei valori del line chart.</item>
+	</principale>
 </usecase>
