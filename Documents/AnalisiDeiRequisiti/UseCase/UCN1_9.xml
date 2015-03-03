@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.9 Visualizzazione errore</titolo>
+	<titolo>UCN1.9 Dati non corretti</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>La creazione del grafico, l'aggiornamento del grafico o la creazione della pagina non sono avvenuti nel modo corretto.</precondizione>
+	<descrizione>Quando lo sviluppatore inserisce dei dati non conformi il sistema segnala un errore.</descrizione>
+	<precondizione>L'attore ha inserito dei dati non corretti.</precondizione>
 	<postcondizione>È stato visualizzato un messaggio di errore.</postcondizione>
+	<principale>
+		<item>Il sistema segnala un errore indicando che i dati inseriti non sono corretti.</item>
+	</principale>
 </usecase>

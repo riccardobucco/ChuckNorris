@@ -18,16 +18,20 @@
 	</principale>
 	<alternativi>
 		<scenario>
-			<descrizione>Nel caso in cui la creazione del grafico non sia avvenuta nel modo corretto:</descrizione>
+			<descrizione>Nel caso in cui lo sviluppatore abbia creato un grafico con dei dati errati:</descrizione>
 			<item>il sistema segnala un errore (UCN1.9).</item>
 		</scenario>
 		<scenario>
-			<descrizione>Nel caso in cui l'aggiornamento del grafico non sia avvenuto nel modo corretto:</descrizione>
+			<descrizione>Nel caso in cui lo sviluppatore abbia aggiornato un grafico con dei dati errati:</descrizione>
 			<item>il sistema segnala un errore (UCN1.9).</item>
 		</scenario>
 		<scenario>
-			<descrizione>Nel caso in cui la creazione della pagina non sia avvenuta nel modo corretto:</descrizione>
-			<item>il sistema segnala un errore (UCN1.9).</item>
+			<descrizione>Nel caso in cui lo sviluppatore abbia utilizzato un aggiornamento non permesso:</descrizione>
+			<item>il sistema segnala un errore (UCN1.10).</item>
+		</scenario>
+		<scenario>
+			<descrizione>Nel caso in cui lo sviluppatore abbia aggiunto troppi grafici ad una pagina:</descrizione>
+			<item>il sistema segnala un errore (UCN1.11).</item>
 		</scenario>
 	</alternativi>
 </usecase>

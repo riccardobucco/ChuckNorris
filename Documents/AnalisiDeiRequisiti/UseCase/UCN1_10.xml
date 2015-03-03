@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.10 Aggiornamento non permesso</titolo>
+	<attorip>Sviluppatore</attorip>
+	<descrizione>Quando lo sviluppatore utilizza un aggiornamento non permesso su un certo tipo di grafico il sistema segnala un errore.</descrizione>
+	<precondizione>L'attore ha utilizzato un aggiornamento non permesso per il tipo di grafico.</precondizione>
+	<postcondizione>È stato visualizzato un messaggio di errore.</postcondizione>
+	<principale>
+		<item>Il sistema segnala un errore indicando che il tipo di aggiornamento non è supportato per quel tipo di grafico.</item>
+	</principale>
+</usecase>
