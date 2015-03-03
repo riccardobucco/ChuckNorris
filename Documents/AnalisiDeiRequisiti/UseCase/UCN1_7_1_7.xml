@@ -3,6 +3,10 @@
 <usecase>
 	<titolo>UCN1.7.1.7 Scegliere se le linee della tabella sono visualizzate</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può scegliere se le linee della tabella che sta creando sono visualizzate o meno.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table.</precondizione>
 	<postcondizione>È stato scelto se le linee della tabella sono visualizzate.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie se le linee della tabella sono visualizzate.</item>
+	</principale>
 </usecase>

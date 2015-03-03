@@ -2,8 +2,11 @@
 
 <usecase>
 	<titolo>UCN1.7.1.1 Scegliere il formato dei dati contenuti nelle colonne</titolo>
-	
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può scegliere il formato dei dati contenuti nelle colonne della table che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table. Si conosce il numero di colonne della table e le si sa identificare.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti il formato dei dati contenuti nelle colonne della table.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie il formato dei dati contenuti nelle colonne della table.</item>
+	</principale>
 </usecase>
