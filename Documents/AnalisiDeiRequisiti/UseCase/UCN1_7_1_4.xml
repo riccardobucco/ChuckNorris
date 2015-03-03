@@ -3,6 +3,10 @@
 <usecase>
 	<titolo>UCN1.7.1.4 Scegliere se è possibile ordinare le righe rispetto ai valori di una colonna</titolo>
 	<attorip>Sviluppatore</attorip>
-	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table.</precondizione>
-	<postcondizione>È stato scelto se è possibile ordinare le righe rispetto ai valori di una colonna (nel caso vengano eseguiti solo aggiornamenti di tipo in place).</postcondizione>
+	<descrizione>Lo sviluppatore può scegliere se è possibile ordinare le righe della table rispetto ai valori di una colonna.</descrizione>
+	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table. Vengono eseguiti solo aggiornamenti di tipo in place.</precondizione>
+	<postcondizione>È stato scelto se è possibile ordinare le righe rispetto ai valori di una colonna.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie se è possibile ordinare le righe della table rispetto ai valori di una colonna.</item>
+	</principale>
 </usecase>
