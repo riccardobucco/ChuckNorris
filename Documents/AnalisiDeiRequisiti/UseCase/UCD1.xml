@@ -5,10 +5,11 @@
 	<attorip>Utente</attorip>
 	<attoris>Norris</attoris>
 	<inclusioni>UCD3</inclusioni>
+	<descrizione>La Dashboard mette a disposizione una cartina geografica con dei marcatori che indicano la posizione in tempo reale degli autobus.</descrizione>
 	<precondizione>Si sta utilizzando la dashboard.</precondizione>
 	<postcondizione>È visualizzata la posizione degli autobus APS.</postcondizione>
 	<principale>
-		<item>Norris invia i dati relativi ai grafici che devono essere visualizzati dall'utente (UCD3);</item>
-		<item>L'utente può filtrare per linea la visualizzazione degli autobus attivi (UCD1.1).</item>
+		<item>L'utente può filtrare per linea la visualizzazione degli autobus attivi (UCD1.1);</item>
+		<item>Ad ogni aggiornamento ricevuto da Norris i marcatori vengono modificati.</item>
 	</principale>
 </usecase>

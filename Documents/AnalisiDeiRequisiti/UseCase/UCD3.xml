@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UCD3 Invio informazioni sui grafici</titolo>
-	<attorip>Norris</attorip>
-	<precondizione>Si sta utilizzando la dashboard.</precondizione>
-	<postcondizione>Norris ha inviato alla dashboard le informazioni sui grafici presenti nella dashboard.</postcondizione>
-</usecase>

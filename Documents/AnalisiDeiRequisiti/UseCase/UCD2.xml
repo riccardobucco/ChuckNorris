@@ -5,12 +5,12 @@
 	<attorip>Utente</attorip>
 	<attoris>Norris</attoris>
 	<inclusioni>UCD3</inclusioni>
-	<descrizione>L'utente può visualizzar il numero di autobus attivi per ciascuna linea, selezionando la linea a cui è interessato.</descrizione>
+	<descrizione>L'utente può visualizzare il numero di autobus attivi per ciascuna linea, selezionando la linea a cui è interessato.</descrizione>
 	<precondizione>Si sta utilizzando la dashboard.</precondizione>
 	<postcondizione>È stato visualizzato il numero di autobus attivi per ciascuna linea.</postcondizione>
 	<principale>
-		<item>Norris invia i dati relativi ai grafici che devono essere visualizzati (UCD3);</item>
 		<item>L'utente sceglie la linea della quale vuole visualizzare il numero di bus (UCD2.1);</item>
-		<item>L'utente visualizza il numero di autobus attivi per la linea selezionata (UCD2.2).</item>
+		<item>L'utente visualizza il numero di autobus attivi per la linea selezionata (UCD2.2);</item>
+		<item>Ad ogni aggiornamento ricevuto da Norris i dati vengono modificati.</item>
 	</principale>
 </usecase>

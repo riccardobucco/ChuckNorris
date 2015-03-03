@@ -4,10 +4,10 @@
 	<titolo>UCD0 Utilizzo della dashboard</titolo>
 	<attorip>Utente</attorip>
 	<attoris>Norris</attoris>
+	<descrizione>La Dashboard è un esempio di utilizzo del framework Norris. Essa permette la visualizzazione della posizione degli autobus dell'APS, nonché la visualizzazione del numero di autobus attivi per ogni linea. Ad ogni aggiornamento ricevuto da Norris, i dati visualizzati devono modificarsi automaticamente.</descrizione>
 	<precondizione>È necessario utilizzare un browser supportato dal prodotto ed essere connessi a Internet.</precondizione>
 	<postcondizione>Sono state utilizzate le funzioni della dashboard.</postcondizione>
 	<principale>
-		<item>Norris invia i dati relativi ai grafici che devono essere visualizzati dall'utente (UCD3);</item>
 		<item>L'utente visualizza la posizione degli autobus APS in tempo reale (UCD1);</item>
 		<item>L'utente visualizza il numero di autobus attivi per ogni linea (UCD2).</item>
 	</principale>
