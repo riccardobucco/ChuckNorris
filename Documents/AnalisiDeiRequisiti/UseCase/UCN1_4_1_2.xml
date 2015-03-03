@@ -3,6 +3,10 @@
 <usecase>
 	<titolo>UCN1.4.1.2 Scegliere l'orientamento delle barre</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può scegliere l'orientamento delle barre del grafico che sta creando. Le barre possono essere verticali od orizzontali.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo bar chart.</precondizione>
 	<postcondizione>È stato scelto se le barre devono essere verticali o orizzontali.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie se le barre sono orizzontali o verticali.</item>
+	</principale>
 </usecase>

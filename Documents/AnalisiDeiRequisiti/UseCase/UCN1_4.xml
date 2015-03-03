@@ -2,11 +2,11 @@
 
 <usecase>
 	<titolo>UCN1.4 Creare modello bar chart</titolo>
-	
 	<attorip>Sviluppatore</attorip>
 	<specializzazionedi>
 		<item>UCN1.1 Creare modello chart</item>
 	</specializzazionedi>
+	<descrizione>Lo sviluppatore può creare un grafico di tipo bar chart tramite l'utilizzo delle API interne. In particolare può scegliere il titolo, la descrizione del chart e le relative opzioni. Può infine inserire i dati.</descrizione>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato creato un modello di un grafico di tipo bar chart.</postcondizione>
 	<principale>
