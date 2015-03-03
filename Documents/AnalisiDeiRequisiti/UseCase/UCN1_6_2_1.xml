@@ -3,6 +3,10 @@
 <usecase>
 	<titolo>UCN1.6.2.1 Scegliere il numero di punti della serie da inserire nel map chart</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può scegliere il numero di punti della serie da inserire nel map chart che sta creando.</descrizione>
 	<precondizione>Si sta inserendo una nuova serie di punti in un grafico di tipo map chart.</precondizione>
 	<postcondizione>È stato scelto il numero di punti della serie da inserire.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie il numero di punti della serie da inserire nel map chart.</item>
+	</principale>
 </usecase>

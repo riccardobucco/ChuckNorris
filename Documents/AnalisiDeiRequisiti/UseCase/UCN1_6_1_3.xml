@@ -3,6 +3,10 @@
 <usecase>
 	<titolo>UCN1.6.1.3 Scegliere il massimo numero di punti da visualizzare per ogni serie</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può scegliere il massimo numero di punti visualizzabili per ogni serie del map chart che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart. Si conosce quante sono le serie di punti e le si sa identificare</precondizione>
 	<postcondizione>È stato impostato il massimo numero di punti da visualizzare per ogni serie.</postcondizione>
+	<principale>
+		<item>Lo sviluppatore sceglie il massimo numero di punti visualizzabili per ogni serie.</item>
+	</principale>
 </usecase>

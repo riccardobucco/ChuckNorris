@@ -3,6 +3,7 @@
 <usecase>
 	<titolo>UCN1.6.2 Inserire nuova serie di punti</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può inserire i dati nel map chart che sta creando. In particolare può scegliere quanti punti deve avere la serie da inserire. Può quindi inserire la posizione (data da longitudine e latitudine) di ciascun punto della serie. </descrizione>
 	<precondizione>Si vuole creare un grafico di tipo map chart.</precondizione>
 	<postcondizione>È stata inserita una serie di punti nel grafico.</postcondizione>
 	<principale>
