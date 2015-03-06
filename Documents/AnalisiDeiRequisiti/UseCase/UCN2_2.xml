@@ -3,13 +3,10 @@
 <usecase>
 	<titolo>UCN2.2 Ottenere lista dei grafici presenti in un'istanza di Norris</titolo>
 	<attorip>Client</attorip>
-	<specializzazionedi>
-		<item>UCN2.1 Ottenere informazioni contenute in un’istanza di Norris</item>
-	</specializzazionedi>
-	<precondizione>Si stanno utilizzando le API esterne.</precondizione>
+	<decsrizione></descrizione>
+	<precondizione>Si stanno utilizzando le API esterne. È stato inserito l'indirizzo di un'istanza di Norris.</precondizione>
 	<postcondizione>È stata ottenuta la lista dei grafici presenti in un'istanza di Norris. Sono state inoltre ottenute tutte le informazioni riguardanti ciascun grafico presente nell'istanza Norris.</postcondizione>
 	<principale>
-		<item>Il client indica l'indirizzo dell'istanza Norris al quale vuole fare riferimento;</item>
 		<item>Il client ottiene l'ID di ciascun grafico (UCN2.2.1);</item>
 		<item>Il client ottiene il titolo di ciascun grafico (UCN2.2.2);</item>
 		<item>Il client ottiene il tipo di ciascun grafico (UCN2.2.3);</item>

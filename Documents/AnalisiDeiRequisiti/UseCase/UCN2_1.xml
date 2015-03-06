@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN2.1 Ottenere informazioni contenute in un'istanza di Norris selezionata</titolo>
+	<titolo>UCN2.1 Inserire l'indirizzo dell'istanza di Norris</titolo>
 	<attorip>Client</attorip>
-	<generalizzazionedi>
-		<item>UCN2.2 Ottenere lista dei grafici presenti in un’istanza di Norris</item>
-		<item>UCN2.3 Ottenere un grafico presente in un’istanza di Norris</item>
-	</generalizzazionedi>
-	<precondizione>Si stanno utilizzando le API esterne. Si sta eseguendo uno dei casi d'uso che specializzano il presente caso d'uso (UCN2.2, UCN2.3).</precondizione>
-	<postcondizione>Sono state ottenute informazioni contenute nell'istanza di Norris selezionata.</postcondizione>
+	<descrizione>L'utente client può inserire l'indirizzo dell'istanza di Norris.</descrizione>
+	<precondizione>Si stanno utilizzando le API esterne. </precondizione>
+	<postcondizione>È stato inserito l'indirizzo di un'istanza di Norris.</postcondizione>
 	<principale>
 		<item>Il client indica l'indirizzo dell'istanza Norris al quale vuole fare riferimento.</item>
 	</principale>
