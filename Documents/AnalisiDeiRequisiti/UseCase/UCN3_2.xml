@@ -6,4 +6,7 @@
 	<descrizione>Il client può scegliere il tag HTML nel quale inserire la rappresentazione grafica del grafico scelto. In questo modo può incapsulare nella sua pagina web il grafico in questione all'interno del tag HTML scelto.</descrizione>
 	<precondizione>Si stanno utilizzando le API della libreria grafica.</precondizione>
 	<postcondizione>È stato scelto il tag HTML nel quale si vuole inserire la rappresentazione del grafico.</postcondizione>
+	<principale>
+		<item>Il client sceglie il tag HTML nel quale vuole inserire la rappresentazione del grafico.</item>
+	</principale>
 </usecase>

@@ -9,6 +9,7 @@
 		<item>UCN3.6 Cambiare opzioni di visualizzazione di un map chart</item>
 		<item>UCN3.7 Cambiare opzioni di visualizzazione di una table</item>
 	</generalizzazionedi>
+	<descrizione>L'utente client può modificare le opzioni di visualizzazione di un grafico esistente. In particolare può modificare le impostazioni di un bar chart, di un line chart, di un map chart e di una table.</descrizione>
 	<precondizione>Si stanno utilizzando le API della libreria grafica. È stato selezionato il modello di grafico che si vuole rappresentare. Si sta eseguendo uno dei casi d’uso che specializzano il presente caso d’uso (UCN3.4, UCN3.5, UCN3.6, UCN3.7).</precondizione>
 	<postcondizione>Sono state modificate le opzioni di visualizzazione del grafico selezionato.</postcondizione>
 	<principale>
