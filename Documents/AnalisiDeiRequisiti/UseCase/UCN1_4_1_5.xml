@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.1.2 Scegliere le opzioni riguardanti la legenda</titolo>
+	<titolo>UCN1.4.1.5 Scegliere le opzioni riguardanti la legenda di un bar chart</titolo>
 	<attorip>Sviluppatore</attorip>
 	<precondizione>Si sta creando un modello di chart. Il chart che si desidera creare non è di tipo table.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti la legenda.</postcondizione>
