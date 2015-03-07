@@ -4,7 +4,7 @@
 	<titolo>UCN3.4.3 Cambiare il fatto che la griglia del piano cartesiano sia visualizzata o meno</titolo>
 	<attorip>Client</attorip>
 	<descrizione>L'utente client può modificare il fatto che la griglia del bar chart sia visualizzata o meno.</descrizione>
-	<precondizione>Si stanno modificando le opzioni di visualizzazione di un grafico selezionato. Il grafico non è di tipo table o map chart.</precondizione>
+	<precondizione>Si stanno modificando le opzioni di visualizzazione di un grafico selezionato.</precondizione>
 	<postcondizione>É stato modificato il fatto che la griglia di un piano cartesiano sia visualizzata o meno nel grafico selezionato.</postcondizione>
 	<principale>
 		<item>Il client modifica il fatto che la griglia sia visualizzata o meno.</item>

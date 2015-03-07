@@ -3,6 +3,7 @@
 <usecase>
 	<titolo>UCA0 Utilizzo dell'applicazione Android</titolo>
 	<attorip>Utente</attorip>
+	<descrizione>L'utente che utilizza l'applicazione Android può collegarsi ad un'istanza di Norris e visualizzare la lista dei grafici in essa presenti. Può inoltre visualizzare un singolo grafico presente nella lista. Nel caso in cui l'utente abbia cercato di collegarsi ad un'istanza di Norris tramite un indirizzo non corretto, il sistema segnala che è stato inserito un indirizzo non valido.</descrizione>
 	<precondizione>È necessario aver installato l'applicazione in uno smartphone o tablet Android. È inoltre necessario essere connessi a Internet.</precondizione>
 	<postcondizione>Sono state utilizzate le funzioni dell'applicazione Android.</postcondizione>
 	<principale>

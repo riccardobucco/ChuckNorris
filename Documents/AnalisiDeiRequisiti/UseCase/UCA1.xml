@@ -4,6 +4,10 @@
 	<titolo>UCA1 Collegamento ad un istanza di Norris</titolo>
 	<attorip>Utente</attorip>
 	<estensioni>UCA4 Visualizzazione errore di indirizzo non valido</estensioni>
+	<descrizione>L'utente si può collegare ad un'istanza esistente di Norris.</descrizione>
 	<precondizione>Si sta utilizzando l'applicazione.</precondizione>
 	<postcondizione>È avvenuto il collegamento ad un'istanza di Norris.</postcondizione>
+	<principale>
+		<item>L'utente si collega ad un'istanza di Norris.</item>
+	</principale>
 </usecase>
