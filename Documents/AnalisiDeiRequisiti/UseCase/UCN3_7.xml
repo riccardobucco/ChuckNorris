@@ -6,6 +6,7 @@
 	<specializzazionedi>
 		<item>UCN3.3 Cambiare opzioni di visualizzazione di un grafico</item>
 	</specializzazionedi>
+	<descrizione>L'utente client può modificare le opzioni di visualizzazione di un grafico di tipo table esistente. In particolare può modificare le opzioni riguardanti il formato di una o più celle della table selezionata.</descrizione>
 	<precondizione>Si stanno utilizzando le API della libreria grafica. È stato selezionato il modello di grafico che si vuole rappresentare. Il grafico selezionato è di tipo table.</precondizione>
 	<postcondizione>Sono state modificate le opzioni di visualizzazione della table selezionata.</postcondizione>
 	<principale>
