@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN3.3.1.2 Cambiare la posizione in cui è visualizzata la legenda</titolo>
+	<titolo>UCN3.4.2.2 Cambiare la posizione in cui è visualizzata la legenda</titolo>
 	<attorip>Client</attorip>
+	<descrizione>L'utente client può modificare la posizione in cui è visualizzata la legenda del grafico selezionato.</descrizione>
 	<precondizione>Si stanno modificando le opzioni riguardanti la legenda di un grafico selezionato.</precondizione>
 	<postcondizione>É stata modificata la posizione in cui è visualizzata la legenda nel grafico selezionato.</postcondizione>
+	<principale>
+		<item>Il client modifica la posizione in cui è visualizzata la legenda.</item>
+	</principale>
 </usecase>

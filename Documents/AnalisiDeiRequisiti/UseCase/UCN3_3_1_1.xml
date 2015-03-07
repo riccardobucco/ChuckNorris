@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UCN3.3.1.1 Cambiare il fatto che la legenda sia visualizzata o meno</titolo>
-	<attorip>Client</attorip>
-	<precondizione>Si stanno modificando le opzioni riguardanti la legenda di un grafico selezionato.</precondizione>
-	<postcondizione>É stato modificato il fatto che la legenda del grafico selezionato sia visualizzata o meno.</postcondizione>
-</usecase>
