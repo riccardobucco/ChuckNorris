@@ -10,8 +10,8 @@
 	<precondizione>Si stanno utilizzando le API della libreria grafica. È stato selezionato il modello di grafico che si vuole rappresentare. Il grafico selezionato è di tipo line chart.</precondizione>
 	<postcondizione>Sono state modificate le opzioni di visualizzazione del line chart selezionato.</postcondizione>
 	<principale>
-		<item>Il client modifica le opzioni riguardanti la legenda del grafico selezionato (UCN3.3.1);</item>
-		<item>Il client modifica il fatto che la griglia di un piano cartesiano sia visualizzata o meno nel grafico selezionato (UCN3.3.2);</item>
+		<item>Il client modifica le opzioni riguardanti la legenda del grafico selezionato (UCN3.5.2);</item>
+		<item>Il client modifica il fatto che la griglia di un piano cartesiano sia visualizzata o meno nel grafico selezionato (UCN3.5.3);</item>
 		<item>Il client modifica il colore di una o più linee del grafico selezionato (UCN3.5.1).</item>
 	</principale>
 </usecase>
