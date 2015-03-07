@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN3.7.1 Cambiare le opzioni riguardanti il formato di una cella</titolo>
 	<attorip>Client</attorip>
+	<descrizione>Il clent può cambiare le opzioni riguardanti il formato di una cella della table. In particolare il client può cambiare il colore del testo contenuto in una cella e il colore di sfondo della stessa </descrizione>
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di una table selezionata.</precondizione>
 	<postcondizione>Sono state modificate le opzioni riguardanti il formato di una cella.</postcondizione>
 	<principale>
-		<item>Il client sceglie una cella alla quale vuole cambiare il formato;</item>
 		<item>Il client modifica il colore del testo contenuto in una cella (UCN3.7.1.1);</item>
 		<item>Il client modifica il colore di sfondo di una cella (UCN3.7.1.2).</item>
 	</principale>
