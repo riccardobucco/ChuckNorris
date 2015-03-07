@@ -3,6 +3,7 @@
 <usecase>
 	<titolo>UCN1.4.1.5 Scegliere le opzioni riguardanti la legenda di un bar chart</titolo>
 	<attorip>Sviluppatore</attorip>
+	<descrizione>Lo sviluppatore può configurare le opzioni riguardanti la legenda del bar chart che sta creando. In particolare può scegliere se la legenda è visualizzata o nascosta. Può inoltre scegliere la posizione in cui è visualizzata quest'ultima.</descrizione>
 	<precondizione>Si sta creando un modello di chart. Il chart che si desidera creare non è di tipo table.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti la legenda.</postcondizione>
 	<principale>
