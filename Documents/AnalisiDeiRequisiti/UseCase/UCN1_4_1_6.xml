@@ -7,7 +7,7 @@
 	<precondizione>Si stanno impostando le opzioni di un modello di bar chart.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti il piano cartesiano.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il nome degli assi (UCN1.1.3.1);</item>
-		<item>Lo sviluppatore sceglie se le linee della griglia sono visualizzate (UCN1.1.3.2).</item>
+		<item>Lo sviluppatore sceglie il nome degli assi (UCN1.4.1.6.1);</item>
+		<item>Lo sviluppatore sceglie se le linee della griglia sono visualizzate (UCN1.4.1.6.2).</item>
 	</principale>
 </usecase>

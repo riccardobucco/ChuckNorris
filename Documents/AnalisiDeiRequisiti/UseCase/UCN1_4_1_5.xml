@@ -7,7 +7,7 @@
 	<precondizione>Si sta creando un modello di chart. Il chart che si desidera creare non è di tipo table.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti la legenda.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie se la legenda è visualizzata (UCN1.1.2.1);</item>
-		<item>Lo sviluppatore sceglie la posizione in cui è visualizzata la legenda (UCN1.1.2.2).</item>
+		<item>Lo sviluppatore sceglie se la legenda è visualizzata (UCN1.4.1.5.1);</item>
+		<item>Lo sviluppatore sceglie la posizione in cui è visualizzata la legenda (UCN1.4.1.5.2).</item>
 	</principale>
 </usecase>
