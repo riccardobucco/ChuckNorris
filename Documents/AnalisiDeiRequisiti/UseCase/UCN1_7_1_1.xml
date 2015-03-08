@@ -7,6 +7,6 @@
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table. Si conosce il numero di colonne della table e le si sa identificare.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti il formato dei dati contenuti nelle colonne della table.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il formato dei dati contenuti nelle colonne della table.</item>
+		<item>Per ogni colonna lo sviluppatore imposta l'unità di misura dei valori (UCN1.7.1.1.1).</item>
 	</principale>
 </usecase>
