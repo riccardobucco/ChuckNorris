@@ -7,6 +7,6 @@
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
 	<postcondizione>È stato scelto il modo in cui vengono rappresentati i punti sul map chart.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il formato dei valori del map chart.</item>
+		<item>Lo sviluppatore sceglie la forma dei marcatori del map chart (UCN1.6.1.1.1).</item>
 	</principale>
 </usecase>
