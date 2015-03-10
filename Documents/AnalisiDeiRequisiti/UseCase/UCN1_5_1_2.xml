@@ -7,6 +7,7 @@
 	<precondizione>Si stanno configurando le impostazioni di un line chart.</precondizione>
 	<postcondizione>È stato impostato il formato di stampa dei valori del line chart.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il formato dei valori del line chart.</item>
+		<item>Lo sviluppatore sceglie la dimensione dei punti del line chart (UCN1.5.1.2.1);</item>
+		<item>Lo aviluppatore sceglie se la linea del line chart è curva o segmentata (UCN1.5.1.2.2).</item>
 	</principale>
 </usecase>
