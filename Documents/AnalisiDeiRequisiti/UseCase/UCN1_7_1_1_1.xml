@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.7.1.1 Scegliere l'unità di misura dei dati contenuti nelle colonne</titolo>
+	<titolo>UCN1.7.1.1.1 Scegliere l'unità di misura dei dati contenuti nelle colonne</titolo>
 	<attorip>Sviluppatore</attorip>
 	<descrizione>Lo sviluppatore può scegliere l'unità di misura dei dati contenuti nelle colonne della table.</descrizione>
 	<precondizione>Si sta impostando il formato di stampa di una table.</precondizione>
