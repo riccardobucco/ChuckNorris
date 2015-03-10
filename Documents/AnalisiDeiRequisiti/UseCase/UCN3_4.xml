@@ -11,7 +11,7 @@
 	<postcondizione>Sono state modificate le opzioni di visualizzazione del bar chart selezionato.</postcondizione>
 	<principale>
 		<item>Il client modifica le opzioni riguardanti la legenda del grafico selezionato (UCN3.4.2);</item>
-		<item>Il client modifica il fatto che la griglia del piano cartesiano sia visualizzata o meno nel grafico selezionato (UCN3.4.1);</item>
+		<item>Il client modifica il fatto che la griglia del piano cartesiano sia visualizzata o meno nel grafico selezionato (UCN3.4.3);</item>
 		<item>Il client modifica il colore di uno o più set di barre del bar chart selezionato (UCN3.4.1).</item>
 	</principale>
 </usecase>
