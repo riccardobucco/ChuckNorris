@@ -9,7 +9,7 @@
 	<precondizione>Si sta utilizzando la dashboard.</precondizione>
 	<postcondizione>È visualizzata la posizione degli autobus APS.</postcondizione>
 	<principale>
-		<item>L'utente può filtrare per linea la visualizzazione degli autobus attivi (UCD1.1);</item>
+		<item>L'utente visualizza la posizione degli autobus dell'APS in tempo reale.</item>
 		<item>Ad ogni aggiornamento ricevuto da Norris i marcatori vengono modificati.</item>
 	</principale>
 </usecase>

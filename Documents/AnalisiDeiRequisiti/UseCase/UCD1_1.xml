@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<usecase>
-	<titolo>UCD1.1 Filtraggio autobus per linea</titolo>
-	<attorip>Utente</attorip>
-	<precondizione>Si sta visualizzando la posizione degli autobus APS in tempo reale.</precondizione>
-	<postcondizione>È stata effettuato un filtraggio per linea degli autobus visualizzati.</postcondizione>
-</usecase>
