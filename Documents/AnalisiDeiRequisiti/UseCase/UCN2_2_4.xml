@@ -3,8 +3,10 @@
 <usecase>
 	<titolo>UCN2.2.4 Ottenere la descrizione di ciascun grafico</titolo>
 	<attorip>Client</attorip>
-	<descrizione>L'utente client può ottenere la descrizione di ciascun grafico presente nella lista.</descrizione>
-	<descrizione>Il client può ottenere la descrizione di ciascun grafico dell'istanza di Norris selezionata.</descrizione>
+	<descrizione>L'utente client può ottenere la descrizione di ciascun grafico presente nella lista dell'istanza di Norris selezionata..</descrizione>
 	<precondizione>È stata selezionata un'istanza esistente di Norris.</precondizione>
 	<postcondizione>È stata ottenuta la descrizione di ciascun grafico presente nell'istanza di Norris.</postcondizione>
+	<principale>
+		<item>L'utente client ottiene la descrizione di ciascun grafico della lista.</item>
+	</principale>
 </usecase>
