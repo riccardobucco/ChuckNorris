@@ -3,12 +3,14 @@
 <usecase>
 	<titolo>UCD3 Filtraggio autobus per linea</titolo>
 	<attorip>Utente</attorip>
+	<attoris>Norris</attoris>
 	<descrizione>L'utente può scegliere di filtrare le posizioni degli autobus in modo da visualizzare solamente le linee selezonate.</descrizione>
 	<precondizione>Si sta visualizzando la posizione degli autobus APS in tempo reale.</precondizione>
 	<postcondizione>È stata effettuato un filtraggio per linea degli autobus visualizzati.</postcondizione>
 	<principale>
 		<item>L'utente selezione una linea di autobus;</item>
 		<item>L'utente ripete il passo successivo fino a selezionare tutte le linee di suo interesse;</item>
-		<item>L'utente visualizza gli autobus delle linee selezionate.</item>
+		<item>L'utente visualizza gli autobus delle linee selezionate;</item>
+		<item>Ad ogni aggiornamento ricevuto da Norris i dati vengono modificati.</item>
 	</principale>
 </usecase>

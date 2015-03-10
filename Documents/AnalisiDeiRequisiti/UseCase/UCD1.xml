@@ -4,7 +4,6 @@
 	<titolo>UCD1 Visualizzazione posizione autobus APS in tempo reale</titolo>
 	<attorip>Utente</attorip>
 	<attoris>Norris</attoris>
-	<inclusioni>UCD3</inclusioni>
 	<descrizione>La Dashboard mette a disposizione una cartina geografica con dei marcatori che indicano la posizione in tempo reale degli autobus.</descrizione>
 	<precondizione>Si sta utilizzando la dashboard.</precondizione>
 	<postcondizione>È visualizzata la posizione degli autobus APS.</postcondizione>

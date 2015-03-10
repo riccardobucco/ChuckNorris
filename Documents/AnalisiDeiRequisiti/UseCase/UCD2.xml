@@ -4,7 +4,6 @@
 	<titolo>UCD2 Visualizzazione numero di autobus attivi per ciascuna linea</titolo>
 	<attorip>Utente</attorip>
 	<attoris>Norris</attoris>
-	<inclusioni>UCD3</inclusioni>
 	<descrizione>L'utente può visualizzare il numero di autobus attivi per ciascuna linea, selezionando la linea a cui è interessato.</descrizione>
 	<precondizione>Si sta utilizzando la dashboard.</precondizione>
 	<postcondizione>È stato visualizzato il numero di autobus attivi per ciascuna linea.</postcondizione>
