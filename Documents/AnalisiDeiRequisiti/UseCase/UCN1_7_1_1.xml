@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.7.1.1 Scegliere il formato dei dati contenuti nelle colonne</titolo>
+	<titolo>UCN1.7.1.1 Scegliere il formato dei dati di una qualsiasi cella (intestazione o no) contenuta in una table</titolo>
 	<attorip>Sviluppatore</attorip>
-	<descrizione>Lo sviluppatore può scegliere il formato dei dati contenuti nelle colonne della table che sta creando.</descrizione>
+	<descrizione>Lo sviluppatore può scegliere il formato dei dati contenuti in una tabella.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table. Si conosce il numero di colonne della table e le si sa identificare.</precondizione>
-	<postcondizione>Sono state configurate le impostazioni riguardanti il formato dei dati contenuti nelle colonne della table.</postcondizione>
+	<postcondizione>Sono state configurate le impostazioni riguardanti il formato dei dati contenuti nella table.</postcondizione>
 	<principale>
-		<item>Per ogni colonna lo sviluppatore imposta l'unità di misura dei valori (UCN1.7.1.1.1).</item>
+		<item>Lo sviluppatore sceglie il colore del testo contenuto in una cella (UCN1.7.1.1.1).</item>
+		<item>Lo sviluppatore sceglie il colore dello sfondo di una cella (UCN1.7.1.1.2).</item>
+		<item>Lo sviluppatore sceglie l’unità di misura da inserire nelle intestazioni delle colonne riguardanti i dati contenuti in esse (UCN1.7.1.1.3).</item>
 	</principale>
 </usecase>

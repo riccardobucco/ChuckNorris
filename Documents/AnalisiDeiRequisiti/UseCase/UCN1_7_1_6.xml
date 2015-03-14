@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.7.1.6 Scegliere l'intestazione di una singola colonna</titolo>
+	<titolo>UCN1.7.1.6 Scegliere se le linee della tabella sono visualizzate</titolo>
 	<attorip>Sviluppatore</attorip>
-	<descrizione>Lo sviluppatore può impostare l'intestazione di ogni colonna della table che sta creando.</descrizione>
-	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table. Si conosce quante sono le colonne e le si sa identificare.</precondizione>
-	<postcondizione>È stata impostata l'intestazione di una colonna.</postcondizione>
+	<descrizione>Lo sviluppatore può scegliere se le linee della tabella che sta creando sono visualizzate o meno.</descrizione>
+	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table.</precondizione>
+	<postcondizione>È stato scelto se le linee della tabella sono visualizzate.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie l'intestazione di una singola colonna.</item>
+		<item>Lo sviluppatore sceglie se le linee della tabella sono visualizzate.</item>
 	</principale>
 </usecase>
