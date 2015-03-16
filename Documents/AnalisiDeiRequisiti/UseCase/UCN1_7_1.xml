@@ -7,13 +7,12 @@
 	<precondizione>Si vuole creare un grafico di tipo table. Sono stati inseriti i dati della table. In particolare si conosce quante sono le colonne e le si sa identificare.</precondizione>
 	<postcondizione>Sono state configurate le opzioni della table.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il formato dei dati contenuti nelle colonne (UCN1.7.1.1);</item>
-		<item>Lo sviluppatore sceglie le opzioni riguardanti il formato di una o più celle (UCN1.7.1.2);</item>
+		<item>Lo sviluppatore sceglie il formato dei dati di una qualsiasi cella (intestazione o no) contenuta in una table (UCN1.7.1.1);</item>
+		<item>Lo sviluppatore sceglie l'intestazione di una singola colonna (UCN1.7.1.2);</item>
+		<item>Lo sviluppatore ripete il passo precedente al più per ogni colonna; </item>
 		<item>Lo sviluppatore sceglie il massimo numero di righe visualizzabili (UCN1.7.1.3);</item>
 		<item>Lo sviluppatore sceglie se è possibile ordinare le righe rispetto ai valori di una colonna (UCN1.7.1.4);</item>
 		<item>Lo sviluppatore sceglie la posizione in cui vengono aggiunte nuove righe (UCN1.7.1.5);</item>
-		<item>Lo sviluppatore sceglie l'intestazione di una singola colonna (UCN1.7.1.6);</item>
-		<item>Lo sviluppatore ripete il passo precedente al più per ogni colonna; </item>
-		<item>Lo sviluppatore sceglie se le linee della tabella sono visualizzate (UCN1.7.1.7).</item>
+		<item>Lo sviluppatore sceglie se le linee della tabella sono visualizzate (UCN1.7.1.6).</item>
 	</principale>
 </usecase>
