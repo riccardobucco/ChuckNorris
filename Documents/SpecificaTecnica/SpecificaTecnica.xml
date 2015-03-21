@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<document>
+	<title>Specifica Tecnica</title>
+	<type>Interno</type>
+	<redactedby>XXXX</redactedby>
+	<verifiedby>XXXX</verifiedby>
+	<approvedby>XXXX</approvedby>
+	<distribution>\groupname{}</distribution>
+
+	<sections>
+		<name>Tex/Introduzione.tex</name>
+		<name>Tex/ArchitetturaGenerale.tex</name>
+		<name>Tex/Client.tex</name>
+		<name>Tex/Server.tex</name>
+	</sections>
+
+	<changes>
+        <version>
+            <id>0.01</id>
+            <date>2014-12-16</date>
+            <author>XXXX</author>
+            <role>XXXX</role>
+            <description>XXXX</description>
+        </version>
+	</changes>
+</document>

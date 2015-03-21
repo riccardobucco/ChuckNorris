@@ -3,7 +3,8 @@ DOCUMENTI =	AnalisiDeiRequisiti \
 		NormeDiProgetto \
 		PianoDiProgetto \
 		PianoDiQualifica \
-		StudioDiFattibilita
+		StudioDiFattibilita\
+		SpecificaTecnica
 
 
 all: $(DOCUMENTI) LetteraDiPresentazione
