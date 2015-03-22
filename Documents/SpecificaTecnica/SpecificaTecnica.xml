@@ -10,10 +10,20 @@
 
 	<sections>
 		<name>Tex/Introduzione.tex</name>
+		<name>Tex/Tecnologie.tex</name>
 		<name>Tex/ArchitetturaGenerale.tex</name>
 		<name>Tex/Client.tex</name>
 		<name>Tex/Server.tex</name>
+		<name>Tex/ComponentiClassi.tex</name>
+		<name>Tex/DesignPattern.tex</name>
+		<name>Tex/DiagrammiAttivita.tex</name>
+		<name>Tex/Stime.tex</name>
+		<name>Tex/Tracciamento.tex</name>
 	</sections>
+		
+	<appendix>
+		<name>Tex/AppendiceDesignPattern.tex</name>
+	</appendix>
 
 	<changes>
         <version>

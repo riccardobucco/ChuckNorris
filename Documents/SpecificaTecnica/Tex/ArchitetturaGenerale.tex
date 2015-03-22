@@ -1,4 +1,13 @@
-\level{1}{Architettura generale}
+
+\level{1}{Descrizione architetturale}
+\level{2}{Metodo e formalismo di specifica}
+Nell'esposizione dell'architettura di procederà con un approccio di tipo \textbf{top-down}. Si descrive quindi l’architettura partendo dal generale, decomponendo le componenti fino a raggiungere il particolare.\\
+Verrà fornita un'idea di massima di quali dovranno essere le componenti di alto livello da definire più precisamente nelle fasi \insphase{Prototyping}, \insphase{Increase of the Prototype} e \insphase{Completion of the Product} dove avverrà anche la progettazione al dettaglio. Ciò significa che tali componenti potrebbero non corrispondere in rapporto 1:1 con le singole unità del software finale (le classi) e spetterà ai \insrole{progettisti} delle tre fasi sucessive valutare se sia opportuno suddividere o unificare uno o più componenti per dar vita alle classi finali (finali rispetto al rilascio) rispettando il design di massima.\\
+Il documento inizia con la visione più generale del sistema e procederà con la descrizione delle componenti di questo. Per ognuna di esse si analizzeranno le singole classi specificandone il tipo, l'obiettivo, la funzione e le relazioni in ingresso e/o in uscita con il resto del sistema. Infine si illustreranno degli esempi dell'uso dei design pattern che si è deciso di andare ad implementare, rimandando la spiegazione generale degli stessi all'appendice%TODO: inserire rifermimento all'appendice dei design pattern
+.\\
+per i diagrammi delle componenti, di classe e delle attività si utilizza il formalismo UML 2.0. %TODO: inserire magari il colore differente che si decide: es: Per permettere di distinguere facilmente le classi e le componenti presenti in librerie e framework esterni utilizzati dall’applicazione, questi verranno rappresentati con un colore verde. Le classi e le componenti dell’applicazione sono invece raffigurati con un colore azzurro.
+
+\level{2}{Architettura generale}
 L'architettura del software segue il design pattern \textbf{Client-Server} dividendo quindi il sistema in due livelli:
 \begin{itemize}
 	\item{livello Client};
