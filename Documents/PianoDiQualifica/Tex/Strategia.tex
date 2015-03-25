@@ -1,8 +1,9 @@
 % !TEX encoding = UTF-8 Unicode
 
 \level{1}{Visione generale della strategia di verifica}
-	Costruire prodotti software di qualità adoperando processi controllabili (dunque migliorabili) ha un costo non trascurabile. Il livello di qualità 
-	dei prodotti e dei processi che intendiamo raggiungere deve essere garantito allo stesso modo con cui garantiamo le funzionalità software che ci sono state richieste. Di conseguenza, la qualità deve essere pianificata, progettata, sviluppata, verificata, misurata e valutata durante l'intero progetto. Si noti come la qualità, se perseguita fin dall'inizio, costi meno di quanto non risulti nella maggior parte dei progetti nei quali viene trascurata all'inizio.
+	Per assicurare la qualità dei processi e del prodotto, il gruppo \groupname{} si prefigge di attenersi al principio del "Rasoio di Occam". Secondo questo principio, tra due soluzioni equivalenti è da preferire la soluzione più semplice. La produzione di documenti e software più semplici, porta ad una maggiore comprensibilità del prodotto, il quale risulta più facilmente manutenibile.\\
+Ogni membro del team è inoltre tenuto a seguire la "Teoria delle finestre rotte". Secondo questa teoria, se si lavora in un ambiente in cui qualche membro del gruppo non rispetta le norme o in cui i problemi rilevati non vengono risolti in tempo utile, potrebbero generarsi fenomeni di emulazione da parte di altri componenti del gruppo. Viceversa, se si lavora in un ambiente in cui tutti rispettano le norme e i problemi non vengono tralasciati, i componenti del gruppo sono stimolati a mantenere questo comportamento. E' dunque essenziale, per assicurare la qualità, che i membri del team rispettino le norme fissate nel documento \insdoc{Norme di Progetto vX.XX}. Inoltre, i problemi rilevati devono essere risolti in tempo utile dai membri a cui verranno assegnati.\\
+Infine, il gruppo si impegna ad utilizzare strumenti che consentano di automatizzare le attività ripetitive e le procedure. L'automatizzazione riduce l'utilizzo di risorse e quindi aumenta l'efficienza dei processi, permettendo di impiegare le persone laddove sia realmente necessario. Assieme all'aumento dell'efficienza, si ha anche un aumento dell'efficacia in quanto procedure automatizzate producono molti meno errori rispetto alle procedure attuate da una persona. Una maggiore efficienza ed una maggiore efficacia sono indici di una maggiore qualità.
 	\level{2}{Tecniche di controllo qualità di processo}
 		Per poter controllare un processo, e di conseguenza migliorarlo, è necessario saper misurare in modo più preciso possibile alcune sue 
 		caratteristiche di interesse e soprattutto i miglioramenti stessi.\\
@@ -303,9 +304,9 @@ Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accet
 			Una classe con un numero elvato di campi dati risulta essere complessa, difficilmente riutilizzabile e poco manutenibile. Nel caso di classi che necessitano di molti campi dati, sarebbe opportuno incapsulare una parte di essi all'interno di una nuova classe.\\
 			I range di accettazione per questa metrica sono:
 				\begin{itemize}
-					\item valori maggiori di 15 sono considerati negativi;
-					\item valori compresi tra 8 e 15 sono considerati accettabili;
-					\item valori minori di 8 sono considerati ottimali.
+					\item valori maggiori di 10 sono considerati negativi;
+					\item valori compresi tra 6 e 10 sono considerati accettabili;
+					\item valori minori di 6 sono considerati ottimali.
 				\end{itemize}
 			\level{4}{Livello di annidamento}
 			Il livello di annidamento del codice indica quante volte le struttuture di controllo sono state innestate una dentro l'altra. Per calcolare il livello di annidamento di un metodo o di una procedura si prende il massimo livello di annidamento delle strutture di controllo al suo interno. Un metodo con un alto livello di annidamento risulta avere un flusso interno complesso. La verifica di un tale metodo è molto onerosa, in quanto per garantire la massima copertura del codice sarà necessario eseguire un elevato numero di test.\\
