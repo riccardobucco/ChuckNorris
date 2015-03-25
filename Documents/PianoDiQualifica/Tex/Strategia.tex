@@ -268,5 +268,52 @@
 					Notare che una verifica effettuata tramite la presente metrica permette al \insrole{Responsabile di Progetto} di capire quando lo sforzo per 
 					trovare gli errori diventa troppo grande (e quindi costoso). Si ricordi, infatti, che vale la legge del rendimento decrescente.
 		\level{3}{Metriche del codice}
-			A questo punto dello sviluppo del progetto, il team non è ancora pronto per indicare delle metriche adeguate per il controllo della 
-			qualità del codice, ma si riserva di indicare tali metriche in fase di progettazione.
+			\level{4}{Complessità ciclomatica}
+				La complessità ciclomatica permette di misurare la complessità del flusso di controllo di una componente software. Questa metrica può essere applicata a singole procedure, a metodi, a classi o a moduli del programma e consiste nel calcolare tutti i possibili cammini indipendenti del grafo del flusso di controllo, il quale è composto nel seguente modo:
+				\begin{itemize}
+					\item i nodi del grafo corrispondono a gruppi indivisibili di comandi;
+					\item gli archi del grafo collegano due nodi solo se è possibile che i comandi del secondo nodo vengano eseguiti subito dopo i comandi del primo nodo.
+				\end{itemize}
+				La misura ottenuta corrisponde quindi al numero di casi di prova necessari per verificare ogni possibile esito di ogni ramo di decisione della componente alla quale viene applicata. La complessità ciclomatica è dunque molto importante in quanto, oltre a dare una misura della complessità del codice, permette di dare un limite superiore al numero di test necessari al raggiungimento della massima copertura del codice.\\
+Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accettabile per valori inferiori a 10, ottimale per valori inferiori a 5. Nel valutare i valori bisogna tenere conto che il costrutto switch viene visto come una sequenza di if annidati, e quindi la sua presenza nel programma porta ad un innalzamento della complessità ciclomatica superiore rispetto alla reale complessità. Viceversa, in caso di oscuramento del codice, il valore della complessità ciclomatica sarà minore rispetto alla complessità reale.
+			\level{4}{Numero di parametri di un metodo}
+			Un metodo con un numero troppo elevato di parametri formali in input risulta essere complesso e poco manutenibile rispetto ad un metodo con un basso numero di parametri formali. È dunque necessario, per garantire un discreto livello di manutenibilità, che il numero di parametri di ogni metodo sia inferiore a 10. Il numero di parametri di un metodo può considerarsi ottimale quando assume valori inferiori a 5.
+			\level{4}{Numero di statement di un metodo}
+			Un metodo con un numero di statement eccessivi risulta essere complesso e meno manutenibile rispetto a metodi più brevi. Se un metodo deve svolgere diverse azioni complesse, è buona norma che queste azioni vengano incapsulate all'interno di altri metodi. In questo modo si evita di appesantire il codice di un singolo metodo, favorendone la comprensibilità e la manutenibilità.\\
+			I range di accettazione per questa metrica sono:
+				\begin{itemize}
+					\item valori maggiori di 60 sono considerati negativi;
+					\item valori compresi tra 30 e 60 sono considerati accettabili;
+					\item valori minori di 30 sono considerati ottimali.
+				\end{itemize}
+			\level{4}{Numero di campi dati di una classe}
+			Una classe con un numero elvato di campi dati risulta essere complessa, difficilmente riutilizzabile e poco manutenibile. Nel caso di classi che necessitano di molti campi dati, sarebbe opportuno incapsulare una parte di essi all'interno di una nuova classe.\\
+			I range di accettazione per questa metrica sono:
+				\begin{itemize}
+					\item valori maggiori di 15 sono considerati negativi;
+					\item valori compresi tra 8 e 15 sono considerati accettabili;
+					\item valori minori di 8 sono considerati ottimali.
+				\end{itemize}
+			\level{4}{Livello di annidamento}
+			Il livello di annidamento del codice indica quante volte le struttuture di controllo sono state innestate una dentro l'altra. Per calcolare il livello di annidamento di un metodo o di una procedura si prende il massimo livello di annidamento delle strutture di controllo al suo interno. Un metodo con un alto livello di annidamento risulta avere un flusso interno complesso. La verifica di un tale metodo è molto onerosa, in quanto per garantire la massima copertura del codice sarà necessario eseguire un elevato numero di test.\\
+			I range di accettazione per questa metrica sono:
+			\begin{itemize}
+				\item valori maggiori di 5 sono considerati negativi;
+				\item valori compresi tra 5 e 3 sono considerati accettabili;
+				\item valori minori o uguali a 3 sono considerati ottimali.
+			\end{itemize}
+		\level{4}{Grado di accoppiamento}
+		Il grado di accoppiamento di un programma è il grado con cui ciascuna componente di un programma fa affidamento su ciascuna delle altre componenti, dipendendo da esse. In presenza di un basso grado di accoppiamento, eventuali modifiche apportate ad una classe hanno poche ripercussioni (o nessuna) sulle altre classi del sistema. Il codice risulta quindi facilmente manutenibile. Un basso accoppiamento è anche indice di maggiore comprensibilà del codice e di alta coesione all'interno delle componenti. Viceversa, un alto grado di accoppiamento comporta una difficile manutenibilità del codice, il quale risulta più complesso e poco coeso.\\
+		Per valutare il grado di accoppiamento del codice, si devono calcolare i seguenti indici:
+		\begin{itemize}
+			\item Accoppiamento Afferente (CA): indica il numero di classi esterne ad un package che dipendono da classi interne ad esso. Un alto valore di CA è indice di un alto grado di dipendenza del resto del software dal package.
+			\item Accoppiamento Efferente (CE): indica il numero di classi interne al package che dipendono da classi esterne ad esso. Un basso valore di CE indica che la maggiorparte delle funzionalità fornite dal package sono indipendenti dal resto del sistema.
+		\end{itemize}
+		\level{4}{Copertura del codice}
+		La copertura del codice è la percentuale degli statement eseguiti, e quindi verificati, durante lo svolgimento dei test. Un'alta copertura del codice garantisce un'alta affidabilità del software, in quanto la probabilità che siano presenti errori in codice che sia stato sottoposto a test è molto bassa.\\
+		I range di accettazione per questa metrica sono:
+		\begin{itemize}
+			\item valori minori di 60% sono considerati negativi;
+			\item valori compresi tra 60% e 80% sono considerati accettabili;
+			\item valori maggiori di 80% sono considerati ottimali.
+		\end{itemize}
