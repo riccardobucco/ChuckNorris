@@ -193,33 +193,6 @@ Infine, il gruppo si impegna ad utilizzare strumenti che consentano di automatiz
 					\item[ottimale] Un valore appartenente a questo range ha raggiunto le massime aspettative del team. L'obiettivo dovrebbe essere 
 					quello di avere tutti i valori all'interno di tale range.
 				\end{description}
-			\level{3}{Metriche per i documenti}
-				La qualità di un documento dipende prima di tutto dai suoi contenuti. La loro qualità, tuttavia, è difficilmente quantificabile allo 
-				stato attuale del progetto a causa dell'esperienza pressoché nulla del team in quest'ambito. Si è deciso dunque di limitarsi a valutare 
-				parametri maggiormente oggettivi e soprattutto misurabili automaticamente attraverso strumenti software.
-				\level{4}{Indice di leggibilità}
-					Una metrica che si è deciso di utilizzare per poter stimare la qualità di un documento è l'indice di leggibilità. In particolare, è 
-					stato considerato l'indice Gulpease, studiato appositamente per la lingua italiana.\\
-					Questo particolare indice si basa sulla lunghezza della parola e sulla lunghezza della frase rispetto al numero di lettere.\\
-					La formula per il suo calcolo è la seguente:
-					\begin{equation}
-						\label{eq:gulpease}
-						Indice\ Gulpease = 89 + \frac{300*numero\ frasi-10*numero\ lettere}{numero\ parole}
-					\end{equation}
-					Il risultato di tale equazione tipicamente è compreso tra 0 e 100, dove valori alti indicano leggibilità elevata e viceversa.\\
-					In generale, risulta che testi con un indice:
-					\begin{itemize}
-						\item inferiore a 80 risultano difficili da leggere per chi ha la licenza elementare;
-						\item inferiore a 60 risultano difficili da leggere per chi ha la licenza media;
-						\item inferiore a 40 risultano difficili da leggere per chi ha la licenza superiore;
-					\end{itemize}
-					Vengono di seguito riportati i range stabiliti per la metrica appena introdotta. Si noti che viene tenuto in considerazione il fatto 
-					che la documentazione è destinata a persone sufficientemente preparate, competenti ed istruite.
-					\begin{itemize}
-						\item Valori minori di 35 sono considerati negativi.
-						\item Valori compresi tra 35 e 50 sono considerati accettabili.
-						\item Valori maggiori di 50 sono considerati ottimali.
-					\end{itemize}
 			\level{3}{Metriche per i processi}
 				\level{4}{Capability Maturity Model}
 					Per valutare i processi si è deciso di fare riferimento al modello CMM. Se correttamente applicato esso ci fornisce una base 
@@ -281,8 +254,54 @@ I range di accettazione per questa metrica sono:
 					confrontate tra di loro in momenti diversi del progetto.\\
 					Notare che una verifica effettuata tramite la presente metrica permette al \insrole{Responsabile di Progetto} di capire quando lo sforzo per 
 					trovare gli errori diventa troppo grande (e quindi costoso). Si ricordi, infatti, che vale la legge del rendimento decrescente.
-		\level{3}{Metriche del codice}
-			\level{4}{Complessità ciclomatica}
+		\level{3}{Metriche per i prodotti}		
+			\level{4}{Metriche per i documenti}
+				La qualità di un documento dipende prima di tutto dai suoi contenuti. La loro qualità, tuttavia, è difficilmente quantificabile allo 
+				stato attuale del progetto a causa dell'esperienza pressoché nulla del team in quest'ambito. Si è deciso dunque di limitarsi a valutare 
+				parametri maggiormente oggettivi e soprattutto misurabili automaticamente attraverso strumenti software.
+				\level{5}{Indice di leggibilità}
+					Una metrica che si è deciso di utilizzare per poter stimare la qualità di un documento è l'indice di leggibilità. In particolare, è 
+					stato considerato l'indice Gulpease, studiato appositamente per la lingua italiana.\\
+					Questo particolare indice si basa sulla lunghezza della parola e sulla lunghezza della frase rispetto al numero di lettere.\\
+					La formula per il suo calcolo è la seguente:
+					\begin{equation}
+						\label{eq:gulpease}
+						Indice\ Gulpease = 89 + \frac{300*numero\ frasi-10*numero\ lettere}{numero\ parole}
+					\end{equation}
+					Il risultato di tale equazione tipicamente è compreso tra 0 e 100, dove valori alti indicano leggibilità elevata e viceversa.\\
+					In generale, risulta che testi con un indice:
+					\begin{itemize}
+						\item inferiore a 80 risultano difficili da leggere per chi ha la licenza elementare;
+						\item inferiore a 60 risultano difficili da leggere per chi ha la licenza media;
+						\item inferiore a 40 risultano difficili da leggere per chi ha la licenza superiore;
+					\end{itemize}
+					Vengono di seguito riportati i range stabiliti per la metrica appena introdotta. Si noti che viene tenuto in considerazione il fatto 
+					che la documentazione è destinata a persone sufficientemente preparate, competenti ed istruite.
+					\begin{itemize}
+						\item Valori minori di 35 sono considerati negativi.
+						\item Valori compresi tra 35 e 50 sono considerati accettabili.
+						\item Valori maggiori di 50 sono considerati ottimali.
+					\end{itemize}
+			\level{4}{Metriche per il prodotto software}
+			Sono riportate di seguito le metriche utilizzate per determinare le diverse qualità del prodotto individuate nel paragrafo \nameref{subsec:obiettiviprodotto} del presente documento.
+				\level{5}{Numero di requisiti funzionali realizzati}
+					Questa metrica serve a misurare la funzionalità del prodotto. \\
+					I range di accettazione per questa metrica sono:
+					\begin{itemize}
+					\item il soddisfacimento di tutti i requisiti obbilgatori e di requisiti opzionali e desiderabili è considerato ottimale;
+					\item il soddisfacimento di tutti i requisiti obbligatori è considerato accettabile;
+					\item il mancato soddisfacimento di anche un solo requisito obbligatorio è considerato non accettabile.
+					\end{itemize}
+					\level{5}{Percentuale di test di robustezza superati}
+					Questa metrica serve a misurare l'affidabilità del prodotto.
+					I range di accettazione per questa metrica sono:
+					\begin{itemize}
+					\item valori minori di 90\% sono considerati negativi;
+					\item valori compresi tra 90\% e 100\% sono considerati accettabili;
+					\item valori maggiori di 100\% sono considerati ottimali.
+					\end{itemize}
+		\level{4}{Metriche per il codice}
+			\level{5}{Complessità ciclomatica}
 				La complessità ciclomatica permette di misurare la complessità del flusso di controllo di una componente software. Questa metrica può essere applicata a singole procedure, a metodi, a classi o a moduli del programma e consiste nel calcolare tutti i possibili cammini indipendenti del grafo del flusso di controllo, il quale è composto nel seguente modo:
 				\begin{itemize}
 					\item i nodi del grafo corrispondono a gruppi indivisibili di comandi;
@@ -290,9 +309,9 @@ I range di accettazione per questa metrica sono:
 				\end{itemize}
 				La misura ottenuta corrisponde quindi al numero di casi di prova necessari per verificare ogni possibile esito di ogni ramo di decisione della componente alla quale viene applicata. La complessità ciclomatica è dunque molto importante in quanto, oltre a dare una misura della complessità del codice, permette di dare un limite superiore al numero di test necessari al raggiungimento della massima copertura del codice.\\
 Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accettabile per valori inferiori a 10, ottimale per valori inferiori a 5. Nel valutare i valori bisogna tenere conto che il costrutto switch viene visto come una sequenza di if annidati, e quindi la sua presenza nel programma porta ad un innalzamento della complessità ciclomatica superiore rispetto alla reale complessità. Viceversa, in caso di oscuramento del codice, il valore della complessità ciclomatica sarà minore rispetto alla complessità reale.
-			\level{4}{Numero di parametri di un metodo}
+			\level{5}{Numero di parametri di un metodo}
 			Un metodo con un numero troppo elevato di parametri formali in input risulta essere complesso e poco manutenibile rispetto ad un metodo con un basso numero di parametri formali. È dunque necessario, per garantire un discreto livello di manutenibilità, che il numero di parametri di ogni metodo sia inferiore a 10. Il numero di parametri di un metodo può considerarsi ottimale quando assume valori inferiori a 5.
-			\level{4}{Numero di statement di un metodo}
+			\level{5}{Numero di statement di un metodo}
 			Un metodo con un numero di statement eccessivi risulta essere complesso e meno manutenibile rispetto a metodi più brevi. Se un metodo deve svolgere diverse azioni complesse, è buona norma che queste azioni vengano incapsulate all'interno di altri metodi. In questo modo si evita di appesantire il codice di un singolo metodo, favorendone la comprensibilità e la manutenibilità.\\
 			I range di accettazione per questa metrica sono:
 				\begin{itemize}
@@ -300,7 +319,7 @@ Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accet
 					\item valori compresi tra 30 e 60 sono considerati accettabili;
 					\item valori minori di 30 sono considerati ottimali.
 				\end{itemize}
-			\level{4}{Numero di campi dati di una classe}
+			\level{5}{Numero di campi dati di una classe}
 			Una classe con un numero elvato di campi dati risulta essere complessa, difficilmente riutilizzabile e poco manutenibile. Nel caso di classi che necessitano di molti campi dati, sarebbe opportuno incapsulare una parte di essi all'interno di una nuova classe.\\
 			I range di accettazione per questa metrica sono:
 				\begin{itemize}
@@ -308,7 +327,7 @@ Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accet
 					\item valori compresi tra 6 e 10 sono considerati accettabili;
 					\item valori minori di 6 sono considerati ottimali.
 				\end{itemize}
-			\level{4}{Livello di annidamento}
+			\level{5}{Livello di annidamento}
 			Il livello di annidamento del codice indica quante volte le struttuture di controllo sono state innestate una dentro l'altra. Per calcolare il livello di annidamento di un metodo o di una procedura si prende il massimo livello di annidamento delle strutture di controllo al suo interno. Un metodo con un alto livello di annidamento risulta avere un flusso interno complesso. La verifica di un tale metodo è molto onerosa, in quanto per garantire la massima copertura del codice sarà necessario eseguire un elevato numero di test.\\
 			I range di accettazione per questa metrica sono:
 			\begin{itemize}
@@ -316,18 +335,18 @@ Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accet
 				\item valori compresi tra 5 e 3 sono considerati accettabili;
 				\item valori minori o uguali a 3 sono considerati ottimali.
 			\end{itemize}
-		\level{4}{Grado di accoppiamento}
+		\level{5}{Grado di accoppiamento}
 		Il grado di accoppiamento di un programma è il grado con cui ciascuna componente di un programma fa affidamento su ciascuna delle altre componenti, dipendendo da esse. In presenza di un basso grado di accoppiamento, eventuali modifiche apportate ad una classe hanno poche ripercussioni (o nessuna) sulle altre classi del sistema. Il codice risulta quindi facilmente manutenibile. Un basso accoppiamento è anche indice di maggiore comprensibilà del codice e di alta coesione all'interno delle componenti. Viceversa, un alto grado di accoppiamento comporta una difficile manutenibilità del codice, il quale risulta più complesso e poco coeso.\\
 		Per valutare il grado di accoppiamento del codice, si devono calcolare i seguenti indici:
 		\begin{itemize}
 			\item Accoppiamento Afferente (CA): indica il numero di classi esterne ad un package che dipendono da classi interne ad esso. Un alto valore di CA è indice di un alto grado di dipendenza del resto del software dal package.
 			\item Accoppiamento Efferente (CE): indica il numero di classi interne al package che dipendono da classi esterne ad esso. Un basso valore di CE indica che la maggiorparte delle funzionalità fornite dal package sono indipendenti dal resto del sistema.
 		\end{itemize}
-		\level{4}{Copertura del codice}
+		\level{5}{Copertura del codice}
 		La copertura del codice è la percentuale degli statement eseguiti, e quindi verificati, durante lo svolgimento dei test. Un'alta copertura del codice garantisce un'alta affidabilità del software, in quanto la probabilità che siano presenti errori in codice che sia stato sottoposto a test è molto bassa.\\
 		I range di accettazione per questa metrica sono:
 		\begin{itemize}
-			\item valori minori di 60% sono considerati negativi;
-			\item valori compresi tra 60% e 80% sono considerati accettabili;
-			\item valori maggiori di 80% sono considerati ottimali.
+			\item valori minori di 60\% sono considerati negativi;
+			\item valori compresi tra 60\% e 80\% sono considerati accettabili;
+			\item valori maggiori di 80\% sono considerati ottimali.
 		\end{itemize}
