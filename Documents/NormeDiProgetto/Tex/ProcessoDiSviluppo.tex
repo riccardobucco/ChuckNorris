@@ -12,6 +12,7 @@
 				\end{itemize}
 				\item i rischi ai quali essi sono soggetti.
 			\end{itemize}
+
 		\level{4}{Analisi dei Requisiti}
 			Durante l'\insdoc{Analisi dei Requisiti} vengono catalogati e descritti tutti i requisiti che il prodotto dovrà possedere. Tali requisiti sono ottenuti da una delle seguenti fonti (presentate in ordine decrescente di importanza):
 			\begin{enumerate}
@@ -21,51 +22,51 @@
 				\item valutazioni interne al gruppo di lavoro.
 			\end{enumerate}
 			Tali requisiti sono raccolti all'interno del documento \insdoc{Analisi dei Requisiti}. All'interno di tale documento è anche indicato un modo per verificare i requisiti in esso raccolti.
-	\level{3}{Norme}
-		\level{4}{Classificazione dei casi d'uso}
-			I casi d'uso vengono identificati univocamente da una sigla nella forma UCYX.
-			\begin{itemize}
-				\item Y può assumere tre valori: N, A o D. N rappresenta tutti i casi d'uso inerenti a Norris, A rappresenta quelli inerenti l'applicazione Android e D rappresenta quelli che riguardano la Dashboard.
-				\item X è un codice gerarchico numerico.
-			\end{itemize}
-			Sarà compito degli \insrole{analisti} identificare i casi d'uso e essi dovranno preoccuparsi di fornire un diagramma conforme allo standard UML per ogni caso d'uso non foglia. Qui di seguito sono riportate le informazioni da inserire nella parte testuale:
-			\begin{itemize}
-				\item titolo;
-				\item attori (principali e secondari);
-				\item precondizione;
-				\item postcondizione;
-				\item flusso principale degli eventi, dove si descrive il flusso dei casi d'uso figli; per ogni evento va specificato quanto segue:
-				\begin{itemize}
-					\item descrizione testuale;
-					\item attori coinvolti;
-					\item se l’evento è descritto nel dettaglio da un altro caso d’uso;
-				\end{itemize}
-				\item scenari alternativi; per ognuno di essi va specificato quanto segue:
-				\begin{itemize}
-					\item descrizione testuale;
-					\item attori coinvolti;
-					\item se lo scenario è descritto nel dettaglio da un altro caso d’uso.
-				\end{itemize}
-			\end{itemize}
-		\level{4}{Classificazione dei requisiti}
-			I requisiti dovranno essere classificati per tipo e importanza, utilizzando la seguente codifica: R[X][Y][Z].\\
-			La codifica appena presentata deve essere interpretata nel modo seguente:
-			\begin{enumerate}
-				\item X indica l'importanza strategica del requisito e può assumere uno dei seguenti valori:
-				\begin{itemize}
-					\item R: requisiti obbligatori (required);
-					\item D: requisiti desiderabili (desiderable);
-					\item O: requisiti opzionali (optional).
-				\end{itemize}
-				\item Y indica la tipologia del requisito e può assumere i seguenti valori:
-				\begin{itemize}
-					\item F: indica che si tratta di un requisito funzionale (functional);
-					\item P: indica che si tratta di un requisito prestazionale (performance);
-					\item Q: indica che si tratta di un requisito di qualità (quality);
-					\item C: indica che si tratta di un requisito di vincolo (constraint).
-				\end{itemize}
-				\item Z indica il codice gerarchico che identifica un requisito e dev'essere univoco.
-			\end{enumerate}
+			\level{5}{Norme}
+				\level{6}{Classificazione dei casi d'uso}
+					I casi d'uso vengono identificati univocamente da una sigla nella forma UCYX.
+					\begin{itemize}
+						\item Y può assumere tre valori: N, A o D. N rappresenta tutti i casi d'uso inerenti a Norris, A rappresenta quelli inerenti l'applicazione Android e D rappresenta quelli che riguardano la Dashboard.
+						\item X è un codice gerarchico numerico.
+					\end{itemize}
+					Sarà compito degli \insrole{analisti} identificare i casi d'uso e essi dovranno preoccuparsi di fornire un diagramma conforme allo standard UML per ogni caso d'uso non foglia. Qui di seguito sono riportate le informazioni da inserire nella parte testuale:
+					\begin{itemize}
+						\item titolo;
+						\item attori (principali e secondari);
+						\item precondizione;
+						\item postcondizione;
+						\item flusso principale degli eventi, dove si descrive il flusso dei casi d'uso figli; per ogni evento va specificato quanto segue:
+						\begin{itemize}
+							\item descrizione testuale;
+							\item attori coinvolti;
+							\item se l’evento è descritto nel dettaglio da un altro caso d’uso;
+						\end{itemize}
+						\item scenari alternativi; per ognuno di essi va specificato quanto segue:
+						\begin{itemize}
+							\item descrizione testuale;
+							\item attori coinvolti;
+							\item se lo scenario è descritto nel dettaglio da un altro caso d’uso.
+						\end{itemize}
+					\end{itemize}
+				\level{6}{Classificazione dei requisiti}
+					I requisiti dovranno essere classificati per tipo e importanza, utilizzando la seguente codifica: R[X][Y][Z].\\
+					La codifica appena presentata deve essere interpretata nel modo seguente:
+					\begin{enumerate}
+						\item X indica l'importanza strategica del requisito e può assumere uno dei seguenti valori:
+						\begin{itemize}
+							\item R: requisiti obbligatori (required);
+							\item D: requisiti desiderabili (desiderable);
+							\item O: requisiti opzionali (optional).
+						\end{itemize}
+						\item Y indica la tipologia del requisito e può assumere i seguenti valori:
+						\begin{itemize}
+							\item F: indica che si tratta di un requisito funzionale (functional);
+							\item P: indica che si tratta di un requisito prestazionale (performance);
+							\item Q: indica che si tratta di un requisito di qualità (quality);
+							\item C: indica che si tratta di un requisito di vincolo (constraint).
+						\end{itemize}
+						\item Z indica il codice gerarchico che identifica un requisito e dev'essere univoco.
+					\end{enumerate}
 	\level{3}{Strumenti}
 		\level{4}{Software per creazione di diagrammi UML}
 			Per la modellazione di diagrammi UML (ad esempio diagrammi per use case) sono stati presi in considerazione soprattutto tre editor: Dia, Microsoft Visio, Astah community. Infine i membri del gruppo \groupname{} ha optato per adottare Astah community in quanto si tratta di un software open source, con supporto di UML 2.x e secondo una veloce analisi del team si è notato che esso ha un interfaccia più responsiva ed intuitiva degli altri software.
