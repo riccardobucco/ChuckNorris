@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <terms>
+
+	<entry name="Activity">
+		Un'activity è un componente software che fornisce una schermata con cui gli utenti possono interagire al fine di fare qualcosa, come comporre il telefono, scattare una foto, inviare una mail, o visualizzare una mappa. Ad ogni activity è data una finestra in cui disegnare la sua interfaccia utente. La finestra tipicamente riempie lo schermo, ma può essere più piccolo dello schermo e galleggiare sopra altre finestre.
+	</entry>
 	
 	<entry name="Android">
 		È un sistema operativo open source per dispositivi mobili sviluppato da Google.
@@ -125,6 +129,10 @@
 	
 	<entry name="GanttProject">
 		GanttProject è software open source multipiattaforma, implementato in Java, per la gestione dei progetti. Fra le sue funzioni principali rientrano la creazione dei diagrammi di Gantt e di Pert per la schedulazione dei compiti nei progetti.
+	</entry>
+	
+	<entry name="Gesture">
+		Una gesture è un movimento effettuato dall'utente con lo scopo di interaggire con l'applicazione. Per esempio la gesture pinch ha tipicamente lo scopo di zoommare o dezoomare una schermata.
 	</entry>
 	
 	<entry name="Git">
