@@ -1,2 +1,43 @@
-\level{1}{Descrizione ad alto livello dei sistemi}
 \level{2}{Norris}
+
+	\begin{figure}[H]\centering
+        \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiNorris}
+        \caption{Diagramma delle componenti di Norris}
+    \end{figure}
+
+
+    \level{3}{Descrizione dei componenti di Norris}
+
+    	\level{4}{Internal API Manager}
+			La componente Internal API Manager rappresenta un controller per le API interne. Essa si occupa di gestire le funzionalità offerte dall'interfaccia delle API interne, ovvero:
+			\begin{itemize}
+				\item creare nuovi grafici;
+				\item aggiornare i grafici;
+				\item creare nuove pagine;
+				\item aggiungere i grafici alle pagine;
+				\item scegliere le impostazioni relative a grafici, pagine e istanza.
+			\end{itemize}
+
+
+		\level{4}{Data Model}
+			La componente Data Model è un modello che astrae un'istanza di Norris. Al suo interno vi sono contenute le informazioni relative a impostazioni, grafici, pagine e autenticazione.
+
+		\level{4}{External API Manager}
+			La componente External API Manager rappresenta un controller per le API esterne. Essa garantisce le funzionalità offerte dall'interfaccia delle API esterne, ovvero:
+			\begin{itemize}
+				\item ricevere la lista dei grafici;
+				\item ottenere un grafico con relativi aggiornamenti;
+				\item effettuare il login;
+				\item effettuare il logout.
+			\end{itemize}
+
+	\level{3}{Descrizione delle interazione tra le componenti}
+
+		\level{4}{Internal API Manager - Data Model}
+			Quando lo sviluppatore richiama una funzione definita dalle API interne, la componente Internal API Manager effettua le opportune operazioni di lettura/scrittura nel Data Model.
+
+		\level{4}{External API Manager - Data Model}
+			Per fornire le funzionalità descritte dalle API esterne, la componente External API Manager interroga il Data Model sullo stato attuale dell'istanza, richiedendo le informazioni in esso contenute.
+
+		\level{4}{Data Model - External API Manager}
+			Quando avviene una modifica nel Data Model, una notifica avvisa l'External API Manager di un avvenuto cambiamento nel modello dei dati.
