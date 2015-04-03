@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.11 Errore di visualizzazione</titolo>
+	<titolo>UCN1.11 Visualizzare errore raggiunto limite grafici inseribili in una pagina</titolo>
 	<attorip>Sviluppatore</attorip>
 	<descrizione>Quando lo sviluppatore aggiunge un grafico ad una pagina che ha già raggiunto il numero massimo di grafici il sistema segnala un errore.</descrizione>
-	<precondizione>L'attore ha aggiunto un grafico oltre al limite della pagina.</precondizione>
-	<postcondizione>È stato visualizzato un messaggio di errore.</postcondizione>
+	<precondizione>Si è cercato di aaggiungere un grafico ad una pagina per la quale è già stato raggiunto il limite di grafici.</precondizione>
+	<postcondizione>È stato visualizzato un messaggio di errore che informa che nella pagina in questione non è possibile inserire ulteriori grafici.</postcondizione>
 	<principale>
-		<item>Il sistema segnala un errore indicando che la pagina ha raggiunto il limite di grafici concessi.</item>
+		<item>Lo sviluppatore visualizza un errore che indica che la pagina ha raggiunto il limite di grafici permessi.</item>
 	</principale>
 </usecase>

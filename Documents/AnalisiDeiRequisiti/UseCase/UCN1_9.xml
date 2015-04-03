@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.9 Dati non corretti</titolo>
+	<titolo>UCN1.9 Visualizzare errore dati non corretti</titolo>
 	<attorip>Sviluppatore</attorip>
 	<descrizione>Quando lo sviluppatore inserisce dei dati non conformi il sistema segnala un errore.</descrizione>
-	<precondizione>L'attore ha inserito dei dati non corretti.</precondizione>
-	<postcondizione>È stato visualizzato un messaggio di errore.</postcondizione>
+	<precondizione>Si è cercato di utilizzare dei dati non corretti.</precondizione>
+	<postcondizione>È stato visualizzato un messaggio di errore che informa che si è cercato di utilizzare dei dati che non sono corretti.</postcondizione>
 	<principale>
-		<item>Il sistema segnala un errore indicando che i dati inseriti non sono corretti.</item>
+		<item>Lo sviluppatore visualizza un errore che indica che si è cercato di inserire dati non corretti.</item>
 	</principale>
 </usecase>

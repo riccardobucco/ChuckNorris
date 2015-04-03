@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN1.10 Aggiornamento non permesso</titolo>
+	<titolo>UCN1.10 Visualizzare errore tipologia di aggiornamento non valida</titolo>
 	<attorip>Sviluppatore</attorip>
 	<descrizione>Quando lo sviluppatore utilizza un aggiornamento non permesso su un certo tipo di grafico il sistema segnala un errore.</descrizione>
-	<precondizione>L'attore ha utilizzato un aggiornamento non permesso per il tipo di grafico.</precondizione>
-	<postcondizione>È stato visualizzato un messaggio di errore.</postcondizione>
+	<precondizione>Si è cercato di utilizzare una tipologia di aggiornamento non permessa per il tipo di grafico che si desidera modificare.</precondizione>
+	<postcondizione>È stato visualizzato un messaggio di errore che informa che la tipologia di aggiornamento scelta per modificare il grafico in questione non è valida.</postcondizione>
 	<principale>
-		<item>Il sistema segnala un errore indicando che il tipo di aggiornamento non è supportato per quel tipo di grafico.</item>
+		<item>Lo sviluppatore visualizzare un errore che indica che il tipo di aggiornamento non è supportato per il grafico in questione.</item>
 	</principale>
 </usecase>
