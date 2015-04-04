@@ -3,15 +3,15 @@
    
     \begin{figure}[H]\centering
         \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/AndroidAppComponentDiagramLevel0.png}
-        \caption{Diagramma dei componenti App Android}
+        \caption{Diagramma delle componenti App Android}
     \end{figure}
 
-    \level{3}{Descrizione dei componenti principali della app}
+    \level{3}{Descrizione delle componenti principali della app}
     	\begin{itemize}
             \item{Model:} 
-        		E' il componente in cui sono contenute la struttura del modello e tutte le sue informazioni. Questo componente quindi contiene tutti i tipi di chart implementati nel framework. Il componente permetterà solamente gli aggiornamenti consentiti dal modello chart utilizzato. Infine sarà possibile fare query sullo stato del modello.
+        		È il componente in cui sono contenute la struttura del modello e tutte le sue informazioni. Questo componente quindi contiene tutti i tipi di chart implementati nel framework. Il componente permetterà solamente gli aggiornamenti consentiti dal modello chart utilizzato. Infine sarà possibile fare query sullo stato del modello.
         	\item{View:}
-        		E' il componente che rappresenta le varie UI dell'applicazione e i vari widget dei grafici da inserire nelle UI. In tale componente potrebbero esser sollevati degli eventi scatenati dall'utente.
+        		È il componente che rappresenta le varie UI dell'applicazione e i vari widget dei grafici da inserire nelle UI. In tale componente potrebbero esser sollevati degli eventi scatenati dall'utente.
         	\item{Controller:}
         		Questo componente ha il compito di gestire tutto il controllo dell'applicazione. Le operazioni che esso gestisce sono riassunte nel seguente elenco:
         		\begin{itemize}
@@ -37,7 +37,7 @@
 	    	\item{User Gesture:}
 	    		La freccia etichettata con il termine "User Gesture" rappresenta l'evento scatenato dall'utente attraverso una gesture. Questo evento scatena nel controller la reazione lasciando ad esso il totale controllo su ciò che accade. Tale interazione si verifica per esempio quando l'utente seleziona un item della lista dei grafici presenti nell'istanza di Norris richiesta.
 	    	\item{API Request:}
-	    		L'applicazione Android dove interagire con il server dove è presente l'istanza Norris richiesta. Questa freccia rappresenta infatti le richieste delle API esterne di Norris da parte dell'applicazione (o più correttamente da parte del Controller) che ritorneranno un pacchetto con le informazioni richieste. Un esempio di tale richiesta è la richiesta dell'elenco dei grafici presenti nell'istanza di Norris. Per sapere quali sono le possibili API esterne fare riferimento al documento \insdoc{Analisi dei Requisiti}.
+	    		L'applicazione Android dove interagire con il server dove è presente l'istanza Norris richiesta. Questa freccia rappresenta infatti le richieste delle API esterne di Norris da parte dell'applicazione (o più correttamente da parte del Controller) che ritorneranno un pacchetto con le informazioni richieste. Un esempio di tale richiesta è la richiesta dell'elenco dei grafici presenti nell'istanza di Norris. Per sapere quali sono le possibili API esterne fare riferimento al documento \insdoc{Analisi dei Requisiti v.X.xx}.
 	    	\item{Update Notification:}
 	    		Tale interazione rappresenta lo scatenarsi dell'evento di aggiornamento di un chart da parte del Server. Ogni aggiornamento infatti viene preso in carico dal Controller. Si verifica per esempio quando nel modello dati in Norris viene aggiunto un valore in un grafico.
 	    	\item{State Change:}
