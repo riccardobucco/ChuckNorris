@@ -8,7 +8,8 @@
 
     \level{3}{Descrizione delle componenti principali della app}
     	\level{4}{Model} 
-        Il Model è il componente in cui sono contenute la struttura dei grafici e tutte le  informazioni inerenti ad essi, ovvero dati e impostazioni. In particolare contiene il modello di tutti i tipi di chart implementati nel framework. Questo componente permetterà solamente gli aggiornamenti consentiti dal modello chart utilizzato. Infine sarà possibile fare query sullo stato del modello.
+        Il Model è la componente che rappresenta l'astrazione dei grafici visualizzati nell'applicazione. In essa sono contenuti i dati riguardanti i grafici, assieme alle relative impostazioni. In particolare sono presenti i modelli di tutte le tipologie di chart implementati da Norris. Il Data Model fornisce per ciascuna tipologia di grafico i metodi per inserire i dati e configurare alcune impostazioni. 
+    
        \level{4}{View}
         La View è il componente che rappresenta le varie UI dell'applicazione e i vari widget dei grafici da inserire nelle UI. In tale componente potrebbero esser sollevati degli eventi scatenati dall'utente.
        \level{4}{Controller}
