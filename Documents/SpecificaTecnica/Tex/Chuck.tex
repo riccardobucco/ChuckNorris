@@ -24,13 +24,13 @@
 	\level{3}{Descrizione delle interazione tra le componenti}
 	
 		\level{4}{Chuck API Manager - Data Model}
-		Quando il Web Developer utilizza un API di Chuck oppure quando arriva un messaggio da Norris, la componente apporta le opportune modifiche al Data Model, in modo che rispetti costantemente lo stato dei grafici da visualizzare.
+		Quando il Web Developer utilizza le API di Chuck oppure quando arriva un messaggio da Norris, Chuck API Manager apporta le opportune modifiche al Data Model, in modo che quest'ultimo rispecchi costantemente lo stato dei grafici da visualizzare.
 
 		\level{4}{Chart View - Data Model}
-		Quando la Chart View deve aggiornare la visualizzazione del grafico, effettua un query sul Data Model per ottenere le nuove informazioni relative al grafico da aggiornare.
+		Quando la Chart View deve aggiornare la visualizzazione del grafico, essa effettua una query sul Data Model per ottenere le nuove informazioni relative al grafico da aggiornare.
 
 		\level{4}{Data Model - Chart View}
-		Quando avviene una modifica nel Data Model, una notifica avvisa la Chart View dell'avvenuto cambiamento.
+		Quando avviene una modifica nel Data Model, una notifica avvisa la Chart View dell'avvenuto cambiamento. In particolare ciò accade quando è stato inserito un nuovo grafico o quando è arrivato l'aggiornamento di un grafico già presente.
 
 		\level{4}{Chart View - Controller}
 		Quando la Chart View riceve un input dall'utente, una notifica avvisa il Controller in modo che intraprenda l'azione per gestirla.
@@ -38,4 +38,4 @@
 		\level{4}{Controller - Chart View}
 		In caso di necessità il controller può selezionare la Chart View da visualizzare.
 		\level{4}{Controller - Data Model}
-		Quando intraprende un'azione, il controller può effettuare delle modifiche nel Data Model.
+		Quando intraprende un'azione, il controller può effettuare delle modifiche nel Data Model. In particolare ciò accade quando si deve inserire un nuovo grafico o quando arriva l'aggiornamento di un grafico già presente.
