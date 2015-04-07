@@ -7,23 +7,22 @@
     \end{figure}
 
     \level{3}{Descrizione delle componenti principali della app}
-    	\begin{itemize}
-            \item{Model:} 
-        		È il componente in cui sono contenute la struttura del modello e tutte le sue informazioni. Questo componente quindi contiene tutti i tipi di chart implementati nel framework. Il componente permetterà solamente gli aggiornamenti consentiti dal modello chart utilizzato. Infine sarà possibile fare query sullo stato del modello.
-        	\item{View:}
-        		È il componente che rappresenta le varie UI dell'applicazione e i vari widget dei grafici da inserire nelle UI. In tale componente potrebbero esser sollevati degli eventi scatenati dall'utente.
-        	\item{Controller:}
-        		Questo componente ha il compito di gestire tutto il controllo dell'applicazione. Le operazioni che esso gestisce sono riassunte nel seguente elenco:
-        		\begin{itemize}
-        			\item crea il modello qualora questo sia necessario;
-        			\item utilizza le API esterne di Norris;
-        			\item interpreta i pacchetti ricevuti dal server contenenti i dati delle richieste API;
-        			\item si mette in ascolto sul canale socket per ricevere gli aggiornamenti di stato dei chart;
-        			\item interpreta i pacchetti di aggiornamento;
-        			\item chiede al modello di aggiornare il suo stato;
-        			\item richiede la creazione dei widget grafico da inserire nelle UI dell'applicazioe;
-        			\item avvia le varie activity dell'applicazione;
-        			\item gestisce una gesture dell'utente.
+    	\level{4}{Model} 
+        Il Model è il componente in cui sono contenute la struttura dei grafici e tutte le  informazioni inerenti ad essi, ovvero dati e impostazioni. In particolare contiene il modello di tutti i tipi di chart implementati nel framework. Questo componente permetterà solamente gli aggiornamenti consentiti dal modello chart utilizzato. Infine sarà possibile fare query sullo stato del modello.
+       \level{4}{View}
+        La View è il componente che rappresenta le varie UI dell'applicazione e i vari widget dei grafici da inserire nelle UI. In tale componente potrebbero esser sollevati degli eventi scatenati dall'utente.
+       \level{4}{Controller}
+        Questo componente ha il compito di gestire tutto il controllo dell'applicazione. Le operazioni che esso gestisce sono riassunte nel seguente elenco:
+        	\begin{itemize}
+        		\item crea il modello qualora questo sia necessario;
+        		\item utilizza le API esterne di Norris;
+        		\item interpreta i pacchetti ricevuti dal server contenenti i dati delle richieste API;
+        		\item si mette in ascolto sul canale socket per ricevere gli aggiornamenti di stato dei chart;
+        		\item interpreta i pacchetti di aggiornamento;
+        		\item chiede al modello di aggiornare il suo stato;
+        		\item richiede la creazione dei widget dei grafici da inserire nelle UI dell'applicazioe;
+        		\item avvia le varie activity dell'applicazione;
+        		\item gestisce le gesture dell'utente.
         		\end{itemize}
         \end{itemize}
     \level{2}{Descrizione delle interazioni che i componenti dell'app hanno tra di loro}
