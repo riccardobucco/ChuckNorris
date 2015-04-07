@@ -9,7 +9,7 @@
     \level{3}{Descrizione dei componenti di Norris}
 
     	\level{4}{Internal API Manager}
-			La componente Internal API Manager rappresenta un controller per le API interne. Essa si occupa di gestire le funzionalità offerte dall'interfaccia delle API interne, ovvero:
+			La componente Internal API Manager rappresenta un controller per le API interne. Essa si occupa di implementare le funzionalità offerte dall'interfaccia delle API interne, ovvero:
 			\begin{itemize}
 				\item creare un'istanza di Norris;
 				\item creare nuovi grafici;
@@ -18,21 +18,23 @@
 				\item aggiungere i grafici all'istanza di Norris;
 				\item aggiungere le pagine all'istanza di Norris;
 				\item aggiungere i grafici alle pagine;
-				\item scegliere le impostazioni relative a grafici, pagine e istanza.
+				\item scegliere le impostazioni relative a grafici, pagine e istanza;
+				\item permette la definizione di funzioni per l'autenticazione.
 			\end{itemize}
-
+		Questa componente si occupa, inoltre, di generare in automatico le pagine create all'interno di un'istanza di Norris.
 
 		\level{4}{Data Model}
-			La componente Data Model è un modello che astrae un'istanza di Norris. Al suo interno vi sono le informazioni relative alla struttura di grafici e pagine, assieme alle rispettive impostazioni. Inoltre vengono memorizzate le informazioni inerenti l'autenticazione.
+			La componente Data Model è un modello che astrae un'istanza di Norris. Al suo interno vi sono le informazioni relative alla struttura di grafici e pagine, assieme alle rispettive impostazioni. Inoltre vengono fissate le regole con le quali grafici e pagine vengono composti assieme per formare un'istanza di Norris. Infine, è qui che vengono memorizzate le informazioni inerenti l'autenticazione.
 
 		\level{4}{External API Manager}
-			La componente External API Manager rappresenta un controller per le API esterne. Essa garantisce le funzionalità offerte dall'interfaccia delle API esterne, ovvero:
+			La componente External API Manager rappresenta un controller per le API esterne. Essa implementa le funzionalità offerte dall'interfaccia delle API esterne, ovvero:
 			\begin{itemize}
-				\item ricevere la lista dei grafici;
+				\item ottenere la lista dei grafici;
 				\item ottenere un grafico con relativi aggiornamenti;
 				\item effettuare il login;
 				\item effettuare il logout.
 			\end{itemize}
+		Questa componente si occupa, inoltre, di gestire la comunicazione con il server web. Gestisce quindi sia le richieste HTTP, sia la comunicazione tramile un canale websocket.
 
 	\level{3}{Descrizione delle interazione tra le componenti}
 
