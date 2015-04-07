@@ -1,8 +1,7 @@
 \level{2}{Processo di verifica}
-	\level{3}{Attività}
-		\level{4}{Verifica dei documenti}			
-			\level{5}{Norme}
-				\level{6}{Verifica dei documenti}
+		\level{3}{Verifica dei documenti}			
+			\level{4}{Norme}
+				\level{5}{Verifica dei documenti}
 					Dare inizio all'attività di verifica di un documento è compito del \insrole{Responsabile di Progetto}: esso assegna il compito a uno o più \insrole{Verificatori}. Questi, con l'aiuto del diario delle modifiche, focalizzano la loro attenzione sulle sezioni del documento che sono state modificate.\\
 Per eseguire una verifica quanto più accurata e completa possibile è necessario controllare che sia stato rispettato quanto segue:
 					\begin{enumerate}
@@ -13,26 +12,26 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 						\item proprietà di glossario.
 					\end{enumerate}
 					Durante l'esecuzione dell'intera procedura di verifica dei documenti è importante che i \insrole{Verificatori} tengano traccia di tutti gli errori più comuni.\\ Questo può essere fatto seguendo la procedura descritta presente nella sezione \nameref{sec:tracciamento}.
-					\level{7}{Sintassi}
-						I \insrole{Verificatori} devono preoccuparsi di individuare gli errori sintattici all'interno dei testi del documento. Tale compito può essere in parte attuato tramite strumenti automatici (vedi sezione \nameref{sec:strumentiverifica} del presente documento). È tuttavia necessario che un documento sia sempre sottoposto a \textit{walkthrough}, in quanto gli strumenti automatici non sono in grado di individuare parole corrette che sono utilizzate al di fuori del loro contesto.\\ Inoltre, i \insrole{Verificatori} devono cercare tutte quelle parole che sono poco frequenti o comunque complesse (possono generare fraintendimenti o incomprensioni): va applicata la tecnica del \textit{walkthrough}.
-					\level{7}{Periodi lunghi}
-						I \insrole{Verificatori} devono calcolare l'indice Gulpease del documento (utilizzando l'apposito strumento automatico, vedi sezione \nameref{sec:strumentiverifica} del presente documento). Qualora si ottenga un risultato inferiore alle aspettative si deve applicare il \textit{walkthrough} all'interno del documento: l'obiettivo deve essere quello di individuare frasi troppo lunghe (e che dunque possono essere di difficile comprensione e/o scarsa leggibilità).
-					\level{7}{Struttura del documento}
-						I \insrole{Verificatori} controllano con l'ausilio di strumenti automatici (vedi sezione \nameref{sec:strumentiverifica} del presente documento) che la struttura del documento rispetti quanto descritto nel presente documento.
-					\level{7}{Norme tipografiche}
-						Nel presente documento sono state definite delle norme tipografiche di carattere generale. Molte di esse sono verificabili tramite strumenti automatici (vedi sezione \nameref{sec:strumentiverifica} del presente documento). Per le restanti è necessario che i \insrole{Verificatori} applichino una fra le tecniche di inspection e \textit{walkthrough}	(si preferisce la prima nel momento in cui tramite la lista di controllo si riesce a trovare la grande maggioranza degli errori).
-					\level{7}{Proprietà di glossario}
-						È necessario che tutte le parole presenti all'interno del \insdoc{Glossario} siano marcate appropriatamente (come descritto nel presente documento). Ciò viene fatto con l'ausilio di strumenti automatici (vedi sezione \nameref{sec:strumentiverifica} del presente documento). Inoltre, è compito dei \insrole{Verificatori} trovare tutti quei termini che dovrebbero essere inclusi nel \insdoc{Glossario} ma che ancora non lo sono. Per tale compito si deve utilizzare \textit{walthrough} delle sezioni che sono state soggette a modifica prima dell'ultima verifica.
+					\level{6}{Sintassi}
+						I \insrole{Verificatori} devono preoccuparsi di individuare gli errori sintattici all'interno dei testi del documento. Tale compito può essere in parte attuato tramite strumenti automatici, indicati al paragrafo Strumenti. È tuttavia necessario che un documento sia sempre sottoposto a \textit{walkthrough}, in quanto gli strumenti automatici non sono in grado di individuare parole corrette che sono utilizzate al di fuori del loro contesto.\\ Inoltre, i \insrole{Verificatori} devono cercare tutte quelle parole che sono poco frequenti o comunque complesse (possono generare fraintendimenti o incomprensioni): va applicata la tecnica del \textit{walkthrough}.
+					\level{6}{Periodi lunghi}
+						I \insrole{Verificatori} devono calcolare l'indice Gulpease del documento (utilizzando l'apposito strumento automatico, vedi appendice \nameref{app:strumenti} del presente documento). Qualora si ottenga un risultato inferiore alle aspettative si deve applicare il \textit{walkthrough} all'interno del documento: l'obiettivo deve essere quello di individuare frasi troppo lunghe (e che dunque possono essere di difficile comprensione e/o scarsa leggibilità).
+					\level{6}{Struttura del documento}
+						I \insrole{Verificatori} controllano con l'ausilio di strumenti automatici (vedi sezione \nameref{app:strumenti} del presente documento) che la struttura del documento rispetti quanto descritto in questo documento.
+					\level{6}{Norme tipografiche}
+						Nel presente documento sono state definite delle norme tipografiche di carattere generale. Molte di esse sono verificabili tramite strumenti automatici (vedi sezione \nameref{app:strumenti} del presente documento). Per le restanti è necessario che i \insrole{Verificatori} applichino una fra le tecniche di inspection e \textit{walkthrough}	(si preferisce la prima nel momento in cui tramite la lista di controllo si riesce a trovare la grande maggioranza degli errori).
+					\level{6}{Proprietà di glossario}
+						È necessario che tutte le parole presenti all'interno del \insdoc{Glossario} siano marcate appropriatamente (come descritto nel presente documento). Ciò viene fatto con l'ausilio di strumenti automatici (vedi sezione \nameref{app:strumenti} del presente documento). Inoltre, è compito dei \insrole{Verificatori} trovare tutti quei termini che dovrebbero essere inclusi nel \insdoc{Glossario} ma che ancora non lo sono. Per tale compito si deve utilizzare \textit{walthrough} delle sezioni che sono state soggette a modifica prima dell'ultima verifica.
 
-\level{5}{Procedure}
-		\level{6}{Verifica dei diagrammi UML}
+\level{4}{Procedure}
+		\level{5}{Verifica dei diagrammi UML}
 			I \insrole{Verificatori} hanno il compito di controllare tutti i diagrammi UML che sono stati prodotti. I diagrammi utilizzati fino a questo momento 
 			sono i seguenti:
 			\begin{itemize}
 				\item diagrammi dei casi d'uso;
 				\item diagrammi di attività.
 			\end{itemize}
-			\level{7}{Diagrammi dei casi d'uso}
+			\level{6}{Diagrammi dei casi d'uso}
 				Le verifiche che devono essere effettuate riguardano sostanzialmente i casi d'uso e gli attori.\\
 				Innanzitutto si deve controllare se un attore è davvero tale. Per fare questo può essere utile porsi domande descritte in seguito.
 				\begin{enumerate}
@@ -51,18 +50,20 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 					\item estensioni
 				\end{itemize}
 				Infine, assicurarsi che i casi d'uso descrivano cosa il sistema fa e non cosa non fa.
-			\level{7}{Diagrammi di attività}
+			\level{6}{Diagrammi di attività}
 				I diagrammi delle attività allo stato attuale delle cose sono stati usati esclusivamente per creare figure facilmente comprensibili che illustrino le procedure contenute nel presente documento. È dunque necessario verificare unicamente che tali diagrammi siano conformi allo standard UML.		
+	
+	\level{4}{Strumenti}
+	Per l'attività di verifica dei documenti sono stati utilizzati degli appositi script sviluppati dagli amministratori e descritti nell'appendice \nameref{app:strumenti}.
 
-
-\level{4}{Analisi}
+\level{3}{Analisi}
 			Per poter determinare il livello di qualità del prodotto il team di sviluppo utilizza diversi tipi di tecniche di analisi dei dati.\\
 			Queste possono essere suddivise in due grandi categorie:
 			\begin{itemize}
 				\item analisi statica;
 				\item analisi dinamica.
 			\end{itemize}
-			\level{5}{Analisi statica}
+			\level{4}{Analisi statica}
 				L'analisi statica è una forma di valutazione di un sistema o di un suo componente basato sulla sua forma, struttura, contenuto, documentazione senza che esso sia eseguito. Tali tecniche, dunque, sono applicabili tanto al codice quanto alla documentazione.
 				Verranno usate le seguenti tecniche di analisi statica:
 				\begin{description}
@@ -70,15 +71,15 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 					\item[inspection] Tale tecnica viene utilizzata quando si ha un'idea di cosa si sta cercando e di cosa si potrebbe trovare. Essa consiste in una lettura mirata del documento/codice, sulla base di una lista degli errori comuni stilata in precedenza.
 				\end{description}
 				Applicare in modo fruttuoso la tecnica del walkthrough è molto oneroso e dispendioso. Tuttavia, quando non si possiede una lista degli	errori comuni (per esempio a inizio progetto), essa è l'unica soluzione. L'obiettivo è quello di formare una lista quanto più completa possibile di errori comuni in modo tale che possa essere eseguita quasi sempre la tecnica dell'inspection.
-			\level{5}{Analisi dinamica}
+			\level{4}{Analisi dinamica}
 				L'analisi dinamica è una forma di valutazione di un sistema software o di un suo componente basato sulla osservazione del suo comportamento in esecuzione. Tali tecniche, dunque, sono applicabili solo a componenti software e vengono svolte tramite l'esecuzione di test su essi.\\
 				Deve essere preoccupazione di chi scrive i test fare in modo che essi siano di grande valore dimostrativo, in quanto il numero di test che devono essere effettuati è per forza di cose in numero finito e relativamente piccolo.
 		
-		\level{4}{Issue tracking}
+		\level{3}{Issue tracking}
 			L'issue tracking è un attività di supporto dei \insrole{Verificatori}. Essa permettere non solo di tracciare tutti i potenziali difetti dalla comparsa fino alla risoluzione, ma consente al \insrole{Responsabile di Progetto} di assegnare i compiti di correzione ai singoli membri del team.
-			\level{5}{Norme}
-				\level{6}{Sintassi delle label}
-				Una lable è una etichetta che viene applicata ad una issue utilizzando il servizio fornito da GitHub (consultare la sezione \nameref{sec:strumentiverifica} del presente documento) permettendo così di categorizzare e filtrare le varie issues.\\
+			\level{4}{Norme}
+				\level{5}{Sintassi delle label}
+				Una lable è una etichetta che viene applicata ad una issue utilizzando il servizio fornito da GitHub (consultare la sezione \nameref{sec:strumenti} del presente documento) permettendo così di categorizzare e filtrare le varie issues.\\
 				Esistono 3 tipologie di ettichetta:
 				\begin{itemize}
 				    \item Di \textbf{attività}: ovvero quale attività l'ha generata. Le ettichette permesse sono quindi: \inslabel{Verifica}
@@ -93,9 +94,9 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				    \item \inslabel{Done} identifica una issue completata.
 				\end{itemize}
 				\end{itemize}
-			\level{5}{Procedure}
-				\level{6}{Gestione di un'anomalia}
-				Ogni qualvolta un \insrole{Verificatore} trova un anomalia deve segnalarla tramite il meccanismo di sollevamento issue fornito da Github (consultare la sezione \nameref{sec:strumentiverifica} del presente documento). L'intera procedura da attivare nel momento in cui viene individuata un'anomalia prevede i seguenti passi:
+			\level{4}{Procedure}
+				\level{5}{Gestione di un'anomalia}
+				Ogni qualvolta un \insrole{Verificatore} trova un anomalia deve segnalarla tramite il meccanismo di sollevamento issue fornito da Github (consultare la sezione \nameref{app:strumenti} del presente documento). L'intera procedura da attivare nel momento in cui viene individuata un'anomalia prevede i seguenti passi:
 				\begin{enumerate}
 				    \item il \insrole{Verificatore} crea una nuova issue su Github riguardante l'anomalia rinvenuta (seguendo la sintassi indicata nella sezione \nameref{sec:sintassiissue}) ed aggiunge come ettichette \inslabel{Verifica}, quella relativa al documento/i interessato/i ed infine l'ettichetta di stato \inslabel{Request}.
 				    \item il \insrole{Project Manager} valuterà la richiesta e se decide che la modifica è inutile o dannosa procederà cambiando l'ettichetta da \inslabel{Request} a \inslabel{Rejected} e chiudendo la issue terminando così la procedura;
@@ -105,24 +106,13 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				    \item il componente scelto dal gruppo avrà il compito di modificare l'ettichetta cambiandola da \inslabel{ToDo} ad \inslabel{InProgress} prendendo quindi in carico il ticket di lavoro;
 				    \item effettuata la modifica, verrà inserito sul repository il risultato e verrà modificata la issue da \inslabel{InProgress} a \inslabel{Done} e verrà dunque verrà chiusa la issue.
 			\end{enumerate}
-				\level{7}{Tracciamento degli errori più comuni nei documenti}\label{sec:tracciamento}
+				\level{6}{Tracciamento degli errori più comuni nei documenti}\label{sec:tracciamento}
 					È stata predisposta nell'applicativo Tracker una scheda con la possibilità di vedere e gestire la lista di controllo. Durante la procedura il \insrole{Verificatore} andrà ad incrementare il counter della voce relativa all'errore trovato, contribuendo a creare una statistica degli errori. Ci sarà quindi la possibilità per il \insrole{Responsabile di Progetto} di studiare l'andamento di questi ultimi e agire di conseguenza nel segnalare ai componenti del team eventuali situazioni particolarmente frequenti da evitare mentre si incrementano i documenti.\\ Il tracciamento costruito appositamente permetterà sia di applicare in modo fruttuoso la tecnica dell'\textit{inspection} grazie alla lista di controllo, sia di migliorare la prevenzione sistematica degli errori più critici in fase di creazione dei documenti di progetto.
 					\begin{figure}[H]
 							\centering
 							\includegraphics[width=0.6\textwidth]{NormeDiProgetto/Pics/ProceduraDecrementoErrori}
 							\caption{Procedura per tracciamento errori comuni}
 					\end{figure}
-
-
-	\level{3}{Strumenti}\label{sec:strumentiverifica}
-		\level{4}{Script di verifica}
-			In questa sezione vengono descritti gli aspetti essenziali degli strumenti che i \insrole{Verificatori} hanno a disposizione.
-			\begin{description}
-				\item[OrtographicCheck] Questo script sfrutta il software GNU Aspell per eseguire il controllo ortografico di un documento.
-				\item[Gulpease] Questo script estrae il testo da un documento e ne calcola l'indice di leggibilità Gulpease.
-				\item[NonBreakingSpaceCheck] Questo script controlla che un numero formattato secondo lo standard [SI/ISO 31-0] utilizzi lo spazio unificatore e non quello normale (errore in cui è facile incorrere).
-			\end{description}
-
-		\level{4}{Github issue tracking}
+		\level{4}{Strumenti}
 			Per la gestione delle issue è stato deciso di appoggiarsi al servizio di issue tracking offerto da GitHub, come suggerito nel capitolato, in modo da unificare gestione delle issue e versionamento. \\
 			Viene poi utilizzato un servizio fornito da \textit{Tracker}, ovvero un'applicazione web creata dal \groupname, per permettere al \insrole{Project Manager} di avere una visione statistica degli errori effettuati dal team.

@@ -1,11 +1,10 @@
 \level{2}{Processo di configurazione}
-	\level{3}{Attività}
-		\level{4}{Norme}
-			\level{5}{Controllo di versione}
+	\level{3}{Norme}
+			\level{4}{Controllo di versione}
 				Il controllo sul versionamento dei documenti e, nelle successive fasi del progetto, dei codice sorgente avviene attraverso lo strumento fornito dalla piattaforma GitHub.\\
 				Ogni volta che viene eseguita una modifica sostanziale deve essere assegnato un nuovo numero di versione.\\
 				Per quanto riguarda le norme riguardanti il versionamento della documentazione si rimanda alla sezione \hyperref[sec:versioni]{Versionamento dei documenti} del presente documento.
-				\level{5}{Struttura di una richiesta di modifica}
+				\level{4}{Struttura di una richiesta di modifica}
 					Ogni richiesta di modifica è costituita dai seguenti campi:
 					\begin{enumerate}
 						\item autore: contiene nome e cognome di colui che richiede la modifica;
@@ -25,7 +24,7 @@
 							\end{enumerate}
 					\end{enumerate}
 		
-				\level{5}{Struttura del repository}
+				\level{4}{Struttura del repository}
 					I file all’interno del repository sono organizzati secondo la seguente struttura:
 					\begin{itemize}
 						\item /Documents
@@ -43,7 +42,7 @@
 					\end{itemize}
 					La struttura di /Source viene definita prima della progettazione architetturale.
 
-				\level{5}{Nomi dei file}
+				\level{4}{Nomi dei file}
 					I nomi dei file all’interno del repository sono soggetti alle seguenti norme:
 					\begin{itemize}
 						\item devono contenere solamente lettere, numeri, il carattere underscore U+005F, il segno meno U+2212 e il punto U+002E;
@@ -58,19 +57,19 @@
 						\item di utilizzare nomi con una lunghezza compresa tra i 5 e i 25 caratteri;
 						\item di specificare sempre l’estensione quando possibile.
 					\end{itemize}
-				\level{5}{Commit}
+				\level{4}{Commit}
 					L'esecuzione di un comando di commit implica il rispetto delle seguenti norme:
 					\begin{itemize}
 						\item quando si effettua un commit è necessario specificare nel messaggio una descrizione sintetica e non ambigua delle modifiche apportate;
 						\item le modifiche apportate con un commit devono essere complete e testate con successo;
 						\item le modifiche apportate con un commit devono essere logicamente correlate tra di loro.
 					\end{itemize}
-				\level{5}{Codifica dei file}
+				\level{4}{Codifica dei file}
 					Tutti i file contenenti codice o documentazione dovranno utilizzare la codifica UTF-8 senza BOM.\\
 					Il terminatore di linea è il carattere Line Feed, rappresentato dal carattere Unicode U+000A.
 		
-		\level{4}{Procedure}
-			\level{5}{Richiesta di modifica}
+		\level{3}{Procedure}
+			\level{4}{Richiesta di modifica}
 				Ogni richiesta di modifica va inoltrata in modo formale al \insrole{Responsabile di Progetto}, affinché venga sottoposta ad un rigoroso processo di analisi. Dopodiché il \insrole{Responsabile di Progetto} decide se approvarla o meno. Nel primo caso assegna la realizzazione della modifica ad un membro del gruppo. 
 				La procedura viene formalizzata nel seguente diagramma delle attività:
 				\begin{figure}[H]
@@ -79,7 +78,7 @@
 					\caption{Procedura di richiesta di modifica}
 				\end{figure}
 			
-			\level{5}{Aggiornamento del repository}
+			\level{4}{Aggiornamento del repository}
 					Per aggiornare il repository è nesessario seguire correttamente la seguente procedura:
 					\begin{enumerate}
 						\item si esegue il comando git pull per aggiornare il repository locale alla commit più recente;
@@ -100,8 +99,5 @@
 					\end{figure}
 	\level{3}{Strumenti}
 			Per agevolare lo svolgimento del progetto da parte di tutti i membri del team di sviluppo è stata predisposta una macchina virtuale contenente tutti gli strumenti software necessari, individuati fino al momento della stesura dell'ultima versione attuale del presente documento.
-		\level{4}{Repository}\label{sec:SceltaRepository}
-				Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git. Questa scelta è stata presa in considerazione del fatto che questa piattaforma permette, oltre al servizio di repository, il controllo di versione e la gestione di anomalie. \\
-				GitHub è anche stato suggerito dal proponente del capitolato, in quanto permette un'interazione agevolata con Heroku, altro strumento consigliato per lo svolgimento del progetto. 
-			\level{5}{Visibilità del repository}
-					Per la condivisione e il versionamento dei \textit{configuration item} è stato creato un repository privato su GitHub, raggiungibile all’indirizzo \insuri{https://github.com/marcorubin/kaizen-team}. L’accesso è consentito solamente agli utenti approvati dal \insrole{Project Manager}.
+			Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git, mentre per la condivisione e il versionamento dei \textit{configuration item} è stato creato un repository privato su GitHub.
+			L'utilizzo dei sistemi Git e GitHub è descritto nell'appendice \nameref{app:strumenti}.

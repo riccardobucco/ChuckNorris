@@ -74,3 +74,65 @@
 				\item per la classificazione dei recuisiti è stata utilizzata un'applicazione web creata dagli \insrole{Amministratori}.
 			\end{itemize}
 			Il software Astah è descritto nell'appendice \nameref{app:strumenti}, mentre l'applicazione per la classificzione dei requisiti è descritta nella sezione \nameref{sec:tracker}.
+			
+	\level{3}{Progettazione}
+Scopo dell'attività di progettazione è produrre una soluzione soddisfacente per tutti i soggetti coinvolti nel progetto, una volta compreso esattamente quali sono i requisiti del problema. \\
+Approfondendo la progettazione del prodotto fino ad arrivare a moduli abbastanza semplici da essere capiti da una sola persona, si otterranno le istruzioni necessarie ai \insrole{Programmatori} per ottenere il prodotto finito.
+			
+\level{4}{Progettazione architetturale}
+La progettazione ad alto livello dell'architettura e dei singoli componenti del framework \projectname{} viene descritta dai \insrole{Progettisti} nel documento \insdoc{Specifica Tecnica v1.00}, avendo cura di rispettare i seguenti aspetti.
+\level{5}{Norme}
+\level{6}{Design Pattern}
+Al fine di consentire una migliore comprensibilità del documento, nonchè delle scelte progettuali e della progettazione stessa, i \insrole{Progettisti} dovranno indicare i pattern architetturali impiegati, fornendo per ciascuno di essi:
+\begin{itemize}
+\item una descrizione testuale e grafica;
+\item la motivazione che ha portato alla sua scelta;
+\item una breve descrizione dell'applicazione del pattern al progetto.
+\end{itemize}
+\level{6}{Diagrammi UML}
+Per formalizzare ed esplicitare alcuni aspetti specifici del sistema è necessario utilizzare i seguenti diagrammi UML:
+\begin{itemize}
+\item Diagrammi dei package, per rappresentare l'aspetto generale del sistema.
+\item Diagrammi delle classi, per rappresentare le componenti fondamentali dell'architettura.
+\item Diagrammi delle attività, per rappresentare il flusso delle operazioni e dei componenti del sistema, qualora la sola descrizione testuale risulti complessa.
+\item Diagrammi di sequenza, per rappresentare le interazioni tra le componenti del sistema, qualora la sola descrizione testuale risulti complessa.
+\end{itemize}
+Tali diagrammi dovranno seguire le indicazioni fornite nella sezione \nameref{sec:UML}.
+				
+\level{6}{Tracciamento delle componenti}
+Per garantire la qualità del prodotto è fondamentale che ogni requisito sia soddisfatto da uno e un solo componente. Tale tracciamento viene generato automaticamente dall'applicazione per la gestione dei requisiti sotto forma di tabelle.
+\level{6}{Test di integrazione}
+I \insrole{Progettisti} devono definire delle classi di verifica per verificare che il funzionamento dei componenti sia quello previsto.
+\level{5}{Strumenti}
+Per la progettazione architetturale sono stati utilizzati i seguenti strumenti:
+\begin{itemize}
+\item per la creazione dei diagrammi UML è stato utilizzato Astah;
+\item per il tracciamento delle componenti è stata utilizzata l'applicazione web sviluppata dagli \insrole{Amministratori}.
+\end{itemize}
+Il software Astah è descritto in modo dettagliato nell'appendice \nameref{app:strumenti}, metre l'applicazione web per il tracciamento viene descritta nell'appendice \nameref{sec:tracker}.
+
+
+\level{4}{Progettazione di dettaglio}
+La progettazione di dettaglio dei singoli componenti del framework \projectname{} viene descritta dai \insrole{Progettisti} nel documento \insdoc{Definizione di Prodotto v1.00}, avendo cura di rispettare i seguenti aspetti.
+\level{5}{Norme}
+\level{6}{Diagrammi UML}
+Durante questa progettazione devono essere aggiornati con l'aggiunta di dettagli i seguenti diagrammi:
+\begin{itemize}
+\item diagrammi delle classi;
+\item diagrammi di sequenza;
+\item diagrammi delle attività.
+\end{itemize}
+Tali diagrammi dovranno seguire le indicazioni fornite nella sezione\nameref{sec:UML}.
+\level{6}{Definizione di classe}
+Ogni classe individuata dai \insrole{Progettisti} deve avere, oltre ad un proprio diagramma, una descrizione testuale contenente:
+\begin{itemize}
+\item il nome della classe completo dei package di cui fa parte;
+\item la descrizione della classe con l'indicazione della sua funzione nel contesto del package a cui appartiene;
+\item le sue relazioni con altre classi;
+\item l'elenco dei metodi accompagnati da una breve ma significativa descrizione;
+\item l'elenco degli attributi.
+\end{itemize}
+\level{6}{Test di unità}
+I \insrole{Progettisti} devono definire i test di unità necessari per verificare che il funzionamento delle classi sia quello previsto.
+\level{5}{Strumenti}
+Per la progettazione di dettaglio è stato utilizzato il software Astah, descritto nell'appendice \nameref{app:strumenti}, per la creazione dei diagrammi UML.
