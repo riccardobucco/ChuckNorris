@@ -1,1 +1,31 @@
 \level{2}{Chuck}
+
+    \level{3}{Descrizione dei componenti di Chuck}
+    	\level{4}{Chuck API Manager}
+    		La componente Chuck Api Manager si occupa di implementare le funzionalità offerte dalle API di Chuck allo sviluppatore client. Queste funzionalità sono:
+    		\begin{itemize}
+						\item inserimento di nuovi grafici in un sito web;
+						\item scelta del tag HTML in cui inserire un grafico;
+						\item modifica di alcune impostazioni dei grafici;
+						\item login;
+						\item logout.
+			\end{itemize}
+    		Questa componente si occupa inoltre di gestire la comunicazione con Norris.
+    		
+    	\level{4}{Chart View}
+    	La componente Chart View ha il compito di visualizzare i grafici all'interno della pagina web. I grafici possono essere del tipo Bar Chart, Line Chart, Map Chart e Table. Quando un grafico viene aggiornato, questa componente si occupa di aggiornarne anche la visualizzazione nella pagina web.
+
+    	\level{4}{Controller}
+    	La componente Controller ha lo scopo di gestire gli input provenienti dalla Chart View ed effettuarne la gestione. L'input consiste in un sottoinsieme di dataset da visualizzare, in modo da applicare un filtro sulle serie.
+
+    	\level{4}{Data Model}
+    	La componente Data Model è un modello che astrae i grafici visualizzati nella pagina. In essa sono contenuti i dati riguardanti i grafici, assieme alle relative impostazioni.
+    
+	\level{3}{Descrizione delle interazione tra le componenti}
+	
+		\level{4}{Chuck API Manager - Data Model}
+		\level{4}{Chart View - Data Model}
+		\level{4}{Data Model - Chart View}
+		\level{4}{Chart View - Controller}
+		\level{4}{Controller - Chart View}
+		\level{4}{Controller - Data Model}
