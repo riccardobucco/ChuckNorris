@@ -31,21 +31,19 @@
     			\item{continua: } rappresenta l'invocazione di un metodo;
     			\item{tratteggiata: } rappresenta lo scatenarsi di un evento.
     		\end{itemize}
-    	Le interazioni sono qui descritte:
-    	\begin{description}
-	    	\item{User Gesture:}
-	    		La freccia etichettata con il termine "User Gesture" rappresenta l'evento scatenato dall'utente attraverso una gesture. Questo evento scatena nel controller la reazione lasciando ad esso il totale controllo su ciò che accade. Tale interazione si verifica per esempio quando l'utente seleziona un item della lista dei grafici presenti nell'istanza di Norris richiesta.
-	    	\item{API Request:}
-	    		L'applicazione Android dove interagire con il server dove è presente l'istanza Norris richiesta. Questa freccia rappresenta infatti le richieste delle API esterne di Norris da parte dell'applicazione (o più correttamente da parte del Controller) che ritorneranno un pacchetto con le informazioni richieste. Un esempio di tale richiesta è la richiesta dell'elenco dei grafici presenti nell'istanza di Norris. Per sapere quali sono le possibili API esterne fare riferimento al documento \insdoc{Analisi dei Requisiti v.X.xx}.
-	    	\item{Update Notification:}
-	    		Tale interazione rappresenta lo scatenarsi dell'evento di aggiornamento di un chart da parte del Server. Ogni aggiornamento infatti viene preso in carico dal Controller. Si verifica per esempio quando nel modello dati in Norris viene aggiunto un valore in un grafico.
-	    	\item{State Change:}
-	    		L'interazione etichettata con "State Change" rappresenta una richiesta, da parte del Controller al Model, di modifica dello stato. Tale modifica sarà la richiesta di aggiornamento dei dati nel modello.
-	    	\item{Change Notification:}
-	    		Questo evento viene scatenato dal modello quando il suo stato è stato modificato. Ha lo scopo di avvertire le varie View che osservano il modello che è avvenuta una modifica e devono quindi cambiare il loro stato.
-	    	\item{State Query:}
-	    		Questa interazione rappresenta la richiesta dello stato da parte della View verso il Model. Viene effettuata quando la View ha la necessità di esporre i dati del Model o qualcosa che sia dipendente dallo stato di quest'ultimo. Si ha una Query di questo genere per esempio quando il widget viene creato. Esso infatto dovrà recuperare i valori del chart per mostrarli.
-	    	\item{View Selection:}
-	    		Il controller ha il compito di scegliere quando e quale Activity visualizzare. Tale interazione rappresenta esattamente la richiesta di visualizzazione di una specifica Activity.
-	    \end{description}
+    	Riportiamo di seguito la descrizione di ogni interazione.
+    	\level{4}{User Gesture}
+	    La freccia etichettata con il termine "User Gesture" rappresenta la relazione tra View e Controller. In seguito all'esecuzione di una gesture da parte dell'utente, la View notifica il Controller tramite l'emissione di un evento opportuno. Il Controller si occupa quindi di gestire tale evento. Questa interazione si verifica in particolare quando l'utente seleziona un item della lista dei grafici presenti nell'istanza di Norris richiesta.
+	    \level{4}{API Request}
+	    L'applicazione Android dove interagire con il server dove è presente l'istanza Norris richiesta. Questa freccia rappresenta infatti le richieste delle API esterne di Norris da parte dell'applicazione (o più correttamente da parte del Controller) che ritorneranno un pacchetto con le informazioni richieste. Un esempio di tale richiesta è la richiesta dell'elenco dei grafici presenti nell'istanza di Norris. Per sapere quali sono le possibili API esterne fare riferimento al documento \insdoc{Analisi dei Requisiti v.X.xx}.
+	    \level{4}{Update Notification}
+	    	Tale interazione rappresenta lo scatenarsi dell'evento di aggiornamento di un chart da parte del Server. Ogni aggiornamento infatti viene preso in carico dal Controller. Si verifica per esempio quando nel modello dati in Norris viene aggiunto un valore in un grafico.
+	    \level{4}{State Change}
+	    	L'interazione etichettata con "State Change" rappresenta una richiesta, da parte del Controller al Model, di modifica dello stato. Tale modifica sarà la richiesta di aggiornamento dei dati nel modello.
+	    \level{4}{Change Notification}
+	    	Questo evento viene scatenato dal modello quando il suo stato è stato modificato. Ha lo scopo di avvertire le varie View che osservano il modello che è avvenuta una modifica e devono quindi cambiare il loro stato.
+	    \level{4}{State Query}
+	    	Questa interazione rappresenta la richiesta dello stato da parte della View verso il Model. Viene effettuata quando la View ha la necessità di esporre i dati del Model o qualcosa che sia dipendente dallo stato di quest'ultimo. Si ha una Query di questo genere per esempio quando il widget viene creato. Esso infatto dovrà recuperare i valori del chart per mostrarli.
+	    \level{4}{View Selection}
+	    	Il controller ha il compito di scegliere quando e quale Activity visualizzare. Tale interazione rappresenta esattamente la richiesta di visualizzazione di una specifica Activity.
 
