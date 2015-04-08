@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.5.2 Inserire dati line chart</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può inserire i dati nel line chart che sta creando. In particolare può scegliere quante linee inserire. Può inoltre inserire nel line chart i valori indipendenti e, per ogni linea, può inserire il valore dipendente corrispondente a ciascun valore indipendente. </descrizione>
 	<precondizione>Si vuole creare un grafico di tipo line chart.</precondizione>
 	<postcondizione>Sono stati impostati i dati che si vogliono rappresentare nel grafico. Per ogni valore indipendente, esiste un valore dipendente corrispondente per ciascuna linea.</postcondizione>

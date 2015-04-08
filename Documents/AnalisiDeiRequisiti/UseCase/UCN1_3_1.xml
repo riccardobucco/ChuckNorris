@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.3.1 Inserire il titolo della pagina</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può inserire il titolo della pagina web che sta creando.</descrizione>
 	<precondizione>Si sta creando una pagina web.</precondizione>
 	<postcondizione>È stato inserito il titolo della pagina.</postcondizione>

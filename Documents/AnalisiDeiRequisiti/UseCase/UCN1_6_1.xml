@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.6.1 Scegliere opzioni map chart</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può scegliere le opzioni del grafico map chart che sta creando. In particolare può scegliere il nome e il colore di ciascuna serie di punti, il formato di stampa dei valori, le dimensioni dell'area mostrata sulla mappa, le coordinate del punto centrale della mappa e il massimo numero di punti visualizzabili per ogni serie.</descrizione>
 	<precondizione>Si vuole creare un grafico di tipo map chart. Sono stati inseriti i dati del map chart. In particolare si conosce quante sono le serie di punti e le si sa identificare.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni del grafico di tipo map chart.</postcondizione>

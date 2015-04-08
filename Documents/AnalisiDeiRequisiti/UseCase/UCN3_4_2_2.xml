@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN3.4.2.2 Cambiare la posizione in cui è visualizzata la legenda</titolo>
-	<attorip>Client</attorip>
+	<attorip>Web developer</attorip>
 	<descrizione>L'utente client può modificare la posizione in cui è visualizzata la legenda del grafico selezionato.</descrizione>
 	<precondizione>Si stanno modificando le opzioni riguardanti la legenda di un grafico selezionato.</precondizione>
 	<postcondizione>É stata modificata la posizione in cui è visualizzata la legenda nel grafico selezionato.</postcondizione>

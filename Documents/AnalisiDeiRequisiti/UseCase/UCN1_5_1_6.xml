@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.5.1.6 Scegliere le opzioni riguardanti il piano cartesiano del line chart</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può configurare le opzioni riguardanti il piano cartesiano del line chart che sta creando. In particolare può scegliere il nome degli assi. Può inoltre scegliere se le linee della griglia sono visualizzate o nascoste.</descrizione>
 	<precondizione>Si stanno impostando le opzioni di un modello di bar chart.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti il piano cartesiano.</postcondizione>

@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.8 Ottenere middleware</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato ottenuto un middleware per Express.js.</postcondizione>
 </usecase>

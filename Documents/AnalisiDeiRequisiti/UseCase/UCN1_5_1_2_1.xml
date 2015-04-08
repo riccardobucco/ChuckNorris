@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.5.1.2.1 Scegliere la dimensione dei punti del line chart</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può scegliere la dimensione dei punti del line chart.</descrizione>
 	<precondizione>Si sta impostando il formato di stampa di un line chart.</precondizione>
 	<postcondizione>È stata impostata la dimensione dei punti del line chart.</postcondizione>

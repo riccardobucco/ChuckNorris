@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN3 Utilizzo API della libreria grafica</titolo>
-	<attorip>Client</attorip>
+	<attorip>Web developer</attorip>
 	<descrizione>L'utente client può utilizzare le API della libreria grafica. Queste API permettono di incapsulare un grafico esistente all'interno di una pagina web diversa rispetto a quella creata di default tramite l'utilizzo delle API interne. In particolare l'utente client può selezionare il modello di grafico che vuole rappresentare, scegliere il tag HTML nel quale vuole inserire la rappresentazione del grafico, modificare le opzioni di visualizzazione del grafico selezionato.</descrizione>
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>

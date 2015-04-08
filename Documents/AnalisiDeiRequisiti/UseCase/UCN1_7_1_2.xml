@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.7.1.2 Scegliere l'intestazione di una singola colonna</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può impostare l'intestazione di ogni colonna della table che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table. Si conosce quante sono le colonne e le si sa identificare.</precondizione>
 	<postcondizione>È stata impostata l'intestazione di una colonna.</postcondizione>

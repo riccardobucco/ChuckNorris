@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.6.1.1 Scegliere il formato di stampa dei valori del map chart</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può scegliere il formato di stampa dei valori del map chart che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
 	<postcondizione>È stato scelto il modo in cui vengono rappresentati i punti sul map chart.</postcondizione>

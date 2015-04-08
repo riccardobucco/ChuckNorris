@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.6.1.4 Scegliere le coordinate del punto centrale della mappa</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può scegliere le coordinate del punto centrale della mappa.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
 	<postcondizione>È stato impostato il punto centrale della mappa.</postcondizione>

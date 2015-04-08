@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.5.1.2.2 Scegliere se la linea del line chart è curva o segmentata</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può scegliere se la curva del line chart è curva o segmentata.</descrizione>
 	<precondizione>Si sta impostando il formato di stampa di un line chart.</precondizione>
 	<postcondizione>È stata impostato se la linea del line chart è curva o segmentata.</postcondizione>

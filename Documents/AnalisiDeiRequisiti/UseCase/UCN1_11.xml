@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.11 Visualizzare errore raggiunto limite grafici inseribili in una pagina</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Quando lo sviluppatore aggiunge un grafico ad una pagina che ha già raggiunto il numero massimo di grafici il sistema segnala un errore.</descrizione>
 	<precondizione>Si è cercato di aaggiungere un grafico ad una pagina per la quale è già stato raggiunto il limite di grafici.</precondizione>
 	<postcondizione>È stato visualizzato un messaggio di errore che informa che nella pagina in questione non è possibile inserire ulteriori grafici.</postcondizione>

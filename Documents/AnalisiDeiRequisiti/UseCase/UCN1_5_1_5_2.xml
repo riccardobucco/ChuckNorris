@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.5.1.5.2 Scegliere la posizione in cui è visualizzata la legenda</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore inserisce la posizione in cui è visualizzata la legenda del chart che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni riguardanti la legenda.</precondizione>
 	<postcondizione>È stata impostata la posizione in cui è visualizzata la legenda. L'impostazione viene ignorata se la legenda non è visualizzabile.</postcondizione>

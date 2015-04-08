@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.1.2 Scegliere una descrizione per il chart</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore sceglie una descrizione per il chart che sta creando.</descrizione>
 	<precondizione>Si sta creando un modello di chart.</precondizione>
 	<postcondizione>È stata impostata la descrizione del grafico.</postcondizione>

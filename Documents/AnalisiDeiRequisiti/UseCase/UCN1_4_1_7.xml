@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.4.1.7 Scegliere il massimo numero di punti da visualizzare per ogni serie</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può configurare le opzioni riguardanti il numero massimo di punti da visualizzare per ogni serie del bar chart che sta creando.</descrizione>
 	<precondizione>Si stanno impostando le opzioni di un modello di bar chart.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti il massimo numero di punti da visualizzare per ogni serie.</postcondizione>

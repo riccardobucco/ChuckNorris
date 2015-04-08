@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.6.1.5 Scegliere il colore di ciascuna serie di punti</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può scegliere il colore di ciascuna serie di punti del grafico che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart. Si conosce quante sono le serie di punti e le si sa identificare</precondizione>
 	<postcondizione>È stato impostato il colore di ciascuna serie di punti.</postcondizione>

@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.4.1.3.2 Scegliere la dimensione dello spazio tra due valori del bar chart</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può scegliere la dimensione dello spazio che intercorre tra i valori del bar chart.</descrizione>
 	<precondizione>Si sta impostando il formato di stampa di un bar chart.</precondizione>
 	<postcondizione>È stato impostato lo spazio che intercorre tra due valori del bar chart.</postcondizione>

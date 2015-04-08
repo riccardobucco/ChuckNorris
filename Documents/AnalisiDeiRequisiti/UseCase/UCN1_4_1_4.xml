@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.4.1.4 Scegliere il nome di ciascun set di barre</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può scegliere il nome di ciascun set di barre del grafico che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un bar chart. Si conosce quanti sono i set di barre nel grafico e li si sa identificare.</precondizione>
 	<postcondizione>È stato impostato il nome di ciascun set di barre.</postcondizione>

@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN3.6.2.1 Cambiare il fatto che la legenda sia visualizzata o meno</titolo>
-	<attorip>Client</attorip>
+	<attorip>Web developer</attorip>
 	<descrizione>L'utente client può modificare il fatto che la legenda sia visualizzata o meno per il grafico selezionato.</descrizione>
 	<precondizione>Si stanno modificando le opzioni riguardanti la legenda di un grafico selezionato.</precondizione>
 	<postcondizione>É stato modificato il fatto che la legenda del grafico selezionato sia visualizzata o meno.</postcondizione>

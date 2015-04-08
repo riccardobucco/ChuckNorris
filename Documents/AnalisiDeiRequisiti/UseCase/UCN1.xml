@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1 Utilizzo API interne di Norris</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Le API interne permettono allo sviluppatore di creare un grafico lato server e di definire le sue modalità di aggiornamento. Il grafico può essere di tipo bar chart, line chart, map chart o table. Si permette, inoltre, la creazione di una semplice pagina web contenente il grafico e l'ottenimento di un middleware per Express.js.</descrizione>
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>

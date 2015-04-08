@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN3.5.1 Cambiare il colore di una linea</titolo>
-	<attorip>Client</attorip>
+	<attorip>Web developer</attorip>
 	<descrizione>L'utente client può modificare il colore di una linea del line chart selezionato. In particolare il client può selezionare la linea di cui vuole modificare il colore e scegliere il nuovo colore da associare alla linea selezionata.</descrizione>
 	
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di un line chart selezionato.</precondizione>

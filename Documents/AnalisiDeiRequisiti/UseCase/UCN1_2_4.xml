@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.2.4 Aggiornare un modello table</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore seleziona un grafico di tipo table da aggiornare e sceglie la tipologia di aggiornamento del grafico stesso. Per una table sono disponibili gli aggiornamenti con metodo in place e con metodo stream.</descrizione>
 	<precondizione>Si sta scegliendo la tipologia di aggiornamento del modello di un chart.</precondizione>
 	<postcondizione>È stata scelta la tipologia di aggiornamento del modello di una table.</postcondizione>

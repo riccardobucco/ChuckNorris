@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.2.3 Aggiornare un modello map chart</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore seleziona un grafico map chart da aggiornare e sceglie la tipologia di aggiornamento del grafico stesso. Per un grafico map chart sono disponibili gli aggiornamenti con metodo in place e con metodo movie.</descrizione>
 	<precondizione>Si sta scegliendo la tipologia di aggiornamento del modello di un chart.</precondizione>
 	<postcondizione>È stata scelta la tipologia di aggiornamento del modello di un map chart.</postcondizione>

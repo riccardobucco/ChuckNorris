@@ -2,7 +2,7 @@
 
 <usecase>
 	<titolo>UCN1.4.1 Scegliere opzioni bar chart</titolo>
-	<attorip>Sviluppatore</attorip>
+	<attorip>Norris developer</attorip>
 	<descrizione>Lo sviluppatore può scegliere le opzioni del grafico bar chart che sta creando. In particolare può scegliere il colore di ciascun set di barre, l'orientamento delle barre, il formato di stampa dei valori e il nome di ciascun set di barre. Lo sviluppatore può inoltre scegliere le opzioni riguardanti la legenda e il piano cartesiano.</descrizione>
 	<precondizione>Si vuole creare un grafico di tipo bar chart. Sono stati inseriti i dati del bar chart. In particolare si conosce quanti sono i set di barre nel grafico e li si sa identificare.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni del grafico di tipo bar chart.</postcondizione>
