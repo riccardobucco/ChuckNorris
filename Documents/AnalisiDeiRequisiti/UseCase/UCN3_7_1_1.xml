@@ -7,7 +7,7 @@
 	<precondizione>Si stanno modificando le opzioni riguardanti il formato di una cella.</precondizione>
 	<postcondizione>È stato cambiato il colore del testo contenuto nella cella selezionata.</postcondizione>
 	<principale>
-		<item>Il client sceglie una cella alla quale vuole modificare il colore del testo in essa contenuto;</item>
-		<item>Il client sceglie un colore da associare al testo contenuto nella cella selezionata.</item>
+		<item>Il Web developer sceglie una cella alla quale vuole modificare il colore del testo in essa contenuto;</item>
+		<item>Il Web developer sceglie un colore da associare al testo contenuto nella cella selezionata.</item>
 	</principale>
 </usecase>

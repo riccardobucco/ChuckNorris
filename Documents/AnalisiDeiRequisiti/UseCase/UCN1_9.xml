@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN1.9 Visualizzare errore dati non corretti</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Quando lo sviluppatore inserisce dei dati non conformi il sistema segnala un errore.</descrizione>
+	<descrizione>Quando il Norris developer inserisce dei dati non conformi il sistema segnala un errore.</descrizione>
 	<precondizione>Si è cercato di utilizzare dei dati non corretti.</precondizione>
 	<postcondizione>È stato visualizzato un messaggio di errore che informa che si è cercato di utilizzare dei dati che non sono corretti.</postcondizione>
 	<principale>

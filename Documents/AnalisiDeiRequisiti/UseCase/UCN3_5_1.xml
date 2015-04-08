@@ -8,7 +8,7 @@
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di un line chart selezionato.</precondizione>
 	<postcondizione>É stato modificato il colore di una linea.</postcondizione>
 	<principale>
-		<item>Il client sceglie una linea alla quale vuole modificare il colore;</item>
-		<item>Il client sceglie un colore da associare alla linea selezionata.</item>
+		<item>Il Web developer sceglie una linea alla quale vuole modificare il colore;</item>
+		<item>Il Web developer sceglie un colore da associare alla linea selezionata.</item>
 	</principale>
 </usecase>

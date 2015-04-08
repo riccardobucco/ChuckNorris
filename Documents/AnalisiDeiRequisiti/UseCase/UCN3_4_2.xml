@@ -7,7 +7,7 @@
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di un grafico selezionato di tipo bar chart.</precondizione>
 	<postcondizione>Sono state modificate le opzioni riguardanti la legenda del grafico selezionato.</postcondizione>
 	<principale>
-		<item>Il client modifica il fatto che la legenda sia visualizzata o meno (UCN3.4.2.1);</item>
-		<item>Il client modifica la posizione in cui è visualizzata la legenda (UCN3.4.2.2).</item>
+		<item>Il Web developer modifica il fatto che la legenda sia visualizzata o meno (UCN3.4.2.1);</item>
+		<item>Il Web developer modifica la posizione in cui è visualizzata la legenda (UCN3.4.2.2).</item>
 	</principale>
 </usecase>

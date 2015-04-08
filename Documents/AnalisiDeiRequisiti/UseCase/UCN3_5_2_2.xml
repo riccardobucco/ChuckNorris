@@ -7,6 +7,6 @@
 	<precondizione>Si stanno modificando le opzioni riguardanti la legenda di un grafico selezionato.</precondizione>
 	<postcondizione>É stata modificata la posizione in cui è visualizzata la legenda nel grafico selezionato.</postcondizione>
 	<principale>
-		<item>Il client modifica la posizione in cui è visualizzata la legenda.</item>
+		<item>Il Web developer modifica la posizione in cui è visualizzata la legenda.</item>
 	</principale>
 </usecase>

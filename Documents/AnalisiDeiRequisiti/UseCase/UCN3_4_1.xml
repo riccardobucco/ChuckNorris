@@ -7,7 +7,7 @@
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di un bar chart selezionato.</precondizione>
 	<postcondizione>É stato modificato il colore di un set di barre.</postcondizione>
 	<principale>
-		<item>Il client sceglie un set di barre al quale vuole modificare il colore;</item>
-		<item>Il client sceglie un colore da associare al set di barre selezionato.</item>
+		<item>Il Web developer sceglie un set di barre al quale vuole modificare il colore;</item>
+		<item>Il Web developer sceglie un colore da associare al set di barre selezionato.</item>
 	</principale>
 </usecase>

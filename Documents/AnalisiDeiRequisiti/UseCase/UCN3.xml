@@ -7,12 +7,12 @@
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>
 	<principale>
-		<item>Il client seleziona il modello di grafico che vuole rappresentare (UCN3.1);</item>
-		<item>Il client sceglie il tag HTML nel quale vuole inserire la rappresentazione del grafico (UCN3.2);</item>
-		<item>Il client cambia le opzioni di visualizzazione di un grafico (UCN3.3);</item>
-		<item>Il client può cambiare le opzioni di visualizzazione di un bar chart (UCN3.4);</item>
-		<item>Il client può cambiare le opzioni di visualizzazione di un line chart (UCN3.5);</item>
-		<item>Il client può cambiare le opzioni di visualizzazione di un map chart (UCN3.6);</item>
-		<item>Il client può cambiare le opzioni di visualizzazione di una table (UCN3.7).</item>
+		<item>Il Web developer seleziona il modello di grafico che vuole rappresentare (UCN3.1);</item>
+		<item>Il Web developer sceglie il tag HTML nel quale vuole inserire la rappresentazione del grafico (UCN3.2);</item>
+		<item>Il Web developer cambia le opzioni di visualizzazione di un grafico (UCN3.3);</item>
+		<item>Il Web developer può cambiare le opzioni di visualizzazione di un bar chart (UCN3.4);</item>
+		<item>Il Web developer può cambiare le opzioni di visualizzazione di un line chart (UCN3.5);</item>
+		<item>Il Web developer può cambiare le opzioni di visualizzazione di un map chart (UCN3.6);</item>
+		<item>Il Web developer può cambiare le opzioni di visualizzazione di una table (UCN3.7).</item>
 	</principale>
 </usecase>

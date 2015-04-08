@@ -7,6 +7,6 @@
 	<precondizione>Si stanno utilizzando le API della libreria grafica.</precondizione>
 	<postcondizione>È stato selezionato il modello di grafico che si vuole rappresentare.</postcondizione>
 	<principale>
-		<item>Il client seleziona il modello di grafico che vuole rappresentare.</item>
+		<item>Il Web developer seleziona il modello di grafico che vuole rappresentare.</item>
 	</principale>
 </usecase>

@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN1.4.1.2 Scegliere l'orientamento delle barre</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>lo sviluppatore può scegliere se impostare le barre del grafico che sta creando con orientamento orizzontale o verticale.</descrizione>
+	<descrizione>il Norris developer può scegliere se impostare le barre del grafico che sta creando con orientamento orizzontale o verticale.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo bar chart.</precondizione>
 	<postcondizione>È stato scelto se le barre devono essere verticali o orizzontali.</postcondizione>
 	<principale>

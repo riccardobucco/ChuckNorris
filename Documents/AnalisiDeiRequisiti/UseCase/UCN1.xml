@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN1 Utilizzo API interne di Norris</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Le API interne permettono allo sviluppatore di creare un grafico lato server e di definire le sue modalità di aggiornamento. Il grafico può essere di tipo bar chart, line chart, map chart o table. Si permette, inoltre, la creazione di una semplice pagina web contenente il grafico e l'ottenimento di un middleware per Express.js.</descrizione>
+	<descrizione>Le API interne permettono al Norris developer di creare un grafico lato server e di definire le sue modalità di aggiornamento. Il grafico può essere di tipo bar chart, line chart, map chart o table. Si permette, inoltre, la creazione di una semplice pagina web contenente il grafico e l'ottenimento di un middleware per Express.js.</descrizione>
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>
 	<principale>
@@ -18,19 +18,19 @@
 	</principale>
 	<alternativi>
 		<scenario>
-			<descrizione>Nel caso in cui lo sviluppatore abbia tentato di creare un grafico con dei dati errati:</descrizione>
+			<descrizione>Nel caso in cui il Norris developer abbia tentato di creare un grafico con dei dati errati:</descrizione>
 			<item>viene visualizzato un errore riguardante il tentato uso di dati errati (UCN1.9).</item>
 		</scenario>
 		<scenario>
-			<descrizione>Nel caso in cui lo sviluppatore abbia tentato di aggiornare un grafico con dei dati errati:</descrizione>
+			<descrizione>Nel caso in cui il Norris developer abbia tentato di aggiornare un grafico con dei dati errati:</descrizione>
 			<item>viene visualizzato un errore riguardante il tentato uso di dati errati (UCN1.9).</item>
 		</scenario>
 		<scenario>
-			<descrizione>Nel caso in cui lo sviluppatore abbia tentato di utilizzare un metodo di aggiornamento non permesso in un certo grafico:</descrizione>
+			<descrizione>Nel caso in cui il Norris developer abbia tentato di utilizzare un metodo di aggiornamento non permesso in un certo grafico:</descrizione>
 			<item>viene visualizzato un errore riguardante la tipologia di aggiornamento non permessa nel grafico in questione (UCN1.10).</item>
 		</scenario>
 		<scenario>
-			<descrizione>Nel caso in cui lo sviluppatore abbia aggiunto troppi grafici ad una pagina:</descrizione>
+			<descrizione>Nel caso in cui il Norris developer abbia aggiunto troppi grafici ad una pagina:</descrizione>
 			<item>viene visualizzato un errore riguardante il numero massimo di grafici che la pagina in questione può contenere al suo interno (UCN1.11).</item>
 		</scenario>
 	</alternativi>

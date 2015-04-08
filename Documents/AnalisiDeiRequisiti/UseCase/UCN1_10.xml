@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN1.10 Visualizzare errore tipologia di aggiornamento non valida</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Quando lo sviluppatore utilizza un aggiornamento non permesso su un certo tipo di grafico il sistema segnala un errore.</descrizione>
+	<descrizione>Quando il Norris developer utilizza un aggiornamento non permesso su un certo tipo di grafico il sistema segnala un errore.</descrizione>
 	<precondizione>Si è cercato di utilizzare una tipologia di aggiornamento non permessa per il tipo di grafico che si desidera modificare.</precondizione>
 	<postcondizione>È stato visualizzato un messaggio di errore che informa che la tipologia di aggiornamento scelta per modificare il grafico in questione non è valida.</postcondizione>
 	<principale>
