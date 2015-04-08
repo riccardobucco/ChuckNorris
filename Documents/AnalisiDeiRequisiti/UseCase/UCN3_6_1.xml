@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN3.6.1 Cambiare il colore di una serie di punti</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>Il Web developer può modificare il colore di una serie di punti del map chart selezionato. In particolare il client può selezionare la serie di punti di cui vuole modificare il colore e scegliere il nuovo colore da associare alla serie di punti selezionata.</descrizione>
+	<descrizione>Il Web developer può modificare il colore di una serie di punti del map chart selezionato. In particolare il Web developer può selezionare la serie di punti di cui vuole modificare il colore e scegliere il nuovo colore da associare alla serie di punti selezionata.</descrizione>
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di un map chart selezionato.</precondizione>
 	<postcondizione>É stato modificato il colore di una serie di punti.</postcondizione>
 	<principale>

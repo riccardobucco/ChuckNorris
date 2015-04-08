@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN3.1 Selezionare il modello di grafico che si vuole rappresentare</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>Tramite l'utilizzo delle API della libreria grafica, l'utente client può selezionare il modello di grafico che vuole rappresentare.</descrizione>
+	<descrizione>Tramite l'utilizzo delle API della libreria grafica, il Web developer può selezionare il modello di grafico che vuole rappresentare.</descrizione>
 	<precondizione>Si stanno utilizzando le API della libreria grafica.</precondizione>
 	<postcondizione>È stato selezionato il modello di grafico che si vuole rappresentare.</postcondizione>
 	<principale>

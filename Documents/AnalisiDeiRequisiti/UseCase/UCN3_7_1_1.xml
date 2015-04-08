@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN3.7.1.1 Cambiare il colore del testo contenuto in una cella</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>Il Web developer può modificare il colore del testo contenuto in una cella della table selezionata. In particolare il client può selezionare la cella di cui vuole modificare il colore del testo e scegliere il nuovo colore da associare al testo contenuto nella cella selezionata.</descrizione>
+	<descrizione>Il Web developer può modificare il colore del testo contenuto in una cella della table selezionata. In particolare il Web developer può selezionare la cella di cui vuole modificare il colore del testo e scegliere il nuovo colore da associare al testo contenuto nella cella selezionata.</descrizione>
 	<precondizione>Si stanno modificando le opzioni riguardanti il formato di una cella.</precondizione>
 	<postcondizione>È stato cambiato il colore del testo contenuto nella cella selezionata.</postcondizione>
 	<principale>

@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN2 Utilizzo API esterne di Norris</titolo>
 	<attorip>App developer</attorip>
-	<descrizione>Tramite l'utilizzo delle API esterne di Norris, l'utente client può visualizzare informazioni inerenti ad un'istanza di Norris. In particolare può inserire l'indirizzo dell'istanza di Norris, ottenere la lista dei grafici presenti nell'istanza di Norris di cui ha inserito l'indirizzo e infine può ottenere un grafico presente nell'istanza.</descrizione>
+	<descrizione>Tramite l'utilizzo delle API esterne di Norris, l'App developer può visualizzare informazioni inerenti ad un'istanza di Norris. In particolare può inserire l'indirizzo dell'istanza di Norris, ottenere la lista dei grafici presenti nell'istanza di Norris di cui ha inserito l'indirizzo e infine può ottenere un grafico presente nell'istanza.</descrizione>
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>
 	<principale>
