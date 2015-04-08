@@ -3,11 +3,11 @@
 <usecase>
 	<titolo>UCN1.3.2.2 Scegliere il massimo numero di grafici visualizzabili su una colonna</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può scegliere il massimo numero di grafici visualizzabili su una colonna della pagina.</descrizione>
+	<descrizione>Il Norris developer può scegliere il massimo numero di grafici visualizzabili su una colonna della pagina.</descrizione>
 	<precondizione>Si stanno scegliendo le opzioni di visualizzazione della pagina.</precondizione>
 	<postcondizione>È stato scelto il massimo numero di grafici visualizzabili su una colonna.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il massimo numero di grafici visualizzabili su una colonna.</item>
+		<item>Il Norris developer sceglie il massimo numero di grafici visualizzabili su una colonna.</item>
 	</principale>
 </usecase>
 

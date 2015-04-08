@@ -7,6 +7,6 @@
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo bar chart.</precondizione>
 	<postcondizione>È stato scelto se le barre devono essere verticali o orizzontali.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie se le barre sono orizzontali o verticali.</item>
+		<item>Il Norris developer sceglie se le barre sono orizzontali o verticali.</item>
 	</principale>
 </usecase>

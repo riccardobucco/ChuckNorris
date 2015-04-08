@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN1.6.1.1.1 Scegliere la forma dei marcatori del map chart</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può scegliere la forma dei marcatori del map chart che sta creando.</descrizione>
+	<descrizione>Il Norris developer può scegliere la forma dei marcatori del map chart che sta creando.</descrizione>
 	<precondizione>Si sta impostando il formato di stampa dei valori di un map chart.</precondizione>
 	<postcondizione>È stato scelta la forma dei marcatori del map chart.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie la forma dei marcatori del map chart.</item>
+		<item>Il Norris developer sceglie la forma dei marcatori del map chart.</item>
 	</principale>
 </usecase>

@@ -7,14 +7,14 @@
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore può creare un modello chart (UCN1.1);</item>
-		<item>Lo sviluppatore può aggiornare un modello chart (UCN1.2);</item>
-		<item>Lo sviluppatore può creare una pagina (UCN1.3);</item>
-		<item>Lo sviluppatore può creare un modello bar chart (UCN1.4);</item>
-		<item>Lo sviluppatore può creare un modello line chart (UCN1.5);</item>
-		<item>Lo sviluppatore può creare un modello map chart (UCN1.6);</item>
-		<item>Lo sviluppatore può creare un modello table (UCN1.7);</item>
-		<item>Lo sviluppatore può ottenere un middleware per Express.js (UCN1.8).</item>
+		<item>Il Norris developer può creare un modello chart (UCN1.1);</item>
+		<item>Il Norris developer può aggiornare un modello chart (UCN1.2);</item>
+		<item>Il Norris developer può creare una pagina (UCN1.3);</item>
+		<item>Il Norris developer può creare un modello bar chart (UCN1.4);</item>
+		<item>Il Norris developer può creare un modello line chart (UCN1.5);</item>
+		<item>Il Norris developer può creare un modello map chart (UCN1.6);</item>
+		<item>Il Norris developer può creare un modello table (UCN1.7);</item>
+		<item>Il Norris developer può ottenere un middleware per Express.js (UCN1.8).</item>
 	</principale>
 	<alternativi>
 		<scenario>

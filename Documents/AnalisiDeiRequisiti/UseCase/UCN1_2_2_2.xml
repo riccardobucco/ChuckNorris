@@ -3,12 +3,12 @@
 <usecase>
 	<titolo>UCN1.2.2.2 Aggiornare un modello line chart con metodo stream</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore aggiorna il grafico di tipo line chart con metodo stream. In particolare inserisce un nuovo valore indipendente al quale associa un valore dipendente per ciascuna linea del grafico.</descrizione>
+	<descrizione>Il Norris developer aggiorna il grafico di tipo line chart con metodo stream. In particolare inserisce un nuovo valore indipendente al quale associa un valore dipendente per ciascuna linea del grafico.</descrizione>
 	<precondizione>Si sta aggiornando il modello di un line chart. È stato selezionato il modello di un line chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello del line chart selezionato con metodo stream.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie un nuovo valore indipendente al quale vuole associare dei nuovi punti sul grafico;</item>
-		<item>Lo sviluppatore inserisce un nuovo valore dipendente per ciascuna linea presente nel grafico selezionato (in corrispondenza del valore indipendente scelto in precedenza);</item>
+		<item>Il Norris developer sceglie un nuovo valore indipendente al quale vuole associare dei nuovi punti sul grafico;</item>
+		<item>Il Norris developer inserisce un nuovo valore dipendente per ciascuna linea presente nel grafico selezionato (in corrispondenza del valore indipendente scelto in precedenza);</item>
 		<item>I nuovi punti vengono aggiunti al grafico.</item>
 	</principale>
 </usecase>

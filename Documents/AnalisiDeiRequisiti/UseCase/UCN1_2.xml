@@ -4,13 +4,13 @@
 	<titolo>UCN1.2 Aggiornare un modello chart</titolo>
 	<attorip>Norris developer</attorip>
 	<estensioni>UCN1.9 Visualizzare errore dati non corretti, UCN1.10 Visualizzare errore tipologia di aggiornamento non valida</estensioni>
-	<descrizione>Lo sviluppatore può scegliere le modalità di aggiornamento del grafico che sta creando. In base alla tipologia del grafico, può scegliere come aggiornare un bar chart, un line chart, un map chart e una table.</descrizione>
+	<descrizione>Il Norris developer può scegliere le modalità di aggiornamento del grafico che sta creando. In base alla tipologia del grafico, può scegliere come aggiornare un bar chart, un line chart, un map chart e una table.</descrizione>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>Sono state scelte le modalità di aggiornamento del modello di un chart.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore può aggiornare un modello bar chart (UCN1.2.1);</item>
-		<item>Lo sviluppatore può aggiornare un modello line chart (UCN1.2.2);</item>
-		<item>Lo sviluppatore può aggiornare un modello map chart (UCN1.2.3);</item>
-		<item>Lo sviluppatore può aggiornare un modello table (UCN1.2.4).</item>
+		<item>Il Norris developer può aggiornare un modello bar chart (UCN1.2.1);</item>
+		<item>Il Norris developer può aggiornare un modello line chart (UCN1.2.2);</item>
+		<item>Il Norris developer può aggiornare un modello map chart (UCN1.2.3);</item>
+		<item>Il Norris developer può aggiornare un modello table (UCN1.2.4).</item>
 	</principale>
 </usecase>

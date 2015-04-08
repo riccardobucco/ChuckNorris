@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN2.2.2 Ottenere il titolo di ciascun grafico</titolo>
 	<attorip>App developer</attorip>
-	<descrizione>L'utente client può ottenere il titolo di ciascun grafico presente nella lista dell'istanza di Norris selezionata.</descrizione>
+	<descrizione>L'app developer può ottenere il titolo di ciascun grafico presente nella lista dell'istanza di Norris selezionata.</descrizione>
 	<precondizione>È stata selezionata un'istanza esistente di Norris.</precondizione>
 	<postcondizione>È stato ottenuto il titolo di ciascun grafico presente nell'istanza di Norris.</postcondizione>
 	<principale>
-		<item>L'utente client ottiene il titolo di ciascun grafico della lista.</item>
+		<item>L'app developer ottiene il titolo di ciascun grafico della lista.</item>
 	</principale>
 </usecase>

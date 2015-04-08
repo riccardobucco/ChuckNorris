@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN1.7.1.1.3 Scegliere l’unità di misura da inserire nelle intestazioni delle colonne riguardanti i dati contenuti in esse</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può scegliere l'unità di misura dei dati contenuti nelle colonne della table e la inserisce nell'intestazione.</descrizione>
+	<descrizione>Il Norris developer può scegliere l'unità di misura dei dati contenuti nelle colonne della table e la inserisce nell'intestazione.</descrizione>
 	<precondizione>Si sta impostando il formato di stampa di una table.</precondizione>
 	<postcondizione>È stata impostata l'unità di misura dei valori di una colonna.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie l’unità di misura da inserire nelle intestazioni delle colonne riguardanti i dati contenuti in esse.</item>
+		<item>Il Norris developer sceglie l’unità di misura da inserire nelle intestazioni delle colonne riguardanti i dati contenuti in esse.</item>
 	</principale>
 </usecase>

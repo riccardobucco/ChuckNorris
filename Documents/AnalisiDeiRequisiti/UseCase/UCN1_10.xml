@@ -7,6 +7,6 @@
 	<precondizione>Si è cercato di utilizzare una tipologia di aggiornamento non permessa per il tipo di grafico che si desidera modificare.</precondizione>
 	<postcondizione>È stato visualizzato un messaggio di errore che informa che la tipologia di aggiornamento scelta per modificare il grafico in questione non è valida.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore visualizzare un errore che indica che il tipo di aggiornamento non è supportato per il grafico in questione.</item>
+		<item>Il Norris developer visualizzare un errore che indica che il tipo di aggiornamento non è supportato per il grafico in questione.</item>
 	</principale>
 </usecase>

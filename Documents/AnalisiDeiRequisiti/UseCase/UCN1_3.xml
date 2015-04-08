@@ -4,12 +4,12 @@
 	<titolo>UCN1.3 Creare pagina</titolo>
 	<attorip>Norris developer</attorip>
 	<estensioni>UCN1.11 Errore di visualizzazione</estensioni>
-	<descrizione>Lo sviluppatore può creare una pagina web. In particolare può inserire il titolo della pagina, può scegliere le impostazioni di visualizzazione e può aggiungere grafici alla pagina stessa.</descrizione>
+	<descrizione>Il Norris developer può creare una pagina web. In particolare può inserire il titolo della pagina, può scegliere le impostazioni di visualizzazione e può aggiungere grafici alla pagina stessa.</descrizione>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stata creata una pagina.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore inserisce il titolo della pagina (UCN1.3.1);</item>
-		<item>Lo sviluppatore sceglie le opzioni di visualizzazione della pagina (UCN1.3.2);</item>
-		<item>Lo sviluppatore aggiunge grafici alla pagina (UCN1.3.3).</item>
+		<item>Il Norris developer inserisce il titolo della pagina (UCN1.3.1);</item>
+		<item>Il Norris developer sceglie le opzioni di visualizzazione della pagina (UCN1.3.2);</item>
+		<item>Il Norris developer aggiunge grafici alla pagina (UCN1.3.3).</item>
 	</principale>
 </usecase>

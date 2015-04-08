@@ -3,11 +3,11 @@
 <usecase>
 	<titolo>UCN1.2.4.2 Aggiornare un modello table con metodo stream</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore aggiorna il grafico di tipo table con metodo stream. In particolare inserisce i valori delle nuove righe che vengono aggiunte al grafico.</descrizione>
+	<descrizione>Il Norris developer aggiorna il grafico di tipo table con metodo stream. In particolare inserisce i valori delle nuove righe che vengono aggiunte al grafico.</descrizione>
 	<precondizione>Si sta aggiornando un modello table. È stato selezionato un modello table.</precondizione>
 	<postcondizione>È stato aggiornato il modello table selezionato con metodo stream.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore inserisce i valori delle nuove righe che intende aggiungere;</item>
+		<item>Il Norris developer inserisce i valori delle nuove righe che intende aggiungere;</item>
 		<item>Le nuove righe vengono aggiunte al grafico.</item>
 	</principale>
 </usecase>

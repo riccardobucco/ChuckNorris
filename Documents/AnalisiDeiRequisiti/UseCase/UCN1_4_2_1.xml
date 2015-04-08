@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN1.4.2.1 Inserire i valori indipendenti nel bar chart</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può inserire i valori indipendenti nel bar chart che sta creando.</descrizione>
+	<descrizione>Il Norris developer può inserire i valori indipendenti nel bar chart che sta creando.</descrizione>
 	<precondizione>Si stanno inserendo i dati di un bar chart.</precondizione>
 	<postcondizione>Sono stati inseriti i valori indipendenti nel bar chart.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore inserisce i valori indipendenti nel bar chart.</item>
+		<item>Il Norris developer inserisce i valori indipendenti nel bar chart.</item>
 	</principale>
 </usecase>

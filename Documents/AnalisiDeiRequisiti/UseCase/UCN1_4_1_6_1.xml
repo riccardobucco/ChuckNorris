@@ -3,11 +3,11 @@
 <usecase>
 	<titolo>UCN1.4.1.6.1 Scegliere il nome degli assi</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore sceglie il nome degli assi cartesiani del chart che sta creando. In particolare sceglie il nome dell'asse dei valori indipendenti e il nome dell'asse dei valori dipendenti.</descrizione>
+	<descrizione>Il Norris developer sceglie il nome degli assi cartesiani del chart che sta creando. In particolare sceglie il nome dell'asse dei valori indipendenti e il nome dell'asse dei valori dipendenti.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni riguardanti il piano cartesiano.</precondizione>
 	<postcondizione>Sono stati scelti il nome dell'asse dei valori indipendenti e quello dell'asse dei valori dipendenti.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il nome dell'asse dei valori indipendenti;</item>
-		<item>Lo sviluppatore sceglie il nome dell'asse dei valori dipendenti.</item>
+		<item>Il Norris developer sceglie il nome dell'asse dei valori indipendenti;</item>
+		<item>Il Norris developer sceglie il nome dell'asse dei valori dipendenti.</item>
 	</principale>
 </usecase>

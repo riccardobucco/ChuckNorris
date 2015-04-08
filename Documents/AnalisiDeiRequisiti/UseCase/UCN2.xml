@@ -7,8 +7,8 @@
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>
 	<principale>
-		<item>Il client può inserire l'indirizzo dell'istanza di Norris (UCN2.1);</item>
-		<item>Il client può ottenere la lista dei grafici presenti nell'istanza di Norris di cui ha inserito l'indirizzo(UCN2.2);</item>
-		<item>Il client può ottenere un grafico presente nell'istanza di Norris (UCN2.3).</item>
+		<item>L'app developer può inserire l'indirizzo dell'istanza di Norris (UCN2.1);</item>
+		<item>L'app developer può ottenere la lista dei grafici presenti nell'istanza di Norris di cui ha inserito l'indirizzo(UCN2.2);</item>
+		<item>L'app developer può ottenere un grafico presente nell'istanza di Norris (UCN2.3).</item>
 	</principale>
 </usecase>

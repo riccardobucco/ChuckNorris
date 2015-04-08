@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN1.7.1.5 Scegliere la posizione in cui vengono aggiunte nuove righe</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può scegliere la posizione in cui vengono aggiunte nuove righe.</descrizione>
+	<descrizione>Il Norris developer può scegliere la posizione in cui vengono aggiunte nuove righe.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table.</precondizione>
 	<postcondizione>È stata scelta la posizione in cui vengono aggiunte nuove righe (nel caso vengano eseguiti solo aggiornamenti di tipo stream). In particolare è stato scelto se le righe vanno aggiunte alla fine o all'inizio della table.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie la posizione in cui vengono aggiunte nuove righe.</item>
+		<item>Il Norris developer sceglie la posizione in cui vengono aggiunte nuove righe.</item>
 	</principale>
 </usecase>

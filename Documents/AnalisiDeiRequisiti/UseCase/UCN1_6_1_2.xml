@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN1.6.1.2 Scegliere le dimensioni dell'area mostrata sulla mappa</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può scegliere le dimensioni dell'area mostrata sulla mappa del grafico che sta creando.</descrizione>
+	<descrizione>Il Norris developer può scegliere le dimensioni dell'area mostrata sulla mappa del grafico che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
 	<postcondizione>Sono state impostate le dimensioni dell'area mostrata sulla mappa (altezza e larghezza, espresse in metri).</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie le dimensioni dell'area mostrata sulla mappa.</item>
+		<item>Il Norris developer sceglie le dimensioni dell'area mostrata sulla mappa.</item>
 	</principale>
 </usecase>

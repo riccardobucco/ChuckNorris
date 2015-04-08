@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN1.6.1.1 Scegliere il formato di stampa dei valori del map chart</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può scegliere il formato di stampa dei valori del map chart che sta creando.</descrizione>
+	<descrizione>Il Norris developer può scegliere il formato di stampa dei valori del map chart che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
 	<postcondizione>È stato scelto il modo in cui vengono rappresentati i punti sul map chart.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie la forma dei marcatori del map chart (UCN1.6.1.1.1).</item>
+		<item>Il Norris developer sceglie la forma dei marcatori del map chart (UCN1.6.1.1.1).</item>
 	</principale>
 </usecase>

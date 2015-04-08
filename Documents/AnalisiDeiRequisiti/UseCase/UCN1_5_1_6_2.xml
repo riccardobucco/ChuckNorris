@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN1.5.1.6.2 Scegliere se le linee della griglia sono visualizzate</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore sceglie se le linee della griglia del chart che sta creando sono visualizzate o nascoste.</descrizione>
+	<descrizione>Il Norris developer sceglie se le linee della griglia del chart che sta creando sono visualizzate o nascoste.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni riguardanti il piano cartesiano.</precondizione>
 	<postcondizione>È stato impostato se le linee della griglia sono visualizzate o meno.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie se le linee della griglia sono visualizzate.</item>
+		<item>Il Norris developer sceglie se le linee della griglia sono visualizzate.</item>
 	</principale>
 </usecase>

@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN2.1 Inserire l'indirizzo dell'istanza di Norris</titolo>
 	<attorip>App developer</attorip>
-	<descrizione>L'utente client può inserire l'indirizzo dell'istanza di Norris.</descrizione>
+	<descrizione>L'app developer può inserire l'indirizzo dell'istanza di Norris.</descrizione>
 	<precondizione>Si stanno utilizzando le API esterne. </precondizione>
 	<postcondizione>È stato inserito l'indirizzo di un'istanza di Norris.</postcondizione>
 	<principale>
-		<item>Il client indica l'indirizzo dell'istanza Norris al quale vuole fare riferimento.</item>
+		<item>L'app developer indica l'indirizzo dell'istanza Norris al quale vuole fare riferimento.</item>
 	</principale>
 </usecase>

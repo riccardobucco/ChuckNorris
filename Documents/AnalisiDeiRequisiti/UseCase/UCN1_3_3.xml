@@ -3,11 +3,11 @@
 <usecase>
 	<titolo>UCN1.3.3 Aggiungere grafico alla pagina</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può aggiungere un grafico alla pagina web.</descrizione>
+	<descrizione>Il Norris developer può aggiungere un grafico alla pagina web.</descrizione>
 	<precondizione>Si sta creando una pagina.</precondizione>
 	<postcondizione>É stato aggiunto un grafico alla pagina.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore aggiunge un grafico alla pagina.</item>
+		<item>Il Norris developer aggiunge un grafico alla pagina.</item>
 	</principale>
 </usecase>
 

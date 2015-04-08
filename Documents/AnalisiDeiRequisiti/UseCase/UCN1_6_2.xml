@@ -3,12 +3,12 @@
 <usecase>
 	<titolo>UCN1.6.2 Inserire nuova serie di punti</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può inserire una nuova serie di punti nel map chart che sta creando. In particolare può scegliere quanti punti deve avere la serie da inserire. Può quindi inserire la posizione (data da longitudine e latitudine) di ciascun punto della serie. </descrizione>
+	<descrizione>Il Norris developer può inserire una nuova serie di punti nel map chart che sta creando. In particolare può scegliere quanti punti deve avere la serie da inserire. Può quindi inserire la posizione (data da longitudine e latitudine) di ciascun punto della serie. </descrizione>
 	<precondizione>Si vuole creare un grafico di tipo map chart.</precondizione>
 	<postcondizione>È stata inserita una serie di punti nel grafico.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie quanti punti deve avere la serie da inserire nel map chart;</item>
-		<item>Lo sviluppatore inserisce la posizione (data da longitudine e latitudine) di ciascun punto della serie;</item>
+		<item>Il Norris developer sceglie quanti punti deve avere la serie da inserire nel map chart;</item>
+		<item>Il Norris developer inserisce la posizione (data da longitudine e latitudine) di ciascun punto della serie;</item>
 		<item>La serie di punti viene inserita nel grafico.</item>
 	</principale>
 </usecase>

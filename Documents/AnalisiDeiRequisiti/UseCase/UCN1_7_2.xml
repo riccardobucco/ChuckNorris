@@ -3,11 +3,11 @@
 <usecase>
 	<titolo>UCN1.7.2 Inserire nuova riga</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può inserire una nuova riga nella table che sta creando. In particolare può scegliere i valori di ciascuna colonna della riga. </descrizione>
+	<descrizione>Il Norris developer può inserire una nuova riga nella table che sta creando. In particolare può scegliere i valori di ciascuna colonna della riga. </descrizione>
 	<precondizione>Si vuole creare un grafico di tipo table. Si conosce quante sono le colonne e le si sa identificare.</precondizione>
 	<postcondizione>È stata inserita una nuova riga nella table. Nessuna cella è vuota.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie i valori di ciascuna colonna della riga;</item>
+		<item>Il Norris developer sceglie i valori di ciascuna colonna della riga;</item>
 		<item>La riga viene inserita nella table.</item>
 	</principale>
 </usecase>

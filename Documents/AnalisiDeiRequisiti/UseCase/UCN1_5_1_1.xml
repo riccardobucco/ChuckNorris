@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN1.5.1.1 Scegliere il colore di ciascuna linea</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può scegliere il colore di ciascuna linea del grafico che sta creando.</descrizione>
+	<descrizione>Il Norris developer può scegliere il colore di ciascuna linea del grafico che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un line chart. Si conosce quante sono le linee nel grafico e le si sa identificare.</precondizione>
 	<postcondizione>Ogni linea è stata associata a un colore.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il colore di ciascuna linea.</item>
+		<item>Il Norris developer sceglie il colore di ciascuna linea.</item>
 	</principale>
 </usecase>

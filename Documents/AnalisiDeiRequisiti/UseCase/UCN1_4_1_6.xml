@@ -3,11 +3,11 @@
 <usecase>
 	<titolo>UCN1.4.1.6 Scegliere le opzioni riguardanti il piano cartesiano del bar chart</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può configurare le opzioni riguardanti il piano cartesiano del bar chart che sta creando. In particolare può scegliere il nome degli assi. Può inoltre scegliere se le linee della griglia sono visualizzate o nascoste.</descrizione>
+	<descrizione>Il Norris developer può configurare le opzioni riguardanti il piano cartesiano del bar chart che sta creando. In particolare può scegliere il nome degli assi. Può inoltre scegliere se le linee della griglia sono visualizzate o nascoste.</descrizione>
 	<precondizione>Si stanno impostando le opzioni di un modello di bar chart.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti il piano cartesiano.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il nome degli assi (UCN1.4.1.6.1);</item>
-		<item>Lo sviluppatore sceglie se le linee della griglia sono visualizzate (UCN1.4.1.6.2).</item>
+		<item>Il Norris developer sceglie il nome degli assi (UCN1.4.1.6.1);</item>
+		<item>Il Norris developer sceglie se le linee della griglia sono visualizzate (UCN1.4.1.6.2).</item>
 	</principale>
 </usecase>

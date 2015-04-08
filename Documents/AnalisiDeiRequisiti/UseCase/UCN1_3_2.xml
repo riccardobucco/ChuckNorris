@@ -3,11 +3,11 @@
 <usecase>
 	<titolo>UCN1.3.2 Scegliere le opzioni di visualizzazione della pagina</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può scegliere le opzioni di visualizzazione della pagina. In particolare può scegliere il massimo numero di grafici visualizzabili su una riga e il massimo numero di grafici visualizzabili su una colonna.</descrizione>
+	<descrizione>Il Norris developer può scegliere le opzioni di visualizzazione della pagina. In particolare può scegliere il massimo numero di grafici visualizzabili su una riga e il massimo numero di grafici visualizzabili su una colonna.</descrizione>
 	<precondizione>Si sta creando una pagina.</precondizione>
 	<postcondizione>Sono state scelte le opzioni di visualizzazione della pagina.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il massimo numero di grafici visualizzabili su una riga (UCN1.3.2.1);</item>
-		<item>Lo sviluppatore sceglie il massimo numero di grafici visualizzabili su una colonna (UCN1.3.2.2).</item>
+		<item>Il Norris developer sceglie il massimo numero di grafici visualizzabili su una riga (UCN1.3.2.1);</item>
+		<item>Il Norris developer sceglie il massimo numero di grafici visualizzabili su una colonna (UCN1.3.2.2).</item>
 	</principale>
 </usecase>

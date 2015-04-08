@@ -7,6 +7,6 @@
 	<precondizione>Si è cercato di utilizzare dei dati non corretti.</precondizione>
 	<postcondizione>È stato visualizzato un messaggio di errore che informa che si è cercato di utilizzare dei dati che non sono corretti.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore visualizza un errore che indica che si è cercato di inserire dati non corretti.</item>
+		<item>Il Norris developer visualizza un errore che indica che si è cercato di inserire dati non corretti.</item>
 	</principale>
 </usecase>

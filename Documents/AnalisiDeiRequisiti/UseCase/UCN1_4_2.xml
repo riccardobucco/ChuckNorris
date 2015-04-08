@@ -3,12 +3,12 @@
 <usecase>
 	<titolo>UCN1.4.2 Inserire dati bar chart</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può inserire i dati nel bar chart che sta creando. In particolare può scegliere quanti set di barre inserire. Può inoltre inserire nel bar chart i valori indipendenti e, per ogni set di barre, può inserire il valore dipendente corrispondente a ciascun valore indipendente. </descrizione>
+	<descrizione>Il Norris developer può inserire i dati nel bar chart che sta creando. In particolare può scegliere quanti set di barre inserire. Può inoltre inserire nel bar chart i valori indipendenti e, per ogni set di barre, può inserire il valore dipendente corrispondente a ciascun valore indipendente. </descrizione>
 	<precondizione>Si vuole creare un grafico di tipo bar chart. Il grafico è vuoto.</precondizione>
 	<postcondizione>Sono stati impostati i dati che si vogliono rappresentare nel grafico. Per ogni valore indipendente, esiste un valore dipendente corrispondente per ogni set di barre.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie quanti set di barre inserire nel grafico;</item>
-		<item>Lo sviluppatore inserisce i valori indipendenti nel bar chart (UCN1.4.2.1);</item>
-		<item>Lo sviluppatore inserisce un valore dipendente in corrispondenza di tutti i valori dipendenti. E fa questo per ciascun set di barre (UCN1.4.2.2).</item>
+		<item>Il Norris developer sceglie quanti set di barre inserire nel grafico;</item>
+		<item>Il Norris developer inserisce i valori indipendenti nel bar chart (UCN1.4.2.1);</item>
+		<item>Il Norris developer inserisce un valore dipendente in corrispondenza di tutti i valori dipendenti. E fa questo per ciascun set di barre (UCN1.4.2.2).</item>
 	</principale>
 </usecase>

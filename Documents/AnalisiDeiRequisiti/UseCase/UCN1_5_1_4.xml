@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN1.5.1.4 Scegliere il massimo numero di punti visualizzati sull'asse dei valori indipendenti</titolo>	
 	<attorip>Norris developer</attorip>
-	<descrizione>Lo sviluppatore può scegliere il massimo numero di punti visualizzabili sull'asse dei valori indipendenti.</descrizione>
+	<descrizione>Il Norris developer può scegliere il massimo numero di punti visualizzabili sull'asse dei valori indipendenti.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un line chart.</precondizione>
 	<postcondizione>È stato impostato il massimo numero di punti visualizzati sull'asse dei valori indipendenti.</postcondizione>
 	<principale>
-		<item>Lo sviluppatore sceglie il massimo numero di punti visualizzabili sull'asse dei valori indipendenti.</item>
+		<item>Il Norris developer sceglie il massimo numero di punti visualizzabili sull'asse dei valori indipendenti.</item>
 	</principale>
 </usecase>
