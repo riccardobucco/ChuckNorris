@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN3.4.1 Cambiare il colore di un set di barre</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>L'utente client può modificare il colore di un set di barre del bar chart selezionato. In particolare il client può selezionare il set di barre di cui vuole modificare il colore e scegliere il nuovo colore da associare al set di barre selezionato.</descrizione>
+	<descrizione>Il Web developer può modificare il colore di un set di barre del bar chart selezionato. In particolare il client può selezionare il set di barre di cui vuole modificare il colore e scegliere il nuovo colore da associare al set di barre selezionato.</descrizione>
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di un bar chart selezionato.</precondizione>
 	<postcondizione>É stato modificato il colore di un set di barre.</postcondizione>
 	<principale>

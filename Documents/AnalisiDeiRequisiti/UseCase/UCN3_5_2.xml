@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN3.5.2 Cambiare le opzioni riguardanti la legenda di un line chart</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>L'utente client può modificare le opzioni riguardanti la legenda di un line chart. In particolare può modificare il fatto che la legenda sia visualizzata o meno e la posizione in cui è visualizzata la legenda del il grafico selezionato.</descrizione>
+	<descrizione>Il Web developer può modificare le opzioni riguardanti la legenda di un line chart. In particolare può modificare il fatto che la legenda sia visualizzata o meno e la posizione in cui è visualizzata la legenda del il grafico selezionato.</descrizione>
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di un grafico selezionato di tipo line chart.</precondizione>
 	<postcondizione>Sono state modificate le opzioni riguardanti la legenda del grafico selezionato.</postcondizione>
 	<principale>
