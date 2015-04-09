@@ -26,6 +26,10 @@
 		Acronimo di “Application Programming Interface”. Si tratta di \insglo{procedure} disponibili al programmatore, utili per l'implementazione di un certo compito all'interno di un programma.
 	</entry>
 
+	<entry name="Back end">
+		Si definisce back end la componente di un sistema software che elabora i dati generati dal front end.
+	</entry>
+
 	<entry name="Bar Chart">
 		Grafico a barre rettangolari di lunghezza proporzionale al valore che rappresentano. Le barre possono essere orientate verticalmente od orizzontalmente e vengono utilizzate per mostrare confronti tra categorie. Un asse del grafico mostra le categorie specifiche confrontate, e l'altro asse rappresenta un valore discreto.
 	</entry>
@@ -46,6 +50,11 @@
 		Programma che consente di usufruire dei servizi di connettività in Internet, o di una rete di computer.
 	</entry>
 
+
+	<entry name="Callback">
+		Segmento di codice che viene passato come argomento di un altro pezzo di codice, che può essere richiamato da esso, senza conoscerne direttamente l'implementazione.
+	</entry>
+
 	<entry name="Capitolato" equiv="capitolati">
 		Documento tecnico, in genere allegato ad un contratto di appalto, che vi fa riferimento per definire in quella sede le specifiche tecniche delle opere che andranno ad eseguirsi per effetto del contratto stesso.
 	</entry>
@@ -56,6 +65,10 @@
 
 	<entry name="Chrome">
 		\insglo{Browser} web sviluppato da Google.
+	</entry>
+
+	<entry name="CHUCK">
+		CHUCK, acronimo di CHart Universal Creator Kit, è una libreria JavaScript lato client, parte del progetto in questione, che oltre ad occuparsi della comunicazione con Norris, permette di inserire nuovi grafici e di modificarne le impostazioni. 
 	</entry>
 
 	<entry name="Client">
@@ -116,7 +129,7 @@
 	</entry>
 	
 	<entry name="Front end">
-		Parte di un sistema software che gestisce l'interazione con l'utente o con sistemi esterni che producono dati di ingresso.
+		Si definisce front end la componente di un sistema software che gestisce l'interazione con l'utente o con sistemi esterni che producono dati di ingresso.
 	</entry>
 
 	<entry name="Event-driven">
@@ -195,6 +208,10 @@
 		L'\insglo{inguaggio di markup}, basato sul principio WYSIWYM (What You See Is What You Mean), e utilizzato per la composizione di testi. Si presta particolarmente alla stesura di documenti tecnici molto lunghi, in modo concorrente, da parte di persone diverse.
 	</entry>
 
+	<entry name="Layout">
+		Con il termine layout si indica l'impaginazione e la struttura grafica di un sito web.
+	</entry>
+
 	<entry name="Line Chart">
 		Tipo di grafico che visualizza informazioni come una serie di punti di dati, denominati 'marker', collegati da segmenti rettilinei. Si tratta di un tipo di grafico comune in molti campi. È simile a un grafico a dispersione salvo che i punti di misurazione sono ordinati (tipicamente dal loro valore asse x) e uniti con una linea spezzata. Il Line Chart mostra come un dato particolare cambi ad intervalli uguali di tempo. E' spesso utilizzato per visualizzare una tendenza nei dati su intervalli di tempo (una serie storica), così la linea è spesso tracciata cronologicamente.
 	</entry>
@@ -227,6 +244,10 @@
 		In italiano “Pietra miliare”. Questo termine indica importanti traguardi in termini di tempo o di attività, che sanciscono una metrica di avanzamento del progetto.
 	</entry>
 	
+	<entry name="Mockup">
+		È un'attività che consiste nel riprodurre un oggetto o un modello in scala ridotta o maggiorata. Nel contesto del Software Engineering l'uso più comune del mockup è quello per la creazione di rappresentazioni grafiche che mostrino all'utente finale una possibile interfaccia utente del software.
+	</entry>
+
 	<entry name="Modello incrementale">
 		Per modello incrementale o modello iterativo, nell'ambito dell'ingegneria del software, si intende un modello di sviluppo di un progetto software basato sulla successione dei seguenti passi principali: pianificazione, analisi dei requisiti, progetto,    implementazione, verifica, valutazione.
 		Questo ciclo può essere ripetuto diverse volte fino a che la valutazione del prodotto diviene soddisfacente rispetto ai requisiti richiesti.
@@ -244,7 +265,11 @@
 			\item togliere valori rappresentati nel grafico.
 		\end{itemize}
 	</entry>	
-	
+
+	<entry name="MVC - Model View Controller">
+		È un design pattern usato per l'implementazione di interfacce utente. Esso divide l'applicazione in tre parti connesse tra di loro, in modo da separare le rappresentazioni interne dei dati (model) dal modo in cui si presentano all'utente (view) e dal modo in cui l'utente può interagire con la view (controller).
+	</entry>	
+
 	<entry name="Node.js">
 		Node.js è un framework event-driven per il motore JavaScript V8, su piattaforme UNIX like, si tratta cioè di un framework relativo all'utilizzo server-side di JavaScript.
 	</entry>
@@ -261,6 +286,10 @@
 		Software di cui gli autori (più precisamente i detentori dei diritti) rendono pubblico il codice sorgente, permettendo a programmatori indipendenti di apportarvi modifiche. Questa possibilità è regolata tramite l'applicazione di apposite licenze d'uso.
 	</entry>
 	
+	<entry name="Package">
+		Meccanismo per organizzare classi logicamente correlate in gruppi, principalmente allo scopo di definire namespace distinti per diversi contesti.
+	</entry>
+
 	<entry name="Paradigma Object Oriented">
 		In ingegneria del software, l'espressione paradigma object-oriented si riferisce a un insieme di concetti introdotti dai linguaggi di programmazione orientati agli oggetti e in seguito estesi a numerosi altri contesti della information technology. Concetti fondamentali di questo paradigma sono: la classe, l'oggetto, l'incapsulamento, l'ereditarietà e il polimorfismo.
 	</entry>
@@ -292,7 +321,15 @@
 	<entry name="Prodotto" equiv="prodotti">
 		Nei documenti del progetto Norris, il termine “prodotto” indica il risultato di una attività, sia esso un documento, del codice sorgente o un qualsiasi risultato verificabile.
 	</entry>
+
+	<entry name="Progettazione bottom-up">
+		È una strategia di elaborazione di informazioni. In un approccio bottom-up, le parti individuali del sistema sono specificate in dettaglio, e poi connesse tra loro in modo da formare componenti più grandi, a loro volta interconnesse fino a realizzare un sistema completo. Si contrappone alla progettazione top-down.
+	</entry>
 	
+	<entry name="Progettazione top-down">
+		È una strategia di elaborazione di informazioni. In un approccio top-down viene, inizialmente, formulata una visione generale del sistema, dove si descrivono le principali finalità. Dopo di che si procede alla decomposizione di ogni parte del sistema, aggiungendo maggiori dettagli alla progettazione. Tale passo viene ripetuto fino a quando ogni componente del sistema è sufficientemente dettagliato. Si contrappone alla progettazione bottom-up.
+	</entry>
+
 	<entry name="Repository">
 		Un repository è un ambiente di un sistema informativo in cui vengono gestiti metadati attraverso tabelle relazionali. Il repository utilizzato dal gruppo Kaizen-Team è fornito dalla piattaforma GitHub.
 	</entry>
@@ -333,6 +370,14 @@
 		Col termine Team, o con la sua traduzione italiana (Gruppo), nei documenti del progetto Norris si intendono le persone che fanno parte del Kaizen-Team.
 	</entry>
 	
+	<entry name="Tecnologia push">
+		È un meccanismo di comunicazione Internet per l'invio asincrono di dati da un web server ad un web browser. Si contrappone alla tecnologia pull.
+	</entry>
+
+	<entry name="Tecnologia pull">
+		È un meccanismo di comunicazione Internet dove la richiesta iniziale dei dati ha origine nel client, che riceve, poi, una risposta dal server. Si contrappone alla tecnologia push.
+	</entry>
+
 	<entry name="Ticket">
 		Associazione tra una persona e un obbligo o attività.
 	</entry>
