@@ -3,8 +3,8 @@
 <usecase>
 	<titolo>UCN1.6.1.3 Scegliere il massimo numero di punti da visualizzare per ogni serie</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Il Norris developer può scegliere il massimo numero di punti visualizzabili per ogni serie del map chart che sta creando.</descrizione>
-	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart. Si conosce quante sono le serie di punti e le si sa identificare</precondizione>
+	<descrizione>Il Norris developer può scegliere il massimo numero di punti che vengono visualizzati all'interno di ciascuan serie del map chart. Notare che in tal modo non viene impostato il massimo numero di punti visualizzato nel grafico, in quanto non si sta imponendo un numero massimo di serie, ma solamente un numero massimo di punti per serie.</descrizione>
+	<precondizione>Si stanno configurando le impostazioni di un map chart.</precondizione>
 	<postcondizione>È stato impostato il massimo numero di punti da visualizzare per ogni serie.</postcondizione>
 	<principale>
 		<item>Il Norris developer sceglie il massimo numero di punti visualizzabili per ogni serie.</item>

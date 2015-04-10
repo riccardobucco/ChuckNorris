@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN1.6.1.4 Scegliere le coordinate del punto centrale della mappa</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Il Norris developer può scegliere le coordinate del punto centrale della mappa.</descrizione>
+	<descrizione>Il Norris developer può scegliere le coordinate del punto centrale della mappa indicando la longitudine e la latitudine.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo map chart.</precondizione>
 	<postcondizione>È stato impostato il punto centrale della mappa.</postcondizione>
 	<principale>
-		<item>Il Norris developer sceglie il punto centrale della mappa.</item>
+		<item>Il Norris developer sceglie il punto centrale della mappa indicando la longitudine e la latitudine.</item>
 	</principale>
 </usecase>
