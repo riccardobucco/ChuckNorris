@@ -3,9 +3,9 @@
 <document>
 	<title>Analisi Dei Requisiti</title>
 	<type>Esterno</type>
-	<redactedby>Bigarella Chiara \\ Bucco Riccardo \\ Carlon Chiara \\ Dal Bianco Davide</redactedby>
-	<verifiedby>Moretto Alessandro \\ Pavanello Fabio Matteo \\ Rubin Marco</verifiedby>
-	<approvedby>Moretto Alessandro</approvedby>
+	<redactedby>Carlon Chiara \\ Pavanello Fabio Matteo \\ Rubin Marco</redactedby>
+	<verifiedby>Bigarella Chiara \\ Bucco Riccardo \\ Dal Bianco Davide \\ Moretto Alessandro</verifiedby>
+	<approvedby>Bucco Riccardo</approvedby>
 	<distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<sections>
@@ -16,6 +16,86 @@
 	</sections>
 
     <changes>
+<!-- fine fase 3-->
+        <version>
+            <id>3.00</id>
+            <date>2015-03-13</date>
+            <author>Bucco Riccardo</author>
+            <role>Product Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>2.09</id>
+            <date>2015-03-12</date>
+            <author>Ribin Marco</author>
+            <role>Verificatore</role>
+            <description>Verifica documento</description>
+        </version>
+        <version>
+            <id>2.06</id>
+            <date>2015-03-11</date>
+            <author>Dal Bianco Davide</author>
+            <role>Verificatore</role>
+            <description>Verifica tracciamento</description>
+        </version>
+        <version>
+            <id>2.05</id>
+            <date>2015-03-10</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica requisiti</description>
+        </version>
+        <version>
+            <id>2.04</id>
+            <date>2015-03-10</date>
+            <author>Bigarella Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica casi d'uso</description>
+        </version>
+        <version>
+            <id>2.03</id>
+            <date>2015-03-09</date>
+            <author>Dal Bianco Davide</author>
+            <role>Chiara Carlon</role>
+            <description>Modifica tracciamento</description>
+        </version>
+        <version>
+            <id>2.02</id>
+            <date>2015-03-07</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Analista</role>
+            <description>Piccola modifica requisiti</description>
+        </version>
+        <version>
+            <id>2.01</id>
+            <date>2015-03-07</date>
+            <author>Rubin Marco</author>
+            <role>Analista</role>
+            <description>Piccola modifica casi d'uso</description>
+        </version>
+<!-- fine fase 2-->
+        <version>
+            <id>2.00</id>
+            <date>2015-03-03</date>
+            <author>Carlon Chiara</author>
+            <role>Product Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>1.02</id>
+            <date>2015-02-27</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verifica documento</description>
+        </version>
+        <version>
+            <id>1.01</id>
+            <date>2015-02-23</date>
+            <author>Bigarella Chiara, Bucco Riccardo</author>
+            <role>Analista</role>
+            <description>Revisione correttiva contenuti basata su segnalazione del committente</description>
+        </version>
+<!-- fine fase 1-->
         <version>
             <id>1.00</id>
             <date>2015-01-19</date>

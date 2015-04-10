@@ -3,9 +3,9 @@
 <document>
 	<title>Piano di Qualifica</title>
 	<type>Esterno</type>
-	<redactedby>Pavanello Fabio Matteo</redactedby>
-	<verifiedby>Carlon Chiara\\ Bucco Riccardo \\ Moretto Alessandro\\ Pavanello Fabio Matteo</verifiedby>
-	<approvedby>Moretto Alessandro</approvedby>
+	<redactedby>Bigarella Chiara \\ Davide Dal Bianco \\ Moretto Alessandro</redactedby>
+	<verifiedby>Bucco Riccardo \\ Pavanello Fabio Matteo \\ Rubin Marco</verifiedby>
+	<approvedby>Bucco Riccardo</approvedby>
 	<distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<sections>
@@ -25,6 +25,107 @@
     </appendix>
 
     <changes>
+<!-- fine fase 3-->
+        <version>
+            <id>3.00</id>
+            <date>2015-04-04</date>
+            <author>Bucco Riccardo</author>
+            <role>Product Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>2.09</id>
+            <date>2015-04-03</date>
+            <author>Ribin Marco</author>
+            <role>Verificatore</role>
+            <description>Resoconto dell'attività di verifica</description>
+        </version>
+        <version>
+            <id>2.08</id>
+            <date>2015-04-03</date>
+            <author>Rubin Marco</author>
+            <role>Verificatore</role>
+            <description>Verifica test di integrazione</description>
+        </version>
+        <version>
+            <id>2.07</id>
+            <date>2015-04-03</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verifica test di sistema</description>
+        </version>
+        <version>
+            <id>2.06</id>
+            <date>2015-04-02</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica test di accettazione</description>
+        </version>
+        <version>
+            <id>2.05</id>
+            <date>2015-03-31</date>
+            <author>Moretto Alessandro</author>
+            <role>Progettista</role>
+            <description>Stesura test di integrazione</description>
+        </version>
+        <version>
+            <id>2.04</id>
+            <date>2015-03-31</date>
+            <author>Bigarella Chiara</author>
+            <role>Progettista</role>
+            <description>Stesura test di sistema</description>
+        </version>
+        <version>
+            <id>2.03</id>
+            <date>2015-03-30</date>
+            <author>Dal Bianco Davide</author>
+            <role>Progettista</role>
+            <description>Stesura test di accettazione</description>
+        </version>
+        <version>
+            <id>2.02</id>
+            <date>2015-03-08</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica incremento</description>
+        </version>
+        <version>
+            <id>2.01</id>
+            <date>2015-03-07</date>
+            <author>Bigarella Chiara</author>
+            <role>Analista</role>
+            <description>Incremento strategie e metriche e appendici</description>
+        </version>
+<!-- fine fase 2-->
+        <version>
+            <id>2.00</id>
+            <date>2015-03-04</date>
+            <author>Carlon Chiara</author>
+            <role>Product Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>1.03</id>
+            <date>2015-03-04</date>
+            <author>Dal Bianco Davide</author>
+            <role>Verificatore</role>
+            <description>Resoconto dell'attività di verifica</description>
+        </version>
+        <version>
+            <id>1.02</id>
+            <date>2015-02-27</date>
+            <author>Rubin Marco</author>
+            <role>Verificatore</role>
+            <description>Verifica documento</description>
+        </version>
+        <version>
+            <id>1.01</id>
+            <date>2015-02-23</date>
+            <author>Moretto Alessandro, Carlon Chiara</author>
+            <role>Analista</role>
+            <description>Revisione correttiva contenuti basata su segnalazione del committente</description>
+        </version>
+<!-- fine fase 1-->
         <version>
             <id>1.00</id>
             <date>2015-01-22</date>
@@ -32,12 +133,12 @@
             <role>Product Manager</role>
             <description>Approvazione del documento</description>
         </version>
-		<version>
-			<id>0.09</id>
-			<date>2015-01-20</date>
-			<author>Pavanello Fabio Matteo</author>
-			<role>Verificatore</role>
-			<description>Terminazione Resoconto dell'attività di verifica</description>
+        <version>
+            <id>0.09</id>
+            <date>2015-01-20</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Terminazione Resoconto dell'attività di verifica</description>
         </version>
         <version>
             <id>0.08</id>

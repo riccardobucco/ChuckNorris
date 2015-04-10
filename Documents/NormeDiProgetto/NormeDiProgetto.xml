@@ -3,9 +3,9 @@
 <document>
 	<title>Norme di Progetto</title>
 	<type>Interno</type>
-	<redactedby>Bigarella Chiara \\ Bucco Riccardo \\ Carlon Chiara \\ Rubin Marco</redactedby>
-	<verifiedby>Dal Bianco Davide \\ Moretto Alessandro \\ Pavanello Fabio Matteo</verifiedby>
-	<approvedby>Moretto Alessandro</approvedby>
+	<redactedby>Carlon Chiara \\ Pavanello Fabio Matteo</redactedby>
+	<verifiedby>Bucco Riccardo \\ Moretto Alessandro</verifiedby>
+	<approvedby>Bucco Riccardo</approvedby>
     <distribution>\groupname{}</distribution>
 
 	<sections>
@@ -24,6 +24,72 @@
     </appendix>
 
     <changes>
+    	<!-- Fine fase 3-->
+        <version>
+            <id>3.00</id>
+            <date>2015-03-11</date>
+            <author>Bucco Riccardo</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>2.04</id>
+            <date>2015-03-10</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica Documento</description>
+        </version>
+        <version>
+            <id>2.03</id>
+            <date>2015-03-09</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica Documento</description>
+        </version>
+        <version>
+            <id>2.02</id>
+            <date>2015-03-8</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Amministratore</role>
+            <description>Aggiunta norme progettazione</description>
+        </version>
+        <version>
+            <id>2.01</id>
+            <date>2015-03-06</date>
+            <author>Carlon Chiara</author>
+            <role>Amministratore</role>
+            <description>Aggiunta norme</description>
+        </version>
+<!-- Fine fase 2-->
+        <version>
+            <id>2.00</id>
+            <date>2015-02-25</date>
+            <author>Carlon Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>1.04</id>
+            <date>2015-02-24</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica modifiche</description>
+        </version>
+        <version>
+            <id>1.02</id>
+            <date>2015-02-23</date>
+            <author>Bucco Riccardo</author>
+            <role>Amministratore</role>
+            <description>Modifica struttura documento</description>
+        </version>
+        <version>
+            <id>1.01</id>
+            <date>2015-02-20</date>
+            <author>Bigarella Chiara</author>
+            <role>Amministratore</role>
+            <description>Verifica in base alla valutazione della revisione</description>
+        </version>
+<!-- Fine fase 1-->
         <version>
             <id>1.00</id>
             <date>2014-12-17</date>

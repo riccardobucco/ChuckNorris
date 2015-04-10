@@ -3,9 +3,9 @@
 <document>
 	<title>Glossario</title>
 	<type>Esterno</type>
-	<redactedby>Bigarella Chiara \\ Bucco Riccardo \\ Carlon Chiara \\ Dal Bianco Davide \\ Moretto Alessandro \\ Pavanello Fabio Matteo \\ Rubin Marco</redactedby>
-	<verifiedby>Bucco Riccardo \\ Carlon Chiara \\ Dal Bianco Davide</verifiedby>
-	<approvedby>Moretto Alessandro</approvedby>
+	<redactedby>Dal Bianco Davide \\ Pavanello Fabio Matteo</redactedby>
+	<verifiedby>Bigarella Chiara \\ Moretto Alessandro</verifiedby>
+	<approvedby>Bucco Riccardo</approvedby>
     <distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<sections>
@@ -13,13 +13,93 @@
 	</sections>
 
 	<changes>
-		<version>
-            <id>1.01</id>
+<!--fine fase 3-->
+        <version>
+            <id>3.00</id>
             <date>2015-01-22</date>
+            <author>Bucco Riccardo</author>
+            <role>Product Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>2.07</id>
+            <date>2015-01-22</date>
+            <author>Bigarella Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica vocaboli</description>
+        </version>
+        <version>
+            <id>2.06</id>
+            <date>2015-02-21</date>
+            <author>Dal Bianco Davide</author>
+            <role>Amministratore</role>
+            <description>Inserimenti vocaboli</description>
+        </version>
+        <version>
+            <id>2.05</id>
+            <date>2015-02-24</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Amministratore</role>
             <description>Inserimenti vocaboli</description>
         </version>
+        <version>
+            <id>2.04</id>
+            <date>2015-02-21</date>
+            <author>Dal Bianco Davide</author>
+            <role>Amministratore</role>
+            <description>Inserimenti vocaboli</description>
+        </version>
+        <version>
+            <id>2.03</id>
+            <date>2015-01-22</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica vocaboli</description>
+        </version>
+        <version>
+            <id>2.02</id>
+            <date>2015-02-24</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Amministratore</role>
+            <description>Inserimenti vocaboli</description>
+        </version>
+        <version>
+            <id>2.01</id>
+            <date>2015-02-21</date>
+            <author>Dal Bianco Davide</author>
+            <role>Amministratore</role>
+            <description>Inserimenti vocaboli</description>
+        </version>
+<!--fine fase 2-->
+        <version>
+            <id>2.00</id>
+            <date>2015-01-22</date>
+            <author>Carlon Chiara</author>
+            <role>Product Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>1.03</id>
+            <date>2015-01-22</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verifica vocaboli</description>
+        </version>
+        <version>
+            <id>1.02</id>
+            <date>2015-02-24</date>
+            <author>Bucco Riccardo</author>
+            <role>Amministratore</role>
+            <description>Inserimenti vocaboli</description>
+        </version>
+        <version>
+            <id>1.01</id>
+            <date>2015-02-21</date>
+            <author>Dal Bianco Davide</author>
+            <role>Amministratore</role>
+            <description>Inserimenti vocaboli</description>
+        </version>
+<!--fine fase 1-->
         <version>
             <id>1.00</id>
             <date>2015-01-22</date>

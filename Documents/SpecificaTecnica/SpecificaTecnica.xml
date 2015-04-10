@@ -3,10 +3,10 @@
 <document>
 	<title>Specifica Tecnica</title>
 	<type>Interno</type>
-	<redactedby>XXXX</redactedby>
-	<verifiedby>XXXX</verifiedby>
-	<approvedby>XXXX</approvedby>
-	<distribution>\groupname{}</distribution>
+	<redactedby>Bigarella Chiara \\ Bucco Riccardo \\ Dal Bianco Davide \\ Moretto Alessandro</redactedby>
+	<verifiedby>Carlon Chiara \\ Pavanello Fabio Matteo</verifiedby>
+	<approvedby>Rubin Marco</approvedby>
+	<distribution>\groupname{} \\ Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<sections>
 		<name>Tex/Introduzione.tex</name>
@@ -29,12 +29,111 @@
 	</appendix>
 
 	<changes>
+<!-- Fine fase 3-->
+        <version>
+            <id>1.00</id>
+            <date>2015-03-31</date>
+            <author>Rubin Marco</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>0.14</id>
+            <date>2015-03-31</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verifica documento</description>
+        </version>
+        <version>
+            <id>0.13</id>
+            <date>2015-03-29</date>
+            <author>Bucco Riccardo</author>
+            <role>Progettista</role>
+            <description>Stesura ed importazione tracciamento</description>
+        </version>
+        <version>
+            <id>0.12</id>
+            <date>2015-03-29</date>
+            <author>Dal Bianco Davide</author>
+            <role>Project Manager</role>
+            <description>Stesura stime di fattibilità e di bisogno di risorse</description>
+        </version>
+        <version>
+            <id>0.11</id>
+            <date>2015-03-27</date>
+            <author>Carlon Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica componenti applicazione Android</description>
+        </version>
+        <version>
+            <id>0.10</id>
+            <date>2015-03-26</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verifica componenti Chuck</description>
+        </version>
+        <version>
+            <id>0.09</id>
+            <date>2015-03-26</date>
+            <author>Carlon Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica componenti Norris</description>
+        </version>
+        <version>
+            <id>0.08</id>
+            <date>2015-03-24</date>
+            <author>Moretto Alessandro</author>
+            <role>Progettista</role>
+            <description>Stesura e descrizione componenti applicazione Android</description>
+        </version>
+        <version>
+            <id>0.07</id>
+            <date>2015-03-24</date>
+            <author>Bucco Riccardo</author>
+            <role>Progettista</role>
+            <description>Stesura e descrizione componenti Chuck</description>
+        </version>
+        <version>
+            <id>0.06</id>
+            <date>2015-03-23</date>
+            <author>Dal Bianco Davide</author>
+            <role>Progettista</role>
+            <description>Stesura e descrizione componenti Norris</description>
+        </version>
+        <version>
+            <id>0.05</id>
+            <date>2015-03-15</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verifica architettura</description>
+        </version>
+        <version>
+            <id>0.04</id>
+            <date>2015-03-12</date>
+            <author>Bigarella Chiara</author>
+            <role>Progettista</role>
+            <description>Stesura architettura generale</description>
+        </version>
+        <version>
+            <id>0.03</id>
+            <date>2015-03-07</date>
+            <author>Carlon Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica documento</description>
+        </version>
+        <version>
+            <id>0.02</id>
+            <date>2015-03-06</date>
+            <author>Moretto Alessandro</author>
+            <role>Progettista</role>
+            <description>Stesura tecnologie utilizzate</description>
+        </version>
         <version>
             <id>0.01</id>
-            <date>2014-12-16</date>
-            <author>XXXX</author>
-            <role>XXXX</role>
-            <description>XXXX</description>
+            <date>2015-03-05</date>
+            <author>Bigarella Chiara</author>
+            <role>Progettista</role>
+            <description>Struttura ed introduzione del documento</description>
         </version>
 	</changes>
 </document>

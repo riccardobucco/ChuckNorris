@@ -3,9 +3,9 @@
 <document>
 	<title>Piano di Progetto</title>
 	<type>Esterno</type>
-	<redactedby>Carlon Chiara \\ Moretto Alessandro \\ Rubin Marco</redactedby>
-	<verifiedby>Bigarella Chiara \\ Bucco Riccardo \\ Dal Bianco Davide \\ Pavanello Fabio Matteo</verifiedby>
-    <approvedby>Moretto Alessandro</approvedby>
+	<redactedby>Bucco Riccardo</redactedby>
+	<verifiedby>Dal Bianco Davide</verifiedby>
+    <approvedby>Rubin Marco</approvedby>
     <distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
     <sections>
@@ -24,6 +24,79 @@
     </appendix>
 
 	<changes>
+<!-- Fine fase 3-->
+        <version>
+            <id>3.00</id>
+            <date>2015-04-03</date>
+            <author>Rubin Marco</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>2.04</id>
+            <date>2015-04-03</date>
+            <author>Dal Bianco Davide</author>
+            <role>Verificatore</role>
+            <description>Verifica modifiche</description>
+        </version>
+        <version>
+            <id>2.03</id>
+            <date>2015-04-02</date>
+            <author>Bucco Riccardo</author>
+            <role>Project Manager</role>
+            <description>Stesura consuntivo</description>
+        </version>
+        <version>
+            <id>2.02</id>
+            <date>2015-03-10</date>
+            <author>Dal Bianco Davide</author>
+            <role>Verificatore</role>
+            <description>Verifica modifiche</description>
+        </version>
+        <version>
+            <id>2.01</id>
+            <date>2015-03-08</date>
+            <author>Bucco Riccardo</author>
+            <role>Project Manager</role>
+            <description>Piccola modifica alla pianificazione</description>
+        </version>
+<!-- Fine fase 2-->
+        <version>
+            <id>2.00</id>
+            <date>2015-03-05</date>
+            <author>Carlon Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>1.04</id>
+            <date>2015-03-04</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica modifiche</description>
+        </version>
+        <version>
+            <id>1.03</id>
+            <date>2015-03-03</date>
+            <author>Carlon Chiara</author>
+            <role>Project Manager</role>
+            <description>Piccola modifica alla pianificazione</description>
+        </version>
+        <version>
+            <id>1.02</id>
+            <date>2015-03-01</date>
+            <author>Dal Bianco Davide</author>
+            <role>Amministratore</role>
+            <description>Correzione del documento</description>
+        </version>
+        <version>
+            <id>1.01</id>
+            <date>2015-02-25</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica in base alla valutazione della revisione</description>
+        </version>
+<!-- Fine fase 1-->
         <version>
             <id>1.00</id>
             <date>2015-01-22</date>
