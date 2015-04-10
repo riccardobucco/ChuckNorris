@@ -8,6 +8,6 @@
 	<postcondizione>È stato impostato il formato di stampa dei valori del line chart.</postcondizione>
 	<principale>
 		<item>Il Norris developer sceglie la dimensione dei punti del line chart (UCN1.5.1.2.1);</item>
-		<item>Lo aviluppatore sceglie se la linea del line chart è curva o segmentata (UCN1.5.1.2.2).</item>
+		<item>Il Norris developer sceglie se la linea del line chart è curva o segmentata (UCN1.5.1.2.2).</item>
 	</principale>
 </usecase>
