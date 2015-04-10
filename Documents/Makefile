@@ -3,7 +3,7 @@ DOCUMENTI =	AnalisiDeiRequisiti \
 		NormeDiProgetto \
 		PianoDiProgetto \
 		PianoDiQualifica \
-		StudioDiFattibilita\
+		StudioDiFattibilita \
 		SpecificaTecnica
 
 
@@ -19,24 +19,24 @@ $(DOCUMENTI): _force
 	@ xsltproc -o $@/$@.tex Commons/Document.xsl $@/$@.xml
 
 	@ #documenti specifici
-	@ test "$@" = "AnalisiDeiRequisiti" && make _analisi; exit 0
-	@ test "$@" = "Glossario" && make _glossario; exit 0
-	@ test "$@" = "NormeDiProgetto" && make _norme; exit 0
-	@ test "$@" = "StudioDiFattibilita" && make _studio; exit 0
-
+	@ test "$@" != "AnalisiDeiRequisiti" || make _analisi
+	@ test "$@" != "Glossario" || make _glossario
+	@ test "$@" != "NormeDiProgetto" || make _norme
+	@ test "$@" != "StudioDiFattibilita" || make _studio
+	
 	@ #compilazione file latex
 	@ make $@/$@.pdf
 
 _analisi: _force
 	@ #creazione file latex usecase
-	@ find AnalisiDeiRequisiti/UseCase -name '*.xml' -exec xmllint --noout --schema AnalisiDeiRequisiti/UseCase/UC.xsd {} \;
+	@ find AnalisiDeiRequisiti/UseCase -name '*.xml' | xargs -I {} xmllint --noout --schema AnalisiDeiRequisiti/UseCase/UC.xsd {}
 	@ find AnalisiDeiRequisiti/UseCase -name '*.xml' | grep -Eo '[^/]*$$' | grep -Eo '^[^.]*' | xargs -I {} xsltproc -o AnalisiDeiRequisiti/UseCase/{}.tex AnalisiDeiRequisiti/UseCase/UC.xsl AnalisiDeiRequisiti/UseCase/{}.xml
 	@ find AnalisiDeiRequisiti/UseCase -name '*.tex' | grep -Eo '[^/]*$$' | grep -Eo '^[^.]*' | xargs -I {} sed -ri 's/%filename%/{}/g' AnalisiDeiRequisiti/UseCase/{}.tex
 	
 	@ #concatenazione file
-	@ find AnalisiDeiRequisiti/UseCase -name '*.tex' | grep -Eo '[^/]*$$' | grep -Eo '^UCN[0-9][^.]*' | sort -k 12 | sort -k 10 | sort -k 8 | sort -k 6 | sort -k 4 | xargs -I {} cat AnalisiDeiRequisiti/UseCase/{}.tex > AnalisiDeiRequisiti/UseCase/UCN.tex
-	@ find AnalisiDeiRequisiti/UseCase -name '*.tex' | grep -Eo '[^/]*$$' | grep -Eo '^UCA[0-9][^.]*' | sort -k 12 | sort -k 10 | sort -k 8 | sort -k 6 | sort -k 4 | xargs -I {} cat AnalisiDeiRequisiti/UseCase/{}.tex > AnalisiDeiRequisiti/UseCase/UCA.tex
-	@ find AnalisiDeiRequisiti/UseCase -name '*.tex' | grep -Eo '[^/]*$$' | grep -Eo '^UCD[0-9][^.]*' | sort -k 12 | sort -k 10 | sort -k 8 | sort -k 6 | sort -k 4 | xargs -I {} cat AnalisiDeiRequisiti/UseCase/{}.tex > AnalisiDeiRequisiti/UseCase/UCD.tex
+	@ find AnalisiDeiRequisiti/UseCase -name '*.tex' | grep -Eo '[^/]*$$' | grep -Eo '^UCN[0-9][^.]*' | sort -k 14 | sort -k 13 | sort -k 12 | sort -k 11 | sort -k 10 | sort -k 9 | sort -k 8 | sort -k 7 | sort -k 6 | sort -k 5 |sort -k 4 | xargs -I {} cat AnalisiDeiRequisiti/UseCase/{}.tex > AnalisiDeiRequisiti/UseCase/UCN.tex
+	@ find AnalisiDeiRequisiti/UseCase -name '*.tex' | grep -Eo '[^/]*$$' | grep -Eo '^UCA[0-9][^.]*' | sort -k 14 | sort -k 13 | sort -k 12 | sort -k 11 | sort -k 10 | sort -k 9 | sort -k 8 | sort -k 7 | sort -k 6 | sort -k 5 |sort -k 4 | xargs -I {} cat AnalisiDeiRequisiti/UseCase/{}.tex > AnalisiDeiRequisiti/UseCase/UCA.tex
+	@ find AnalisiDeiRequisiti/UseCase -name '*.tex' | grep -Eo '[^/]*$$' | grep -Eo '^UCD[0-9][^.]*' | sort -k 14 | sort -k 13 | sort -k 12 | sort -k 11 | sort -k 10 | sort -k 9 | sort -k 8 | sort -k 7 | sort -k 6 | sort -k 5 |sort -k 4 | xargs -I {} cat AnalisiDeiRequisiti/UseCase/{}.tex > AnalisiDeiRequisiti/UseCase/UCD.tex
 	
 	@ #download tabelle
 	@ curl http://kaizenteam.it/tracker/export/fonti.php > AnalisiDeiRequisiti/TrackerFonti.tex
@@ -71,14 +71,8 @@ spell: _force
 	@ find . -name '*.xml' -exec aspell --mode=tex --lang=it check {} \;
 	@ find . -name '*.xsl' -exec aspell --mode=tex --lang=it check {} \;
 
-gulpease: chars = 1
-gulpease: words = 1
-gulpease: sentences = 1
-gulpease: _force
-	@ exit 1
-
 glossary: terms = $(shell xmllint --xpath '//entry/@name' Glossario/Termini.xml | grep -o '"[[:alpha:]|\.| ]*"' | grep -o '[[:alpha:]|\.| ]*' | tr "\n" "|" | head -c -1 | sed 's/\./\\./g')
-glossary: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics[^{]*|caption|label|ref|nameref|pageref|hyperref|addtocounter
+glossary: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|level\{[^}]*\}|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics[^{]*|caption|label|ref|nameref|pageref|hyperref|addtocounter
 glossary: _force
 	@ #eliminazione tag
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/\\insglo\{([^\}]*)\}/\1/gi' {} \;
