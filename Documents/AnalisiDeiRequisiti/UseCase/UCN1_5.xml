@@ -11,9 +11,7 @@
 	<postcondizione>È stato creato un modello di un grafico di tipo line chart.</postcondizione>
 	<principale>
 		<item>Il Norris developer sceglie il titolo del chart (UCN1.1.1);</item>
-		<item>Il Norris developer sceglie le opzioni riguardanti la legenda, essendo il grafico non di tipo table (UCN1.1.2);</item>
-		<item>Il Norris developer sceglie le opzioni riguardanti il piano cartesiano, essendo il grafico non di tipo map chart o table (UCN1.1.3);</item>
-		<item>Il Norris developer sceglie la descrizione del chart (UCN1.1.4);</item>
+		<item>Il Norris developer sceglie la descrizione del chart (UCN1.1.2);</item>
 		<item>Il Norris developer inserisce i dati del line chart (UCN1.5.2);</item>
 		<item>Il Norris developer sceglie le opzioni del line chart (UCN1.5.1).</item>
 	</principale>

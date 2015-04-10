@@ -4,7 +4,7 @@
 	<titolo>UCN1.4.1.5.1 Scegliere se la legenda è visualizzata</titolo>
 	<attorip>Norris developer</attorip>
 	<descrizione>Il Norris developer sceglie se la legenda del chart che sta creando è visualizzata o nascosta.</descrizione>
-	<precondizione>Si stanno configurando le impostazioni riguardanti la legenda.</precondizione>
+	<precondizione>Si stanno configurando le impostazioni riguardanti la legenda di un bar chart.</precondizione>
 	<postcondizione>È stato impostato se la legenda è visualizzata o meno.</postcondizione>
 		<principale>
 		<item>Il Norris developer sceglie se la legenda è visualizzata.</item>

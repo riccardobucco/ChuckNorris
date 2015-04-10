@@ -2,7 +2,6 @@
 
 <usecase>
 	<titolo>UCN1.6 Creare modello map chart</titolo>
-	
 	<attorip>Norris developer</attorip>
 	<specializzazionedi>
 		<item>UCN1.1 Creare modello chart</item>
@@ -12,8 +11,7 @@
 	<postcondizione>È stato creato un modello di un grafico di tipo map chart.</postcondizione>
 	<principale>
 		<item>Il Norris developer sceglie il titolo del chart (UCN1.1.1);</item>
-		<item>Il Norris developer sceglie le opzioni riguardanti la legenda, essendo il grafico non di tipo table (UCN1.1.2);</item>
-		<item>Il Norris developer sceglie la descrizione del chart (UCN1.1.4);</item>
+		<item>Il Norris developer sceglie la descrizione del chart (UCN1.1.2);</item>
 		<item>Il Norris developer inserisce una o più serie di punti nel map chart (UCN1.6.2);</item>
 		<item>Il Norris developer sceglie le opzioni del map chart (UCN1.6.1).</item>		
 	</principale>

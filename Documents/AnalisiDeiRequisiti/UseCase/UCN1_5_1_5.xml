@@ -4,7 +4,7 @@
 	<titolo>UCN1.5.1.5 Scegliere le opzioni riguardanti la legenda di un line chart</titolo>
 	<attorip>Norris developer</attorip>
 	<descrizione>Il Norris developer può configurare le opzioni riguardanti la legenda del line chart che sta creando. In particolare può scegliere se la legenda è visualizzata o nascosta. Può inoltre scegliere la posizione in cui è visualizzata quest'ultima.</descrizione>
-	<precondizione>Si sta creando un modello di chart. Il chart che si desidera creare non è di tipo table.</precondizione>
+	<precondizione>Si stanno configurando le impostazioni di un line chart.</precondizione>
 	<postcondizione>Sono state configurate le impostazioni riguardanti la legenda.</postcondizione>
 	<principale>
 		<item>Il Norris developer sceglie se la legenda è visualizzata (UCN1.5.1.5.1);</item>

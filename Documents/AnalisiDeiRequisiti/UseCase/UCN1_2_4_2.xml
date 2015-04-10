@@ -7,7 +7,7 @@
 	<precondizione>Si sta aggiornando un modello table. È stato selezionato un modello table.</precondizione>
 	<postcondizione>È stato aggiornato il modello table selezionato con metodo stream.</postcondizione>
 	<principale>
-		<item>Il Norris developer inserisce i valori delle nuove righe che intende aggiungere;</item>
+		<item>Il Norris developer inserisce le nuove righe che intende aggiungere (tante celle quante sono le colonne della table selezionata);</item>
 		<item>Le nuove righe vengono aggiunte al grafico.</item>
 	</principale>
 </usecase>
