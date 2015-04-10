@@ -12,7 +12,7 @@
 	<estensioni>UCN1.9 Visualizzare errore dati non corretti</estensioni>
 	<descrizione>Il Norris developer può creare un grafico lato server tramite l'utilizzo delle API interne. In particolare può scegliere il titolo del chart e la sua descrizione. Il presente caso d'uso non può essere eseguito da solo, ma solamente quando si esegue uno dei casi d'uso che lo specializzano (UCN1.4, UCN1.5, UCN1.6, UCN1.7).</descrizione>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
-	<postcondizione>È stato creato un modello di un grafico. Tale modello può essere di tipo bar chart, line chart, map chart o table: questo dipende dal caso d'uso specializzato che è stato eseguito.</postcondizione>
+	<postcondizione>È stato creato un modello di un grafico. Tale modello può essere di tipo bar chart, line chart, map chart o table: questo dipende dal caso d'uso specializzato che è stato eseguito. In particolare, il grafico creato possiede un titolo e una descrizione.</postcondizione>
 	<principale>
 		<item>Il Norris developer sceglie il titolo del chart (UCN1.1.1);</item>
 		<item>Il Norris developer sceglie la descrizione del chart (UCN1.1.2).</item>

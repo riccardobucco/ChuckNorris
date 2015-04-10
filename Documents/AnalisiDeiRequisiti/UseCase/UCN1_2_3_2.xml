@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN1.2.3.2 Aggiornare un modello map chart con metodo movie</titolo>
 	<attorip>Norris developer</attorip>
-<descrizione>Il Norris developer aggiorna il grafico di tipo map chart con metodo movie. In particolare sceglie i punti del map chart che intende modificare e vi inserisce la nuova posizione. Inoltre, inserisce le posizioni dei nuovi punti che intende aggiungere al grafico e sceglie gli eventuali punti da eliminare.</descrizione>
+<descrizione>Il Norris developer aggiorna il grafico di tipo map chart con metodo movie. In particolare sceglie i punti del map chart che intende modificare e vi inserisce la nuova posizione. Inoltre, inserisce le posizioni dei nuovi punti che intende aggiungere al grafico e sceglie gli eventuali punti da eliminare. In genere, l'attore principale è un'applicazione che si occupa di fornire a Norris i dati necessari nel formato corretto per eseguire automaticamente degli aggiornamenti di tipo movie sul map chart selezionato.</descrizione>
 	<precondizione>Si sta aggiornando il modello di un map chart. È stato selezionato il modello di un map chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello del map chart selezionato con metodo movie.</postcondizione>
 	<principale>

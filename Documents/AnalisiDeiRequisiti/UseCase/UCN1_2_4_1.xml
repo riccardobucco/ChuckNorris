@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN1.2.4.1 Aggiornare un modello table con metodo in place</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Il Norris developer aggiorna il grafico di tipo table con metodo in place. In particolare sceglie le celle della table che intende modificare e vi inserisce i nuovi valori.</descrizione>
+	<descrizione>Il Norris developer aggiorna il grafico di tipo table con metodo in place. In particolare sceglie le celle della table che intende modificare e vi inserisce i nuovi valori. In genere, l'attore principale è un'applicazione che si occupa di fornire a Norris i dati necessari nel formato corretto per eseguire automaticamente degli aggiornamenti di tipo inplace sulla table selezionata.</descrizione>
 	<precondizione>Si sta aggiornando un modello table. È stato selezionato un modello table.</precondizione>
 	<postcondizione>È stato aggiornato il modello table selezionato con metodo in place.</postcondizione>
 	<principale>

@@ -4,8 +4,8 @@
 	<titolo>UCN1.2.2 Aggiornare un modello line chart</titolo>
 	<attorip>Norris developer</attorip>
 	<descrizione>Il Norris developer seleziona un grafico line chart da aggiornare e sceglie la tipologia di aggiornamento del grafico stesso. Per un grafico line chart sono disponibili gli aggiornamenti con metodo in place e con metodo stream.</descrizione>
-	<precondizione>Si sta scegliendo la tipologia di aggiornamento del modello di un chart.</precondizione>
-	<postcondizione>È stata scelta la tipologia di aggiornamento del modello di un line chart.</postcondizione>
+	<precondizione>Si sta aggiornando il modello di un chart.</precondizione>
+	<postcondizione>È stato aggiornato il modello di un line chart selezionato tramite uno dei metodi di aggiornamento disponibili (inplace, stream)</postcondizione>
 	<principale>
 		<item>Il Norris developer seleziona un modello line chart da aggiornare;</item>
 		<item>Il Norris developer aggiorna con metodo in place(UCN1.2.2.1) o con metodo stream(UCN1.2.2.2) il modello line chart selezionato.</item>

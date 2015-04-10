@@ -4,8 +4,8 @@
 	<titolo>UCN1.2.1 Aggiornare un modello bar chart</titolo>
 	<attorip>Norris developer</attorip>
 	<descrizione>Il Norris developer seleziona un grafico bar chart da aggiornare e sceglie la tipologia di aggiornamento del grafico stesso. Per un grafico bar chart è disponibile l'aggiornamento con metodo in place.</descrizione>
-	<precondizione>Si sta scegliendo la tipologia di aggiornamento del modello di un chart.</precondizione>
-	<postcondizione>È stata scelta la tipologia di aggiornamento del modello di un bar chart.</postcondizione>
+	<precondizione>Si sta aggiornando il modello di un chart.</precondizione>
+	<postcondizione>È stato aggiornato il modello di un bar chart selezionato tramite uno dei metodi di aggiornamento disponibili (inplace).</postcondizione>
 	<principale>
 		<item>Il Norris developer seleziona un modello bar chart da aggiornare;</item>
 		<item>Il Norris developer sceglie di aggiornare il modello bar chart selezionato con metodo in place (UCN1.2.1.1).</item>

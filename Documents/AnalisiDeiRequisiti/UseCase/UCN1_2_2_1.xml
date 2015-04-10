@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN1.2.2.1 Aggiornare un modello line chart con metodo in place</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Il Norris developer aggiorna il grafico di tipo line chart con metodo in place. In particolare sceglie i punti del line chart che intende modificare e vi inserisce i nuovi valori.</descrizione>
+	<descrizione>Il Norris developer aggiorna il grafico di tipo line chart con metodo in place. In particolare sceglie i punti del grafico che intende modificare e vi inserisce i nuovi valori. In genere, l'attore principale è un'applicazione che si occupa di fornire a Norris i dati necessari nel formato corretto per eseguire automaticamente degli aggiornamenti di tipo inplace sul line chart selezionato.</descrizione>
 	<precondizione>Si sta aggiornando il modello di un line chart. È stato selezionato il modello di un line chart.</precondizione>
 	<postcondizione>È stato aggiornato il modello del line chart selezionato con metodo in place.</postcondizione>
 	<principale>
