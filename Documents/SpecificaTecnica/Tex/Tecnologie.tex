@@ -1,1 +1,64 @@
 \level{1}{Tecnologie utilizzate}
+In questa sezione sono elencate le principali tecnologie utilizzate per lo sviluppo del progetto. Per ognuna di esse viene descritto lo scopo per il quale vengono usate ed i vantaggi che se ne ricavano.
+\level{2}{Node.js}
+L'utilizzo di Node.js è stato richiesto dal proponente. Si tratta di un sistema run-time cross-platform che utilizza l'engine Google V8 Javascript per eseguire il codice; viene utilizzato nello sviluppo di applicazioni real-time, lato server e di rete. Nel progetto viene usato per la realizzazione della libreria come piattaforma di sviluppo.
+\level{3}{Vantaggi}
+\begin{itemize}
+\item fornisce una semplice soluzione per lo sviluppo di programmi scalabili;
+\item essendo leggero ed efficiente è particolarmente indicato per applicazioni real-time con un intensivo uso di dati;
+\item usa un sistema I/O asincrono, non bloccante, basato su eventi; questo permette di sviluppare più facilmente sistemi responsivi.
+\end{itemize}
+
+\level{2}{Socket.io}
+L'uso di Socket.io è stato richiesto dal proponente. È una libreria JavaScript che permette comunicazioni real-time bidirezionali e basate su eventi. Viene utilizzato per implementare la trasmissione degli aggiornamenti dei grafici.
+\level{3}{Vantaggi}
+\begin{itemize}
+\item permette di creare comunicazioni bi-direzionali tra client e server;
+\item gestisce la connessione in modo trasparente;
+\item ogniqualvolta il browser lo supporti usa il protocollo WebSocket, il quale fornisce canali di comunicazione bidirezionali simultanei attraverso una singola connessione TCP.
+\end{itemize}
+
+\level{2}{Express.js}
+Express.js è un framework di Node.js che mette a disposizione un middleware utilizzabile per la realizzazione dell'infrastruttra web. Il suo utilizzo è stato richiesto dal proponente.
+
+\level{3}{Vantaggi}
+Express.js permette di estendere il modulo \texttt{http} di Node.js rendendo più facile la gestione dell'indirizzamento del server, delle risposte, dei cookie e delle richieste di stato HTTP.
+
+\level{2}{HTML5}
+Si è scelto di utilizzare HTML5 come linguaggio di markup per la creazione delle pagine web.
+\level{3}{Vantaggi}
+\begin{itemize}
+\item è il linguaggio utilizzato dalla libreria Chart.js per produrre i grafici;
+\item HTML5 è supportato da tutti i più recenti browser;
+\item assieme a CSS permette di creare pagine web più interattive;
+\item è stato decretato standard dal W3C.
+\end{itemize}
+
+\level{2}{CSS3}
+È stato scelto di usare CSS3 come linguaggio di formattazione dei documenti HTML. Grazie ad esso è possibile fornire un layout alle pagine web per renderle accessibili ed usabili.
+\level{3}{Vantaggi:}
+\begin{itemize}
+\item permette il riuso del codice, il che comporta una maggiore velocità di caricamento delle pagine web;
+\item consente una manutenzione più semplice e veloce;
+\item permette la separazione tra la struttura e la presentazione.
+\end{itemize}
+
+\level{2}{Chart.js}
+È stato scelto di usare la libreria Javascript Chart.js per la creazione di grafici in HTML5.
+\level{3}{Vantaggi}
+\begin{itemize}
+\item usa l'elemento canvas di HTML5, il quale è supportato da tutti i browser più recenti;
+\item è libero da dipendenze ed è leggero;
+\item fornisce un sistema responsive (ad esempio i grafici vengono ridimensionati se la finestra del browser cambia dimensioni);
+\item essendo modulare, permette di caricare solo i grafici di cui si ha bisogno.
+\end{itemize}
+
+\level{2}{AngularJS}
+AngularJS è un framework MVC JavaScript che fornisce un metodo ben strutturato per la creazione di siti e applicazioni web. Questo framework è la libreria lato client ideale da usare insieme a Node.js.
+\level{3}{Vantaggi}
+\begin{itemize}
+\item fornisce un approccio pulito e strutturato per la creazione delle applicazioni lato client;
+\item utilizza gli oggetti JavaScript;
+\item facilita la corretta implementazione del pattern MVC;
+\item fornisce una semplice e flessibile interfaccia di filtraggio che permette di filtrare i dati nel passaggio da Model a View.
+\end{itemize}
