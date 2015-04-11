@@ -40,5 +40,40 @@ Anche durante questa terza fase, secondo quanto riportato dal \insdoc{Piano di P
 					\end{tabu}
 					\caption{Nuovi termini da inserire nel Glossario individuati tramite verifica manuale dei documenti durante la Fase SD}
 				\end{table}
-				È stata infine verificata la correttezza dei diagrammi UML utilizzati all'interno dei vari documenti, sempre seguendo le procedure 
-				contenute nel documento \insdoc{Norme di Progetto}. Per quanto riguarda i diagrammi delle componenti non sono stati riscrontrati grossi problemi. Sì è rivelata più critica la stesura dei diagrammi di attività inerenti le modalità di interezione tra le varie componenti.
+				È stata infine verificata la correttezza dei diagrammi UML utilizzati all'interno dei vari documenti, sempre seguendo le procedure contenute nel documento \insdoc{Norme di Progetto}. Per quanto riguarda i diagrammi delle componenti non sono stati riscrontrati grossi problemi. Sì è rivelata più critica la stesura dei diagrammi di attività inerenti le modalità di interezione tra le varie componenti.
+				
+			\level{4}{Verifiche automatizzate}
+			Le attività di verifica automatizzate, oltre a rispettare le procedure descritte all'interno delle \insdoc{Norme di Progetto}, fanno uso degli strumenti automatici previsti all'interno dello stesso documento. Questi hanno permesso di individuare numerosi errori che riguardano le seguenti tipologie:
+			\begin{itemize}
+				\item ortografia errata;
+				\item utilizzo errato dei comandi \LaTeX{} previsti dalle \insdoc{Norme di Progetto};
+				\item norme tipografiche non rispettate.
+			\end{itemize}
+			Di seguito è presentato un riassunto della quantità di errori trovati (e successivamente risolti) utilizzando la verifica automatica.
+			\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c |}
+						\hline
+						Errori ortografici	&145	\\ \hline
+						Utilizzo errato \LaTeX{}	&3	\\ \hline
+						Errori riguardanti norme tipografiche	&11	\\ \hline
+					\end{tabu}
+					\caption{Errori trovati tramite verifica automatica dei documenti durante la Fase SD}
+				\end{table}
+				Come si può notare, gli errori di utilizzo errato dei comandi \LaTeX{} e gli errori relativi le norme tipografiche sono diminuiti rispetto alla \insphase{Fase DB}. Ciò è probabilmente dovuto ad una maggiore familiarità del team con le \insdoc{Norme di Progetto}.\\
+				Di seguito riportiamo gli indici ottenuti dal calcolo dell'indice di leggibilità sui documenti completi.
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+							\hline
+							Documenti 							& Gulpease	& Esito		\\ \hline \hline
+							
+							Piano di progetto v1.00				& -- 		& Superato  \\ \hline
+							Norme di Progetto v1.00 			& --		& Superato  \\ \hline
+							Studio di Fattibilità v1.00 	& --		& Superato  \\ \hline
+							Analisi dei Requisiti v1.00	 	& --		& Superato  \\ \hline
+							Piano di Qualifica v1.00 			& --		& Superato  \\ \hline
+							Glossario v1.00					 	& -- 		& Superato  \\ \hline
+						\end{tabu}
+					\caption{Esiti del calcolo dell'indice di leggibilità effettuato tramite strumenti automatici durante la Fase SD}
+				\end{table}
