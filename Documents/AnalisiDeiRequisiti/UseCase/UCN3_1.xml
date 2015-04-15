@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN3.1 Selezionare il modello di grafico che si vuole rappresentare</titolo>
+	<titolo>UCN3.1 Selezionare il modello di grafico che si vuole rAppresentare</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>Tramite l'utilizzo delle API fornite da CHUCK, il Web developer può selezionare il modello di grafico che vuole rappresentare.</descrizione>
+	<descrizione>Tramite l'utilizzo delle API fornite da CHUCK, il Web developer può selezionare il modello di grafico che vuole rAppresentare.</descrizione>
 	<precondizione>Si stanno utilizzando le API fornite da CHUCK.</precondizione>
-	<postcondizione>È stato selezionato il modello di grafico che si vuole rappresentare.</postcondizione>
+	<postcondizione>È stato selezionato il modello di grafico che si vuole rAppresentare.</postcondizione>
 	<principale>
-		<item>Il Web developer seleziona il modello di grafico che vuole rappresentare.</item>
+		<item>Il Web developer seleziona il modello di grafico che vuole rAppresentare.</item>
 	</principale>
 </usecase>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN3.8.1 Inserire indirizzo di un'istanza di Norris</titolo>
+	<attorip>Web developer</attorip>
+	<descrizione>Per ottenere l'accesso a un'istanza di Norris utilizzando le API fornite da CHUCK, il Web developer sceglie l'indirizzo alla quale essa può essere trovata.</descrizione>
+	<precondizione>Si sta eseguendo l'accesso a un'istanza di Norris utilizzando le API fornite da CHUCK.</precondizione>
+	<postcondizione>È stato selezionato l'indirizzo dell'istanza di Norris alla quale si vuole accedere.</postcondizione>
+	<principale>
+		<item>Il Web developer inserisce l'indirizzo dell'istanza Norris al quale vuole accedere utilizzando le API fornite da CHUCK.</item>
+	</principale>
+</usecase>
