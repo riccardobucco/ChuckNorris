@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCA2.1 Visualizzazione ID grafici</titolo>
+	<titolo>UCA2.1 Visualizzare ID grafici</titolo>
 	<attorip>Utente</attorip>
-	<descrizione>L'utente, dopo aver visualizzato l'elenco dei grafici esistenti, visualizza l'ID di tali grafici.</descrizione>
-	<precondizione>Si sta visualizzando l'elenco dei grafici esistenti.</precondizione>
+	<descrizione>L'utente visualizza l'ID dei grafici presenti all'interno di un'istanza di Norris.</descrizione>
+	<precondizione>Si sta visualizzando l'elenco dei grafici esistenti all'interno di un'istanza di Norris alla quale si ha accesso.</precondizione>
 	<postcondizione>È stato visualizzato l'ID dei grafici presenti nell'istanza di Norris.</postcondizione>
+	<principale>
+		<item>L'utente visualizza l'ID di ogni grafico presente all'interno dell'istanza di Norris alla quale ha accesso.</item>
+	</principale>
 </usecase>

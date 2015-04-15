@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCA2.3 Visualizzazione tipo grafici</titolo>
+	<titolo>UCA2.3 Visualizzare tipo grafici</titolo>
 	<attorip>Utente</attorip>
-	<descrizione>L'utente, dopo aver visualizzato l'elenco dei grafici esistenti, visualizza la tipologia di tali grafici.</descrizione>
-	<precondizione>Si sta visualizzando l'elenco dei grafici esistenti.</precondizione>
-	<postcondizione>È stato visualizzata la tipologia dei grafici presenti nell'istanza di Norris.</postcondizione>
+	<descrizione>L'utente visualizza il tipo dei grafici presenti all'interno di un'istanza di Norris.</descrizione>
+	<precondizione>Si sta visualizzando l'elenco dei grafici esistenti all'interno di un'istanza di Norris alla quale si ha accesso.</precondizione>
+	<postcondizione>È stato visualizzato il tipo dei grafici presenti nell'istanza di Norris.</postcondizione>
+	<principale>
+		<item>L'utente visualizza il tipo di ogni grafico presente all'interno dell'istanza di Norris alla quale ha accesso.</item>
+	</principale>
 </usecase>

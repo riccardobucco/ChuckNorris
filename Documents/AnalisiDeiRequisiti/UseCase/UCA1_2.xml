@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCA1.2 Inserire username</titolo>
+	<attorip>Utente</attorip>
+	<descrizione>L'utente, per autenticarsi ad un'istanza di Norris e sfruttare le funzionalità messe a disposizione da essa, deve poter inserire il proprio username.</descrizione>
+	<precondizione>Si sta eseguendo l'accesso ad un'istanza di Norris.</precondizione>
+	<postcondizione>È stato scelto lo username con il quale si intende effettuare l'accesso all'istanza di Norris desiderata.</postcondizione>
+	<principale>
+		<item>L'utente inserisce lo username con il quale intende collegarsi ad una istanza di Norris.</item>
+	</principale>
+</usecase>

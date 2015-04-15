@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCA2 Visualizzazione elenco grafici</titolo>
+	<titolo>UCA2 Visualizzare elenco grafici</titolo>
 	<attorip>Utente</attorip>
-	<descrizione>L'utente, dopo essersi collegato ad un'istanza di Norris, visualizza la lista di grafici esistenti.</descrizione>
+	<descrizione>L'utente, dopo essersi collegato ad un'istanza di Norris, è in grado di visualizzare la lista di grafici in essa presenti.</descrizione>
 	<precondizione>Si sta utilizzando l'applicazione. È avvenuto il collegamento ad un'istanza di Norris.</precondizione>
 	<postcondizione>È stato visualizzato l'elenco dei grafici presenti nell'istanza di Norris.</postcondizione>
 	<principale>
-		<item>L'utente visualizza l'ID del grafico (UCA2.1);</item>
-		<item>L'utente visualizza il titolo del grafico (UCA2.2);</item>
-		<item>L'utente visualizza il tipo del grafico (UCA2.3);</item>
-		<item>L'utente visualizza la descrizione del grafico (UCA2.4).</item>
+		<item>L'utente visualizza l'ID di ogni grafico (UCA2.1);</item>
+		<item>L'utente visualizza il titolo di ogni grafico (UCA2.2);</item>
+		<item>L'utente visualizza il tipo di ogni grafico (UCA2.3);</item>
+		<item>L'utente visualizza la descrizione di ogni grafico (UCA2.4).</item>
 	</principale>
 </usecase>

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCA2.4 Visualizzazione descrizione grafici</titolo>
+	<titolo>UCA2.4 Visualizzare descrizione grafici</titolo>
 	<attorip>Utente</attorip>
-	<descrizione>L'utente, dopo aver visualizzato l'elenco dei grafici esistenti, visualizza la descrizione di tali grafici.</descrizione>
-	<precondizione>Si sta visualizzando l'elenco dei grafici esistenti.</precondizione>
-	<postcondizione>È stato visualizzata la descrizione dei grafici presenti nell'istanza di Norris.</postcondizione>
+	<descrizione>L'utente visualizza la descrizione dei grafici presenti all'interno di un'istanza di Norris.</descrizione>
+	<precondizione>Si sta visualizzando l'elenco dei grafici esistenti all'interno di un'istanza di Norris alla quale si ha accesso.</precondizione>
+	<postcondizione>È stata visualizzata la descrizione dei grafici presenti nell'istanza di Norris.</postcondizione>
+	<principale>
+		<item>L'utente visualizza la descrizione di ogni grafico presente all'interno dell'istanza di Norris alla quale ha accesso.</item>
+	</principale>
 </usecase>

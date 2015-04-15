@@ -13,8 +13,8 @@
 	</principale>
 	<alternativi>
 		<scenario>
-			<descrizione>Nel caso in cui l'indirizzo dell'istanza Norris che è stato inserito non risulti valido:</descrizione>
-			<item>il sistema segnala che è stato inserito un indirizzo nel quale non è presente un'istanza Norris (UCA4).</item>
+			<descrizione>Nel caso in cui i dati di accesso all'istanza di Norris che sono stati inseriti non risultino validi:</descrizione>
+			<item>il sistema segnala che sono stati inseriti dati di accesso non validi (UCA4).</item>
 		</scenario>
 	</alternativi>
 </usecase>

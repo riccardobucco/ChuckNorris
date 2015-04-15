@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCA1.1 Inserire indirizzo di un'istanza di Norris</titolo>
+	<attorip>Utente</attorip>
+	<descrizione>L'utente, per poter avere accesso a un'istanza di Norris, deve prima di tutto selezionare l'istanza desiderata. Per fare ciò esso deve indicare l'indirizzo al quale essa può essere trovata.</descrizione>
+	<precondizione>Si sta eseguendo l'accesso ad un'istanza di Norris.</precondizione>
+	<postcondizione>È stato scelto l'indirizzo dell'istanza di Norris alla quale ci si vuole collegare.</postcondizione>
+	<principale>
+		<item>L'utente inserisce l'indirizzo dell'istanza desiderata.</item>
+	</principale>
+</usecase>
