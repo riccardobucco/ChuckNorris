@@ -3,12 +3,13 @@
 <usecase>
 	<titolo>UCN2 Utilizzo API esterne di Norris</titolo>
 	<attorip>App developer</attorip>
-	<descrizione>Tramite l'utilizzo delle API esterne di Norris, l'App developer può visualizzare informazioni inerenti ad un'istanza di Norris. In particolare può inserire l'indirizzo dell'istanza di Norris, ottenere la lista dei grafici presenti nell'istanza di Norris di cui ha inserito l'indirizzo e infine può ottenere un grafico presente nell'istanza.</descrizione>
+	<descrizione>Tramite l'utilizzo delle API esterne di Norris, l'App developer può visualizzare informazioni inerenti ad un'istanza di Norris. In particolare può accedere all'istanza di Norris, ottenere la lista dei grafici presenti nell'istanza di Norris alla quale ha avuto accesso e può ottenere un grafico presente nell'istanza. Infine, l'App developer può scollegarsi dall'istanza di Norris alla quale si era precedentemente collegato.</descrizione>
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>
 	<principale>
-		<item>L'app developer può inserire l'indirizzo dell'istanza di Norris (UCN2.1);</item>
-		<item>L'app developer può ottenere la lista dei grafici presenti nell'istanza di Norris di cui ha inserito l'indirizzo(UCN2.2);</item>
-		<item>L'app developer può ottenere un grafico presente nell'istanza di Norris (UCN2.3).</item>
+		<item>L'app developer accede a un'istanza di Norris (UCN2.1);</item>
+		<item>L'app developer può ottenere la lista dei grafici presenti nell'istanza di Norris alla quale ha avuto accesso (UCN2.2);</item>
+		<item>L'app developer può ottenere un grafico presente nell'istanza di Norris alla quale ha avuto accesso (UCN2.3).</item>
+		<item>L'app developer può scollegarsi dall'istanza di Norris alla quale si era collegato (UCN2.4)</item>
 	</principale>
 </usecase>

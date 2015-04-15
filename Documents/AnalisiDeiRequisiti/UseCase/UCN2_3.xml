@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN2.3 Ottenere un grafico presente in un'istanza di Norris</titolo>
 	<attorip>App developer</attorip>
-	<descrizione>L'app developer può ottenere un grafico presente in un'istanza di Norris.</descrizione>
+	<descrizione>L'app developer può ottenere un grafico presente in un'istanza di Norris. Dopo averlo ottenuto egli riceve automaticamente tutti gli aggiornamenti che lo riguadano.</descrizione>
 	<precondizione>Si stanno utilizzando le API esterne.</precondizione>
-	<postcondizione>È stato ottenuto un grafico presente in un'istanza di Norris. È stato inserito l'indirizzo di un'istanza di Norris.</postcondizione>
+	<postcondizione>È stato ottenuto un grafico presente in un'istanza di Norris. È stato ottenuto l'accesso all'istanza di Norris al quale appartiene il grafico desiderato.</postcondizione>
 	<principale>
-		<item>L'app developer indica il grafico contenuto nell'istanza di Norris che vuole ottenere.</item>
+		<item>L'app developer indica l'id del grafico contenuto nell'istanza di Norris che vuole ottenere.</item>
 	</principale>
 </usecase>

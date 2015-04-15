@@ -4,7 +4,7 @@
 	<titolo>UCN2.2 Ottenere lista dei grafici presenti in un'istanza di Norris</titolo>
 	<attorip>App developer</attorip>
 	<descrizione>L'app developer può ottenere la lista dei grafici inerenti all'istanza di Norris di cui ha inserito l'indirizzo. In particolare può ottenere ID, titolo, tipo e descrizione di ciascun grafico.</descrizione>
-	<precondizione>Si stanno utilizzando le API esterne. È stato inserito l'indirizzo di un'istanza di Norris.</precondizione>
+	<precondizione>Si stanno utilizzando le API esterne. È stato eseguito l'accesso a un'istanza di Norris.</precondizione>
 	<postcondizione>È stata ottenuta la lista dei grafici presenti in un'istanza di Norris. Sono state inoltre ottenute tutte le informazioni riguardanti ciascun grafico presente nell'istanza Norris.</postcondizione>
 	<principale>
 		<item>L'app developer ottiene l'ID di ciascun grafico (UCN2.2.1);</item>
