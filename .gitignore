@@ -10,7 +10,11 @@
 **/*.lot
 **/*.out
 
+#astah file
+Documents/SpecificaTecnica/Classi/*.xml
+
 #other files
+**/*.bak
 **/*.log
 **/*~
 

@@ -1,5 +1,5 @@
 \level{1}{Descrizione generale dei prodotti}
-    Riportiamo di seguito una descrizione generale dei prodotti. Per una descrizione più dettagliata delle funzionalità dei prodotti, si rimanda al documento \insdoc{Analisi dei Requisiti x.xx}.
+    Riportiamo di seguito una descrizione generale dei prodotti. Per una descrizione più dettagliata delle funzionalità dei prodotti, si rimanda al documento \insdoc{Analisi dei Requisiti 3.00}.
 
     \level{2}{Norris}
     Norris è un framework per Node.js che permette di raccogliere dati provenienti da sorgenti arbitrarie e visualizzarli come grafici in modo semplice e veloce. In particolare mette a disposizione dei suoi utenti due interfacce:
@@ -16,7 +16,7 @@
         \item movie, supportato da map chart.
     \end{itemize}
     
-    MANCANO I VINCOLI SUL FORMATO DEI DATI IN INGRESSO
+    
     
     Lo sviluppatore può, inoltre, scegliere di incapsulare alcuni grafici all'interno di una o più pagine web. Le API interne permettono infatti di aggiungere i grafici creati ad una o più pagine web, le quali verrano create in automatico da Norris. Lo sviluppatore, oltre a poter scegliere quali grafici inserire in queste pagine, può configurare le impostazioni di ciascuna di esse. Tra le impostazioni principali ci sono la scelta del titolo e del template della pagina.\\
     Infine, se lo sviluppatore non vuole rendere pubblici i propri grafici, può definire una funzione login, una funzione islogged e una funzione di logout. Queste verranno eseguite ogni qualvolta venga richiesto di accedere alle informazioni di un grafico.
@@ -25,7 +25,7 @@
    Tramite le API esterne, un utente lato client può effettuare l'autenticazione ad un'istanza di Norris esistente e richiedere al server le informazioni inerenti ai grafici presenti in quell'istanza. In particolare l'utente client può richiedere la lista dei grafici presenti nell'istanza, nonchè le informazioni di ogni singolo grafico della lista. Le informazioni verranno fornite in formato JSON.
 
     \level{2}{Chuck}
-    Chuck, acronimo di CHart Universal Creator Kit, è una libreria Javascript lato client che permette di incapsulare un grafico (creato tramite le API interne di Norris) all'interno di una pagina web diversa da quelle create di default da Norris. In particolare lo sviluppatore lato client deve autenticarsi ad un'istanza di Norris, richiedere un grafico e scegliere il tag HTML in cui inserire il grafico. È possibile, inoltre, modificare alcune impostazioni relative al grafico.
+    Chuck, acronimo di Chart Universal Creator Kit, è una libreria Javascript lato client che permette di incapsulare un grafico (creato tramite le API interne di Norris) all'interno di una pagina web diversa da quelle create di default da Norris. In particolare lo sviluppatore lato client deve autenticarsi ad un'istanza di Norris, richiedere un grafico e scegliere il tag HTML in cui inserire il grafico. È possibile, inoltre, modificare alcune impostazioni relative al grafico.
     
    \level{2}{Applicazione Android}
     L'applicazione Android permette di visualizzare i grafici di un'istanza di Norris da uno smartphone Android. Essa permette di scegliere l'istanza di Norris alla quale connettersi tramite autenticazione. Una volta autenticato, l'utente può visualizzare la lista di grafici esistenti e i grafici stessi.
