@@ -4,9 +4,10 @@
 	<titolo>UCN1.7.1.4 Scegliere se è possibile ordinare le righe rispetto ai valori di una colonna</titolo>
 	<attorip>Norris developer</attorip>
 	<descrizione>Il Norris developer può scegliere se è possibile ordinare le righe della table rispetto ai valori di una colonna.</descrizione>
-	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table. Vengono eseguiti solo aggiornamenti di tipo in place.</precondizione>
-	<postcondizione>È stato scelto se è possibile ordinare le righe rispetto ai valori di una colonna.</postcondizione>
+	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table. Vengono eseguiti solo aggiornamenti di tipo in place. Si conosce il numero di colonne della table e le si sa identificare.</precondizione>
+	<postcondizione>È stato scelto se è possibile ordinare le righe rispetto ai valori di una colonna selezionata.</postcondizione>
 	<principale>
-		<item>Il Norris developer sceglie se è possibile ordinare le righe della table rispetto ai valori di una colonna.</item>
+		<item>Il Norris developer seleziona una colonna.</item>
+		<item>Il Norris developer sceglie se è possibile ordinare le righe della table rispetto ai valori della colonna selezionata.</item>
 	</principale>
 </usecase>

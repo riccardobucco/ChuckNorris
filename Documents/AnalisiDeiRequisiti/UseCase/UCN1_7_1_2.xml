@@ -5,8 +5,9 @@
 	<attorip>Norris developer</attorip>
 	<descrizione>Il Norris developer può impostare l'intestazione di ogni colonna della table che sta creando.</descrizione>
 	<precondizione>Si stanno configurando le impostazioni di un grafico di tipo table. Si conosce quante sono le colonne e le si sa identificare.</precondizione>
-	<postcondizione>È stata impostata l'intestazione di una colonna.</postcondizione>
+	<postcondizione>È stata impostata l'intestazione di una colonna selezionata.</postcondizione>
 	<principale>
-		<item>Il Norris developer sceglie l'intestazione di una singola colonna.</item>
+		<item>Il Norris developer seleziona una colonna di cui vuole modificare l'intestazione.</item>
+		<item>Il Norris developer sceglie l'intestazione della colonna selezionata.</item>
 	</principale>
 </usecase>

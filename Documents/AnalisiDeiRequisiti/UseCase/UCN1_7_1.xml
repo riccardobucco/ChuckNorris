@@ -7,7 +7,7 @@
 	<precondizione>Si vuole creare un grafico di tipo table. Sono stati inseriti i dati della table. In particolare si conosce quante sono le colonne e le si sa identificare.</precondizione>
 	<postcondizione>Sono state configurate le opzioni della table.</postcondizione>
 	<principale>
-		<item>Il Norris developer sceglie il formato dei dati di una qualsiasi cella (intestazione o no) contenuta in una table (UCN1.7.1.1);</item>
+		<item>Il Norris developer sceglie il formato di una o più celle contenute in una table (UCN1.7.1.1);</item>
 		<item>Il Norris developer sceglie l'intestazione di una singola colonna (UCN1.7.1.2);</item>
 		<item>Il Norris developer ripete il passo precedente al più per ogni colonna; </item>
 		<item>Il Norris developer sceglie il massimo numero di righe visualizzabili (UCN1.7.1.3);</item>
