@@ -3,10 +3,10 @@
 <usecase>
 	<titolo>UCN2.2.1 Ottenere l'ID di ciascun grafico</titolo>
 	<attorip>App developer</attorip>
-	<descrizione>L'app developer può ottenere l'ID di ciascun grafico presente nella lista dell'istanza di Norris selezionata.</descrizione>
+	<descrizione>L'App developer può ottenere l'ID di ciascun grafico presente nella lista dell'istanza di Norris selezionata.</descrizione>
 	<precondizione>È stata selezionata un'istanza esistente di Norris e si ha accesso ad essa. Si stanno ottenendo informazioni su tale istanza.</precondizione>
 	<postcondizione>È stato ottenuto l'ID di ciascun grafico presente nell'istanza di Norris selezionata.</postcondizione>
 	<principale>
-		<item>L'app developer ottiene l'ID di ciascun grafico presente all'interno dell'istanza di Norris selezionata.</item>
+		<item>L'App developer ottiene l'ID di ciascun grafico presente all'interno dell'istanza di Norris selezionata.</item>
 	</principale>
 </usecase>

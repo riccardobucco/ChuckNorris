@@ -7,9 +7,9 @@
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>
 	<principale>
-		<item>L'app developer accede a un'istanza di Norris (UCN2.1);</item>
-		<item>L'app developer può ottenere la lista dei grafici presenti nell'istanza di Norris alla quale ha avuto accesso (UCN2.2);</item>
-		<item>L'app developer può ottenere un grafico presente nell'istanza di Norris alla quale ha avuto accesso (UCN2.3).</item>
-		<item>L'app developer può scollegarsi dall'istanza di Norris alla quale si era collegato (UCN2.4)</item>
+		<item>L'App developer accede a un'istanza di Norris (UCN2.1);</item>
+		<item>L'App developer può ottenere la lista dei grafici presenti nell'istanza di Norris alla quale ha avuto accesso (UCN2.2);</item>
+		<item>L'App developer può ottenere un grafico presente nell'istanza di Norris alla quale ha avuto accesso (UCN2.3).</item>
+		<item>L'App developer può scollegarsi dall'istanza di Norris alla quale si era collegato (UCN2.4)</item>
 	</principale>
 </usecase>

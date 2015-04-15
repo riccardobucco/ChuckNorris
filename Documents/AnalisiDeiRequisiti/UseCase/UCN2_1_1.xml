@@ -7,6 +7,6 @@
 	<precondizione>Si sta eseguendo l'accesso a un'istanza di Norris. </precondizione>
 	<postcondizione>È stato selezionato l'indirizzo dell'istanza di Norris alla quale si vuole accedere.</postcondizione>
 	<principale>
-		<item>L'app developer inserisce l'indirizzo dell'istanza Norris al quale vuole accedere.</item>
+		<item>L'App developer inserisce l'indirizzo dell'istanza Norris al quale vuole accedere.</item>
 	</principale>
 </usecase>

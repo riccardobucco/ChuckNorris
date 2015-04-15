@@ -3,12 +3,12 @@
 <usecase>
 	<titolo>UCN2.1 Accedere a un'istanza di Norris</titolo>
 	<attorip>App developer</attorip>
-	<descrizione>L'app developer può ottenere l'accesso a un'istanza di Norris. Per fare ciò esso, dopo aver scelto l'indirizzo alla quale essa può essere trovata, inserisce le proprie credenziali (username e password).</descrizione>
+	<descrizione>L'App developer può ottenere l'accesso a un'istanza di Norris. Per fare ciò esso, dopo aver scelto l'indirizzo alla quale essa può essere trovata, inserisce le proprie credenziali (username e password).</descrizione>
 	<precondizione>Si stanno utilizzando le API esterne. </precondizione>
 	<postcondizione>È stato eseguito l'accesso a un'istanza di Norris selezionata tramite l'indirizzo alla quale essa può essere trovata.</postcondizione>
 	<principale>
-		<item>L'app developer inserisce l'indirizzo dell'istanza Norris al quale vuole accedere (UCN2.1.1).</item>
-		<item>L'app developer può inserire l'username con il quale intende accedere all'istanza di Norris selezionata (UCN2.1.2).</item>
-		<item>L'app developer può inserire la password con la quale intende accedere all'istanza di Norris selezionata (UCN2.1.3)</item>
+		<item>L'App developer inserisce l'indirizzo dell'istanza Norris al quale vuole accedere (UCN2.1.1).</item>
+		<item>L'App developer può inserire l'username con il quale intende accedere all'istanza di Norris selezionata (UCN2.1.2).</item>
+		<item>L'App developer può inserire la password con la quale intende accedere all'istanza di Norris selezionata (UCN2.1.3)</item>
 	</principale>
 </usecase>

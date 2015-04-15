@@ -7,6 +7,6 @@
 	<precondizione>Si sta eseguendo l'accesso a un'istanza di Norris selezionata.</precondizione>
 	<postcondizione>È stato inserito l'username con il quale si vuole accedere all'istanza di Norris selezionata.</postcondizione>
 	<principale>
-		<item>L'app developer inserisce l'username con il quale vuole accedere all'istanza di Norris selezionata.</item>
+		<item>L'App developer inserisce l'username con il quale vuole accedere all'istanza di Norris selezionata.</item>
 	</principale>
 </usecase>
