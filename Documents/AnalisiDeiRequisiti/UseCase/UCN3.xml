@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN3 Utilizzo API della libreria grafica</titolo>
+	<titolo>UCN3 Utilizzo API fornite da CHUCK</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>Il Web developer può utilizzare le API della libreria grafica. Queste API permettono di incapsulare un grafico esistente all'interno di una pagina web diversa rispetto a quella creata di default tramite l'utilizzo delle API interne. In particolare il Web developer può selezionare il modello di grafico che vuole rappresentare, scegliere il tag HTML nel quale vuole inserire la rappresentazione del grafico, modificare le opzioni di visualizzazione del grafico selezionato.</descrizione>
+	<descrizione>Il Web developer può utilizzare le API fornite da CHUCK. Tali API hanno il principale compito di semplificare al massimo l'utilizzo che i Web developer fanno delle API esterne fornite da Norris. Esse, inoltre, permettono di incapsulare un grafico esistente all'interno di una pagina web diversa rispetto a quella creata di default tramite l'utilizzo delle API interne. In particolare il Web developer, dopo aver eseguito l'accesso all'istanza Norris desiderata, può selezionare il modello di grafico che vuole rappresentare, scegliere il tag HTML nel quale vuole inserire la rappresentazione del grafico, modificare le opzioni di visualizzazione del grafico selezionato.</descrizione>
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>
 	<principale>
+		<item>Il Web developer accede all'istanza di Norris desiderata (UCN3.8);</item>
 		<item>Il Web developer seleziona il modello di grafico che vuole rappresentare (UCN3.1);</item>
 		<item>Il Web developer sceglie il tag HTML nel quale vuole inserire la rappresentazione del grafico (UCN3.2);</item>
-		<item>Il Web developer cambia le opzioni di visualizzazione di un grafico (UCN3.3);</item>
+		<item>Il Web developer può cambiare le opzioni di visualizzazione di un grafico (UCN3.3);</item>
 		<item>Il Web developer può cambiare le opzioni di visualizzazione di un bar chart (UCN3.4);</item>
 		<item>Il Web developer può cambiare le opzioni di visualizzazione di un line chart (UCN3.5);</item>
 		<item>Il Web developer può cambiare le opzioni di visualizzazione di un map chart (UCN3.6);</item>
-		<item>Il Web developer può cambiare le opzioni di visualizzazione di una table (UCN3.7).</item>
+		<item>Il Web developer può cambiare le opzioni di visualizzazione di una table (UCN3.7);</item>
+		<item>Il Web developer può scollegarsi dall'istanza di Norris alla quale ha accesso (UCN3.9).</item>
 	</principale>
 </usecase>

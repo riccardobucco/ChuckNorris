@@ -7,7 +7,7 @@
 		<item>UCN3.3 Cambiare opzioni di visualizzazione di un grafico</item>
 	</specializzazionedi>
 	<descrizione>Il Web developer può modificare le opzioni di visualizzazione di un grafico di tipo line chart esistente. In particolare può modificare le opzioni riguardanti la legenda del grafico selezionato, il fatto che la griglia del piano cartesiano sia visualizzata o meno, il colore di una o più linee del line chart selezionato.</descrizione>
-	<precondizione>Si stanno utilizzando le API della libreria grafica. È stato selezionato il modello di grafico che si vuole rappresentare. Il grafico selezionato è di tipo line chart.</precondizione>
+	<precondizione>Si stanno utilizzando le API fornite da CHUCK. È stato selezionato il modello di grafico che si vuole rappresentare. Il grafico selezionato è di tipo line chart.</precondizione>
 	<postcondizione>Sono state modificate le opzioni di visualizzazione del line chart selezionato.</postcondizione>
 	<principale>
 		<item>Il Web developer modifica le opzioni riguardanti la legenda del grafico selezionato (UCN3.5.2);</item>

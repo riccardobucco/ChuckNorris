@@ -3,12 +3,12 @@
 <usecase>
 	<titolo>UCN0 Utilizzo del framework Norris</titolo>
 	<attorip>Norris developer, Norris developer, App developer</attorip>
-	<descrizione>Norris fornisce tre tipologie di interfacce: le API interne, le API esterne e le API della libreria grafica. Il Norris developer può utilizzare sia le API interne, sia le API esterne, sia le API della libreria grafica. L'utente client invece può utilizzare solamente le API esterne e le API della libreria grafica.</descrizione>
+	<descrizione>Norris fornisce tre tipologie di interfacce: le API interne, le API esterne e le API fornite da CHUCK. Il Norris developer può utilizzare sia le API interne, sia le API esterne, sia le API fornite da CHUCK. L'utente client invece può utilizzare solamente le API esterne e le API fornite da CHUCK.</descrizione>
 	<precondizione>Un'istanza di Norris esiste, è in funzione ed è raggiungibile.</precondizione>
 	<postcondizione>Sono state utilizzate le funzioni offerte da Norris.</postcondizione>
 	<principale>
 		<item>Il Norris developer può utilizzare le API interne di Norris (UCN1);</item>
 		<item>Il client può utilizzare le API esterne di Norris (UCN2);</item>
-		<item>Il client può utilizzare le API della libreria grafica fornita da Norris (UCN3).</item>
+		<item>Il client può utilizzare le API fornite da CHUCK fornita da Norris (UCN3).</item>
 	</principale>
 </usecase>
