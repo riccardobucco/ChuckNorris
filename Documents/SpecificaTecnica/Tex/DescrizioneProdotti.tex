@@ -32,7 +32,7 @@
         
 \level{1}{Descrizione delle interazioni che i prodotti hanno tra di loro}
      \level{2}{Norris - Chuck}
-    Norris e Chuck interagiscono tramite le API esterne, le quali fungono da interfaccia tra server e client. In particolare si posso avere 3 tipologie di interazione:
+    Norris e Chuck interagiscono tramite le API esterne, le quali fungono da interfaccia tra server e client. In particolare si possono avere 3 tipologie di interazione:
     \begin{itemize}
         \item autenticazione: precede l'invio di informazioni inerenti un grafico. Chuck manda a Norris l'indirizzo dell'istanza a cui si vuole connettere, assieme ad username e password. Norris controlla se i dati inviati sono corretti e, in caso affermativo, esegue l'autenticazione.
         \item richiesta inserimento grafico: Chuck manda a Norris una richiesta di informazioni inerenti al grafico che si vuole inserire nella pagina web. Norris controlla se il client è autenticato. In caso negativo, Norris manda una richiesta di autenticazione al client. In caso affermativo, invece, Norris manda le informazioni relative al grafico richiesto aprendo una comunicazione tramite websocket. Il canale rimane aperto fintanto che il client rimane connesso.
@@ -40,7 +40,7 @@
     \end{itemize}
     
     \level{2}{Norris - Applicazione Android}
-    Norris e l'applicazione Android interagiscono tramite le API esterne, le quali fungono da interfaccia tra server e client. In particolare si posso avere 4 tipologie di interazione:
+    Norris e l'applicazione Android interagiscono tramite le API esterne, le quali fungono da interfaccia tra server e client. In particolare si possono avere 4 tipologie di interazione:
     \begin{itemize}
         \item Autenticazione: precede l'invio di informazioni inerenti un grafico. L'applicazione Android manda a Norris l'indirizzo dell'istanza a cui si vuole connettere, assieme ad username e password. Norris controlla se i dati inviati sono corretti e, in caso affermativo, esegue l'autenticazione. Se l'autenticazione non va a buon fine, l'applicazione Android mostra un messaggio d'errore.
         \item Richiesta informazioni della lista di grafici: l'applicazione Android manda a Norris una richiesta di informazioni inerenti alla lista di grafici presenti nell'istanza di Norris alla quale ci si è autenticati. Norris controlla se l'utente è loggato e, in caso affermativo, manda le informazioni relative alla lista di grafici richiesta aprendo una comunicazione tramite websocket. Il canale viene chiuso quando l'applicazione è in background.
