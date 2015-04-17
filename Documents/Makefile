@@ -3,8 +3,8 @@ DOCUMENTI =	AnalisiDeiRequisiti \
 		NormeDiProgetto \
 		PianoDiProgetto \
 		PianoDiQualifica \
-		StudioDiFattibilita \
-		SpecificaTecnica
+		SpecificaTecnica \
+		StudioDiFattibilita
 
 
 all: $(DOCUMENTI) LetteraDiPresentazione
@@ -22,6 +22,7 @@ $(DOCUMENTI): _force
 	@ test "$@" != "AnalisiDeiRequisiti" || make _analisi
 	@ test "$@" != "Glossario" || make _glossario
 	@ test "$@" != "NormeDiProgetto" || make _norme
+	@ test "$@" != "SpecificaTecnica" || make _specifica
 	@ test "$@" != "StudioDiFattibilita" || make _studio
 	
 	@ #compilazione file latex
@@ -56,6 +57,11 @@ _glossario: _force
 _norme: _force
 	@ #eliminazione lot
 	@ sed -ri 's/\\listoftables//' NormeDiProgetto/NormeDiProgetto.tex
+
+_specifica: _force
+	@ #download tabelle
+	@ curl http://kaizenteam.it/tracker/export/componenti-requisiti.php > SpecificaTecnica/TrackerComponentiRequisiti.tex
+	@ curl http://kaizenteam.it/tracker/export/requisiti-componenti.php > SpecificaTecnica/TrackerRequisitiComponenti.tex
 
 _studio: _force
 	@ #eliminazione lot, lof
