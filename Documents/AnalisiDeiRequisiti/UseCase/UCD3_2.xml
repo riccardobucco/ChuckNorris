@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCD3.2 Visualizzare i bus appartenenti alle linee scelte</titolo>
+	<attorip>Utente</attorip>
+	<attoris>Norris</attoris>
+	<descrizione>L'utente può visualizzare gli autobus appartenenti alle linee scelte.</descrizione>
+	<precondizione>Si stanno filtrando gli autobus APS per linea di appartenenza. Sono state scelte le linee che si intende visualizzare.</precondizione>
+	<postcondizione>Sono state visualizzate le linee autobus selezionate.</postcondizione>
+	<principale>
+		<item>L'utente visualizza le linee degli autobus che sono state selezionate.</item>
+	</principale>
+</usecase>
