@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCA4.1 Visualizzare errore credenziali di accesso non valide</titolo>
+	<titolo>UCA4.2 Visualizzare errore credenziali di accesso non valide</titolo>
 	<attorip>Utente</attorip>
 	<descrizione>Quando l'utente cerca di collegarsi ad un'istanza di Norris fornendo credenziali non esatte, esso viene avvertito.</descrizione>
 	<precondizione>Si sta utilizzando l'applicazione. Sì è cercato di collegare l'applicazione ad un'istanza di Norris utilizzando credenziali di accesso non valide. Unàistanza di Norris esiste all'indirizzo indicato.</precondizione>
