@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.12 Fornire funzioni di autenticazione</titolo>
+	<attorip>Norris developer</attorip>
+	<descrizione>Norris fornisce al Norris developer la possibilità di definire l'implementazione delle funzionalità inerenti l'autenticazione. Nel caso in cui l'utente non specifichi le varie funzioni, allora l'istanza di Norris mette a disposizione le funzionalità di default.</descrizione>
+	<precondizione>Si stanno utilizzando le API interne.</precondizione>
+	<postcondizione>Sono state fornite all'istanza di Norris le funzioni inerenti l'autenticazione.</postcondizione>
+	<principale>
+		<item>L'utente può fornire all'istanza di Norris la funzione che implementa il login di un utente (UCN1.12.1). Nel caso in cui non lo faccia, viene utilizzata la funzione di login di default (che semplicemente non fa nulla);</item>
+		<item>L'utente può fornire all'istanza di Norris la funzione che implementa il logout di un utente (UCN1.12.2). Nel caso in cui non lo faccia, viene utilizzata la funzione di logout di default (che semplicemente non fa nulla);</item>
+		<item>L'utente può fornire all'istanza di Norris la funzione che verifica se un utente è autenticato correttamente oppure no (UCN1.12.3). Nel caso in cui non lo faccia, viene utilizzata la funzione di verifica autenticazione di default (che risponde che qualsiasi utente è autenticato correttamente).</item>
+	</principale>
+</usecase>

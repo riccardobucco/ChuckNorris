@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.12.1 Fornire funzione di login</titolo>
+	<attorip>Norris developer</attorip>
+	<descrizione>Norris fornisce al Norris developer la possibilità di definire l'implementazione della funzione di login. La funzione di login di default, fornita del caso in cui il Norris developer non specifichi niente, semplicemente non fa nulla.</descrizione>
+	<precondizione>Si stanno utilizzando le API interne. In particolare si stanno fornendo all'istanza di Norris le funzioni che implementano i vari aspetti riguardanti l'autenticazione.</precondizione>
+	<postcondizione>È stato fornito all'istanza di Norris la funzione con la quale deve effettuare il login degli utenti.</postcondizione>
+	<principale>
+		<item>Il Norris developer inserisce la funzione che implementa il login di un utente.</item>
+	</principale>
+</usecase>

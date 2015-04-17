@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN1.12.3 Fornire funzione di verifica autenticazione</titolo>
+	<attorip>Norris developer</attorip>
+	<descrizione>Norris fornisce al Norris developer la possibilità di definire l'implementazione della funzione che verifica se un utente è autenticato oppure no. La funzione di verifica autenticazione di default, fornita del caso in cui il Norris developer non specifichi niente, semplicemente afferma che ogni utente è correttamente autenticato.</descrizione>
+	<precondizione>Si stanno utilizzando le API interne. In particolare si stanno fornendo all'istanza di Norris le funzioni che implementano i vari aspetti riguardanti l'autenticazione.</precondizione>
+	<postcondizione>È stato fornito all'istanza di Norris la funzione con la quale deve verificare la corretta autenticazione degli utenti.</postcondizione>
+	<principale>
+		<item>Il Norris developer inserisce la funzione che implementa la verifica dell'autenticazione di un utente.</item>
+	</principale>
+</usecase>
