@@ -3,6 +3,10 @@
 <usecase>
 	<titolo>UCN1.8 Ottenere middleware</titolo>
 	<attorip>Norris developer</attorip>
+	<descrizione>Norris può essere usato come middleware per Express.js. Il Norris developer può quindi ottenere il middleware che poi viene utilizzato autonomamente dallo sviluppatore come desidera.</descrizione>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato ottenuto un middleware per Express.js.</postcondizione>
+	<principale>
+		<item>Il Norris delevoper ottiene il middleware da poter utilizzare in Express.js.</item>
+	</principale>
 </usecase>
