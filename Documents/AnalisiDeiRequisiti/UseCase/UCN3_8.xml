@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN3.6 Accedere a un'istanza di Norris</titolo>
+	<titolo>UCN3.8 Accedere a un'istanza di Norris</titolo>
 	<attorip>Web developer</attorip>
 	<descrizione>Il Web developer, per poter utilizzare le API fornite da CHUCK (e dunque le API esterne di Norris) deve avere accesso all'istanza di Norris desiderata. A esso, dunque, è fornita una funzionalità tramite la quale può autenticarsi al server che desidera. In particolare, al Web developer è richiesto di inserire l'indirizzo al quale è presente l'istanza di Norris, lo username e la password che desidera usare per autenticarsi. Notare che questa funzionalità, sebbene sia molto simile a quella offerta dalle API esterne di Norris, è desiderabile per il Web developer: le API esterne, infatti, non sono pensate per gli svilppatori di siti web, ma per tutti gli utenti che desiderano interagire con i server Norris. Queste API, invece, sono pensate appositamente per i Web developer: offrono talvolta un'interfaccia diversa per funzionalità già esistenti (come in questo caso).</descrizione>
 	<precondizione>Si stanno utilizzando le API fornite da CHUCK.</precondizione>

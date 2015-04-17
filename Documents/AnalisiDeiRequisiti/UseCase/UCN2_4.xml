@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<usecase>
+	<titolo>UCN2.4 Scollegarsi da un'istanza di Norris</titolo>
+	<attorip>App developer</attorip>
+	<descrizione>L'App developer ha la possibilità di scollegarsi dall'istanza di Norris alla quale si era precedentemente collegato. In questo modo esso non riceve più gli aggiornamenti dei grafici da lui ottenuti in precedenza.</descrizione>
+	<precondizione>Si stanno utilizzando le API esterne. Si è autenticati a un'istanza esistente di Norris.</precondizione>
+	<postcondizione>Ci si è scollegati dall'istanza di Norris alla quale si era precedentemente collegati.</postcondizione>
+	<principale>
+		<item>L'App developer si scollega dall'istanza di Norris alla quale era precedentemente collegato.</item>
+	</principale>
+</usecase>
