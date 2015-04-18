@@ -15,7 +15,7 @@
 			\level{3}{<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>}
 			\begin{itemize}
 			\item Nome: <xsl:value-of select="@name"/>
-			\item Tipo: package;
+			\item Tipo: package
 			\end{itemize}
 			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>
 		</xsl:if>
@@ -27,8 +27,10 @@
 			\level{3}{<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>}
 			\begin{itemize}
 			\item Nome: <xsl:value-of select="@name"/>
-			\item Tipo: classe;
+			\item Tipo: classe
+			<xsl:call-template name="abstract"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
+			<xsl:apply-templates select="*[local-name()='ModelElement.stereotype']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
 			\end{itemize}
 			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>			
@@ -40,21 +42,44 @@
 			\level{3}{<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>}
 			\begin{itemize}
 			\item Nome: <xsl:value-of select="@name"/>
-			\item Tipo: interfaccia;
+			\item Tipo: interfaccia
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
 			\end{itemize}
 			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>
 	</xsl:template>
 
-	<!-- definizione -->
-	<xsl:template match="*[local-name()='ModelElement.definition']">
-			\item Descrizione: <xsl:value-of select="@xmi.value"/>;
-	</xsl:template>
-
 	<!-- visibilità -->
 	<xsl:template match="*[local-name()='ModelElement.visibility']">
-			\item Visibilità: <xsl:value-of select="@xmi.value"/>;
+			\item Visibilità: <xsl:value-of select="@xmi.value"/>
+	</xsl:template>
+
+	<!-- definizione -->
+	<xsl:template match="*[local-name()='ModelElement.definition']">
+			\item Descrizione: <xsl:value-of select="@xmi.value"/>
+	</xsl:template>
+
+
+
+	<!-- stereotipi -->
+	<xsl:template match="*[local-name()='ModelElement.stereotype']">
+		\item Stereotipi:
+		\begin{itemize}
+			<xsl:apply-templates select="*[local-name()='Stereotype']"/>
+		\end{itemize}
+	</xsl:template>
+
+	<!-- stereotipi -->
+	<xsl:template match="*[local-name()='Stereotype']">
+		<xsl:param name="id" select="@xmi.idref"/>
+		\item <xsl:value-of select="//*[@xmi.id=$id]/@name"/>
+	</xsl:template>
+
+	<!-- abstract -->
+	<xsl:template name="abstract">
+		\item Astratta:
+		<xsl:if test="@isAbstract='true'">si</xsl:if>
+		<xsl:if test="@isAbstract='false'">no</xsl:if>
 	</xsl:template>
 
 	<!-- namespace -->
