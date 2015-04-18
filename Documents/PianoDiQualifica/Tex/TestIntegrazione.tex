@@ -1,7 +1,7 @@
 \level{2}{Test di integrazione}
 \begin{table}[H]
 	\begin{center}
-		\begin{tabu}{| l | l | l | c |}
+		\begin{longtabu}{| X | X | X | c |}
 			\hline
 			Test 					& Descrizione				& Componenti				 & Esito 					\\ \hline
 
@@ -13,8 +13,8 @@
 	&
 Test di integrazione finale tra le componenti DataModel, InternalAPIManager e ExternalAPIManager per verificare il comportamente del sistema nel suo complesso.
 & \parbox[t]{0.4\textwidth}{
-Norris::DataModel//
-Norris::InternalAPIManager//
+Norris::DataModel\\
+Norris::InternalAPIManager\\
 Norris::ExternalAPIManager}
 			& Non Implementato
 			\\ \hline
@@ -25,8 +25,8 @@ Norris::ExternalAPIManager}
 	&
 Comportamento del modello: viene verificato che il modello rispetti le aspettative previste, ovvero memorizzi correttamente i dati necessari e li restituisca in un secondo momento senza perdite di informazioni o dati scorretti.
 & \parbox[t]{0.4\textwidth}{
-Norris::DataModel::NorrisImpl//
-Norris::DataModel::ChartImpl//
+Norris::DataModel::NorrisImpl\\
+Norris::DataModel::ChartImpl\\
 Norris::DataModel::PageImpl}
 			& Non Implementato
 			\\ \hline
@@ -37,10 +37,10 @@ Norris::DataModel::PageImpl}
 	&
 Comportamento del modello di chart: viene verificato che il modello dei chart memorizzi correttamente le informazioni in base al tipo specifico del chart rappresentato.
 & \parbox[t]{0.4\textwidth}{
-Norris::DataModel::ChartImpl//
-Norris::DataModel::BarChartImpl//
-Norris::DataModel::LineChartImpl//
-Norris::DataModel::MapChartImpl//
+Norris::DataModel::ChartImpl\\
+Norris::DataModel::BarChartImpl\\
+Norris::DataModel::LineChartImpl\\
+Norris::DataModel::MapChartImpl\\
 Norris::DataModel::TableImpl}
 			& Non Implementato
 			\\ \hline
@@ -51,8 +51,8 @@ Norris::DataModel::TableImpl}
 	&
 Funzionamento delle API interne: viene verificato che le API interne apportino al modello le modifiche corrette a seconda dell'azione richiesta.
 & \parbox[t]{0.4\textwidth}{
-Norris::InternalAPIManager::InternalAPIBridge//
-Norris::InternalAPIManager::ChartBridge//
+Norris::InternalAPIManager::InternalAPIBridge\\
+Norris::InternalAPIManager::ChartBridge\\
 Norris::InternalAPIManager::PageBridge}
 			& Non Implementato
 			\\ \hline
@@ -63,10 +63,10 @@ Norris::InternalAPIManager::PageBridge}
 	&
 Funzionamento delle API interne: viene verificato che le API esterne forniscano le funzione corrette a seconda dei dati rappresentati dal modello.
 & \parbox[t]{0.4\textwidth}{
-Norris::ExternalAPIManager::ExternalAPIController//
-Norris::ExternalAPIManager::AuthenticationEndpoint//
-Norris::ExternalAPIManager::ListEndpoint//
-Norris::ExternalAPIManager::ChartEndpoint//
+Norris::ExternalAPIManager::ExternalAPIController\\
+Norris::ExternalAPIManager::AuthenticationEndpoint\\
+Norris::ExternalAPIManager::ListEndpoint\\
+Norris::ExternalAPIManager::ChartEndpoint\\
 Norris::ExternalAPIManager::ChartRef}
 			& Non Implementato
 			\\ \hline
@@ -86,10 +86,10 @@ Norris::ExternalAPIManager::ChartRef}
 				&
 Test di integrazione finale tra tutte le componenti al fine di verificare il sistema nel suo complesso.
 			& \parbox[t]{0.4\textwidth}{
-Chuck::ChuckManager//
-Chuck::DataModel//
-Chuck::ChartView//
-Chuck::Controller//
+Chuck::ChuckManager\\
+Chuck::DataModel\\
+Chuck::ChartView\\
+Chuck::Controller\\
 Chuck::Utils}
 			& Non Implementato
 			\\ \hline
@@ -100,9 +100,9 @@ Chuck::Utils}
 				&
 Comportamento delle API di Chuck: viene verificato che utilizzando l'interfaccia messa a disposizione dallo sviluppatore la componente ChuckManager effettui le operazioni corrette.
 			& \parbox[t]{0.4\textwidth}{
-Chuck::ChuckManager::ChuckAPIController//
-Chuck::ChuckManager::AuthenticationManager//
-Chuck::ChuckManager::ChartRequester//
+Chuck::ChuckManager::ChuckAPIController\\
+Chuck::ChuckManager::AuthenticationManager\\
+Chuck::ChuckManager::ChartRequester\\
 Chuck::ChuckManager::ChartBridge}
 			& Non Implementato
 			\\ \hline
@@ -113,7 +113,7 @@ Chuck::ChuckManager::ChartBridge}
 				&
 Viene verificato che AuthenticationManager effettui l'autenticazione nel modo corretto presso un'istanza valida di Norris.
 			& \parbox[t]{0.4\textwidth}{
-Chuck::ChuckManager::AuthenticationManager//
+Chuck::ChuckManager::AuthenticationManager\\
 XMLHttpRequest}
 			& Non Implementato
 			\\ \hline
@@ -124,7 +124,7 @@ XMLHttpRequest}
 				&
 Viene verificato che ChartRequester richieda correttamente un grafico presente in un'istanza di Norris e lo mantenga aggiornato.
 			& \parbox[t]{0.4\textwidth}{
-Chuck::ChuckManager::ChartRequester//
+Chuck::ChuckManager::ChartRequester\\
 SocketIOClient}
 			& Non Implementato
 			\\ \hline
@@ -135,7 +135,7 @@ SocketIOClient}
 				&
 Viene verificato che il modello memorizzi correttamente le informazioni riguardanti i grafici.
 			& \parbox[t]{0.4\textwidth}{
-Chuck::DataModel::ChuckImpl//
+Chuck::DataModel::ChuckImpl\\
 Chuck::DataModel::ChartImpl}
 			& Non Implementato
 			\\ \hline
@@ -146,10 +146,10 @@ Chuck::DataModel::ChartImpl}
 				&
 Viene verificato che il modello dei chart memorizzi correttamente le informazioni in base al tipo specifico del chart rappresentato.
 			& \parbox[t]{0.4\textwidth}{
-Chuck::DataModel::ChartImpl//
-Chuck::DataModel::BarChartImpl//
-Chuck::DataModel::LineChartImpl//
-Chuck::DataModel::MapChartImpl//
+Chuck::DataModel::ChartImpl\\
+Chuck::DataModel::BarChartImpl\\
+Chuck::DataModel::LineChartImpl\\
+Chuck::DataModel::MapChartImpl\\
 Chuck::DataModel::TableImpl}
 			& Non Implementato
 			\\ \hline
@@ -160,10 +160,10 @@ Chuck::DataModel::TableImpl}
 				&
 Viene verificato che la componente ChartView gestisca correttamente la visualizzazione di tutti i tipi di grafici.
 			& \parbox[t]{0.4\textwidth}{
-Chuck::ChartView::ViewImpl//
-Chuck::ChartView::BarChartView//
-Chuck::ChartView::LineChartView//
-Chuck::ChartView::MapChartView//
+Chuck::ChartView::ViewImpl\\
+Chuck::ChartView::BarChartView\\
+Chuck::ChartView::LineChartView\\
+Chuck::ChartView::MapChartView\\
 Chuck::ChartView::TableView}
 			& Non Implementato
 			\\ \hline
@@ -174,10 +174,10 @@ Chuck::ChartView::TableView}
 				&
 Viene verificato che il controller, per tutti i tipi di grafico, gestisca correttamente le notifiche proveniente dalla componente ChartView.
 			& \parbox[t]{0.4\textwidth}{
-Chuck::Controller::ChartController//
-Chuck::Controller::BarChartController//
-Chuck::Controller::LineChartController//
-Chuck::Controller::MapChartController//
+Chuck::Controller::ChartController\\
+Chuck::Controller::BarChartController\\
+Chuck::Controller::LineChartController\\
+Chuck::Controller::MapChartController\\
 Chuck::Controller::TableController}
 			& Non Implementato
 			\\ \hline
@@ -187,8 +187,8 @@ Chuck::Controller::TableController}
 	TIChuckObserver &
 Viene verificata la corretta implementazione del pattern Observer.
 			& \parbox[t]{0.4\textwidth}{
-Chuck::Utils::Observable//
-Chuck::Utils::ObservableImpl//
+Chuck::Utils::Observable\\
+Chuck::Utils::ObservableImpl\\
 Chuck::Utils::Observer}
 			& Non Implementato
 			\\ \hline
@@ -206,52 +206,52 @@ Chuck::Utils::Observer}
 			TIApplcazione &
 			Test di integrazione finale tra le componenti Model, View, Controller
 			& \parbox[t]{0.4\textwidth}{
-			Applicazione//
-			Applicazione::Model//
-			Applicazione::View//
-			Applicazione::Controller//
+			Applicazione\\
+			Applicazione::Model\\
+			Applicazione::View\\
+			Applicazione::Controller\\
 			Applicazione::Utils}
 			& Non Implementato
 \\ \hline
 			TIApplcazioneModel &
 			Viene verificato che il sistema gestisca correttamente la componente Model relativa al design pattern MVC. Più precisamente che memorizzi correttamente i dati relativi ai chart dell'istanza di norris selezionata.
 			& \parbox[t]{0.4\textwidth}{
-			Norris::DataModel//
-			Norris::DataModel::ChartImpl//
-			Norris::DataModel::BarChartImpl//
-			Norris::DataModel::LineChartImpl//
-			Norris::DataModel::MapChartImpl//
+			Norris::DataModel\\
+			Norris::DataModel::ChartImpl\\
+			Norris::DataModel::BarChartImpl\\
+			Norris::DataModel::LineChartImpl\\
+			Norris::DataModel::MapChartImpl\\
 			Norris::DataModel::TableImpl}
 			& Non Implementato
 \\ \hline
 			TIApplcazioneView &
 			Viene verificato che il sistema gestisca correttamente la componente View del pattern MVC. Più precisamente che gestisca correttamente tutto ciò che concerne la rappresentazione dei chart.
 			& \parbox[t]{0.4\textwidth}{
-			Applicazione::View//
-			Applicazione::View:Activity//
-			Applicazione::View:HomeActivity//
-			Applicazione::View:ListActivity//
+			Applicazione::View\\
+			Applicazione::View:Activity\\
+			Applicazione::View:HomeActivity\\
+			Applicazione::View:ListActivity\\
 			Applicazione::View:ChartActivity}
 			& Non Implementato
 \\ \hline
 			TIApplcazioneController &
 			Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC. Più precisamente viene verificato che il sistema gestisca le azioni dell’utente e che dialoghi in maniera appropriata con il server.
 			& \parbox[t]{0.4\textwidth}{
-			Applicazione::Controller//
-			Applicazione::Controller::Controller//
-			Applicazione::Controller::ChartController//
-			Applicazione::Controller::HomeController//
+			Applicazione::Controller\\
+			Applicazione::Controller::Controller\\
+			Applicazione::Controller::ChartController\\
+			Applicazione::Controller::HomeController\\
 			Applicazione::Controller::ListController}
 			& Non Implementato
 \\ \hline
 			TIApplcazioneObserver &
 			Viene verificato che il sistema gestisca correttamente le componenti necessarie per la realizzazione del design pattern Observer.
 			& \parbox[t]{0.4\textwidth}{
-			Applicazione::Utils//
+			Applicazione::Utils\\
 			Applicazione::Utils:ObservableImpl}
 			& Non Implementato 
 \\ \hline
-		\end{tabu}
+		\end{longtabu}
 	\end{center}
 	\caption{Test di Integrazione}
 \end{table}
