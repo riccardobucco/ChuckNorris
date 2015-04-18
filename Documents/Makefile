@@ -60,9 +60,9 @@ _norme: _force
 
 _specifica: _force
 	@ #creazione file latex classi
-	@ xsltproc -o SpecificaTecnica/Classi/Norris.tex SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Norris.xml
-	@ xsltproc -o SpecificaTecnica/Classi/Chuck.tex SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Chuck.xml
-	@ xsltproc -o SpecificaTecnica/Classi/Applicazione.tex SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Applicazione.xml
+	@ xsltproc SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Norris.xml | tr '+' ' ' > SpecificaTecnica/Classi/Norris.tex
+	@ xsltproc SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Chuck.xml | tr '+' ' ' > SpecificaTecnica/Classi/Chuck.tex
+	@ xsltproc SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Applicazione.xml | tr '+' ' ' > SpecificaTecnica/Classi/Applicazione.tex
 
 	@ #download tabelle
 	@ curl http://kaizenteam.it/tracker/export/componenti-requisiti.php > SpecificaTecnica/TrackerComponentiRequisiti.tex
