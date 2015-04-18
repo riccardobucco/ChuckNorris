@@ -21,7 +21,7 @@ Il pattern MVC, inoltre, risulta particolarmente adatto per la realizzazione del
         		\item ascolto sul canale socket per ricevere gli aggiornamenti di stato dei chart;
         		\item interpretazione dei pacchetti di aggiornamento;
         		\item richiesta al modello di aggiornare il proprio stato;
-        		\item richiesta della creazione dei widget dei grafici da inserire nelle UI dell'applicazioe;
+        		\item richiesta della creazione dei widget dei grafici da inserire nelle UI dell'applicazione;
         		\item avvio delle varie activity dell'applicazione;
         		\item gestione delle gesture dell'utente.
         \end{itemize}
@@ -35,7 +35,7 @@ Il pattern MVC, inoltre, risulta particolarmente adatto per la realizzazione del
     	\level{4}{User Gesture}
 	    La freccia etichettata con il termine “User Gesture” rappresenta l'interazione tra View e Controller. In seguito all'esecuzione di una gesture da parte dell'utente, la View notifica il Controller tramite l'emissione di un evento opportuno. Il Controller si occupa quindi di gestire tale evento. Questa interazione si verifica in particolare quando l'utente seleziona un item della lista dei grafici presenti nell'istanza di Norris richiesta.
 	    \level{4}{API Request}
-	    La freccia etichettata con il termine “API Request” rappresenta l'interazione tra il Controller e le API esterne di Norris. Il Controller richiama le API esterne per connettersi ad un'istaza di Norris, per richiedere la lista di grafici presenti presso quell'istanza e per ottenere le informazioni sui singoli grafici. Le API esterne rispondono al Controller con l'invio dei dati richiesti solo se l'autenticazione è andata a buon fine. Per la spiegazione in dettaglio delle funzionalità offerte dalle API esterne, si rimanda al documento \insdoc{Analisi dei Requisiti v.3.00}.
+	    La freccia etichettata con il termine “API Request” rappresenta l'interazione tra il Controller e le API esterne di Norris. Il Controller richiama le API esterne per connettersi ad un'istanza di Norris, per richiedere la lista di grafici presenti presso quell'istanza e per ottenere le informazioni sui singoli grafici. Le API esterne rispondono al Controller con l'invio dei dati richiesti solo se l'autenticazione è andata a buon fine. Per la spiegazione in dettaglio delle funzionalità offerte dalle API esterne, si rimanda al documento \insdoc{Analisi dei Requisiti v.3.00}.
 	    \level{4}{Update Notification}
 	   	La freccia etichettata con il termine “Update Notification” rappresenta l'interazione tra le API esterne di Norris e il Controller. Le API esterne notificano il Controller che è stato aggiornato il modello di un grafico nel Server. Tramite il canale socket viene inviato l'aggiornamento avvenuto e l'id del grafico che è stato aggiornato, in modo che il Controller possa occuparsi della gestione dell'aggiornamento nell'applicazione.
 	    	

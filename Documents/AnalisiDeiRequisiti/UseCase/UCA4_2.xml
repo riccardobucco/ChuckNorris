@@ -4,7 +4,7 @@
 	<titolo>UCA4.2 Visualizzare errore credenziali di accesso non valide</titolo>
 	<attorip>Utente</attorip>
 	<descrizione>Quando l'utente cerca di collegarsi ad un'istanza di Norris fornendo credenziali non esatte, esso viene avvertito.</descrizione>
-	<precondizione>Si sta utilizzando l'applicazione. Sì è cercato di collegare l'applicazione ad un'istanza di Norris utilizzando credenziali di accesso non valide. Unàistanza di Norris esiste all'indirizzo indicato.</precondizione>
+	<precondizione>Si sta utilizzando l'applicazione. Sì è cercato di collegare l'applicazione ad un'istanza di Norris utilizzando credenziali di accesso non valide. Un'istanza di Norris esiste all'indirizzo indicato.</precondizione>
 	<postcondizione>È stato visualizzato un errore che indica all'utente il fatto che esso abbia sbagliato nell'immissione delle credenziali di accesso all'istanza di Norris desiderata.</postcondizione>
 	<principale>
 		<item>L'utente visualizza un errore che indica la non validità delle credenziali di accesso inserite.</item>

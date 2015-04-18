@@ -5,12 +5,12 @@
 			MVC è quindi basato sul principio del disaccoppiamento dei tre oggetti di cui è composto, ovvero sulla riduzione del loro grado di dipendenza reciproca, allo scopo di fornire una maggiore robustezza, modularità e manutenibilità al software.\\
 			Di seguito si riporta una breve descrizione dei componenti e delle loro caratteristiche. 
 			\level{4}{Model}
-				Il Model è il nucleo dell'applicazione. Definisce il modello dei dati realizzando la business logic, ovvero definisce gli oggetti secondo la logica di utilizzo dell'applicazione indicande anche le possibili operazioni effettuabili su di essi.\\
-				Questo componente viene generalmente progettato attaverso tecniche object oriented.\\
+				Il Model è il nucleo dell'applicazione. Definisce il modello dei dati realizzando la business logic, ovvero definisce gli oggetti secondo la logica di utilizzo dell'applicazione indicante anche le possibili operazioni effettuabili su di essi.\\
+				Questo componente viene generalmente progettato attraverso tecniche object oriented.\\
 				Nella struttura del pattern MVC, il Model è un componente passivo, che non ha relazioni uscenti forti, ma si occupa di notificare alla View eventuali aggiornamenti avvenuti in esso, solitamente attraverso l'implementazione del pattern Observer.
 			\level{4}{View}
 				La View si occupa di visualizzare i dati contenuti nel Model e fornisce l'interfaccia di interazione con utenti e agenti.\\
-				Nella struttura del pattern MVC, la View cattura gli input dell'utente e li passa al Controller affinchè esegua le corrette operazioni sul Model. \\
+				Nella struttura del pattern MVC, la View cattura gli input dell'utente e li passa al Controller affinché esegua le corrette operazioni sul Model. \\
 				La View può essere soggetta a due tipi di aggiornamento:
 				\begin{itemize}
 					\item \textbf{Push model:} viene implementato attraverso il pattern Observer e soltanto quando MVC è usato in un solo ambiente di esecuzione; consiste nel fatto che sia il Model a emettere, senza essere sollecitato, la notifica in seguito alla quale la View verrà aggiornata.
@@ -18,7 +18,7 @@
 				\end{itemize}
 			\level{4}{Controller}
 				Il Controller è il collante fra la View e il Model. Si occupa infatti di implementare l'application logic, cioè l'insieme di operazioni eseguibili sul modello dei dati attraverso una particolare vista.\\
-				Poichè potenzialmente possono esistere più View (si pensi per esempio ad una applicazione che dispone sia di una interfaccia web che di una applicazione per smartphone) è necessario che ad ogni View corrisponda un Controller.
+				Poiché potenzialmente possono esistere più View (si pensi per esempio ad una applicazione che dispone sia di una interfaccia web che di una applicazione per smartphone) è necessario che ad ogni View corrisponda un Controller.
  		\level{3}{Vantaggi nell'uso di MVC}
 			Come detto, l'utilizzo del pattern MVC porta la riduzione delle dipendenze, offrendo diversi vantaggi. La modularità ottenuta permette il riutilizzo del Model in applicazioni con diverse View, oltre a rendere più semplice e rapida l'esecuzione di test. 
  		\level{3}{Svantaggi nell'uso di MVC}
@@ -41,7 +41,7 @@
 		L'utilizzo del Singleton nell'implementazione di un software apporta i seguenti 
 		vantaggi:
 		\begin{itemize}
-		\item controllo completo di come e quando i client acedono all'interfaccia;
+		\item controllo completo di come e quando i client accedono all'interfaccia;
 		\item evita l'utilizzo ingiustificato di variabili globali;
 		\item consente di ridefinire le operazioni definite nel Singleton;
 		\item permette di porre un limite massimo al numero di istanze di una certa classe.

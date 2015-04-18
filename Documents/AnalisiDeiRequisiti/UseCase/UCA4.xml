@@ -4,8 +4,8 @@
 	<titolo>UCA4 Visualizzare errore dati di accesso non validi</titolo>
 	<attorip>Utente</attorip>
 	<descrizione>Quando l'utente cerca di collegarsi ad un'istanza di Norris fornendo dati non esatti, esso viene avvertito.</descrizione>
-	<precondizione>Si sta utilizzando l'applicazione. Sì è cercato di collegare l'applicazione ad un'istanza di Norris utilizzando credenziali di accesso non valide o fornendo un'indirizzo dove non è presente alcuna istanza di Norris.</precondizione>
-	<postcondizione>È stato visualizzato un errore che indica all'utente il fatto che esso abbia sbagliato nell'immissione dei dati di accesso all'stanza di Norris desiderata.</postcondizione>
+	<precondizione>Si sta utilizzando l'applicazione. Sì è cercato di collegare l'applicazione ad un'istanza di Norris utilizzando credenziali di accesso non valide o fornendo un indirizzo dove non è presente alcuna istanza di Norris.</precondizione>
+	<postcondizione>È stato visualizzato un errore che indica all'utente il fatto che esso abbia sbagliato nell'immissione dei dati di accesso all'istanza di Norris desiderata.</postcondizione>
 	<principale>
 		<item>L'utente visualizza un errore che indica la non validità dei dati di accesso inseriti.</item>
 	</principale>

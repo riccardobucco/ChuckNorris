@@ -91,18 +91,18 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 			L'issue tracking è un attività di supporto dei \insrole{Verificatori}. Essa permettere non solo di tracciare tutti i potenziali difetti dalla comparsa fino alla risoluzione, ma consente al \insrole{Responsabile di Progetto} di assegnare i compiti di correzione ai singoli membri del team.
 			\level{4}{Norme}
 				\level{5}{Sintassi delle label}
-				Una lable è una etichetta che viene applicata ad una issue utilizzando il servizio fornito da GitHub (consultare la sezione \nameref{app:strumenti} del presente documento) permettendo così di categorizzare e filtrare le varie issues.\\
-				Esistono 3 tipologie di ettichetta:
+				Una label è una etichetta che viene applicata ad una issue utilizzando il servizio fornito da GitHub (consultare la sezione \nameref{app:strumenti} del presente documento) permettendo così di categorizzare e filtrare le varie issues.\\
+				Esistono 3 tipologie di etichetta:
 				\begin{itemize}
-				    \item Di \textbf{attività}: ovvero quale attività l'ha generata. Le ettichette permesse sono quindi: \inslabel{Verifica}
-				    \item Di \textbf{appartenenza}: cioè da quale documento è stata sollevata la issue. Sono ettichette valide tutte le ettichette con nome la sigla dei documenti (seguendo la sintassi indicata nella sezione \nameref{sec:sintassiissue}).
-				    \item Di \textbf{stato}: identifica in che stato si trova la issue. Sono accettate solamente le seguenti ettichette:
+				    \item Di \textbf{attività}: ovvero quale attività l'ha generata. Le etichette permesse sono quindi: \inslabel{Verifica}
+				    \item Di \textbf{appartenenza}: cioè da quale documento è stata sollevata la issue. Sono etichette valide tutte le etichette con nome la sigla dei documenti (seguendo la sintassi indicata nella sezione \nameref{sec:sintassiissue}).
+				    \item Di \textbf{stato}: identifica in che stato si trova la issue. Sono accettate solamente le seguenti etichette:
 				\begin{itemize}
 				    \item \inslabel{Request} identifica una richiesta di issue;
 				    \item \inslabel{Questioned} viene applicata ad una issue nella quale si sta discutendo al fine di trovare una soluzione;
 				    \item \inslabel{ToDo} identifica che la issue è pronta per esser risolta con la soluzione accettata della discussione;
 				    \item \inslabel{InProgress} rappresenta una issue alla quale il componente incaricato sta lavorando al fine di risolverla
-				    \item \inslabel{Rejected} implica una issue respinta perchè la richiesta è stata giudicata inutile o dannosa;
+				    \item \inslabel{Rejected} implica una issue respinta perché la richiesta è stata giudicata inutile o dannosa;
 				    \item \inslabel{Done} identifica una issue completata.
 				\end{itemize}
 				\end{itemize}
@@ -110,12 +110,12 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				\level{5}{Gestione di un'anomalia}
 				Ogni qualvolta un \insrole{Verificatore} trova un anomalia deve segnalarla tramite il meccanismo di sollevamento issue fornito da Github (consultare la sezione \nameref{app:strumenti} del presente documento). L'intera procedura da attivare nel momento in cui viene individuata un'anomalia prevede i seguenti passi:
 				\begin{enumerate}
-				    \item il \insrole{Verificatore} crea una nuova issue su Github riguardante l'anomalia rinvenuta (seguendo la sintassi indicata nella sezione \nameref{sec:sintassiissue}) ed aggiunge come ettichette \inslabel{Verifica}, quella relativa al documento/i interessato/i ed infine l'ettichetta di stato \inslabel{Request}.
-				    \item il \insrole{Project Manager} valuterà la richiesta e se decide che la modifica è inutile o dannosa procederà cambiando l'ettichetta da \inslabel{Request} a \inslabel{Rejected} e chiudendo la issue terminando così la procedura;
+				    \item il \insrole{Verificatore} crea una nuova issue su Github riguardante l'anomalia rinvenuta (seguendo la sintassi indicata nella sezione \nameref{sec:sintassiissue}) ed aggiunge come etichette \inslabel{Verifica}, quella relativa al documento/i interessato/i ed infine etichetta di stato \inslabel{Request}.
+				    \item il \insrole{Project Manager} valuterà la richiesta e se decide che la modifica è inutile o dannosa procederà cambiando etichetta da \inslabel{Request} a \inslabel{Rejected} e chiudendo la issue terminando così la procedura;
 				    \item il \insrole{Verificatore} aggiorna la lista degli errori comuni (procedura descritta nella sezione \nameref{sec:tracciamento}).
-				    \item un qualsiasi componente del gruppo può proporre una soluzione ad una certa issue commentando all'interno di essa cambiando l'ettichetta della issue da \inslabel{Request} a \inslabel{Questioned} permettendo così agli altri componenti di ribattere l'idea o di proporne una nuova;
+				    \item un qualsiasi componente del gruppo può proporre una soluzione ad una certa issue commentando all'interno di essa cambiando etichetta della issue da \inslabel{Request} a \inslabel{Questioned} permettendo così agli altri componenti di ribattere l'idea o di proporne una nuova;
 				    \item quando si è deciso che la soluzione proposta sia quella ottimale l'etichetta verrà cambiata da \inslabel{Questioned} a \inslabel{ToDo} ed il \insrole{Project Manager} assegnerà il ticket di modifica ad un membro da lui scelto;
-				    \item il componente scelto dal gruppo avrà il compito di modificare l'ettichetta cambiandola da \inslabel{ToDo} ad \inslabel{InProgress} prendendo quindi in carico il ticket di lavoro;
+				    \item il componente scelto dal gruppo avrà il compito di modificare l'etichetta cambiandola da \inslabel{ToDo} ad \inslabel{InProgress} prendendo quindi in carico il ticket di lavoro;
 				    \item effettuata la modifica, verrà inserito sul repository il risultato e verrà modificata la issue da \inslabel{InProgress} a \inslabel{Done} e verrà dunque verrà chiusa la issue.
 			\end{enumerate}
 				\level{6}{Tracciamento degli errori più comuni nei documenti}\label{sec:tracciamento}

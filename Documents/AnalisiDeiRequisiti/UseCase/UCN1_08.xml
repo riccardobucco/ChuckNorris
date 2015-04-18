@@ -7,6 +7,6 @@
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato ottenuto un middleware per Express.js.</postcondizione>
 	<principale>
-		<item>Il Norris delevoper ottiene il middleware da poter utilizzare in Express.js.</item>
+		<item>Il Norris developer ottiene il middleware da poter utilizzare in Express.js.</item>
 	</principale>
 </usecase>

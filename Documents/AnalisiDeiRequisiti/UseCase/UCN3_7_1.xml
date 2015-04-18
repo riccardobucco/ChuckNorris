@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN3.7.1 Cambiare le opzioni riguardanti il formato di una cella</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>Il clent può cambiare le opzioni riguardanti il formato di una cella della table. In particolare il Web developer può cambiare il colore del testo contenuto in una cella e il colore di sfondo della stessa </descrizione>
+	<descrizione>Il client può cambiare le opzioni riguardanti il formato di una cella della table. In particolare il Web developer può cambiare il colore del testo contenuto in una cella e il colore di sfondo della stessa </descrizione>
 	<precondizione>Si stanno modificando le opzioni di visualizzazione di una table selezionata.</precondizione>
 	<postcondizione>Sono state modificate le opzioni riguardanti il formato di una cella.</postcondizione>
 	<principale>

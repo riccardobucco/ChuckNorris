@@ -18,15 +18,15 @@ Infine, il gruppo si impegna ad utilizzare strumenti che consentano di automatiz
 		L'applicazione del ciclo di miglioramento continuo ai processi, al fine di ottenere un aumento della loro qualità, avviene attraverso l'attuazione di tutte le fasi del ciclo, ovvero:
 		\begin{enumerate}
 		\item \textbf{Plan}: viene individuato il processo da eseguire e i risultati che si vogliono ottenere, si stimano i costi e i possibili rischi, infine il \insrole{Responsabile di Progetto} da inizio al processo assegnando i compiti ai membri del team;
-		\item \textbf{Do}: il processo viene eseguito dai membri del team ad esso assegnati, che in quel momento assumono il ruolo idoneo a svolgerlo; come indicato nel paragrafo \nameref{subsec:responsabilita} del presente documento, è responsabilità di ogni membro del \groupname{} apportare qualità al progetto nel momento in cui riveste uno dei ruoli individuati, ciò significa che i processi devono essere svolti con la massima cura;
+		\item \textbf{Do}: il processo viene eseguito dai membri del team ad esso assegnati, che in quel momento assumono il ruolo idoneo a svolgerlo; come indicato nel paragrafo \nameref{subsec:responsabilità} del presente documento, è responsabilità di ogni membro del \groupname{} apportare qualità al progetto nel momento in cui riveste uno dei ruoli individuati, ciò significa che i processi devono essere svolti con la massima cura;
 		\item \textbf{Check}: in questa fase i \insrole{Verificatori} in carica hanno il compito di verificare l'andamento del processo calcolando, valutando ed eventualmente confrontando gli indici previsti, valutando la qualità dei prodotti, e confrontando lo stato attuale del processo coi livelli indicati dal modello CMM (vedi appendice \nameref{app:CMM});
 		\item \textbf{Act}: l'azione da intraprendere in questa fase è correlata all'esito della fase precedente:
 		\begin{itemize}
 		\item qualora l'esito sia negativo, il \insrole{Responsabile di Progetto} deve impostare un'azione correttiva seguendo i suggerimenti dei \insrole{Verificatori};
-		\item qualora l'esito sia positivo, i \insrole{Verificatori} devono vigilare affinchè la qualità ottenuta non diminuisca e consigliare il \insrole{Responsabile di Progetto} per pianificare un'eventuale azione migliorativa.
+		\item qualora l'esito sia positivo, i \insrole{Verificatori} devono vigilare affinché la qualità ottenuta non diminuisca e consigliare il \insrole{Responsabile di Progetto} per pianificare un'eventuale azione migliorativa.
 		\end{itemize}
 		\end{enumerate}
-		Naturalmente queste fasi vanno attuate in modo iterativo, almeno finchè il livello del processo non risulta accettabile.
+		Naturalmente queste fasi vanno attuate in modo iterativo, almeno finché il livello del processo non risulta accettabile.
 		Per quanto riguarda i risultati del processo individuabili nella prima fase, essi possono variare a seconda del processo stesso; ad esempio possono basarsi sui soli livelli individuati nel modello CMM o anche su eventuali prodotti generati.
 	\level{2}{Tecniche di controllo qualità di prodotto}
 		Il controllo della qualità del prodotto è assicurato da due tipi di processi, quello di verifica e quello di validazione.
@@ -285,7 +285,7 @@ I range di accettazione per questa metrica sono:
 					Questa metrica serve a misurare la funzionalità del prodotto. \\
 					I range di accettazione per questa metrica sono:
 					\begin{itemize}
-					\item il soddisfacimento di tutti i requisiti obbilgatori e di requisiti opzionali e desiderabili è considerato ottimale;
+					\item il soddisfacimento di tutti i requisiti obbligatori e di requisiti opzionali e desiderabili è considerato ottimale;
 					\item il soddisfacimento di tutti i requisiti obbligatori è considerato accettabile;
 					\item il mancato soddisfacimento di anche un solo requisito obbligatorio è considerato non accettabile.
 					\end{itemize}
@@ -324,7 +324,7 @@ Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accet
 					\item valori minori di 6 sono considerati ottimali.
 				\end{itemize}
 			\level{5}{Livello di annidamento}
-			Il livello di annidamento del codice indica quante volte le struttuture di controllo sono state innestate una dentro l'altra. Per calcolare il livello di annidamento di un metodo o di una procedura si prende il massimo livello di annidamento delle strutture di controllo al suo interno. Un metodo con un alto livello di annidamento risulta avere un flusso interno complesso. La verifica di un tale metodo è molto onerosa, in quanto per garantire la massima copertura del codice sarà necessario eseguire un elevato numero di test.\\
+			Il livello di annidamento del codice indica quante volte le strutture di controllo sono state innestate una dentro l'altra. Per calcolare il livello di annidamento di un metodo o di una procedura si prende il massimo livello di annidamento delle strutture di controllo al suo interno. Un metodo con un alto livello di annidamento risulta avere un flusso interno complesso. La verifica di un tale metodo è molto onerosa, in quanto per garantire la massima copertura del codice sarà necessario eseguire un elevato numero di test.\\
 			I range di accettazione per questa metrica sono:
 			\begin{itemize}
 				\item valori maggiori di 5 sono considerati negativi;
@@ -332,11 +332,11 @@ Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accet
 				\item valori minori o uguali a 3 sono considerati ottimali.
 			\end{itemize}
 		\level{5}{Grado di accoppiamento}
-		Il grado di accoppiamento di un programma è il grado con cui ciascuna componente di un programma fa affidamento su ciascuna delle altre componenti, dipendendo da esse. In presenza di un basso grado di accoppiamento, eventuali modifiche apportate ad una classe hanno poche ripercussioni (o nessuna) sulle altre classi del sistema. Il codice risulta quindi facilmente manutenibile. Un basso accoppiamento è anche indice di maggiore comprensibilà del codice e di alta coesione all'interno delle componenti. Viceversa, un alto grado di accoppiamento comporta una difficile manutenibilità del codice, il quale risulta più complesso e poco coeso.\\
+		Il grado di accoppiamento di un programma è il grado con cui ciascuna componente di un programma fa affidamento su ciascuna delle altre componenti, dipendendo da esse. In presenza di un basso grado di accoppiamento, eventuali modifiche apportate ad una classe hanno poche ripercussioni (o nessuna) sulle altre classi del sistema. Il codice risulta quindi facilmente manutenibile. Un basso accoppiamento è anche indice di maggiore comprensibilità del codice e di alta coesione all'interno delle componenti. Viceversa, un alto grado di accoppiamento comporta una difficile manutenibilità del codice, il quale risulta più complesso e poco coeso.\\
 		Per valutare il grado di accoppiamento del codice, si devono calcolare i seguenti indici:
 		\begin{itemize}
 			\item Accoppiamento Afferente (CA): indica il numero di classi esterne ad un package che dipendono da classi interne ad esso. Un alto valore di CA è indice di un alto grado di dipendenza del resto del software dal package.
-			\item Accoppiamento Efferente (CE): indica il numero di classi interne al package che dipendono da classi esterne ad esso. Un basso valore di CE indica che la maggiorparte delle funzionalità fornite dal package sono indipendenti dal resto del sistema.
+			\item Accoppiamento Efferente (CE): indica il numero di classi interne al package che dipendono da classi esterne ad esso. Un basso valore di CE indica che la maggior parte delle funzionalità fornite dal package sono indipendenti dal resto del sistema.
 		\end{itemize}
 		\level{5}{Copertura del codice}
 		La copertura del codice è la percentuale degli statement eseguiti, e quindi verificati, durante lo svolgimento dei test. Un'alta copertura del codice garantisce un'alta affidabilità del software, in quanto la probabilità che siano presenti errori in codice che sia stato sottoposto a test è molto bassa.\\
