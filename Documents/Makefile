@@ -59,6 +59,11 @@ _norme: _force
 	@ sed -ri 's/\\listoftables//' NormeDiProgetto/NormeDiProgetto.tex
 
 _specifica: _force
+	@ #creazione file latex classi
+	@ xsltproc -o SpecificaTecnica/Classi/Norris.tex SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Norris.xml
+	@ xsltproc -o SpecificaTecnica/Classi/Chuck.tex SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Chuck.xml
+	@ xsltproc -o SpecificaTecnica/Classi/Applicazione.tex SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Applicazione.xml
+
 	@ #download tabelle
 	@ curl http://kaizenteam.it/tracker/export/componenti-requisiti.php > SpecificaTecnica/TrackerComponentiRequisiti.tex
 	@ curl http://kaizenteam.it/tracker/export/requisiti-componenti.php > SpecificaTecnica/TrackerRequisitiComponenti.tex
