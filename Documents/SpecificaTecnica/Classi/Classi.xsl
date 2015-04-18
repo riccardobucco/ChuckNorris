@@ -11,12 +11,17 @@
 
 	<xsl:template match="*[local-name()='Package']">
 		<xsl:if test="@name!='java'">
-			
-			\level{3}{<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>}
+			<xsl:variable name="name">
+				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
+			</xsl:variable>
+			\level{3}{<xsl:value-of select="$name"/>}
+			<xsl:call-template name="image"><xsl:with-param name="name" select="$name"/></xsl:call-template>
+
 			\begin{itemize}
 			\item Nome: <xsl:value-of select="@name"/>
 			\item Tipo: package
 			\end{itemize}
+
 			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>
 		</xsl:if>
 	</xsl:template>
@@ -24,7 +29,12 @@
 	<!-- classi -->
 	<xsl:template match="*[local-name()='Class']">
 
-			\level{3}{<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>}
+			<xsl:variable name="name">
+				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
+			</xsl:variable>
+			\level{3}{<xsl:value-of select="$name"/>}
+			<xsl:call-template name="image"><xsl:with-param name="name" select="$name"/></xsl:call-template>
+
 			\begin{itemize}
 			\item Nome: <xsl:value-of select="@name"/>
 			\item Tipo: classe
@@ -33,19 +43,26 @@
 			<xsl:apply-templates select="*[local-name()='ModelElement.stereotype']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
 			\end{itemize}
+
 			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>			
 	</xsl:template>
 
 	<!-- interfacce -->
 	<xsl:template match="*[local-name()='Interface']">
 
-			\level{3}{<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>}
+			<xsl:variable name="name">
+				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
+			</xsl:variable>
+			\level{3}{<xsl:value-of select="$name"/>}
+			<xsl:call-template name="image"><xsl:with-param name="name" select="$name"/></xsl:call-template>
+
 			\begin{itemize}
 			\item Nome: <xsl:value-of select="@name"/>
 			\item Tipo: interfaccia
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
 			\end{itemize}
+
 			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>
 	</xsl:template>
 
@@ -94,6 +111,18 @@
 			<xsl:value-of select="//*[@xmi.id=$id]/@name"/>
 		</xsl:if>
 
+	</xsl:template>
+
+	<xsl:template name="image">
+		<xsl:param name="name"></xsl:param>
+
+		\IfFileExists{SpecificaTecnica/Pics/Classi/<xsl:value-of select="$name"/>.pdf}{
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{SpecificaTecnica/Pics/Classi/<xsl:value-of select="$name"/>}
+				\caption{<xsl:value-of select="$name"/>}
+			\end{figure}
+		}
 	</xsl:template>
 
 </xsl:stylesheet>
