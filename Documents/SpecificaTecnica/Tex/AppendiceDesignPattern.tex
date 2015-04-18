@@ -46,3 +46,29 @@
 		\item consente di ridefinire le operazioni definite nel Singleton;
 		\item permette di porre un limite massimo al numero di istanze di una certa classe.
 		\end{itemize}
+	\level{2}{Dependency injection} \label{app:dependencyinjection}
+Il Dependency Injection è un pattern architetturale utilizzato nella programmazione Object-Oriented il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze. \\
+Questo particolare pattern si basa su tre elementi:
+\begin{itemize}
+\item una componente dipendente;
+\item la dichiarazione delle dipendenze della componente, dette interface contracts;
+\item un injector, detto anche provider, che crea su richiesta le istanze delle classi che implementano le dipendenze.
+\end{itemize}
+Il principio di programmazione adottato è quello dell'inversione di controllo, secondo il quale il ciclo di vita degli oggetti viene gestito da un'entità esterna (container).\\
+Nel Dependency Injection implementato con l'inversione di controllo le dipendenze vengono inserite dal container, la componente si limita a dichiararle. In questo modo viene raggiunto l'obiettivo di ridurre le dipendenze fra classi.\\
+Esistono due tipi di Dependency Injection:
+\begin{description}
+	\item[Constructor injection:] le dipendenze vengono dichiarate come parametri del costruttore; in questo modo un oggetto è valido appena viene istanziato.
+	\item[Setter injection:] le dipendenze vengono dichiarate come metodi setter; in questo modo vengono evidenziate le dipendenze.
+\end{description}
+
+\level{3}{Vantaggi nell'uso di dependency injection}
+L'utilizzo del pattern Dependency Injection nella progettazione dell'architettura di un software porta i seguenti vantaggi:
+\begin{itemize}
+\item la componente individuata come client è più facile da testare singolarmente attraverso l'uso di stub;
+\item permette di esternalizzare i dettagli della configurazione del sistema in un file di configurazione, consentendo così di riconfigurare il sistema senza ricompilarlo;
+\item permette lo sviluppo concorrente e indipendente del software;
+\item diminuisce l'accoppiamento tra una classe e la sua dipendenza.
+\end{itemize}
+\level{3}{Svantaggi nell'uso di dependency injection}
+Dependency Injection ha anche delle possibili ripercussioni negative sul software che lo utilizza. Esso infatti può rendere il codice difficile da leggere in quanto permette la separazione fra dichiarazione e comportamento, oltre a richiedere più righe di codice rispetto alla scrittura di codice "tradizionale" per ottenere lo stesso comportamento.
