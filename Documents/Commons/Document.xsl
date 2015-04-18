@@ -16,7 +16,7 @@
 		\usepackage{lastpage}
 		\usepackage{longtable}
 		\usepackage{tabu}
-		\usepackage{hyperref}
+		\usepackage[bookmarks=false]{hyperref}
 		\usepackage[hypcap]{caption}
 		\usepackage{color}
 		\usepackage{eurosym}
