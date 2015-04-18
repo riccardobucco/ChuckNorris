@@ -1,0 +1,88 @@
+\level{2}{Test di integrazione}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| l | l | l | c |}
+			\hline
+			Test 					& Descrizione				& Componenti				 & Esito 					\\ \hline
+
+
+%Norris
+
+
+
+
+
+
+
+
+
+
+
+
+%Chuck
+
+
+
+
+
+
+
+
+
+
+
+
+%Applicazione
+
+			TIApplcazione &
+			Test di integrazione finale tra le componenti Model, View, Controller
+			&
+			Applicazione\\
+			Applicazione::Model\\
+			Applicazione::View\\
+			Applicazione::Controller\\
+			Applicazione::Utils
+			& Non Implementato
+\\ \hline
+			TIModel &
+			Viene verificato che il sistema gestisca correttamente la componente Model relativa al design pattern MVC. Più precisamente che memorizzi correttamente i dati relativi ai chart dell'istanza di norris selezionata.
+			&
+			Norris::DataModel\\
+			Norris::DataModel::ChartImpl\\
+			Norris::DataModel::BarChartImpl\\
+			Norris::DataModel::LineChartImpl\\
+			Norris::DataModel::MapChartImpl\\
+			Norris::DataModel::TableImpl
+			& Non Implementato
+\\ \hline
+			TIView &
+			Viene verificato che il sistema gestisca correttamente la componente View del pattern MVC. Più precisamente che gestisca correttamente tutto ciò che concerne la rappresentazione dei chart.
+			&
+			Applicazione::View\\
+			Applicazione::View:Activity\\
+			Applicazione::View:HomeActivity\\
+			Applicazione::View:ListActivity\\
+			Applicazione::View:ChartActivity
+			& Non Implementato
+\\ \hline
+			TIController &
+			Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC. Più precisamente viene verificato che il sistema gestisca le azioni dell’utente e che dialoghi in maniera appropriata con il server.
+			&
+			Applicazione::Controller\\
+			Applicazione::Controller::Controller\\
+			Applicazione::Controller::ChartController\\
+			Applicazione::Controller::HomeController\\
+			Applicazione::Controller::ListController
+			& Non Implementato
+\\ \hline
+			TIObserver &
+			Viene verificato che il sistema gestisca correttamente le componenti necessarie per la realizzazione del design pattern Observer.
+			&
+			Applicazione::Utils\\
+			Applicazione::Utils:ObservableImpl\\ 
+			& Non Implementato
+\\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Test di Integrazione}
+\end{table}
