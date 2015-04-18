@@ -72,3 +72,27 @@ L'utilizzo del pattern Dependency Injection nella progettazione dell'architettur
 \end{itemize}
 \level{3}{Svantaggi nell'uso di dependency injection}
 Dependency Injection ha anche delle possibili ripercussioni negative sul software che lo utilizza. Esso infatti può rendere il codice difficile da leggere in quanto permette la separazione fra dichiarazione e comportamento, oltre a richiedere più righe di codice rispetto alla scrittura di codice "tradizionale" per ottenere lo stesso comportamento.
+
+	\level{2}{Observer} \label{app:observer}
+		Observer è un pattern comportamentale, implementato in numerose librerie di programmazione e sistemi, il cui scopo è quello di tenere sotto controllo lo stato di diversi oggetti legati ad un soggetto (dipendenza uno a molti). \\
+		Il paradigma corrisponde al modello Publisher and Subscribe: i sottoscrittori si registrano presso un pubblicatore e quest’ultimo li informa ogni volta che ci sono nuove notizie (del genere sottoscritto).\\
+		Il pattern è composto da:
+		\begin{itemize}
+		\item una classe astratta “Subject”, da cui eredita il soggetto concreto, che mantiene una lista di riferimenti agli oggetti dipendenti per poterli avvisare;
+		\item Un’interfaccia “Observer” implementata dagli osservatori concreti, che tengono il riferimento al soggetto per poterne leggere lo stato.
+		\end{itemize}
+		\level{3}{Vantaggi nell’uso di observer}
+			L’utilizzo del pattern Observer nella progettazione dell’architettura porta i seguenti vantaggi:
+			\begin{itemize}
+			\item minimizzazione dell’accoppiamento tra Observer e Subject, che possono essere usati indipendentemente gli uni dagli altri;
+			\item aumento del grado di riuso dei singoli tipi;
+			\item non si debbono fare assunzioni sugli oggetti dipendenti se si ha necessità di comunicare con loro;
+			\item libertà di aggiungere osservatori dinamicamente alla lista, senza modificare il Subject.
+			\end{itemize}
+
+			\level{3}{Svantaggi nell'uso di Observer}
+			L’utilizzo di Observer potrebbe causare:
+			\begin{itemize}
+			\item possibile cascata di notifiche: poiché gli observer mutuamente si ignorano, una richiesta di modifica può avere effetti incontrollati, scatenando la reazione degli altri;
+			\item “memory leak” in quanto nelle implementazioni di base il subject richiede sia l’esplicita registrazione che l’esplicita rimozione dalla lista delle dipendenze legandosi in modo forte agli observer, tenendoli attivi. Questo problema può essere prevenuto riferendo in modo debole gli observer.
+			\end{itemize}
