@@ -22,6 +22,17 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 						Nel presente documento sono state definite delle norme tipografiche di carattere generale. Molte di esse sono verificabili tramite strumenti automatici (vedi sezione \nameref{app:strumenti} del presente documento). Per le restanti è necessario che i \insrole{Verificatori} applichino una fra le tecniche di inspection e \textit{walkthrough}	(si preferisce la prima nel momento in cui tramite la lista di controllo si riesce a trovare la grande maggioranza degli errori).
 					\level{6}{Proprietà di glossario}
 						È necessario che tutte le parole presenti all'interno del \insdoc{Glossario} siano marcate appropriatamente (come descritto nel presente documento). Ciò viene fatto con l'ausilio di strumenti automatici (vedi sezione \nameref{app:strumenti} del presente documento). Inoltre, è compito dei \insrole{Verificatori} trovare tutti quei termini che dovrebbero essere inclusi nel \insdoc{Glossario} ma che ancora non lo sono. Per tale compito si deve utilizzare \textit{walthrough} delle sezioni che sono state soggette a modifica prima dell'ultima verifica.
+				\level{5}{Test}
+					\level{6}{Test di integrazione}
+					I test di integrazione servono per verificare il corretto funzionamento di più moduli assemblati insieme; in particolare servono per rilevare bug nei moduli nel momento in cui essi interagiscono con altri moduli coi quali hanno dipendenze.\\
+					I test di integrazione vengono identificati dalla sintassi TI[Componente], dove il componente è quello i cui elementi sono quelli di cui si sta testando l'integrazione.
+					\level{6}{Test di sistema}
+					I test di sistema validano i requisiti individuati nell'\insdoc{Analisi dei Requisiti v3.00}, ovvero validano il prodotto software, e vengono eseguiti dopo i test di integrazione.
+					I test di sistema vengono identificati dalla sintassi TS[Codice del requisito], dove il codice del requisito è quello del requisito che sarà testato.\\
+					Nel documento \insdoc{Piano di Qualità v3.00} vengono riportati i test di sistema relativi ai soli requisiti funzionali specifici.
+					\level{6}{Test di accettazione}
+					I test di accettazione avvengono al momento del collaudo del software col proponente.
+					I test di accettazione sono identificati dalla sintassi TA[Codice del requisito], dove il Codice del requisito si riferisce al requisito che sarà testato.
 
 \level{4}{Procedure}
 		\level{5}{Verifica dei diagrammi UML}
@@ -51,7 +62,8 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				\end{itemize}
 				Infine, assicurarsi che i casi d'uso descrivano cosa il sistema fa e non cosa non fa.
 			\level{6}{Diagrammi di attività}
-				I diagrammi delle attività allo stato attuale delle cose sono stati usati esclusivamente per creare figure facilmente comprensibili che illustrino le procedure contenute nel presente documento. È dunque necessario verificare unicamente che tali diagrammi siano conformi allo standard UML.		
+				I diagrammi delle attività allo stato attuale delle cose sono stati usati esclusivamente per creare figure facilmente comprensibili che illustrino le procedure contenute nel presente documento. È dunque necessario verificare unicamente che tali diagrammi siano conformi allo standard UML.	
+		
 	
 	\level{4}{Strumenti}
 	Per l'attività di verifica dei documenti sono stati utilizzati degli appositi script sviluppati dagli amministratori e descritti nell'appendice \nameref{app:strumenti}.
