@@ -3,7 +3,7 @@
 <usecase>
 	<titolo>UCN1.8 Ottenere middleware</titolo>
 	<attorip>Norris developer</attorip>
-	<descrizione>Norris può essere usato come middleware per Express.js. Il Norris developer può quindi ottenere il middleware che poi viene utilizzato autonomamente dallo sviluppatore come desidera. La motivazione per cui è stato deciso di utilizzare Express.js come middleware si può trovare nell'appendice \nameref{app:express}.</descrizione>
+	<descrizione>Norris può essere usato come middleware per Express.js. Il Norris developer può quindi ottenere il middleware che poi viene utilizzato autonomamente dallo sviluppatore come desidera. La motivazione per la quale è stata scelta di fornire questa funzionalità al Norris developer è spiegata in modo approfondito nell'appendice \nameref{app:express}.</descrizione>
 	<precondizione>Si stanno utilizzando le API interne.</precondizione>
 	<postcondizione>È stato ottenuto un middleware per Express.js.</postcondizione>
 	<principale>
