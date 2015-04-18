@@ -9,7 +9,67 @@
 %Norris
 
 
+	TINorris
+	&
+Test di integrazione finale tra le componenti DataModel, InternalAPIManager e ExternalAPIManager per verificare il comportamente del sistema nel suo complesso.
+&
+Norris::DataModel;
+Norris::InternalAPIManager;
+Norris::ExternalAPIManager
+			& Non Implementato
+			\\ \hline
 
+
+
+	TINorrisDataModel
+	&
+Comportamento del modello: viene verificato che il modello rispetti le aspettative previste, ovvero memorizzi correttamente i dati necessari e li restituisca in un secondo momento senza perdite di informazioni o dati scorretti.
+&
+Norris::DataModel::NorrisImpl;
+Norris::DataModel::ChartImpl;
+Norris::DataModel::PageImpl
+			& Non Implementato
+			\\ \hline
+
+
+
+	TINorrisChartImpl
+	&
+Comportamento del modello di chart: viene verificato che il modello dei chart memorizzi correttamente le informazioni in base al tipo specifico del chart rappresentato.
+&
+Norris::DataModel::ChartImpl;
+Norris::DataModel::BarChartImpl;
+Norris::DataModel::LineChartImpl;
+Norris::DataModel::MapChartImpl;
+Norris::DataModel::TableImpl
+			& Non Implementato
+			\\ \hline
+
+
+
+	TINorrisInternalAPIManager
+	&
+Funzionamento delle API interne: viene verificato che le API interne apportino al modello le modifiche corrette a seconda dell'azione richiesta.
+&
+Norris::InternalAPIManager::InternalAPIBridge;
+Norris::InternalAPIManager::ChartBridge;
+Norris::InternalAPIManager::PageBridge
+			& Non Implementato
+			\\ \hline
+
+
+
+	TINorrisExternalAPIManager
+	&
+Funzionamento delle API interne: viene verificato che le API esterne forniscano le funzione corrette a seconda dei dati rappresentati dal modello.
+&
+Norris::ExternalAPIManager::ExternalAPIController;
+Norris::ExternalAPIManager::AuthenticationEndpoint;
+Norris::ExternalAPIManager::ListEndpoint;
+Norris::ExternalAPIManager::ChartEndpoint;
+Norris::ExternalAPIManager::ChartRef
+			& Non Implementato
+			\\ \hline
 
 
 
@@ -22,7 +82,116 @@
 %Chuck
 
 
+	TIChuck
+				&
+Test di integrazione finale tra tutte le componenti al fine di verificare il sistema nel suo complesso.
+			&
+Chuck::ChuckManager;
+Chuck::DataModel;
+Chuck::ChartView;
+Chuck::Controller;
+Chuck::Utils
+			& Non Implementato
+			\\ \hline
 
+
+
+	TIChuckChuckManager
+				&
+Comportamento delle API di Chuck: viene verificato che utilizzando l'interfaccia messa a disposizione dallo sviluppatore la componente ChuckManager effettui le operazioni corrette.
+			&
+Chuck::ChuckManager::ChuckAPIController;
+Chuck::ChuckManager::AuthenticationManager;
+Chuck::ChuckManager::ChartRequester;
+Chuck::ChuckManager::ChartBridge
+			& Non Implementato
+			\\ \hline
+
+
+	
+	TIChuckAuthenticationManager
+				&
+Viene verificato che AuthenticationManager effettui l'autenticazione nel modo corretto presso un'istanza valida di Norris.
+			&
+Chuck::ChuckManager::AuthenticationManager;
+XMLHttpRequest
+			& Non Implementato
+			\\ \hline
+
+
+
+	TIChuckChartRequester
+				&
+Viene verificato che ChartRequester richieda correttamente un grafico presente in un'istanza di Norris e lo mantenga aggiornato.
+			&
+Chuck::ChuckManager::ChartRequester;
+SocketIOClient
+			& Non Implementato
+			\\ \hline
+
+
+
+	TIChuckDataModel
+				&
+Viene verificato che il modello memorizzi correttamente le informazioni riguardanti i grafici.
+			&
+Chuck::DataModel::ChuckImpl;
+Chuck::DataModel::ChartImpl
+			& Non Implementato
+			\\ \hline
+
+
+
+	TIChuckChartImpl
+				&
+Viene verificato che il modello dei chart memorizzi correttamente le informazioni in base al tipo specifico del chart rappresentato.
+			&
+Chuck::DataModel::ChartImpl;
+Chuck::DataModel::BarChartImpl;
+Chuck::DataModel::LineChartImpl;
+Chuck::DataModel::MapChartImpl;
+Chuck::DataModel::TableImpl
+			& Non Implementato
+			\\ \hline
+
+
+
+	TIChuckChartView
+				&
+Viene verificato che la componente ChartView gestisca correttamente la visualizzazione di tutti i tipi di grafici.
+			&
+Chuck::ChartView::ViewImpl;
+Chuck::ChartView::BarChartView;
+Chuck::ChartView::LineChartView;
+Chuck::ChartView::MapChartView;
+Chuck::ChartView::TableView
+			& Non Implementato
+			\\ \hline
+
+
+
+	TIChuckController
+				&
+Viene verificato che il controller, per tutti i tipi di grafico, gestisca correttamente le notifiche proveniente dalla componente ChartView.
+			&
+Chuck::Controller::ChartController;
+Chuck::Controller::BarChartController;
+Chuck::Controller::LineChartController;
+Chuck::Controller::MapChartController;
+Chuck::Controller::TableController
+			& Non Implementato
+			\\ \hline
+
+
+
+	TIChuckObserver
+Viene verificata la corretta implementazione del pattern Observer.
+			&
+Chuck::Utils::Observable;
+Chuck::Utils::ObservableImpl;
+Chuck::Utils::Observer
+			& Non Implementato
+			\\ \hline
 
 
 
@@ -37,49 +206,49 @@
 			TIApplcazione &
 			Test di integrazione finale tra le componenti Model, View, Controller
 			&
-			Applicazione\\
-			Applicazione::Model\\
-			Applicazione::View\\
-			Applicazione::Controller\\
+			Applicazione;
+			Applicazione::Model;
+			Applicazione::View;
+			Applicazione::Controller;
 			Applicazione::Utils
 			& Non Implementato
 \\ \hline
-			TIModel &
+			TIApplcazioneModel &
 			Viene verificato che il sistema gestisca correttamente la componente Model relativa al design pattern MVC. Più precisamente che memorizzi correttamente i dati relativi ai chart dell'istanza di norris selezionata.
 			&
-			Norris::DataModel\\
-			Norris::DataModel::ChartImpl\\
-			Norris::DataModel::BarChartImpl\\
-			Norris::DataModel::LineChartImpl\\
-			Norris::DataModel::MapChartImpl\\
+			Norris::DataModel;
+			Norris::DataModel::ChartImpl;
+			Norris::DataModel::BarChartImpl;
+			Norris::DataModel::LineChartImpl;
+			Norris::DataModel::MapChartImpl;
 			Norris::DataModel::TableImpl
 			& Non Implementato
 \\ \hline
-			TIView &
+			TIApplcazioneView &
 			Viene verificato che il sistema gestisca correttamente la componente View del pattern MVC. Più precisamente che gestisca correttamente tutto ciò che concerne la rappresentazione dei chart.
 			&
-			Applicazione::View\\
-			Applicazione::View:Activity\\
-			Applicazione::View:HomeActivity\\
-			Applicazione::View:ListActivity\\
+			Applicazione::View;
+			Applicazione::View:Activity;
+			Applicazione::View:HomeActivity;
+			Applicazione::View:ListActivity;
 			Applicazione::View:ChartActivity
 			& Non Implementato
 \\ \hline
-			TIController &
+			TIApplcazioneController &
 			Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC. Più precisamente viene verificato che il sistema gestisca le azioni dell’utente e che dialoghi in maniera appropriata con il server.
 			&
-			Applicazione::Controller\\
-			Applicazione::Controller::Controller\\
-			Applicazione::Controller::ChartController\\
-			Applicazione::Controller::HomeController\\
+			Applicazione::Controller;
+			Applicazione::Controller::Controller;
+			Applicazione::Controller::ChartController;
+			Applicazione::Controller::HomeController;
 			Applicazione::Controller::ListController
 			& Non Implementato
 \\ \hline
-			TIObserver &
+			TIApplcazioneObserver &
 			Viene verificato che il sistema gestisca correttamente le componenti necessarie per la realizzazione del design pattern Observer.
 			&
-			Applicazione::Utils\\
-			Applicazione::Utils:ObservableImpl\\ 
+			Applicazione::Utils;
+			Applicazione::Utils:ObservableImpl;
 			& Non Implementato
 \\ \hline
 		\end{tabular}
