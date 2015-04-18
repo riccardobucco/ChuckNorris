@@ -1,5 +1,5 @@
 % !TEX encoding = UTF-8 Unicode
-\level{1}{Middleware in Express.js}
+\level{1}{Middleware in Express.js} \label{app:express}
 	\level{2}{Cos'è un middleware?}
 		In Express.js un middleware, molto semplicemente, è un insieme di funzioni che gestiscono le richieste al server: esse sono invocate dal routing layer di Express.js quando vengono fatte determinate richieste HTTP a certi endpoint. Nello specifico, quando arriva una richiesta (rappresentata da un oggetto ServerRequest) questa viene passata alla prima funzione dello stack dei middleware (assieme a un oggetto ServerResponse, che rappresenta la risposta del server alla richiesta): ogni middleware può decidere se gestire la richiesta in qualche modo (per esempio invocando dei metodi sull'oggetto ServerResponse) oppure no. Quando un middleware ha terminato la sua specifica gestione di una richiesta, esso può passare l'oggetto ServerRequest al middleware che lo segue nello stack (tramite la callback \texttt{next()}). Un middleware, dunque, può essere usato ovunque si voglia gestire in qualche modo logico tutte le richieste di un certo tipo.\\
 		Riportiamo in seguito la descrizione che fornisce il sito \url{expressjs.com} di middleware (riportata in lingua originale):
