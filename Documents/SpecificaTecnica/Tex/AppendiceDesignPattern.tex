@@ -144,3 +144,21 @@ Si può implementare questo pattern in due modi:
 \item[Object adapter:] in questo caso l'adattamento avviene sfruttando un campo dati del tipo dell'interfaccia da adattare all'interno della classe concreta; in questo modo l'interfaccia di dominio verrà implementata invocando i metodi dell'interfaccia Adaptee attraverso il campo dati. Il vantaggio di questo metodo è che permette ad Adapter di adattare più tipi; lo svantaggio è che non consente di modificare le caratteristiche dell'Adaptee.
 \end{description}
 Ne consegue che la scelta fra i due metodi va fatta in considerazione dell'uso che se ne vuole fare.
+
+\level{2}{Bridge} \label{app:bridge}
+Bridge è un pattern strutturale che permette di separare l’interfaccia di una classe dalla sua implementazione. \\
+Il pattern è composto da un’interfaccia che fa da ponte rendendo indipendenti le funzionalità della classe concreta dall’interfaccia che la implementa. Entrambe i tipi di classi possono essere modificati senza che questo causi problemi l’uno all’altro. \\
+Viene utilizzato quando:
+\begin{itemize}
+\item si desidera evitare un binding permanente tra astrazione e interfaccia;
+\item è necessario rendere estensibili tramite sub-classing astrazioni e implementazioni;
+\item si vuole nascondere al client l'implementazione di un'astrazione;
+\item si vuole condividere un'implementazione tra oggetti multipli nascondendo questo fatto al client.
+\end{itemize}
+
+\level{3}{Vantaggi nell’uso di Bridge}
+L’utilizzo del pattern Bridge nella progettazione dell’architettura porta i seguenti vantaggi:
+\begin{itemize}
+\item maggiore estensibilità data dalla possibilità di estendere indipendentemente le gerarchie delle interfacce e delle classi che le implementano;
+\item mascheramento dei dettagli implementativi permesso dall'implementazione nascosta delle interfacce.
+\end{itemize}
