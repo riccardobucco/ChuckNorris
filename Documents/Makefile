@@ -82,6 +82,16 @@ spell: _force
 	@ find . -name '*.xml' -exec aspell --mode=tex --lang=it check {} \;
 	@ find . -name '*.xsl' -exec aspell --mode=tex --lang=it check {} \;
 
+gulpease: _force
+	@ for doc in $(filter-out Glossario,$(DOCUMENTI)) ; do \
+		find $$doc -name "*.tex" -exec cat {} + > gulpease.tmp; \
+		echo "$$doc"; \
+		./Commons/Script/Gulpease.sh gulpease.tmp; \
+		echo ""; \
+	done
+
+	@ rm -f gulpease.tmp
+
 glossary: terms = $(shell xmllint --xpath '//entry/@name' Glossario/Termini.xml | grep -o '"[[:alpha:]|\.| ]*"' | grep -o '[[:alpha:]|\.| ]*' | tr "\n" "|" | head -c -1 | sed 's/\./\\./g')
 glossary: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|level\{[^}]*\}|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics[^{]*|caption|label|ref|nameref|pageref|hyperref|addtocounter
 glossary: _force
