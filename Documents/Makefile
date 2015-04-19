@@ -83,7 +83,7 @@ spell: _force
 	@ find . -name '*.xsl' -exec aspell --mode=tex --lang=it check {} \;
 
 gulpease: _force
-	@ for doc in $(filter-out Glossario,$(DOCUMENTI)) ; do \
+	@ for doc in $(DOCUMENTI) ; do \
 		find $$doc -name "*.tex" -exec cat {} + > gulpease.tmp; \
 		echo "$$doc"; \
 		./Commons/Script/Gulpease.sh gulpease.tmp; \
