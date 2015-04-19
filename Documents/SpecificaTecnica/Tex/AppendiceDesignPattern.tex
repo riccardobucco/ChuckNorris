@@ -96,3 +96,28 @@ Dependency Injection ha anche delle possibili ripercussioni negative sul softwar
 			\item possibile cascata di notifiche: poiché gli observer mutuamente si ignorano, una richiesta di modifica può avere effetti incontrollati, scatenando la reazione degli altri;
 			\item “memory leak” in quanto nelle implementazioni di base il subject richiede sia l’esplicita registrazione che l’esplicita rimozione dalla lista delle dipendenze legandosi in modo forte agli observer, tenendoli attivi. Questo problema può essere prevenuto riferendo in modo debole gli observer.
 			\end{itemize}
+		\level{2}{Abstract Factory} \label{app:abstractfactory}
+L'Abstract Factory è un design pattern creazionale utilizzato allo scopo di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
+Il pattern si basa sui seguenti elementi:
+\begin{description}
+\item[AbstractFactory:] dichiara un'interfaccia per operazioni che creano prodotti astratti;
+\item[ConcreteFactory:] implementa le operazioni per creare prodotti concreti;
+\item[AbstractProduct:] dichiara un'interfaccia per un tipo di prodotto;
+\item[ConcreteProduct:] definisce un prodotto che deve creato dalla corrispondente factory concreta e implementa l'interfaccia di AbstractProduct.
+\end{description}
+La principale ragione per cui viene utilizzato questo pattern è la possibilità di rendere l'applicazione configurabile con diverse famiglie di prodotti. La flessibilità garantita dal pattern fa si che esso venga implementato ogniqualvolta:
+\begin{itemize}
+\item si voglia rendere il sistema indipendente dal modo in cui i suoi componenti sono creati;
+\item si voglia rendere il sistema configurabile con più famiglie di prodotti;
+\item le componenti di una famiglia debbano essere usate insieme;
+\item si voglia fornire una libreria di classi prodotto, senza fornire informazioni circa la loro implementazione.
+\end{itemize}
+\level{3}{Vantaggi nell'uso di Abstract Factory}
+L'impiego dell'Abstract Factory nella progettazione dell'architettura di un prodotto software porta i seguenti vantaggi:
+\begin{itemize}
+\item isolamento dei tipi concreti, in quanto ai client risultano visibili solo le interfacce dei prodotti, con la conseguenza di una maggiore flessibilità del software;
+\item maggiore semplicità nell'introdurre e usare diverse famiglie di prodotti;
+\item favorisce la consistenza dei prodotti concreti.
+\end{itemize}
+\level{3}{Svantaggi nell'uso di Abstract Factory}
+Come tutti i pattern, anche Abstract Factory ha delle ripercussioni negative nella progettazione del software: in questo caso risulta difficile estendere la classe factory astratta, perchè ciò comporta il cambiamento di tutte le sotto classi.
