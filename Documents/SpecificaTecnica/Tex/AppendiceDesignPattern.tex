@@ -1,6 +1,6 @@
 \level{1}{Design Patterns} \label{app:designpattern}
 	\level{2}{Model View Controller} \label{app:MVC}
-		Il Model-View-Controller (MVC) è un pattern architetturale utilizzato per dividere il codice in blocchi di funzionalità ben distinte, e viene utilizzato molto frequentemente nelle applicazioni in cui un insieme di informazioni deve essere rappresentato attraverso una interfaccia grafica.
+		Model-View-Controller (MVC) è un pattern architetturale utilizzato per dividere il codice in blocchi di funzionalità ben distinte, e viene utilizzato molto frequentemente nelle applicazioni in cui un insieme di informazioni deve essere rappresentato attraverso una interfaccia grafica.
 		\level{3}{Componenti}
 			MVC è quindi basato sul principio del disaccoppiamento dei tre oggetti di cui è composto, ovvero sulla riduzione del loro grado di dipendenza reciproca, allo scopo di fornire una maggiore robustezza, modularità e manutenibilità al software.\\
 			Di seguito si riporta una breve descrizione dei componenti e delle loro caratteristiche. 
@@ -47,7 +47,7 @@
 		\item permette di porre un limite massimo al numero di istanze di una certa classe.
 		\end{itemize}
 	\level{2}{Dependency injection} \label{app:dependencyinjection}
-Il Dependency Injection è un pattern architetturale utilizzato nella programmazione Object-Oriented il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze. \\
+Dependency Injection è un pattern architetturale utilizzato nella programmazione Object-Oriented il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze. \\
 Questo particolare pattern si basa su tre elementi:
 \begin{itemize}
 \item una componente dipendente;
@@ -96,8 +96,8 @@ Dependency Injection ha anche delle possibili ripercussioni negative sul softwar
 			\item possibile cascata di notifiche: poiché gli observer mutuamente si ignorano, una richiesta di modifica può avere effetti incontrollati, scatenando la reazione degli altri;
 			\item “memory leak” in quanto nelle implementazioni di base il subject richiede sia l’esplicita registrazione che l’esplicita rimozione dalla lista delle dipendenze legandosi in modo forte agli observer, tenendoli attivi. Questo problema può essere prevenuto riferendo in modo debole gli observer.
 			\end{itemize}
-		\level{2}{Abstract Factory} \label{app:abstractfactory}
-L'Abstract Factory è un design pattern creazionale utilizzato allo scopo di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
+\level{2}{Abstract Factory} \label{app:abstractfactory}
+Abstract Factory è un design pattern creazionale utilizzato allo scopo di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
 Il pattern si basa sui seguenti elementi:
 \begin{description}
 \item[AbstractFactory:] dichiara un'interfaccia per operazioni che creano prodotti astratti;
@@ -121,3 +121,26 @@ L'impiego dell'Abstract Factory nella progettazione dell'architettura di un prod
 \end{itemize}
 \level{3}{Svantaggi nell'uso di Abstract Factory}
 Come tutti i pattern, anche Abstract Factory ha delle ripercussioni negative nella progettazione del software: in questo caso risulta difficile estendere la classe factory astratta, perchè ciò comporta il cambiamento di tutte le sotto classi.
+
+\level{2}{Adapter} \label{app:adapter}
+Adapter è un pattern architetturale strutturale che, come suggerisce il suo nome, viene utilizzato per adattare l'interfaccia di una classe in un'altra permettendo alle classi di lavorare assieme, cosa altrimenti non possibile.\\
+Gli elementi del pattern sono:
+\begin{description}
+\item[Target:] è l'interfaccia di dominio, quella che di desidera mettere a disposizione del Client;
+\item[Adaptee:] è l'interfaccia esistente che si vuole adattare (ad esempio una libreria esterna);
+\item[Adapter:] è la classe concreta che adatta Adaptee in Target.
+\end{description}
+
+Esso viene utilizzato ogni qualvolta sia necessario:
+\begin{itemize}
+\item utilizzare una classe esistente non conforme all'interfaccia Target;
+\item creare classi riusabili anche con classi arbitrarie;
+\item adattare un'interfaccia che non può essere adattata in altri modi.
+\end{itemize}
+
+Si può implementare questo pattern in due modi:
+\begin{description}
+\item[Class adapter:] in questo caso viene realizzata una classe concreta che implementa allo stesso tempo l'interfaccia esistente (quella da adattare) e l'interfaccia che si desidera per l'applicazione (detta interfaccia di dominio). Il vantaggio di questo metodo è che permette ad Adapter di modificare (anche estendendo) le caratteristiche di Adaptee; lo svantaggio è che non funziona quando bisogna adattare una classe alla base di una gerarchia;
+\item[Object adapter:] in questo caso l'adattamento avviene sfruttando un campo dati del tipo dell'interfaccia da adattare all'interno della classe concreta; in questo modo l'interfaccia di dominio verrà implementata invocando i metodi dell'interfaccia Adaptee attraverso il campo dati. Il vantaggio di questo metodo è che permette ad Adapter di adattare più tipi; lo svantaggio è che non consente di modificare le caratteristiche dell'Adaptee.
+\end{description}
+Ne consegue che la scelta fra i due metodi va fatta in considerazione dell'uso che se ne vuole fare.
