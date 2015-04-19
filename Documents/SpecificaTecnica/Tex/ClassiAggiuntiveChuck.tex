@@ -1,0 +1,34 @@
+\level{3}{Classi aggiuntive Chuck}
+	Le interfacce Chuck::DataModel::DataObject, Chuck::DataModel::SettingsObject e Chuck::DataModel::UpdateObject rappresentano genericamente i vari oggetti che utilizzeremo per rappresentare i dati, le impostazioni e gli aggiornamamenti. Tali oggetti sono nel formato JSON ed essendo molto numerosi abbiamo deciso di non inserirle nel diagramma ma di elencarle e descriverle di seguito.
+
+	\begin{itemize}
+		\item \textbf{Chuck::DataModel::BarChartDataObject} Questa classe implementa l'interfaccia Chuck::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico bar chart;
+
+		\item \textbf{Chuck::DataModel::LineChartDataObject} Questa classe implementa l'interfaccia Chuck::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico line chart;
+
+		\item \textbf{Chuck::DataModel::MapChartDataObject} Questa classe implementa l'interfaccia Chuck::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico map chart;
+
+		\item \textbf{Chuck::DataModel::TableDataObject} Questa classe implementa l'interfaccia Chuck::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico table;
+
+		\item \textbf{Chuck::DataModel::BarChartSettingObject} Questa classe implementa l'interfaccia Chuck::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo bar chart;
+
+		\item \textbf{Chuck::DataModel::LineChartSettingObject} Questa classe implementa l'interfaccia Chuck::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo line chart;
+
+		\item \textbf{Chuck::DataModel::MapChartSettingObject} Questa classe implementa l'interfaccia Chuck::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo map chart;
+
+		\item \textbf{Chuck::DataModel::TableSettingObject} Questa classe implementa l'interfaccia Chuck::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo table;
+
+		\item \textbf{Chuck::DataModel::BarChartInPlaceUpdateObject} Questa classe implementa l'interfaccia Chuck::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo bar chart;
+
+		\item \textbf{Chuck::DataModel::LineChartInPlaceUpdateObject} Questa classe implementa l'interfaccia Chuck::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo line chart;
+
+		\item \textbf{Chuck::DataModel::LineChartStreamUpdateObject} Questa classe implementa l'interfaccia Chuck::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo stream per un grafico di tipo line chart;
+
+		\item \textbf{Chuck::DataModel::MapChartInPlaceUpdateObject} Questa classe implementa l'interfaccia Chuck::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo map chart;
+
+		\item \textbf{Chuck::DataModel::MapChartMovieUpdateObject} Questa classe implementa l'interfaccia Chuck::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo movie per un grafico di tipo map chart;
+
+		\item \textbf{Chuck::DataModel::TableStreamUpdateObject} Questa classe implementa l'interfaccia Chuck::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo stream per un grafico di tipo table;
+
+		\item \textbf{Chuck::DataModel::TableInPlaceUpdateObject} Questa classe implementa l'interfaccia Chuck::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo table.
+	\end{itemize}
