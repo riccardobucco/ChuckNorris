@@ -260,3 +260,91 @@ Chuck::Utils::Observer}
 \caption{Test di integrazione}
 
 \end{longtabu}
+
+\level{3}{Tracciamento componenti-test di integrazione}
+
+
+	\begin{longtabu}{| X | X |}
+
+			\hline
+			\rowfont{\bf}
+			Componenti	&	Test di integrazione \\ \hline 
+			\endhead
+
+Applicazione	&	TIApplicazione	\\ \hline
+Applicazione::Controller	&	TIApplicazione	\\ \hline
+Applicazione::Controller	&	TIApplicazioneController	\\ \hline
+Applicazione::Controller::ChartController	&	TIApplicazioneController	\\ \hline
+Applicazione::Controller::Controller	&	TIApplicazioneController	\\ \hline
+Applicazione::Controller::HomeController	&	TIApplicazioneController	\\ \hline
+Applicazione::Controller::ListController	&	TIApplicazioneController	\\ \hline
+Applicazione::Model	&	TIApplicazione	\\ \hline
+Applicazione::Utils	&	TIApplicazione	\\ \hline
+Applicazione::Utils	&	TIApplicazioneObserver	\\ \hline
+Applicazione::Utils::ObservableImpl	&	TIApplicazioneObserver	\\ \hline
+Applicazione::View	&	TIApplicazione	\\ \hline
+Applicazione::View	&	TIApplicazioneView	\\ \hline
+Applicazione::View::Activity	&	TIApplicazioneView	\\ \hline
+Applicazione::View::ChartActivity	&	TIApplicazioneView	\\ \hline
+Applicazione::View::HomeActivity	&	TIApplicazioneView	\\ \hline
+Applicazione::View::ListActivity	&	TIApplicazioneView	\\ \hline
+Chuck::ChartController	&		\\ \hline
+Chuck::ChartView	&	TIChuck	\\ \hline
+Chuck::ChartView::BarChartView	&	TIChuckChartView	\\ \hline
+Chuck::ChartView::LineChartView	&	TIChuckChartView	\\ \hline
+Chuck::ChartView::MapChartView	&	TIChuckChartView	\\ \hline
+Chuck::ChartView::TableView	&	TIChuckChartView	\\ \hline
+Chuck::ChartView::ViewImpl	&	TIChuckChartView	\\ \hline
+Chuck::ChuckAPIManager	&		\\ \hline
+Chuck::ChuckManager	&	TIChuck	\\ \hline
+Chuck::ChuckManager::AuthenticationManager	&	TIChuckChuckManager	\\ \hline
+Chuck::ChuckManager::AuthenticationManagerXMLHttpRequest	&	TIChuckAuthenticationManager	\\ \hline
+Chuck::ChuckManager::ChartBridge	&	TIChuckChuckManager	\\ \hline
+Chuck::ChuckManager::ChartRequester	&	TIChuckChuckManager	\\ \hline
+Chuck::ChuckManager::ChartRequesterSocketIOClient	&	TIChuckChartRequester	\\ \hline
+Chuck::ChuckManager::ChuckAPIController	&	TIChuckChuckManager	\\ \hline
+Chuck::Controller	&	TIChuck	\\ \hline
+Chuck::Controller::BarChartController	&	TIChuckController	\\ \hline
+Chuck::Controller::ChartController	&	TIChuckController	\\ \hline
+Chuck::Controller::LineChartController	&	TIChuckController	\\ \hline
+Chuck::Controller::MapChartController	&	TIChuckController	\\ \hline
+Chuck::Controller::TableController	&	TIChuckController	\\ \hline
+Chuck::DataModel	&	TIChuck	\\ \hline
+Chuck::DataModel::BarChartImpl	&	TIChuckChartImpl	\\ \hline
+Chuck::DataModel::ChartImpl	&	TIChuckDataModel	\\ \hline
+Chuck::DataModel::ChartImpl	&	TIChuckChartImpl	\\ \hline
+Chuck::DataModel::ChuckImpl	&	TIChuckDataModel	\\ \hline
+Chuck::DataModel::LineChartImpl	&	TIChuckChartImpl	\\ \hline
+Chuck::DataModel::MapChartImpl	&	TIChuckChartImpl	\\ \hline
+Chuck::DataModel::TableImpl	&	TIChuckChartImpl	\\ \hline
+Chuck::Utils	&	TIChuck	\\ \hline
+Chuck::Utils::Observable	&	TIChuckObserver	\\ \hline
+Chuck::Utils::ObservableImpl	&	TIChuckObserver	\\ \hline
+Chuck::Utils::Observer	&	TIChuckObserver	\\ \hline
+Norris::DataModel	&	TINorris	\\ \hline
+Norris::DataModel	&	TIApplcazioneModel	\\ \hline
+Norris::DataModel::BarChartImpl	&	TINorrisChartImpl	\\ \hline
+Norris::DataModel::BarChartImpl	&	TIApplcazioneModel	\\ \hline
+Norris::DataModel::ChartImpl	&	TINorrisDataModel	\\ \hline
+Norris::DataModel::ChartImpl	&	TINorrisChartImpl	\\ \hline
+Norris::DataModel::ChartImpl	&	TIApplcazioneModel	\\ \hline
+Norris::DataModel::LineChartImpl	&	TINorrisChartImpl	\\ \hline
+Norris::DataModel::LineChartImpl	&	TIApplcazioneModel	\\ \hline
+Norris::DataModel::MapChartImpl	&	TINorrisChartImpl	\\ \hline
+Norris::DataModel::MapChartImpl	&	TIApplcazioneModel	\\ \hline
+Norris::DataModel::NorrisImpl	&	TINorrisDataModel	\\ \hline
+Norris::DataModel::PageImpl	&	TINorrisDataModel	\\ \hline
+Norris::DataModel::TableImpl	&	TINorrisChartImpl	\\ \hline
+Norris::DataModel::TableImpl	&	TIApplcazioneModel	\\ \hline
+Norris::ExternalAPIManager	&	TINorris	\\ \hline
+Norris::ExternalAPIManager::AuthenticationEndpoint	&	TINorrisExternalAPIManager	\\ \hline
+Norris::ExternalAPIManager::ChartEndpoint	&	TINorrisExternalAPIManager	\\ \hline
+Norris::ExternalAPIManager::ChartRef	&	TINorrisExternalAPIManager	\\ \hline
+Norris::ExternalAPIManager::ExternalAPIController	&	TINorrisExternalAPIManager	\\ \hline
+Norris::ExternalAPIManager::ListEndpoint	&	TINorrisExternalAPIManager	\\ \hline
+Norris::InternalAPIManager	&	TINorris	\\ \hline
+Norris::InternalAPIManager::ChartBridge	&	TINorrisInternalAPIManager	\\ \hline
+Norris::InternalAPIManager::InternalAPIBridge	&	TINorrisInternalAPIManager	\\ \hline
+Norris::InternalAPIManager::PageBridge	&	TINorrisInternalAPIManager	\\ \hline
+
+\end{longtabu}
