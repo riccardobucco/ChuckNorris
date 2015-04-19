@@ -33,39 +33,53 @@
             <description>Approvazione del documento</description>
         </version>
         <version>
-            <id>0.14</id>
+            <id>0.16</id>
             <date>2015-03-31</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Verificatore</role>
             <description>Verifica documento</description>
         </version>
         <version>
-            <id>0.13</id>
+            <id>0.15</id>
             <date>2015-03-29</date>
             <author>Bucco Riccardo</author>
             <role>Progettista</role>
             <description>Stesura ed importazione tracciamento</description>
         </version>
         <version>
-            <id>0.12</id>
+            <id>0.14</id>
             <date>2015-03-29</date>
             <author>Dal Bianco Davide</author>
             <role>Project Manager</role>
             <description>Stesura stime di fattibilità e di bisogno di risorse</description>
         </version>
         <version>
-            <id>0.11</id>
+            <id>0.13</id>
             <date>2015-03-27</date>
             <author>Carlon Chiara</author>
             <role>Verificatore</role>
             <description>Verifica componenti applicazione Android</description>
         </version>
         <version>
-            <id>0.10</id>
+            <id>0.12</id>
             <date>2015-03-26</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Verificatore</role>
             <description>Verifica componenti Chuck</description>
+        </version>
+        <version>
+            <id>0.11</id>
+            <date>2015-03-26</date>
+            <author>Carlon Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica sezione Dashboard</description>
+        </version>
+        <version>
+            <id>0.10</id>
+            <date>2015-03-26</date>
+            <author>Bucco Riccardo</author>
+            <role>Progettista</role>
+            <description>Stesura sezione mockup Dashboard</description>
         </version>
         <version>
             <id>0.09</id>

@@ -86,11 +86,18 @@
             <description>Approvazione del documento</description>
         </version>
         <version>
-            <id>1.02</id>
+            <id>1.03</id>
             <date>2015-02-27</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Verificatore</role>
             <description>Verifica documento</description>
+        </version>
+        <version>
+            <id>1.02</id>
+            <date>2015-02-23</date>
+            <author>Bucco Riccardo</author>
+            <role>Analista</role>
+            <description>Stesura appendice Express js</description>
         </version>
         <version>
             <id>1.01</id>
