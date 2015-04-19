@@ -17,8 +17,8 @@
 			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
 
 			\begin{itemize}
-			\item Nome: <xsl:value-of select="@name"/>
-			\item Tipo: package
+			\item \textbf{Nome:} <xsl:value-of select="@name"/>
+			\item \textbf{Tipo:} package
 			\end{itemize}
 
 			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>
@@ -35,8 +35,8 @@
 			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
 
 			\begin{itemize}
-			\item Nome: <xsl:value-of select="@name"/>
-			\item Tipo: classe
+			\item \textbf{Nome:} <xsl:value-of select="@name"/>
+			\item \textbf{Tipo:} classe
 			<xsl:call-template name="abstract"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.stereotype']"/>
@@ -56,8 +56,8 @@
 			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
 
 			\begin{itemize}
-			\item Nome: <xsl:value-of select="@name"/>
-			\item Tipo: interfaccia
+			\item \textbf{Nome:} <xsl:value-of select="@name"/>
+			\item \textbf{Tipo:} interfaccia
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
 			\end{itemize}
@@ -67,19 +67,19 @@
 
 	<!-- visibilità -->
 	<xsl:template match="*[local-name()='ModelElement.visibility']">
-			\item Visibilità: <xsl:value-of select="@xmi.value"/>
+			\item \textbf{Visibilità:} <xsl:value-of select="@xmi.value"/>
 	</xsl:template>
 
 	<!-- definizione -->
 	<xsl:template match="*[local-name()='ModelElement.definition']">
-			\item Descrizione: <xsl:value-of select="@xmi.value"/>
+			\item \textbf{Descrizione:} <xsl:value-of select="@xmi.value"/>
 	</xsl:template>
 
 
 
 	<!-- stereotipi -->
 	<xsl:template match="*[local-name()='ModelElement.stereotype']">
-		\item Stereotipi:
+		\item \textbf{Stereotipi:}
 		\begin{itemize}
 			<xsl:apply-templates select="*[local-name()='Stereotype']"/>
 		\end{itemize}
@@ -93,7 +93,7 @@
 
 	<!-- abstract -->
 	<xsl:template name="abstract">
-		\item Astratta:
+		\item \textbf{Astratta:}
 		<xsl:if test="@isAbstract='true'">si</xsl:if>
 		<xsl:if test="@isAbstract='false'">no</xsl:if>
 	</xsl:template>
