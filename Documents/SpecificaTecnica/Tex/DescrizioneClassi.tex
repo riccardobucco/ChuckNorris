@@ -11,69 +11,70 @@
 		In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno del prodotto Norris. Queste sono state suddivise in base al componente nelle quali sono contenute.
 		
 		\level{3}{Design pattern utilizzati}
-		Nella progettazione delle classi di Norris abbiamo deciso di utilizzare i seguenti pattern architetturali:
-		\level{4}{Observer}
-	L'Observer è un pattern comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
-	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
-	\level{5}{Contesto di utilizzo}
-	Il pattern Observer si basa sugli oggetti "osservabili " e sugli "osservatori". \\
-	Interfacce che estendono Observable:
-	\begin{itemize}
-	\item DataModel::ChartModel;
-	\item DataModel::NorrisModel.
-	\end{itemize}
-	L'interfaccia Observer è implementata dalla classe EventEmitter fornita da Node.js.
-\level{4}{Bridge}
-	Il Bridge è un pattern strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione.\\ Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
-	\level{5}{Contesto di utilizzo}
-	In Norris questo pattern viene utilizzato nel package InternalAPIManager per separarele interfacce Chart, Page e InternalAPI dalla loro implementazione.
-\level{4}{Dependency Injection}
-	Dependency Injection è un pattern architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
-	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
-	\level{5}{Contesto di utilizzo}
-	La Dependency Injection viene utilizzata con le classi che implementano le seguenti interfacce:
-	\begin{itemize}
-	\item EndpointFactory, inietta in ExternalAPIController le dipendenze verso i diversi Endpoint;
-	\item ChartFactory, inietta in ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
-	\item Updater, inietta in ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
-	\end{itemize}
-\level{4}{Singleton}
-	Il Singleton è un pattern creazionale il cui scopo è permettere la creazione di una sola istanza di una classe, nonchè di fornire un punto di accesso globale ad essa.\\
-	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
-	\level{5}{Contesto di utilizzo}
-	Le classi che implementano il Singleton sono quelle che si occupano di creare i diversi tipi di grafici. cioè:
-	\begin{itemize}
-	\item BarChartFactory;
-	\item LineChartFactory;
-	\item MapChartFactory;
-	\item TableFactory;
-	\item ChartEndpoitFactory;
-	\item AuthenticationEndpointFactory;
-	\item ListEndpointFactory.
-	\end{itemize}
-\level{4}{Abstract Factory}
-	Il pattern creazionale Abstract Factory si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete. \\
-	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:abstractfactory}.
-	\level{5}{Contesto di utilizzo}
-	Gli elementi che implementano Abstract Factory sono:
-	\begin{itemize}
-	\item Interfacce:
-		\begin{itemize}
-			\item ChartFactory, con cui vengono generati i diversi tipi di grafici;
-			\item EndpointFactory, con cui sono generati i diversi tipi di controller dei grafici.
-		\end{itemize}
-	\item Classi:
-		\begin{itemize}
-			\item BarChartFactory;
-			\item LineChartFactory;
-			\item MapChartFactory;
-			\item TableFactory;
-			\item ChartEndpointFactory;
-			\item AuthenticationEndpointFactory;
-			\item ListEndpointFactory.
-		\end{itemize}
-	\end{itemize}
-		
+			Nella progettazione delle classi di Norris abbiamo deciso di utilizzare alcuni design pattern. Una loro breve descrizione e il contesto nel quale sono stati utilizzati sono riportati in seguito.
+			\level{4}{Observer}
+				L'Observer è un pattern comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
+				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
+				\level{5}{Contesto di utilizzo}
+					Il pattern Observer si basa sugli oggetti "osservabili" e sugli "osservatori".\\
+					Le interfacce che che estendono Observable sono le seguenti:
+					\begin{itemize}
+						\item DataModel::ChartModel;
+						\item DataModel::NorrisModel.
+					\end{itemize}
+					L'interfaccia Observer è implementata dalla classe EventEmitter fornita da Node.js.
+			\level{4}{Bridge}
+				Il Bridge è un pattern strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione.\\
+				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
+				\level{5}{Contesto di utilizzo}
+					In Norris questo pattern viene utilizzato nel package InternalAPIManager per separare le interfacce Chart, Page e InternalAPI dalla loro implementazione.
+			\level{4}{Dependency Injection}
+				Dependency Injection è un pattern architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
+				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
+				\level{5}{Contesto di utilizzo}
+					Il pattern Dependency Injection viene utilizzato con le classi che implementano le seguenti interfacce:
+					\begin{itemize}
+						\item EndpointFactory, inietta in ExternalAPIController le dipendenze verso i diversi Endpoint;
+						\item ChartFactory, inietta in ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
+						\item Updater, inietta in ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
+					\end{itemize}
+			\level{4}{Singleton}
+				Il Singleton è un pattern creazionale il cui scopo è permettere la creazione di una sola istanza di una classe, nonchè di fornire un punto di accesso globale ad essa.\\
+				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
+				\level{5}{Contesto di utilizzo}
+					Le classi che implementano il Singleton sono quelle che si occupano di creare i diversi tipi di grafici. sse dunque sono le seguenti:
+					\begin{itemize}
+						\item BarChartFactory;
+						\item LineChartFactory;
+						\item MapChartFactory;
+						\item TableFactory;
+						\item ChartEndpoitFactory;
+						\item AuthenticationEndpointFactory;
+						\item ListEndpointFactory.
+					\end{itemize}
+			\level{4}{Abstract Factory}
+				Il pattern creazionale Abstract Factory si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
+				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:abstractfactory}.
+				\level{5}{Contesto di utilizzo}
+					Gli elementi che implementano Abstract Factory sono quelli indicati in seguito.
+					\begin{itemize}
+					\item Interfacce:
+						\begin{itemize}
+							\item ChartFactory, con cui vengono generati i diversi tipi di grafici;
+							\item EndpointFactory, con cui sono generati i diversi tipi di controller dei grafici.
+						\end{itemize}
+					\item Classi:
+						\begin{itemize}
+							\item BarChartFactory;
+							\item LineChartFactory;
+							\item MapChartFactory;
+							\item TableFactory;
+							\item ChartEndpointFactory;
+							\item AuthenticationEndpointFactory;
+							\item ListEndpointFactory.
+						\end{itemize}
+					\end{itemize}
+					
 		\input{Classi/Norris.tex}
 		\input{Tex/ClassiAggiuntiveNorris.tex}
 	\level{2}{Chuck}
