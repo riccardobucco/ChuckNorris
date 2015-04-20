@@ -3431,7 +3431,7 @@
                 <UML:Namespace xmi.idref="1sfe-f59ce56d49a6fcb76e9f5f3d5b65fdad"/>
               </UML:ModelElement.namespace>
               <UML:ModelElement.visibility xmi.value="public"/>
-              <UML:ModelElement.definition xmi.value="Questa+classe+rappresenta+un%27istanza+di+CHUCK.+Essa+contiene+al+suo+interno+la+lista+dei+grafici+relativi+ad+una+certa+istanza+di+Norris."/>
+              <UML:ModelElement.definition xmi.value="Questa+classe+rappresenta+un%27istanza+di+Chuck.+Essa+contiene+al+suo+interno+la+lista+dei+grafici+relativi+ad+una+certa+istanza+di+Norris."/>
               <UML:ModelElement.clientDependency>
                 <JUDE:Dependency xmi.idref="1gm8-99bee454d893b5034a51971bebbc4679"/>
                 <JUDE:Dependency xmi.idref="6vz5-8214fa0b2f1156dc0e447de5f3bb5cb4"/>
@@ -3454,7 +3454,7 @@
                 <UML:Namespace xmi.idref="1sfe-f59ce56d49a6fcb76e9f5f3d5b65fdad"/>
               </UML:ModelElement.namespace>
               <UML:ModelElement.visibility xmi.value="public"/>
-              <UML:ModelElement.definition xmi.value="ChuckModel+fornisce+l%27interfaccia+di+un%27istanza+di+CHUCK%2C+della+quale+espone+i+metodi."/>
+              <UML:ModelElement.definition xmi.value="ChuckModel+fornisce+l%27interfaccia+di+un%27istanza+di+Chuck%2C+della+quale+espone+i+metodi."/>
               <UML:ModelElement.stereotype>
                 <UML:Stereotype xmi.idref="qx7-ec8f5351432c2066362fa3f6e2b9a420"/>
               </UML:ModelElement.stereotype>
