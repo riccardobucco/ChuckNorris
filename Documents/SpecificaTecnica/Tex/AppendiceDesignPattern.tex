@@ -1,5 +1,9 @@
 \level{1}{Design Patterns} \label{app:designpattern}
 	\level{2}{Model View Controller} \label{app:MVC}
+		\begin{figure}[H]\centering
+        \includegraphics[scale=0.7]{SpecificaTecnica/Pics/MVC}
+        \caption{Struttura del pattern Model View Controller}
+		\end{figure}
 		Model-View-Controller (MVC) è un pattern architetturale utilizzato per dividere il codice in blocchi di funzionalità ben distinte, e viene utilizzato molto frequentemente nelle applicazioni in cui un insieme di informazioni deve essere rappresentato attraverso una interfaccia grafica.
 		\level{3}{Componenti}
 			MVC è quindi basato sul principio del disaccoppiamento dei tre oggetti di cui è composto, ovvero sulla riduzione del loro grado di dipendenza reciproca, allo scopo di fornire una maggiore robustezza, modularità e manutenibilità al software.\\
@@ -25,6 +29,10 @@
 			L'utilizzo del pattern MVC nello sviluppo di un software non ha solo benefici, ma ha anche un piccolo costo, derivante da una maggiore complessità e dalla necessità di un maggior numero di aggiornamenti.\\
   			La maggiore complessità è data dai livelli di indirezione introdotti dal pattern e dall'implementazione ad eventi necessaria per far comunicare i tre componenti. La maggiore frequenza degli aggiornamenti, invece, è un effetto collaterale della modularizzazione: frequenti cambiamenti al modello comportano spesso cambiamenti nelle View e quindi nei Controller.
 	\level{2}{Singleton} \label{app:singleton}
+		\begin{figure}[H]\centering
+        \includegraphics[scale=0.7]{SpecificaTecnica/Pics/Singleton}
+        \caption{Struttura del pattern Singleton}
+		\end{figure}
 		Lo scopo del pattern creazionale denominato Singleton è 
 		assicurare l'esistenza di un'unica istanza di una classe e fornire
 		un punto di accesso globale ad essa.\\
@@ -74,6 +82,10 @@ L'utilizzo del pattern Dependency Injection nella progettazione dell'architettur
 Dependency Injection ha anche delle possibili ripercussioni negative sul software che lo utilizza. Esso infatti può rendere il codice difficile da leggere in quanto permette la separazione fra dichiarazione e comportamento, oltre a richiedere più righe di codice rispetto alla scrittura di codice“tradizionale”per ottenere lo stesso comportamento.
 
 	\level{2}{Observer} \label{app:observer}
+		\begin{figure}[H]\centering
+        \includegraphics[scale=0.7]{SpecificaTecnica/Pics/Observer}
+        \caption{Struttura del pattern Observer}
+		\end{figure}
 		Observer è un pattern comportamentale, implementato in numerose librerie di programmazione e sistemi, il cui scopo è quello di tenere sotto controllo lo stato di diversi oggetti legati ad un soggetto (dipendenza uno a molti). \\
 		Il paradigma corrisponde al modello Publisher and Subscribe: i sottoscrittori si registrano presso un pubblicatore e quest’ultimo li informa ogni volta che ci sono nuove notizie (del genere sottoscritto).\\
 		Il pattern è composto da:
@@ -97,6 +109,10 @@ Dependency Injection ha anche delle possibili ripercussioni negative sul softwar
 			\item “memory leak” in quanto nelle implementazioni di base il subject richiede sia l’esplicita registrazione che l’esplicita rimozione dalla lista delle dipendenze legandosi in modo forte agli observer, tenendoli attivi. Questo problema può essere prevenuto riferendo in modo debole gli observer.
 			\end{itemize}
 \level{2}{Abstract Factory} \label{app:abstractfactory}
+		\begin{figure}[H]\centering
+        \includegraphics[scale=0.7]{SpecificaTecnica/Pics/AbstractFactory}
+        \caption{Struttura del pattern Abstract Factory}
+		\end{figure}
 Abstract Factory è un design pattern creazionale utilizzato allo scopo di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
 Il pattern si basa sui seguenti elementi:
 \begin{description}
@@ -123,6 +139,14 @@ L'impiego dell'Abstract Factory nella progettazione dell'architettura di un prod
 Come tutti i pattern, anche Abstract Factory ha delle ripercussioni negative nella progettazione del software: in questo caso risulta difficile estendere la classe factory astratta, perchè ciò comporta il cambiamento di tutte le sotto classi.
 
 \level{2}{Adapter} \label{app:adapter}
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.7]{SpecificaTecnica/Pics/ClassAdapter}
+    \caption{Struttura del pattern Adapter nella versione ClassAdapter}
+	\end{figure}
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.7]{SpecificaTecnica/Pics/ObjectAdapter}
+    \caption{Struttura del pattern Adapter nella versione ObjectAdapter}
+	\end{figure}
 Adapter è un pattern strutturale che, come suggerisce il suo nome, viene utilizzato per adattare l'interfaccia di una classe in un'altra permettendo alle classi di lavorare assieme, cosa altrimenti non possibile.\\
 Gli elementi del pattern sono:
 \begin{description}
@@ -146,6 +170,10 @@ Si può implementare questo pattern in due modi:
 Ne consegue che la scelta fra i due metodi va fatta in considerazione dell'uso che se ne vuole fare.
 
 \level{2}{Bridge} \label{app:bridge}
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.7]{SpecificaTecnica/Pics/Bridge}
+    \caption{Struttura del pattern Bridge}
+	\end{figure}
 Bridge è un pattern strutturale che permette di separare l’interfaccia di una classe dalla sua implementazione. \\
 Il pattern è composto da un’interfaccia che fa da ponte rendendo indipendenti le funzionalità della classe concreta dall’interfaccia che la implementa. Entrambe i tipi di classi possono essere modificati senza che questo causi problemi l’uno all’altro. \\
 Viene utilizzato quando:
