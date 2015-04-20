@@ -5,6 +5,7 @@
 
 	
 	<xsl:template match="/">
+		\level{3}{Classi}
 		<xsl:apply-templates select="XMI/XMI.content/*[local-name()='Model']/*[local-name()='Namespace.ownedElement']/*[local-name()='Package']"/>
 	</xsl:template>
 
@@ -14,7 +15,7 @@
 			<xsl:variable name="name">
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
-			\level{3}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
+			\level{4}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
 			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
 
 			\begin{itemize}
@@ -32,7 +33,7 @@
 			<xsl:variable name="name">
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
-			\level{4}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
+			\level{5}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
 			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
 
 			\begin{itemize}
@@ -53,7 +54,7 @@
 			<xsl:variable name="name">
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
-			\level{4}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
+			\level{5}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
 			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
 
 			\begin{itemize}
