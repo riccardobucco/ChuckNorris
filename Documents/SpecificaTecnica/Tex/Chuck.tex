@@ -3,38 +3,38 @@
         \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiChuck}
         \caption{Diagramma delle componenti di Chuck}
     \end{figure}
-		\level{3}{Design pattern utilizzati}
-Nella progettazione delle componenti dell'applicazione Android abbiamo deciso di utilizzare i seguenti pattern architetturali:
-\level{4}{Model View Controller}
-	Model-View-Controller (MVC) è un pattern architetturale utilizzato per separare il codice in blocchi di funzionalità ben distinte.\\
-	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:MVC}.
-	\level{5}{Contesto di utilizzo}
-	L'MVC viene utilizzato per dividere le classi della libreria Chuck in tre grandi componenti:
-	\begin{itemize}
-	\item ChartView;
-	\item ChartModel;
-	\item ChartController;
-	\end{itemize}
-	   \level{3}{Descrizione delle componenti di Chuck}
+	\level{3}{Design pattern utilizzati}
+		Nella progettazione delle componenti dell'applicazione Android abbiamo deciso di utilizzare i seguenti pattern architetturali:
+		\level{4}{Model View Controller}
+			Model-View-Controller (MVC) è un pattern architetturale utilizzato per separare il codice in blocchi di funzionalità ben distinte.\\
+			Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:MVC}.
+			\level{5}{Contesto di utilizzo}
+				L'MVC viene utilizzato per dividere le classi della libreria Chuck in tre grandi componenti:
+				\begin{itemize}
+					\item ChartView;
+					\item ChartModel;
+					\item ChartController;
+				\end{itemize}
+	\level{3}{Descrizione delle componenti di Chuck}
     	\level{4}{Chuck API Manager}
     		La componente Chuck Api Manager si occupa di implementare le funzionalità offerte dalle API di Chuck allo sviluppatore client. Queste funzionalità sono:
     		\begin{itemize}
-						\item inserimento di nuovi grafici in un sito web;
-						\item scelta del tag HTML in cui inserire un grafico;
-						\item modifica di alcune impostazioni dei grafici;
-						\item login;
-						\item logout.
+				\item inserimento di nuovi grafici in un sito web;
+				\item scelta del tag HTML in cui inserire un grafico;
+				\item modifica di alcune impostazioni dei grafici;
+				\item login;
+				\item logout.
 			\end{itemize}
     		Questa componente si occupa inoltre di gestire la comunicazione con Norris.
-    		
-    	\level{4}{Chart View}
-    	La componente Chart View ha il compito di visualizzare i grafici all'interno della pagina web. I grafici possono essere del tipo Bar Chart, Line Chart, Map Chart e Table. Quando un grafico viene aggiornato, questa componente si occupa di aggiornare anche la sua visualizzazione nella pagina web.
+		
+		\level{4}{Chart View}
+			La componente Chart View ha il compito di visualizzare i grafici all'interno della pagina web. I grafici possono essere del tipo Bar Chart, Line Chart, Map Chart e Table. Quando un grafico viene aggiornato, questa componente si occupa di aggiornare anche la sua visualizzazione nella pagina web.
 
-    	\level{4}{Controller}
-    	La componente Controller ha lo scopo di ricevere gli input provenienti dalla Chart View ed effettuarne la gestione. L'input consiste in un sottoinsieme di dataset scelti dall'utente che sta visualizzando la pagina web. Il Controller deve far sì che vengano visualizzati solo questi dataset, in modo da permettere all'utente di applicare un filtro sulle serie.
+		\level{4}{Controller}
+			La componente Controller ha lo scopo di ricevere gli input provenienti dalla Chart View ed effettuarne la gestione. L'input consiste in un sottoinsieme di dataset scelti dall'utente che sta visualizzando la pagina web. Il Controller deve far sì che vengano visualizzati solo questi dataset, in modo da permettere all'utente di applicare un filtro sulle serie.
 
-    	\level{4}{Data Model}
-    	La componente Data Model è un modello che astrae i grafici visualizzati nella pagina web. In essa sono contenuti i dati riguardanti i grafici, assieme alle relative impostazioni. In particolare sono presenti i modelli di tutte le tipologie di chart implementati da Norris. Il Data Model fornisce per ciascuna tipologia di grafico i metodi per inserire i dati e configurare alcune impostazioni. 
+		\level{4}{Data Model}
+			La componente Data Model è un modello che astrae i grafici visualizzati nella pagina web. In essa sono contenuti i dati riguardanti i grafici, assieme alle relative impostazioni. In particolare sono presenti i modelli di tutte le tipologie di chart implementati da Norris. Il Data Model fornisce per ciascuna tipologia di grafico i metodi per inserire i dati e configurare alcune impostazioni. 
     
 	\level{3}{Descrizione delle interazioni tra le componenti}
 	
@@ -52,5 +52,6 @@ Nella progettazione delle componenti dell'applicazione Android abbiamo deciso di
 
 		\level{4}{Controller - Chart View}
 		In caso di necessità il controller può selezionare la Chart View da visualizzare.
+		
 		\level{4}{Controller - Data Model}
 		Quando intraprende un'azione, il controller può effettuare delle modifiche nel Data Model. In particolare ciò accade quando si deve inserire un nuovo grafico o quando arriva l'aggiornamento di un grafico già presente.
