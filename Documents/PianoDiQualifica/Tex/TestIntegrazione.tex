@@ -66,7 +66,7 @@ Norris::InternalAPI-\\Manager::PageBridge}
 
 	\parbox[t]{0.6\textwidth}{TINorrisExternalAPI-\\Manager}
 	&
-Funzionamento delle API interne: viene verificato che le API esterne forniscano le funzione corrette a seconda dei dati rappresentati dal modello.
+Funzionamento delle API esterne: viene verificato che le API esterne forniscano le funzione corrette a seconda dei dati rappresentati dal modello.
 & \parbox[t]{0.6\textwidth}{
 Norris::ExternalAPI-\\Manager::ExternalAPI-\\Controller\\
 Norris::ExternalAPI-\\Manager::Authentication-\\Endpoint\\
@@ -189,7 +189,7 @@ Chuck::Controller-\\::TableController}
 
 
 
-	TIChuckObserver &
+	TIChuckUtils &
 Viene verificata la corretta implementazione del pattern Observer.
 			& \parbox[t]{0.6\textwidth}{
 Chuck::Utils::Observable\\
@@ -211,7 +211,6 @@ Chuck::Utils::Observer}
 			TIApplicazione &
 			Test di integrazione finale tra le componenti Model, View, Controller
 			& \parbox[t]{0.6\textwidth}{
-			Applicazione\\
 			Applicazione::Model\\
 			Applicazione::View\\
 			Applicazione::Controller\\
@@ -221,35 +220,41 @@ Chuck::Utils::Observer}
 			TIApplicazioneModel &
 			Viene verificato che il sistema gestisca correttamente la componente Model relativa al design pattern MVC. Più precisamente che memorizzi correttamente i dati relativi ai chart dell'istanza di norris selezionata.
 			& \parbox[t]{0.6\textwidth}{
-			Norris::DataModel\\
-			Norris::DataModel-\\::ChartImpl\\
-			Norris::DataModel-\\::BarChartImpl\\
-			Norris::DataModel-\\::LineChartImpl\\
-			Norris::DataModel-\\::MapChartImpl\\
-			Norris::DataModel-\\::TableImpl}
+			Applicazione::Model-\\::ChartImpl\\
+			Applicazione::Model-\\::BarChartImpl\\
+			Applicazione::Model-\\::LineChartImpl\\
+			Applicazione::Model-\\::MapChartImpl\\
+			Applicazione::Model-\\::TableImpl}
 			& N.I.
 \\ \hline
 			TIApplicazioneView &
 			Viene verificato che il sistema gestisca correttamente la componente View del pattern MVC. Più precisamente che gestisca correttamente tutto ciò che concerne la rappresentazione dei chart.
 			& \parbox[t]{0.6\textwidth}{
-			Applicazione::View\\
-			Applicazione::View-\\::Activity\\
+			Applicazione::View-\\::ObservableActivity\\
 			Applicazione::View-\\::HomeActivity\\
 			Applicazione::View-\\::ListActivity\\
-			Applicazione::View-\\::ChartActivity}
+			Applicazione::View-\\::ChartActivity\\
+			Applicazione::View-\\::BarChartActivity\\
+			Applicazione::View-\\::LineChartActivity\\
+			Applicazione::View-\\::MapChartActivity\\
+			Applicazione::View-\\::TableActivity}
 			& N.I.
 \\ \hline
 			TIApplicazioneController &
 			Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC. Più precisamente viene verificato che il sistema gestisca le azioni dell’utente e che dialoghi in maniera appropriata con il server.
 			& \parbox[t]{0.6\textwidth}{
-			Applicazione::Controller\\
 			Applicazione::Controller-\\::Controller\\
-			Applicazione::Controller-\\::ChartController\\
 			Applicazione::Controller-\\::HomeController\\
-			Applicazione::Controller-\\::ListController}
+			Applicazione::Controller-\\::ListController\\
+			Applicazione::Controller-\\::ChartController\\
+			Applicazione::Controller-\\::BarChartController\\
+			Applicazione::Controller-\\::LineChartController\\
+			Applicazione::Controller-\\::MapChartController\\
+			Applicazione::Controller-\\::TableController\\
+			Applicazione::Controller-\\::JSONParser}
 			& N.I.
 \\ \hline
-			TIApplicazioneObserver &
+			TIApplicazioneUtils &
 			Viene verificato che il sistema gestisca correttamente le componenti necessarie per la realizzazione del design pattern Observer.
 			& \parbox[t]{0.6\textwidth}{
 			Applicazione::Utils\\
@@ -264,87 +269,37 @@ Chuck::Utils::Observer}
 \level{3}{Tracciamento componenti-test di integrazione}
 
 
-	\begin{longtabu}{| X | X |}
+	\begin{longtabu}{| X | X[0.8] |}
 
 			\hline
 			\rowfont{\bf}
 			Componenti	&	Test di integrazione \\ \hline 
 			\endhead
 
-Applicazione	&	TIApplicazione	\\ \hline
-Applicazione::Controller	&	TIApplicazione	\\ \hline
-Applicazione::Controller	&	TIApplicazioneController	\\ \hline
-Applicazione::Controller::ChartController	&	TIApplicazioneController	\\ \hline
-Applicazione::Controller::Controller	&	TIApplicazioneController	\\ \hline
-Applicazione::Controller::HomeController	&	TIApplicazioneController	\\ \hline
-Applicazione::Controller::ListController	&	TIApplicazioneController	\\ \hline
-Applicazione::Model	&	TIApplicazione	\\ \hline
-Applicazione::Utils	&	TIApplicazione	\\ \hline
-Applicazione::Utils	&	TIApplicazioneObserver	\\ \hline
-Applicazione::Utils::ObservableImpl	&	TIApplicazioneObserver	\\ \hline
-Applicazione::View	&	TIApplicazione	\\ \hline
-Applicazione::View	&	TIApplicazioneView	\\ \hline
-Applicazione::View::Activity	&	TIApplicazioneView	\\ \hline
-Applicazione::View::ChartActivity	&	TIApplicazioneView	\\ \hline
-Applicazione::View::HomeActivity	&	TIApplicazioneView	\\ \hline
-Applicazione::View::ListActivity	&	TIApplicazioneView	\\ \hline
-Chuck::ChartController	&		\\ \hline
-Chuck::ChartView	&	TIChuck	\\ \hline
-Chuck::ChartView::BarChartView	&	TIChuckChartView	\\ \hline
-Chuck::ChartView::LineChartView	&	TIChuckChartView	\\ \hline
-Chuck::ChartView::MapChartView	&	TIChuckChartView	\\ \hline
-Chuck::ChartView::TableView	&	TIChuckChartView	\\ \hline
-Chuck::ChartView::ViewImpl	&	TIChuckChartView	\\ \hline
-Chuck::ChuckAPIManager	&		\\ \hline
-Chuck::ChuckManager	&	TIChuck	\\ \hline
-Chuck::ChuckManager::AuthenticationManager	&	TIChuckChuckManager	\\ \hline
-Chuck::ChuckManager::AuthenticationManagerXMLHttpRequest	&	TIChuckAuthenticationManager	\\ \hline
-Chuck::ChuckManager::ChartBridge	&	TIChuckChuckManager	\\ \hline
-Chuck::ChuckManager::ChartRequester	&	TIChuckChuckManager	\\ \hline
-Chuck::ChuckManager::ChartRequesterSocketIOClient	&	TIChuckChartRequester	\\ \hline
-Chuck::ChuckManager::ChuckAPIController	&	TIChuckChuckManager	\\ \hline
-Chuck::Controller	&	TIChuck	\\ \hline
-Chuck::Controller::BarChartController	&	TIChuckController	\\ \hline
-Chuck::Controller::ChartController	&	TIChuckController	\\ \hline
-Chuck::Controller::LineChartController	&	TIChuckController	\\ \hline
-Chuck::Controller::MapChartController	&	TIChuckController	\\ \hline
-Chuck::Controller::TableController	&	TIChuckController	\\ \hline
-Chuck::DataModel	&	TIChuck	\\ \hline
-Chuck::DataModel::BarChartImpl	&	TIChuckChartImpl	\\ \hline
-Chuck::DataModel::ChartImpl	&	TIChuckDataModel	\\ \hline
-Chuck::DataModel::ChartImpl	&	TIChuckChartImpl	\\ \hline
-Chuck::DataModel::ChuckImpl	&	TIChuckDataModel	\\ \hline
-Chuck::DataModel::LineChartImpl	&	TIChuckChartImpl	\\ \hline
-Chuck::DataModel::MapChartImpl	&	TIChuckChartImpl	\\ \hline
-Chuck::DataModel::TableImpl	&	TIChuckChartImpl	\\ \hline
-Chuck::Utils	&	TIChuck	\\ \hline
-Chuck::Utils::Observable	&	TIChuckObserver	\\ \hline
-Chuck::Utils::ObservableImpl	&	TIChuckObserver	\\ \hline
-Chuck::Utils::Observer	&	TIChuckObserver	\\ \hline
-Norris::DataModel	&	TINorris	\\ \hline
-Norris::DataModel	&	TIApplcazioneModel	\\ \hline
-Norris::DataModel::BarChartImpl	&	TINorrisChartImpl	\\ \hline
-Norris::DataModel::BarChartImpl	&	TIApplcazioneModel	\\ \hline
-Norris::DataModel::ChartImpl	&	TINorrisDataModel	\\ \hline
-Norris::DataModel::ChartImpl	&	TINorrisChartImpl	\\ \hline
-Norris::DataModel::ChartImpl	&	TIApplcazioneModel	\\ \hline
-Norris::DataModel::LineChartImpl	&	TINorrisChartImpl	\\ \hline
-Norris::DataModel::LineChartImpl	&	TIApplcazioneModel	\\ \hline
-Norris::DataModel::MapChartImpl	&	TINorrisChartImpl	\\ \hline
-Norris::DataModel::MapChartImpl	&	TIApplcazioneModel	\\ \hline
-Norris::DataModel::NorrisImpl	&	TINorrisDataModel	\\ \hline
-Norris::DataModel::PageImpl	&	TINorrisDataModel	\\ \hline
-Norris::DataModel::TableImpl	&	TINorrisChartImpl	\\ \hline
-Norris::DataModel::TableImpl	&	TIApplcazioneModel	\\ \hline
-Norris::ExternalAPIManager	&	TINorris	\\ \hline
-Norris::ExternalAPIManager::AuthenticationEndpoint	&	TINorrisExternalAPIManager	\\ \hline
-Norris::ExternalAPIManager::ChartEndpoint	&	TINorrisExternalAPIManager	\\ \hline
-Norris::ExternalAPIManager::ChartRef	&	TINorrisExternalAPIManager	\\ \hline
-Norris::ExternalAPIManager::ExternalAPIController	&	TINorrisExternalAPIManager	\\ \hline
-Norris::ExternalAPIManager::ListEndpoint	&	TINorrisExternalAPIManager	\\ \hline
-Norris::InternalAPIManager	&	TINorris	\\ \hline
-Norris::InternalAPIManager::ChartBridge	&	TINorrisInternalAPIManager	\\ \hline
-Norris::InternalAPIManager::InternalAPIBridge	&	TINorrisInternalAPIManager	\\ \hline
-Norris::InternalAPIManager::PageBridge	&	TINorrisInternalAPIManager	\\ \hline
+
+			Norris & TINorris \\ \hline 
+			Norris::DataModel & TINorrisDataModel \\ \hline 
+			Norris::DataModel::ChartImpl & TINorrisChartImpl \\ \hline 
+			Norris::InternalAPIManager & TINorrisInternalAPIManager \\ \hline 
+			Norris::ExternalAPIManager & TINorrisExternalAPIManager \\ \hline 
+			Chuck & TIChuck \\ \hline 
+			Chuck::ChuckManager & TIChuckChuckManager \\ \hline 
+			Chuck::ChuckManager::AuthenticationManager & TIChuckAuthenticationManager \\ \hline 
+			Chuck::ChuckManager::ChartRequester & TIChuckChartRequester \\ \hline 
+			Chuck::DataModel & TIChuckDataModel \\ \hline 
+			Chuck::DataModel::ChartImpl & TIChuckChartImpl \\ \hline 
+			Chuck::ChartView & TIChuckChartView \\ \hline 
+			Chuck::Controller & TIChuckController \\ \hline 
+			Chuck::Utils & TIChuckUtils \\ \hline 
+			Applicazione & TIApplicazione \\ \hline 
+			Applicazione::Model & TIApplicazioneModel \\ \hline 
+			Applicazione::View & TIApplicazioneView \\ \hline 
+			Applicazione::Controller & TIApplicazioneController \\ \hline 
+			Applicazione::Utils & TIApplicazioneUtils \\ \hline 
+
+
+
+
+	\caption{Tracciamento componenti - test di integrazione}
 
 \end{longtabu}
