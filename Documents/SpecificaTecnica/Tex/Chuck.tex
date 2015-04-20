@@ -3,9 +3,19 @@
         \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiChuck}
         \caption{Diagramma delle componenti di Chuck}
     \end{figure}
-	\level{3}{Design Pattern utilizzati}
-	Nella progettazione delle componenti di Chuck abbiamo deciso di utilizzare il design pattern MVC. Questo pattern garantisce una migliore separazione del codice e rende il codice maggiormente estendibile. 
-    \level{3}{Descrizione delle componenti di Chuck}
+		\level{3}{Design pattern utilizzati}
+Nella progettazione delle componenti dell'applicazione Android abbiamo deciso di utilizzare i seguenti pattern architetturali:
+\level{4}{Model View Controller}
+	Model-View-Controller (MVC) è un pattern architetturale utilizzato per separare il codice in blocchi di funzionalità ben distinte.\\
+	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:MVC}.
+	\level{5}{Contesto di utilizzo}
+	L'MVC viene utilizzato per dividere le classi della libreria CHUCK in tre grandi componenti:
+	\begin{itemize}
+	\item ChartView;
+	\item ChartModel;
+	\item ChartController;
+	\end{itemize}
+	   \level{3}{Descrizione delle componenti di Chuck}
     	\level{4}{Chuck API Manager}
     		La componente Chuck Api Manager si occupa di implementare le funzionalità offerte dalle API di Chuck allo sviluppatore client. Queste funzionalità sono:
     		\begin{itemize}
