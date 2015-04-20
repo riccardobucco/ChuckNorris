@@ -36,16 +36,45 @@
     \level{2}{Norris - Chuck}
         Norris e Chuck interagiscono tramite le API esterne, le quali fungono da interfaccia tra server e client. In particolare si possono avere 3 tipologie di interazione:
         \begin{itemize}
-            \item autenticazione: precede l'invio di informazioni inerenti un grafico. Chuck manda a Norris l'indirizzo dell'istanza a cui si vuole connettere, assieme ad username e password. Norris controlla se i dati inviati sono corretti e, in caso affermativo, esegue l'autenticazione.
-            \item richiesta inserimento grafico: Chuck manda a Norris una richiesta di informazioni inerenti al grafico che si vuole inserire nella pagina web. Norris controlla se il client è autenticato. In caso negativo, Norris manda una richiesta di autenticazione al client. In caso affermativo, invece, Norris manda le informazioni relative al grafico richiesto aprendo una comunicazione tramite websocket. Il canale rimane aperto fintanto che il client rimane connesso.
-            \item aggiornamenti del grafico: quando un grafico viene aggiornato lato server, Norris si preoccupa di mandare l'aggiornamento ai client che hanno quel grafico. La comunicazione dell'aggiornamento avviene tramite un canale websocket appositamente creato al momento della richiesta di inserimento del grafico nella pagina web.
+            \item autenticazione: precede l'invio di informazioni inerenti un grafico. Chuck manda a Norris l'indirizzo dell'istanza a cui si vuole connettere, assieme ad username e password. Norris controlla se i dati inviati sono corretti e, in caso affermativo, esegue l'autenticazione. Riportiamo di seguito un diagramma esplicativo:
+        	\begin{figure}[H]\centering
+        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/Chuck/Autenticazione.pdf}
+        		\caption{Diagramma di attività dell'autenticazione}
+    		\end{figure}
+	
+            \item richiesta inserimento grafico: Chuck manda a Norris una richiesta di informazioni inerenti al grafico che si vuole inserire nella pagina web. Norris controlla se il client è autenticato. In caso negativo, Norris manda una richiesta di autenticazione al client. In caso affermativo, invece, Norris manda le informazioni relative al grafico richiesto aprendo una comunicazione tramite websocket. Il canale rimane aperto fintanto che il client rimane connesso. Riportiamo di seguito un diagramma esplicativo:
+            \begin{figure}[H]\centering
+        	\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/Chuck/RichiestaGrafico.pdf}
+        	\caption{Diagramma di attività della richiesta di inserimento di un grafico}
+    		\end{figure}
+            \item aggiornamenti del grafico: quando un grafico viene aggiornato lato server, Norris si preoccupa di mandare l'aggiornamento ai client che hanno quel grafico. La comunicazione dell'aggiornamento avviene tramite un canale websocket appositamente creato al momento della richiesta di inserimento del grafico nella pagina web. Riportiamo di seguito un diagramma esplicativo:
+            \begin{figure}[H]\centering
+        	\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/Chuck/AggiornamentiGrafico.pdf}
+        	\caption{Diagramma di attività dell'aggiornamento di un grafico}
+    		\end{figure}
         \end{itemize}
     
     \level{2}{Norris - Applicazione Android}
         Norris e l'applicazione Android interagiscono tramite le API esterne, le quali fungono da interfaccia tra server e client. In particolare si possono avere 4 tipologie di interazione:
         \begin{itemize}
-            \item Autenticazione: precede l'invio di informazioni inerenti un grafico. L'applicazione Android manda a Norris l'indirizzo dell'istanza a cui si vuole connettere, assieme ad username e password. Norris controlla se i dati inviati sono corretti e, in caso affermativo, esegue l'autenticazione. Se l'autenticazione non va a buon fine, l'applicazione Android mostra un messaggio d'errore.
-            \item Richiesta informazioni della lista di grafici: l'applicazione Android manda a Norris una richiesta di informazioni inerenti alla lista di grafici presenti nell'istanza di Norris alla quale ci si è autenticati. Norris controlla se l'utente è autenticato e, in caso affermativo, manda le informazioni relative alla lista di grafici richiesta aprendo una comunicazione tramite websocket. Il canale viene chiuso quando l'applicazione è in background.
-            \item Richiesta informazioni di un grafico: l'applicazione Android manda a Norris una richiesta di informazioni inerenti al grafico che si vuole inserire nella pagina web. Norris controlla se il client è autenticato e, in caso affermativo, manda le informazioni relative al grafico richiesto aprendo una comunicazione tramite websocket. Il canale viene chiuso quando il grafico o l'applicazione sono in background.
-            \item Aggiornamenti del grafico: quando un grafico viene aggiornato lato server, Norris si preoccupa di mandare l'aggiornamento ai client che hanno quel grafico. La comunicazione dell'aggiornamento avviene tramite un canale websocket appositamente creato al momento dell'invio dell'aggiornamento. Il canale viene chiuso quando il grafico o l'applicazione sono in background. Gli aggiornamenti avranno luogo solo quando il grafico è attivo. Se il grafico è in background, gli aggiornamenti vengono ignorati.
+            \item Autenticazione: precede l'invio di informazioni inerenti un grafico. L'applicazione Android manda a Norris l'indirizzo dell'istanza a cui si vuole connettere, assieme ad username e password. Norris controlla se i dati inviati sono corretti e, in caso affermativo, esegue l'autenticazione. Se l'autenticazione non va a buon fine, l'applicazione Android mostra un messaggio d'errore. Riportiamo di seguito un diagramma esplicativo:
+        	\begin{figure}[H]\centering
+        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/Applicazione/Autenticazione.pdf}
+        		\caption{Diagramma di attività dell'autenticazione}
+    		\end{figure}
+            \item Richiesta informazioni della lista di grafici: l'applicazione Android manda a Norris una richiesta di informazioni inerenti alla lista di grafici presenti nell'istanza di Norris alla quale ci si è autenticati. Norris controlla se l'utente è autenticato e, in caso affermativo, manda le informazioni relative alla lista di grafici richiesta aprendo una comunicazione tramite websocket. Il canale viene chiuso quando l'applicazione è in background. Riportiamo di seguito un diagramma esplicativo:
+            \begin{figure}[H]\centering
+        	\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/Applicazione/RichiestaLista.pdf}
+        	\caption{Diagramma di attività della richiesta delle informazioni di una lista di grafici}
+    		\end{figure}
+            \item Richiesta informazioni di un grafico: l'applicazione Android manda a Norris una richiesta di informazioni inerenti al grafico che si vuole visualizzare nell'applicazione. Norris controlla se il client è autenticato e, in caso affermativo, manda le informazioni relative al grafico richiesto aprendo una comunicazione tramite websocket. Il canale viene chiuso quando il grafico o l'applicazione sono in background. Riportiamo di seguito un diagramma esplicativo:
+            \begin{figure}[H]\centering
+        	\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/Applicazione/RichiestaGrafico.pdf}
+        	\caption{Diagramma di attività della richiesta delle informazioni di un grafico}
+    		\end{figure}
+            \item Aggiornamenti del grafico: quando un grafico viene aggiornato lato server, Norris si preoccupa di mandare l'aggiornamento ai client che hanno quel grafico. La comunicazione dell'aggiornamento avviene tramite un canale websocket appositamente creato al momento dell'invio dell'aggiornamento. Il canale viene chiuso quando il grafico o l'applicazione sono in background. Gli aggiornamenti avranno luogo solo quando il grafico è attivo. Se il grafico è in background, gli aggiornamenti vengono ignorati. Riportiamo di seguito un diagramma esplicativo:
+            \begin{figure}[H]\centering
+        	\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/Applicazione/AggiornamentiGrafico.pdf}
+        	\caption{Diagramma di attività dell'aggiornamento di un grafico}
+    		\end{figure}
         \end{itemize}
