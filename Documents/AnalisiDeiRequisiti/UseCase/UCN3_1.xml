@@ -3,8 +3,8 @@
 <usecase>
 	<titolo>UCN3.1 Selezionare il modello di grafico che si vuole rappresentare</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>Tramite l'utilizzo delle API fornite da CHUCK, il Web developer può selezionare il modello di grafico che vuole rappresentare.</descrizione>
-	<precondizione>Si stanno utilizzando le API fornite da CHUCK.</precondizione>
+	<descrizione>Tramite l'utilizzo delle API fornite da Chuck, il Web developer può selezionare il modello di grafico che vuole rappresentare.</descrizione>
+	<precondizione>Si stanno utilizzando le API fornite da Chuck.</precondizione>
 	<postcondizione>È stato selezionato il modello di grafico che si vuole rappresentare.</postcondizione>
 	<principale>
 		<item>Il Web developer seleziona il modello di grafico che vuole rappresentare.</item>

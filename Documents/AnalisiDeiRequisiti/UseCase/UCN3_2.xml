@@ -4,7 +4,7 @@
 	<titolo>UCN3.2 Scegliere il tag HTML nel quale si vuole inserire la rappresentazione del grafico</titolo>
 	<attorip>Web developer</attorip>
 	<descrizione>Il Web developer può scegliere il tag HTML nel quale inserire la rappresentazione grafica del grafico scelto. In questo modo può incapsulare nella sua pagina web il grafico in questione all'interno del tag HTML scelto.</descrizione>
-	<precondizione>Si stanno utilizzando le API fornite da CHUCK.</precondizione>
+	<precondizione>Si stanno utilizzando le API fornite da Chuck.</precondizione>
 	<postcondizione>È stato scelto il tag HTML nel quale si vuole inserire la rappresentazione del grafico.</postcondizione>
 	<principale>
 		<item>Il Web developer sceglie il tag HTML nel quale vuole inserire la rappresentazione del grafico.</item>

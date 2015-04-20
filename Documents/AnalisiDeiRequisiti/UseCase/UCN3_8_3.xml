@@ -3,8 +3,8 @@
 <usecase>
 	<titolo>UCN3.8.3 Inserire password</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>Per ottenere l'accesso a un'istanza di Norris utilizzando le API fornite da CHUCK, il Web developer sceglie la password relativa all'username con il quale desidera autenticarsi.</descrizione>
-	<precondizione>Si sta eseguendo l'accesso a un'istanza di Norris selezionata utilizzando le API fornite da CHUCK.</precondizione>
+	<descrizione>Per ottenere l'accesso a un'istanza di Norris utilizzando le API fornite da Chuck, il Web developer sceglie la password relativa all'username con il quale desidera autenticarsi.</descrizione>
+	<precondizione>Si sta eseguendo l'accesso a un'istanza di Norris selezionata utilizzando le API fornite da Chuck.</precondizione>
 	<postcondizione>È stato inserita la password relativa allo username con il quale si vuole accedere all'istanza di Norris selezionata.</postcondizione>
 	<principale>
 		<item>Il Web developer inserisce la password relativa allo username con il quale vuole accedere all'istanza di Norris selezionata.</item>

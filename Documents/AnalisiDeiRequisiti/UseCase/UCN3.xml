@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <usecase>
-	<titolo>UCN3 Utilizzo API fornite da CHUCK</titolo>
+	<titolo>UCN3 Utilizzo API fornite da Chuck</titolo>
 	<attorip>Web developer</attorip>
-	<descrizione>Il Web developer può utilizzare le API fornite da CHUCK. Tali API hanno il principale compito di semplificare al massimo l'utilizzo che i Web developer fanno delle API esterne fornite da Norris. Esse, inoltre, permettono di incapsulare un grafico esistente all'interno di una pagina web diversa rispetto a quella creata di default tramite l'utilizzo delle API interne. In particolare il Web developer, dopo aver eseguito l'accesso all'istanza Norris desiderata, può selezionare il modello di grafico che vuole rappresentare, scegliere il tag HTML nel quale vuole inserire la rappresentazione del grafico, modificare le opzioni di visualizzazione del grafico selezionato.</descrizione>
+	<descrizione>Il Web developer può utilizzare le API fornite da Chuck. Tali API hanno il principale compito di semplificare al massimo l'utilizzo che i Web developer fanno delle API esterne fornite da Norris. Esse, inoltre, permettono di incapsulare un grafico esistente all'interno di una pagina web diversa rispetto a quella creata di default tramite l'utilizzo delle API interne. In particolare il Web developer, dopo aver eseguito l'accesso all'istanza Norris desiderata, può selezionare il modello di grafico che vuole rappresentare, scegliere il tag HTML nel quale vuole inserire la rappresentazione del grafico, modificare le opzioni di visualizzazione del grafico selezionato.</descrizione>
 	<precondizione>Norris esiste ed è in funzione.</precondizione>
 	<postcondizione>Sono state eseguite le operazioni richieste dall'utente.</postcondizione>
 	<principale>
