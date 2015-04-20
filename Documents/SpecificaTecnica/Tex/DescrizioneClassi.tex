@@ -27,7 +27,7 @@
 				Il Bridge è un pattern strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione.\\
 				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
 				\level{5}{Contesto di utilizzo}
-					In Norris questo pattern viene utilizzato nel package InternalAPIManager per separare le interfacce InternalAPIManager::Chart, InternalAPIManager::Page e InternalAPIManager::InternalAPI dalla loro implementazione.
+					In Norris questo pattern viene utilizzato nel package InternalAPIManager per separare l'implementazione dei chart (presente nel package DataModel) dall'interfaccia fornita allo sviluppatore.
 			\level{4}{Dependency Injection}
 				Dependency Injection è un pattern architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
 				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
@@ -159,12 +159,12 @@ Nella progettazione delle classi di Chuck abbiamo deciso di utilizzare alcuni de
 	\level{2}{Applicazione Android}
 		In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno dell'applicazione Android. Queste sono state suddivise in base al componente nelle quali sono contenute.
 		\level{3}{Design pattern utilizzati}
-Nella progettazione delle classi dell'applicazione Android abbiamo deciso di utilizzare i seguenti pattern architetturali:
+Nella progettazione delle classi dell'applicazione abbiamo deciso di utilizzare alcuni design pattern. Riportiamo di seguito una loro breve descrizione e il contesto nel quale sono stati utilizzati.
 \level{4}{Observer}
 	L'Observer è un pattern comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
 	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
 	\level{5}{Contesto di utilizzo}
-	Il pattern Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\ Nell'applicazione Android il nucleo dell'implementazione dell'Observer si trova nel package Utils, in cui sono contenute le interfacce Observer e Observable, e la classe ObservableImpl che è l'implementazione di Observable. Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il pattern completo.\\
+	Il pattern Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\ Nell'applicazione Android il nucleo dell'implementazione dell'Observer si trova nel package Utils, in cui sono contenute le interfacce Utils::Observer e Utils::Observable, e la classe Utils::ObservableImpl (implementazione di Utils::Observable). Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il pattern completo.\\
 	Interfacce che estendono Observable:
 	\begin{itemize}
 	\item Model::Chart.
@@ -185,15 +185,15 @@ Nella progettazione delle classi dell'applicazione Android abbiamo deciso di uti
 	\level{5}{Contesto di utilizzo}
 	La Dependency Injection viene utilizzata con le classi che implementano le seguenti interfacce:
 	\begin{itemize}
-	\item ControllerFactory, inietta in ChartController le corrispondenze tra i tipi di controller e le rispettive classi factory;
-	\item ChartFactory, inietta in ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
-	\item Updater, inietta in ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
+	\item Controller::ControllerFactory, inietta in Controller::ChartController le corrispondenze tra i tipi di controller e le rispettive classi factory;
+	\item Model::ChartFactory, inietta in Model::ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
+	\item Model::Updater, inietta in Model::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
 	\end{itemize}
 \level{4}{Singleton}
 	Il Singleton è un pattern creazionale il cui scopo è permettere la creazione di una sola istanza di una classe, nonchè di fornire un punto di accesso globale ad essa.\\
 	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
 	\level{5}{Contesto di utilizzo}
-	Nell'applicazione Android il Singleton viene implementato nella classe JSONParser.
+	Nell'applicazione Android il Singleton viene implementato nella classe Controller::JSONParser.
 \level{4}{Abstract Factory}
 	Il pattern creazionale Abstract Factory si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete. \\
 	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:abstractfactory}.
@@ -202,19 +202,19 @@ Nella progettazione delle classi dell'applicazione Android abbiamo deciso di uti
 	\begin{itemize}
 	\item Interfacce:
 		\begin{itemize}
-			\item ChartFactory, con cui vengono generati i diversi tipi di grafici;
-			\item ControllerFactory, con cui sono generati i diversi tipi di controller dei grafici.
+			\item Model::ChartFactory, con cui vengono generati i diversi tipi di grafici;
+			\item Controller::ControllerFactory, con cui sono generati i diversi tipi di controller dei grafici.
 		\end{itemize}
 	\item Classi:
 		\begin{itemize}
-			\item BarChartFactory;
-			\item LineChartFactory;
-			\item MapChartFactory;
-			\item TableFactory;
-			\item BarChartControllerFactory;
-			\item LineChartControllerFactory;
-			\item MapChartControllerFactory;
-			\item TableControllerFactory.
+			\item Model::BarChartFactory;
+			\item Model::LineChartFactory;
+			\item Model::MapChartFactory;
+			\item Model::TableFactory;
+			\item Controller::BarChartControllerFactory;
+			\item Controller::LineChartControllerFactory;
+			\item Controller::MapChartControllerFactory;
+			\item Controller::TableControllerFactory.
 		\end{itemize}
 	\end{itemize}
 \level{4}{Adapter}
@@ -223,9 +223,9 @@ Nella progettazione delle classi dell'applicazione Android abbiamo deciso di uti
 	\level{5}{Contesto di utilizzo}
 	Nell'applicazione Android l'Adapter viene utilizzato per calare le varie librerie esterne nel contesto di \projectname{}, e nello specifico sono rappresentate dalle diverse View, quindi:
 	\begin{itemize}
-	\item BarChartActivity è un adattatore per MPABarChart;
-	\item MapChartActivity è un adattatore per GoogleMap Android API v2;
-	\item LineChartActivity è un adattatore per MPALineChart.
+	\item View::BarChartActivity è un adattatore per MPABarChart;
+	\item View::MapChartActivity è un adattatore per GoogleMap Android API v2;
+	\item View::LineChartActivity è un adattatore per MPALineChart.
 	\end{itemize}
 	
 		\input{Classi/Applicazione.tex}

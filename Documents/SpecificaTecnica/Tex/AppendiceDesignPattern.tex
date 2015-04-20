@@ -25,7 +25,7 @@
 			L'utilizzo del pattern MVC nello sviluppo di un software non ha solo benefici, ma ha anche un piccolo costo, derivante da una maggiore complessità e dalla necessità di un maggior numero di aggiornamenti.\\
   			La maggiore complessità è data dai livelli di indirezione introdotti dal pattern e dall'implementazione ad eventi necessaria per far comunicare i tre componenti. La maggiore frequenza degli aggiornamenti, invece, è un effetto collaterale della modularizzazione: frequenti cambiamenti al modello comportano spesso cambiamenti nelle View e quindi nei Controller.
 	\level{2}{Singleton} \label{app:singleton}
-		Lo scopo del pattern architetturale denominato Singleton è 
+		Lo scopo del pattern creazionale denominato Singleton è 
 		assicurare l'esistenza di un'unica istanza di una classe e fornire
 		un punto di accesso globale ad essa.\\
 		Questo pattern è nato per rispondere alla necessità di non avere più
@@ -123,7 +123,7 @@ L'impiego dell'Abstract Factory nella progettazione dell'architettura di un prod
 Come tutti i pattern, anche Abstract Factory ha delle ripercussioni negative nella progettazione del software: in questo caso risulta difficile estendere la classe factory astratta, perchè ciò comporta il cambiamento di tutte le sotto classi.
 
 \level{2}{Adapter} \label{app:adapter}
-Adapter è un pattern architetturale strutturale che, come suggerisce il suo nome, viene utilizzato per adattare l'interfaccia di una classe in un'altra permettendo alle classi di lavorare assieme, cosa altrimenti non possibile.\\
+Adapter è un pattern strutturale che, come suggerisce il suo nome, viene utilizzato per adattare l'interfaccia di una classe in un'altra permettendo alle classi di lavorare assieme, cosa altrimenti non possibile.\\
 Gli elementi del pattern sono:
 \begin{description}
 \item[Target:] è l'interfaccia di dominio, quella che di desidera mettere a disposizione del Client;
