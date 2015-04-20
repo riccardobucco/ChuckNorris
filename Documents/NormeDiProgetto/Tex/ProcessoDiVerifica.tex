@@ -22,17 +22,6 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 						Nel presente documento sono state definite delle norme tipografiche di carattere generale. Molte di esse sono verificabili tramite strumenti automatici (vedi sezione \nameref{app:strumenti} del presente documento). Per le restanti è necessario che i \insrole{Verificatori} applichino una fra le tecniche di inspection e \textit{walkthrough}	(si preferisce la prima nel momento in cui tramite la lista di controllo si riesce a trovare la grande maggioranza degli errori).
 					\level{6}{Proprietà di glossario}
 						È necessario che tutte le parole presenti all'interno del \insdoc{Glossario} siano marcate appropriatamente (come descritto nel presente documento). Ciò viene fatto con l'ausilio di strumenti automatici (vedi sezione \nameref{app:strumenti} del presente documento). Inoltre, è compito dei \insrole{Verificatori} trovare tutti quei termini che dovrebbero essere inclusi nel \insdoc{Glossario} ma che ancora non lo sono. Per tale compito si deve utilizzare \textit{walthrough} delle sezioni che sono state soggette a modifica prima dell'ultima verifica.
-				\level{5}{Test}
-					\level{6}{Test di integrazione}
-					I test di integrazione servono per verificare il corretto funzionamento di più moduli assemblati insieme; in particolare servono per rilevare bug nei moduli nel momento in cui essi interagiscono con altri moduli coi quali hanno dipendenze.\\
-					I test di integrazione vengono identificati dalla sintassi TI[Componente], dove Componente si riferisce al componente del sistema del quale si sta testando l'integrazione tra i suoi elementi.
-					\level{6}{Test di sistema}
-					I test di sistema validano i requisiti individuati nell'\insdoc{Analisi dei Requisiti v3.00}, ovvero validano il prodotto software, e vengono eseguiti dopo i test di integrazione.
-					I test di sistema vengono identificati dalla sintassi TS[Codice del requisito], dove il codice del requisito è quello del requisito che sarà testato.\\
-					Nel documento \insdoc{Piano di Qualità v3.00} vengono riportati i test di sistema relativi ai soli requisiti funzionali specifici.
-					\level{6}{Test di accettazione}
-					I test di accettazione avvengono al momento del collaudo del software col proponente.
-					I test di accettazione sono identificati dalla sintassi TA[Codice del requisito], dove il Codice del requisito si riferisce al requisito che sarà testato.
 
 \level{4}{Procedure}
 		\level{5}{Verifica dei diagrammi UML}
@@ -67,15 +56,15 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 	
 	\level{4}{Strumenti}
 	Per l'attività di verifica dei documenti sono stati utilizzati degli appositi script sviluppati dagli amministratori e descritti nell'appendice \nameref{app:strumenti}.
-
-\level{3}{Analisi}
+\level{3}{Verifica del software}
+\level{4}{Tecniche di analisi}
 			Per poter determinare il livello di qualità del prodotto il team di sviluppo utilizza diversi tipi di tecniche di analisi dei dati.\\
 			Queste possono essere suddivise in due grandi categorie:
 			\begin{itemize}
 				\item analisi statica;
 				\item analisi dinamica.
 			\end{itemize}
-			\level{4}{Analisi statica}
+			\level{5}{Analisi statica}
 				L'analisi statica è una forma di valutazione di un sistema o di un suo componente basato sulla sua forma, struttura, contenuto, documentazione senza che esso sia eseguito. Tali tecniche, dunque, sono applicabili tanto al codice quanto alla documentazione.
 				Verranno usate le seguenti tecniche di analisi statica:
 				\begin{description}
@@ -83,19 +72,29 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 					\item[inspection] Tale tecnica viene utilizzata quando si ha un'idea di cosa si sta cercando e di cosa si potrebbe trovare. Essa consiste in una lettura mirata del documento/codice, sulla base di una lista degli errori comuni stilata in precedenza.
 				\end{description}
 				Applicare in modo fruttuoso la tecnica del walkthrough è molto oneroso e dispendioso. Tuttavia, quando non si possiede una lista degli	errori comuni (per esempio a inizio progetto), essa è l'unica soluzione. L'obiettivo è quello di formare una lista quanto più completa possibile di errori comuni in modo tale che possa essere eseguita quasi sempre la tecnica dell'inspection.
-			\level{4}{Analisi dinamica}
+			\level{5}{Analisi dinamica}
 				L'analisi dinamica è una forma di valutazione di un sistema software o di un suo componente basato sulla osservazione del suo comportamento in esecuzione. Tali tecniche, dunque, sono applicabili solo a componenti software e vengono svolte tramite l'esecuzione di test su essi.\\
 				Deve essere preoccupazione di chi scrive i test fare in modo che essi siano di grande valore dimostrativo, in quanto il numero di test che devono essere effettuati è per forza di cose in numero finito e relativamente piccolo.
-		
+		\level{3}{Test}
+					\level{4}{Test di integrazione}
+					I test di integrazione servono per verificare il corretto funzionamento di più moduli assemblati insieme; in particolare servono per rilevare bug nei moduli nel momento in cui essi interagiscono con altri moduli coi quali hanno dipendenze.\\
+					I test di integrazione vengono identificati dalla sintassi TI[Componente], dove Componente si riferisce al componente del sistema del quale si sta testando l'integrazione tra i suoi elementi.
+					\level{4}{Test di sistema}
+					I test di sistema validano i requisiti individuati nell'\insdoc{Analisi dei Requisiti v3.00}, ovvero validano il prodotto software, e vengono eseguiti dopo i test di integrazione.
+					I test di sistema vengono identificati dalla sintassi TS[Codice del requisito], dove il codice del requisito è quello del requisito che sarà testato.\\
+					Nel documento \insdoc{Piano di Qualità v3.00} vengono riportati i test di sistema relativi ai soli requisiti funzionali specifici.
+					\level{4}{Test di accettazione}
+					I test di accettazione avvengono al momento del collaudo del software col proponente.
+					I test di accettazione sono identificati dalla sintassi TA[Codice del requisito], dove il Codice del requisito si riferisce al requisito che sarà testato.
 		\level{3}{Issue tracking}
 			L'issue tracking è un attività di supporto dei \insrole{Verificatori}. Essa permettere non solo di tracciare tutti i potenziali difetti dalla comparsa fino alla risoluzione, ma consente al \insrole{Responsabile di Progetto} di assegnare i compiti di correzione ai singoli membri del team.
 			\level{4}{Norme}
-				\level{5}{Sintassi delle label}
+				\level{5}{Sintassi delle label}\label{sec:SintassiLabel}
 				Una label è una etichetta che viene applicata ad una issue utilizzando il servizio fornito da GitHub (consultare la sezione \nameref{app:strumenti} del presente documento) permettendo così di categorizzare e filtrare le varie issues.\\
 				Esistono 3 tipologie di etichetta:
 				\begin{itemize}
 				    \item Di \textbf{attività}: ovvero quale attività l'ha generata. Le etichette permesse sono quindi: \inslabel{Verifica}
-				    \item Di \textbf{appartenenza}: cioè da quale documento è stata sollevata la issue. Sono etichette valide tutte le etichette con nome la sigla dei documenti (seguendo la sintassi indicata nella sezione \nameref{sec:sintassiissue}).
+				    \item Di \textbf{appartenenza}: cioè da quale documento è stata sollevata la issue. Sono etichette valide tutte le etichette con nome la sigla dei documenti (seguendo la sintassi indicata nella sezione \nameref{sec:sigle}).
 				    \item Di \textbf{stato}: identifica in che stato si trova la issue. Sono accettate solamente le seguenti etichette:
 				\begin{itemize}
 				    \item \inslabel{Request} identifica una richiesta di issue;
@@ -110,7 +109,7 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				\level{5}{Gestione di un'anomalia}
 				Ogni qualvolta un \insrole{Verificatore} trova un anomalia deve segnalarla tramite il meccanismo di sollevamento issue fornito da Github (consultare la sezione \nameref{app:strumenti} del presente documento). L'intera procedura da attivare nel momento in cui viene individuata un'anomalia prevede i seguenti passi:
 				\begin{enumerate}
-				    \item il \insrole{Verificatore} crea una nuova issue su Github riguardante l'anomalia rinvenuta (seguendo la sintassi indicata nella sezione \nameref{sec:sintassiissue}) ed aggiunge come etichette \inslabel{Verifica}, quella relativa al documento/i interessato/i ed infine etichetta di stato \inslabel{Request}.
+				    \item il \insrole{Verificatore} crea una nuova issue su Github riguardante l'anomalia rinvenuta (seguendo la sintassi indicata nella sezione \nameref{sec:StrutturaIssue}) ed aggiunge come etichette \inslabel{Verifica}, quella relativa al documento/i interessato/i ed infine etichetta di stato \inslabel{Request} (si consulti la sezione \nameref{sec:SintassiLabel}).
 				    \item il \insrole{Project Manager} valuterà la richiesta e se decide che la modifica è inutile o dannosa procederà cambiando etichetta da \inslabel{Request} a \inslabel{Rejected} e chiudendo la issue terminando così la procedura;
 				    \item il \insrole{Verificatore} aggiorna la lista degli errori comuni (procedura descritta nella sezione \nameref{sec:tracciamento}).
 				    \item un qualsiasi componente del gruppo può proporre una soluzione ad una certa issue commentando all'interno di essa cambiando etichetta della issue da \inslabel{Request} a \inslabel{Questioned} permettendo così agli altri componenti di ribattere l'idea o di proporne una nuova;
