@@ -16,7 +16,7 @@
 				L'Observer è un pattern comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
 				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
 				\level{5}{Contesto di utilizzo}
-					Il pattern Observer si basa sugli oggetti "osservabili" e sugli "osservatori".\\
+					Il pattern Observer si basa sugli oggetti “osservabili” e sugli “osservatori”.\\
 					Le interfacce che che estendono Observable sono le seguenti:
 					\begin{itemize}
 						\item DataModel::ChartModel;
@@ -86,7 +86,7 @@ Nella progettazione delle classi di Chuck abbiamo deciso di utilizzare i seguent
 	L'Observer è un pattern comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
 	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
 	\level{5}{Contesto di utilizzo}
-	Il pattern Observer si basa sugli oggetti "osservabili " e sugli "osservatori". \\In Chuck il nucleo dell'implementazione dell'Observer si trova nel package Utils, in cui sono contenute le interfacce Observer e Observable, e la classe ObservableImpl che è l'implementazione di Observable. Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il pattern completo.\\
+	Il pattern Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\In Chuck il nucleo dell'implementazione dell'Observer si trova nel package Utils, in cui sono contenute le interfacce Observer e Observable, e la classe ObservableImpl che è l'implementazione di Observable. Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il pattern completo.\\
 	Interfacce che estendono Observable:
 	\begin{itemize}
 	\item ChartView::View;
@@ -109,7 +109,7 @@ Nella progettazione delle classi di Chuck abbiamo deciso di utilizzare i seguent
 	Dependency Injection è un pattern architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
 	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
 	\level{5}{Contesto di utilizzo}
-	La Dependency Injection viene utilizzata con le classi che implementano l'interfaccia ChartFactory e Updater. Attraverso queste classi vengono "iniettati" nella classe ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano e le corrispondenze tra i tipi di grafico e le rispettive classi factory.
+	La Dependency Injection viene utilizzata con le classi che implementano l'interfaccia ChartFactory e Updater. Attraverso queste classi vengono “iniettati” nella classe ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano e le corrispondenze tra i tipi di grafico e le rispettive classi factory.
 \level{4}{Singleton}
 	Il Singleton è un pattern creazionale il cui scopo è permettere la creazione di una sola istanza di una classe, nonchè di fornire un punto di accesso globale ad essa.\\
 	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
@@ -162,7 +162,7 @@ Nella progettazione delle classi dell'applicazione Android abbiamo deciso di uti
 	L'Observer è un pattern comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
 	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
 	\level{5}{Contesto di utilizzo}
-	Il pattern Observer si basa sugli oggetti "osservabili " e sugli "osservatori". \\ Nell'applicazione Android il nucleo dell'implementazione dell'Observer si trova nel package Utils, in cui sono contenute le interfacce Observer e Observable, e la classe ObservableImpl che è l'implementazione di Observable. Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il pattern completo.\\
+	Il pattern Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\ Nell'applicazione Android il nucleo dell'implementazione dell'Observer si trova nel package Utils, in cui sono contenute le interfacce Observer e Observable, e la classe ObservableImpl che è l'implementazione di Observable. Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il pattern completo.\\
 	Interfacce che estendono Observable:
 	\begin{itemize}
 	\item Model::Chart.
