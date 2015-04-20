@@ -71,8 +71,8 @@
 		\insglo{Browser} web sviluppato da Google.
 	</entry>
 
-	<entry name="CHUCK">
-		CHUCK, acronimo di CHart Universal Creator Kit, è una libreria JavaScript lato client, parte del progetto in questione, che oltre ad occuparsi della comunicazione con Norris, permette di inserire nuovi grafici e di modificarne le impostazioni. 
+	<entry name="Chuck">
+		Chuck, acronimo di CHart Universal Creator Kit, è una libreria JavaScript lato client, parte del progetto in questione, che oltre ad occuparsi della comunicazione con Norris, permette di inserire nuovi grafici e di modificarne le impostazioni. 
 	</entry>
 
 	<entry name="Client">
@@ -270,7 +270,7 @@
 		\end{itemize}
 	</entry>	
 
-	<entry name="MVC - Model View Controller">
+	<entry name="MVC" equiv="Model View Controller">
 		È un design pattern usato per l'implementazione di interfacce utente. Esso divide l'applicazione in tre parti connesse tra di loro, in modo da separare le rappresentazioni interne dei dati (model) dal modo in cui si presentano all'utente (view) e dal modo in cui l'utente può interagire con la view (controller).
 	</entry>	
 
