@@ -106,22 +106,22 @@ Nella progettazione delle classi di Chuck abbiamo deciso di utilizzare alcuni de
 \level{4}{Bridge}
 	Il Bridge è un pattern strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione.\\ Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
 	\level{5}{Contesto di utilizzo}
-	In Chuck questo pattern viene utilizzato nel package ChuckManager per separare l'interfaccia Chart dalla sua implementazione ChartBridge.
+	In Chuck questo pattern viene utilizzato nel package ChuckAPIManager per separare l'implementazione dei chart (presente nel package DataModel) dall'interfaccia fornita allo sviluppatore client.
 \level{4}{Dependency Injection}
 	Dependency Injection è un pattern architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
 	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
 	\level{5}{Contesto di utilizzo}
-	La Dependency Injection viene utilizzata con le classi che implementano l'interfaccia ChartFactory e Updater. Attraverso queste classi vengono “iniettati” nella classe ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano e le corrispondenze tra i tipi di grafico e le rispettive classi factory.
+	La Dependency Injection viene utilizzata con le classi che implementano le interfaccie DataModel::ChartFactory e DataModel::Updater. Attraverso queste classi vengono "iniettate" nella classe DataModel::ChartImpl rispettivamente le corrispondenze tra i tipi di grafico e le rispettive classi factory e le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
 \level{4}{Singleton}
-	Il Singleton è un pattern creazionale il cui scopo è permettere la creazione di una sola istanza di una classe, nonchè di fornire un punto di accesso globale ad essa.\\
+	Il Singleton è un pattern creazionale il cui scopo è permettere la creazione di una sola istanza di una classe e fornire un punto di accesso globale ad essa.\\
 	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
 	\level{5}{Contesto di utilizzo}
 	Le classi che implementano il Singleton sono quelle che si occupano di creare i diversi tipi di grafici. cioè:
 	\begin{itemize}
-	\item BarChartFactory;
-	\item LineChartFactory;
-	\item MapChartFactory;
-	\item TableFactory.
+	\item DataModel::BarChartFactory;
+	\item DataModel::LineChartFactory;
+	\item DataModel::MapChartFactory;
+	\item DataModel::TableFactory.
 	\end{itemize}
 \level{4}{Abstract Factory}
 	Il pattern creazionale Abstract Factory si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete. \\
@@ -131,15 +131,14 @@ Nella progettazione delle classi di Chuck abbiamo deciso di utilizzare alcuni de
 	\begin{itemize}
 	\item Interfacce:
 		\begin{itemize}
-			\item ChartFactory, con cui vengono generati i diversi tipi di grafici;
-			\item ChartControllerFactory, con cui sono generati i diversi tipi di controller dei grafici.
+			\item DataModel::ChartFactory, con cui vengono generati i diversi tipi di grafici.
 		\end{itemize}
 	\item Classi:
 		\begin{itemize}
-			\item BarChartFactory;
-			\item LineChartFactory;
-			\item MapChartFactory;
-			\item TableFactory.
+			\item DataModel::BarChartFactory;
+			\item DataModel::LineChartFactory;
+			\item DataModel::MapChartFactory;
+			\item DataModel::TableFactory.
 		\end{itemize}
 	\end{itemize}
 \level{4}{Adapter}
@@ -148,9 +147,9 @@ Nella progettazione delle classi di Chuck abbiamo deciso di utilizzare alcuni de
 	\level{5}{Contesto di utilizzo}
 	In Chuck l'Adapter viene utilizzato per calare le varie librerie esterne nel contesto di \projectname{}, e nello specifico sono rappresentate dalle diverse View, quindi:
 	\begin{itemize}
-	\item BarChartView e LineChartView sono adattatori per Chart.js;
-	\item MapChartView è un adattatore per OpenStreetMaps;
-	\item TableView è un adattatore per Dynatable.
+	\item View::BarChartView e View::LineChartView sono adattatori per Chart.js;
+	\item View::MapChartView è un adattatore per OpenStreetMaps;
+	\item View::TableView è un adattatore per Dynatable.
 	\end{itemize}
 	
 		\input{Classi/Chuck.tex}
