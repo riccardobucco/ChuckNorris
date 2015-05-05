@@ -1,26 +1,45 @@
 \level{1}{Strumenti} \label{app:strumenti}
-\level{2}{Astah community}
-Per la modellazione di diagrammi UML (ad esempio diagrammi per use case) sono stati presi in considerazione soprattutto tre editor: Dia, Microsoft Visio, Astah community. Infine i membri del gruppo \groupname{} ha optato per adottare Astah community in quanto si tratta di un software open source, con supporto di UML 2.x e secondo una veloce analisi del team si è notato che esso ha un interfaccia più responsiva ed intuitiva degli altri software.
-\level{2}{\LaTeX{}}
-	Per la stesura dei documenti si è scelto di utilizzare il linguaggio di markup \LaTeX{}.  Il motivo principale che ha portato a questa scelta è la facilità di separazione tra contenuto e formattazione. Con \LaTeX{} è possibile scrivere testo senza doversi preoccupare di dare a esso una formattazione coerente con le norme: è infatti possibile definire un unico template, valido per qualsiasi documento, che applica le regole tipografiche in automatico.
+	\level{2}{Astah community}
+		Per la modellazione di diagrammi UML (ad esempio diagrammi per use case) sono stati presi in considerazione soprattutto tre editor: Dia, Microsoft Visio, Astah community. Infine i membri del gruppo \groupname{} ha optato per adottare Astah community in quanto si tratta di un software open source, con supporto di UML 2.x e secondo una veloce analisi del team si è notato che esso ha un interfaccia più responsiva ed intuitiva degli altri software.
+	\level{2}{\LaTeX{}}
+		Per la stesura dei documenti si è scelto di utilizzare il linguaggio di markup \LaTeX{}.  Il motivo principale che ha portato a questa scelta è la facilità di separazione tra contenuto e formattazione. Con \LaTeX{} è possibile scrivere testo senza doversi preoccupare di dare a esso una formattazione coerente con le norme: è infatti possibile definire un unico template, valido per qualsiasi documento, che applica le regole tipografiche in automatico.
 		\level{3}{Template}
-				Ogni documento dovrà essere realizzato a partire da un template \LaTeX{} appropriato reperibile al percorso Commons/Template.\\
-				Grazie ai template di \LaTeX{}, non ci si deve preoccupare della formattazione del testo durante la sua stesura: infatti, basta impostare le regole all’interno di un unico file e queste verranno adottate in automatico all’interno di tutti i documenti che fanno uso del template. Inoltre, se le regole dovessero cambiare in corso d’opera (cambiamenti alle \insdoc{Norme di Progetto}), basta modificare il singolo file contenente le regole invece che tutti i documenti scritti fino a quel determinato momento.
+			Ogni documento dovrà essere realizzato a partire da un template \LaTeX{} appropriato reperibile al percorso Commons/Template.\\
+			Grazie ai template di \LaTeX{}, non ci si deve preoccupare della formattazione del testo durante la sua stesura: infatti, basta impostare le regole all’interno di un unico file e queste verranno adottate in automatico all’interno di tutti i documenti che fanno uso del template. Inoltre, se le regole dovessero cambiare in corso d’opera (cambiamenti alle \insdoc{Norme di Progetto}), basta modificare il singolo file contenente le regole invece che tutti i documenti scritti fino a quel determinato momento.
 		\level{3}{Comandi personalizzati}
-				Per permettere un’adeguazione automatica alle regole imposte all’interno delle norme tipografiche si è deciso di creare dei comandi personalizzati utilizzabili in \LaTeX{}. Ogni membro del gruppo dovrà saperli usare in modo appropriato ogniqualvolta ve ne sia il bisogno.\\
-				L’elenco completo di tutti i comandi lo si può trovare al punto \nameref{sec:formatiricorrenti};
-\level{2}{Strumenti per la rilevazione di errori ortografici}
-			Per la rilevazione e la correzione di errori ortografici viene usato uno script creato dal gruppo \groupname{} che si appoggia al software Aspell, opportunamente configurato col dizionario di lingua italiana.
-\level{2}{Repository}\label{sec:SceltaRepository}
-				Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git. Questa scelta è stata presa in considerazione del fatto che questa piattaforma permette, oltre al servizio di repository, il controllo di versione e la gestione di anomalie. \\
-				GitHub è anche stato suggerito dal proponente del capitolato, in quanto permette un'interazione agevolata con Heroku, altro strumento consigliato per lo svolgimento del progetto. 
-			\level{3}{Visibilità del repository}
-					Per la condivisione e il versionamento dei \textit{configuration item} è stato creato un repository privato su GitHub, raggiungibile all’indirizzo \insuri{https://github.com/marcorubin/kaizen-team}. L’accesso è consentito solamente agli utenti approvati dal \insrole{Project Manager}.
-					
-\level{2}{Script di verifica}
-			In questa sezione vengono descritti gli aspetti essenziali degli strumenti che i \insrole{Verificatori} hanno a disposizione.
-			\begin{description}
-				\item[OrtographicCheck] Questo script sfrutta il software GNU Aspell per eseguire il controllo ortografico di un documento.
-				\item[Gulpease] Questo script estrae il testo da un documento e ne calcola l'indice di leggibilità Gulpease.
-				\item[NonBreakingSpaceCheck] Questo script controlla che un numero formattato secondo lo standard [SI/ISO 31-0] utilizzi lo spazio unificatore e non quello normale (errore in cui è facile incorrere).
-			\end{description}
+			Per permettere un’adeguazione automatica alle regole imposte all’interno delle norme tipografiche si è deciso di creare dei comandi personalizzati utilizzabili in \LaTeX{}. Ogni membro del gruppo dovrà saperli usare in modo appropriato ogniqualvolta ve ne sia il bisogno.\\
+			L’elenco completo di tutti i comandi lo si può trovare al punto \nameref{sec:formatiricorrenti};
+	\level{2}{Strumenti per la rilevazione di errori ortografici}
+		Per la rilevazione e la correzione di errori ortografici viene usato uno script creato dal gruppo \groupname{} che si appoggia al software Aspell, opportunamente configurato col dizionario di lingua italiana.
+	\level{2}{Repository}\label{sec:SceltaRepository}
+		Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git. Questa scelta è stata presa in considerazione del fatto che questa piattaforma permette, oltre al servizio di repository, il controllo di versione e la gestione di anomalie. \\
+		GitHub è anche stato suggerito dal proponente del capitolato, in quanto permette un'interazione agevolata con Heroku, altro strumento consigliato per lo svolgimento del progetto. 
+		\level{3}{Visibilità del repository}
+			Per la condivisione e il versionamento dei \textit{configuration item} è stato creato un repository privato su GitHub, raggiungibile all’indirizzo \insuri{https://github.com/marcorubin/kaizen-team}. L’accesso è consentito solamente agli utenti approvati dal \insrole{Project Manager}.
+	\level{2}{Script di verifica}
+		In questa sezione vengono descritti gli aspetti essenziali degli strumenti che i \insrole{Verificatori} hanno a disposizione.
+		\begin{description}
+			\item[OrtographicCheck] Questo script sfrutta il software GNU Aspell per eseguire il controllo ortografico di un documento.
+			\item[Gulpease] Questo script estrae il testo da un documento e ne calcola l'indice di leggibilità Gulpease.
+			\item[NonBreakingSpaceCheck] Questo script controlla che un numero formattato secondo lo standard [SI/ISO 31-0] utilizzi lo spazio unificatore e non quello normale (errore in cui è facile incorrere).
+		\end{description}
+	\level{2}{Android Studio}
+		Android Studio è un IDE, basato su IntelliJ IDEA di JetBrains, nato appositamente per agevolare il programmatore nello sviluppo di applicazioni sulla piattaforma Android attraverso tool per la realizzazione della grafica e template per la definizione di funzioni ricorrenti; grazie al designer, ad esempio, il programmatore è in grado di creare le Activity con estrema facilità,  senza doverle definire manualmente in XML.\\
+		Attualmente è il più popolare ambiente di sviluppo integrato utilizzato per realizzare applicazionii, insieme all'IDE Eclipse, che però richiede l'installazione di appositi plug-in.\\ 
+		Il linguaggio utilizzato è Java, ampliato con le librerie Android.\\
+		Questo strumento fornisce:
+		\begin{itemize}
+			\item un sistema flessibile per l'automazione dello sviluppo basato su Gradle;
+			\item un editor WYSIWYG utile per la realizzazione delle interfacce grafiche;
+			\item un editor di layout con funzioni drag-and-drop, che permette di creare facilmente il layout delle applicazioni;
+			\item template per facilitare la creazione di caratteristiche comuni nelle applicazioni;
+			\item strumenti per monitorare le performance e risolvere problemi di usabilità e compatibilità di versione;
+			\item supporto per la creazione di applicazione per la piattaforma Android Wear;
+			\item supporto integrato a Google Cloud Platform, Google Cloud Messaging e App Engine.
+		\end{itemize}
+	\level{2}{Heroku}	
+		Come richiesto dal capitolato, lo strumento utilizzato per il \textit{deployment} del prodott sarà Heroku.
+		Heroku è una piattaforma cloud, basata sul sistemi operativi Debian o Ubuntu, progettata per realizzare e distribuire applicazioni online. \\
+		In particolare Heroku implementa il modello cloud Platform as a service, pertanto viene messo a disposizione degli utenti un sistema informatico, completo di sistema operativo, ambiente di esecuzione per diversi linguaggi di programmazione, spazio per il database e un web server, sul quale è possibile sviluppare una qualunque applicazione che sfrutti il cloud computing.\\
+		Fra i significativi vantaggi di Heroku rientrano il supporto dei linguaggi di programmazione più diffusi in ambito web (Java, Node.js, Scala, Ruby, Clojure, Python e PHP) e la possibilità di importare caricare progetti risiendenti su Git all'interno di Heroku.
+	
