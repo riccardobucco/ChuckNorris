@@ -1,4 +1,5 @@
 DOCUMENTI =	AnalisiDeiRequisiti \
+		DefinizioneDiProdotto \
 		Glossario \
 		NormeDiProgetto \
 		PianoDiProgetto \
