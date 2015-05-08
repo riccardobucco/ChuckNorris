@@ -46,58 +46,58 @@
           <UML:Model.styleProperty key="uml.color.node_instance" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.subsystem" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.stereotype.name.0" value="actor"/>
-          <UML:Model.styleProperty key="uml.color.flow_final_node" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.part" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.color.flow_final_node" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.artifact" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="view.gradation.horizontal" value="2"/>
           <UML:Model.styleProperty key="view.gradation_element.selected" value="1"/>
+          <UML:Model.styleProperty key="view.gradation.horizontal" value="2"/>
           <UML:Model.styleProperty key="dfd.color.datastore" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.role" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.stereotype.color.7" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="uml.stereotype.color.8" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.deep_history" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="uml.stereotype.color.5" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.stereotype.color.8" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.action_state" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.stereotype.color.5" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.stereotype.color.6" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="uml.stereotype.color.3" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.stereotype.name.3" value="control"/>
-          <UML:Model.styleProperty key="uml.stereotype.color.4" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.stereotype.color.3" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.stereotype.name.4" value="entity"/>
-          <UML:Model.styleProperty key="uml.stereotype.color.1" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.stereotype.color.4" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.stereotype.name.1" value="interface"/>
-          <UML:Model.styleProperty key="uml.stereotype.color.2" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="uml.color.submachine_state" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.stereotype.color.1" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.stereotype.name.2" value="boundary"/>
-          <UML:Model.styleProperty key="uml.stereotype.name.7" value=""/>
+          <UML:Model.styleProperty key="uml.color.submachine_state" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.stereotype.color.2" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.lane" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="uml.stereotype.color.0" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.stereotype.name.7" value=""/>
           <UML:Model.styleProperty key="uml.stereotype.name.8" value=""/>
+          <UML:Model.styleProperty key="uml.stereotype.color.0" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.stereotype.name.5" value=""/>
-          <UML:Model.styleProperty key="uml.color.shallow_history" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.stereotype.name.6" value=""/>
+          <UML:Model.styleProperty key="uml.color.shallow_history" value="#FFFFCC"/>
           <UML:Model.styleProperty key="er.entity.type.name.8" value=""/>
-          <UML:Model.styleProperty key="er.entity.type.name.7" value=""/>
           <UML:Model.styleProperty key="uml.color.interaction_use" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="er.entity.type.name.7" value=""/>
           <UML:Model.styleProperty key="er.entity.type.name.6" value=""/>
-          <UML:Model.styleProperty key="er.entity.type.name.5" value=""/>
           <UML:Model.styleProperty key="uml.color.object_flow_state" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="er.entity.type.name.4" value=""/>
+          <UML:Model.styleProperty key="er.entity.type.name.5" value=""/>
           <UML:Model.styleProperty key="er.entity.type.color.7" value="#FFFFFF"/>
-          <UML:Model.styleProperty key="er.entity.type.name.3" value=""/>
+          <UML:Model.styleProperty key="er.entity.type.name.4" value=""/>
           <UML:Model.styleProperty key="er.entity.type.color.8" value="#FFFFFF"/>
-          <UML:Model.styleProperty key="er.entity.type.name.2" value="Summary"/>
+          <UML:Model.styleProperty key="er.entity.type.name.3" value=""/>
           <UML:Model.styleProperty key="er.entity.type.color.5" value="#FFFFFF"/>
-          <UML:Model.styleProperty key="uml.color.sub_activity" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="er.entity.type.name.1" value="Event"/>
+          <UML:Model.styleProperty key="er.entity.type.name.2" value="Summary"/>
           <UML:Model.styleProperty key="er.entity.type.color.6" value="#FFFFFF"/>
-          <UML:Model.styleProperty key="uml.color.connector" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="er.entity.type.name.0" value="Resource"/>
+          <UML:Model.styleProperty key="er.entity.type.name.1" value="Event"/>
+          <UML:Model.styleProperty key="uml.color.sub_activity" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.state_invariant" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="er.entity.type.name.0" value="Resource"/>
+          <UML:Model.styleProperty key="uml.color.connector" value="#FFFFCC"/>
           <UML:Model.styleProperty key="view.gradation.diagonal" value="1"/>
           <UML:Model.styleProperty key="diagram.editor.other.anti-aliasing" value="true"/>
           <UML:Model.styleProperty key="uml.color.condition_judgement" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="uml.color.class" value="#FFFFCC"/>
           <UML:Model.styleProperty key="sysml.color.requirement" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.color.class" value="#FFFFCC"/>
           <UML:Model.styleProperty key="view.gradation.vertical" value="3"/>
           <UML:Model.styleProperty key="uml.color.composite_state" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.entrypoint" value="#FFFFCC"/>
@@ -108,19 +108,19 @@
           <UML:Model.styleProperty key="uml.color.usecase" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.partition" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.port" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="uml.color.flow_element" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="uml.color.node" value="#FFFFCC"/>
           <UML:Model.styleProperty key="uml.color.note" value="#FFCCCC"/>
+          <UML:Model.styleProperty key="uml.color.node" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.color.flow_element" value="#FFFFCC"/>
           <UML:Model.styleProperty key="dfd.color.external_entity" value="#FFFFCC"/>
-          <UML:Model.styleProperty key="uml.color.component" value="#FFFFCC"/>
           <UML:Model.styleProperty key="other.color.common" value="#FFFFCC"/>
+          <UML:Model.styleProperty key="uml.color.component" value="#FFFFCC"/>
           <UML:Model.styleProperty key="er.entity.type.color.2" value="#66CCFF"/>
-          <UML:Model.styleProperty key="dfd.color.processbox" value="#FFFFCC"/>
           <UML:Model.styleProperty key="er.entity.type.color.1" value="#FFFF99"/>
+          <UML:Model.styleProperty key="dfd.color.processbox" value="#FFFFCC"/>
           <UML:Model.styleProperty key="er.entity.type.color.4" value="#FFFFFF"/>
           <UML:Model.styleProperty key="er.entity.type.color.3" value="#FFFFFF"/>
-          <UML:Model.styleProperty key="er.color.entity" value="#FFFFCC"/>
           <UML:Model.styleProperty key="er.entity.type.color.0" value="#FF9999"/>
+          <UML:Model.styleProperty key="er.color.entity" value="#FFFFCC"/>
           <UML:Model.styleProperty key="diagram.editor.rect.anti-aliasing" value="false"/>
         </UML:Model.customStyleMap>
       </XMI.extension>
@@ -2111,12 +2111,12 @@
                 <UML:AssociationEnd xmi.idref="1w7a-bc017194d69b72baa7ed279830bf3bb1"/>
               </UML:Association.connection>
             </UML:Association>
-            <UML:Interface xmi.id="awyn-9d2fded25a604040d3df1d934845c7a7" name="DataObject" version="0" unSolvedFlag="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+            <UML:Interface xmi.id="awyn-9d2fded25a604040d3df1d934845c7a7" name="ChartData" version="0" unSolvedFlag="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
               <UML:ModelElement.namespace>
                 <UML:Namespace xmi.idref="g9h-c49baf7e53a61014d0ac493b2fbeb333"/>
               </UML:ModelElement.namespace>
               <UML:ModelElement.visibility xmi.value="public"/>
-              <UML:ModelElement.definition xmi.value="DataObject+%C3%A8+l%27interfaccia+delle+classi+che+rappresentano+i+dati+di+un+grafico."/>
+              <UML:ModelElement.definition xmi.value="ChartData+%C3%A8+l%27interfaccia+delle+classi+che+rappresentano+i+dati+di+un+grafico."/>
               <UML:ModelElement.stereotype>
                 <UML:Stereotype xmi.idref="awyp-9d2fded25a604040d3df1d934845c7a7"/>
               </UML:ModelElement.stereotype>
@@ -2414,12 +2414,12 @@
                 <UML:AssociationEnd xmi.idref="l6tk-d19c9fc160ecc8c02889f848ec42b24c"/>
               </UML:Association.connection>
             </UML:Association>
-            <UML:Interface xmi.id="b22n-9d2fded25a604040d3df1d934845c7a7" name="SettingsObject" version="0" unSolvedFlag="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+            <UML:Interface xmi.id="b22n-9d2fded25a604040d3df1d934845c7a7" name="ChartSettings" version="0" unSolvedFlag="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
               <UML:ModelElement.namespace>
                 <UML:Namespace xmi.idref="g9h-c49baf7e53a61014d0ac493b2fbeb333"/>
               </UML:ModelElement.namespace>
               <UML:ModelElement.visibility xmi.value="public"/>
-              <UML:ModelElement.definition xmi.value="SettingsObject+%C3%A8+l%27interfaccia+delle+classi+che+si+occupano+delle+impostazioni+di+un+grafico.+"/>
+              <UML:ModelElement.definition xmi.value="ChartSettings+%C3%A8+l%27interfaccia+delle+classi+che+si+occupano+delle+impostazioni+di+un+grafico.+"/>
               <UML:ModelElement.stereotype>
                 <UML:Stereotype xmi.idref="b22p-9d2fded25a604040d3df1d934845c7a7"/>
               </UML:ModelElement.stereotype>
@@ -2458,12 +2458,12 @@
                 <UML:AssociationEnd xmi.idref="1upg-2225ef3890b444e6e44ec73a68199c92"/>
               </UML:Association.connection>
             </UML:Association>
-            <UML:Interface xmi.id="b6qo-9d2fded25a604040d3df1d934845c7a7" name="UpdateObject" version="0" unSolvedFlag="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+            <UML:Interface xmi.id="b6qo-9d2fded25a604040d3df1d934845c7a7" name="ChartUpdate" version="0" unSolvedFlag="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
               <UML:ModelElement.namespace>
                 <UML:Namespace xmi.idref="g9h-c49baf7e53a61014d0ac493b2fbeb333"/>
               </UML:ModelElement.namespace>
               <UML:ModelElement.visibility xmi.value="public"/>
-              <UML:ModelElement.definition xmi.value="UpdateObject+%C3%A8+l%27interfaccia+delle+classi+che+si+occupano+dell%27aggiornamento+di+un+grafico.+In+particolare+rappresenta+il+pacchetto+di+aggiornamento+di+un+grafico."/>
+              <UML:ModelElement.definition xmi.value="ChartUpdate+%C3%A8+l%27interfaccia+delle+classi+che+si+occupano+dell%27aggiornamento+di+un+grafico.+In+particolare+rappresenta+il+pacchetto+di+aggiornamento+di+un+grafico."/>
               <UML:ModelElement.stereotype>
                 <UML:Stereotype xmi.idref="b6qq-9d2fded25a604040d3df1d934845c7a7"/>
               </UML:ModelElement.stereotype>
@@ -5167,9 +5167,9 @@
               <JUDE:UsagePresentation xmi.idref="mph0-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>97.3421345620003</XMI.field>
@@ -5202,9 +5202,9 @@
               <JUDE:GeneralizationPresentation xmi.idref="evlu-5b95d96f924eb17f120a2d1122e857a6"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>50.470362343967906</XMI.field>
@@ -5228,9 +5228,9 @@
               <JUDE:AssociationPresentation xmi.idref="7gk-30d4a294e967a89cb86faaad86d12dd3"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>546.2824304938194</XMI.field>
@@ -5253,10 +5253,10 @@
               <JUDE:GeneralizationPresentation xmi.idref="evlu-5b95d96f924eb17f120a2d1122e857a6"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF2966"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-403.00171392699895</XMI.field>
@@ -5280,11 +5280,11 @@
               <JUDE:GeneralizationPresentation xmi.idref="fb3r-5b95d96f924eb17f120a2d1122e857a6"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF2966"/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="line.color" value="#FF3366"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-139.78784543799884</XMI.field>
@@ -5308,10 +5308,10 @@
               <JUDE:ContainmentPresentation xmi.idref="77x-d2f2b39ca1ce7351d3b9544099665767"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF2966"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>212.0450276860011</XMI.field>
@@ -5335,10 +5335,10 @@
               <JUDE:ContainmentPresentation xmi.idref="rqgh-5d2a72bac9d080841fa9a18c74424b7f"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF2966"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>570.97487362142</XMI.field>
@@ -5361,9 +5361,9 @@
               <JUDE:AssociationPresentation xmi.idref="2lu1-c36808d4774306b83bdc2dbfea4e4451"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>574.2113630000001</XMI.field>
@@ -5384,9 +5384,9 @@
               <JUDE:UsagePresentation xmi.idref="q07b-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-461.6059566010006</XMI.field>
@@ -5407,9 +5407,9 @@
               <JUDE:UsagePresentation xmi.idref="q4lg-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-219.2516900000002</XMI.field>
@@ -5433,9 +5433,9 @@
               <JUDE:AssociationPresentation xmi.idref="uf2-2225ef3890b444e6e44ec73a68199c92"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-260.28200700000025</XMI.field>
@@ -5456,9 +5456,9 @@
               <JUDE:UsagePresentation xmi.idref="q91q-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-349.8059860000003</XMI.field>
@@ -5482,9 +5482,9 @@
               <JUDE:AssociationPresentation xmi.idref="v8n6-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-403.3781300000003</XMI.field>
@@ -5508,9 +5508,9 @@
               <JUDE:AssociationPresentation xmi.idref="919-2225ef3890b444e6e44ec73a68199c92"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-502.1783242810006</XMI.field>
@@ -5628,9 +5628,9 @@
               <JUDE:UsagePresentation xmi.idref="mph0-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>226.95544556199962</XMI.field>
@@ -5652,9 +5652,9 @@
               <JUDE:AssociationPresentation xmi.idref="uf2-2225ef3890b444e6e44ec73a68199c92"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>670.664065493819</XMI.field>
@@ -5678,9 +5678,9 @@
               <JUDE:GeneralizationPresentation xmi.idref="wgl-fea8f6b65b74771161ab73227e7d38bd"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-90.95667329199927</XMI.field>
@@ -5703,9 +5703,9 @@
               <JUDE:AssociationPresentation xmi.idref="blc-66ef1590b90f6cf52a05d428552c46d9"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>1174.3376548636365</XMI.field>
@@ -5728,9 +5728,9 @@
               <JUDE:AssociationPresentation xmi.idref="14n5-66ef1590b90f6cf52a05d428552c46d9"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>1174.3376548636365</XMI.field>
@@ -5753,9 +5753,9 @@
               <JUDE:AssociationPresentation xmi.idref="32v-66ef1590b90f6cf52a05d428552c46d9"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>1174.3376548636365</XMI.field>
@@ -5778,8 +5778,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#AAAAA0"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>1497.9294794600007</XMI.field>
@@ -5798,10 +5798,10 @@
               <JUDE:AssociationPresentation xmi.idref="190du-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#AAAAA0"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>1506.2114794600006</XMI.field>
@@ -5824,8 +5824,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#AAAAA0"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>410.190809863637</XMI.field>
@@ -5852,8 +5852,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#40B54F"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>329.9898415620004</XMI.field>
@@ -5880,8 +5880,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF9929"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>138.42817956200037</XMI.field>
@@ -5903,10 +5903,10 @@
               <JUDE:UsagePresentation xmi.idref="h14a-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#40B54F"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-140.4511147134001</XMI.field>
@@ -5928,10 +5928,10 @@
               <JUDE:ContainmentPresentation xmi.idref="s1kw-5d2a72bac9d080841fa9a18c74424b7f"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF9929"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-351.9507662919996</XMI.field>
@@ -5941,7 +5941,7 @@
               <JUDE:RectPresentation xmi.idref="g9g-c49baf7e53a61014d0ac493b2fbeb333"/>
             </JUDE:JomtPresentation.container>
           </JUDE:ClassifierPresentation>
-          <JUDE:ClassifierPresentation xmi.id="awym-9d2fded25a604040d3df1d934845c7a7" version="0" depth="2147483532" stereotypeVisibility="true" constraintVisibility="true" notationType="1" width="20.0" height="33.96875" doAutoResize="true" visibility="true" label="DataObject" isActive="false" allAttributeVisibility="true" allOperationVisibility="true" visibilityKindVisibility="true" attributeTypeVisibility="true" parameterVisibility="true" parameterTypeVisibility="true" returnTypeVisibility="true" isClassNameItalic="false" attributeInitValueVisibility="true" pathVisibility="0" attributeStereotypeVisibility="true" operationStereotypeVisibility="true" attributeConstraintVisibility="true" operationConstraintVisibility="true" publicAttributeVisibility="true" protectedAttributeVisibility="true" packageAttributeVisibility="true" privateAttributeVisibility="true" publicOperationVisibility="true" protectedOperationVisibility="true" packageOperationVisibility="true" privateOperationVisibility="true" classType="0" interfaceType="0" nameVisibility="true" templateParameterVisibility="true" templateParameterMultiline="false" boundClassTemplateParameterNameVisibility="false" boundClassTemplateParameterVisibility="true">
+          <JUDE:ClassifierPresentation xmi.id="awym-9d2fded25a604040d3df1d934845c7a7" version="0" depth="2147483532" stereotypeVisibility="true" constraintVisibility="true" notationType="1" width="20.0" height="34.1328125" doAutoResize="true" visibility="true" label="ChartData" isActive="false" allAttributeVisibility="true" allOperationVisibility="true" visibilityKindVisibility="true" attributeTypeVisibility="true" parameterVisibility="true" parameterTypeVisibility="true" returnTypeVisibility="true" isClassNameItalic="false" attributeInitValueVisibility="true" pathVisibility="0" attributeStereotypeVisibility="true" operationStereotypeVisibility="true" attributeConstraintVisibility="true" operationConstraintVisibility="true" publicAttributeVisibility="true" protectedAttributeVisibility="true" packageAttributeVisibility="true" privateAttributeVisibility="true" publicOperationVisibility="true" protectedOperationVisibility="true" packageOperationVisibility="true" privateOperationVisibility="true" classType="0" interfaceType="0" nameVisibility="true" templateParameterVisibility="true" templateParameterMultiline="false" boundClassTemplateParameterNameVisibility="false" boundClassTemplateParameterVisibility="true">
             <JUDE:UPresentation.semanticModel>
               <UML:Interface xmi.idref="awyn-9d2fded25a604040d3df1d934845c7a7"/>
             </JUDE:UPresentation.semanticModel>
@@ -5952,9 +5952,9 @@
               <JUDE:AssociationPresentation xmi.idref="1jf7-2225ef3890b444e6e44ec73a68199c92"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>638.734752318401</XMI.field>
@@ -5964,7 +5964,7 @@
               <JUDE:RectPresentation xmi.idref="g9g-c49baf7e53a61014d0ac493b2fbeb333"/>
             </JUDE:JomtPresentation.container>
           </JUDE:ClassifierPresentation>
-          <JUDE:ClassifierPresentation xmi.id="b22m-9d2fded25a604040d3df1d934845c7a7" version="0" depth="2147483530" stereotypeVisibility="true" constraintVisibility="true" notationType="1" width="20.0" height="33.96875" doAutoResize="true" visibility="true" label="SettingsObject" isActive="false" allAttributeVisibility="true" allOperationVisibility="true" visibilityKindVisibility="true" attributeTypeVisibility="true" parameterVisibility="true" parameterTypeVisibility="true" returnTypeVisibility="true" isClassNameItalic="false" attributeInitValueVisibility="true" pathVisibility="0" attributeStereotypeVisibility="true" operationStereotypeVisibility="true" attributeConstraintVisibility="true" operationConstraintVisibility="true" publicAttributeVisibility="true" protectedAttributeVisibility="true" packageAttributeVisibility="true" privateAttributeVisibility="true" publicOperationVisibility="true" protectedOperationVisibility="true" packageOperationVisibility="true" privateOperationVisibility="true" classType="0" interfaceType="0" nameVisibility="true" templateParameterVisibility="true" templateParameterMultiline="false" boundClassTemplateParameterNameVisibility="false" boundClassTemplateParameterVisibility="true">
+          <JUDE:ClassifierPresentation xmi.id="b22m-9d2fded25a604040d3df1d934845c7a7" version="0" depth="2147483530" stereotypeVisibility="true" constraintVisibility="true" notationType="1" width="20.0" height="34.1328125" doAutoResize="true" visibility="true" label="ChartSettings" isActive="false" allAttributeVisibility="true" allOperationVisibility="true" visibilityKindVisibility="true" attributeTypeVisibility="true" parameterVisibility="true" parameterTypeVisibility="true" returnTypeVisibility="true" isClassNameItalic="false" attributeInitValueVisibility="true" pathVisibility="0" attributeStereotypeVisibility="true" operationStereotypeVisibility="true" attributeConstraintVisibility="true" operationConstraintVisibility="true" publicAttributeVisibility="true" protectedAttributeVisibility="true" packageAttributeVisibility="true" privateAttributeVisibility="true" publicOperationVisibility="true" protectedOperationVisibility="true" packageOperationVisibility="true" privateOperationVisibility="true" classType="0" interfaceType="0" nameVisibility="true" templateParameterVisibility="true" templateParameterMultiline="false" boundClassTemplateParameterNameVisibility="false" boundClassTemplateParameterVisibility="true">
             <JUDE:UPresentation.semanticModel>
               <UML:Interface xmi.idref="b22n-9d2fded25a604040d3df1d934845c7a7"/>
             </JUDE:UPresentation.semanticModel>
@@ -5975,9 +5975,9 @@
               <JUDE:AssociationPresentation xmi.idref="1uow-2225ef3890b444e6e44ec73a68199c92"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>638.7347523184012</XMI.field>
@@ -5987,7 +5987,7 @@
               <JUDE:RectPresentation xmi.idref="g9g-c49baf7e53a61014d0ac493b2fbeb333"/>
             </JUDE:JomtPresentation.container>
           </JUDE:ClassifierPresentation>
-          <JUDE:ClassifierPresentation xmi.id="b6qn-9d2fded25a604040d3df1d934845c7a7" version="0" depth="2147483525" stereotypeVisibility="true" constraintVisibility="true" notationType="1" width="20.0" height="33.96875" doAutoResize="true" visibility="true" label="UpdateObject" isActive="false" allAttributeVisibility="true" allOperationVisibility="true" visibilityKindVisibility="true" attributeTypeVisibility="true" parameterVisibility="true" parameterTypeVisibility="true" returnTypeVisibility="true" isClassNameItalic="false" attributeInitValueVisibility="true" pathVisibility="0" attributeStereotypeVisibility="true" operationStereotypeVisibility="true" attributeConstraintVisibility="true" operationConstraintVisibility="true" publicAttributeVisibility="true" protectedAttributeVisibility="true" packageAttributeVisibility="true" privateAttributeVisibility="true" publicOperationVisibility="true" protectedOperationVisibility="true" packageOperationVisibility="true" privateOperationVisibility="true" classType="0" interfaceType="0" nameVisibility="true" templateParameterVisibility="true" templateParameterMultiline="false" boundClassTemplateParameterNameVisibility="false" boundClassTemplateParameterVisibility="true">
+          <JUDE:ClassifierPresentation xmi.id="b6qn-9d2fded25a604040d3df1d934845c7a7" version="0" depth="2147483525" stereotypeVisibility="true" constraintVisibility="true" notationType="1" width="20.0" height="34.1328125" doAutoResize="true" visibility="true" label="ChartUpdate" isActive="false" allAttributeVisibility="true" allOperationVisibility="true" visibilityKindVisibility="true" attributeTypeVisibility="true" parameterVisibility="true" parameterTypeVisibility="true" returnTypeVisibility="true" isClassNameItalic="false" attributeInitValueVisibility="true" pathVisibility="0" attributeStereotypeVisibility="true" operationStereotypeVisibility="true" attributeConstraintVisibility="true" operationConstraintVisibility="true" publicAttributeVisibility="true" protectedAttributeVisibility="true" packageAttributeVisibility="true" privateAttributeVisibility="true" publicOperationVisibility="true" protectedOperationVisibility="true" packageOperationVisibility="true" privateOperationVisibility="true" classType="0" interfaceType="0" nameVisibility="true" templateParameterVisibility="true" templateParameterMultiline="false" boundClassTemplateParameterNameVisibility="false" boundClassTemplateParameterVisibility="true">
             <JUDE:UPresentation.semanticModel>
               <UML:Interface xmi.idref="b6qo-9d2fded25a604040d3df1d934845c7a7"/>
             </JUDE:UPresentation.semanticModel>
@@ -5998,9 +5998,9 @@
               <JUDE:AssociationPresentation xmi.idref="26jo-2225ef3890b444e6e44ec73a68199c92"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>638.8209963184008</XMI.field>
@@ -6022,10 +6022,10 @@
               <JUDE:UsagePresentation xmi.idref="ib8n-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#40B54F"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>69.08770689771791</XMI.field>
@@ -6047,10 +6047,10 @@
               <JUDE:UsagePresentation xmi.idref="j10h-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#40B54F"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>654.8759948021184</XMI.field>
@@ -6072,10 +6072,10 @@
               <JUDE:UsagePresentation xmi.idref="inyf-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#40B54F"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>471.6586792641183</XMI.field>
@@ -6097,10 +6097,10 @@
               <JUDE:UsagePresentation xmi.idref="g4np-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#40B54F"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-558.2183911716</XMI.field>
@@ -6122,10 +6122,10 @@
               <JUDE:UsagePresentation xmi.idref="gped-87c30604c61649a1361e14637aae30e0"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#40B54F"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-350.3632542620003</XMI.field>
@@ -6147,10 +6147,10 @@
               <JUDE:ContainmentPresentation xmi.idref="i7v-d2f2b39ca1ce7351d3b9544099665767"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF9929"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-96.80287280159988</XMI.field>
@@ -6172,10 +6172,10 @@
               <JUDE:ContainmentPresentation xmi.idref="77x-d2f2b39ca1ce7351d3b9544099665767"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF9929"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>357.9277526314004</XMI.field>
@@ -6197,10 +6197,10 @@
               <JUDE:ContainmentPresentation xmi.idref="rqgh-5d2a72bac9d080841fa9a18c74424b7f"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF9929"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="isfilled.color" value="true"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>555.3186454938187</XMI.field>
@@ -6224,8 +6224,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#40B54F"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>265.35465291959827</XMI.field>
@@ -6251,8 +6251,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF9929"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>781.2251663720004</XMI.field>
@@ -6277,8 +6277,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#AAAAA0"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>-24.172212438000543</XMI.field>
@@ -6299,8 +6299,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF9929"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>900.664065493819</XMI.field>
@@ -6324,8 +6324,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF9929"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>900.664065493819</XMI.field>
@@ -6350,8 +6350,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#FF9929"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>900.664065493819</XMI.field>
@@ -6376,8 +6376,8 @@
             <JUDE:UPresentation.customStyleMap>
               <JUDE:UPresentation.styleProperty key="font.color" value="#000000"/>
               <JUDE:UPresentation.styleProperty key="fill.color" value="#AAAAA0"/>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>175.72471033059531</XMI.field>
@@ -6412,9 +6412,9 @@
               <JUDE:AssociationPresentation xmi.idref="yiv-c36808d4774306b83bdc2dbfea4e4451"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>671.1244764370967</XMI.field>
@@ -6435,9 +6435,9 @@
               <JUDE:AssociationPresentation xmi.idref="1w6q-bc017194d69b72baa7ed279830bf3bb1"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>886.4643749030529</XMI.field>
@@ -6475,9 +6475,9 @@
               <JUDE:AssociationPresentation xmi.idref="npu-5d2a72bac9d080841fa9a18c74424b7f"/>
             </JUDE:UPresentation.clients>
             <JUDE:UPresentation.customStyleMap>
-              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
-              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
               <JUDE:UPresentation.styleProperty key="attribute.filter_by_visibility" value=""/>
+              <JUDE:UPresentation.styleProperty key="fill.color" value="#FFFFCC"/>
+              <JUDE:UPresentation.styleProperty key="operation.filter_by_visibility" value=""/>
             </JUDE:UPresentation.customStyleMap>
             <JUDE:JomtPresentation.location>
               <XMI.field>79.97240162364153</XMI.field>
@@ -8914,7 +8914,7 @@
               <JUDE:LabelPresentation xmi.id="1w6u-236fd232fa83c4eb991b804fe4138e0a" version="0" depth="0" stereotypeVisibility="true" constraintVisibility="true" notationType="0" width="11.0" height="14.1328125" doAutoResize="true" visibility="true">
                 <JUDE:JomtPresentation.location>
                   <XMI.field>525.8726184402012</XMI.field>
-                  <XMI.field>703.5890733022071</XMI.field>
+                  <XMI.field>703.6242543920946</XMI.field>
                 </JUDE:JomtPresentation.location>
                 <JUDE:JomtPresentation.compositeParent>
                   <JUDE:UPresentation xmi.idref="1jf7-2225ef3890b444e6e44ec73a68199c92"/>
@@ -8934,7 +8934,7 @@
               <JUDE:QualifierBoxPresentation xmi.id="1w6o-236fd232fa83c4eb991b804fe4138e0a" version="0" depth="0" stereotypeVisibility="true" constraintVisibility="true" notationType="0" width="0.0" height="0.0" doAutoResize="true" visibility="true">
                 <JUDE:JomtPresentation.location>
                   <XMI.field>424.0104845620014</XMI.field>
-                  <XMI.field>704.8262360212021</XMI.field>
+                  <XMI.field>704.8485755488708</XMI.field>
                 </JUDE:JomtPresentation.location>
                 <JUDE:JomtPresentation.compositeParent>
                   <JUDE:UPresentation xmi.idref="1jf7-2225ef3890b444e6e44ec73a68199c92"/>
@@ -8945,7 +8945,7 @@
               <JUDE:QualifierBoxPresentation xmi.id="1w6p-236fd232fa83c4eb991b804fe4138e0a" version="0" depth="0" stereotypeVisibility="true" constraintVisibility="true" notationType="0" width="0.0" height="0.0" doAutoResize="true" visibility="true">
                 <JUDE:JomtPresentation.location>
                   <XMI.field>598.734752318401</XMI.field>
-                  <XMI.field>668.4847230832121</XMI.field>
+                  <XMI.field>668.5327457353185</XMI.field>
                 </JUDE:JomtPresentation.location>
                 <JUDE:JomtPresentation.compositeParent>
                   <JUDE:UPresentation xmi.idref="1jf7-2225ef3890b444e6e44ec73a68199c92"/>
@@ -8975,7 +8975,7 @@
               <JUDE:LabelPresentation xmi.id="1w4u-236fd232fa83c4eb991b804fe4138e0a" version="0" depth="0" stereotypeVisibility="true" constraintVisibility="true" notationType="0" width="11.0" height="14.1328125" doAutoResize="true" visibility="true">
                 <JUDE:JomtPresentation.location>
                   <XMI.field>525.8726184402013</XMI.field>
-                  <XMI.field>741.1680455192978</XMI.field>
+                  <XMI.field>741.2032266091853</XMI.field>
                 </JUDE:JomtPresentation.location>
                 <JUDE:JomtPresentation.compositeParent>
                   <JUDE:UPresentation xmi.idref="1uow-2225ef3890b444e6e44ec73a68199c92"/>
@@ -8995,7 +8995,7 @@
               <JUDE:QualifierBoxPresentation xmi.id="1w4o-236fd232fa83c4eb991b804fe4138e0a" version="0" depth="0" stereotypeVisibility="true" constraintVisibility="true" notationType="0" width="0.0" height="0.0" doAutoResize="true" visibility="true">
                 <JUDE:JomtPresentation.location>
                   <XMI.field>424.0104845620014</XMI.field>
-                  <XMI.field>728.68838731581</XMI.field>
+                  <XMI.field>728.7107268434787</XMI.field>
                 </JUDE:JomtPresentation.location>
                 <JUDE:JomtPresentation.compositeParent>
                   <JUDE:UPresentation xmi.idref="1uow-2225ef3890b444e6e44ec73a68199c92"/>
@@ -9006,7 +9006,7 @@
               <JUDE:QualifierBoxPresentation xmi.id="1w4p-236fd232fa83c4eb991b804fe4138e0a" version="0" depth="0" stereotypeVisibility="true" constraintVisibility="true" notationType="0" width="0.0" height="0.0" doAutoResize="true" visibility="true">
                 <JUDE:JomtPresentation.location>
                   <XMI.field>598.7347523184012</XMI.field>
-                  <XMI.field>719.7805162227856</XMI.field>
+                  <XMI.field>719.828538874892</XMI.field>
                 </JUDE:JomtPresentation.location>
                 <JUDE:JomtPresentation.compositeParent>
                   <JUDE:UPresentation xmi.idref="1uow-2225ef3890b444e6e44ec73a68199c92"/>
@@ -9036,7 +9036,7 @@
               <JUDE:LabelPresentation xmi.id="1w2u-236fd232fa83c4eb991b804fe4138e0a" version="0" depth="0" stereotypeVisibility="true" constraintVisibility="true" notationType="0" width="11.0" height="14.1328125" doAutoResize="true" visibility="true">
                 <JUDE:JomtPresentation.location>
                   <XMI.field>525.9157404402011</XMI.field>
-                  <XMI.field>799.5346786482767</XMI.field>
+                  <XMI.field>799.569857522931</XMI.field>
                 </JUDE:JomtPresentation.location>
                 <JUDE:JomtPresentation.compositeParent>
                   <JUDE:UPresentation xmi.idref="26jo-2225ef3890b444e6e44ec73a68199c92"/>
@@ -9056,7 +9056,7 @@
               <JUDE:QualifierBoxPresentation xmi.id="1w2o-236fd232fa83c4eb991b804fe4138e0a" version="0" depth="0" stereotypeVisibility="true" constraintVisibility="true" notationType="0" width="0.0" height="0.0" doAutoResize="true" visibility="true">
                 <JUDE:JomtPresentation.location>
                   <XMI.field>424.0104845620014</XMI.field>
-                  <XMI.field>765.7461318783494</XMI.field>
+                  <XMI.field>765.7684667249171</XMI.field>
                 </JUDE:JomtPresentation.location>
                 <JUDE:JomtPresentation.compositeParent>
                   <JUDE:UPresentation xmi.idref="26jo-2225ef3890b444e6e44ec73a68199c92"/>
@@ -9067,7 +9067,7 @@
               <JUDE:QualifierBoxPresentation xmi.id="1w2p-236fd232fa83c4eb991b804fe4138e0a" version="0" depth="0" stereotypeVisibility="true" constraintVisibility="true" notationType="0" width="0.0" height="0.0" doAutoResize="true" visibility="true">
                 <JUDE:JomtPresentation.location>
                   <XMI.field>598.8209963184008</XMI.field>
-                  <XMI.field>799.4560379182041</XMI.field>
+                  <XMI.field>799.5040608209449</XMI.field>
                 </JUDE:JomtPresentation.location>
                 <JUDE:JomtPresentation.compositeParent>
                   <JUDE:UPresentation xmi.idref="26jo-2225ef3890b444e6e44ec73a68199c92"/>
@@ -9994,28 +9994,28 @@
         </JUDE:Diagram.presentations>
         <JUDE:Diagram.customStyleMap>
           <JUDE:Diagram.styleProperty key="private.attribute.visibility" value="true"/>
-          <JUDE:Diagram.styleProperty key="attribute.stereotype.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="package.operation.visibility" value="true"/>
+          <JUDE:Diagram.styleProperty key="attribute.stereotype.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="protected.operation.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="operation.parameter.directionkind.visibility" value="false"/>
           <JUDE:Diagram.styleProperty key="attribute.type.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="association.end.visibility" value="true"/>
-          <JUDE:Diagram.styleProperty key="attribute.initial.value.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="operation.compartment.visibility" value="true"/>
-          <JUDE:Diagram.styleProperty key="attribute.compartment.visibility" value="true"/>
+          <JUDE:Diagram.styleProperty key="attribute.initial.value.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="operation.return.type.visibility" value="true"/>
+          <JUDE:Diagram.styleProperty key="attribute.compartment.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="operation.parameter.type.visibility" value="true"/>
-          <JUDE:Diagram.styleProperty key="public.operation.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="private.operation.visibility" value="true"/>
+          <JUDE:Diagram.styleProperty key="public.operation.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="operation.stereotype.visibility" value="true"/>
-          <JUDE:Diagram.styleProperty key="operation.constraint.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="package.attribute.visibility" value="true"/>
+          <JUDE:Diagram.styleProperty key="operation.constraint.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="visibility.kind.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="protected.attribute.visibility" value="true"/>
-          <JUDE:Diagram.styleProperty key="public.attribute.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="operation.parameter.visibility" value="true"/>
-          <JUDE:Diagram.styleProperty key="attribute.constraint.visibility" value="true"/>
+          <JUDE:Diagram.styleProperty key="public.attribute.visibility" value="true"/>
           <JUDE:Diagram.styleProperty key="association.name.direction.visibility" value="true"/>
+          <JUDE:Diagram.styleProperty key="attribute.constraint.visibility" value="true"/>
         </JUDE:Diagram.customStyleMap>
       </JUDE:Diagram>
     </XMI.extension>

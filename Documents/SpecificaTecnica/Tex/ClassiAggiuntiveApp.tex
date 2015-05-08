@@ -1,34 +1,34 @@
 \level{4}{Classi aggiuntive Applicazione}
-	Le interfacce Applicazione::DataModel::DataObject, Applicazione::DataModel::SettingsObject e Applicazione::DataModel::UpdateObject rappresentano genericamente i vari oggetti che utilizzeremo per rappresentare i dati, le impostazioni e gli aggiornamamenti. Tali oggetti sono nel formato JSON ed essendo molto numerosi abbiamo deciso di non inserirle nel diagramma ma di elencarle e descriverle di seguito.
+	Le interfacce Applicazione::DataModel::ChartData, Applicazione::DataModel::ChartSettings e Applicazione::DataModel::ChartUpdate rappresentano genericamente i vari oggetti che utilizzeremo per rappresentare i dati, le impostazioni e gli aggiornamamenti. Tali oggetti sono nel formato JSON ed essendo molto numerosi abbiamo deciso di non inserirle nel diagramma ma di elencarle e descriverle di seguito.
 
 	\begin{itemize}
-		\item \textbf{Applicazione::DataModel::BarChartDataObject} Questa classe implementa l'interfaccia Applicazione::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico bar chart;
+		\item \textbf{Applicazione::DataModel::BarChartData} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico bar chart;
 
-		\item \textbf{Applicazione::DataModel::LineChartDataObject} Questa classe implementa l'interfaccia Applicazione::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico line chart;
+		\item \textbf{Applicazione::DataModel::LineChartData} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico line chart;
 
-		\item \textbf{Applicazione::DataModel::MapChartDataObject} Questa classe implementa l'interfaccia Applicazione::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico map chart;
+		\item \textbf{Applicazione::DataModel::MapChartData} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico map chart;
 
-		\item \textbf{Applicazione::DataModel::TableDataObject} Questa classe implementa l'interfaccia Applicazione::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico table;
+		\item \textbf{Applicazione::DataModel::TableData} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico table;
 
-		\item \textbf{Applicazione::DataModel::BarChartSettingObject} Questa classe implementa l'interfaccia Applicazione::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo bar chart;
+		\item \textbf{Applicazione::DataModel::BarChartSetting} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo bar chart;
 
-		\item \textbf{Applicazione::DataModel::LineChartSettingObject} Questa classe implementa l'interfaccia Applicazione::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo line chart;
+		\item \textbf{Applicazione::DataModel::LineChartSetting} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo line chart;
 
-		\item \textbf{Applicazione::DataModel::MapChartSettingObject} Questa classe implementa l'interfaccia Applicazione::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo map chart;
+		\item \textbf{Applicazione::DataModel::MapChartSetting} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo map chart;
 
-		\item \textbf{Applicazione::DataModel::TableSettingObject} Questa classe implementa l'interfaccia Applicazione::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo table;
+		\item \textbf{Applicazione::DataModel::TableSetting} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo table;
 
-		\item \textbf{Applicazione::DataModel::BarChartInPlaceUpdateObject} Questa classe implementa l'interfaccia Applicazione::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo bar chart;
+		\item \textbf{Applicazione::DataModel::BarChartInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo bar chart;
 
-		\item \textbf{Applicazione::DataModel::LineChartInPlaceUpdateObject} Questa classe implementa l'interfaccia Applicazione::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo line chart;
+		\item \textbf{Applicazione::DataModel::LineChartInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo line chart;
 
-		\item \textbf{Applicazione::DataModel::LineChartStreamUpdateObject} Questa classe implementa l'interfaccia Applicazione::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo stream per un grafico di tipo line chart;
+		\item \textbf{Applicazione::DataModel::LineChartStreamUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo stream per un grafico di tipo line chart;
 
-		\item \textbf{Applicazione::DataModel::MapChartInPlaceUpdateObject} Questa classe implementa l'interfaccia Applicazione::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo map chart;
+		\item \textbf{Applicazione::DataModel::MapChartInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo map chart;
 
-		\item \textbf{Applicazione::DataModel::MapChartMovieUpdateObject} Questa classe implementa l'interfaccia Applicazione::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo movie per un grafico di tipo map chart;
+		\item \textbf{Applicazione::DataModel::MapChartMovieUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo movie per un grafico di tipo map chart;
 
-		\item \textbf{Applicazione::DataModel::TableStreamUpdateObject} Questa classe implementa l'interfaccia Applicazione::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo stream per un grafico di tipo table;
+		\item \textbf{Applicazione::DataModel::TableStreamUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo stream per un grafico di tipo table;
 
-		\item \textbf{Applicazione::DataModel::TableInPlaceUpdateObject} Questa classe implementa l'interfaccia Applicazione::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo table.
+		\item \textbf{Applicazione::DataModel::TableInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo table.
 	\end{itemize}

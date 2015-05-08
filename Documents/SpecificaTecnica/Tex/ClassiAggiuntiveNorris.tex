@@ -1,34 +1,34 @@
 \level{4}{Classi aggiuntive Norris}
-	Le interfacce Norris::DataModel::DataObject, Norris::DataModel::SettingsObject e \linebreak Norris::DataModel::UpdateObject rappresentano genericamente i vari oggetti che utilizzeremo per rappresentare i dati, le impostazioni e gli aggiornamamenti. Tali oggetti sono nel formato JSON ed essendo molto numerosi abbiamo deciso di non inserirle nel diagramma ma di elencarle e descriverle di seguito.
+	Le interfacce Norris::DataModel::ChartData, Norris::DataModel::ChartSettings e Norris::DataModel::ChartUpdate rappresentano genericamente i vari oggetti che utilizzeremo per rappresentare i dati, le impostazioni e gli aggiornamamenti. Tali oggetti sono nel formato JSON ed essendo molto numerosi abbiamo deciso di non inserirle nel diagramma ma di elencarle e descriverle di seguito.
 
 	\begin{itemize}
-		\item \textbf{Norris::DataModel::BarChartDataObject} Questa classe implementa l'interfaccia Norris::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico bar chart;
+		\item \textbf{Norris::DataModel::BarChartData} Questa classe implementa l'interfaccia Norris::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico bar chart;
 
-		\item \textbf{Norris::DataModel::LineChartDataObject} Questa classe implementa l'interfaccia Norris::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico line chart;
+		\item \textbf{Norris::DataModel::LineChartData} Questa classe implementa l'interfaccia Norris::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico line chart;
 
-		\item \textbf{Norris::DataModel::MapChartDataObject} Questa classe implementa l'interfaccia Norris::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico map chart;
+		\item \textbf{Norris::DataModel::MapChartData} Questa classe implementa l'interfaccia Norris::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico map chart;
 
-		\item \textbf{Norris::DataModel::TableDataObject} Questa classe implementa l'interfaccia \linebreak Norris::DataModel::DataObject. Essa si occupa di rappresentare i dati di un grafico table;
+		\item \textbf{Norris::DataModel::TableData} Questa classe implementa l'interfaccia \linebreak Norris::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico table;
 
-		\item \textbf{Norris::DataModel::BarChartSettingObject} Questa classe implementa l'interfaccia Norris::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo bar chart;
+		\item \textbf{Norris::DataModel::BarChartSetting} Questa classe implementa l'interfaccia Norris::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo bar chart;
 
-		\item \textbf{Norris::DataModel::LineChartSettingObject} Questa classe implementa l'interfaccia Norris::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo line chart;
+		\item \textbf{Norris::DataModel::LineChartSetting} Questa classe implementa l'interfaccia Norris::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo line chart;
 
-		\item \textbf{Norris::DataModel::MapChartSettingObject} Questa classe implementa l'interfaccia Norris::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo map chart;
+		\item \textbf{Norris::DataModel::MapChartSetting} Questa classe implementa l'interfaccia Norris::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo map chart;
 
-		\item \textbf{Norris::DataModel::TableSettingObject} Questa classe implementa l'interfaccia Norris::DataModel::SettingObject. Essa rappresenta le impostazioni di un grafico di tipo table;
+		\item \textbf{Norris::DataModel::TableSetting} Questa classe implementa l'interfaccia Norris::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo table;
 
-		\item \textbf{Norris::DataModel::BarChartInPlaceUpdateObject} Questa classe implementa l'interfaccia Norris::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo bar chart;
+		\item \textbf{Norris::DataModel::BarChartInPlaceUpdate} Questa classe implementa l'interfaccia Norris::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo bar chart;
 
-		\item \textbf{Norris::DataModel::LineChartInPlaceUpdateObject} Questa classe implementa l'interfaccia Norris::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo line chart;
+		\item \textbf{Norris::DataModel::LineChartInPlaceUpdate} Questa classe implementa l'interfaccia Norris::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo line chart;
 
-		\item \textbf{Norris::DataModel::LineChartStreamUpdateObject} Questa classe implementa l'interfaccia Norris::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo stream per un grafico di tipo line chart;
+		\item \textbf{Norris::DataModel::LineChartStreamUpdate} Questa classe implementa l'interfaccia Norris::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo stream per un grafico di tipo line chart;
 
-		\item \textbf{Norris::DataModel::MapChartInPlaceUpdateObject} Questa classe implementa l'interfaccia Norris::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo map chart;
+		\item \textbf{Norris::DataModel::MapChartInPlaceUpdate} Questa classe implementa l'interfaccia Norris::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo map chart;
 
-		\item \textbf{Norris::DataModel::MapChartMovieUpdateObject} Questa classe implementa l'interfaccia Norris::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo movie per un grafico di tipo map chart;
+		\item \textbf{Norris::DataModel::MapChartMovieUpdate} Questa classe implementa l'interfaccia Norris::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo movie per un grafico di tipo map chart;
 
-		\item \textbf{Norris::DataModel::TableStreamUpdateObject} Questa classe implementa l'interfaccia Norris::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo stream per un grafico di tipo table;
+		\item \textbf{Norris::DataModel::TableStreamUpdate} Questa classe implementa l'interfaccia Norris::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo stream per un grafico di tipo table;
 
-		\item \textbf{Norris::DataModel::TableInPlaceUpdateObject} Questa classe implementa l'interfaccia Norris::DataModel::UpdateObject. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo table.
+		\item \textbf{Norris::DataModel::TableInPlaceUpdate} Questa classe implementa l'interfaccia Norris::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo in place per un grafico di tipo table.
 	\end{itemize}
