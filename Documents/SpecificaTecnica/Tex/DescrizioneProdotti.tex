@@ -62,7 +62,7 @@
         		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/Applicazione/Autenticazione.pdf}
         		\caption{Diagramma di attività dell'autenticazione}
     		\end{figure}
-            \item Richiesta informazioni della lista di grafici: l'applicazione Android manda a Norris una richiesta di informazioni inerenti alla lista di grafici presenti nell'istanza di Norris alla quale ci si è autenticati. Norris controlla se l'utente è autenticato e, in caso affermativo, manda le informazioni relative alla lista di grafici richiesta aprendo una comunicazione tramite websocket. Il canale viene chiuso quando l'applicazione è in background. Riportiamo di seguito un diagramma esplicativo:
+            \item Richiesta informazioni della lista di grafici: l'applicazione Android manda a Norris una richiesta di informazioni inerenti alla lista di grafici presenti nell'istanza di Norris alla quale ci si è autenticati. Norris controlla se l'utente è autenticato e, in caso affermativo, manda le informazioni relative alla lista di grafici richiesta tramite una richiesta HTTP. Riportiamo di seguito un diagramma esplicativo:
             \begin{figure}[H]\centering
         	\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/Applicazione/RichiestaLista.pdf}
         	\caption{Diagramma di attività della richiesta delle informazioni di una lista di grafici}
