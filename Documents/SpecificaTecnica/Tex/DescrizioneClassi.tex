@@ -9,35 +9,38 @@
 		\end{itemize}
 	\level{2}{Norris}
 		In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno del prodotto Norris. Queste sono state suddivise in base al componente nelle quali sono contenute.
-		
+		\input{Classi/Norris.tex}
+		\input{Tex/ClassiAggiuntiveNorris.tex}
+		\input{Tex/InterazioniClassiNorris.tex}
 		\level{3}{Design pattern utilizzati}
 			Nella progettazione delle classi di Norris abbiamo deciso di utilizzare alcuni design pattern. Riportiamo di seguito una loro breve descrizione e il contesto nel quale sono stati utilizzati.
 			\level{4}{Observer}
-				L'Observer è un pattern comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
-				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
+			L'Observer è un pattern comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
+			Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
 				\level{5}{Contesto di utilizzo}
-					Il pattern Observer si basa sugli oggetti “osservabili” e sugli “osservatori”.\\
-					Le interfacce che che estendono Observable sono le seguenti:
-					\begin{itemize}
-						\item DataModel::ChartModel;
-						\item DataModel::NorrisModel.
-					\end{itemize}
-					L'interfaccia Observer è implementata dalla classe EventEmitter fornita da Node.js.
+				Il pattern Observer si basa sugli oggetti “osservabili” e sugli “osservatori”.\\
+				Le interfacce che che estendono Observable sono le seguenti:
+				\begin{itemize}
+					\item DataModel::ChartModel;
+					\item DataModel::NorrisModel.
+				\end{itemize}
+				L'interfaccia Observer è implementata dalla classe EventEmitter fornita da Node.js.
 			\level{4}{Bridge}
-				Il Bridge è un pattern strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione.\\
-				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
+			Il Bridge è un pattern strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione. In particolare, utilizza i concetti di \textit{encapsulation}, \textit{aggregation} ed \textit{inheritance} per separare varie responsabilità in classi differenti. \\
+			Il design pattern Bridge si differenzia dal pattern Adapter, in quanto il primo viene utilizzato fin dall'inizio della progettazione per consentire ad astrazioni ed implementazioni di variare in modo indipendente, mentre il secondo viene usato quando si vogliono adattare classi inizialmente non correlate e viene introdotto dopo che queste sono state progettate.
+			Per una descrizione più approfondita del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
 				\level{5}{Contesto di utilizzo}
-					In Norris questo pattern viene utilizzato nel package InternalAPIManager per separare l'implementazione dei chart (presente nel package DataModel) dall'interfaccia fornita allo sviluppatore.
+				In Norris questo pattern viene utilizzato nel package InternalAPIManager per separare l'implementazione dei chart (presente nel package DataModel) dall'interfaccia fornita allo sviluppatore.	
 			\level{4}{Dependency Injection}
-				Dependency Injection è un pattern architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
-				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
+			Dependency Injection è un pattern architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
+			Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
 				\level{5}{Contesto di utilizzo}
-					Il pattern Dependency Injection viene utilizzato con le classi che implementano le seguenti interfacce:
-					\begin{itemize}
-						\item ExternalAPIManager::EndpointFactory, inietta in ExternalAPIManager::ExternalAPIController le dipendenze verso i diversi Endpoint;
-						\item DataModel::ChartFactory, inietta in DataModel::ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
-						\item DataModel::Updater, inietta in DataModel::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
-					\end{itemize}
+				Il pattern Dependency Injection viene utilizzato con le classi che implementano le seguenti interfacce:
+				\begin{itemize}
+					\item ExternalAPIManager::EndpointFactory, inietta in ExternalAPIManager::ExternalAPIController le dipendenze verso i diversi Endpoint;
+					\item DataModel::ChartFactory, inietta in DataModel::ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
+					\item DataModel::Updater, inietta in DataModel::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
+				\end{itemize}
 			\level{4}{Singleton}
 				Il Singleton è un pattern creazionale il cui scopo è permettere la creazione di una sola istanza di una classe, nonchè di fornire un punto di accesso globale ad essa.\\
 				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
@@ -53,65 +56,65 @@
 						\item ExternalAPIManager::ListEndpointFactory.
 					\end{itemize}
 			\level{4}{Abstract Factory}
-				Il pattern creazionale Abstract Factory si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
-				Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:abstractfactory}.
+			Il pattern creazionale Abstract Factory si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
+			Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:abstractfactory}.
 				\level{5}{Contesto di utilizzo}
-					Gli elementi che implementano Abstract Factory sono quelli indicati in seguito.
-					\begin{itemize}
+				Gli elementi che implementano Abstract Factory sono quelli indicati in seguito.
+				\begin{itemize}
 					\item Interfacce:
-						\begin{itemize}
-							\item ChartFactory, con cui vengono generati i diversi tipi di grafici;
-							\item ExternalAPIManager::EndpointFactory, con cui sono generati i diversi tipi di controller dei grafici.
-						\end{itemize}
-					\item Classi:
-						\begin{itemize}
-							\item DataModel::BarChartFactory;
-							\item DataModel::LineChartFactory;
-							\item DataModel::MapChartFactory;
-							\item DataModel::TableFactory;
-							\item ExternalAPIManager::ChartEndpointFactory;
-							\item ExternalAPIManager::AuthenticationEndpointFactory;
-							\item ExternalAPIManager::ListEndpointFactory.
-						\end{itemize}
+					\begin{itemize}
+						\item ChartFactory, con cui vengono generati i diversi tipi di grafici;
+						\item ExternalAPIManager::EndpointFactory, con cui sono generati i diversi tipi di controller dei grafici.
 					\end{itemize}
-					
-		\input{Classi/Norris.tex}
-		\input{Tex/ClassiAggiuntiveNorris.tex}
-		\input{Tex/InterazioniClassiNorris.tex}
+					\item Classi:
+					\begin{itemize}
+						\item DataModel::BarChartFactory;
+						\item DataModel::LineChartFactory;
+						\item DataModel::MapChartFactory;
+						\item DataModel::TableFactory;
+						\item ExternalAPIManager::ChartEndpointFactory;
+						\item ExternalAPIManager::AuthenticationEndpointFactory;
+						\item ExternalAPIManager::ListEndpointFactory.
+					\end{itemize}
+				\end{itemize}
 		
 	\level{2}{Chuck}
-		In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno del prodotto Chuck. Queste sono state suddivise in base al componente nelle quali sono contenute.
-		
-		\level{3}{Design pattern utilizzati}
-Nella progettazione delle classi di Chuck abbiamo deciso di utilizzare alcuni design pattern. Riportiamo di seguito una loro breve descrizione e il contesto nel quale sono stati utilizzati.
-\level{4}{Observer}
-	L'Observer è un pattern comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
-	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
-	\level{5}{Contesto di utilizzo}
-	Il pattern Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\In Chuck il nucleo dell'implementazione dell'Observer si trova nel package Utils, in cui sono contenute le interfacce Observer e Observable, e la classe ObservableImpl che è l'implementazione di Observable. Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il pattern completo.\\
-	Interfacce che estendono Observable:
-	\begin{itemize}
-	\item ChartView::View;
-	\item DataModel::ChartModel.
-	\end{itemize}
-	Interfacce che estendono Observer:
-	\begin{itemize}
-	\item ChartView::View.
-	\end{itemize}
-	Classi che estendono ObservableImpl:
-	\begin{itemize}
-	\item ChartView::ViewImpl;
-	\item DataModel::ChartImpl.
-	\end{itemize}
-\level{4}{Bridge}
-	Il Bridge è un pattern strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione.\\ Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
-	\level{5}{Contesto di utilizzo}
-	In Chuck questo pattern viene utilizzato nel package ChuckAPIManager per separare l'implementazione dei chart (presente nel package DataModel) dall'interfaccia fornita allo sviluppatore client.
-\level{4}{Dependency Injection}
-	Dependency Injection è un pattern architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
-	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
-	\level{5}{Contesto di utilizzo}
-	La Dependency Injection viene utilizzata con le classi che implementano le interfaccie DataModel::ChartFactory e DataModel::Updater. Attraverso queste classi vengono "iniettate" nella classe DataModel::ChartImpl rispettivamente le corrispondenze tra i tipi di grafico e le rispettive classi factory e le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
+	In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno del prodotto Chuck. Queste sono state suddivise in base al componente nelle quali sono contenute.
+	\input{Classi/Chuck.tex}
+	\input{Tex/ClassiAggiuntiveChuck.tex}
+	\input{Tex/InterazioniClassiChuck.tex}
+	\level{3}{Design pattern utilizzati}
+		Nella progettazione delle classi di Chuck abbiamo deciso di utilizzare alcuni design pattern. Riportiamo di seguito una loro breve descrizione e il contesto nel quale sono stati utilizzati.
+			\level{4}{Observer}
+			L'Observer è un pattern comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
+			Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
+				\level{5}{Contesto di utilizzo}
+				Il pattern Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\In Chuck il nucleo dell'implementazione dell'Observer si trova nel package Utils, in cui sono contenute le interfacce Observer e Observable, e la classe ObservableImpl che è l'implementazione di Observable. Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il pattern completo.\\
+				Interfacce che estendono Observable:
+				\begin{itemize}
+					\item ChartView::View;
+					\item DataModel::ChartModel.
+				\end{itemize}
+				Interfacce che estendono Observer:
+				\begin{itemize}
+					\item ChartView::View.
+				\end{itemize}
+				Classi che estendono ObservableImpl:
+				\begin{itemize}
+					\item ChartView::ViewImpl;
+					\item DataModel::ChartImpl.
+				\end{itemize}
+			\level{4}{Bridge}
+			Il Bridge è un pattern strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione. In particolare, utilizza i concetti di \textit{encapsulation}, \textit{aggregation} ed \textit{inheritance} per separare varie responsabilità in classi differenti. \\
+			Il design pattern Bridge si differenzia dal pattern Adapter, in quanto il primo viene utilizzato fin dall'inizio della progettazione per consentire ad astrazioni ed implementazioni di variare in modo indipendente, mentre il secondo viene usato quando si vogliono adattare classi inizialmente non correlate e viene introdotto dopo che queste sono state progettate.
+			Per una descrizione più approfondita del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
+				\level{5}{Contesto di utilizzo}
+				In Chuck questo pattern viene utilizzato nel package ChuckAPIManager per separare l'implementazione dei chart (presente nel package DataModel) dall'interfaccia fornita allo sviluppatore client.
+			\level{4}{Dependency Injection}
+			Dependency Injection è un pattern architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
+			Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
+				\level{5}{Contesto di utilizzo}
+				La Dependency Injection viene utilizzata con le classi che implementano le interfaccie DataModel::ChartFactory e DataModel::Updater. Attraverso queste classi vengono "iniettate" nella classe DataModel::ChartImpl rispettivamente le corrispondenze tra i tipi di grafico e le rispettive classi factory e le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
 \level{4}{Singleton}
 	Il Singleton è un pattern creazionale il cui scopo è permettere la creazione di una sola istanza di una classe e fornire un punto di accesso globale ad essa.\\
 	Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
@@ -152,12 +155,11 @@ Nella progettazione delle classi di Chuck abbiamo deciso di utilizzare alcuni de
 	\item View::TableView è un adattatore per Dynatable.
 	\end{itemize}
 	
-		\input{Classi/Chuck.tex}
-		\input{Tex/ClassiAggiuntiveChuck.tex}
-		\input{Tex/InterazioniClassiChuck.tex}
-	
 	\level{2}{Applicazione Android}
 		In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno dell'applicazione Android. Queste sono state suddivise in base al componente nelle quali sono contenute.
+		\input{Classi/Applicazione.tex}
+		\input{Tex/ClassiAggiuntiveApp.tex}
+		\input{Tex/InterazioniClassiApplicazione.tex}
 		\level{3}{Design pattern utilizzati}
 Nella progettazione delle classi dell'applicazione abbiamo deciso di utilizzare alcuni design pattern. Riportiamo di seguito una loro breve descrizione e il contesto nel quale sono stati utilizzati.
 \level{4}{Observer}
@@ -227,7 +229,3 @@ Nella progettazione delle classi dell'applicazione abbiamo deciso di utilizzare 
 	\item View::MapChartActivity è un adattatore per GoogleMap Android API v2;
 	\item View::LineChartActivity è un adattatore per MPALineChart.
 	\end{itemize}
-	
-		\input{Classi/Applicazione.tex}
-		\input{Tex/ClassiAggiuntiveApp.tex}
-		\input{Tex/InterazioniClassiApplicazione.tex}
