@@ -137,3 +137,49 @@ Ogni classe individuata dai \insrole{Progettisti} deve avere, oltre ad un propri
 I \insrole{Progettisti} devono definire i test di unità necessari per verificare che il funzionamento delle classi sia quello previsto.
 \level{5}{Strumenti}
 Per la progettazione di dettaglio è stato utilizzato il software Astah, descritto nell'appendice \nameref{app:strumenti}, per la creazione dei diagrammi UML.
+
+\level{3}{Codifica} \label{sec:codifica}
+L'attività di codifica ha lo scopo di produrre il codice necessario alla realizzazione del prodotto richiesto. Il codice generato dovrà rispettare il più fedelmente possibile ciò che è stato definito nel documento \insdoc{Definizione di Prodotto}.
+	\level{4}{Norme}
+	Tutti i file di codice devono seguire quanto riportato nella sezione \nameref{sec:CodificaFile} e le seguenti regole generali:
+	\begin{itemize}
+		\item l'indentazione del codice deve essere di quattro spazi;
+		\item le righe non devono essere più lunghe di 80 caratteri;
+		\item i commenti devono essere scritti in lingua inglese e devono essere significativi;
+		\item ogni file, sia JavaScript che Java, deve iniziare con un'intestazione che rifletta la seguente struttura:
+		\begin{lstlisting}
+			/*
+			* Name: {nome del file}
+			* Module: {modulo a cui appartiene il file}
+			* Location: {path della directory di appartenenza}
+			* Date: {data di creazione del file}
+			* Version: {versione del file}
+			* 
+			* History:
+			* 
+			* =============================================================================
+			* Version	Date		Programmer		Changes
+			* =============================================================================
+			* v0.01		AAAA-MM-GG 	Nome Cognome		{descrizione modifica}
+			* =============================================================================
+			*
+			*/
+		\end{lstlisting}
+		dove:
+		\begin{description}
+			\item[Name] indica il nome del file comprensivo di estensione;
+			\item[Module] indica il modulo a cui appartiene il file, comprensivo di gerarchia; nei file Java “Module” deve essere sostituito con “Package”;
+			\item[Location] indica il path della directory in cui è presente il file;
+			\item[Date] indica la data di creazione del file, si veda la sezione \nameref{sec:formatoDate} per il formato da utilizzare;
+			\item[Version] indica l'attuale versione del codice, il cui formato da seguire è descritto nella sezione \nameref{sec:versioni};
+			\item[History] visualizza lo storico delle modifiche del file in questione, comprensive di versione, data, descrizione e nome del programmatore che ha modificato il codice.
+		\end{description}
+	\end{itemize}
+		\level{5}{JavaScript}
+		Ciascun file JavaScript, oltre a seguire le norme precedentemente descritte, deve rispettare, anche, le linee guida \textit{Google JavaScript Style Guide} reperibili all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml}. 
+		\level{5}{Java}
+		Ciascun file Java, oltre a rispettare le norme sopra citate, deve seguire le linee guida \textit{Google Java Style} reperibili all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javaguide.html}. 
+	\level{4}{Strumenti}
+	Per la scrittura di codice JavaScript non è richiesto l'utilizzo di un particolare IDE, la scelta dell'editor di testo è a discrezione dello sviluppatore.
+		\level{5}{Android Studio}
+		Per lo sviluppo dell'applicazione Android si utilizza l'IDE Android Studio, descritto nell'appendice \nameref{app:strumenti} del presente documento.
