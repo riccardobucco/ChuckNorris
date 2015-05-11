@@ -13,9 +13,9 @@
 			\end{itemize}
 
 		\level{3}{Analisi dei Requisiti}
-			Durante l'\insdoc{Analisi dei Requisiti} vengono catalogati e descritti tutti i requisiti che il prodotto dovrà possedere. Tali requisiti sono ottenuti da una delle seguenti fonti (presentate in ordine decrescente di importanza):
+			Durante l'\insdoc{Analisi dei Requisiti} vengono catalogati e descritti tutti i requisiti che il \insglo{prodotto} dovrà possedere. Tali requisiti sono ottenuti da una delle seguenti fonti (presentate in ordine decrescente di importanza):
 			\begin{enumerate}
-				\item capitolato d’appalto;
+				\item \insglo{capitolato} d’appalto;
 				\item incontri con il proponente;
 				\item incontri con il committente;
 				\item valutazioni interne al gruppo di lavoro.
@@ -25,10 +25,10 @@
 				\level{5}{Classificazione dei casi d'uso} \label{sec:classificazioneUC}
 					I casi d'uso vengono identificati univocamente da una sigla nella forma UCYX.
 					\begin{itemize}
-						\item Y può assumere tre valori: N, A o D. N rappresenta tutti i casi d'uso inerenti a Norris, A rappresenta quelli inerenti l'applicazione Android e D rappresenta quelli che riguardano la Dashboard.
+						\item Y può assumere tre valori: N, A o D. N rappresenta tutti i casi d'uso inerenti a \insglo{Norris}, A rappresenta quelli inerenti l'applicazione \insglo{Android} e D rappresenta quelli che riguardano la \insglo{Dashboard}.
 						\item X è un codice gerarchico numerico.
 					\end{itemize}
-					Sarà compito degli \insrole{analisti} identificare i casi d'uso e essi dovranno preoccuparsi di fornire un diagramma conforme allo standard UML per ogni caso d'uso non foglia. Qui di seguito sono riportate le informazioni da inserire nella parte testuale:
+					Sarà compito degli \insrole{analisti} identificare i casi d'uso e essi dovranno preoccuparsi di fornire un diagramma conforme allo standard \insglo{UML} per ogni caso d'uso non foglia. Qui di seguito sono riportate le informazioni da inserire nella parte testuale:
 					\begin{itemize}
 						\item titolo;
 						\item attori (principali e secondari);
@@ -70,29 +70,29 @@
 		\level{5}{Software per la creazione di diagrammi UML}
 			Per l'attività di Analisi dei Requisiti sono stati utilizzati i seguenti strumenti:
 			\begin{itemize}
-				\item per la creazione dei diagrammi UML è stato utilizzato il software Astah;
+				\item per la creazione dei diagrammi \insglo{UML} è stato utilizzato il \insglo{software} \insglo{Astah};
 				\item per la classificazione dei requisiti è stata utilizzata un'applicazione web creata dagli \insrole{Amministratori}.
 			\end{itemize}
-			Il software Astah è descritto nell'appendice \nameref{app:strumenti}, mentre l'applicazione per la classificazione dei requisiti è descritta nell'appendice \nameref{sec:tracker}.
+			Il \insglo{software} \insglo{Astah} è descritto nell'appendice \nameref{app:strumenti}, mentre l'applicazione per la classificazione dei requisiti è descritta nell'appendice \nameref{sec:tracker}.
 			
 	\level{3}{Progettazione}
 Scopo dell'attività di progettazione è produrre una soluzione soddisfacente per tutti i soggetti coinvolti nel progetto, una volta compreso esattamente quali sono i requisiti del problema. \\
-Approfondendo la progettazione del prodotto fino ad arrivare a moduli abbastanza semplici da essere capiti da una sola persona, si otterranno le istruzioni necessarie ai \insrole{Programmatori} per ottenere il prodotto finito.
+Approfondendo la progettazione del \insglo{prodotto} fino ad arrivare a moduli abbastanza semplici da essere capiti da una sola persona, si otterranno le istruzioni necessarie ai \insrole{Programmatori} per ottenere il \insglo{prodotto} finito.
 			
 \level{4}{Progettazione architetturale}
-La progettazione ad alto livello dell'architettura e dei singoli componenti del framework \projectname{} viene descritta dai \insrole{Progettisti} nel documento \insdoc{Specifica Tecnica v1.00}, avendo cura di rispettare i seguenti aspetti.
+La progettazione ad alto livello dell'architettura e dei singoli componenti del \insglo{framework} \projectname{} viene descritta dai \insrole{Progettisti} nel documento \insdoc{Specifica Tecnica v1.00}, avendo cura di rispettare i seguenti aspetti.
 \level{5}{Norme}
 \level{6}{Design Pattern}
-Al fine di consentire una migliore comprensibilità del documento, nonché delle scelte progettuali e della progettazione stessa, i \insrole{Progettisti} dovranno indicare i pattern architetturali impiegati, fornendo per ciascuno di essi:
+Al fine di consentire una migliore comprensibilità del documento, nonché delle scelte progettuali e della progettazione stessa, i \insrole{Progettisti} dovranno indicare i \insglo{pattern} architetturali impiegati, fornendo per ciascuno di essi:
 \begin{itemize}
 \item una descrizione testuale e grafica;
 \item la motivazione che ha portato alla sua scelta;
-\item una breve descrizione dell'applicazione del pattern al progetto.
+\item una breve descrizione dell'applicazione del \insglo{pattern} al progetto.
 \end{itemize}
 \level{6}{Diagrammi UML}
-Per formalizzare ed esplicitare alcuni aspetti specifici del sistema è necessario utilizzare i seguenti diagrammi UML:
+Per formalizzare ed esplicitare alcuni aspetti specifici del sistema è necessario utilizzare i seguenti diagrammi \insglo{UML}:
 \begin{itemize}
-\item diagrammi dei package, per rappresentare l'aspetto generale del sistema;
+\item diagrammi dei \insglo{package}, per rappresentare l'aspetto generale del sistema;
 \item diagrammi delle classi, per rappresentare le componenti fondamentali dell'architettura;
 \item diagrammi delle attività, per rappresentare il flusso delle operazioni e dei componenti del sistema, qualora la sola descrizione testuale risulti complessa;
 \item diagrammi di sequenza, per rappresentare le interazioni tra le componenti del sistema, qualora la sola descrizione testuale risulti complessa.
@@ -100,21 +100,21 @@ Per formalizzare ed esplicitare alcuni aspetti specifici del sistema è necessar
 Tali diagrammi dovranno seguire le indicazioni fornite nella sezione \nameref{sec:UML}.
 				
 \level{6}{Tracciamento delle componenti}
-Per garantire la qualità del prodotto è fondamentale che ogni requisito sia soddisfatto da uno e un solo componente. Tale tracciamento viene generato automaticamente dall'applicazione per la gestione dei requisiti sotto forma di tabelle.
+Per garantire la qualità del \insglo{prodotto} è fondamentale che ogni requisito sia soddisfatto da uno e un solo componente. Tale tracciamento viene generato automaticamente dall'applicazione per la gestione dei requisiti sotto forma di tabelle.
 \level{6}{Test di integrazione}
 Per ottenere maggior efficienza ed efficacia durante l'attività di test, è auspicabile che i \insrole{Progettisti} si preoccupino di definire delle classi di verifica per appurare che il funzionamento dei componenti sia quello previsto. Sarebbe infatti ideale poter fornire degli strumenti completamente automatici ai \insrole{Verificatori}.\\
 La progettazione delle classi per la verifica deve essere fatta da persone diverse da coloro che hanno progettato la classe da verificare, quando ciò fosse possibile.
 \level{5}{Strumenti}
 Per la progettazione architetturale sono stati utilizzati i seguenti strumenti:
 \begin{itemize}
-\item per la creazione dei diagrammi UML è stato utilizzato Astah;
+\item per la creazione dei diagrammi \insglo{UML} è stato utilizzato \insglo{Astah};
 \item per il tracciamento delle componenti è stata utilizzata l'applicazione web sviluppata dagli \insrole{Amministratori}.
 \end{itemize}
-Il software Astah è descritto in modo dettagliato nell'appendice \nameref{app:strumenti}, mentre l'applicazione web per il tracciamento viene descritta nell'appendice \nameref{sec:tracker}.
+Il \insglo{software} \insglo{Astah} è descritto in modo dettagliato nell'appendice \nameref{app:strumenti}, mentre l'applicazione web per il tracciamento viene descritta nell'appendice \nameref{sec:tracker}.
 
 
 \level{4}{Progettazione di dettaglio}
-La progettazione di dettaglio dei singoli componenti del framework \projectname{} viene descritta dai \insrole{Progettisti} nel documento \insdoc{Definizione di Prodotto v1.00}, avendo cura di rispettare i seguenti aspetti.
+La progettazione di dettaglio dei singoli componenti del \insglo{framework} \projectname{} viene descritta dai \insrole{Progettisti} nel documento \insdoc{Definizione di Prodotto v1.00}, avendo cura di rispettare i seguenti aspetti.
 \level{5}{Norme}
 \level{6}{Diagrammi UML}
 Durante questa progettazione devono essere aggiornati con l'aggiunta di dettagli i seguenti diagrammi:
@@ -127,8 +127,8 @@ Tali diagrammi dovranno seguire le indicazioni fornite nella sezione\nameref{sec
 \level{6}{Definizione di classe}
 Ogni classe individuata dai \insrole{Progettisti} deve avere, oltre ad un proprio diagramma, una descrizione testuale contenente:
 \begin{itemize}
-\item il nome della classe completo dei package di cui fa parte;
-\item la descrizione della classe con l'indicazione della sua funzione nel contesto del package a cui appartiene;
+\item il nome della classe completo dei \insglo{package} di cui fa parte;
+\item la descrizione della classe con l'indicazione della sua funzione nel contesto del \insglo{package} a cui appartiene;
 \item le sue relazioni con altre classi;
 \item l'elenco dei metodi accompagnati da una breve ma significativa descrizione;
 \item l'elenco degli attributi.
@@ -136,21 +136,21 @@ Ogni classe individuata dai \insrole{Progettisti} deve avere, oltre ad un propri
 \level{6}{Test di unità}
 I \insrole{Progettisti} devono definire i test di unità necessari per verificare che il funzionamento delle classi sia quello previsto.
 \level{5}{Strumenti}
-Per la progettazione di dettaglio è stato utilizzato il software Astah, descritto nell'appendice \nameref{app:strumenti}, per la creazione dei diagrammi UML.
+Per la progettazione di dettaglio è stato utilizzato il \insglo{software} \insglo{Astah}, descritto nell'appendice \nameref{app:strumenti}, per la creazione dei diagrammi \insglo{UML}.
 
 \level{3}{Codifica} \label{sec:codifica}
-L'attività di codifica ha lo scopo di produrre il codice necessario alla realizzazione del prodotto richiesto. Il codice generato dovrà rispettare il più fedelmente possibile ciò che è stato definito nel documento \insdoc{Definizione di Prodotto v1.00}.
+L'attività di codifica ha lo scopo di produrre il codice necessario alla realizzazione del \insglo{prodotto} richiesto. Il codice generato dovrà rispettare il più fedelmente possibile ciò che è stato definito nel documento \insdoc{Definizione di Prodotto v1.00}.
 	\level{4}{Norme}
 	Tutti i file di codice devono seguire quanto riportato nella sezione \nameref{sec:CodificaFile} e le seguenti regole generali:
 	\begin{itemize}
 		\item l'indentazione del codice deve essere di quattro spazi;
 		\item le righe non devono essere più lunghe di 80 caratteri;
 		\item i commenti devono essere scritti in lingua inglese e devono essere significativi;
-		\item ogni file, sia JavaScript che Java, deve iniziare con un'intestazione che rifletta la seguente struttura:
+		\item ogni file, sia \insglo{JavaScript} che \insglo{Java}, deve iniziare con un'intestazione che rifletta la seguente struttura:
 		\begin{lstlisting}
 			/*
 			* Name: [nome del file]
-			* Package: [package al quale appartiene il file]
+			* \insglo{Package}: [\insglo{package} al quale appartiene il file]
 			* Location: [path della directory di appartenenza]
 			* Date: [data di creazione del file]
 			* Version: [versione del file]
@@ -168,7 +168,7 @@ L'attività di codifica ha lo scopo di produrre il codice necessario alla realiz
 		dove:
 		\begin{description}
 			\item[Name] indica il nome del file comprensivo di estensione;
-			\item[Package] indica il package al quale appartiene il file, comprensivo di gerarchia;
+			\item[\insglo{Package}] indica il \insglo{package} al quale appartiene il file, comprensivo di gerarchia;
 			\item[Location] indica il path della directory in cui è presente il file;
 			\item[Date] indica la data di creazione del file: si veda la sezione \nameref{sec:formatoDate} per il formato da utilizzare;
 			\item[Version] indica l'attuale versione del codice, il cui formato da seguire è descritto nella sezione \nameref{sec:versioni};
@@ -176,10 +176,10 @@ L'attività di codifica ha lo scopo di produrre il codice necessario alla realiz
 		\end{description}
 	\end{itemize}
 		\level{5}{JavaScript}
-		Ciascun file JavaScript, oltre a seguire le norme precedentemente descritte, deve rispettare, anche, le linee guida \textit{Google JavaScript Style Guide} reperibili all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml}. 
+		Ciascun file \insglo{JavaScript}, oltre a seguire le norme precedentemente descritte, deve rispettare, anche, le linee guida \textit{Google \insglo{JavaScript} Style Guide} reperibili all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml}. 
 		\level{5}{Java}
-		Ciascun file Java, oltre a rispettare le norme sopra citate, deve seguire le linee guida \textit{Google Java Style Guide} reperibili all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javaguide.html}. 
+		Ciascun file \insglo{Java}, oltre a rispettare le norme sopra citate, deve seguire le linee guida \textit{Google \insglo{Java} Style Guide} reperibili all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javaguide.html}. 
 	\level{4}{Strumenti}
-	Per la scrittura di codice JavaScript non è richiesto l'utilizzo di un particolare IDE; la scelta dell'editor di testo è a discrezione dello sviluppatore.
+	Per la scrittura di codice \insglo{JavaScript} non è richiesto l'utilizzo di un particolare \insglo{IDE}; la scelta dell'editor di testo è a discrezione dello sviluppatore.
 		\level{5}{Android Studio}
-		Per lo sviluppo dell'applicazione Android si utilizza l'IDE Android Studio, descritto nell'appendice \nameref{app:strumenti} del presente documento.
+		Per lo sviluppo dell'applicazione \insglo{Android} si utilizza l'\insglo{IDE} \insglo{Android} Studio, descritto nell'appendice \nameref{app:strumenti} del presente documento.

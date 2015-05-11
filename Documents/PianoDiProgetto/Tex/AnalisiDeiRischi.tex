@@ -1,6 +1,6 @@
 % !TEX encoding = UTF-8 Unicode
 \level{1}{Analisi dei rischi}
-	Al fine di realizzare un buon progetto software è opportuno individuare i rischi, comprenderli e prendere le misure preventive per gestirli. A tale scopo si è deciso di procedere per fasi ben precise:
+	Al fine di realizzare un buon progetto \insglo{software} è opportuno individuare i rischi, comprenderli e prendere le misure preventive per gestirli. A tale scopo si è deciso di procedere per fasi ben precise:
 	\begin{itemize}
 		\item \textbf{Identificazione}: individuare i rischi potenziali che si possono presentare durante lo sviluppo del progetto.
 		\item \textbf{Analisi}: stimare la probabilità che un rischio si manifesti e valutarne le possibili conseguenze sul progetto.
@@ -15,9 +15,9 @@
 				Livello 			& Tipologia					& Probabilità di occorrenza 		& Livello di rischio  \\ \hline
 
 				Tecnologico			& Tecnologie adottate sconosciute				& media 					& alto 		 \\ \cline{2-4}
-				  					& Guasti hardware								& bassa 					& basso 	 \\ \hline
-				Personale		 	& Problemi personali dei componenti del team	& media 					& medio 	 \\ \cline{2-4}
-									& Problemi tra i componenti del team			& bassa 					& alto 		 \\ \hline
+				  					& Guasti \insglo{hardware}								& bassa 					& basso 	 \\ \hline
+				Personale		 	& Problemi personali dei componenti del \insglo{team}	& media 					& medio 	 \\ \cline{2-4}
+									& Problemi tra i componenti del \insglo{team}			& bassa 					& alto 		 \\ \hline
 				Organizzativo	 	& Valutazione dei costi							& media 					& alto 		 \\ \hline
 				Strumenti			& Inesperienza nell'utilizzo					& alta 						& alto 		 \\ \hline
 				Requisiti		 	& Comprensione 									& media						& alto 		 \\ \hline
@@ -36,39 +36,39 @@
 						\item \textit{Possibili conseguenze}: possibili ritardi sulle date di consegna.
 					\end{itemize}
 				\item \textbf{Pianificazione}: Sarà compito dell'\insrole{Amministratore} mettere a disposizione il materiale necessario ad ogni membro del gruppo, che si impegnerà a documentarsi, in maniera autonoma e il più completa possibile, sulle tecnologie da utilizzare.
-				\item \textbf{Controllo}: Il \insrole{Responsabile di Progetto} ha il compito di monitorare costantemente il grado di conoscenza di ogni componente del team riguardo le tecnologie adottate.
-				\item \textbf{Riscontro}: Durante le prime due fasi non si è verificato questo problema in quanto le tecnologie utilizzate in tali fasi sono di facile comprensione ed in parte già conosciute. Nella terza fase, dove si stende la Specifica Tecnica, i componenti hanno dedicato più tempo alla formazione personale per recuperare le lacune nella conoscenza delle tecnologie utilizzate, riscontrando qualche rallentamento nella comprensione, in particolare del ruolo di socket.io.
+				\item \textbf{Controllo}: Il \insrole{Responsabile di Progetto} ha il compito di monitorare costantemente il grado di conoscenza di ogni componente del \insglo{team} riguardo le tecnologie adottate.
+				\item \textbf{Riscontro}: Durante le prime due fasi non si è verificato questo problema in quanto le tecnologie utilizzate in tali fasi sono di facile comprensione ed in parte già conosciute. Nella terza \insglo{fase}, dove si stende la Specifica Tecnica, i componenti hanno dedicato più tempo alla formazione personale per recuperare le lacune nella conoscenza delle tecnologie utilizzate, riscontrando qualche rallentamento nella comprensione, in particolare del ruolo di \insglo{socket.io}.
 			\end{itemize}
 		\level{3}{Guasti hardware}
 			\begin{itemize}
-				\item \textbf{Descrizione}: È possibile che si incontrino problemi con le attrezzature hardware durante lo sviluppo del progetto che può portare alla perdita di dati.
+				\item \textbf{Descrizione}: È possibile che si incontrino problemi con le attrezzature \insglo{hardware} durante lo sviluppo del progetto che può portare alla perdita di dati.
 				\item \textbf{Analisi}:
 				\begin{itemize}
 					\item \textit{Livello di rischio}: basso;
 					\item \textit{Probabilità di occorrenza}: bassa;
 					\item \textit{Possibili conseguenze}: difficoltà nel proseguimento del progetto e sostanziale rallentamento delle attività.
 				\end{itemize}
-				\item \textbf{Pianificazione}: Allo scopo di evitare tale rischio si fa uso di \textit{Dropbox} e \textit{repository} per il backup dei dati. In questo modo ogni componente del team possiede una copia condivisa del lavoro svolto. In caso di guasto hardware verranno utilizzate le macchine messe a disposizione dai laboratori informatici o altri strumenti personali.
-				\item \textbf{Controllo}: Ogni componente ha il compito di curare la propria strumentazione hardware e di effettuare il backup dei dati ad ogni aggiornamento importante. Inoltre, è utile controllare frequentemente che i dati di backup siano presenti ed aggiornati all'ultima versione.
-				\item \textbf{Riscontro}: Durante le prime quattro fasi ogni componente si è preso cura del proprio materiale e ciò ha favorito il fatto che non si siano verificati guasti hardware.
+				\item \textbf{Pianificazione}: Allo scopo di evitare tale rischio si fa uso di \textit{\insglo{Dropbox}} e \textit{\insglo{repository}} per il backup dei dati. In questo modo ogni componente del \insglo{team} possiede una copia condivisa del lavoro svolto. In caso di guasto \insglo{hardware} verranno utilizzate le macchine messe a disposizione dai laboratori informatici o altri strumenti personali.
+				\item \textbf{Controllo}: Ogni componente ha il compito di curare la propria strumentazione \insglo{hardware} e di effettuare il backup dei dati ad ogni aggiornamento importante. Inoltre, è utile controllare frequentemente che i dati di backup siano presenti ed aggiornati all'ultima versione.
+				\item \textbf{Riscontro}: Durante le prime quattro fasi ogni componente si è preso cura del proprio materiale e ciò ha favorito il fatto che non si siano verificati guasti \insglo{hardware}.
 			\end{itemize}
 	\level{2}{Livello personale}
 		\level{3}{Problemi personali dei componenti del team}
 			\begin{itemize}
-				\item \textbf{Descrizione}: Ciascun componente del team ha impegni e necessità personali. Nel gruppo c'è, inoltre, uno studente lavoratore che può non essere sempre disponibile a causa di impegni relativi al lavoro. E' quindi inevitabile prevedere che alcuni membri del gruppo non siano disponibili in certi momenti.
+				\item \textbf{Descrizione}: Ciascun componente del \insglo{team} ha impegni e necessità personali. Nel gruppo c'è, inoltre, uno studente lavoratore che può non essere sempre disponibile a causa di impegni relativi al lavoro. E' quindi inevitabile prevedere che alcuni membri del gruppo non siano disponibili in certi momenti.
 				\item \textbf{Analisi}:
 				\begin{itemize}
 					\item \textit{Livello di rischio}: medio;
 					\item \textit{Probabilità di occorrenza}: media;
 					\item \textit{Possibili conseguenze}: possibili ritardi nello svolgimento delle attività, in caso di impegni imprevisti da parte di qualche componente del gruppo.
 				\end{itemize}
-				\item \textbf{Pianificazione}: Ciascun membro del team si impegnerà ad avvertire, in caso di impegni personali, il \insrole{Responsabile di Progetto}, il quale ridurrà il carico di lavoro a quel componente e lo ripartirà tra le altre risorse disponibili, eseguendo una nuova pianificazione delle attività del periodo in considerazione.
+				\item \textbf{Pianificazione}: Ciascun membro del \insglo{team} si impegnerà ad avvertire, in caso di impegni personali, il \insrole{Responsabile di Progetto}, il quale ridurrà il carico di lavoro a quel componente e lo ripartirà tra le altre risorse disponibili, eseguendo una nuova pianificazione delle attività del periodo in considerazione.
 				\item \textbf{Controllo}: Il \insrole{Responsabile di Progetto} verificherà costantemente se vi sono avvisi, riguardanti impegni o imprevisti, da parte dei componenti del gruppo. Tale rischio sarà, anche, controllato tramite l'uso di calendari di gruppo.
-				\item \textbf{Riscontro}: Durante le prime due fasi ogni componente ha avvertito il Responsabile di Progetto con largo anticipo in caso di impegni personali. Ognuno di questi rischi è stato ben gestito ed eliminato. Nella terza fase ci sono stati dei ritardi imprevisti, dovuti agli impegni universitari dei componenti. Nella quarta fase il Responsabile di Progetto, preso in considerazione l’aumento del verificarsi di ritardi dovuti agli impegni personali, ha cercato di aumentare la frequenza di verifica e il cambiamento della pianificazione delle attività per arrivare a rispettare gli obiettivi previsti.
+				\item \textbf{Riscontro}: Durante le prime due fasi ogni componente ha avvertito il Responsabile di Progetto con largo anticipo in caso di impegni personali. Ognuno di questi rischi è stato ben gestito ed eliminato. Nella terza \insglo{fase} ci sono stati dei ritardi imprevisti, dovuti agli impegni universitari dei componenti. Nella quarta \insglo{fase} il Responsabile di Progetto, preso in considerazione l’aumento del verificarsi di ritardi dovuti agli impegni personali, ha cercato di aumentare la frequenza di verifica e il cambiamento della pianificazione delle attività per arrivare a rispettare gli obiettivi previsti.
 			\end{itemize}
 		\level{3}{Problemi tra componenti del team}
 			\begin{itemize}
-				\item \textbf{Descrizione}: Per la maggior parte dei componenti del team questa è la prima esperienza di lavoro in un gruppo numeroso; ciò può  innescare problemi di collaborazione e contrasti.
+				\item \textbf{Descrizione}: Per la maggior parte dei componenti del \insglo{team} questa è la prima esperienza di lavoro in un gruppo numeroso; ciò può  innescare problemi di collaborazione e contrasti.
 				\item \textbf{Analisi}:
 				\begin{itemize}
 					\item \textit{Livello di rischio}: alto;
@@ -76,48 +76,48 @@
 					\item \textit{Possibili conseguenze}: rallentamento delle attività, carico di lavoro più consistente e clima lavorativo poco proficuo.
 				\end{itemize}
 				\item \textbf{Pianificazione}: Il \insrole{Project Manager} si dovrà occupare di risolvere eventuali contrasti o dispute, sottoponendo i componenti coinvolti ad un confronto civile per raggiungere un accordo; in caso il problema non venisse risolto dovrà pianificare le successive attività in modo da minimizzare il contatto tra le parti coinvolte.
-				\item \textbf{Controllo}: Sarà compito del \insrole{Responsabile di Progetto} tenere sotto controllo i rapporti tra i vari membri del team e compito di tutti i componenti di riferire al \insrole{Project Manager} eventuali problemi di cui non è a conoscenza.
-				\item \textbf{Riscontro}: Durante le prime due fasi non si sono mai verificati problemi di questo tipo. Nella terza e quarta fase ci sono stati dei piccoli episodi di incomprensione e divergenza riguardante l’organizzazione in fase di progettazione, risolti prontamente tramite confronto e chiarimento tra le parti coinvolte.
+				\item \textbf{Controllo}: Sarà compito del \insrole{Responsabile di Progetto} tenere sotto controllo i rapporti tra i vari membri del \insglo{team} e compito di tutti i componenti di riferire al \insrole{Project Manager} eventuali problemi di cui non è a conoscenza.
+				\item \textbf{Riscontro}: Durante le prime due fasi non si sono mai verificati problemi di questo tipo. Nella terza e quarta \insglo{fase} ci sono stati dei piccoli episodi di incomprensione e divergenza riguardante l’organizzazione in \insglo{fase} di progettazione, risolti prontamente tramite confronto e chiarimento tra le parti coinvolte.
 			\end{itemize}
 	\level{2}{Livello organizzativo}
 		\level{3}{Valutazione dei costi}
 			\begin{itemize}
-				\item \textbf{Descrizione}: Durante la fase di pianificazione è necessario definire le attività, gestire l'allocazione delle risorse e stimare le scadenze e i costi. A causa della poca esperienza da parte del team è possibile che la stima risulti sbagliata.
+				\item \textbf{Descrizione}: Durante la \insglo{fase} di pianificazione è necessario definire le attività, gestire l'allocazione delle risorse e stimare le scadenze e i costi. A causa della poca esperienza da parte del \insglo{team} è possibile che la stima risulti sbagliata.
 				\item \textbf{Analisi}:
 				\begin{itemize}
 					\item \textit{Livello di rischio}: alto;
 					\item \textit{Probabilità di occorrenza}: media;
 					\item \textit{Possibili conseguenze}: possibili ritardi dovuti alla sottostima dei costi delle attività o possibili sprechi di tempo in caso di sovrastima. 
 				\end{itemize}
-				\item \textbf{Pianificazione}: Il \insrole{Project Manager} verificherà ogni giorno l'avanzamento delle attività, tramite la \textit{dashboard}. Si presterà maggiore attenzione alle attività critiche, per le quali si predisporrà un periodo di slack in modo da evitare che un eventuale ritardo non posticipi le altre attività. Nel caso tale tempo di slack non bastasse, verrà rieseguita la pianificazione tenendo conto del ritardo accumulato che si dovrà recuperare.
-				\item \textbf{Controllo}: Incarico del \insrole{Responsabile di Progetto} sarà accertarsi che le attività procedano come pianificato. Per facilitare tale compito si utilizzerà una \textit{dashboard}, tramite la quale ogni componente saprà quali attività deve svolgere ed entro quali date.
-				\item \textbf{Riscontro}: Durante la prima fase si è verificato un ritardo sull’attività di analisi. Tuttavia, grazie ad una attenta pianificazione, non si sono verificati ritardi nella consegna. Nella seconda e terza fase è stato riscontrato un rallentamento non previsto che ha dilungato la durata della fase e si è dovuto ricorrere ad una rapida ripianificazione. Nella quarta fase non si sono verificati particolari problemi di questo genere. Si è comunque riusciti a concludere la \insphase{Fase P} entro la scadenza della consegna per la \insrev{RP} ma si è deciso di consegnare tutta progettazione al dettaglio per intero alla \insrev{RQ} e non parzialmente come si era pensato in precedenza.
+				\item \textbf{Pianificazione}: Il \insrole{Project Manager} verificherà ogni giorno l'avanzamento delle attività, tramite la \textit{\insglo{dashboard}}. Si presterà maggiore attenzione alle attività critiche, per le quali si predisporrà un periodo di slack in modo da evitare che un eventuale ritardo non posticipi le altre attività. Nel caso tale tempo di slack non bastasse, verrà rieseguita la pianificazione tenendo conto del ritardo accumulato che si dovrà recuperare.
+				\item \textbf{Controllo}: Incarico del \insrole{Responsabile di Progetto} sarà accertarsi che le attività procedano come pianificato. Per facilitare tale compito si utilizzerà una \textit{\insglo{dashboard}}, tramite la quale ogni componente saprà quali attività deve svolgere ed entro quali date.
+				\item \textbf{Riscontro}: Durante la prima \insglo{fase} si è verificato un ritardo sull’attività di analisi. Tuttavia, grazie ad una attenta pianificazione, non si sono verificati ritardi nella consegna. Nella seconda e terza \insglo{fase} è stato riscontrato un rallentamento non previsto che ha dilungato la durata della \insglo{fase} e si è dovuto ricorrere ad una rapida ripianificazione. Nella quarta \insglo{fase} non si sono verificati particolari problemi di questo genere. Si è comunque riusciti a concludere la \insphase{Fase P} entro la scadenza della consegna per la \insrev{RP} ma si è deciso di consegnare tutta progettazione al dettaglio per intero alla \insrev{RQ} e non parzialmente come si era pensato in precedenza.
 			\end{itemize}
 	\level{2}{Livello degli strumenti}
 		\level{3}{Inesperienza del team nell'utilizzo degli strumenti}
 			\begin{itemize}
-				\item \textbf{Descrizione}: È richiesto l'uso di molti strumenti software che il team non ha mai utilizzato e che non conosce. Alcuni di essi necessitano di tempo per essere appresi.
+				\item \textbf{Descrizione}: È richiesto l'uso di molti strumenti \insglo{software} che il \insglo{team} non ha mai utilizzato e che non conosce. Alcuni di essi necessitano di tempo per essere appresi.
 				\item \textbf{Analisi}:
 				\begin{itemize}
 					\item \textit{Livello di rischio}: alto;
 					\item \textit{Probabilità di occorrenza}: alta;
 					\item \textit{Possibili conseguenze}: lento avanzamento delle attività che richiedono l'utilizzo di tali strumenti.
 				\end{itemize}
-				\item \textbf{Pianificazione}: Il \insrole{Responsabile di Progetto} valuterà il livello di conoscenza di ogni componente del gruppo riguardo gli strumenti utilizzati. Ogni volta che si incontrerà la necessità di fare uso di un nuovo strumento, verrà comunicato a tutti i componenti del gruppo tramite mailing list. Ogni membro dovrà documentarsi autonomamente ed imparare ad utilizzare gli strumenti richiesti.
+				\item \textbf{Pianificazione}: Il \insrole{Responsabile di Progetto} valuterà il livello di conoscenza di ogni componente del gruppo riguardo gli strumenti utilizzati. Ogni volta che si incontrerà la necessità di fare uso di un nuovo strumento, verrà comunicato a tutti i componenti del gruppo tramite \insglo{mailing list}. Ogni membro dovrà documentarsi autonomamente ed imparare ad utilizzare gli strumenti richiesti.
 				\item \textbf{Controllo}: Sarà compito dell'\insrole{Amministratore} verificare se qualche membro del gruppo richiede aiuto riguardo la strumentazione. Ogni componente dovrà verificare se sono stati utilizzati nuovi strumenti.
 				\item \textbf{Riscontro}: Durante le prime quattro fasi non si è verificato questo problema in quanto gli strumenti utilizzati in tali fasi sono di facile comprensione ed in parte già conosciuti.
 			\end{itemize}
 	\level{2}{Livello dei requisiti}
 		\level{3}{Comprensione dei requisiti}
 			\begin{itemize}
-				\item \textbf{Descrizione}: Nella fase di analisi è possibile che i requisiti del problema vengano fraintesi o non identificati correttamente. 
+				\item \textbf{Descrizione}: Nella \insglo{fase} di analisi è possibile che i requisiti del problema vengano fraintesi o non identificati correttamente. 
 				\item \textbf{Analisi}:
 				\begin{itemize}
 					\item \textit{Livello di rischio}: alto;
 					\item \textit{Probabilità di occorrenza}: media;
 					\item \textit{Possibili conseguenze}: possibili divergenze tra la visione del problema da parte del gruppo e ciò che il Proponente ha richiesto.
 				\end{itemize}
-				\item \textbf{Pianificazione}: Durante l'attività di analisi dei requisiti il team effettuerà più incontri con il Proponente in modo da assicurarsi di aver compreso in modo chiaro ogni requisito necessario al corretto sviluppo del progetto.
+				\item \textbf{Pianificazione}: Durante l'attività di analisi dei requisiti il \insglo{team} effettuerà più incontri con il Proponente in modo da assicurarsi di aver compreso in modo chiaro ogni requisito necessario al corretto sviluppo del progetto.
 				\item \textbf{Controllo}: Ad ogni revisione verranno consegnati tutti i documenti che il Proponente valuterà e saranno corretti gli eventuali errori o imprecisioni segnalati.
-				\item \textbf{Riscontro}: Durante la prima fase si sono riscontrate difficoltà nella comprensione dei requisiti ma grazie agli incontri effettuati con il Proponente si è riusciti a capirli in modo chiaro. Nella seconda, terza e quarta fase i requisiti erano ben solidi e ciò ha portato ad un abbassamento del rischio passando da alto a medio.
+				\item \textbf{Riscontro}: Durante la prima \insglo{fase} si sono riscontrate difficoltà nella comprensione dei requisiti ma grazie agli incontri effettuati con il Proponente si è riusciti a capirli in modo chiaro. Nella seconda, terza e quarta \insglo{fase} i requisiti erano ben solidi e ciò ha portato ad un abbassamento del rischio passando da alto a medio.
 			\end{itemize}

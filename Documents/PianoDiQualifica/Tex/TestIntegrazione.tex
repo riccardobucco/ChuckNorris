@@ -12,16 +12,16 @@
 			\hline \endhead
 
 
-%Norris
+%\insglo{Norris}
 
 
 	TINorris
 	&
 Test di integrazione finale tra le componenti DataModel, InternalAPIManager e ExternalAPIManager per verificare il comportamento del sistema nel suo complesso.
 & \parbox[t]{0.6\textwidth}{
-Norris::DataModel\\
-Norris::InternalAPI-\\Manager\\
-Norris::ExternalAPI-\\Manager}
+\insglo{Norris}::DataModel\\
+\insglo{Norris}::InternalAPI-\\Manager\\
+\insglo{Norris}::ExternalAPI-\\Manager}
 			& N.I.
 			\\ \hline
 
@@ -31,9 +31,9 @@ Norris::ExternalAPI-\\Manager}
 	&
 Comportamento del modello: viene verificato che il modello rispetti le aspettative previste, ovvero memorizzi correttamente i dati necessari e li restituisca in un secondo momento senza perdite di informazioni o dati scorretti.
 & \parbox[t]{0.6\textwidth}{
-Norris::DataModel-\\::NorrisImpl\\
-Norris::DataModel-\\::ChartImpl\\
-Norris::DataModel-\\::PageImpl}
+\insglo{Norris}::DataModel-\\::NorrisImpl\\
+\insglo{Norris}::DataModel-\\::ChartImpl\\
+\insglo{Norris}::DataModel-\\::PageImpl}
 			& N.I.
 			\\ \hline
 
@@ -43,11 +43,11 @@ Norris::DataModel-\\::PageImpl}
 	&
 Comportamento del modello di chart: viene verificato che il modello dei chart memorizzi correttamente le informazioni in base al tipo specifico del chart rappresentato.
 & \parbox[t]{0.6\textwidth}{
-Norris::DataModel-\\::ChartImpl\\
-Norris::DataModel-\\::BarChartImpl\\
-Norris::DataModel-\\::LineChartImpl\\
-Norris::DataModel-\\::MapChartImpl\\
-Norris::DataModel-\\::TableImpl}
+\insglo{Norris}::DataModel-\\::ChartImpl\\
+\insglo{Norris}::DataModel-\\::BarChartImpl\\
+\insglo{Norris}::DataModel-\\::LineChartImpl\\
+\insglo{Norris}::DataModel-\\::MapChartImpl\\
+\insglo{Norris}::DataModel-\\::TableImpl}
 			& N.I.
 			\\ \hline
 
@@ -55,11 +55,11 @@ Norris::DataModel-\\::TableImpl}
 
 	\parbox[t]{0.6\textwidth}{TINorrisInternalAPI-\\Manager}
 	&
-Funzionamento delle API interne: viene verificato che le API interne apportino al modello le modifiche corrette a seconda dell'azione richiesta.
+Funzionamento delle \insglo{API} interne: viene verificato che le \insglo{API} interne apportino al modello le modifiche corrette a seconda dell'azione richiesta.
 & \parbox[t]{0.6\textwidth}{
-Norris::InternalAPI-\\Manager::InternalAPI-\\Bridge\\
-Norris::InternalAPI-\\Manager::ChartBridge\\
-Norris::InternalAPI-\\Manager::PageBridge}
+\insglo{Norris}::InternalAPI-\\Manager::InternalAPI-\\Bridge\\
+\insglo{Norris}::InternalAPI-\\Manager::ChartBridge\\
+\insglo{Norris}::InternalAPI-\\Manager::PageBridge}
 			& N.I.
 			\\ \hline
 
@@ -67,13 +67,13 @@ Norris::InternalAPI-\\Manager::PageBridge}
 
 	\parbox[t]{0.6\textwidth}{TINorrisExternalAPI-\\Manager}
 	&
-Funzionamento delle API esterne: viene verificato che le API esterne forniscano le funzione corrette a seconda dei dati rappresentati dal modello.
+Funzionamento delle \insglo{API} esterne: viene verificato che le \insglo{API} esterne forniscano le funzione corrette a seconda dei dati rappresentati dal modello.
 & \parbox[t]{0.6\textwidth}{
-Norris::ExternalAPI-\\Manager::ExternalAPI-\\Controller\\
-Norris::ExternalAPI-\\Manager::Authentication-\\Endpoint\\
-Norris::ExternalAPI-\\Manager::ListEndpoint\\
-Norris::ExternalAPI-\\Manager::ChartEndpoint\\
-Norris::ExternalAPI-\\Manager::ChartRef}
+\insglo{Norris}::ExternalAPI-\\Manager::ExternalAPI-\\Controller\\
+\insglo{Norris}::ExternalAPI-\\Manager::Authentication-\\Endpoint\\
+\insglo{Norris}::ExternalAPI-\\Manager::ListEndpoint\\
+\insglo{Norris}::ExternalAPI-\\Manager::ChartEndpoint\\
+\insglo{Norris}::ExternalAPI-\\Manager::ChartRef}
 			& N.I.
 			\\ \hline
 
@@ -85,18 +85,18 @@ Norris::ExternalAPI-\\Manager::ChartRef}
 
 
 
-%Chuck
+%\insglo{Chuck}
 
 
 	TIChuck
 				&
 Test di integrazione finale tra tutte le componenti al fine di verificare il sistema nel suo complesso.
 			& \parbox[t]{0.6\textwidth}{
-Chuck::ChuckManager\\
-Chuck::DataModel\\
-Chuck::ChartView\\
-Chuck::Controller\\
-Chuck::Utils}
+\insglo{Chuck}::ChuckManager\\
+\insglo{Chuck}::DataModel\\
+\insglo{Chuck}::ChartView\\
+\insglo{Chuck}::Controller\\
+\insglo{Chuck}::Utils}
 			& N.I.
 			\\ \hline
 
@@ -104,12 +104,12 @@ Chuck::Utils}
 
 	TIChuckChuckManager
 				&
-Comportamento delle API di Chuck: viene verificato che utilizzando l'interfaccia messa a disposizione dallo sviluppatore la componente ChuckManager effettui le operazioni corrette.
+Comportamento delle \insglo{API} di \insglo{Chuck}: viene verificato che utilizzando l'interfaccia messa a disposizione dallo sviluppatore la componente ChuckManager effettui le operazioni corrette.
 			& \parbox[t]{0.6\textwidth}{
-Chuck::ChuckManager-\\::ChuckAPIController\\
-Chuck::ChuckManager-\\::AuthenticationManager\\
-Chuck::ChuckManager-\\::ChartRequester\\
-Chuck::ChuckManager-\\::ChartBridge}
+\insglo{Chuck}::ChuckManager-\\::ChuckAPIController\\
+\insglo{Chuck}::ChuckManager-\\::AuthenticationManager\\
+\insglo{Chuck}::ChuckManager-\\::ChartRequester\\
+\insglo{Chuck}::ChuckManager-\\::ChartBridge}
 			& N.I.
 			\\ \hline
 
@@ -117,9 +117,9 @@ Chuck::ChuckManager-\\::ChartBridge}
 	
 	\parbox[t]{0.6\textwidth}{TIChuckAuthentication-\\Manager}
 				&
-Viene verificato che AuthenticationManager effettui l'autenticazione nel modo corretto presso un'istanza valida di Norris.
+Viene verificato che AuthenticationManager effettui l'autenticazione nel modo corretto presso un'istanza valida di \insglo{Norris}.
 			& \parbox[t]{0.6\textwidth}{
-Chuck::ChuckManager-\\::AuthenticationManager\\
+\insglo{Chuck}::ChuckManager-\\::AuthenticationManager\\
 XMLHttpRequest}
 			& N.I.
 			\\ \hline
@@ -128,9 +128,9 @@ XMLHttpRequest}
 
 	TIChuckChartRequester
 				&
-Viene verificato che ChartRequester richieda correttamente un grafico presente in un'istanza di Norris e lo mantenga aggiornato.
+Viene verificato che ChartRequester richieda correttamente un grafico presente in un'istanza di \insglo{Norris} e lo mantenga aggiornato.
 			& \parbox[t]{0.6\textwidth}{
-Chuck::ChuckManager-\\::ChartRequester\\
+\insglo{Chuck}::ChuckManager-\\::ChartRequester\\
 SocketIOClient}
 			& N.I.
 			\\ \hline
@@ -141,8 +141,8 @@ SocketIOClient}
 				&
 Viene verificato che il modello memorizzi correttamente le informazioni riguardanti i grafici.
 			& \parbox[t]{0.6\textwidth}{
-Chuck::DataModel-\\::ChuckImpl\\
-Chuck::DataModel-\\::ChartImpl}
+\insglo{Chuck}::DataModel-\\::ChuckImpl\\
+\insglo{Chuck}::DataModel-\\::ChartImpl}
 			& N.I.
 			\\ \hline
 
@@ -152,11 +152,11 @@ Chuck::DataModel-\\::ChartImpl}
 				&
 Viene verificato che il modello dei chart memorizzi correttamente le informazioni in base al tipo specifico del chart rappresentato.
 			& \parbox[t]{0.6\textwidth}{
-Chuck::DataModel-\\::ChartImpl\\
-Chuck::DataModel-\\::BarChartImpl\\
-Chuck::DataModel-\\::LineChartImpl\\
-Chuck::DataModel-\\::MapChartImpl\\
-Chuck::DataModel-\\::TableImpl}
+\insglo{Chuck}::DataModel-\\::ChartImpl\\
+\insglo{Chuck}::DataModel-\\::BarChartImpl\\
+\insglo{Chuck}::DataModel-\\::LineChartImpl\\
+\insglo{Chuck}::DataModel-\\::MapChartImpl\\
+\insglo{Chuck}::DataModel-\\::TableImpl}
 			& N.I.
 			\\ \hline
 
@@ -166,11 +166,11 @@ Chuck::DataModel-\\::TableImpl}
 				&
 Viene verificato che la componente ChartView gestisca correttamente la visualizzazione di tutti i tipi di grafici.
 			& \parbox[t]{0.6\textwidth}{
-Chuck::ChartView-\\::ViewImpl\\
-Chuck::ChartView-\\::BarChartView\\
-Chuck::ChartView-\\::LineChartView\\
-Chuck::ChartView-\\::MapChartView\\
-Chuck::ChartView-\\::TableView}
+\insglo{Chuck}::ChartView-\\::ViewImpl\\
+\insglo{Chuck}::ChartView-\\::BarChartView\\
+\insglo{Chuck}::ChartView-\\::LineChartView\\
+\insglo{Chuck}::ChartView-\\::MapChartView\\
+\insglo{Chuck}::ChartView-\\::TableView}
 			& N.I.
 			\\ \hline
 
@@ -180,22 +180,22 @@ Chuck::ChartView-\\::TableView}
 				&
 Viene verificato che il controller, per tutti i tipi di grafico, gestisca correttamente le notifiche proveniente dalla componente ChartView.
 			& \parbox[t]{0.6\textwidth}{
-Chuck::Controller-\\::ChartController\\
-Chuck::Controller-\\::BarChartController\\
-Chuck::Controller-\\::LineChartController\\
-Chuck::Controller-\\::MapChartController\\
-Chuck::Controller-\\::TableController}
+\insglo{Chuck}::Controller-\\::ChartController\\
+\insglo{Chuck}::Controller-\\::BarChartController\\
+\insglo{Chuck}::Controller-\\::LineChartController\\
+\insglo{Chuck}::Controller-\\::MapChartController\\
+\insglo{Chuck}::Controller-\\::TableController}
 			& N.I.
 			\\ \hline
 
 
 
 	TIChuckUtils &
-Viene verificata la corretta implementazione del pattern Observer.
+Viene verificata la corretta implementazione del \insglo{pattern} Observer.
 			& \parbox[t]{0.6\textwidth}{
-Chuck::Utils::Observable\\
-Chuck::Utils::Observable-\\Impl\\
-Chuck::Utils::Observer}
+\insglo{Chuck}::Utils::Observable\\
+\insglo{Chuck}::Utils::Observable-\\Impl\\
+\insglo{Chuck}::Utils::Observer}
 			& N.I.
 			\\ \hline
 
@@ -219,7 +219,7 @@ Chuck::Utils::Observer}
 			& N.I.
 \\ \hline
 			TIApplicazioneModel &
-			Viene verificato che il sistema gestisca correttamente la componente Model relativa al design pattern MVC. Più precisamente che memorizzi correttamente i dati relativi ai chart dell'istanza di norris selezionata.
+			Viene verificato che il sistema gestisca correttamente la componente Model relativa al \insglo{design pattern} \insglo{MVC}. Più precisamente che memorizzi correttamente i dati relativi ai chart dell'istanza di \insglo{norris} selezionata.
 			& \parbox[t]{0.6\textwidth}{
 			Applicazione::Model-\\::ChartImpl\\
 			Applicazione::Model-\\::BarChartImpl\\
@@ -229,7 +229,7 @@ Chuck::Utils::Observer}
 			& N.I.
 \\ \hline
 			TIApplicazioneView &
-			Viene verificato che il sistema gestisca correttamente la componente View del pattern MVC. Più precisamente che gestisca correttamente tutto ciò che concerne la rappresentazione dei chart.
+			Viene verificato che il sistema gestisca correttamente la componente View del \insglo{pattern} \insglo{MVC}. Più precisamente che gestisca correttamente tutto ciò che concerne la rappresentazione dei chart.
 			& \parbox[t]{0.6\textwidth}{
 			Applicazione::View-\\::ObservableActivity\\
 			Applicazione::View-\\::HomeActivity\\
@@ -242,7 +242,7 @@ Chuck::Utils::Observer}
 			& N.I.
 \\ \hline
 			TIApplicazioneController &
-			Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC. Più precisamente viene verificato che il sistema gestisca le azioni dell’utente e che dialoghi in maniera appropriata con il server.
+			Viene verificato che il sistema gestisca correttamente la componente Controller del \insglo{design pattern} \insglo{MVC}. Più precisamente viene verificato che il sistema gestisca le azioni dell’utente e che dialoghi in maniera appropriata con il \insglo{server}.
 			& \parbox[t]{0.6\textwidth}{
 			Applicazione::Controller-\\::Controller\\
 			Applicazione::Controller-\\::HomeController\\
@@ -256,7 +256,7 @@ Chuck::Utils::Observer}
 			& N.I.
 \\ \hline
 			TIApplicazioneUtils &
-			Viene verificato che il sistema gestisca correttamente le componenti necessarie per la realizzazione del design pattern Observer.
+			Viene verificato che il sistema gestisca correttamente le componenti necessarie per la realizzazione del \insglo{design pattern} Observer.
 			& \parbox[t]{0.6\textwidth}{
 			Applicazione::Utils\\
 			Applicazione::Utils-\\::ObservableImpl}
@@ -278,20 +278,20 @@ Chuck::Utils::Observer}
 			\endhead
 
 
-			Norris & TINorris \\ \hline 
-			Norris::DataModel & TINorrisDataModel \\ \hline 
-			Norris::DataModel::ChartImpl & TINorrisChartImpl \\ \hline 
-			Norris::InternalAPIManager & TINorrisInternalAPIManager \\ \hline 
-			Norris::ExternalAPIManager & TINorrisExternalAPIManager \\ \hline 
-			Chuck & TIChuck \\ \hline 
-			Chuck::ChuckManager & TIChuckChuckManager \\ \hline 
-			Chuck::ChuckManager::AuthenticationManager & TIChuckAuthenticationManager \\ \hline 
-			Chuck::ChuckManager::ChartRequester & TIChuckChartRequester \\ \hline 
-			Chuck::DataModel & TIChuckDataModel \\ \hline 
-			Chuck::DataModel::ChartImpl & TIChuckChartImpl \\ \hline 
-			Chuck::ChartView & TIChuckChartView \\ \hline 
-			Chuck::Controller & TIChuckController \\ \hline 
-			Chuck::Utils & TIChuckUtils \\ \hline 
+			\insglo{Norris} & TINorris \\ \hline 
+			\insglo{Norris}::DataModel & TINorrisDataModel \\ \hline 
+			\insglo{Norris}::DataModel::ChartImpl & TINorrisChartImpl \\ \hline 
+			\insglo{Norris}::InternalAPIManager & TINorrisInternalAPIManager \\ \hline 
+			\insglo{Norris}::ExternalAPIManager & TINorrisExternalAPIManager \\ \hline 
+			\insglo{Chuck} & TIChuck \\ \hline 
+			\insglo{Chuck}::ChuckManager & TIChuckChuckManager \\ \hline 
+			\insglo{Chuck}::ChuckManager::AuthenticationManager & TIChuckAuthenticationManager \\ \hline 
+			\insglo{Chuck}::ChuckManager::ChartRequester & TIChuckChartRequester \\ \hline 
+			\insglo{Chuck}::DataModel & TIChuckDataModel \\ \hline 
+			\insglo{Chuck}::DataModel::ChartImpl & TIChuckChartImpl \\ \hline 
+			\insglo{Chuck}::ChartView & TIChuckChartView \\ \hline 
+			\insglo{Chuck}::Controller & TIChuckController \\ \hline 
+			\insglo{Chuck}::Utils & TIChuckUtils \\ \hline 
 			Applicazione & TIApplicazione \\ \hline 
 			Applicazione::Model & TIApplicazioneModel \\ \hline 
 			Applicazione::View & TIApplicazioneView \\ \hline 

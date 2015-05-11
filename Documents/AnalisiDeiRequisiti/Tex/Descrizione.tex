@@ -1,7 +1,7 @@
 % !TEX encoding = UTF-8 Unicode
 \level{1}{Descrizione generale}
 	\level{2}{Scopo del prodotto}
-		\insglo{Norris} è un \insglo{framework} per \insglo{Node.js} che permette di raccogliere dati provenienti da sorgenti arbitrarie e visualizzarli come grafici in modo semplice e veloce. Esso, in particolare, permette di configurare programmaticamente la veste grafica assunta dai dati. Inoltre, il \insglo{framework} mette a disposizione la possibilità di aggiornare i chart lato \insglo{server} tramite tecnologia WebSocket: in questo modo si permette all'utente che utilizza il grafico di ricevere aggiornamenti in real-time.
+		\insglo{Norris} è un \insglo{framework} per \insglo{Node.js} che permette di raccogliere dati provenienti da sorgenti arbitrarie e visualizzarli come grafici in modo semplice e veloce. Esso, in particolare, permette di configurare programmaticamente la veste grafica assunta dai dati. Inoltre, il \insglo{framework} mette a disposizione la possibilità di aggiornare i chart lato \insglo{server} tramite tecnologia \insglo{WebSocket}: in questo modo si permette all'utente che utilizza il grafico di ricevere aggiornamenti in real-time.
 	\level{2}{Funzioni del prodotto}
 		\insglo{Norris} svolge principalmente due funzioni:
 		\begin{itemize}
@@ -11,22 +11,22 @@
 		La sorgente a partire dalla quale si ricavano i dati per creare e aggiornare il grafico è del tutto arbitraria.\\
 		I tipi di chart supportati dal \insglo{framework} sono i seguenti:
 		\begin{itemize}
-			\item bar chart;
-			\item line chart;
-			\item map chart;
+			\item \insglo{bar chart};
+			\item \insglo{line chart};
+			\item \insglo{map chart};
 			\item \insglo{table}.
 		\end{itemize}
 		Vi sono tre modi in cui un grafico può essere aggiornato (ogni tipo di grafico supporta solo alcune forme di aggiornamento):
 		\begin{itemize}
-			\item in place (supportato da tutti i tipi di chart);
-			\item stream (supportato da line chart, da bar chart e da \insglo{table});
-			\item movie (supportato da map chart).
+			\item \insglo{in place} (supportato da tutti i tipi di chart);
+			\item \insglo{stream} (supportato da \insglo{line chart}, da \insglo{bar chart} e da \insglo{table});
+			\item \insglo{movie} (supportato da \insglo{map chart}).
 		\end{itemize}
 	\level{2}{Caratteristiche degli utenti}
 		Gli utenti che utilizzano questo \insglo{prodotto} possono essere suddivisi in tre grandi insiemi, come mostrato di seguito.
 		\begin{enumerate}
 			\item Gli sviluppatori di istanze di \insglo{Norris} sono tutti gli utenti che, utilizzando le \insglo{API} interne fornite dal \insglo{framework}, si occupano di creare, rendere disponibili e aggiornare i grafici.
-			\item Gli sviluppatori client sono gli sviluppatori di applicazioni lato client che, utilizzando le \insglo{API} esterne fornite dal framework, permettono la visualizzazione dei grafici all'interno di prodotti terzi. Tra questi utenti, particolare attenzione viene posta nei confronti dei web developer: essi hanno a disposizione una libreria che permette loro di inserire in modo facile i grafici forniti da \insglo{Norris} all'interno di un sito web. Tale libreria facilita l'uso delle API esterne fornite dal framework e fornisce ulteriori funzioni per la manipolazione dei chart.
+			\item Gli sviluppatori \insglo{client} sono gli sviluppatori di applicazioni lato \insglo{client} che, utilizzando le \insglo{API} esterne fornite dal \insglo{framework}, permettono la visualizzazione dei grafici all'interno di prodotti terzi. Tra questi utenti, particolare attenzione viene posta nei confronti dei web developer: essi hanno a disposizione una libreria che permette loro di inserire in modo facile i grafici forniti da \insglo{Norris} all'interno di un sito web. Tale libreria facilita l'uso delle \insglo{API} esterne fornite dal \insglo{framework} e fornisce ulteriori funzioni per la manipolazione dei chart.
 			\item Gli utenti finali sono tutti gli utenti che fanno uso in modo diretto dei grafici resi disponibili dagli sviluppatori di istanze di \insglo{Norris}, fruendone tramite l'uso di siti web o applicazioni.
 		\end{enumerate}
 		Gli utenti appartenenti alla prima tipologia, per poter essere in grado di utilizzare il presente \insglo{prodotto}, devono possedere:
@@ -34,17 +34,17 @@
 			\item conoscenza di \insglo{Node.js}, essendo \insglo{Norris} un \insglo{framework} per questo linguaggio;
 			\item conoscenza di \insglo{Express.js}, in quanto \insglo{Norris} deve essere usato come \insglo{middleware} di tale \insglo{framework}.
 		\end{itemize}
-		Agli utenti appartenenti alla seconda tipologia è richiesto semplicemente di saper utilizzare le \insglo{API} esterne fornite da \insglo{Norris}. Tali \insglo{API} vengono implementate in parte tramite semplici chiamate HTTP, in parte tramite l'uso della tecnologia Socket.io (come indicato nel capitolato). L'utente appartenente alla seconda categoria, dunque, deve essere in grado di:
+		Agli utenti appartenenti alla seconda tipologia è richiesto semplicemente di saper utilizzare le \insglo{API} esterne fornite da \insglo{Norris}. Tali \insglo{API} vengono implementate in parte tramite semplici chiamate \insglo{HTTP}, in parte tramite l'uso della tecnologia \insglo{Socket.io} (come indicato nel \insglo{capitolato}). L'utente appartenente alla seconda categoria, dunque, deve essere in grado di:
 		\begin{itemize}
-			\item eseguire chiamate HTTP e gestirne il risultato, qualunque sia il linguaggio di programmazione utilizzato;
-			\item utilizzare Socket.io (in particolare emettere ed ascoltare eventi), qualunque sia il linguaggio di programmazione utilizzato
+			\item eseguire chiamate \insglo{HTTP} e gestirne il risultato, qualunque sia il linguaggio di programmazione utilizzato;
+			\item utilizzare \insglo{Socket.io} (in particolare emettere ed ascoltare eventi), qualunque sia il linguaggio di programmazione utilizzato
 		\end{itemize}
-		Per quanto riguarda i web developer, appartenenti alla seconda categoria di utenti, essi devono conoscere JavaScript per poter utilizzare le funzionalità offerte dalla libreria messa a loro disposizione.\\
+		Per quanto riguarda i web developer, appartenenti alla seconda categoria di utenti, essi devono conoscere \insglo{JavaScript} per poter utilizzare le funzionalità offerte dalla libreria messa a loro disposizione.\\
 		Un utente finale, invece, non deve avere conoscenze tecniche di alcun tipo. Infatti, \insglo{Norris} nasce come strumento per facilitare la lettura dei dati provenienti da sorgenti arbitrarie da parte di utenti che non posseggono specifiche abilità. Dunque, un utente finale, per accedere direttamente ai grafici forniti da un'istanza di \insglo{Norris}, deve essere semplicemente in grado di utilizzare un \insglo{browser} o l'applicazione all'interno della quale vengono visualizzati i grafici forniti da \insglo{Norris}.
 	\level{2}{Piattaforma di esecuzione}
 		Il \insglo{framework} è scritto in \insglo{Node.js} e funziona in qualsiasi piattaforma dove sia presente l'interprete.
 	\level{2}{Vincoli generali}
-		La libreria messa a disposizione dei web developer (e utilizzata dallo stesso \insglo{Norris} per generare le pagine) richiede che venga utilizzato uno dei seguenti browser per poter visualizzare correttamente i grafici:
+		La libreria messa a disposizione dei web developer (e utilizzata dallo stesso \insglo{Norris} per generare le pagine) richiede che venga utilizzato uno dei seguenti \insglo{browser} per poter visualizzare correttamente i grafici:
 		\begin{itemize}
 			\item \emph{Google \insglo{Chrome}} v38.0.X o superiori;
 			\item \emph{Mozilla \insglo{Firefox}} v32.X o superiori.

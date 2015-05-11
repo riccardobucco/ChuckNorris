@@ -1,7 +1,7 @@
 \level{2}{Processo di configurazione}
 	\level{3}{Norme}
 			\level{4}{Controllo di versione}
-				Il controllo sul versionamento dei documenti e, nelle successive fasi del progetto, dei codici sorgente avviene attraverso lo strumento fornito dalla piattaforma GitHub.\\
+				Il controllo sul versionamento dei documenti e, nelle successive fasi del progetto, dei codici sorgente avviene attraverso lo strumento fornito dalla piattaforma \insglo{GitHub}.\\
 				Ogni volta che viene eseguita una modifica sostanziale deve essere assegnato un nuovo numero di versione.\\
 				Per quanto riguarda le norme riguardanti il versionamento della documentazione si rimanda alla sezione \hyperref[sec:versioni]{Versionamento dei documenti} del presente documento.
 				\level{4}{Struttura di una richiesta di modifica}
@@ -25,7 +25,7 @@
 					\end{enumerate}
 		
 				\level{4}{Struttura del repository}
-					I file all’interno del repository sono organizzati secondo la seguente struttura:
+					I file all’interno del \insglo{repository} sono organizzati secondo la seguente struttura:
 					\begin{itemize}
 						\item /Documents
 						\begin{itemize}
@@ -44,15 +44,15 @@
 						\item /Sources
 						\begin{itemize}
 							\item Applicazione
-							\item Chuck
-							\item Dashboard
-							\item Norris
+							\item \insglo{Chuck}
+							\item \insglo{Dashboard}
+							\item \insglo{Norris}
 						\end{itemize}
 					\end{itemize}
 
 
 				\level{4}{Nomi dei file}
-					I nomi dei file all’interno del repository sono soggetti alle seguenti norme:
+					I nomi dei file all’interno del \insglo{repository} sono soggetti alle seguenti norme:
 					\begin{itemize}
 						\item devono contenere solamente lettere, numeri, il carattere underscore U+005F, il segno meno U+2212 e il punto U+002E;
 						\item devono avere una lunghezza minima di 3 caratteri;
@@ -74,13 +74,13 @@
 						\item le modifiche apportate con un commit devono essere logicamente correlate tra di loro.
 					\end{itemize}
 				\level{4}{Codifica dei file}\label{sec:CodificaFile}
-					Tutti i file contenenti codice o documentazione dovranno utilizzare la codifica UTF-8 senza BOM.\\
+					Tutti i file contenenti codice o documentazione dovranno utilizzare la codifica UTF-8 senza \insglo{BOM}.\\
 					Il terminatore di linea è il carattere Line Feed, rappresentato dal carattere Unicode U+000A.
 		
 		\level{3}{Procedure}
 			\level{4}{Richiesta di modifica}\label{sec:StrutturaIssue}
 				Ogni richiesta di modifica va inoltrata in modo formale al \insrole{Responsabile di Progetto}, affinché venga sottoposta ad un rigoroso processo di analisi. Dopodiché il \insrole{Responsabile di Progetto} decide se approvarla o meno. Nel primo caso assegna la realizzazione della modifica ad un membro del gruppo. 
-				La procedura viene formalizzata nel seguente diagramma delle attività:
+				La \insglo{procedura} viene formalizzata nel seguente diagramma delle attività:
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.6\textwidth]{NormeDiProgetto/Pics/RichiestaDiModifica}
@@ -88,29 +88,29 @@
 				\end{figure}
 			
 			\level{4}{Aggiornamento del repository}
-					Per aggiornare il repository è necessario seguire correttamente la seguente procedura:
+					Per aggiornare il \insglo{repository} è necessario seguire correttamente la seguente \insglo{procedura}:
 					\begin{enumerate}
-						\item si esegue il comando git pull per aggiornare il repository locale alla commit più recente;
+						\item si esegue il comando \insglo{git} pull per aggiornare il \insglo{repository} locale alla commit più recente;
 						\item se sono avvenuti conflitti si passa al punto (3), altrimenti si prosegue col punto (4);
-						\item con il comando git stash è possibile salvare le modifiche incomplete in uno stack separato per poterle riutilizzare in seguito; dopo aver accantonato i file è necessario aggiornare il repository col comando git pull, in questo modo si ha una directory di lavoro“pulita”e si possono inserire le modifiche prima accantonate;
-						\item si scelgono i file di cui fare il commit usando il comando git add;
-						\item si esegue il comando git commit;
-						\item si esegue git push per inviare le modifiche effettuate al repository remoto;
+						\item con il comando \insglo{git} stash è possibile salvare le modifiche incomplete in uno stack separato per poterle riutilizzare in seguito; dopo aver accantonato i file è necessario aggiornare il \insglo{repository} col comando \insglo{git} pull, in questo modo si ha una directory di lavoro“pulita”e si possono inserire le modifiche prima accantonate;
+						\item si scelgono i file di cui fare il commit usando il comando \insglo{git} add;
+						\item si esegue il comando \insglo{git} commit;
+						\item si esegue \insglo{git} push per inviare le modifiche effettuate al \insglo{repository} remoto;
 						\item se il comando push fallisce si prosegue col punto (8), altrimenti si passa al punto (9);
-						\item si riaggiorna il repository locale tramite git pull, il quale creerà un merge commit, dopo di che si riesegue il comando push (si veda il punto (7));
-						\item il repository remoto è stato aggiornato.
+						\item si riaggiorna il \insglo{repository} locale tramite \insglo{git} pull, il quale creerà un merge commit, dopo di che si riesegue il comando push (si veda il punto (7));
+						\item il \insglo{repository} remoto è stato aggiornato.
 					\end{enumerate}
-					Si riporta la formalizzazione della procedura con un diagramma delle attività:
+					Si riporta la formalizzazione della \insglo{procedura} con un diagramma delle attività:
 					\begin{figure}[H]
 						\centering
 						\includegraphics[width=0.6\textwidth]{NormeDiProgetto/Pics/Commit}
 						\caption{Procedura di aggiornamento del repository}
 					\end{figure}
 	\level{3}{Strumenti}
-			Per agevolare lo svolgimento del progetto da parte di tutti i membri del team di sviluppo è stata predisposta una macchina virtuale contenente tutti gli strumenti software necessari, individuati fino al momento della stesura dell'ultima versione attuale del presente documento.
+			Per agevolare lo svolgimento del progetto da parte di tutti i membri del \insglo{team} di sviluppo è stata predisposta una macchina virtuale contenente tutti gli strumenti \insglo{software} necessari, individuati fino al momento della stesura dell'ultima versione attuale del presente documento.
 			\level{4}{Strumenti per la gestione del repository}
-				Per la gestione del repository si è scelto di utilizzare il sistema di versionamento distribuito Git, mentre per la condivisione e il versionamento dei \textit{configuration item} è stato creato un repository privato su GitHub.
-				L'utilizzo dei sistemi Git e GitHub è descritto nell'appendice \nameref{app:strumenti}.
+				Per la gestione del \insglo{repository} si è scelto di utilizzare il sistema di versionamento distribuito \insglo{Git}, mentre per la condivisione e il versionamento dei \textit{configuration item} è stato creato un \insglo{repository} privato su \insglo{GitHub}.
+				L'utilizzo dei sistemi \insglo{Git} e \insglo{GitHub} è descritto nell'appendice \nameref{app:strumenti}.
 			\level{4}{Strumenti per il deployment del prodotto}
-				Come richiesto dal capitolato, il \textit{deployment} del prodotto avverrà attraverso Heroku, una piattaforma cloud pensata appositamente per la realizzazione e distribuzione di applicazioni online. Maggiori informazioni su questo strumento si trovano nell'appendice \nameref{app:strumenti} del presente documento.
+				Come richiesto dal \insglo{capitolato}, il \textit{deployment} del \insglo{prodotto} avverrà attraverso \insglo{Heroku}, una piattaforma cloud pensata appositamente per la realizzazione e distribuzione di applicazioni online. Maggiori informazioni su questo strumento si trovano nell'appendice \nameref{app:strumenti} del presente documento.
 			

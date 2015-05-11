@@ -1,34 +1,34 @@
 % !TEX encoding = UTF-8 Unicode
 \level{1}{Middleware in Express.js} \label{app:express}
 	\level{2}{Cos'è un middleware?}
-		In Express.js un middleware, molto semplicemente, è un insieme di funzioni che gestiscono le richieste al server: esse sono invocate dal routing layer di Express.js quando vengono fatte determinate richieste HTTP a certi endpoint. Nello specifico, quando arriva una richiesta (rappresentata da un oggetto ServerRequest) questa viene passata alla prima funzione dello stack dei middleware (assieme a un oggetto ServerResponse, che rappresenta la risposta del server alla richiesta): ogni middleware può decidere se gestire la richiesta in qualche modo (per esempio invocando dei metodi sull'oggetto ServerResponse) oppure no. Quando un middleware ha terminato la sua specifica gestione di una richiesta, esso può passare l'oggetto ServerRequest al middleware che lo segue nello stack (tramite la callback \texttt{next()}). Un middleware, dunque, può essere usato ovunque si voglia gestire in qualche modo logico tutte le richieste di un certo tipo.\\
-		Riportiamo in seguito la descrizione che fornisce il sito \url{expressjs.com} di middleware (riportata in lingua originale):
+		In \insglo{Express.js} un \insglo{middleware}, molto semplicemente, è un insieme di funzioni che gestiscono le richieste al \insglo{server}: esse sono invocate dal routing layer di \insglo{Express.js} quando vengono fatte determinate richieste \insglo{HTTP} a certi endpoint. Nello specifico, quando arriva una richiesta (rappresentata da un oggetto ServerRequest) questa viene passata alla prima funzione dello stack dei \insglo{middleware} (assieme a un oggetto ServerResponse, che rappresenta la risposta del \insglo{server} alla richiesta): ogni \insglo{middleware} può decidere se gestire la richiesta in qualche modo (per esempio invocando dei metodi sull'oggetto ServerResponse) oppure no. Quando un \insglo{middleware} ha terminato la sua specifica gestione di una richiesta, esso può passare l'oggetto ServerRequest al \insglo{middleware} che lo segue nello stack (tramite la \insglo{callback} \texttt{next()}). Un \insglo{middleware}, dunque, può essere usato ovunque si voglia gestire in qualche modo logico tutte le richieste di un certo tipo.\\
+		Riportiamo in seguito la descrizione che fornisce il sito \url{expressjs.com} di \insglo{middleware} (riportata in lingua originale):
 		\begin{quote}
-			Middleware is a function with access to the request object (\texttt{req}), the response object (\texttt{res}), and the next middleware in line in the request-response cycle of an Express application, commonly denoted by a variable named \texttt{next}. Middleware can:
+			\insglo{Middleware} is a function with access to the request object (\texttt{req}), the response object (\texttt{res}), and the next \insglo{middleware} in line in the request-response cycle of an Express application, commonly denoted by a variable named \texttt{next}. \insglo{Middleware} can:
 			\begin{itemize}
 				\item execute any code;
 				\item make changes to the request and the response objects;
 				\item end the request-response cycle;
-				\item call the next middleware in the stack.
+				\item call the next \insglo{middleware} in the stack.
 			\end{itemize}
-			If the current middleware does not end the request-response cycle, it must call \texttt{next()} to pass control to the next middleware, otherwise the request will be left hanging.
+			If the current \insglo{middleware} does not end the request-response cycle, it must call \texttt{next()} to pass control to the next \insglo{middleware}, otherwise the request will be left hanging.
 		\end{quote}
 	\level{2}{Ottenere un middleware usando le API interne di Norris}
-		Come specificato nel capitolato d'appalto:
+		Come specificato nel \insglo{capitolato} d'appalto:
 		\begin{quote}
-			l'uso del framework (Norris ndr) dovrà essere compatibile con l’utilizzo standard dei middleware di Express, versione 4.x (\url{http://expressjs.com/4x/api.html#middleware})
+			l'uso del \insglo{framework} (\insglo{Norris} ndr) dovrà essere compatibile con l’utilizzo standard dei \insglo{middleware} di Express, versione 4.x (\url{\insglo{http}://expressjs.com/4x/\insglo{api}.html#\insglo{middleware}})
 		\end{quote}
-		Ne deriva che l'utilizzatore finale del prodotto deve poter utilizzare il comando
+		Ne deriva che l'utilizzatore finale del \insglo{prodotto} deve poter utilizzare il comando
 		\begin{lstlisting}
 			app.use([path,] function [, function...])
 		\end{lstlisting}
-		all'interno del proprio server Express: con tale comando egli può fissare un certo percorso (\texttt{path}) come punto di mount di uno o più middleware. Tali middleware possono essere definiti dallo sviluppatore stesso oppure possono essere forniti da terzi (come nel caso di Norris).\\
-		L'utilizzatore di Norris ha bisogno dunque di un modo per poter ottenere il middleware Norris e poterne fare il mount su di un path a sua scelta. Sulla base di tutte queste considerazioni possiamo concludere che l'ottenimento di un middleware è a tutti gli effetti una funzionalità che il prodotto Norris deve fornire allo sviluppatore.\\
-		Segue un esempio immaginario e sperimentale dell'uso di tale funzionalità da parte dello sviluppatore utilizzatore di Norris:
+		all'interno del proprio \insglo{server} Express: con tale comando egli può fissare un certo percorso (\texttt{path}) come punto di mount di uno o più \insglo{middleware}. Tali \insglo{middleware} possono essere definiti dallo sviluppatore stesso oppure possono essere forniti da terzi (come nel caso di \insglo{Norris}).\\
+		L'utilizzatore di \insglo{Norris} ha bisogno dunque di un modo per poter ottenere il \insglo{middleware} \insglo{Norris} e poterne fare il mount su di un path a sua scelta. Sulla base di tutte queste considerazioni possiamo concludere che l'ottenimento di un \insglo{middleware} è a tutti gli effetti una funzionalità che il \insglo{prodotto} \insglo{Norris} deve fornire allo sviluppatore.\\
+		Segue un esempio immaginario e sperimentale dell'uso di tale funzionalità da parte dello sviluppatore utilizzatore di \insglo{Norris}:
 		\begin{lstlisting}
 			var express = require('express');
 			var app = express();
-			var norris = require('norris');
-			// load the norris middleware
-			app.use('/', norris.middleware());
+			var \insglo{norris} = require('\insglo{norris}');
+			// load the \insglo{norris} \insglo{middleware}
+			app.use('/', \insglo{norris}.\insglo{middleware}());
 		\end{lstlisting}

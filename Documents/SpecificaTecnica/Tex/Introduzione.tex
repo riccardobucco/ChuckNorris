@@ -2,36 +2,36 @@
 \level{1}{Introduzione}
 
 	\level{2}{Scopo del documento}
-		Il presente documento ha lo scopo di definire la progettazione ad alto livello del prodotto \projectname{}.\\
-		Vengono a tale scopo descritte le componenti, le classi e i design pattern utilizzati per la realizzazione del prodotto. Infine viene fatto il tracciamento tra le componenti e i requisiti individuati nel documento \insdoc{Analisi dei Requisiti v3.00}.
+		Il presente documento ha lo scopo di definire la progettazione ad alto livello del \insglo{prodotto} \projectname{}.\\
+		Vengono a tale scopo descritte le componenti, le classi e i \insglo{design pattern} utilizzati per la realizzazione del \insglo{prodotto}. Infine viene fatto il tracciamento tra le componenti e i requisiti individuati nel documento \insdoc{Analisi dei Requisiti v3.00}.
 
 	\input{Tex/IntroduzioneGlossario.tex}
 
 	\level{2}{Riferimenti utili}
 		\level{3}{Riferimenti normativi}
 		\begin{itemize}
-			\item\textbf{Capitolato d'appalto C3:} \projectname{}: Real-time Business Intelligence \\
+			\item\textbf{\insglo{Capitolato} d'appalto C3:} \projectname{}: Real-time Business Intelligence \\
 				\insuri{http://www.math.unipd.it/~tullio/IS-1/2014/Progetto/C3.pdf};
 			\item \textbf{Norme di Progetto:} \insdoc{Norme di Progetto v3.00}.
 		\end{itemize}
 		\level{3}{Riferimenti informativi}
 		\begin{itemize}
-			\item \textbf{Learning UML 2.0 - Kim Hamilton, Russell Miles - Chapter 4. Modeling a System's Logical Structure: Introducing Classes and Class Diagrams};
-			\item \textbf{Learning UML 2.0 - Kim Hamilton, Russell Miles - Chapter 5. Modeling a System's Logical Structure: Advanced Class Diagrams and Class Diagrams};
+			\item \textbf{Learning \insglo{UML} 2.0 - Kim Hamilton, Russell Miles - Chapter 4. Modeling a System's Logical Structure: Introducing Classes and Class Diagrams};
+			\item \textbf{Learning \insglo{UML} 2.0 - Kim Hamilton, Russell Miles - Chapter 5. Modeling a System's Logical Structure: Advanced Class Diagrams and Class Diagrams};
 			\item \textbf{Diagramma delle classi:} \\ \insuri{http://www.math.unipd.it/~tullio/IS-1/2014/Dispense/E2a.pdf};
-			\item \textbf{Diagramma dei package:} \\ \insuri{http://www.math.unipd.it/~tullio/IS-1/2014/Dispense/E2b.pdf};
-			\item \textbf{Pattern MVC:} \\ \insuri{http://www.math.unipd.it/~rcardin/pdf/Design\%20Pattern\%20Architetturali\%20-\%20Model\%20View\%20Controller_4x4.pdf};
-			\item \textbf{Pattern Observer:} \\ \insuri{http://www.math.unipd.it/~tullio/IS-1/2014/Dispense/E8.pdf};
-			\item \textbf{Pattern Adapter:} \\ \insuri{http://www.math.unipd.it/~tullio/IS-1/2014/Dispense/E6.pdf};
+			\item \textbf{Diagramma dei \insglo{package}:} \\ \insuri{http://www.math.unipd.it/~tullio/IS-1/2014/Dispense/E2b.pdf};
+			\item \textbf{\insglo{Pattern} \insglo{MVC}:} \\ \insuri{http://www.math.unipd.it/~rcardin/pdf/Design\%20Pattern\%20Architetturali\%20-\%20Model\%20View\%20Controller_4x4.pdf};
+			\item \textbf{\insglo{Pattern} Observer:} \\ \insuri{http://www.math.unipd.it/~tullio/IS-1/2014/Dispense/E8.pdf};
+			\item \textbf{\insglo{Pattern} Adapter:} \\ \insuri{http://www.math.unipd.it/~tullio/IS-1/2014/Dispense/E6.pdf};
 			\item \textbf{Dependency Injection:} \\ \insuri{http://www.math.unipd.it/~tullio/IS-1/2014/Dispense/E9.pdf};
-			\item \textbf{Pattern Bridge:} \\ \insuri{http://en.wikipedia.org/wiki/Bridge\_pattern}.
-			\item \textbf{Node.js:} \\ \insuri{https://nodejs.org/api};
-			\item \textbf{Socket.io:} \\ \insuri{http://socket.io/docs};
-			\item \textbf{Express.js:} \\ \insuri{http://expressjs.org/4x/api.html};
+			\item \textbf{\insglo{Pattern} Bridge:} \\ \insuri{http://en.wikipedia.org/wiki/Bridge\_pattern}.
+			\item \textbf{\insglo{Node.js}:} \\ \insuri{https://nodejs.org/api};
+			\item \textbf{\insglo{Socket.io}:} \\ \insuri{http://socket.io/docs};
+			\item \textbf{\insglo{Express.js}:} \\ \insuri{http://expressjs.org/4x/api.html};
 			\item \textbf{HTML5:} \\ \insuri{http://www.w3schools.com/html/html5_intro.asp};
 			\item \textbf{CSS3:} \\ \insuri{http://www.w3schools.com/css/default.asp};
-			\item \textbf{Angular.js:} \\ \insuri{https://docs.angularjs.org/api};
-			\item \textbf{Chart.js:} \\ \insuri{http://www.chartjs.org/docs/};
+			\item \textbf{\insglo{Angular.js}:} \\ \insuri{https://docs.angularjs.org/api};
+			\item \textbf{\insglo{Chart.js}:} \\ \insuri{http://www.chartjs.org/docs/};
 			\item \textbf{Dynatable.js:} \\ \insuri{https://www.dynatable.com/};
 			\item \textbf{OpenStreetMap:} \\ \insuri{http://openstreetmap.it/impara/};
 			\item \textbf{MPAndroidChart:}  
@@ -39,6 +39,6 @@
 				\item \insuri{https://github.com/PhilJay/MPAndroidChart};
 				\item \insuri{http://code.tutsplus.com/tutorials/add-charts-to-your-android-app-using-mpandroidchart--cms-23335}.
 			  \end{itemize}
-			\item \textbf{Google Maps Android API v2:} \\ \insuri{https://developers.google.com/maps/documentation/android/start};
+			\item \textbf{Google Maps \insglo{Android} \insglo{API} v2:} \\ \insuri{https://developers.google.com/maps/documentation/android/start};
 			
 		\end{itemize}
