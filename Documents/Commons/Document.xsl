@@ -16,7 +16,7 @@
 		\usepackage{lastpage}
 		\usepackage{longtable}
 		\usepackage{tabu}
-		\usepackage[bookmarks=false]{hyperref}
+		\usepackage{hyperref}
 		\usepackage[hypcap]{caption}
 		\usepackage{color}
 		\usepackage{eurosym}
@@ -47,7 +47,8 @@
 			linktoc=all,
 			colorlinks=true,
 			allcolors=black,
-			urlcolor=blue
+			urlcolor=blue,
+			bookmarksdepth=100
 		}
 
 		%section counters
@@ -102,6 +103,7 @@
 						{\dimexpr\@numindent*\@ncp{0}\relax}%
 						{\the\dimexpr\@dotsdim*\@ncp{0}+\@numsdim*\@ncp{1}+\@textindent\relax}}}%
 			\x
+			\expandafter\edef\csname toclevel@level\the\count@\endcsname{\the\count@}%
 			\advance\count@\@ne
 		\repeat
 		\makeatother
