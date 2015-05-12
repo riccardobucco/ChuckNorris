@@ -1,30 +1,11 @@
 \level{2}{Processo di configurazione}
-	\level{3}{Norme}
-			\level{4}{Controllo di versione}
-				Il controllo sul versionamento dei documenti e, nelle successive fasi del progetto, dei codici sorgente avviene attraverso lo strumento fornito dalla piattaforma \insglo{GitHub}.\\
-				Ogni volta che viene eseguita una modifica sostanziale deve essere assegnato un nuovo numero di versione.\\
-				Per quanto riguarda le norme riguardanti il versionamento della documentazione si rimanda alla sezione \hyperref[sec:versioni]{Versionamento dei documenti} del presente documento.
-				\level{4}{Struttura di una richiesta di modifica}
-					Ogni richiesta di modifica è costituita dai seguenti campi:
-					\begin{enumerate}
-						\item autore: contiene nome e cognome di colui che richiede la modifica;
-						\item documento: contiene il nome del documento di cui si richiede la modifica;
-						\item motivo: contiene la spiegazione chiara e concisa delle motivazioni per cui si sta richiedendo una modifica;
-						\item urgenza: può assumere uno dei seguenti valori:
-							\begin{enumerate}
-								\item alta: si tratta di una modifica importante, con forti conseguenze nell'organizzazione e nello svolgimento delle attività future del progetto;
-								\item media: si tratta di una modifica importante, ma che non comporta grandi modifiche alle attività del progetto;
-								\item bassa: si tratta di una modifica di importanza secondaria, che può essere rimandata ad un secondo momento senza che ciò influisca in alcun modo sullo svolgimento delle attività.
-							\end{enumerate}
-					In seguito alla decisione del \insrole{Responsabile} di approvare o meno la richiesta, va aggiunto il campo:
-						\item Decisione del \insrole{Responsabile di Progetto}: contiene uno dei seguenti valori:
-							\begin{enumerate}
-								\item approvata;
-								\item respinta.
-							\end{enumerate}
-					\end{enumerate}
-		
-				\level{4}{Struttura del repository}
+	\level{3}{Controllo di versione}
+		Il controllo sul versionamento dei documenti e, nelle successive fasi del progetto, dei codici sorgente avviene attraverso lo strumento fornito dalla piattaforma \insglo{GitHub}.\\
+		Ogni volta che viene eseguita una modifica sostanziale deve essere assegnato un nuovo numero di versione.\\
+		Per quanto riguarda le norme riguardanti il versionamento della documentazione si rimanda alla sezione \hyperref[sec:versioni]{Versionamento dei documenti} del presente documento.
+
+		\level{4}{Norme}
+			\level{5}{Struttura del repository}
 					I file all’interno del \insglo{repository} sono organizzati secondo la seguente struttura:
 					\begin{itemize}
 						\item /Documents
@@ -50,8 +31,7 @@
 						\end{itemize}
 					\end{itemize}
 
-
-				\level{4}{Nomi dei file}
+				\level{5}{Nomi dei file}
 					I nomi dei file all’interno del \insglo{repository} sono soggetti alle seguenti norme:
 					\begin{itemize}
 						\item devono contenere solamente lettere, numeri, il carattere underscore U+005F, il segno meno U+2212 e il punto U+002E;
@@ -66,28 +46,19 @@
 						\item di utilizzare nomi con una lunghezza compresa tra i 5 e i 25 caratteri;
 						\item di specificare sempre l’estensione quando possibile.
 					\end{itemize}
-				\level{4}{Commit}
+				\level{5}{Commit}
 					L'esecuzione di un comando di commit implica il rispetto delle seguenti norme:
 					\begin{itemize}
 						\item quando si effettua un commit è necessario specificare nel messaggio una descrizione sintetica e non ambigua delle modifiche apportate;
 						\item le modifiche apportate con un commit devono essere complete e testate con successo;
 						\item le modifiche apportate con un commit devono essere logicamente correlate tra di loro.
 					\end{itemize}
-				\level{4}{Codifica dei file}\label{sec:CodificaFile}
+				\level{5}{Codifica dei file}\label{sec:CodificaFile}
 					Tutti i file contenenti codice o documentazione dovranno utilizzare la codifica UTF-8 senza \insglo{BOM}.\\
 					Il terminatore di linea è il carattere Line Feed, rappresentato dal carattere Unicode U+000A.
-		
-		\level{3}{Procedure}
-			\level{4}{Richiesta di modifica}\label{sec:StrutturaIssue}
-				Ogni richiesta di modifica va inoltrata in modo formale al \insrole{Responsabile di Progetto}, affinché venga sottoposta ad un rigoroso processo di analisi. Dopodiché il \insrole{Responsabile di Progetto} decide se approvarla o meno. Nel primo caso assegna la realizzazione della modifica ad un membro del gruppo. 
-				La \insglo{procedura} viene formalizzata nel seguente diagramma delle attività:
-				\begin{figure}[H]
-					\centering
-					\includegraphics[width=0.6\textwidth]{NormeDiProgetto/Pics/RichiestaDiModifica}
-					\caption{Procedura di richiesta di modifica}
-				\end{figure}
-			
-			\level{4}{Aggiornamento del repository}
+
+		\level{4}{Procedure}
+			\level{5}{Aggiornamento del repository}
 					Per aggiornare il \insglo{repository} è necessario seguire correttamente la seguente \insglo{procedura}:
 					\begin{enumerate}
 						\item si esegue il comando \insglo{git} pull per aggiornare il \insglo{repository} locale alla commit più recente;
@@ -106,6 +77,40 @@
 						\includegraphics[width=0.6\textwidth]{NormeDiProgetto/Pics/Commit}
 						\caption{Procedura di aggiornamento del repository}
 					\end{figure}
+
+
+	\level{3}{Gestione delle richieste di modifica}
+		\level{4}{Norme}	
+			\level{5}{Struttura di una richiesta di modifica}
+					Ogni richiesta di modifica è costituita dai seguenti campi:
+					\begin{enumerate}
+						\item autore: contiene nome e cognome di colui che richiede la modifica;
+						\item documento: contiene il nome del documento di cui si richiede la modifica;
+						\item motivo: contiene la spiegazione chiara e concisa delle motivazioni per cui si sta richiedendo una modifica;
+						\item urgenza: può assumere uno dei seguenti valori:
+							\begin{enumerate}
+								\item alta: si tratta di una modifica importante, con forti conseguenze nell'organizzazione e nello svolgimento delle attività future del progetto;
+								\item media: si tratta di una modifica importante, ma che non comporta grandi modifiche alle attività del progetto;
+								\item bassa: si tratta di una modifica di importanza secondaria, che può essere rimandata ad un secondo momento senza che ciò influisca in alcun modo sullo svolgimento delle attività.
+							\end{enumerate}
+					In seguito alla decisione del \insrole{Responsabile} di approvare o meno la richiesta, va aggiunto il campo:
+						\item Decisione del \insrole{Responsabile di Progetto}: contiene uno dei seguenti valori:
+							\begin{enumerate}
+								\item approvata;
+								\item respinta.
+							\end{enumerate}
+					\end{enumerate}
+					
+		\level{4}{Procedure}
+			\level{5}{Richiesta di modifica}\label{sec:StrutturaIssue}
+				Ogni richiesta di modifica va inoltrata in modo formale al \insrole{Responsabile di Progetto}, affinché venga sottoposta ad un rigoroso processo di analisi. Dopodiché il \insrole{Responsabile di Progetto} decide se approvarla o meno. Nel primo caso assegna la realizzazione della modifica ad un membro del gruppo. 
+				La \insglo{procedura} viene formalizzata nel seguente diagramma delle attività:
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.6\textwidth]{NormeDiProgetto/Pics/RichiestaDiModifica}
+					\caption{Procedura di richiesta di modifica}
+				\end{figure}
+						
 	\level{3}{Strumenti}
 			Per agevolare lo svolgimento del progetto da parte di tutti i membri del \insglo{team} di sviluppo è stata predisposta una macchina virtuale contenente tutti gli strumenti \insglo{software} necessari, individuati fino al momento della stesura dell'ultima versione attuale del presente documento.
 			\level{4}{Strumenti per la gestione del repository}
