@@ -26,7 +26,8 @@
 
 		% per allineare il codice a sinistra invece che al centro
 		\lstset{
-			autogobble=true
+			autogobble=true,
+			escapeinside={(*}{*)}
 		}
 
 		
