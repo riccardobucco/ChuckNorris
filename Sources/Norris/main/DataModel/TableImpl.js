@@ -18,8 +18,6 @@ var ChartImpl = require('./ChartImpl.js');
 
 // module.exports = TableImpl;
 
-ChartImpl.registerFactory('table' , new TableFactory());
-
 var defaults = {
 	title : '' ,
 	description : 'This is a table.',
@@ -43,6 +41,14 @@ function TableFactory() {
 	if(!(this instanceof TableFactory)) return new TableFactory();
 }
 
-TableFactory.prototype.create = function (uid) {
-	return new TableImpl(uid);
+TableFactory.prototype.instance=new TableFactory(); // static
+
+TableFactory.getInstance = function() { // static
+	return TableFactory.prototype.instance;
 };
+
+TableFactory.prototype.create = function (id) {
+	return new TableImpl(id);
+};
+
+ChartImpl.registerFactory('table' , TableFactory.getInstance());

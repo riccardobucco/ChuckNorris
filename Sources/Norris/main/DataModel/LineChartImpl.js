@@ -18,7 +18,6 @@ var ChartImpl = require('./ChartImpl.js');
 
 // module.exports = LineChartImpl;
 
-ChartImpl.registerFactory('linechart' , new LineChartFactory());
 
 var defaults = {
 	title : '' ,
@@ -50,6 +49,15 @@ LineChartImpl.prototype.__proto__ = ChartImpl.prototype;
 function LineChartFactory() {
 	if(!(this instanceof LineChartFactory)) return new LineChartFactory();
 }
+
+LineChartFactory.prototype.instance=new LineChartFactory(); // static
+
+LineChartFactory.getInstance = function() { // static
+	return LineChartFactory.prototype.instance;
+};
 LineChartFactory.prototype.create = function (uid) {
 	return new LineChartImpl(uid);
 };
+
+// Dependency injection:
+ChartImpl.registerFactory('linechart' , LineChartFactory.getInstance());

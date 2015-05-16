@@ -14,10 +14,9 @@
  * ================================================================================
  */
 var ChartImpl = require('./ChartImpl.js');
+var BarChartInPlaceUpdater = require('./BarChartInPlaceUpdater.js');
 
 //module.exports = BarChartImpl;
-
-ChartImpl.registerFactory('barchart' , new BarChartFactory());
 
 var defaults = {
 	title : '' ,
@@ -47,8 +46,21 @@ BarChartImpl.prototype.__proto__ = ChartImpl.prototype;
 /* BarChartFactory ------------------------------------------------------- */
 
 function BarChartFactory() {
-	if(!(this instanceof BarChartFactory)) return new BarChartFactory();
+	if(!(this instanceof BarChartFactory)) {
+		return new BarChartFactory();
+	}
 }
+
+BarChartFactory.prototype.instance=new BarChartFactory(); // static
+
+BarChartFactory.getInstance = function() { // static
+	return BarChartFactory.prototype.instance;
+};
+
 BarChartFactory.prototype.create = function (uid) {
 	return new BarChartImpl(uid);
 };
+
+// Dependency injection:
+ChartImpl.registerFactory('barchart' , BarChartFactory.getInstance());
+ChartImpl.registerUpdater('inplace', BarChartInPlaceUpdater.getInstance() );

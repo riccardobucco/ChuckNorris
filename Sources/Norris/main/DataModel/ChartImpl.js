@@ -55,8 +55,12 @@ ChartImpl.registerFactory = function(chartType, factory) {
  * @return ChartImpl
 */
 ChartImpl.create = function(chartType, chartId) {
-	var dep=ChartImpl.prototype.factories[chartType];
-	return dep.create(chartId);
+	if (ChartImpl.prototype.factories.hasOwnProperty(chartType)) {
+		var dep = ChartImpl.prototype.factories[chartType];
+		return dep.create(chartId);
+	}
+	else
+	return null;
 };
 
 /**
@@ -106,7 +110,13 @@ ChartImpl.prototype.getSettings = function() {
 	return this.settings;
 };
 
-ChartImpl.prototype.update = function(updateType, updateData) {};
+ChartImpl.prototype.update = function(updateType, updateData) {
+	if (ChartImpl.prototype.updaters.hasOwnProperty(updateData)) {
+		var dep=ChartImpl.prototype.updaters[updateType];
+		dep.update(this, updateData);
+		console.log(JSON.stringify(this)); // TOGLIERE
+	}
+};
 
 // for dependency injection:
 var BarChartImpl = require('./BarChartImpl.js');

@@ -20,9 +20,8 @@ module.exports = NorrisImpl;
 
 var defaults = {};
 
-function NorrisImpl (uid) {
-    if (!(this instanceof NorrisImpl)) return new NorrisImpl(uid);
-    this.uid = uid;
+function NorrisImpl () {
+    if (!(this instanceof NorrisImpl)) return new NorrisImpl();
     this.settings = {};
     this.charts = {};
     this.pages = {};

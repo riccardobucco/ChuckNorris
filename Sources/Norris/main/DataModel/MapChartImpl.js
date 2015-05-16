@@ -18,8 +18,6 @@ var ChartImpl = require('./ChartImpl.js');
 
 //module.exports = MapChartImpl;
 
-ChartImpl.registerFactory('mapchart' , new MapChartFactory());
-
 var defaults = {
 	title : '' ,
 	description : 'This is a map chart.',
@@ -44,6 +42,15 @@ function MapChartFactory() {
 	if(!(this instanceof MapChartFactory)) return new MapChartFactory();
 }
 
-MapChartFactory.prototype.create = function (uid) {
-	return new MapChartImpl(uid);
+MapChartFactory.prototype.instance=new MapChartFactory(); // static
+
+MapChartFactory.getInstance = function() { // static
+	return MapChartFactory.prototype.instance;
 };
+
+MapChartFactory.prototype.create = function (id) {
+	return new MapChartImpl(id);
+};
+
+// Dependency injection:
+ChartImpl.registerFactory('mapchart' , MapChartFactory.getInstance());
