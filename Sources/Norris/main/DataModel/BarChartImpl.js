@@ -36,9 +36,8 @@ var defaults = {
 
 function BarChartImpl (uid) {
 	if (!(this instanceof BarChartImpl)) return new BarChartImpl(uid);
-	ChartImpl.call(this, uid);
+	ChartImpl.call(this, 'barchart', uid);
 	this.setSettings(defaults);
-	this.setType('barchart');
 }
 
 BarChartImpl.prototype.__proto__ = ChartImpl.prototype;
@@ -57,7 +56,7 @@ BarChartFactory.getInstance = function() { // static
 	return BarChartFactory.prototype.instance;
 };
 
-BarChartFactory.prototype.create = function (uid) {
+BarChartFactory.prototype.createChart = function (uid) {
 	return new BarChartImpl(uid);
 };
 

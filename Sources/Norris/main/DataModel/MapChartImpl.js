@@ -30,10 +30,8 @@ var defaults = {
 
 function MapChartImpl (uid) {
 	if (!(this instanceof MapChartImpl)) return new MapChartImpl(uid);
-	ChartImpl.call(this, uid);
+	ChartImpl.call(this, 'mapchart', uid);
 	this.setSettings(defaults);
-	this.setType('mapchart');
-
 }
 
 MapChartImpl.prototype.__proto__ = ChartImpl.prototype;
@@ -50,7 +48,7 @@ MapChartFactory.getInstance = function() { // static
 	return MapChartFactory.prototype.instance;
 };
 
-MapChartFactory.prototype.create = function (id) {
+MapChartFactory.prototype.createChart = function (id) {
 	return new MapChartImpl(id);
 };
 

@@ -49,7 +49,7 @@ NorrisImpl.prototype.getSettings = function() {
 NorrisImpl.prototype.createChart = function(chartType, chartId) {
     // controllo che chartType sia in ChartImpl.factories
     // controllo che l'id sia univoco
-    var chart = ChartImpl.create(chartType, chartId);
+    var chart = ChartImpl.createChart(chartType, chartId);
     this.charts[chartId]=chart;
     console.log(JSON.stringify(this.charts)); // TOGLIERE
     return chart;

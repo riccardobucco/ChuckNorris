@@ -37,10 +37,8 @@ var defaults = {
 
 function LineChartImpl (uid) {
 	if (!(this instanceof LineChartImpl)) return new LineChartImpl(uid);
-	ChartImpl.call(this, uid);
+	ChartImpl.call(this, 'linechart', uid);
 	this.setSettings(defaults);
-	this.setType('linechart');
-
 }
 
 LineChartImpl.prototype.__proto__ = ChartImpl.prototype;
@@ -56,7 +54,7 @@ LineChartFactory.prototype.instance=new LineChartFactory(); // static
 LineChartFactory.getInstance = function() { // static
 	return LineChartFactory.prototype.instance;
 };
-LineChartFactory.prototype.create = function (uid) {
+LineChartFactory.prototype.createChart = function (uid) {
 	return new LineChartImpl(uid);
 };
 

@@ -30,9 +30,8 @@ var defaults = {
 
 function TableImpl (uid) {
 	if (!(this instanceof TableImpl)) return new TableImpl(uid);
-	ChartImpl.call(this, uid);
+	ChartImpl.call(this, 'table',uid);
 	this.setSettings(defaults);
-	this.setType('table');
 }
 
 TableImpl.prototype.__proto__ = ChartImpl.prototype;
@@ -49,7 +48,7 @@ TableFactory.getInstance = function() { // static
 	return TableFactory.prototype.instance;
 };
 
-TableFactory.prototype.create = function (id) {
+TableFactory.prototype.createChart = function (id) {
 	return new TableImpl(id);
 };
 

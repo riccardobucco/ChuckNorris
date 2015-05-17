@@ -22,10 +22,10 @@
 
 module.exports = ChartImpl;
 
-function ChartImpl (id) {
+function ChartImpl (chartType, id) {
 	if (!(this instanceof ChartImpl)) return new ChartImpl(id);
 	this.uid = id;
-	this.type='';
+	this.type=chartType;
 	this.settings = {};
 	this.data = {};
 }
@@ -54,10 +54,10 @@ ChartImpl.registerFactory = function(chartType, factory) {
  * @param chartId the chart's ID
  * @return ChartImpl
 */
-ChartImpl.create = function(chartType, chartId) {
+ChartImpl.createChart = function(chartType, chartId) {
 	if (ChartImpl.prototype.factories.hasOwnProperty(chartType)) {
 		var dep = ChartImpl.prototype.factories[chartType];
-		return dep.create(chartId);
+		return dep.createChart(chartId);
 	}
 	else
 	return null;
@@ -82,10 +82,6 @@ ChartImpl.prototype.getId = function() {
 
 ChartImpl.prototype.getType = function() {
 	return this.type;
-};
-
-ChartImpl.prototype.setType = function(type) {
-	this.type=type;
 };
 
 ChartImpl.prototype.setData = function(data) {
