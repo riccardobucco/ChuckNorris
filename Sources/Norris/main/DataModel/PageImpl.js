@@ -23,7 +23,11 @@ var ChartImpl = require('./ChartImpl.js');
 
 module.exports = PageImpl;
 
-var defaults = {};
+var defaults = {
+	title: 'Norris\'s page',
+	maxChartsRow: 2, // maximum number of charts per row
+	maxChartsCol: 3 // maximum number of charts per column
+};
 
 function PageImpl (PageId) {
 	if (!(this instanceof PageImpl)) return new PageImpl(PageId);

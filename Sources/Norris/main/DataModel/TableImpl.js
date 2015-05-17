@@ -15,6 +15,8 @@
  */
 
 var ChartImpl = require('./ChartImpl.js');
+var TableInPlaceUpdater = require('./TableInPlaceUpdater.js');
+var TableStreamUpdater = require('./TableStreamUpdater.js');
 
 // module.exports = TableImpl;
 
@@ -51,4 +53,8 @@ TableFactory.prototype.create = function (id) {
 	return new TableImpl(id);
 };
 
+//Dependency injection:
 ChartImpl.registerFactory('table' , TableFactory.getInstance());
+ChartImpl.registerUpdater('table:inplace', TableInPlaceUpdater.getInstance() );
+ChartImpl.registerUpdater('table:stream', TableStreamUpdater.getInstance() );
+

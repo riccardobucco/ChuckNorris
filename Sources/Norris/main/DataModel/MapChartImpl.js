@@ -15,6 +15,8 @@
  */
 
 var ChartImpl = require('./ChartImpl.js');
+var MapChartInPlaceUpdater = require('./MapChartInPlaceUpdater.js');
+var MapChartMovieUpdater = require('./MapChartMovieUpdater.js');
 
 //module.exports = MapChartImpl;
 
@@ -54,3 +56,6 @@ MapChartFactory.prototype.create = function (id) {
 
 // Dependency injection:
 ChartImpl.registerFactory('mapchart' , MapChartFactory.getInstance());
+ChartImpl.registerUpdater('mapchart:inplace', MapChartInPlaceUpdater.getInstance() );
+ChartImpl.registerUpdater('mapchart:movie', MapChartMovieUpdater.getInstance() );
+

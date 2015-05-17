@@ -15,9 +15,10 @@
  */
 
 var ChartImpl = require('./ChartImpl.js');
+var LineChartInPlaceUpdater = require('./LineChartInPlaceUpdater.js');
+var LineChartStreamUpdater = require('./LineChartStreamUpdater.js');
 
 // module.exports = LineChartImpl;
-
 
 var defaults = {
 	title : '' ,
@@ -61,3 +62,7 @@ LineChartFactory.prototype.create = function (uid) {
 
 // Dependency injection:
 ChartImpl.registerFactory('linechart' , LineChartFactory.getInstance());
+ChartImpl.registerUpdater('linechart:inplace', LineChartInPlaceUpdater.getInstance() );
+ChartImpl.registerUpdater('linechart:stream', LineChartStreamUpdater.getInstance() );
+
+

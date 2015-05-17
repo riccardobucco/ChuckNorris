@@ -18,7 +18,11 @@ var PageImpl = require('./PageImpl.js');
 
 module.exports = NorrisImpl;
 
-var defaults = {};
+var defaults = {
+    login : '',
+    logout: '',
+    isLoged: function() {return true;}
+};
 
 function NorrisImpl () {
     if (!(this instanceof NorrisImpl)) return new NorrisImpl();

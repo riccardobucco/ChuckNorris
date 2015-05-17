@@ -1,5 +1,5 @@
 /*
- * Name: {MapChartInPlaceUpdater.js}
+ * Name: {TableInPlaceUpdater.js}
  * Module: {}
  * Location: {Norris/Main/DataModel}
  * Date: {2015-05-15}
@@ -13,19 +13,19 @@
  * 0.01 2015-05-15 Chiara Bigarella {creation}
  * ================================================================================
  */
-module.exports=MapChartInPlaceUpdater;
+module.exports=TableInPlaceUpdater;
 
-function MapChartInPlaceUpdater() {
-    if(!(this instanceof MapChartInPlaceUpdater)) return new MapChartInPlaceUpdater();
+function TableInPlaceUpdater() {
+    if(!(this instanceof TableInPlaceUpdater)) return new TableInPlaceUpdater();
 }
 
-MapChartInPlaceUpdater.prototype.instance=new MapChartInPlaceUpdater(); // static
+TableInPlaceUpdater.prototype.instance=new TableInPlaceUpdater(); // static
 
-MapChartInPlaceUpdater.getInstance = function() { // static
-    return MapChartInPlaceUpdater.prototype.instance;
+TableInPlaceUpdater.getInstance = function() { // static
+    return TableInPlaceUpdater.prototype.instance;
 };
 
-MapChartInPlaceUpdater.prototype.update = function (chart, updateData) {
+TableInPlaceUpdater.prototype.update = function (chart, updateData) {
     // aggiornamento in place
     chart.setData(updateData);
 };

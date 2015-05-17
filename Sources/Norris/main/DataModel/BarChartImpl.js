@@ -63,4 +63,4 @@ BarChartFactory.prototype.create = function (uid) {
 
 // Dependency injection:
 ChartImpl.registerFactory('barchart' , BarChartFactory.getInstance());
-ChartImpl.registerUpdater('inplace', BarChartInPlaceUpdater.getInstance() );
+ChartImpl.registerUpdater('barchart:inplace', BarChartInPlaceUpdater.getInstance() );
