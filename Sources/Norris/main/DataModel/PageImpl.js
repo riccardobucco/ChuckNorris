@@ -44,14 +44,21 @@ function PageImpl (PageId) {
  * @return PageImpl
  */
 PageImpl.prototype.add = function (chart) {
-	if ((chart instanceof ChartImpl)) {
-		this.charts.push(chart);
-		return this;
+	if (this.charts.length < (this.maxChartsCol*this.maxChartsRow)) {
+		if ((chart instanceof ChartImpl)) {
+			this.charts.push(chart);
+			return this;
+		}
+		else {
+			console.log("ERROR: wrong type. A ChartImpl widget is required.");
+			return null;
+		}
 	}
 	else {
-		console.log("ERROR: wrong type. A ChartImpl widget is required.");
+		console.log("ERROR: maximum number of charts is reached. You cannot add other charts to the page.");
 		return null;
 	}
+
 };
 
 PageImpl.prototype.getId = function() {
