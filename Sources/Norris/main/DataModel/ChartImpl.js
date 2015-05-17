@@ -18,21 +18,24 @@
  * ChartImpl represents a generic chart.
  * @type {ChartImpl}
  */
-
+var events=require('events');
 
 module.exports = ChartImpl;
 
 function ChartImpl (chartType, id) {
 	if (!(this instanceof ChartImpl)) return new ChartImpl(id);
+	events.EventEmitter.call(this); //ChartImpl inherits from events.EventEmitter
 	this.uid = id;
 	this.type=chartType;
 	this.settings = {};
 	this.data = {};
 }
 
-ChartImpl.prototype.factories = {}; // dependencies is a static variable
+ChartImpl.prototype.__proto__=events.EventEmitter.prototype;
 
-ChartImpl.prototype.updaters = {}; // dependencies is a static variable
+ChartImpl.prototype.factories = {}; // factories is a static variable
+
+ChartImpl.prototype.updaters = {}; // updaters is a static variable
 
 /**
  * ChartImpl.registerFactory is a static method which registers the correspondence between a chart's

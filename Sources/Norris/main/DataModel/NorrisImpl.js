@@ -13,6 +13,7 @@
  * 0.1 2015-05-04 Chiara Bigarella {creation}
  * ================================================================================
  */
+var events=require('events');
 var ChartImpl = require('./ChartImpl.js');
 var PageImpl = require('./PageImpl.js');
 
@@ -26,11 +27,14 @@ var defaults = {
 
 function NorrisImpl () {
     if (!(this instanceof NorrisImpl)) return new NorrisImpl();
+    events.EventEmitter.call(this); //NorrisImpl inherits from events.EventEmitter
     this.settings = {};
     this.charts = {};
     this.pages = {};
     this.setSettings(defaults);
 }
+
+NorrisImpl.prototype.__proto__=events.EventEmitter.prototype;
 
 NorrisImpl.prototype.setSettings = function(settings) {
     if(typeof settings == 'object') {
