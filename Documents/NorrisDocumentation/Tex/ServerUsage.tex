@@ -1,0 +1,64 @@
+\level{2}{Usage}
+	\level{3}{Initialization}
+		\begin{itemize}
+			\item You have to create a HTTP server.
+			\begin{enumerate}
+				\item Include the library:
+				\begin{lstlisting}
+					var http = require('http');
+				\end{lstlisting}
+				\item Create a new instance of \texttt{http.Server}:
+				\begin{lstlisting}
+					var server = http.createServer();
+				\end{lstlisting}
+				\texttt{server} will emit events you can listen. For example the event \texttt{'request'} is emitted each time there is a request.
+				\item Make the HTTP server accept connections on the specified \texttt{port}:
+				\begin{lstlisting}
+					server.listen(port);
+				\end{lstlisting}
+			\end{enumerate}
+			\item You have to create an Express web server.
+			\begin{enumerate}
+				\item Include the library:
+				\begin{lstlisting}
+					var express = require('express');
+				\end{lstlisting}
+				\item Create a new instance of Express:
+				\begin{lstlisting}
+					var app = new express();
+				\end{lstlisting}
+			\end{enumerate}
+			\item You have to add a listener (\texttt{app}) to the end of the listeners array for the \texttt{'request'} event:
+			\begin{lstlisting}
+				server.on('request',app);
+			\end{lstlisting}
+			\item You have to create an instance of Norris.
+			\begin{enumerate}
+				\item Include the library:
+				\begin{lstlisting}
+					var norris = require('norris');
+				\end{lstlisting}
+				\item Create a new instance of Norris, and make it accessible by a client application at the given endpoint (e.g. \texttt{'/norris'}):
+				\begin{lstlisting}
+					var nrr = norris(server, endpoint);
+				\end{lstlisting}
+				\item (optional) You can choose some settings (properties) that affect how Norris behaves:
+				\begin{lstlisting}
+					nrr.settings(opts);
+				\end{lstlisting}
+				For more information about the opts object, see NORRIS SETTINGS
+			\end{enumerate}
+		\end{itemize}
+	\level{3}{Example usage}
+		This section contains some code that show you a common scenario. It is explained how it works and what it does. For more detailed information about the internal API, you can check out API REFERENCE.\\
+		You can create one of the charts Norris has available. In the example below, we will build a Bar Chart based on some data and settings.
+		\begin{lstlisting}
+			// create a new Bar Chart whose id is 'cp3'
+			var myChart = new nrr.Chart('barchart', 'cp3');
+			// enter data for the chart
+			myChart.data({...});
+			// choose options for the chart
+			myChart.settings({...});
+		\end{lstlisting}
+		\level{4}{Data structure}
+			The Bar Chart requires an array of labels for each of the data points (independent values). This is shown on the X-axis or on the Y-axis, depending on the settings relating to the orientation of the bars. The data for Bar Charts is broken up into an array of datasets. Each dataset has a name and an array of dependent values, whose length is equal to that of the array of labels.
