@@ -5,7 +5,8 @@ DOCUMENTI =	AnalisiDeiRequisiti \
 		PianoDiProgetto \
 		PianoDiQualifica \
 		SpecificaTecnica \
-		StudioDiFattibilita
+		StudioDiFattibilita \
+		NorrisDocumentation
 
 
 all: $(DOCUMENTI) LetteraDiPresentazione
