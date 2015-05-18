@@ -145,10 +145,11 @@ ChartImpl.prototype.getSettings = function() {
  * @param updateData contains new data and the information needed to update the chart.
  */
 ChartImpl.prototype.update = function(updateType, updateData) {
-	if (ChartImpl.prototype.updaters.hasOwnProperty(updateType)) {
-		var dep=ChartImpl.prototype.updaters[updateType];
+	var type=this.getType()+":"+updateType;
+	if (ChartImpl.prototype.updaters.hasOwnProperty(type)) {
+		var dep=ChartImpl.prototype.updaters[type];
 		dep.update(this, updateData);
-		this.emit(updateType, this.getId(), updateData);
+		this.emit('update', updateType, updateData); // emits an 'update' signal
 		console.log(JSON.stringify(this)); // TOGLIERE
 	}
 	else {
