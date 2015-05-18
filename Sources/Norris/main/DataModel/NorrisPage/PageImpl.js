@@ -19,7 +19,7 @@
  * @type {PageImpl}
  */
 
-var ChartImpl = require('./ChartImpl.js');
+var NorrisChart = require('../NorrisChart');
 
 module.exports = PageImpl;
 
@@ -45,12 +45,12 @@ function PageImpl (PageId) {
  */
 PageImpl.prototype.add = function (chart) {
 	if (this.charts.length < (this.settings['maxChartsCol']*this.settings['maxChartsRow']) ) {
-		if ((chart instanceof ChartImpl)) {
+		if ((chart instanceof NorrisChart)) {
 			this.charts.push(chart);
 			return this;
 		}
 		else {
-			console.log("ERROR: wrong type. A ChartImpl widget is required.");
+			console.log("ERROR: wrong type. A NorrisChart widget is required.");
 			return null;
 		}
 	}

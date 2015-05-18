@@ -14,8 +14,8 @@
  * ================================================================================
  */
 var events=require('events');
-var ChartImpl = require('./ChartImpl.js');
-var PageImpl = require('./PageImpl.js');
+var NorrisChart = require('./NorrisChart');
+var NorrisPage = require('./NorrisPage');
 
 module.exports = NorrisImpl;
 
@@ -51,9 +51,9 @@ NorrisImpl.prototype.getSettings = function() {
 };
 
 NorrisImpl.prototype.createChart = function(chartType, chartId) {
-    // controllo che chartType sia in ChartImpl.factories
+    // controllo che chartType sia in NorrisChart.factories
     // controllo che l'id sia univoco
-    var chart = ChartImpl.createChart(chartType, chartId);
+    var chart = NorrisChart.createChart(chartType, chartId);
     this.charts[chartId]=chart;
     this.emit(chartType, chartId);
     console.log(JSON.stringify(this.charts)); // TOGLIERE
@@ -70,7 +70,7 @@ NorrisImpl.prototype.getCharts = function() {
 
 NorrisImpl.prototype.createPage = function(pageId) {
     // controllo che l'id sia univoco
-    var page=new PageImpl(pageId);
+    var page=new NorrisPage(pageId);
     this.pages[pageId]=page;
     console.log(JSON.stringify(this.pages)); // TOGLIERE
     return page;
