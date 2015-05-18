@@ -55,6 +55,7 @@ NorrisImpl.prototype.createChart = function(chartType, chartId) {
     // controllo che l'id sia univoco
     var chart = ChartImpl.createChart(chartType, chartId);
     this.charts[chartId]=chart;
+    this.emit(chartType, chartId);
     console.log(JSON.stringify(this.charts)); // TOGLIERE
     return chart;
 };

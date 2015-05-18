@@ -42,8 +42,7 @@ ChartImpl.prototype.updaters = {}; // updaters is a static variable
  * type and its factory.
  *
  * @param chartType represents the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table';
- * @param factory is the factory instance which corresponds to the chartType type;
- * @return void
+ * @param factory is the factory instance which corresponds to the chartType type.
  */
 ChartImpl.registerFactory = function(chartType, factory) {
 	ChartImpl.prototype.factories[chartType] = factory; /* EXPLICITLY assign to prototype property,
@@ -53,9 +52,9 @@ ChartImpl.registerFactory = function(chartType, factory) {
 /**
  * ChartImpl.create is a static method which allows you to create specific kind of chart.
  *
- * @param chartType represents the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table'
- * @param chartId the chart's ID
- * @return ChartImpl
+ * @param chartType represents the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table';
+ * @param chartId the chart's ID;
+ * @return 	a specific chart object.
 */
 ChartImpl.createChart = function(chartType, chartId) {
 	if (ChartImpl.prototype.factories.hasOwnProperty(chartType)) {
@@ -71,30 +70,55 @@ ChartImpl.createChart = function(chartType, chartId) {
  * type and its updater.
  *
  * @param updateType represents the chart's updating type, i.e. 'stream', 'inplace', 'movie';
- * @param updater is the updater instance which corresponds to the updateType;
- * @return void
+ * @param updater is the updater instance which corresponds to the updateType.
  */
 ChartImpl.registerUpdater = function(updateType, updater) {
 	ChartImpl.prototype.updaters[updateType] = updater; /* EXPLICITLY assign to prototype property,
 	 otherwise it won't act as a static variable */
 };
 
+/**
+ * ChartImpl.prototype.getId allows you to get the chart's ID.
+ *
+ * @return 	the chart's ID.
+ */
 ChartImpl.prototype.getId = function() {
 	return this.uid;
 };
 
+/**
+ * ChartImpl.prototype.getType allows you to get the chart's type.
+ *
+ * @return 	the chart's type.
+ */
 ChartImpl.prototype.getType = function() {
 	return this.type;
 };
 
+/**
+ * ChartImpl.prototype.setData allows you to set the chart's data.
+ *
+ * @param data is a JSON object containing chart's data.
+ */
 ChartImpl.prototype.setData = function(data) {
 	this.data=data;
 };
 
+/**
+ * ChartImpl.prototype.getData allows you to get the chart's data.
+ *
+ * @return 	the chart's data.
+ */
 ChartImpl.prototype.getData = function() {
 	return this.data;
 };
 
+/**
+ * ChartImpl.prototype.setSettings allows you to set the chart's settings. You're allowed to change value to
+ * the default properties, but you cannot add new properties to chart's settings.
+ *
+ * @param settings is a JSON object containing chart's settings you wish to add.
+ */
 ChartImpl.prototype.setSettings = function(settings) {
 	if(typeof settings == 'object') {
 		for(var key in settings) {
@@ -105,19 +129,35 @@ ChartImpl.prototype.setSettings = function(settings) {
 	}
 };
 
+/**
+ * ChartImpl.prototype.getSettings allows you to get the chart's settings.
+ *
+ * @return 	the chart's settings.
+ */
 ChartImpl.prototype.getSettings = function() {
 	return this.settings;
 };
 
+/**
+ * ChartImpl.prototype.update allows you to update the chart's data.
+ *
+ * @param updateType represents the chart's updating type, i.e. 'stream', 'inplace', 'movie';
+ * @param updateData contains new data and the information needed to update the chart.
+ */
 ChartImpl.prototype.update = function(updateType, updateData) {
-	if (ChartImpl.prototype.updaters.hasOwnProperty(updateData)) {
+	if (ChartImpl.prototype.updaters.hasOwnProperty(updateType)) {
 		var dep=ChartImpl.prototype.updaters[updateType];
 		dep.update(this, updateData);
+		this.emit(updateType, this.getId(), updateData);
 		console.log(JSON.stringify(this)); // TOGLIERE
+	}
+	else {
+		console.log("ERROR: wrong updating type." );
+
 	}
 };
 
-// for dependency injection:
+// For dependency injection:
 var BarChartImpl = require('./BarChartImpl.js');
 var LineChartImpl = require('./LineChartImpl.js');
 var MapChartImpl = require('./MapChartImpl.js');
@@ -155,4 +195,3 @@ ChartModel.prototype.get = function (param) {
 		return this.settings;
 };
 */
-

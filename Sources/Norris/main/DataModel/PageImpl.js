@@ -44,7 +44,7 @@ function PageImpl (PageId) {
  * @return PageImpl
  */
 PageImpl.prototype.add = function (chart) {
-	if (this.charts.length < (this.maxChartsCol*this.maxChartsRow)) {
+	if (this.charts.length < (this.settings['maxChartsCol']*this.settings['maxChartsRow']) ) {
 		if ((chart instanceof ChartImpl)) {
 			this.charts.push(chart);
 			return this;
