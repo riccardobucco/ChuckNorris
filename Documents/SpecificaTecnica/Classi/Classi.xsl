@@ -10,7 +10,7 @@
 	</xsl:template>
 
 	<xsl:template match="*[local-name()='Package']">
-		<xsl:if test="@name!='java'">
+		<xsl:if test="@name!='java' and @name!='Hidden'">
 
 			<xsl:variable name="name">
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
