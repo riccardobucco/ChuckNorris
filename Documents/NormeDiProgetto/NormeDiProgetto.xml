@@ -24,6 +24,100 @@
     </appendix>
 
     <changes>
+	  <!-- Fine fase 6-->
+        <version>
+            <id>6.00</id>
+            <date>2015-05-27</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+		<version>
+            <id>5.04</id>
+            <date>2015-05-21</date>
+            <author>Rubin Marco</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+		<version>
+            <id>5.03</id>
+            <date>2015-05-19</date>
+            <author>Carlon Chiara</author>
+            <role>Amministratore</role>
+            <description>Inserimento diagrammi delle attività per i grafici</description>
+        </version>
+		<version>
+            <id>5.02</id>
+            <date>2015-05-09</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+		<version>
+            <id>5.01</id>
+            <date>2015-05-08</date>
+            <author>Carlon Chiara</author>
+            <role>Amministratore</role>
+            <description>Incremento lista di controllo</description>
+        </version>
+		<!-- Fine fase 5-->
+        <version>
+            <id>5.00</id>
+            <date>2015-05-03</date>
+            <author>Bigarella Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+		<version>
+            <id>4.03</id>
+            <date>2015-04-24</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+		<version>
+            <id>4.02</id>
+            <date>2015-04-22</date>
+            <author>Carlon Chiara</author>
+            <role>Amministratore</role>
+            <description>Redazione appendice su Heroku</description>
+        </version>
+		<version>
+            <id>4.01</id>
+            <date>2015-04-21</date>
+            <author>Carlon Chiara</author>
+            <role>Amministratore</role>
+            <description>Redazione appendice su Android Studio</description>
+        </version>
+		<!-- Fine fase 4-->
+        <version>
+            <id>4.00</id>
+            <date>2015-04-20</date>
+            <author>Dal Bianco Davide</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+		<version>
+            <id>3.03</id>
+            <date>2015-04-06</date>
+            <author>Bigarella Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+		<version>
+            <id>3.02</id>
+            <date>2015-04-05</date>
+            <author>Alessandro Moretto</author>
+            <role>Amministratore</role>
+            <description>Aggiunti riferimenti al paragrafo sulla codifica nelle sezioni della Documentazione e dello Svluppo</description>
+        </version>
+		<version>
+            <id>3.01</id>
+            <date>2015-04-05</date>
+            <author>Moretto Alessandro</author>
+            <role>Amministratore</role>
+            <description>Stesura sezione norme sulla codifica</description>
+        </version>
     	<!-- Fine fase 3-->
         <version>
             <id>3.00</id>

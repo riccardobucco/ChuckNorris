@@ -26,7 +26,151 @@
 	</appendix>
 
 	<changes>
+<!-- Fine fase 6-->
+        <version>
+            <id>4.00</id>
+            <date>2015-05-27</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+		<version>
+            <id>3.12</id>
+            <date>2015-03-29</date>
+            <author>Rubin Marco</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+		<version>
+            <id>3.11</id>
+            <date>2015-05-10</date>
+            <author>Davide Dal Bianco</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+		<version>
+            <id>3.10</id>
+            <date>2015-05-10</date>
+            <author>Bigarella Chiara</author>
+            <role>Progettista</role>
+            <description>Aggiunto paragrafo per spiegare l'utilizzo delle classi factory</description>
+        </version>
+		<version>
+            <id>3.09</id>
+            <date>2015-05-10</date>
+            <author>Bucco Riccardo</author>
+            <role>Progettista</role>
+            <description>Implementazione classe ChartBridge</description>
+        </version>
+		<version>
+            <id>3.08</id>
+            <date>2015-05-10</date>
+            <author>Bucco Riccardo</author>
+            <role>Progettista</role>
+            <description>Spostamento delle classi updater</description>
+        </version>
+		<version>
+            <id>3.07</id>
+            <date>2015-05-09</date>
+            <author>Carlon Chiara</author>
+            <role>Progettista</role>
+            <description>Stesura ed importazione tracciamento</description>
+        </version>
+		<version>
+            <id>3.06</id>
+            <date>2015-05-09</date>
+            <author>Bucco Riccardo</author>
+            <role>Progettista</role>
+            <description>Spostamento pattern dopo la definizione dell'architettura</description>
+        </version>
+		<version>
+            <id>3.05</id>
+            <date>2015-05-08</date>
+            <author>Carlon Chiara</author>
+            <role>Progettista</role>
+            <description>Approfondita descrizione pattern Bridge</description>
+        </version>
+		<version>
+            <id>3.04</id>
+            <date>2015-05-08</date>
+            <author>Bigarella Chiara</author>
+            <role>Progettista</role>
+            <description>Correzione piccoli errori segnaleti in RP</description>
+        </version>
+		<version>
+            <id>3.03</id>
+            <date>2015-05-08</date>
+            <author>Bucco Riccardo</author>
+            <role>Progettista</role>
+            <description>Stesura ed importazione tracciamento</description>
+        </version>
+		<version>
+            <id>3.02</id>
+            <date>2015-05-07</date>
+            <author>Carlon Chiara</author>
+            <role>Progettista</role>
+            <description>Aggiunti svantaggi tecnologie</description>
+        </version>
+		<version>
+            <id>3.01</id>
+            <date>2015-05-07</date>
+            <author>Bucco Riccardo</author>
+            <role>Progettista</role>
+            <description>Modificati riferimenti informativi</description>
+        </version>
+<!-- Fine fase 5-->
+        <version>
+            <id>3.00</id>
+            <date>2015-05-03</date>
+            <author>Bigarella Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+		</version>
+		<version>
+            <id>2.02</id>
+            <date>2015-04-24</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Stesura ed importazione tracciamento</description>
+        </version>
+		<version>
+            <id>2.01</id>
+            <date>2015-04-21</date>
+            <author>Rubin Marco</author>
+            <role>Progettista</role>
+            <description>Stesura test di unità</description>
+        </version>
+<!-- Fine fase 4-->
+        <version>
+            <id>2.00</id>
+            <date>2015-04-20</date>
+            <author>Dal Bianco Davide</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+		<version>
+            <id>1.02</id>
+            <date>2015-04-06</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica incremento</description>
+        </version>
+		<version>
+            <id>1.01</id>
+            <date>2015-04-04</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Progettista</role>
+            <description>Apporto di piccole modifiche</description>
+        </version>
 <!-- Fine fase 3-->
+        <version>
+            <id>1.00</id>
+            <date>2015-03-31</date>
+            <author>Rubin Marco</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>		
+<!-- Fine fase 1-->
         <version>
             <id>1.00</id>
             <date>2015-03-31</date>

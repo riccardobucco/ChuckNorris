@@ -24,6 +24,107 @@
     </appendix>
 
 	<changes>
+<!-- Fine fase 6 -->
+        <version>
+            <id>6.00</id>
+            <date>2015-05-27</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+		 <version>
+            <id>5.07</id>
+            <date>2015-05-26</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica consuntivo</description>
+        </version>
+		 <version>
+            <id>5.06</id>
+            <date>2015-05-25</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Aggiornamento consuntivo</description>
+        </version>
+		 <version>
+            <id>5.05</id>
+            <date>2015-05-09</date>
+            <author>Rubin Marco</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+		 <version>
+            <id>5.04</id>
+            <date>2015-05-09</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Diversificazione fra consuntivo e preventivo a finire</description>
+        </version>
+		 <version>
+            <id>5.03</id>
+            <date>2015-05-09</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Aggiunto consuntivo delle ore ruolo/persona</description>
+        </version>
+		 <version>
+            <id>5.02</id>
+            <date>2015-05-08</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Spostamento descrizioni fasi</description>
+        </version>
+		<version>
+            <id>5.01</id>
+            <date>2015-05-07</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Cambiamento date di conclusione delle ultime fasi</description>
+        </version>
+<!-- Fine fase 5 -->
+        <version>
+            <id>5.00</id>
+            <date>2015-05-03</date>
+            <author>Bigarella Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+		<version>
+            <id>4.02</id>
+            <date>2015-05-03</date>
+            <author>Dal Bianco Davide</author>
+            <role>Verificatore</role>
+            <description>Verifica consuntivo</description>
+        </version>
+		<version>
+            <id>4.01</id>
+            <date>2015-05-03</date>
+            <author>Bigarella Chiara</author>
+            <role>Project Manager</role>
+            <description>Aggiornamento consuntivo</description>
+        </version>
+<!-- Fine fase 4-->
+        <version>
+            <id>4.00</id>
+            <date>2015-04-20</date>
+            <author>Dal Bianco Davide</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+		<version>
+            <id>3.02</id>
+            <date>2015-04-19</date>
+            <author>Bucco Riccardo</author>
+            <role>Verifica</role>
+            <description>Verifica consuntivo</description>
+        </version>
+		<version>
+            <id>3.01</id>
+            <date>2015-04-19</date>
+            <author>Dal Bianco Davide</author>
+            <role>Project Manager</role>
+            <description>Aggiornamento consuntivo</description>
+        </version>
 <!-- Fine fase 3-->
         <version>
             <id>3.00</id>
