@@ -99,7 +99,7 @@ ChartImpl.prototype.getType = function() {
 /**
  * Sets the chart's data.
  *
- * @param data - a JSON object containing the chart's data.
+ * @param {ChartData} data - a JSON object containing the chart's data.
  */
 ChartImpl.prototype.setData = function(data) {
 	this.data=data;
@@ -108,7 +108,7 @@ ChartImpl.prototype.setData = function(data) {
 /**
  * Gets the chart's data.
  *
- * @return 	the chart's data.
+ * @return 	{ChartData} the chart's data.
  */
 ChartImpl.prototype.getData = function() {
 	return this.data;
@@ -118,7 +118,7 @@ ChartImpl.prototype.getData = function() {
  * Sets the chart's settings. You're allowed to change value to the default properties, but you cannot add
  * new properties to the chart's settings.
  *
- * @param settings - a JSON object containing the chart's settings you wish to add.
+ * @param {ChartSettings} settings - a JSON object containing the chart's settings you wish to add.
  */
 ChartImpl.prototype.setSettings = function(settings) {
 	if(typeof settings == 'object') {
@@ -133,7 +133,7 @@ ChartImpl.prototype.setSettings = function(settings) {
 /**
  * Gets the chart's settings.
  *
- * @return 	the chart's settings.
+ * @return 	{ChartSettings} the chart's settings.
  */
 ChartImpl.prototype.getSettings = function() {
 	return this.settings;
@@ -143,7 +143,7 @@ ChartImpl.prototype.getSettings = function() {
  * Updates the chart's data.
  *
  * @param {String} updateType - the chart's updating type, i.e. 'stream', 'inplace', 'movie';
- * @param updateData - contains the new data and the information needed to update the chart.
+ * @param {ChartUpdate} updateData - contains the new data and the information needed to update the chart.
  */
 ChartImpl.prototype.update = function(updateType, updateData) {
 	var type=this.getType()+":"+updateType;

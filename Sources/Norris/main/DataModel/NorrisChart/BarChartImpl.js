@@ -34,6 +34,12 @@ var defaults = {
 	}
 };
 
+/**
+ * Creates a new bar chart.
+ * @constructor
+ * @param {String} id - the bar chart's id.
+ */
+
 function BarChartImpl (uid) {
 	if (!(this instanceof BarChartImpl)) return new BarChartImpl(uid);
 	ChartImpl.call(this, 'barchart', uid);
@@ -44,6 +50,10 @@ BarChartImpl.prototype.__proto__ = ChartImpl.prototype;
 
 /* BarChartFactory ------------------------------------------------------- */
 
+/**
+ * Creates a new bar chart factory.
+ * @constructor
+ */
 function BarChartFactory() {
 	if(!(this instanceof BarChartFactory)) {
 		return new BarChartFactory();
@@ -52,12 +62,21 @@ function BarChartFactory() {
 
 BarChartFactory.prototype.instance=new BarChartFactory(); // static
 
+/**
+ * Gets the BarChartFactory's instance.
+ * @returns {BarChartFactory} the factory's instance.
+ */
 BarChartFactory.getInstance = function() { // static
 	return BarChartFactory.prototype.instance;
 };
 
-BarChartFactory.prototype.createChart = function (uid) {
-	return new BarChartImpl(uid);
+/**
+ * Creates a new bar chart.
+ * @param {String} id - the bar chart's id;
+ * @returns {BarChartImpl} - the created bar chart.
+ */
+BarChartFactory.prototype.createChart = function (id) {
+	return new BarChartImpl(id);
 };
 
 // Dependency injection:

@@ -28,9 +28,14 @@ var defaults = {
 	maxPoints : 5
 };
 
-function TableImpl (uid) {
+/**
+ * Creates a new table.
+ * @constructor
+ * @param {String} id - the table's id.
+ */
+function TableImpl (id) {
 	if (!(this instanceof TableImpl)) return new TableImpl(uid);
-	ChartImpl.call(this, 'table',uid);
+	ChartImpl.call(this, 'table',id);
 	this.setSettings(defaults);
 }
 
@@ -38,16 +43,29 @@ TableImpl.prototype.__proto__ = ChartImpl.prototype;
 
 /* TableFactory ------------------------------------------------------- */
 
+/**
+ * Creates a new table factory.
+ * @constructor
+ */
 function TableFactory() {
 	if(!(this instanceof TableFactory)) return new TableFactory();
 }
 
 TableFactory.prototype.instance=new TableFactory(); // static
 
+/**
+ * Gets the TableFactory's instance.
+ * @returns {TableFactory} the factory's instance.
+ */
 TableFactory.getInstance = function() { // static
 	return TableFactory.prototype.instance;
 };
 
+/**
+ * Creates a new table.
+ * @param {String} id - the table's id;
+ * @returns {BarChartImpl} - the created table.
+ */
 TableFactory.prototype.createChart = function (id) {
 	return new TableImpl(id);
 };

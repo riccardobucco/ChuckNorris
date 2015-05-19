@@ -28,9 +28,14 @@ var defaults = {
 	maxPoints : 5
 };
 
-function MapChartImpl (uid) {
-	if (!(this instanceof MapChartImpl)) return new MapChartImpl(uid);
-	ChartImpl.call(this, 'mapchart', uid);
+/**
+ * Creates a new map chart.
+ * @constructor
+ * @param {String} id - the map chart's id.
+ */
+function MapChartImpl (id) {
+	if (!(this instanceof MapChartImpl)) return new MapChartImpl(id);
+	ChartImpl.call(this, 'mapchart', id);
 	this.setSettings(defaults);
 }
 
@@ -38,16 +43,29 @@ MapChartImpl.prototype.__proto__ = ChartImpl.prototype;
 
 /* MapChartFactory ------------------------------------------------------- */
 
+/**
+ * Creates a new map chart factory.
+ * @constructor
+ */
 function MapChartFactory() {
 	if(!(this instanceof MapChartFactory)) return new MapChartFactory();
 }
 
 MapChartFactory.prototype.instance=new MapChartFactory(); // static
 
+/**
+ * Gets the MapChartFactory's instance.
+ * @returns {MapChartFactory} the factory's instance.
+ */
 MapChartFactory.getInstance = function() { // static
 	return MapChartFactory.prototype.instance;
 };
 
+/**
+ * Creates a new map chart.
+ * @param {String} id - the map chart's id;
+ * @returns {MapChartImpl} - the created map chart.
+ */
 MapChartFactory.prototype.createChart = function (id) {
 	return new MapChartImpl(id);
 };

@@ -74,7 +74,7 @@ PageImpl.prototype.getId = function() {
  * Sets the page's settings. You're allowed to change value to the default properties, but you cannot add
  * new properties to the page's settings.
  *
- * @param settings - a JSON object containing the page's settings you wish to add.
+ * @param {PageSettings} settings - a JSON object containing the page's settings you wish to add.
  */
 PageImpl.prototype.setSettings = function(settings) {
 	if(typeof settings == 'object') {
@@ -89,13 +89,27 @@ PageImpl.prototype.setSettings = function(settings) {
 /**
  * Gets the page's settings.
  *
- * @return 	the page's settings.
+ * @return {PageSettings} the page's settings.
  */
 PageImpl.prototype.getSettings = function() {
 	return this.settings;
 };
 
+/**
+ * Gets the page's charts.
+ *
+ * @return {ChartImpl[]} the page's charts.
+ */
+PageImpl.prototype.getCharts = function() {
+	return this.charts;
+};
 
+/**
+ * Removes all the charts in the page.
+ */
+PageImpl.prototype.clearCharts = function() {
+	this.charts=[];
+};
 /*
 /* Modifica le impostazioni * /
 PageImpl.prototype.set = function (param, info) {

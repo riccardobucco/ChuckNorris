@@ -35,9 +35,14 @@ var defaults = {
 	}
 };
 
-function LineChartImpl (uid) {
-	if (!(this instanceof LineChartImpl)) return new LineChartImpl(uid);
-	ChartImpl.call(this, 'linechart', uid);
+/**
+ * Creates a new line chart.
+ * @constructor
+ * @param {String} id - the line chart's id.
+ */
+function LineChartImpl (id) {
+	if (!(this instanceof LineChartImpl)) return new LineChartImpl(id);
+	ChartImpl.call(this, 'linechart', id);
 	this.setSettings(defaults);
 }
 
@@ -45,17 +50,31 @@ LineChartImpl.prototype.__proto__ = ChartImpl.prototype;
 
 /* LineChartFactory ------------------------------------------------------- */
 
+/**
+ * Creates a new line chart factory.
+ * @constructor
+ */
 function LineChartFactory() {
 	if(!(this instanceof LineChartFactory)) return new LineChartFactory();
 }
 
 LineChartFactory.prototype.instance=new LineChartFactory(); // static
 
+/**
+ * Gets the LineChartFactory's instance.
+ * @returns {LineChartFactory} the factory's instance.
+ */
 LineChartFactory.getInstance = function() { // static
 	return LineChartFactory.prototype.instance;
 };
-LineChartFactory.prototype.createChart = function (uid) {
-	return new LineChartImpl(uid);
+
+/**
+ * Creates a new line chart.
+ * @param {String} id - the line chart's id;
+ * @returns {LineChartImpl} - the created line chart.
+ */
+LineChartFactory.prototype.createChart = function (id) {
+	return new LineChartImpl(id);
 };
 
 // Dependency injection:
