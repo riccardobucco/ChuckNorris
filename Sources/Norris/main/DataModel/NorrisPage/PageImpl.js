@@ -14,11 +14,6 @@
  * ================================================================================
  */
 
-/**
- * PageImpl represents a web page which contains one or more charts.
- * @class {PageImpl}
- */
-
 var NorrisChart = require('../NorrisChart');
 
 module.exports = PageImpl;
@@ -29,6 +24,11 @@ var defaults = {
 	maxChartsCol: 3 // maximum number of charts per column
 };
 
+/**
+ * Creates a new page.
+ * @constructor
+ * @param {String} PageId - the page's id.
+ */
 function PageImpl (PageId) {
 	if (!(this instanceof PageImpl)) return new PageImpl(PageId);
 	this.uid = PageId;
@@ -38,10 +38,10 @@ function PageImpl (PageId) {
 }
 
 /**
- * PageImpl.add allows you to add a chart to the page.
+ * Adds a chart to the page.
  *
- * @param chart is the chart you want to add to the page;
- * @return PageImpl
+ * @param {ChartImpl} chart - the chart you wish to add to the page;
+ * @return {PageImpl} the page to which you've added the chart.
  */
 PageImpl.prototype.add = function (chart) {
 	if (this.charts.length < (this.settings['maxChartsCol']*this.settings['maxChartsRow']) ) {
@@ -61,10 +61,21 @@ PageImpl.prototype.add = function (chart) {
 
 };
 
+/**
+ * Gets the page's ID.
+ *
+ * @return {String} the page's ID.
+ */
 PageImpl.prototype.getId = function() {
 	return this.uid;
 };
 
+/**
+ * Sets the page's settings. You're allowed to change value to the default properties, but you cannot add
+ * new properties to the page's settings.
+ *
+ * @param settings - a JSON object containing the page's settings you wish to add.
+ */
 PageImpl.prototype.setSettings = function(settings) {
 	if(typeof settings == 'object') {
 		for(var key in settings) {
@@ -75,6 +86,11 @@ PageImpl.prototype.setSettings = function(settings) {
 	}
 };
 
+/**
+ * Gets the page's settings.
+ *
+ * @return 	the page's settings.
+ */
 PageImpl.prototype.getSettings = function() {
 	return this.settings;
 };

@@ -118,7 +118,7 @@ ChartImpl.prototype.getData = function() {
  * Sets the chart's settings. You're allowed to change value to the default properties, but you cannot add
  * new properties to the chart's settings.
  *
- * @param settings - a JSON object containing chart's settings you wish to add.
+ * @param settings - a JSON object containing the chart's settings you wish to add.
  */
 ChartImpl.prototype.setSettings = function(settings) {
 	if(typeof settings == 'object') {
