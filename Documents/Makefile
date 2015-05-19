@@ -66,6 +66,11 @@ _specifica: _force
 	@ xsltproc SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Chuck.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > SpecificaTecnica/Classi/Chuck.tex
 	@ xsltproc SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Applicazione.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > SpecificaTecnica/Classi/Applicazione.tex
 
+	@ #escape caratteri
+	@ sed -ri 's/\$$/\\\$$/gi' SpecificaTecnica/Classi/Norris.tex
+	@ sed -ri 's/\$$/\\\$$/gi' SpecificaTecnica/Classi/Chuck.tex
+	@ sed -ri 's/\$$/\\\$$/gi' SpecificaTecnica/Classi/Applicazione.tex
+
 	@ #download tabelle
 	@ curl http://kaizenteam.it/tracker/export/componenti-requisiti.php > SpecificaTecnica/TrackerComponentiRequisiti.tex
 	@ curl http://kaizenteam.it/tracker/export/requisiti-componenti.php > SpecificaTecnica/TrackerRequisitiComponenti.tex
