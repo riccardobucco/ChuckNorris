@@ -34,8 +34,7 @@
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
 			\level{5}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
-			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
-
+			
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
 			\item \textbf{Tipo:} classe
@@ -55,8 +54,7 @@
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
 			\level{5}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
-			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
-
+			
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
 			\item \textbf{Tipo:} interfaccia
