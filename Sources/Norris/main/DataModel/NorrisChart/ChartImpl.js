@@ -18,12 +18,19 @@
  * ChartImpl represents a generic chart.
  * @type {ChartImpl}
  */
+
 var events=require('events');
 
 module.exports = ChartImpl;
 
+/**
+ * ChartImpl's constructor.
+ *
+ * @param chartType represents the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table';
+ * @param id is the chart's id.
+ */
 function ChartImpl (chartType, id) {
-	if (!(this instanceof ChartImpl)) return new ChartImpl(id);
+	if (!(this instanceof ChartImpl)) return new ChartImpl(chartType,id);
 	events.EventEmitter.call(this); //ChartImpl inherits from events.EventEmitter
 	this.uid = id;
 	this.type=chartType;
@@ -50,7 +57,7 @@ ChartImpl.registerFactory = function(chartType, factory) {
 };
 
 /**
- * ChartImpl.create is a static method which allows you to create specific kind of chart.
+ * ChartImpl.createChart is a static method which allows you to create specific kind of chart.
  *
  * @param chartType represents the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table';
  * @param chartId the chart's ID;
@@ -150,7 +157,7 @@ ChartImpl.prototype.update = function(updateType, updateData) {
 		var dep=ChartImpl.prototype.updaters[type];
 		dep.update(this, updateData);
 		this.emit('update', updateType, updateData); // emits an 'update' signal
-		console.log(JSON.stringify(this)); // TOGLIERE
+		console.log("Chart updated: "+JSON.stringify(this)); // TOGLIERE
 	}
 	else {
 		console.log("ERROR: wrong updating type." );
