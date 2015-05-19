@@ -16,7 +16,7 @@
 
 /**
  * PageImpl represents a web page which contains one or more charts.
- * @type {PageImpl}
+ * @class {PageImpl}
  */
 
 var NorrisChart = require('../NorrisChart');

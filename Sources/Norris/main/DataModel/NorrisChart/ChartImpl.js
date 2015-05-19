@@ -14,20 +14,15 @@
  * ================================================================================
  */
 
-/**
- * ChartImpl represents a generic chart.
- * @type {ChartImpl}
- */
-
 var events=require('events');
 
 module.exports = ChartImpl;
 
 /**
- * ChartImpl's constructor.
- *
- * @param chartType represents the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table';
- * @param id is the chart's id.
+ * Creates a new chart.
+ * @constructor
+ * @param {String} chartType - the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table';
+ * @param {String} id - the chart's id.
  */
 function ChartImpl (chartType, id) {
 	if (!(this instanceof ChartImpl)) return new ChartImpl(chartType,id);
@@ -45,11 +40,10 @@ ChartImpl.prototype.factories = {}; // factories is a static variable
 ChartImpl.prototype.updaters = {}; // updaters is a static variable
 
 /**
- * ChartImpl.registerFactory is a static method which registers the correspondence between a chart's
- * type and its factory.
+ * A static method which registers the correspondence between a chart's type and its factory.
  *
- * @param chartType represents the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table';
- * @param factory is the factory instance which corresponds to the chartType type.
+ * @param {String} chartType - the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table';
+ * @param {ChartFactory} factory - the factory instance which corresponds to the type in chartType.
  */
 ChartImpl.registerFactory = function(chartType, factory) {
 	ChartImpl.prototype.factories[chartType] = factory; /* EXPLICITLY assign to prototype property,
@@ -57,11 +51,11 @@ ChartImpl.registerFactory = function(chartType, factory) {
 };
 
 /**
- * ChartImpl.createChart is a static method which allows you to create specific kind of chart.
+ * A static method which allows you to create specific kinds of chart.
  *
- * @param chartType represents the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table';
- * @param chartId the chart's ID;
- * @return 	a specific chart object.
+ * @param {String} chartType - the chart's type, i.e. 'barchart', 'linechart', 'mapchart', 'table';
+ * @param {String} chartId - the chart's ID;
+ * @return {ChartImpl} the created chart.
 */
 ChartImpl.createChart = function(chartType, chartId) {
 	if (ChartImpl.prototype.factories.hasOwnProperty(chartType)) {
@@ -73,11 +67,11 @@ ChartImpl.createChart = function(chartType, chartId) {
 };
 
 /**
- * ChartImpl.registerUpdater is a static method which registers the correspondence between an updating
- * type and its updater.
+ * A static method which registers the correspondence between an updating type and its updater.
  *
- * @param updateType represents the chart's updating type, i.e. 'stream', 'inplace', 'movie';
- * @param updater is the updater instance which corresponds to the updateType.
+ * @param {String} updateType - the chart's updating type, i.e. 'linechart:stream', 'barchart:inplace',
+ * 'mapchart:movie', and so on;
+ * @param {ChartUpdater} updater - the updater instance which corresponds to the updating type in updateType.
  */
 ChartImpl.registerUpdater = function(updateType, updater) {
 	ChartImpl.prototype.updaters[updateType] = updater; /* EXPLICITLY assign to prototype property,
@@ -85,34 +79,34 @@ ChartImpl.registerUpdater = function(updateType, updater) {
 };
 
 /**
- * ChartImpl.prototype.getId allows you to get the chart's ID.
+ * Gets the chart's ID.
  *
- * @return 	the chart's ID.
+ * @return {String} the chart's ID.
  */
 ChartImpl.prototype.getId = function() {
 	return this.uid;
 };
 
 /**
- * ChartImpl.prototype.getType allows you to get the chart's type.
+ * Gets the chart's type.
  *
- * @return 	the chart's type.
+ * @return {String} the chart's type.
  */
 ChartImpl.prototype.getType = function() {
 	return this.type;
 };
 
 /**
- * ChartImpl.prototype.setData allows you to set the chart's data.
+ * Sets the chart's data.
  *
- * @param data is a JSON object containing chart's data.
+ * @param data - a JSON object containing the chart's data.
  */
 ChartImpl.prototype.setData = function(data) {
 	this.data=data;
 };
 
 /**
- * ChartImpl.prototype.getData allows you to get the chart's data.
+ * Gets the chart's data.
  *
  * @return 	the chart's data.
  */
@@ -121,10 +115,10 @@ ChartImpl.prototype.getData = function() {
 };
 
 /**
- * ChartImpl.prototype.setSettings allows you to set the chart's settings. You're allowed to change value to
- * the default properties, but you cannot add new properties to chart's settings.
+ * Sets the chart's settings. You're allowed to change value to the default properties, but you cannot add
+ * new properties to the chart's settings.
  *
- * @param settings is a JSON object containing chart's settings you wish to add.
+ * @param settings - a JSON object containing chart's settings you wish to add.
  */
 ChartImpl.prototype.setSettings = function(settings) {
 	if(typeof settings == 'object') {
@@ -137,7 +131,7 @@ ChartImpl.prototype.setSettings = function(settings) {
 };
 
 /**
- * ChartImpl.prototype.getSettings allows you to get the chart's settings.
+ * Gets the chart's settings.
  *
  * @return 	the chart's settings.
  */
@@ -146,10 +140,10 @@ ChartImpl.prototype.getSettings = function() {
 };
 
 /**
- * ChartImpl.prototype.update allows you to update the chart's data.
+ * Updates the chart's data.
  *
- * @param updateType represents the chart's updating type, i.e. 'stream', 'inplace', 'movie';
- * @param updateData contains new data and the information needed to update the chart.
+ * @param {String} updateType - the chart's updating type, i.e. 'stream', 'inplace', 'movie';
+ * @param updateData - contains the new data and the information needed to update the chart.
  */
 ChartImpl.prototype.update = function(updateType, updateData) {
 	var type=this.getType()+":"+updateType;
