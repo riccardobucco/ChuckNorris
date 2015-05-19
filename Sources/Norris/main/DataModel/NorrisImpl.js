@@ -20,9 +20,9 @@ var NorrisPage = require('./NorrisPage');
 module.exports = NorrisImpl;
 
 var defaults = {
-    login : '',
-    logout: '',
-    isLoged: function() {return true;}
+    login : function(){},
+    logout: function(){},
+    isLogged: function() {return true;}
 };
 
 /**
