@@ -3,7 +3,8 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="text"/>
 
-	
+	<xsl:variable name="system" select="/XMI/XMI.content/*[local-name()='Model']/@name"/>
+
 	<xsl:template match="/">
 		<xsl:apply-templates select="XMI/XMI.content/*[local-name()='Model']/*[local-name()='Namespace.ownedElement']/*[local-name()='Package']"/>
 	</xsl:template>
@@ -34,6 +35,7 @@
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
 			\level{4}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
+			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
 			
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
@@ -50,20 +52,23 @@
 
 	<!-- interfacce -->
 	<xsl:template match="*[local-name()='Interface']">
-
+		<xsl:if test="$system = 'Applicazione'">
 			<xsl:variable name="name">
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
 			\level{4}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
+			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
 			
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
 			\item \textbf{Tipo:} interfaccia
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
+			<xsl:apply-templates select="*[local-name()='Classifier.feature']"/>
 			\end{itemize}
 
 			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>
+		</xsl:if>
 	</xsl:template>
 
 	<!-- visibilità -->
@@ -118,7 +123,7 @@
 		\IfFileExists{DefinizioneDiProdotto/Pics/Classi/<xsl:value-of select="$name"/>.pdf}{
 			\begin{figure}[H]
 				\centering
-				\includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/Classi/<xsl:value-of select="$name"/>}
+				\includegraphics[scale=0.5]{DefinizioneDiProdotto/Pics/Classi/<xsl:value-of select="$name"/>}
 				\caption{<xsl:value-of select="translate($name,'-',':')"/>}
 			\end{figure}
 		}
