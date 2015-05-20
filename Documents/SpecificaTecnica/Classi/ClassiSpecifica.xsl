@@ -9,6 +9,7 @@
 		<xsl:apply-templates select="XMI/XMI.content/*[local-name()='Model']/*[local-name()='Namespace.ownedElement']/*[local-name()='Package']"/>
 	</xsl:template>
 
+	<!-- package -->
 	<xsl:template match="*[local-name()='Package']">
 		<xsl:if test="@name!='java' and @name!='Hidden'">
 
@@ -70,12 +71,10 @@
 			\item \textbf{Visibilità:} <xsl:value-of select="@xmi.value"/>
 	</xsl:template>
 
-	<!-- definizione -->
+	<!-- descrizione -->
 	<xsl:template match="*[local-name()='ModelElement.definition']">
-			\item \textbf{Descrizione:} <xsl:value-of select="@xmi.value"/>
+			\item \textbf{Descrizione:} <xsl:value-of select="translate(@xmi.value,'+',' ')"/>
 	</xsl:template>
-
-
 
 	<!-- stereotipi -->
 	<xsl:template match="*[local-name()='ModelElement.stereotype']">
@@ -112,6 +111,7 @@
 
 	</xsl:template>
 
+	<!-- immagine -->
 	<xsl:template name="image">
 		<xsl:param name="name"></xsl:param>
 

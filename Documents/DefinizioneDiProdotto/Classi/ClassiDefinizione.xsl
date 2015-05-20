@@ -5,17 +5,17 @@
 
 	
 	<xsl:template match="/">
-		\level{3}{Classi}
 		<xsl:apply-templates select="XMI/XMI.content/*[local-name()='Model']/*[local-name()='Namespace.ownedElement']/*[local-name()='Package']"/>
 	</xsl:template>
 
+	<!-- package -->
 	<xsl:template match="*[local-name()='Package']">
-		<xsl:if test="@name!='java' and @name!='Hidden'">
+		<xsl:if test="@name!='java' and @name!='Hidden' and @name!='Lib'">
 
 			<xsl:variable name="name">
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
-			\level{4}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
+			\level{3}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
 			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
 
 			\begin{itemize}
@@ -33,7 +33,7 @@
 			<xsl:variable name="name">
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
-			\level{5}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
+			\level{4}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
 			
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
@@ -42,9 +42,10 @@
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.stereotype']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
+			<xsl:apply-templates select="*[local-name()='Classifier.feature']"/>
 			\end{itemize}
 
-			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>			
+			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>
 	</xsl:template>
 
 	<!-- interfacce -->
@@ -53,7 +54,7 @@
 			<xsl:variable name="name">
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
-			\level{5}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
+			\level{4}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
 			
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
@@ -70,12 +71,10 @@
 			\item \textbf{Visibilità:} <xsl:value-of select="@xmi.value"/>
 	</xsl:template>
 
-	<!-- definizione -->
+	<!-- descrizione -->
 	<xsl:template match="*[local-name()='ModelElement.definition']">
-			\item \textbf{Descrizione:} <xsl:value-of select="@xmi.value"/>
+			\item \textbf{Descrizione:} <xsl:value-of select="translate(@xmi.value,'+',' ')"/>
 	</xsl:template>
-
-
 
 	<!-- stereotipi -->
 	<xsl:template match="*[local-name()='ModelElement.stereotype']">
@@ -112,6 +111,7 @@
 
 	</xsl:template>
 
+	<!-- immagini -->
 	<xsl:template name="image">
 		<xsl:param name="name"></xsl:param>
 
@@ -122,6 +122,32 @@
 				\caption{<xsl:value-of select="translate($name,'-',':')"/>}
 			\end{figure}
 		}
+	</xsl:template>
+
+	<!-- metodi e attributi -->
+	<xsl:template match="*[local-name()='Classifier.feature']">
+		<xsl:if test="*[local-name()='Attribute']">
+			\item \textbf{Attributi:}
+				\begin{itemize}
+				<xsl:for-each select="*[local-name()='Attribute']">
+					\item \textbf{<xsl:value-of select="@name"/>}
+					\begin{itemize}
+						\item \textbf{Visibilità:} <xsl:value-of select="*[local-name()='Feature.visibility']/@xmi.value"/>
+					\end{itemize}
+				</xsl:for-each>
+				\end{itemize}
+		</xsl:if>
+		<xsl:if test="*[local-name()='Operation']">
+			\item \textbf{Metodi:}
+				\begin{itemize}
+				<xsl:for-each select="*[local-name()='Operation']">
+					\item \textbf{<xsl:value-of select="@name"/>}
+					\begin{itemize}
+						\item \textbf{Visibilità:} <xsl:value-of select="*[local-name()='Feature.visibility']/@xmi.value"/>
+					\end{itemize}
+				</xsl:for-each>
+				\end{itemize}
+		</xsl:if>
 	</xsl:template>
 
 </xsl:stylesheet>
