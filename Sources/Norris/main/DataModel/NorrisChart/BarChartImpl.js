@@ -43,7 +43,7 @@ var defaults = {
 function BarChartImpl (uid) {
 	if (!(this instanceof BarChartImpl)) return new BarChartImpl(uid);
 	ChartImpl.call(this, 'barchart', uid);
-	this.setSettings(defaults);
+	this.settings=defaults;
 }
 
 BarChartImpl.prototype.__proto__ = ChartImpl.prototype;

@@ -43,7 +43,7 @@ var defaults = {
 function LineChartImpl (id) {
 	if (!(this instanceof LineChartImpl)) return new LineChartImpl(id);
 	ChartImpl.call(this, 'linechart', id);
-	this.setSettings(defaults);
+	this.settings=defaults;
 }
 
 LineChartImpl.prototype.__proto__ = ChartImpl.prototype;

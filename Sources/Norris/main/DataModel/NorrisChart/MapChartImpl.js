@@ -36,7 +36,7 @@ var defaults = {
 function MapChartImpl (id) {
 	if (!(this instanceof MapChartImpl)) return new MapChartImpl(id);
 	ChartImpl.call(this, 'mapchart', id);
-	this.setSettings(defaults);
+	this.settings=defaults;
 }
 
 MapChartImpl.prototype.__proto__ = ChartImpl.prototype;

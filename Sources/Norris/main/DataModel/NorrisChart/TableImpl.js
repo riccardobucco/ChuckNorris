@@ -36,7 +36,7 @@ var defaults = {
 function TableImpl (id) {
 	if (!(this instanceof TableImpl)) return new TableImpl(uid);
 	ChartImpl.call(this, 'table',id);
-	this.setSettings(defaults);
+	this.settings=defaults;
 }
 
 TableImpl.prototype.__proto__ = ChartImpl.prototype;

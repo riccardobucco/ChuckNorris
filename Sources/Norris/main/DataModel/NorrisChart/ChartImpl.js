@@ -123,7 +123,7 @@ ChartImpl.prototype.getData = function() {
 ChartImpl.prototype.setSettings = function(settings) {
 	if(typeof settings == 'object') {
 		for(var key in settings) {
-			if(settings.hasOwnProperty(key)) {
+			if(this.settings.hasOwnProperty(key)) {
 				this.settings[key] = settings[key];
 			}
 		}
