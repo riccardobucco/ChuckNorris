@@ -3,9 +3,9 @@
 <document>
 	<title>Piano di Qualifica</title>
 	<type>Esterno</type>
-	<redactedby>Bigarella Chiara \\ Davide Dal Bianco \\ Moretto Alessandro</redactedby>
-	<verifiedby>Bucco Riccardo \\ Pavanello Fabio Matteo \\ Rubin Marco</verifiedby>
-	<approvedby>Bucco Riccardo</approvedby>
+	<redactedby>Bigarella Chiara \\ Carlon Chiara \\ Rubin Marco</redactedby>
+	<verifiedby>Davide Dal Bianco \\ Moretto Alessandro</verifiedby>
+	<approvedby>Pavanello Fabio Matteo</approvedby>
 	<distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<sections>
@@ -36,25 +36,46 @@
             <description>Approvazione del documento</description>
         </version>
 		<version>
-            <id>5.04</id>
+            <id>5.07</id>
             <date>2015-05-12</date>
-            <author>Bigarella Chiara</author>
+            <author>Davide Dal Bianco</author>
             <role>Verificatore</role>
             <description>Verifica nuove sezioni e correzioni</description>
         </version>
-		<version>
-            <id>5.03</id>
+        <version>
+            <id>5.06</id>
             <date>2015-05-12</date>
             <author>Rubin Marco</author>
             <role>Analista</role>
             <description>Redazione esiti fase CP</description>
         </version>
-		<version>
-            <id>5.02</id>
+        <version>
+            <id>5.05</id>
             <date>2015-05-12</date>
-            <author>Bucco Riccardo</author>
+            <author>Davide Dal Bianco</author>
+            <role>Verificatore</role>
+            <description>Verifica strategie</description>
+        </version>
+        <version>
+            <id>5.04</id>
+            <date>2015-05-11</date>
+            <author>Rubin Marco</author>
+            <role>Amministratore</role>
+            <description>Aggiunta strategie</description>
+        </version>
+        <version>
+            <id>5.03</id>
+            <date>2015-05-10</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica test</description>
+        </version>
+        <version>
+            <id>5.02</id>
+            <date>2015-05-09</date>
+            <author>Bigarella Chiara</author>
             <role>Progettista</role>
-            <description>Trasposizione dei test in formato tabellare</description>
+            <description>Stesura test di unità</description>
         </version>
 		<version>
             <id>5.01</id>
@@ -72,18 +93,32 @@
             <description>Approvazione del documento</description>
         </version>
 		<version>
-            <id>4.02</id>
+            <id>4.04</id>
             <date>2015-05-12</date>
             <author>Bucco Riccardo</author>
             <role>Verificatore</role>
             <description>Verifica esiti</description>
         </version>
 		<version>
-            <id>4.01</id>
+            <id>4.03</id>
             <date>2015-05-08</date>
             <author>Moretto Alessandro</author>
             <role>Progettista</role>
             <description>Redazione esiti fase IP</description>
+        </version>
+        <version>
+            <id>4.02</id>
+            <date>2015-05-08</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica test</description>
+        </version>
+        <version>
+            <id>4.01</id>
+            <date>2015-05-07</date>
+            <author>Carlon Chiara</author>
+            <role>Progettista</role>
+            <description>Stesura test di unità</description>
         </version>
 <!-- fine versione 4 -->
 		<version>
@@ -94,18 +129,32 @@
             <description>Approvazione del documento</description>
         </version>
 		<version>
-            <id>3.01</id>
+            <id>3.04</id>
             <date>2015-05-12</date>
             <author>Rubin Marco</author>
             <role>Verificatore</role>
             <description>Verifica esiti</description>
         </version>
 		<version>
-            <id>3.00</id>
+            <id>3.03</id>
             <date>2015-05-08</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Analista</role>
             <description>Redazione esiti fase P</description>
+        </version>
+        <version>
+            <id>3.02</id>
+            <date>2015-05-08</date>
+            <author>Bigarella Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica test</description>
+        </version>
+        <version>
+            <id>3.01</id>
+            <date>2015-05-07</date>
+            <author>Moretto Alessandro</author>
+            <role>Progettista</role>
+            <description>Stesura test di unità</description>
         </version>
 <!-- fine fase 3-->
         <version>

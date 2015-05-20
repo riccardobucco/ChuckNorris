@@ -3,9 +3,9 @@
 <document>
 	<title>Piano di Progetto</title>
 	<type>Esterno</type>
-	<redactedby>Bucco Riccardo</redactedby>
-	<verifiedby>Dal Bianco Davide</verifiedby>
-    <approvedby>Rubin Marco</approvedby>
+	<redactedby>Pavanello Fabio Matteo</redactedby>
+	<verifiedby>Bucco Riccardo \\ Moretto Alessandro</verifiedby>
+    <approvedby>Pavanello Fabio Matteo</approvedby>
     <distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
     <sections>
@@ -49,7 +49,7 @@
 		 <version>
             <id>5.05</id>
             <date>2015-05-09</date>
-            <author>Rubin Marco</author>
+            <author>Bucco Riccardo</author>
             <role>Verificatore</role>
             <description>Verifica incrementi</description>
         </version>
@@ -58,28 +58,28 @@
             <date>2015-05-09</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Project Manager</role>
-            <description>Diversificazione fra consuntivo e preventivo a finire</description>
+            <description>Modifica Sezione consuntivo e preventivo a finire</description>
         </version>
 		 <version>
             <id>5.03</id>
             <date>2015-05-09</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Project Manager</role>
-            <description>Aggiunto consuntivo delle ore ruolo/persona</description>
+            <description>Aggiunto consuntivo delle ore ruolo/persona per ogni fase</description>
         </version>
 		 <version>
             <id>5.02</id>
             <date>2015-05-08</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Project Manager</role>
-            <description>Spostamento descrizioni fasi</description>
+            <description>Spostamento descrizioni fasi da Ciclo di vita a pianificazione</description>
         </version>
 		<version>
             <id>5.01</id>
             <date>2015-05-07</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Project Manager</role>
-            <description>Cambiamento date di conclusione delle ultime fasi</description>
+            <description>Modifica Pianificazione</description>
         </version>
 <!-- Fine fase 5 -->
         <version>

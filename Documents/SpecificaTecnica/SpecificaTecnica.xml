@@ -3,9 +3,9 @@
 <document>
 	<title>Specifica Tecnica</title>
 	<type>Esterno</type>
-	<redactedby>Bigarella Chiara \\ Bucco Riccardo \\ Dal Bianco Davide \\ Moretto Alessandro</redactedby>
-	<verifiedby>Carlon Chiara \\ Pavanello Fabio Matteo</verifiedby>
-	<approvedby>Rubin Marco</approvedby>
+	<redactedby>Bigarella Chiara \\ Bucco Riccardo \\ Carlon Chiara</redactedby>
+	<verifiedby> Dal Bianco Davide \\ Moretto Alessandro \\ Pavanello Fabio Matteo</verifiedby>
+	<approvedby>Pavanello Fabio Matteo</approvedby>
 	<distribution>\groupname{} \\ Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<sections>
@@ -35,54 +35,82 @@
             <description>Approvazione del documento</description>
         </version>
 		<version>
-            <id>3.12</id>
+            <id>3.16</id>
             <date>2015-03-29</date>
             <author>Rubin Marco</author>
             <role>Verificatore</role>
             <description>Verifica incrementi</description>
         </version>
 		<version>
-            <id>3.11</id>
+            <id>3.15</id>
             <date>2015-05-10</date>
             <author>Davide Dal Bianco</author>
             <role>Verificatore</role>
             <description>Verifica incrementi</description>
         </version>
 		<version>
-            <id>3.10</id>
+            <id>3.14</id>
             <date>2015-05-10</date>
             <author>Bigarella Chiara</author>
             <role>Progettista</role>
             <description>Aggiunto paragrafo per spiegare l'utilizzo delle classi factory</description>
         </version>
 		<version>
-            <id>3.09</id>
+            <id>3.13</id>
+            <date>2015-05-10</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi architettura di Norris e Chuck</description>
+        </version>
+		<version>
+            <id>3.12</id>
             <date>2015-05-10</date>
             <author>Bucco Riccardo</author>
             <role>Progettista</role>
-            <description>Implementazione classe ChartBridge</description>
+            <description>Lieve modifica architettura Norris e Chuck</description>
         </version>
 		<version>
-            <id>3.08</id>
-            <date>2015-05-10</date>
-            <author>Bucco Riccardo</author>
-            <role>Progettista</role>
-            <description>Spostamento delle classi updater</description>
-        </version>
-		<version>
-            <id>3.07</id>
-            <date>2015-05-09</date>
-            <author>Carlon Chiara</author>
-            <role>Progettista</role>
-            <description>Stesura ed importazione tracciamento</description>
-        </version>
-		<version>
-            <id>3.06</id>
+            <id>3.11</id>
             <date>2015-05-09</date>
             <author>Bucco Riccardo</author>
             <role>Progettista</role>
             <description>Spostamento pattern dopo la definizione dell'architettura</description>
         </version>
+		<version>
+            <id>3.10</id>
+            <date>2015-05-09</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi architettura</description>
+        </version>
+		<version>
+            <id>3.09</id>
+            <date>2015-05-08</date>
+            <author>Bigarella Chiara</author>
+            <role>Progettista</role>
+            <description>Correzioni errori rilevati dalla verifica dell'architettura dell'applicazione android</description>
+        </version>
+		<version>
+            <id>3.08</id>
+            <date>2015-05-08</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica architettura</description>
+        </version>
+		<version>
+            <id>3.07</id>
+            <date>2015-05-08</date>
+            <author>Bigarella Chiara</author>
+            <role>Progettista</role>
+            <description>Modifica architettura dell'applicazione android, da MVC a MVP</description>
+        </version>
+		<version>
+            <id>3.06</id>
+            <date>2015-05-08</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>        
 		<version>
             <id>3.05</id>
             <date>2015-05-08</date>
@@ -99,16 +127,16 @@
         </version>
 		<version>
             <id>3.03</id>
-            <date>2015-05-08</date>
-            <author>Bucco Riccardo</author>
-            <role>Progettista</role>
-            <description>Stesura ed importazione tracciamento</description>
+            <date>2015-05-07</date>
+            <author>Dal Dianco Davide</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
         </version>
 		<version>
             <id>3.02</id>
             <date>2015-05-07</date>
             <author>Carlon Chiara</author>
-            <role>Progettista</role>
+            <role>Amministratore</role>
             <description>Aggiunti svantaggi tecnologie</description>
         </version>
 		<version>
@@ -131,14 +159,14 @@
             <date>2015-04-24</date>
             <author>Bucco Riccardo</author>
             <role>Verificatore</role>
-            <description>Stesura ed importazione tracciamento</description>
+            <description>Verifica modifiche Chuck</description>
         </version>
-		<version>
-            <id>2.01</id>
-            <date>2015-04-21</date>
+        <version>
+            <id>1.01</id>
+            <date>2015-04-04</date>
             <author>Rubin Marco</author>
             <role>Progettista</role>
-            <description>Stesura test di unità</description>
+            <description>Apporto di piccole modifiche architettura Chuck</description>
         </version>
 <!-- Fine fase 4-->
         <version>
@@ -158,19 +186,11 @@
 		<version>
             <id>1.01</id>
             <date>2015-04-04</date>
-            <author>Pavanello Fabio Matteo</author>
+            <author>Rubin Marco</author>
             <role>Progettista</role>
-            <description>Apporto di piccole modifiche</description>
+            <description>Apporto di piccole modifiche achitettura Norris</description>
         </version>
 <!-- Fine fase 3-->
-        <version>
-            <id>1.00</id>
-            <date>2015-03-31</date>
-            <author>Rubin Marco</author>
-            <role>Project Manager</role>
-            <description>Approvazione del documento</description>
-        </version>		
-<!-- Fine fase 1-->
         <version>
             <id>1.00</id>
             <date>2015-03-31</date>
