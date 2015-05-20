@@ -2,11 +2,11 @@ DOCUMENTI =	AnalisiDeiRequisiti \
 		DefinizioneDiProdotto \
 		Glossario \
 		NormeDiProgetto \
+		NorrisUserManual \
 		PianoDiProgetto \
 		PianoDiQualifica \
 		SpecificaTecnica \
-		StudioDiFattibilita \
-		NorrisDocumentation
+		StudioDiFattibilita
 
 
 all: $(DOCUMENTI) LetteraDiPresentazione
