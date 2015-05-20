@@ -124,7 +124,7 @@
 		}
 	</xsl:template>
 
-	<!-- metodi e attributi -->
+	<!-- attributi e metodi -->
 	<xsl:template match="*[local-name()='Classifier.feature']">
 		<xsl:if test="*[local-name()='Attribute']">
 			\item \textbf{Attributi:}
@@ -132,7 +132,16 @@
 				<xsl:for-each select="*[local-name()='Attribute']">
 					\item \textbf{<xsl:value-of select="@name"/>}
 					\begin{itemize}
+						\item \textbf{Tipo:}
+						<xsl:call-template name="id-name">
+							<xsl:with-param name="id" select="*[local-name()='StructuralFeature.type']/*[local-name()='Classifier']/@xmi.idref"/>
+						</xsl:call-template>
+						
 						\item \textbf{Visibilità:} <xsl:value-of select="*[local-name()='Feature.visibility']/@xmi.value"/>
+
+						\item \textbf{Statico:}
+						<xsl:if test="@ownerScope = 'classifier'">si</xsl:if>
+						<xsl:if test="@ownerScope = 'instance'">no</xsl:if>
 					\end{itemize}
 				</xsl:for-each>
 				\end{itemize}
@@ -148,6 +157,12 @@
 				</xsl:for-each>
 				\end{itemize}
 		</xsl:if>
+	</xsl:template>
+
+	<!-- nome da id -->
+	<xsl:template name="id-name">
+		<xsl:param name="id"></xsl:param>
+		<xsl:value-of select="//*[@xmi.id = $id]/@name"/>
 	</xsl:template>
 
 </xsl:stylesheet>
