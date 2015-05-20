@@ -3,10 +3,10 @@
 <document>
 	<title>Definizione di Prodotto</title>
 	<type>Esterno</type>
-	<redactedby></redactedby>
-	<verifiedby></verifiedby>
-	<approvedby></approvedby>
-	<distribution></distribution>
+	<redactedby>Bigarella Chiara</redactedby>
+	<verifiedby>Moretto Alessandro</verifiedby>
+	<approvedby>Pavanello Fabio Matteo</approvedby>
+	<distribution>Esterno</distribution>
 
 	<sections>
         <name>Tex/Introduzione.tex</name>
@@ -14,12 +14,148 @@
     </sections>
 	   
 	<changes>
+        <!-- Fine fase 6-->
         <version>
+            <id>3.00</id>
+            <date>2015-05-12</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+		<version>
+            <id>2.02</id>
+            <date>2015-05-12</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica contenuto diagrammi </description>
+        </version>
+        <version>
+            <id>2.01</id>
+            <date>2015-05-11</date>
+            <author>Bigarella Chiara</author>
+            <role>Progettista</role>
+            <description>Creazione diagrammi con Astah per l'importazione automatica nella sezione “Specifica dei componenti” implementando i requisiti opzionali</description>
+        </version>
+<!-- Fine fase 5-->
+        <version>
+            <id>2.00</id>
+            <date>2015-05-26</date>
+            <author>Bigarella Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+		</version>
+		<version>
+            <id>1.02</id>
+            <date>2015-04-25</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica contenuto diagrammi </description>
+        </version>
+        <version>
+            <id>1.01</id>
+            <date>2015-04-24</date>
+            <author>Carlon Chiara</author>
+            <role>Progettista</role>
+            <description>Creazione diagrammi con Astah per l'importazione automatica nella sezione “Specifica dei componenti” implementando i requisiti desiderabili</description>
+        </version>
+<!-- Fine fase 4-->
+        <version>
+            <id>1.00</id>
+            <date>2015-04-12</date>
+            <author>Dal Bianco Davide</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+		<version>
+            <id>0.13</id>
+            <date>2015-04-12</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verifica diagrammi di sequenza</description>
+        </version>
+		<version>
+            <id>0.12</id>
+            <date>2015-04-12</date>
+            <author>Dal Bianco Davide</author>
+            <role>Progettista</role>
+            <description>Stesura sezione diagrammi di sequenza</description>
+        </version>
+		<version>
+            <id>0.11</id>
+            <date>2015-04-12</date>
+            <author>Carlon Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica formato JSON per i vari dati</description>
+        </version>
+        <version>
+            <id>0.10</id>
+            <date>2015-04-11</date>
+            <author>Moretto Alessandro</author>
+            <role>Progettista</role>
+            <description>Stesuta sezione formato JSON per i dati di aggiornamento</description>
+        </version>
+		<version>
+            <id>0.09</id>
+            <date>2015-04-11</date>
+            <author>Bucco Riccardo</author>
+            <role>Progettista</role>
+            <description>Stesuta sezione formato JSON per i dati dei chart</description>
+        </version>
+		<version>
+            <id>0.08</id>
+            <date>2015-04-11</date>
+            <author>Bigarella Chiara</author>
+            <role>Progettista</role>
+            <description>Stesuta sezione formato JSON per le impostazioni</description>
+        </version>
+		<version>
+            <id>0.07</id>
+            <date>2015-04-11</date>
+            <author>Rubin Marco</author>
+            <role>Verificatore</role>
+            <description>Verifica sezione “Standard di progetto” </description>
+        </version>
+		<version>
+            <id>0.06</id>
+            <date>2015-04-11</date>
+            <author>Bucco Riccardo</author>
+            <role>Progettista</role>
+            <description>Stesuta sezione Standard di progetto</description>
+        </version>
+		<version>
+            <id>0.05</id>
+            <date>2015-04-10</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verificatore</role>
+            <description>Verifica contenuto diagrammi </description>
+        </version>
+		<version>
+            <id>0.04</id>
+            <date>2015-04-10</date>
+            <author>Dal Bianco Davide, Moretto Alessandro</author>
+            <role>Progettista</role>
+            <description>Creazione diagrammi con Astah per l'importazione automatica nella sezione “Specifica dei componenti” implementando i requisiti obbligatori</description>
+        </version>
+		<version>
+            <id>0.03</id>
+            <date>2015-04-07</date>
+            <author>Carlon Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica scheletro e introduzione </description>
+        </version>
+		<version>
+            <id>0.02</id>
+            <date>2015-04-06</date>
+            <author>Rubin Marco</author>
+            <role>Progettista</role>
+            <description>Creazione introduzione documento</description>
+        </version>
+		<version>
             <id>0.01</id>
-            <date></date>
-            <author></author>
-            <role></role>
-            <description>Struttura ed introduzione del documento</description>
+            <date>2015-04-04</date>
+            <author>Rubin Marco</author>
+            <role>Progettista</role>
+            <description>Creazione scheletro documento</description>
         </version>
 	</changes>
 </document>
