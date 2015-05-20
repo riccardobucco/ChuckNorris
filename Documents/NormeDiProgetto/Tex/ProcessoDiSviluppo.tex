@@ -76,42 +76,94 @@
 			Il \insglo{software} \insglo{Astah} è descritto nell'appendice \nameref{app:strumenti}, mentre l'applicazione per la classificazione dei requisiti è descritta nell'appendice \nameref{sec:tracker}.
 			
 	\level{3}{Progettazione}
-Scopo dell'attività di progettazione è produrre una soluzione soddisfacente per tutti i soggetti coinvolti nel progetto, una volta compreso esattamente quali sono i requisiti del problema. \\
-Approfondendo la progettazione del \insglo{prodotto} fino ad arrivare a moduli abbastanza semplici da essere capiti da una sola persona, si otterranno le istruzioni necessarie ai \insrole{Programmatori} per ottenere il \insglo{prodotto} finito.
+		Scopo dell'attività di progettazione è produrre una soluzione soddisfacente per tutti i soggetti coinvolti nel progetto, una volta compreso esattamente quali sono i requisiti del problema. \\
+		Approfondendo la progettazione del \insglo{prodotto} fino ad arrivare a moduli abbastanza semplici da essere capiti da una sola persona, si otterranno le istruzioni necessarie ai \insrole{Programmatori} per ottenere il \insglo{prodotto} finito.
 			
-\level{4}{Progettazione architetturale}
-La progettazione ad alto livello dell'architettura e dei singoli componenti del \insglo{framework} \projectname{} viene descritta dai \insrole{Progettisti} nel documento \insdoc{Specifica Tecnica v1.00}, avendo cura di rispettare i seguenti aspetti.
-\level{5}{Norme}
-\level{6}{Design Pattern}
-Al fine di consentire una migliore comprensibilità del documento, nonché delle scelte progettuali e della progettazione stessa, i \insrole{Progettisti} dovranno indicare i \insglo{pattern} architetturali impiegati, fornendo per ciascuno di essi:
-\begin{itemize}
-\item una descrizione testuale e grafica;
-\item la motivazione che ha portato alla sua scelta;
-\item una breve descrizione dell'applicazione del \insglo{pattern} al progetto.
-\end{itemize}
-\level{6}{Diagrammi UML}
-Per formalizzare ed esplicitare alcuni aspetti specifici del sistema è necessario utilizzare i seguenti diagrammi \insglo{UML}:
-\begin{itemize}
-\item diagrammi dei \insglo{package}, per rappresentare l'aspetto generale del sistema;
-\item diagrammi delle classi, per rappresentare le componenti fondamentali dell'architettura;
-\item diagrammi delle attività, per rappresentare il flusso delle operazioni e dei componenti del sistema, qualora la sola descrizione testuale risulti complessa;
-\item diagrammi di sequenza, per rappresentare le interazioni tra le componenti del sistema, qualora la sola descrizione testuale risulti complessa.
-\end{itemize}
-Tali diagrammi dovranno seguire le indicazioni fornite nella sezione \nameref{sec:UML}.
-				
-\level{6}{Tracciamento delle componenti}
-Per garantire la qualità del \insglo{prodotto} è fondamentale che ogni requisito sia soddisfatto da uno e un solo componente. Tale tracciamento viene generato automaticamente dall'applicazione per la gestione dei requisiti sotto forma di tabelle.
-\level{6}{Test di integrazione}
-Per ottenere maggior efficienza ed efficacia durante l'attività di test, è auspicabile che i \insrole{Progettisti} si preoccupino di definire delle classi di verifica per appurare che il funzionamento dei componenti sia quello previsto. Sarebbe infatti ideale poter fornire degli strumenti completamente automatici ai \insrole{Verificatori}.\\
-La progettazione delle classi per la verifica deve essere fatta da persone diverse da coloro che hanno progettato la classe da verificare, quando ciò fosse possibile.
-\level{5}{Strumenti}
-Per la progettazione architetturale sono stati utilizzati i seguenti strumenti:
-\begin{itemize}
-\item per la creazione dei diagrammi \insglo{UML} è stato utilizzato \insglo{Astah};
-\item per il tracciamento delle componenti è stata utilizzata l'applicazione web sviluppata dagli \insrole{Amministratori}.
-\end{itemize}
-Il \insglo{software} \insglo{Astah} è descritto in modo dettagliato nell'appendice \nameref{app:strumenti}, mentre l'applicazione web per il tracciamento viene descritta nell'appendice \nameref{sec:tracker}.
-
+		\level{4}{Progettazione architetturale}
+			Prima di procedere alla definizione vera e propria dell'architettura dei vari prodotti software, devono essere eseguiti e successivamente documentati i seguenti task:
+			\begin{enumerate}
+				\item si individuano i prodotti che si intendono realizzare;
+				\item si definiscono ruoli e responsabilità di ognuno dei prodotti individuati;
+				\item si definiscono le interazioni che i prodotti hanno fra di loro;
+				\item ci si assicura che ogni requisito sia soddisfatto da almeno uno dei prodotti individuati e descritti;
+				\item ci si assicura che ogni prodotto realizzi almeno un requisito.
+			\end{enumerate}
+			A questo punto si può procedere con la progettazione dell'architettura dei prodotti software che si intendono realizzare. Si devono eseguire e successivamente documentare i seguenti task per ognuno dei prodotti individuati:
+			\begin{enumerate}
+				\item si suddivide il prodotto in componenti;
+				\item si definisce il ruolo di ogni componente individuato;
+				\item si definiscono le interazioni che i componenti hanno fra loro;
+				\item si definiscono le eventuali interfacce che ogni componente mette a disposizione dell'ambiente esterno;
+				\item ci si assicura che ogni requisito sia soddisfatto da almeno uno dei componenti individuati e descritti;
+				\item ci si assicura che ogni componente realizzi almeno un requisito.
+			\end{enumerate}
+			Durante la suddivisione del prodotto in componenti è auspicabile che i \insrole{Progettisti} utilizzino in modo appropriato i design pattern. Qualora ciò dovesse avvenire, si documenta la cosa procedendo con una loro descrizione e contestualizzazione (per maggiori informazioni si consulti la sezione \nameref{sec:ProgDesingPattern}).\\
+			Un utile supporto alla documentazione di tutti i task precedentemente descritti sono i diagrammi UML. Per maggiori informazioni si culsulti la sezione \nameref{sec:ProgUML}.\\
+			Il modo in cui viene effettuato il tracciamento dei requisiti viene descritto in modo più approfondito nella sezione \nameref{sec:ProgTracCompReq}.
+			\level{5}{Norme}
+				\level{6}{Design Pattern} \label{sec:ProgDesingPattern}
+					Al fine di consentire una migliore comprensibilità del documento, nonché delle scelte progettuali e della progettazione stessa, i \insrole{Progettisti} dovranno indicare i \insglo{pattern} architetturali impiegati, fornendo per ciascuno di essi:
+					\begin{itemize}
+						\item una descrizione testuale e grafica;
+						\item la motivazione che ha portato alla sua scelta;
+						\item una breve descrizione dell'applicazione del \insglo{pattern} al progetto.
+					\end{itemize}
+				\level{6}{Diagrammi UML} \label{sec:ProgUML}
+					La documentazione riguardante i prodotti e i componenti individuati deve sempre fare uso di diagrammi \insglo{UML}. Essi sono necessari per esplicitare e formalizzare in modo migliore i vari aspetti che sono stati descritti testualmente.\\
+					In particolare, durante la progettazione architetturale è necessario fare uso dei seguenti diagrammi:
+					\begin{description}
+						\item[diagrammi dei componenti] Essi hanno lo scopo di rappresentare la struttura interna di un prodotto software modellato in termini dei suoi componenti principali e delle relazioni fra di essi. Questo tipo di diagramma viene dunque utilizzato per evidenziare i componenti (e le relazioni che essi hanno fra di loro) individuati all'interno di ciascun prodotto software.
+						\item[diagrammi delle attività] Essi hanno lo scopo di definire le attività da svolgere per realizzare una certa funzionalità. Vengono dunque usati per mostrare come determinate interazioni tra componenti (o fra prodotti) realizzino una funzionalità che si intende rendere disponibile.
+					\end{description}
+				\level{6}{Test di integrazione}
+					Per ottenere maggior efficienza ed efficacia durante l'attività di test, è auspicabile che i \insrole{Progettisti} si preoccupino di definire delle classi di verifica per appurare che il funzionamento dei componenti sia quello previsto. Sarebbe infatti ideale poter fornire degli strumenti completamente automatici ai \insrole{Verificatori}.\\
+					La progettazione delle classi per la verifica deve essere fatta da persone diverse da coloro che hanno progettato la classe da verificare, quando ciò fosse possibile.
+			\level{5}{Strumenti}
+				Per la progettazione architetturale sono stati utilizzati i seguenti strumenti:
+				\begin{itemize}
+					\item per la creazione dei diagrammi \insglo{UML} è stato utilizzato \insglo{Astah};
+					\item per il tracciamento delle componenti è stata utilizzata l'applicazione web sviluppata dagli \insrole{Amministratori}.
+				\end{itemize}
+				Il \insglo{software} \insglo{Astah} è descritto in modo dettagliato nell'appendice \nameref{app:strumenti}, mentre l'applicazione web per il tracciamento viene descritta nell'appendice \nameref{sec:tracker}.
+			\level{5}{Procedure}
+				\level{6}{Tracciamento componenti-requisiti} \label{sec:ProgTracCompReq}
+					È fondamentale che ogni requisito sia soddisfatto da uno e uno solo componente. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente procedura. Si noti che qui si da per scontato che i componenti e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento dei componenti fare riferimento alla procedura descritta nella sezione \nameref{sec:InsComponente}).
+					\begin{enumerate}
+						\item Accedere al Kaizen Team Tracker (\url{http://kaizenteam.it/tracker/}).
+						\item Entrare all'interno della sezione “Requisiti”.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=\textwidth]{Pics/HomePageMenuFrecciaReq}
+						\end{figure}
+						\item Scegliere uno dei requisiti ai quali si intende associare un componente e cliccare sul pulsante “Modifica”.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=\textwidth]{Pics/VistaRequisitoFrecciaModifica}
+						\end{figure}
+						\item Cercare la sezione “Componenti abbinati”. Scegliere dal menù a tendina il componente che realizza il requisito scelto al passo precedente. Cliccare sul pulsante “Aggiungi”. Un requisito  può essere associato a più componenti.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=\textwidth]{Pics/AbbianareComponenteRequisito}
+						\end{figure}
+						\item Eseguire il passo precedente per tutti i requisiti.
+					\end{enumerate}
+				\level{6}{Inserimento di un componente sul Tracker} \label{sec:InsComponente}
+					Per poter effettuare correttamente i vari tracciamenti necessari si deve inserire all'interno del tracker del gruppo tutti i componenti che sono stati individuati dai \insrole{Progettisti} durante la progettazione architetturale. Per fare ciò si segua la seguente procedura.
+					\begin{enumerate}
+						\item Accedere al Kaizen Team Tracker (\url{http://kaizenteam.it/tracker/}).
+						\item Entrare all'interno della sezione “Progettazione”.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=\textwidth]{Pics/HomePageMenuFrecciaProg}
+						\end{figure}
+						\item Cliccare sul pulsante “Aggiungi componente”.
+						\item Inserire il codice del componente che si desidera aggiungere e una sua descrizione (secondo le norme presenti nella sezione SEZIONE). Cliccare in seguito su “Salva”.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=\textwidth]{Pics/InserireComponente}
+						\end{figure}
+						\item Eseguire nuovamente i passi precedenti per inserire un nuovo componente all'interno del Tracker.
+					\end{enumerate}
 
 \level{4}{Progettazione di dettaglio}
 La progettazione di dettaglio dei singoli componenti del \insglo{framework} \projectname{} viene descritta dai \insrole{Progettisti} nel documento \insdoc{Definizione di Prodotto v1.00}, avendo cura di rispettare i seguenti aspetti.
