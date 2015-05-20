@@ -22,6 +22,7 @@ $(DOCUMENTI): _force
 
 	@ #documenti specifici
 	@ test "$@" != "AnalisiDeiRequisiti" || make _analisi
+	@ test "$@" != "DefinizioneDiProdotto" || make _definizione
 	@ test "$@" != "Glossario" || make _glossario
 	@ test "$@" != "NormeDiProgetto" || make _norme
 	@ test "$@" != "SpecificaTecnica" || make _specifica
@@ -48,6 +49,17 @@ _analisi: _force
 	@ curl http://kaizenteam.it/tracker/export/fonti-requisiti.php > AnalisiDeiRequisiti/TrackerFontiRequisiti.tex
 	@ curl http://kaizenteam.it/tracker/export/riepilogo.php > AnalisiDeiRequisiti/TrackerRiepilogo.tex
 
+_definizione: _force
+	@ #creazione file latex classi
+	@ xsltproc DefinizioneDiProdotto/Classi/ClassiDefinizione.xsl Commons/Classi/Norris.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > DefinizioneDiProdotto/Classi/Norris.tex
+	@ xsltproc DefinizioneDiProdotto/Classi/ClassiDefinizione.xsl Commons/Classi/Chuck.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > DefinizioneDiProdotto/Classi/Chuck.tex
+	@ xsltproc DefinizioneDiProdotto/Classi/ClassiDefinizione.xsl Commons/Classi/Applicazione.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > DefinizioneDiProdotto/Classi/Applicazione.tex
+
+	@ #escape caratteri
+	@ sed -ri 's/\$$/\\\$$/gi' DefinizioneDiProdotto/Classi/Norris.tex
+	@ sed -ri 's/\$$/\\\$$/gi' DefinizioneDiProdotto/Classi/Chuck.tex
+	@ sed -ri 's/\$$/\\\$$/gi' DefinizioneDiProdotto/Classi/Applicazione.tex
+
 _glossario: _force
 	@ #creazione file latex termini
 	@ xmllint --noout --schema Glossario/Termini.xsd Glossario/Termini.xml
@@ -62,9 +74,9 @@ _norme: _force
 
 _specifica: _force
 	@ #creazione file latex classi
-	@ xsltproc SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Norris.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > SpecificaTecnica/Classi/Norris.tex
-	@ xsltproc SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Chuck.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > SpecificaTecnica/Classi/Chuck.tex
-	@ xsltproc SpecificaTecnica/Classi/Classi.xsl SpecificaTecnica/Classi/Applicazione.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > SpecificaTecnica/Classi/Applicazione.tex
+	@ xsltproc SpecificaTecnica/Classi/ClassiSpecifica.xsl Commons/Classi/Norris.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > SpecificaTecnica/Classi/Norris.tex
+	@ xsltproc SpecificaTecnica/Classi/ClassiSpecifica.xsl Commons/Classi/Chuck.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > SpecificaTecnica/Classi/Chuck.tex
+	@ xsltproc SpecificaTecnica/Classi/ClassiSpecifica.xsl Commons/Classi/Applicazione.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' | tr '+' ' ' > SpecificaTecnica/Classi/Applicazione.tex
 
 	@ #escape caratteri
 	@ sed -ri 's/\$$/\\\$$/gi' SpecificaTecnica/Classi/Norris.tex
@@ -118,6 +130,7 @@ glossary: _force
 clean: _force
 	@ rm -f AnalisiDeiRequisiti/UseCase/*.tex
 	@ rm -f $(DOCUMENTI:%=%/*.tex)
+	@ rm -f */Classi/*.tex
 
 	@ rm -f */*.out */*.log */*.aux */*.toc */*.lof */*.lot
 
