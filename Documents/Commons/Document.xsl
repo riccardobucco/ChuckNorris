@@ -23,6 +23,8 @@
 		\usepackage{abstract}
 		\usepackage{float}
 		\usepackage{listings, lstautogobble}
+		\usepackage{amsmath}
+
 
 		% per allineare il codice a sinistra invece che al centro
 		\lstset{

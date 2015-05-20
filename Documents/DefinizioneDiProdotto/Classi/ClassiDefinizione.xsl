@@ -130,19 +130,14 @@
 			\item \textbf{Attributi:}
 				\begin{itemize}
 				<xsl:for-each select="*[local-name()='Attribute']">
-					\item \textbf{<xsl:value-of select="@name"/>}
-					\begin{itemize}
-						\item \textbf{Tipo:}
-						<xsl:call-template name="id-name">
+					\item <xsl:if test="@ownerScope = 'classifier'">\underline</xsl:if>{<xsl:choose>
+							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'public'">+</xsl:when>
+							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'package'">\(\sim\)</xsl:when>
+							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'protected'">\#</xsl:when>
+							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'private'">--</xsl:when>
+						</xsl:choose><xsl:value-of select="@name"/> : <xsl:call-template name="id-name">
 							<xsl:with-param name="id" select="*[local-name()='StructuralFeature.type']/*[local-name()='Classifier']/@xmi.idref"/>
-						</xsl:call-template>
-						
-						\item \textbf{Visibilità:} <xsl:value-of select="*[local-name()='Feature.visibility']/@xmi.value"/>
-
-						\item \textbf{Statico:}
-						<xsl:if test="@ownerScope = 'classifier'">si</xsl:if>
-						<xsl:if test="@ownerScope = 'instance'">no</xsl:if>
-					\end{itemize}
+						</xsl:call-template>}
 				</xsl:for-each>
 				\end{itemize}
 		</xsl:if>
@@ -150,10 +145,14 @@
 			\item \textbf{Metodi:}
 				\begin{itemize}
 				<xsl:for-each select="*[local-name()='Operation']">
-					\item \textbf{<xsl:value-of select="@name"/>}
-					\begin{itemize}
-						\item \textbf{Visibilità:} <xsl:value-of select="*[local-name()='Feature.visibility']/@xmi.value"/>
-					\end{itemize}
+					\item <xsl:if test="@isAbstract='true'">\textit</xsl:if>{<xsl:if test="@ownerScope = 'classifier'">\underline</xsl:if>{<xsl:choose>
+							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'public'">+</xsl:when>
+							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'package'">\(\sim\)</xsl:when>
+							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'protected'">\#</xsl:when>
+							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'private'">--</xsl:when>
+						</xsl:choose><xsl:value-of select="@name"/><xsl:if test="*[local-name()='BehavioralFeature.parameter']/*[local-name()='Parameter' and @kind='return']/*[local-name()='Parameter.type']/*[local-name()='Classifier']/@xmi.idref"> : </xsl:if><xsl:call-template name="id-name">
+							<xsl:with-param name="id" select="*[local-name()='BehavioralFeature.parameter']/*[local-name()='Parameter' and @kind='return']/*[local-name()='Parameter.type']/*[local-name()='Classifier']/@xmi.idref"/>
+						</xsl:call-template>}}
 				</xsl:for-each>
 				\end{itemize}
 		</xsl:if>
@@ -162,6 +161,7 @@
 	<!-- nome da id -->
 	<xsl:template name="id-name">
 		<xsl:param name="id"></xsl:param>
+
 		<xsl:value-of select="//*[@xmi.id = $id]/@name"/>
 	</xsl:template>
 
