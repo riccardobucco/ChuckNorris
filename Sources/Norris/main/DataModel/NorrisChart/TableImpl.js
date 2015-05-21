@@ -21,7 +21,6 @@ var TableStreamUpdater = require('./TableStreamUpdater.js');
 // module.exports = TableImpl;
 
 var defaults = {
-	title : '' ,
 	description : 'This is a table.',
 	showLegend : true,
 	legendPosition : 'top-right',
@@ -36,7 +35,9 @@ var defaults = {
 function TableImpl (id) {
 	if (!(this instanceof TableImpl)) return new TableImpl(uid);
 	ChartImpl.call(this, 'table',id);
-	this.settings=defaults;
+	for(var key in defaults) {
+		this.settings[key] = defaults[key];
+	}
 }
 
 TableImpl.prototype.__proto__ = ChartImpl.prototype;

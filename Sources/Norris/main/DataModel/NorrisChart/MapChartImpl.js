@@ -21,10 +21,9 @@ var MapChartMovieUpdater = require('./MapChartMovieUpdater.js');
 //module.exports = MapChartImpl;
 
 var defaults = {
-	title : '' ,
-	description : 'This is a map chart.',
+	description: 'This is a map chart',
 	showLegend : true,
-	legendPosition : 'top-right',
+	legendPosition : 'top-right', // values: top-right, top-left, bottom-right, bottom-left, none (the legend will not be shown)
 	maxPoints : 5
 };
 
@@ -36,7 +35,9 @@ var defaults = {
 function MapChartImpl (id) {
 	if (!(this instanceof MapChartImpl)) return new MapChartImpl(id);
 	ChartImpl.call(this, 'mapchart', id);
-	this.settings=defaults;
+	for(var key in defaults) {
+		this.settings[key] = defaults[key];
+	}
 }
 
 MapChartImpl.prototype.__proto__ = ChartImpl.prototype;

@@ -29,7 +29,7 @@ function ChartImpl (chartType, id) {
 	events.EventEmitter.call(this); //ChartImpl inherits from events.EventEmitter
 	this.uid = id;
 	this.type=chartType;
-	this.settings = {};
+	this.settings = {title : '' , description : 'This is a chart.'};
 	this.data = {};
 }
 

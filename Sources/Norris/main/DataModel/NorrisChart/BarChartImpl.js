@@ -19,7 +19,6 @@ var BarChartInPlaceUpdater = require('./BarChartInPlaceUpdater.js');
 //module.exports = BarChartImpl;
 
 var defaults = {
-	title : '' ,
 	description : 'This is a bar chart.',
 	xlabel : '',
 	ylabel : '',
@@ -43,7 +42,9 @@ var defaults = {
 function BarChartImpl (uid) {
 	if (!(this instanceof BarChartImpl)) return new BarChartImpl(uid);
 	ChartImpl.call(this, 'barchart', uid);
-	this.settings=defaults;
+	for(var key in defaults) {
+		this.settings[key] = defaults[key];
+	}
 }
 
 BarChartImpl.prototype.__proto__ = ChartImpl.prototype;

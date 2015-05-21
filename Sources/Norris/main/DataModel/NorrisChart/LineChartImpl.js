@@ -21,7 +21,6 @@ var LineChartStreamUpdater = require('./LineChartStreamUpdater.js');
 // module.exports = LineChartImpl;
 
 var defaults = {
-	title : '' ,
 	description : 'This is a line chart.',
 	xlabel : '',
 	ylabel : '',
@@ -43,7 +42,9 @@ var defaults = {
 function LineChartImpl (id) {
 	if (!(this instanceof LineChartImpl)) return new LineChartImpl(id);
 	ChartImpl.call(this, 'linechart', id);
-	this.settings=defaults;
+	for(var key in defaults) {
+		this.settings[key] = defaults[key];
+	}
 }
 
 LineChartImpl.prototype.__proto__ = ChartImpl.prototype;
