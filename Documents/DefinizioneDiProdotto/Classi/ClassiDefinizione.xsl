@@ -134,6 +134,7 @@
 		<xsl:if test="*[local-name()='Attribute']">
 			\item \textbf{Attributi:}
 				\begin{itemize}
+				\setlength{\itemsep}{5pt}
 				<xsl:for-each select="*[local-name()='Attribute']">
 					\item <xsl:if test="@ownerScope = 'classifier'">\underline</xsl:if>{<xsl:choose>
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'public'">+</xsl:when>
@@ -142,13 +143,15 @@
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'private'">--</xsl:when>
 						</xsl:choose><xsl:value-of select="@name"/> : <xsl:call-template name="id-name">
 							<xsl:with-param name="id" select="*[local-name()='StructuralFeature.type']/*[local-name()='Classifier']/@xmi.idref"/>
-						</xsl:call-template>}
+						</xsl:call-template>}<xsl:if test="*[local-name()='ModelElement.definition']"> \\ [1mm] </xsl:if>
+						<xsl:value-of select="translate(*[local-name()='ModelElement.definition']/@xmi.value,'+',' ')"/>
 				</xsl:for-each>
 				\end{itemize}
 		</xsl:if>
 		<xsl:if test="*[local-name()='Operation']">
 			\item \textbf{Metodi:}
 				\begin{itemize}
+				\setlength{\itemsep}{5pt}
 				<xsl:for-each select="*[local-name()='Operation']">
 					\item <xsl:if test="@isAbstract='true'">\textit</xsl:if>{<xsl:if test="@ownerScope = 'classifier'">\underline</xsl:if>{<xsl:choose>
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'public'">+</xsl:when>
@@ -157,7 +160,8 @@
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'private'">--</xsl:when>
 						</xsl:choose><xsl:value-of select="@name"/>(<xsl:call-template name="op-parameter"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>)<xsl:if test="*[local-name()='BehavioralFeature.parameter']/*[local-name()='Parameter' and @kind='return']/*[local-name()='Parameter.type']/*[local-name()='Classifier']/@xmi.idref"> : </xsl:if><xsl:call-template name="id-name">
 							<xsl:with-param name="id" select="*[local-name()='BehavioralFeature.parameter']/*[local-name()='Parameter' and @kind='return']/*[local-name()='Parameter.type']/*[local-name()='Classifier']/@xmi.idref"/>
-						</xsl:call-template>}}
+						</xsl:call-template>}}<xsl:if test="*[local-name()='ModelElement.definition']"> \\ [1mm] </xsl:if>
+						<xsl:value-of select="translate(*[local-name()='ModelElement.definition']/@xmi.value,'+',' ')"/>
 				</xsl:for-each>
 				\end{itemize}
 		</xsl:if>
