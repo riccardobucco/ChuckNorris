@@ -95,27 +95,37 @@
 				\item si definiscono le interazioni che i componenti hanno fra loro;
 				\item si definiscono le eventuali interfacce che ogni componente mette a disposizione dell'ambiente esterno;
 				\item ci si assicura che ogni requisito sia soddisfatto da almeno uno dei componenti individuati e descritti;
-				\item ci si assicura che ogni componente realizzi almeno un requisito.
+				\item ci si assicura che ogni componente realizzi almeno un requisito;
+				\item si realizzano e si documentano i test di integrazione, necessari per verificare il corretto funzionamento di più componenti assemblati insieme (le norme da seguire sono presenti nella sezione \nameref{sec:TestIntegrazione}).
 			\end{enumerate}
-			Durante la suddivisione del prodotto in componenti è auspicabile che i \insrole{Progettisti} utilizzino in modo appropriato i design pattern. Qualora ciò dovesse avvenire, si documenta la cosa procedendo con una loro descrizione e contestualizzazione (per maggiori informazioni si consulti la sezione \nameref{sec:ProgDesingPattern}).\\
-			Un utile supporto alla documentazione di tutti i task precedentemente descritti sono i diagrammi UML. Per maggiori informazioni si culsulti la sezione \nameref{sec:ProgUML}.\\
+			Durante la suddivisione del prodotto in componenti è auspicabile che i \insrole{Progettisti} utilizzino in modo appropriato i design pattern. Qualora ciò dovesse avvenire, si documenta la cosa procedendo con una loro descrizione e contestualizzazione (per maggiori informazioni si consulti la sezione \nameref{sec:ProgArcDesingPattern}).\\
+			Un utile supporto alla documentazione di tutti i task precedentemente descritti sono i diagrammi UML. Per maggiori informazioni si culsulti la sezione \nameref{sec:ProgArcUML}.\\
 			Il modo in cui viene effettuato il tracciamento dei requisiti viene descritto in modo più approfondito nella sezione \nameref{sec:ProgTracCompReq}.
 			\level{5}{Norme}
-				\level{6}{Design Pattern} \label{sec:ProgDesingPattern}
-					Al fine di consentire una migliore comprensibilità del documento, nonché delle scelte progettuali e della progettazione stessa, i \insrole{Progettisti} dovranno indicare i \insglo{pattern} architetturali impiegati, fornendo per ciascuno di essi:
+				\level{6}{Design Pattern} \label{sec:ProgArcDesingPattern}
+					Al fine di consentire una migliore comprensibilità delle scelte progettuali e della progettazione stessa, i \insrole{Progettisti} dovranno indicare i \insglo{pattern} architetturali impiegati, fornendo per ciascuno di essi:
 					\begin{itemize}
 						\item una descrizione testuale e grafica;
 						\item la motivazione che ha portato alla sua scelta;
 						\item una breve descrizione dell'applicazione del \insglo{pattern} al progetto.
 					\end{itemize}
-				\level{6}{Diagrammi UML} \label{sec:ProgUML}
+				\level{6}{Diagrammi UML} \label{sec:ProgArcUML}
 					La documentazione riguardante i prodotti e i componenti individuati deve sempre fare uso di diagrammi \insglo{UML}. Essi sono necessari per esplicitare e formalizzare in modo migliore i vari aspetti che sono stati descritti testualmente.\\
 					In particolare, durante la progettazione architetturale è necessario fare uso dei seguenti diagrammi:
 					\begin{description}
 						\item[diagrammi dei componenti] Essi hanno lo scopo di rappresentare la struttura interna di un prodotto software modellato in termini dei suoi componenti principali e delle relazioni fra di essi. Questo tipo di diagramma viene dunque utilizzato per evidenziare i componenti (e le relazioni che essi hanno fra di loro) individuati all'interno di ciascun prodotto software.
 						\item[diagrammi delle attività] Essi hanno lo scopo di definire le attività da svolgere per realizzare una certa funzionalità. Vengono dunque usati per mostrare come determinate interazioni tra componenti (o fra prodotti) realizzino una funzionalità che si intende rendere disponibile.
 					\end{description}
-				\level{6}{Test di integrazione}
+					Tali diagrammi dovranno seguire le indicazioni fornite nella sezione \nameref{sec:UML}.
+
+				\level{6}{Classificazione dei componenti} \label{sec:ClassificareComponenti}
+					I componenti vengono identificati univocamente da una descrizione nella forma NomeProdotto::NomeComponente.
+					\begin{itemize}
+						\item NomeProdotto rappresenta il nome del prodotto software che i \insrole{Progettisti} hanno deciso di realizzare.
+						\item NomeComponente rappresenta il nome che è stato dato dai \insrole{Progettisti} al componente individuato.
+					\end{itemize}
+					A ogni componente è inoltre associato un codice univoco nella forma XY, dove X è l'iniziale del del nome del prodotto e Y un numero intero crescente (che parte da 0).
+				\level{6}{Test di integrazione} \label{sec:TestIntegrazione}
 					Per ottenere maggior efficienza ed efficacia durante l'attività di test, è auspicabile che i \insrole{Progettisti} si preoccupino di definire delle classi di verifica per appurare che il funzionamento dei componenti sia quello previsto. Sarebbe infatti ideale poter fornire degli strumenti completamente automatici ai \insrole{Verificatori}.\\
 					La progettazione delle classi per la verifica deve essere fatta da persone diverse da coloro che hanno progettato la classe da verificare, quando ciò fosse possibile.
 			\level{5}{Strumenti}
@@ -127,7 +137,7 @@
 				Il \insglo{software} \insglo{Astah} è descritto in modo dettagliato nell'appendice \nameref{app:strumenti}, mentre l'applicazione web per il tracciamento viene descritta nell'appendice \nameref{sec:tracker}.
 			\level{5}{Procedure}
 				\level{6}{Tracciamento componenti-requisiti} \label{sec:ProgTracCompReq}
-					È fondamentale che ogni requisito sia soddisfatto da uno e uno solo componente. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente procedura. Si noti che qui si da per scontato che i componenti e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento dei componenti fare riferimento alla procedura descritta nella sezione \nameref{sec:InsComponente}).
+					È fondamentale che ogni requisito sia soddisfatto da almeno un componente. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente procedura. Si noti che qui si da per scontato che i componenti e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento dei componenti fare riferimento alla procedura descritta nella sezione \nameref{sec:InsComponente}).
 					\begin{enumerate}
 						\item Accedere al Kaizen Team Tracker (\url{http://kaizenteam.it/tracker/}).
 						\item Entrare all'interno della sezione “Requisiti”.
@@ -156,8 +166,9 @@
 							\centering
 							\includegraphics[width=\textwidth]{Pics/HomePageMenuFrecciaProg}
 						\end{figure}
+						\item Assicurarsi di essere all'interno della scheda “Componenti”.
 						\item Cliccare sul pulsante “Aggiungi componente”.
-						\item Inserire il codice del componente che si desidera aggiungere e una sua descrizione (secondo le norme presenti nella sezione SEZIONE). Cliccare in seguito su “Salva”.
+						\item Inserire il codice del componente che si desidera aggiungere e una sua descrizione (secondo le norme presenti nella sezione \nameref{sec:ClassificareComponenti}). Cliccare in seguito su “Salva”.
 						\begin{figure}[H]
 							\centering
 							\includegraphics[width=\textwidth]{Pics/InserireComponente}
@@ -165,30 +176,101 @@
 						\item Eseguire nuovamente i passi precedenti per inserire un nuovo componente all'interno del Tracker.
 					\end{enumerate}
 
-\level{4}{Progettazione di dettaglio}
-La progettazione di dettaglio dei singoli componenti del \insglo{framework} \projectname{} viene descritta dai \insrole{Progettisti} nel documento \insdoc{Definizione di Prodotto v1.00}, avendo cura di rispettare i seguenti aspetti.
-\level{5}{Norme}
-\level{6}{Diagrammi UML}
-Durante questa progettazione devono essere aggiornati con l'aggiunta di dettagli i seguenti diagrammi:
-\begin{itemize}
-\item diagrammi delle classi;
-\item diagrammi di sequenza;
-\item diagrammi delle attività.
-\end{itemize}
-Tali diagrammi dovranno seguire le indicazioni fornite nella sezione \nameref{sec:UML}.
-\level{6}{Definizione di classe}
-Ogni classe individuata dai \insrole{Progettisti} deve avere, oltre ad un proprio diagramma, una descrizione testuale contenente:
-\begin{itemize}
-\item il nome della classe completo dei \insglo{package} di cui fa parte;
-\item la descrizione della classe con l'indicazione della sua funzione nel contesto del \insglo{package} a cui appartiene;
-\item le sue relazioni con altre classi;
-\item l'elenco dei metodi accompagnati da una breve ma significativa descrizione;
-\item l'elenco degli attributi.
-\end{itemize}
-\level{6}{Test di unità}
-I \insrole{Progettisti} devono definire i test di unità necessari per verificare che il funzionamento delle classi sia quello previsto.
-\level{5}{Strumenti}
-Per la progettazione di dettaglio è stato utilizzato il \insglo{software} \insglo{Astah}, descritto nell'appendice \nameref{app:strumenti}, per la creazione dei diagrammi \insglo{UML}.
+		\level{4}{Progettazione di dettaglio}
+			Dopo che l'architettura del sistema è stata definita completamente, si può procedere alla progettazione di dettaglio. Essa prevede che vengano eseguiti e successivamente documentati i seguenti task:
+			\begin{enumerate}
+				\item si individuano le classi che implementano ciascuno dei componenti trovati durante la progettazione architetturale;
+				\item si definiscono i ruoli e le responsabilità di ciascuna delle classi individuate;
+				\item si definiscono le interazioni che le classi hanno fra di loro;
+				\item ognuna delle classi deve essere definita nel dettaglio (vedi sezione \nameref{sec:DescrizioneClasse} per maggiori informazioni);
+				\item ci si assicura che ogni requisito sia soddisfatto da almeno una delle classi individuate e descritte;
+				\item ci si assicura che ogni classe realizzi almeno un requisito;
+				\item si realizzano e si documentano i test di unità, necessari per verificare il corretto comportamento delle classi (le norme da seguire sono presenti nella sezione \nameref{sec:TestUnita}).
+			\end{enumerate}
+			Durante la suddivisione di un componente in classi è auspicabile che i \insrole{Progettisti} utilizzino in modo appropriato i design pattern. Qualora ciò dovesse avvenire, si documenta la cosa procedendo con una loro descrizione e contestualizzazione (per maggiori informazioni si consulti la sezione \nameref{sec:ProgDetDesingPattern}).\\
+			Un utile supporto alla documentazione di tutti i task precedentemente descritti sono i diagrammi UML. Per maggiori informazioni si culsulti la sezione \nameref{sec:ProgDetUML}.\\
+			Il modo in cui viene effettuato il tracciamento dei requisiti viene descritto in modo più approfondito nella sezione \nameref{sec:ProgTracClasReq}.
+
+			\level{5}{Norme}
+				\level{6}{Design Pattern} \label{sec:ProgDetDesingPattern}
+					Al fine di consentire una migliore comprensibilità  delle scelte progettuali e della progettazione di stessa, i \insrole{Progettisti} dovranno indicare i \insglo{pattern} impiegati, fornendo per ciascuno di essi:
+					\begin{itemize}
+						\item una descrizione testuale e grafica;
+						\item la motivazione che ha portato alla sua scelta;
+						\item una breve descrizione dell'applicazione del \insglo{pattern} al progetto.
+					\end{itemize}
+				\level{6}{Diagrammi UML} \label{sec:ProgDetUML}
+					La documentazione riguardante le classi individuate deve sempre fare uso di diagrammi \insglo{UML}. Essi sono necessari per esplicitare e formalizzare in modo migliore i vari aspetti che sono stati descritti testualmente.\\
+					In particolare, durante la progettazione di dettaglio è necessario fare uso dei seguenti diagrammi:
+					\begin{description}
+						\item[diagrammi delle classi] Essi hanno lo scopo di descrivere \texttt{tipi di entità}, con le loro caratteristiche ed eventuali relazioni fra questi tipi. Questo tipo di diagramma viene utilizzato per evidenziare e descrivere in modo dettagliato le classi e le relazioni che esistono tra di loro.
+						\item[diagrammi delle attività] Essi hanno lo scopo di definire le attività da svolgere per realizzare una certa funzionalità. Vengono dunque usati per mostrare come determinate interazioni tra classi realizzino una funzionalità che si intende rendere disponibile.
+						\item[diagrammi di sequenza] Essi hanno lo scopo di descrivere scenari (determinate sequenze di azioni in cui tutte le scelte sono già state effettuate). Vengono usati per descrivere le relazioni che intercorrono, in termini di messaggi, tra attori, oggetti ed entità del sistema che si sta rappresentando.
+					\end{description}
+					Tali diagrammi dovranno seguire le indicazioni fornite nella sezione \nameref{sec:UML}.
+				\level{6}{Classificazione delle classi} \label{sec:ClassificareClassi}
+					Le classi vengono identificate univocamente da una descrizione nella forma\\ NomeProdotto::NomeComponente::NomeClasse.
+					\begin{itemize}
+						\item NomeProdotto rappresenta il nome del prodotto software che i \insrole{Progettisti} hanno deciso di realizzare.
+						\item NomeComponente rappresenta il nome che è stato dato dai \insrole{Progettisti} al componente al quale appartiene la classe.
+						\item NomeClasse rappresenta il nome che è stato dato dai \insrole{Progettisti} alla classe individuata.
+					\end{itemize}
+					A ogni classe è inoltre associato un codice univoco nella forma XY, dove X è l'iniziale del del nome del prodotto e Y un numero intero crescente (che parte da 0).\\
+				\level{6}{Descrivere le classi} \label{sec:DescrizioneClasse}
+					Per descrivere in modo completo una classe, i \insrole{Progettisti} devono preoccuparsi di individuare e descrivere:
+					\begin{itemize}
+						\item il nome;
+						\item la visibilità;
+						\item gli attributi;
+						\item i metodi.
+					\end{itemize}
+					È inoltre necessaria una descrizione generica che indichi lo scopo e le responsabilità della classe in questione. Infine, devono essere descritte dettagliatamente (anche mediante l'uso di appropriati diagrammi) le relazioni con altre classi e le interfacce che mette a disposizione.
+				\level{6}{Test di unità} \label{sec:TestUnita}
+					Durante la definizione dei test di unità necessari per verificare che il funzionamento delle classi sia quello previsto, i \insrole{Progettisti} devono preoccuparsi di rispettare la seguente regola: colui o colei che progetta il test deve necessariamente essere una persona diversa da quella che ha progettato e descritto nel dettaglio la classe in questione.
+
+			\level{5}{Strumenti}
+				Per la progettazione di dettaglio è stato utilizzato il \insglo{software} \insglo{Astah}, descritto nell'appendice \nameref{app:strumenti}, per la creazione dei diagrammi \insglo{UML}.
+
+			\level{5}{Procedure}
+				\level{6}{Tracciamento classi-requisiti} \label{sec:ProgTracClasReq}
+					È fondamentale che ogni requisito sia soddisfatto da almeno una classe. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente procedura. Si noti che qui si da per scontato che le classi e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento delle classi fare riferimento alla procedura descritta nella sezione \nameref{sec:InsClasse}).
+					\begin{enumerate}
+						\item Accedere al Kaizen Team Tracker (\url{http://kaizenteam.it/tracker/}).
+						\item Entrare all'interno della sezione “Requisiti”.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=\textwidth]{Pics/HomePageMenuFrecciaReq}
+						\end{figure}
+						\item Scegliere uno dei requisiti ai quali si intende associare una classe e cliccare sul pulsante “Modifica”.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=\textwidth]{Pics/VistaRequisitoFrecciaModifica}
+						\end{figure}
+						\item Cercare la sezione “Classi abbinate”. Scegliere dal menù a tendina la classe che realizza il requisito scelto al passo precedente. Cliccare sul pulsante “Aggiungi”. Un requisito  può essere associato a più classi.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=\textwidth]{Pics/AbbinareClasseRequisito}
+						\end{figure}
+						\item Eseguire il passo precedente per tutti i requisiti.
+					\end{enumerate}
+				\level{6}{Inserimento di una classe sul Tracker} \label{sec:InsClasse}
+					Per poter effettuare correttamente i vari tracciamenti necessari si deve inserire all'interno del tracker del gruppo tutti le classi che sono state individuate dai \insrole{Progettisti} durante la progettazione di dettaglio. Per fare ciò si segua la seguente procedura.
+					\begin{enumerate}
+						\item Accedere al Kaizen Team Tracker (\url{http://kaizenteam.it/tracker/}).
+						\item Entrare all'interno della sezione “Progettazione”.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=\textwidth]{Pics/HomePageMenuFrecciaProg}
+						\end{figure}
+						\item Assicurarsi di essere all'interno della scheda “Classi”.
+						\item Cliccare sul pulsante “Aggiungi classe”.
+						\item Inserire il codice della classe che si desidera aggiungere e una sua descrizione (secondo le norme presenti nella sezione \nameref{sec:ClassificareClassi}). Cliccare in seguito su “Salva”.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[width=\textwidth]{Pics/InserireClasse}
+						\end{figure}
+						\item Eseguire nuovamente i passi precedenti per inserire un nuovo componente all'interno del Tracker.
+					\end{enumerate}
 
 \level{3}{Codifica} \label{sec:codifica}
 L'attività di codifica ha lo scopo di produrre il codice necessario alla realizzazione del \insglo{prodotto} richiesto. Il codice generato dovrà rispettare il più fedelmente possibile ciò che è stato definito nel documento \insdoc{Definizione di Prodotto v1.00}.
