@@ -24,7 +24,7 @@
 		\usepackage{float}
 		\usepackage{listings, lstautogobble}
 		\usepackage{amsmath}
-
+		\usepackage{subfigure}
 
 		% per allineare il codice a sinistra invece che al centro
 		\lstset{
