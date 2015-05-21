@@ -139,7 +139,7 @@
 				\level{6}{Tracciamento componenti-requisiti} \label{sec:ProgTracCompReq}
 					È fondamentale che ogni requisito sia soddisfatto da almeno un componente. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente procedura. Si noti che qui si da per scontato che i componenti e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento dei componenti fare riferimento alla procedura descritta nella sezione \nameref{sec:InsComponente}).
 					\begin{enumerate}
-						\item Accedere al Kaizen Team Tracker (\url{http://kaizenteam.it/tracker/}).
+						\item Accedere al Kaizen Team Tracker (\insuri{http://kaizenteam.it/tracker/}).
 						\item Entrare all'interno della sezione “Requisiti”.
 						\begin{figure}[H]
 							\centering
@@ -160,7 +160,7 @@
 				\level{6}{Inserimento di un componente sul Tracker} \label{sec:InsComponente}
 					Per poter effettuare correttamente i vari tracciamenti necessari si deve inserire all'interno del tracker del gruppo tutti i componenti che sono stati individuati dai \insrole{Progettisti} durante la progettazione architetturale. Per fare ciò si segua la seguente procedura.
 					\begin{enumerate}
-						\item Accedere al Kaizen Team Tracker (\url{http://kaizenteam.it/tracker/}).
+						\item Accedere al Kaizen Team Tracker (\insuri{http://kaizenteam.it/tracker/}).
 						\item Entrare all'interno della sezione “Progettazione”.
 						\begin{figure}[H]
 							\centering
@@ -235,7 +235,7 @@
 				\level{6}{Tracciamento classi-requisiti} \label{sec:ProgTracClasReq}
 					È fondamentale che ogni requisito sia soddisfatto da almeno una classe. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente procedura. Si noti che qui si da per scontato che le classi e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento delle classi fare riferimento alla procedura descritta nella sezione \nameref{sec:InsClasse}).
 					\begin{enumerate}
-						\item Accedere al Kaizen Team Tracker (\url{http://kaizenteam.it/tracker/}).
+						\item Accedere al Kaizen Team Tracker (\insuri{http://kaizenteam.it/tracker/}).
 						\item Entrare all'interno della sezione “Requisiti”.
 						\begin{figure}[H]
 							\centering
@@ -256,7 +256,7 @@
 				\level{6}{Inserimento di una classe sul Tracker} \label{sec:InsClasse}
 					Per poter effettuare correttamente i vari tracciamenti necessari si deve inserire all'interno del tracker del gruppo tutti le classi che sono state individuate dai \insrole{Progettisti} durante la progettazione di dettaglio. Per fare ciò si segua la seguente procedura.
 					\begin{enumerate}
-						\item Accedere al Kaizen Team Tracker (\url{http://kaizenteam.it/tracker/}).
+						\item Accedere al Kaizen Team Tracker (\insuri{http://kaizenteam.it/tracker/}).
 						\item Entrare all'interno della sezione “Progettazione”.
 						\begin{figure}[H]
 							\centering
@@ -272,48 +272,64 @@
 						\item Eseguire nuovamente i passi precedenti per inserire un nuovo componente all'interno del Tracker.
 					\end{enumerate}
 
-\level{3}{Codifica} \label{sec:codifica}
-L'attività di codifica ha lo scopo di produrre il codice necessario alla realizzazione del \insglo{prodotto} richiesto. Il codice generato dovrà rispettare il più fedelmente possibile ciò che è stato definito nel documento \insdoc{Definizione di Prodotto v1.00}.
-	\level{4}{Norme}
-	Tutti i file di codice devono seguire quanto riportato nella sezione \nameref{sec:CodificaFile} e le seguenti regole generali:
-	\begin{itemize}
-		\item l'indentazione del codice deve essere di quattro spazi;
-		\item le righe non devono essere più lunghe di 80 caratteri;
-		\item i commenti devono essere scritti in lingua inglese e devono essere significativi;
-		\item ogni file, sia \insglo{JavaScript} che \insglo{Java}, deve iniziare con un'intestazione che rifletta la seguente struttura:
-		\begin{lstlisting}
-			/*
-			* Name: [nome del file]
-			* (*\ignoreglo{Package}*): [(*\ignoreglo{package}*) al quale appartiene il file]
-			* Location: [path della directory di appartenenza]
-			* Date: [data di creazione del file]
-			* Version: [versione del file]
-			* 
-			* History:
-			* 
-			* =================================================================
-			* Version  Date        Programmer    Changes
-			* =================================================================
-			* v0.01    AAAA-MM-GG  Nome Cognome  {descrizione modifica}
-			* =================================================================
-			*
-			*/
-		\end{lstlisting}
-		dove:
-		\begin{description}
-			\item[Name] indica il nome del file comprensivo di estensione;
-			\item[\ignoreglo{Package}] indica il \insglo{package} al quale appartiene il file, comprensivo di gerarchia;
-			\item[Location] indica il path della directory in cui è presente il file;
-			\item[Date] indica la data di creazione del file: si veda la sezione \nameref{sec:formatoDate} per il formato da utilizzare;
-			\item[Version] indica l'attuale versione del codice, il cui formato da seguire è descritto nella sezione \nameref{sec:versioni};
-			\item[History] visualizza lo storico delle modifiche del file in questione, comprensive di versione, data, descrizione e nome del programmatore che ha modificato il codice.
-		\end{description}
-	\end{itemize}
-		\level{5}{JavaScript}
-		Ciascun file \insglo{JavaScript}, oltre a seguire le norme precedentemente descritte, deve rispettare, anche, le linee guida \textit{Google \insglo{JavaScript} Style Guide} reperibili all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml}. 
-		\level{5}{Java}
-		Ciascun file \insglo{Java}, oltre a rispettare le norme sopra citate, deve seguire le linee guida \textit{Google \insglo{Java} Style Guide} reperibili all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javaguide.html}. 
-	\level{4}{Strumenti}
-	Per la scrittura di codice \insglo{JavaScript} non è richiesto l'utilizzo di un particolare \insglo{IDE}; la scelta dell'editor di testo è a discrezione dello sviluppatore.
-		\level{5}{Android Studio}
-		Per lo sviluppo dell'applicazione \insglo{Android} si utilizza l'\insglo{IDE} \insglo{Android} Studio, descritto nell'appendice \nameref{app:strumenti} del presente documento.
+	\level{3}{Codifica} \label{sec:codifica}
+		L'attività di codifica ha lo scopo di produrre il codice necessario alla realizzazione del \insglo{prodotto} richiesto. Il codice generato dovrà rispettare il più fedelmente possibile ciò che è stato definito nel documento \insdoc{Definizione di Prodotto v1.00}.\\
+		L'attività di codifica, in generale, prevede che siano svolti i seguenti task:
+		\begin{enumerate}
+			\item codifica di ciascuna unità identificata e descritta durante la progettazione di dettaglio;
+			\item scrittura della documentazione riguardante la codifica del punto precedente.
+		\end{enumerate}
+		Durante l'esecuzione dei task precedentemente citati si devono rispettare determinate norme.\\
+		In particolare, quando si codifica utilizzando un certo linguaggio si devono rispettare le convenzioni che sono state fissate (consultare la sezione \nameref{sec:LineeGuida}).\\
+		Ogni file, inoltre, deve possedere un'intestazione nel formato corretto (vedi \nameref{sec:CodificaIntestazione}).\\
+		Infine, ulteriori regole generali da rispettare durante l'attività di codifica sono riportate in \nameref{sec:CodificaNormeGenerali}.
+
+		\level{4}{Norme}
+			\level{5}{Regole generali da seguire durante la codifica di un file} \label{sec:CodificaNormeGenerali}
+				Durante la codifica di un file si devono rispettare alcune regole generali.
+				\begin{itemize}
+					\item l'indentazione del codice deve essere di quattro spazi;
+					\item le righe non devono essere più lunghe di 80 caratteri;
+				\end{itemize}
+				Inoltre, ogniqualvolta la difficoltà di certi passaggi lo richieda, il programmatore è tenuto a commentare il codice da lui scritto. Si tenga presente che i commenti devono essere tassativamente in lingua inglese. Inoltre, essi devono essere significativi, ovvero devono essere determinanti per la corretta comprensione e interpretazione del codice scritto.\\
+				Infine, tutti i file di codice devono seguire quanto riportato nella sezione \nameref{sec:CodificaFile}.
+			\level{5}{Linee guida all'utilizzo dei linguaggi di programmazione} \label{sec:LineeGuida}
+				Nel corso del progetto vengono utilizzati alcuni linguaggi di programmazione. Quando si utilizza uno di essi si devono rispettare alcune regole, in modo tale da favorire nel maggior modo possibile la comprensibilità del codice. Si cerca, dove possibile, di adottare linee guida accettate a livello internazionale.\\
+				In seguito, per ogni linguaggio adottato, viene indicata una sorgente alla quale è possibile trovare le linee guida da seguire.
+				\begin{description}
+					\item[JavaScript] Quando si fa uso di questo linguaggio di programmazione si deve rispettare quanto riportato all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml}.
+					\item[Java] Quando si fa uso di questo linguaggio di programmazione si deve rispettare quanto riportato all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javaguide.html}
+				\end{description}
+			\level{5}{Intestazione dei file} \label{sec:CodificaIntestazione}
+				Ogni file prodotto durante l'attività di codifica (a prescindere dal linguaggio di programmazione usato) deve iniziare con un'intestazione che rifletta la seguente struttura:
+				\begin{lstlisting}
+					/*
+					* Name: [nome del file]
+					* (*\ignoreglo{Package}*): [(*\ignoreglo{package}*) al quale appartiene il file]
+					* Location: [path della directory di appartenenza]
+					* Date: [data di creazione del file]
+					* Version: [versione del file]
+					* 
+					* History:
+					* 
+					* =================================================================
+					* Version  Date        Programmer    Changes
+					* =================================================================
+					* v0.01    AAAA-MM-GG  Nome Cognome  {descrizione modifica}
+					* =================================================================
+					*
+					*/
+				\end{lstlisting}
+				dove:
+				\begin{description}
+					\item[Name] indica il nome del file comprensivo di estensione;
+					\item[\ignoreglo{Package}] indica il \insglo{package} al quale appartiene il file, comprensivo di gerarchia;
+					\item[Location] indica il path della directory in cui è presente il file;
+					\item[Date] indica la data di creazione del file: si veda la sezione \nameref{sec:formatoDate} per il formato da utilizzare;
+					\item[Version] indica l'attuale versione del codice, il cui formato da seguire è descritto nella sezione \nameref{sec:versioni};
+					\item[History] visualizza lo storico delle modifiche del file in questione, comprensive di versione, data, descrizione e nome del programmatore che ha modificato il codice.
+				\end{description}
+		
+		\level{4}{Strumenti}
+			Per la scrittura di codice \insglo{JavaScript} non è richiesto l'utilizzo di un particolare \insglo{IDE}; la scelta dell'editor di testo è a discrezione dello sviluppatore.\\
+			Per lo sviluppo dell'applicazione \insglo{Android} si utilizza l'\insglo{IDE} \ignoreglo{Android} Studio, descritto nell'appendice \nameref{app:strumenti} del presente documento.
