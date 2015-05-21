@@ -155,7 +155,7 @@
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'package'">\(\sim\)</xsl:when>
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'protected'">\#</xsl:when>
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'private'">--</xsl:when>
-						</xsl:choose><xsl:value-of select="@name"/><xsl:if test="*[local-name()='BehavioralFeature.parameter']/*[local-name()='Parameter' and @kind='return']/*[local-name()='Parameter.type']/*[local-name()='Classifier']/@xmi.idref"> : </xsl:if><xsl:call-template name="id-name">
+						</xsl:choose><xsl:value-of select="@name"/>(<xsl:call-template name="op-parameter"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>)<xsl:if test="*[local-name()='BehavioralFeature.parameter']/*[local-name()='Parameter' and @kind='return']/*[local-name()='Parameter.type']/*[local-name()='Classifier']/@xmi.idref"> : </xsl:if><xsl:call-template name="id-name">
 							<xsl:with-param name="id" select="*[local-name()='BehavioralFeature.parameter']/*[local-name()='Parameter' and @kind='return']/*[local-name()='Parameter.type']/*[local-name()='Classifier']/@xmi.idref"/>
 						</xsl:call-template>}}
 				</xsl:for-each>
@@ -168,6 +168,13 @@
 		<xsl:param name="id"></xsl:param>
 
 		<xsl:value-of select="//*[@xmi.id = $id]/@name"/>
+	</xsl:template>
+
+	<xsl:template name="op-parameter">
+		<xsl:param name="id"></xsl:param>
+		<xsl:for-each select="*[local-name()='BehavioralFeature.parameter']/*[local-name()='Parameter' and @kind!='return']">
+			<xsl:value-of select="@name"/> : <xsl:call-template name="id-name"><xsl:with-param name="id" select="*[local-name()='Parameter.type']/*[local-name()='Classifier']/@xmi.idref"/></xsl:call-template><xsl:if test="position() != last()">, </xsl:if>
+		</xsl:for-each>
 	</xsl:template>
 
 </xsl:stylesheet>
