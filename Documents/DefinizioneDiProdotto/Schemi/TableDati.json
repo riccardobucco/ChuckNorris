@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Table data",
+    "description": "The data contained in a Table",
+    "type": "object",
+    "properties": {
+        "headers": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "datasets": {
+            "type": "array",
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "color": {
+                            "type": "object",
+                            "properties": {
+                                "r": {
+                                    "type": "integer",
+                                     "minimum": 0,
+                                     "maximum": 255
+                                },
+                                "g": {
+                                    "type": "integer",
+                                     "minimum": 0,
+                                     "maximum": 255
+                                },
+                                "b": {
+                                    "type": "integer",
+                                     "minimum": 0,
+                                     "maximum": 255
+                                },
+                                "a": {
+                                    "type": "number",
+                                     "minimum": 0,
+                                     "maximum": 1
+                                },
+                            },
+                            "required": ["r","g","b"]
+                        },
+                        "background": {
+                            "type": "object",
+                            "properties": {
+                                "r": {
+                                    "type": "integer",
+                                     "minimum": 0,
+                                     "maximum": 255
+                                },
+                                "g": {
+                                    "type": "integer",
+                                     "minimum": 0,
+                                     "maximum": 255
+                                },
+                                "b": {
+                                    "type": "integer",
+                                     "minimum": 0,
+                                     "maximum": 255
+                                },
+                                "a": {
+                                    "type": "number",
+                                     "minimum": 0,
+                                     "maximum": 1
+                                },
+                            },
+                            "required": ["r","g","b"]
+                        },
+                        "value": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["value"]
+                }
+            }
+        }
+    },
+    "required": ["headers", "datasets"]
+}

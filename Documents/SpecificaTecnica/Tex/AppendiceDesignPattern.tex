@@ -1,142 +1,186 @@
 \level{1}{Design Patterns} \label{app:designpattern}
 	\level{2}{Model View Controller} \label{app:MVC}
-		\begin{figure}[H]\centering
-        \includegraphics[scale=0.7]{SpecificaTecnica/Pics/MVC}
-        \caption{Struttura del pattern Model View Controller}
-		\end{figure}
-		Model-View-Controller (\insglo{MVC}) è un \insglo{pattern} architetturale utilizzato per dividere il codice in blocchi di funzionalità ben distinte, e viene utilizzato molto frequentemente nelle applicazioni in cui un insieme di informazioni deve essere rappresentato attraverso una interfaccia grafica.
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.7]{SpecificaTecnica/Pics/MVC}
+    \caption{Struttura del pattern Model View Controller}
+	\end{figure}
+	Model-View-Controller (\insglo{MVC}) è un \insglo{pattern} architetturale utilizzato per dividere il codice in blocchi di funzionalità ben distinte, e viene utilizzato molto frequentemente nelle applicazioni in cui un insieme di informazioni deve essere rappresentato attraverso una interfaccia grafica.
 		\level{3}{Componenti}
-			\insglo{MVC} è quindi basato sul principio del disaccoppiamento dei tre oggetti di cui è composto, ovvero sulla riduzione del loro grado di dipendenza reciproca, allo scopo di fornire una maggiore robustezza, modularità e manutenibilità al \insglo{software}.\\
-			Di seguito si riporta una breve descrizione dei componenti e delle loro caratteristiche. 
+		\insglo{MVC} è quindi basato sul principio del disaccoppiamento dei tre oggetti di cui è composto, ovvero sulla riduzione del loro grado di dipendenza reciproca, allo scopo di fornire una maggiore robustezza, modularità e manutenibilità al \insglo{software}.\\
+		Di seguito si riporta una breve descrizione dei componenti e delle loro caratteristiche. 
 			\level{4}{Model}
-				Il Model è il nucleo dell'applicazione. Definisce il modello dei dati realizzando la business logic, ovvero definisce gli oggetti secondo la logica di utilizzo dell'applicazione indicante anche le possibili operazioni effettuabili su di essi.\\
-				Questo componente viene generalmente progettato attraverso tecniche object oriented.\\
-				Nella struttura del \insglo{pattern} \insglo{MVC}, il Model è un componente passivo, che non ha relazioni uscenti forti, ma si occupa di notificare alla View eventuali aggiornamenti avvenuti in esso, solitamente attraverso l'implementazione del \insglo{pattern} Observer.
+			Il Model è il nucleo dell'applicazione. Definisce il modello dei dati realizzando la business logic, ovvero definisce gli oggetti secondo la logica di utilizzo dell'applicazione indicante anche le possibili operazioni effettuabili su di essi.\\
+			Questo componente viene generalmente progettato attraverso tecniche object oriented.\\
+			Nella struttura del \insglo{pattern} \insglo{MVC}, il Model è un componente passivo, che non ha relazioni uscenti forti, ma si occupa di notificare alla View eventuali aggiornamenti avvenuti in esso, solitamente attraverso l'implementazione del \insglo{pattern} Observer.
 			\level{4}{View}
-				La View si occupa di visualizzare i dati contenuti nel Model e fornisce l'interfaccia di interazione con utenti e agenti.\\
-				Nella struttura del \insglo{pattern} \insglo{MVC}, la View cattura gli input dell'utente e li passa al Controller affinché esegua le corrette operazioni sul Model. \\
-				La View può essere soggetta a due tipi di aggiornamento:
-				\begin{itemize}
-					\item \textbf{Push model:} viene implementato attraverso il \insglo{pattern} Observer e soltanto quando \insglo{MVC} è usato in un solo ambiente di esecuzione; consiste nel fatto che sia il Model a emettere, senza essere sollecitato, la notifica in seguito alla quale la View verrà aggiornata.
-					\item \textbf{Pull model:} viene implementato quando \insglo{MVC} è usato su diversi ambienti di esecuzione; in questo caso la View richiede al Model se sia necessario un aggiornamento solo al verificarsi di particolari eventi.
-				\end{itemize}
+			La View si occupa di visualizzare i dati contenuti nel Model e fornisce l'interfaccia di interazione con utenti e agenti.\\
+			Nella struttura del \insglo{pattern} \insglo{MVC}, la View cattura gli input dell'utente e li passa al Controller affinché esegua le corrette operazioni sul Model. \\
+			La View può essere soggetta a due tipi di aggiornamento:
+			\begin{itemize}
+				\item \textbf{Push model:} viene implementato attraverso il \insglo{pattern} Observer e soltanto quando \insglo{MVC} è usato in un solo ambiente di esecuzione; consiste nel fatto che sia il Model a emettere, senza essere sollecitato, la notifica in seguito alla quale la View verrà aggiornata.
+				\item \textbf{Pull model:} viene implementato quando \insglo{MVC} è usato su diversi ambienti di esecuzione; in questo caso la View richiede al Model se sia necessario un aggiornamento solo al verificarsi di particolari eventi.
+			\end{itemize}
 			\level{4}{Controller}
-				Il Controller è il collante fra la View e il Model. Si occupa infatti di implementare l'application logic, cioè l'insieme di operazioni eseguibili sul modello dei dati attraverso una particolare vista.\\
-				Poiché potenzialmente possono esistere più View (si pensi per esempio ad una applicazione che dispone sia di una interfaccia web che di una applicazione per smartphone) è necessario che ad ogni View corrisponda un Controller.
+			Il Controller è il collante fra la View e il Model. Si occupa infatti di implementare l'application logic, cioè l'insieme di operazioni eseguibili sul modello dei dati attraverso una particolare vista.\\
+			Poiché potenzialmente possono esistere più View (si pensi per esempio ad una applicazione che dispone sia di una interfaccia web che di una applicazione per smartphone) è necessario che ad ogni View corrisponda un Controller.
  		\level{3}{Vantaggi nell'uso di MVC}
-			Come detto, l'utilizzo del \insglo{pattern} \insglo{MVC} porta la riduzione delle dipendenze, offrendo diversi vantaggi. La modularità ottenuta permette il riutilizzo del Model in applicazioni con diverse View, oltre a rendere più semplice e rapida l'esecuzione di test. 
+		Come detto, l'utilizzo del \insglo{pattern} \insglo{MVC} porta la riduzione delle dipendenze, offrendo diversi vantaggi. La modularità ottenuta permette il riutilizzo del Model in applicazioni con diverse View, oltre a rendere più semplice e rapida l'esecuzione di test. 
  		\level{3}{Svantaggi nell'uso di MVC}
-			L'utilizzo del \insglo{pattern} \insglo{MVC} nello sviluppo di un \insglo{software} non ha solo benefici, ma ha anche un piccolo costo, derivante da una maggiore complessità e dalla necessità di un maggior numero di aggiornamenti.\\
-  			La maggiore complessità è data dai livelli di indirezione introdotti dal \insglo{pattern} e dall'implementazione ad eventi necessaria per far comunicare i tre componenti. La maggiore frequenza degli aggiornamenti, invece, è un effetto collaterale della modularizzazione: frequenti cambiamenti al modello comportano spesso cambiamenti nelle View e quindi nei Controller.
+		L'utilizzo del \insglo{pattern} \insglo{MVC} nello sviluppo di un \insglo{software} non ha solo benefici, ma ha anche un piccolo costo, derivante da una maggiore complessità e dalla necessità di un maggior numero di aggiornamenti.\\
+  		La maggiore complessità è data dai livelli di indirezione introdotti dal \insglo{pattern} e dall'implementazione ad eventi necessaria per far comunicare i tre componenti. La maggiore frequenza degli aggiornamenti, invece, è un effetto collaterale della modularizzazione: frequenti cambiamenti al modello comportano spesso cambiamenti nelle View e quindi nei Controller.
+
+  	\level{2}{Model View Presenter} \label{app:MVP}
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.5]{SpecificaTecnica/Pics/MVP}
+    \caption{Struttura del pattern Model View Presenter}
+	\end{figure}
+	Model View Presenter (MVP) è un pattern architetturale che è stato progettato per facilitare i test di unità e per migliorare la separazione delle responsabilità fra le varie componenti. Esso viene usato principalmente per la creazione di interfacce utente.
+		\level{3}{Componenti}
+		Di seguito vengono descritti i tre componenti principali di tale pattern, attraverso i quali vengono separate le varie responsabilità.
+			\level{4}{Model}
+			Il Model è il nucleo dell'applicazione. Definisce il modello dei dati realizzando la business logic, ovvero definisce gli oggetti, secondo la logica di utilizzo dell'applicazione, indicando anche le possibili operazioni effettuabili su di essi.\\
+			Nella struttura del pattern MVP, il Model è un componente passivo, che non ha relazioni uscenti.
+			\level{4}{View}
+			La View si occupa di visualizzare i dati contenuti nel Model. È un'interfaccia che invia i comandi utente al Presenter. Essa si riduce ad un template di visualizzazione dei dati del Model e ad un'interfaccia di comunicazione.
+			\level{4}{Presenter}
+			Il Presenter rappresenta il collante tra il Model e la View e funge da \textit{Man in the middle}. È a conoscenza dell'esistenza sia del modello che della View, mentre la View non è a conoscenza del modello e viceversa. Il presenter implementa i metodi che rappresentano gli eventi che l'utente può effettuare nella relativa view attraverso user gesture. All'invocazione di queste, il presenter ha lo scopo di gestirle, ovvero di decidere come comportarsi nei confronti del modello e della view. La comunicazione passa, quindi, attraverso il Presenter.
+		\level{3}{Vantaggi nell'uso di MVP}
+		L'utilizzo del pattern MVP comporta un minore livello di accoppiamento tra le componenti, poichè il Presenter funge da intermediario tra View e Model, il che permette alla View e al modello di evolvere indipendentemente. \\
+		Un altro vantaggio nel separare responsabilità diverse alle varie componenti, consiste nella maggiore facilità dell'implementazione dei test e nella possibilità di riusare il codice del Model in diverse applicazioni.
+		\level{3}{Svantaggi nell'uso di MVP}
+		Uno dei maggiori svantaggi di tale pattern è la complessità elevata, dovuta ai livelli di indirezione introdotti dalla separazione delle responsabilità nei vari componenti. \\
+
+
+	\level{2}{Model View ViewModel} \label{app:MVVM}
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.7]{SpecificaTecnica/Pics/MVVM}
+    \caption{Struttura del pattern Model View ViewModel}
+	\end{figure}
+	Il Model View ViewModel è un pattern architetturale, che consente di separare il codice dell'interfaccia utente dalla \textit{business logic}. Tale pattern cerca di sfruttare i vantaggi della separazione delle responsabilità in più componenti ma anche quelli derivanti da un \textit{binding} dei dati più strettamente correlato con il modello dei dati.
+		\level{3}{Componenti}
+		Il pattern Model View ViewModel è diviso in tre componenti, descritte di seguito.
+			\level{4}{Model}
+			Il Model è il nucleo dell'applicazione. Definisce il modello dei dati realizzando la business logic, ovvero definisce gli oggetti secondo la logica di utilizzo dell'applicazione indicante anche le possibili operazioni effettuabili su di essi.\\ 
+			Il Model è completamente indipendente dalla View, ma si occupa di notificare il ViewModel in caso di cambiamenti nei dati.
+			\level{4}{View}
+			La View è il componente che si occupa della visualizzazione dei dati contenuti nel Model, quindi dell'interfaccia utente, definita tramite linguaggi di markup. la View cattura gli input dell'utente e comunica tramite \textit{data binding} ed eventi con il componente ViewModel.
+			\level{4}{ViewModel}
+			Il componente ViewModel è un'astrazione della View, che espone proprietà pubbliche e comandi. Esso si occupa della comunicazione tra la View ed il Model, prende i dati dal modello e li modifica nel formato richiesto dalla View. Inoltre, notifica la View in caso il modello sia cambiato ed aggiorna il Model a seconda degli input provenienti dalla View.
+		\level{3}{Vantaggi nell'uso del Model View ViewModel}
+		L'utilizzo del pattern MVVM comporta la riduzione delle dipendenze, offrendo diversi vantaggi. La modularità ottenuta permette il riutilizzo del Model in applicazioni con diverse View, oltre a rendere più semplice e rapida l'esecuzione di test. 
+		Un altro vantaggio è la possibilità del Model View ViewModel di supportare il \textit{two-way data-binding} tra la View ed il Model.
+		\level{3}{Svantaggi}
+		Oltre all'elevata complessità del pattern, dovuta alla separazione delle responsabilità nei vari componenti, un altro svantaggio è rappresentato dal dispendio di memoria che avviene a causa del \textit{data binding} in una applicazione di grandi dimensioni.
+
 	\level{2}{Singleton} \label{app:singleton}
-		\begin{figure}[H]\centering
-        \includegraphics[scale=0.7]{SpecificaTecnica/Pics/Singleton}
-        \caption{Struttura del pattern Singleton}
-		\end{figure}
-		Lo scopo del \insglo{pattern} creazionale denominato Singleton è 
-		assicurare l'esistenza di un'unica istanza di una classe e fornire
-		un punto di accesso globale ad essa.\\
-		Questo \insglo{pattern} è nato per rispondere alla necessità di non avere più
-		istanze della stessa classe, anche nei linguaggi in cui non è possibile 
-		usare una variabile globale, pur dando la possibilità alla classe di
-		tener traccia di quella sua istanza.\\
-		Il \insglo{pattern} Singleton è quindi applicabile ogniqualvolta debba esistere una 
-		sola istanza di una certa classe in tutta l'applicazione, prestando però attenzione 
-		al fatto che l'istanza sia estendibile tramite ereditarietà.\\
-		Viene generalmente utilizzato per implementare altri \insglo{pattern} come Factory, 
-		Builder e Façade.
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.7]{SpecificaTecnica/Pics/Singleton}
+    \caption{Struttura del pattern Singleton}
+	\end{figure}
+	Lo scopo del \insglo{pattern} creazionale denominato Singleton è 
+	assicurare l'esistenza di un'unica istanza di una classe e fornire
+	un punto di accesso globale ad essa.\\
+	Questo \insglo{pattern} è nato per rispondere alla necessità di non avere più
+	istanze della stessa classe, anche nei linguaggi in cui non è possibile 
+	usare una variabile globale, pur dando la possibilità alla classe di
+	tener traccia di quella sua istanza.\\
+	Il \insglo{pattern} Singleton è quindi applicabile ogniqualvolta debba esistere una 
+	sola istanza di una certa classe in tutta l'applicazione, prestando però attenzione 
+	al fatto che l'istanza sia estendibile tramite ereditarietà.\\
+	Viene generalmente utilizzato per implementare altri \insglo{pattern} come Factory, 
+	Builder e Façade.
 		\level{3}{Vantaggi nell'uso del Singleton}
 		L'utilizzo del Singleton nell'implementazione di un \insglo{software} apporta i seguenti 
 		vantaggi:
 		\begin{itemize}
-		\item controllo completo di come e quando i \insglo{client} accedono all'interfaccia;
-		\item evita l'utilizzo ingiustificato di variabili globali;
-		\item consente di ridefinire le operazioni definite nel Singleton;
-		\item permette di porre un limite massimo al numero di istanze di una certa classe.
+			\item controllo completo di come e quando i \insglo{client} accedono all'interfaccia;
+			\item evita l'utilizzo ingiustificato di variabili globali;
+			\item consente di ridefinire le operazioni definite nel Singleton;
+			\item permette di porre un limite massimo al numero di istanze di una certa classe.
 		\end{itemize}
-	\level{2}{Dependency injection} \label{app:dependencyinjection}
-Dependency Injection è un \insglo{pattern} architetturale utilizzato nella programmazione Object-Oriented il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze. \\
-Questo particolare \insglo{pattern} si basa su tre elementi:
-\begin{itemize}
-\item una componente dipendente;
-\item la dichiarazione delle dipendenze della componente, dette interface contracts;
-\item un injector, detto anche provider, che crea su richiesta le istanze delle classi che implementano le dipendenze.
-\end{itemize}
-Il principio di programmazione adottato è quello dell'inversione di controllo, secondo il quale il ciclo di vita degli oggetti viene gestito da un'entità esterna (container).\\
-Nel Dependency Injection implementato con l'inversione di controllo le dipendenze vengono inserite dal container, la componente si limita a dichiararle. In questo modo viene raggiunto l'obiettivo di ridurre le dipendenze fra classi.\\
-Esistono due tipi di Dependency Injection:
-\begin{description}
-	\item[Constructor injection:] le dipendenze vengono dichiarate come parametri del costruttore; in questo modo un oggetto è valido appena viene istanziato.
-	\item[Setter injection:] le dipendenze vengono dichiarate come metodi setter; in questo modo vengono evidenziate le dipendenze.
-\end{description}
 
-\level{3}{Vantaggi nell'uso di dependency injection}
-L'utilizzo del \insglo{pattern} Dependency Injection nella progettazione dell'architettura di un \insglo{software} porta i seguenti vantaggi:
-\begin{itemize}
-\item la componente individuata come \insglo{client} è più facile da testare singolarmente attraverso l'uso di stub;
-\item permette di esternalizzare i dettagli della configurazione del sistema in un file di configurazione, consentendo così di riconfigurare il sistema senza ricompilarlo;
-\item permette lo sviluppo concorrente e indipendente del \insglo{software};
-\item diminuisce l'accoppiamento tra una classe e la sua dipendenza.
-\end{itemize}
-\level{3}{Svantaggi nell'uso di dependency injection}
-Dependency Injection ha anche delle possibili ripercussioni negative sul \insglo{software} che lo utilizza. Esso infatti può rendere il codice difficile da leggere in quanto permette la separazione fra dichiarazione e comportamento, oltre a richiedere più righe di codice rispetto alla scrittura di codice“tradizionale”per ottenere lo stesso comportamento.
+	\level{2}{Dependency injection} \label{app:dependencyinjection}
+	Dependency Injection è un \insglo{pattern} architetturale utilizzato nella programmazione Object-Oriented il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze. \\
+	Questo particolare \insglo{pattern} si basa su tre elementi:
+	\begin{itemize}
+		\item una componente dipendente;
+		\item la dichiarazione delle dipendenze della componente, dette interface contracts;
+		\item un injector, detto anche provider, che crea su richiesta le istanze delle classi che implementano le dipendenze.
+	\end{itemize}
+	Il principio di programmazione adottato è quello dell'inversione di controllo, secondo il quale il ciclo di vita degli oggetti viene gestito da un'entità esterna (container).\\
+	Nel Dependency Injection implementato con l'inversione di controllo le dipendenze vengono inserite dal container, la componente si limita a dichiararle. In questo modo viene raggiunto l'obiettivo di ridurre le dipendenze fra classi.\\
+	Esistono due tipi di Dependency Injection:
+	\begin{description}
+		\item[Constructor injection:] le dipendenze vengono dichiarate come parametri del costruttore; in questo modo un oggetto è valido appena viene istanziato.
+		\item[Setter injection:] le dipendenze vengono dichiarate come metodi setter; in questo modo vengono evidenziate le dipendenze.
+	\end{description}
+		\level{3}{Vantaggi nell'uso di dependency injection}
+		L'utilizzo del \insglo{pattern} Dependency Injection nella progettazione dell'architettura di un \insglo{software} porta i seguenti vantaggi:
+		\begin{itemize}
+			\item la componente individuata come \insglo{client} è più facile da testare singolarmente attraverso l'uso di stub;
+			\item permette di esternalizzare i dettagli della configurazione del sistema in un file di configurazione, consentendo così di riconfigurare il sistema senza ricompilarlo;
+			\item permette lo sviluppo concorrente e indipendente del \insglo{software};
+			\item diminuisce l'accoppiamento tra una classe e la sua dipendenza.
+			\end{itemize}
+		\level{3}{Svantaggi nell'uso di dependency injection}
+		Dependency Injection ha anche delle possibili ripercussioni negative sul \insglo{software} che lo utilizza. Esso infatti può rendere il codice difficile da leggere in quanto permette la separazione fra dichiarazione e comportamento, oltre a richiedere più righe di codice rispetto alla scrittura di codice“tradizionale”per ottenere lo stesso comportamento.
 
 	\level{2}{Observer} \label{app:observer}
-		\begin{figure}[H]\centering
-        \includegraphics[scale=0.7]{SpecificaTecnica/Pics/Observer}
-        \caption{Struttura del pattern Observer}
-		\end{figure}
-		Observer è un \insglo{pattern} comportamentale, implementato in numerose librerie di programmazione e sistemi, il cui scopo è quello di tenere sotto controllo lo stato di diversi oggetti legati ad un soggetto (dipendenza uno a molti). \\
-		Il paradigma corrisponde al modello Publisher and Subscribe: i sottoscrittori si registrano presso un pubblicatore e quest’ultimo li informa ogni volta che ci sono nuove notizie (del genere sottoscritto).\\
-		Il \insglo{pattern} è composto da:
-		\begin{itemize}
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.7]{SpecificaTecnica/Pics/Observer}
+    \caption{Struttura del pattern Observer}
+	\end{figure}
+	Observer è un \insglo{pattern} comportamentale, implementato in numerose librerie di programmazione e sistemi, il cui scopo è quello di tenere sotto controllo lo stato di diversi oggetti legati ad un soggetto (dipendenza uno a molti). \\
+	Il paradigma corrisponde al modello Publisher and Subscribe: i sottoscrittori si registrano presso un pubblicatore e quest’ultimo li informa ogni volta che ci sono nuove notizie (del genere sottoscritto).\\
+	Il \insglo{pattern} è composto da:
+	\begin{itemize}
 		\item una classe astratta “Subject”, da cui eredita il soggetto concreto, che mantiene una lista di riferimenti agli oggetti dipendenti per poterli avvisare;
 		\item Un’interfaccia “Observer” implementata dagli osservatori concreti, che tengono il riferimento al soggetto per poterne leggere lo stato.
-		\end{itemize}
+	\end{itemize}
 		\level{3}{Vantaggi nell’uso di observer}
-			L’utilizzo del \insglo{pattern} Observer nella progettazione dell’architettura porta i seguenti vantaggi:
-			\begin{itemize}
+		L’utilizzo del \insglo{pattern} Observer nella progettazione dell’architettura porta i seguenti vantaggi:
+		\begin{itemize}
 			\item minimizzazione dell’accoppiamento tra Observer e Subject, che possono essere usati indipendentemente gli uni dagli altri;
 			\item aumento del grado di riuso dei singoli tipi;
 			\item non si debbono fare assunzioni sugli oggetti dipendenti se si ha necessità di comunicare con loro;
 			\item libertà di aggiungere osservatori dinamicamente alla lista, senza modificare il Subject.
-			\end{itemize}
-
-			\level{3}{Svantaggi nell'uso di Observer}
-			L’utilizzo di Observer potrebbe causare:
-			\begin{itemize}
+		\end{itemize}
+		\level{3}{Svantaggi nell'uso di Observer}
+		L’utilizzo di Observer potrebbe causare:
+		\begin{itemize}
 			\item possibile cascata di notifiche: poiché gli observer mutuamente si ignorano, una richiesta di modifica può avere effetti incontrollati, scatenando la reazione degli altri;
 			\item “memory leak” in quanto nelle implementazioni di base il subject richiede sia l’esplicita registrazione che l’esplicita rimozione dalla lista delle dipendenze legandosi in modo forte agli observer, tenendoli attivi. Questo problema può essere prevenuto riferendo in modo debole gli observer.
-			\end{itemize}
-\level{2}{Abstract Factory} \label{app:abstractfactory}
-		\begin{figure}[H]\centering
-        \includegraphics[scale=0.7]{SpecificaTecnica/Pics/AbstractFactory}
-        \caption{Struttura del pattern Abstract Factory}
-		\end{figure}
-Abstract Factory è un \insglo{design pattern} creazionale utilizzato allo scopo di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
-Il \insglo{pattern} si basa sui seguenti elementi:
-\begin{description}
-\item[AbstractFactory:] dichiara un'interfaccia per operazioni che creano prodotti astratti;
-\item[ConcreteFactory:] implementa le operazioni per creare prodotti concreti;
-\item[AbstractProduct:] dichiara un'interfaccia per un tipo di \insglo{prodotto};
-\item[ConcreteProduct:] definisce un \insglo{prodotto} che deve creato dalla corrispondente factory concreta e implementa l'interfaccia di AbstractProduct.
-\end{description}
-La principale ragione per cui viene utilizzato questo \insglo{pattern} è la possibilità di rendere l'applicazione configurabile con diverse famiglie di prodotti. La flessibilità garantita dal \insglo{pattern} fa si che esso venga implementato ogniqualvolta:
-\begin{itemize}
-\item si voglia rendere il sistema indipendente dal modo in cui i suoi componenti sono creati;
-\item si voglia rendere il sistema configurabile con più famiglie di prodotti;
-\item le componenti di una famiglia debbano essere usate insieme;
-\item si voglia fornire una libreria di classi \insglo{prodotto}, senza fornire informazioni circa la loro implementazione.
-\end{itemize}
-\level{3}{Vantaggi nell'uso di Abstract Factory}
-L'impiego dell'Abstract Factory nella progettazione dell'architettura di un \insglo{prodotto} \insglo{software} porta i seguenti vantaggi:
-\begin{itemize}
-\item isolamento dei tipi concreti, in quanto ai \insglo{client} risultano visibili solo le interfacce dei prodotti, con la conseguenza di una maggiore flessibilità del \insglo{software};
-\item maggiore semplicità nell'introdurre e usare diverse famiglie di prodotti;
-\item favorisce la consistenza dei prodotti concreti.
-\end{itemize}
-\level{3}{Svantaggi nell'uso di Abstract Factory}
-Come tutti i \insglo{pattern}, anche Abstract Factory ha delle ripercussioni negative nella progettazione del \insglo{software}: in questo caso risulta difficile estendere la classe factory astratta, perchè ciò comporta il cambiamento di tutte le sotto classi.
+		\end{itemize}
+
+	\level{2}{Abstract Factory} \label{app:abstractfactory}
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.7]{SpecificaTecnica/Pics/AbstractFactory}
+    \caption{Struttura del pattern Abstract Factory}
+	\end{figure}
+	Abstract Factory è un \insglo{design pattern} creazionale utilizzato allo scopo di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
+	Il \insglo{pattern} si basa sui seguenti elementi:
+	\begin{description}
+		\item[AbstractFactory:] dichiara un'interfaccia per operazioni che creano prodotti astratti;
+		\item[ConcreteFactory:] implementa le operazioni per creare prodotti concreti;
+		\item[AbstractProduct:] dichiara un'interfaccia per un tipo di \insglo{prodotto};
+		\item[ConcreteProduct:] definisce un \insglo{prodotto} che deve creato dalla corrispondente factory concreta e implementa l'interfaccia di AbstractProduct.
+	\end{description}
+	La principale ragione per cui viene utilizzato questo \insglo{pattern} è la possibilità di rendere l'applicazione configurabile con diverse famiglie di prodotti. La flessibilità garantita dal \insglo{pattern} fa si che esso venga implementato ogniqualvolta:
+	\begin{itemize}
+		\item si voglia rendere il sistema indipendente dal modo in cui i suoi componenti sono creati;
+		\item si voglia rendere il sistema configurabile con più famiglie di prodotti;
+		\item le componenti di una famiglia debbano essere usate insieme;
+		\item si voglia fornire una libreria di classi \insglo{prodotto}, senza fornire informazioni circa la loro implementazione.
+	\end{itemize}
+		\level{3}{Vantaggi nell'uso di Abstract Factory}
+		L'impiego dell'Abstract Factory nella progettazione dell'architettura di un \insglo{prodotto} \insglo{software} porta i seguenti vantaggi:
+		\begin{itemize}
+			\item isolamento dei tipi concreti, in quanto ai \insglo{client} risultano visibili solo le interfacce dei prodotti, con la conseguenza di una maggiore flessibilità del \insglo{software};
+			\item maggiore semplicità nell'introdurre e usare diverse famiglie di prodotti;
+			\item favorisce la consistenza dei prodotti concreti.
+		\end{itemize}
+		\level{3}{Svantaggi nell'uso di Abstract Factory}
+		Come tutti i \insglo{pattern}, anche Abstract Factory ha delle ripercussioni negative nella progettazione del \insglo{software}: in questo caso risulta difficile estendere la classe factory astratta, perchè ciò comporta il cambiamento di tutte le sotto classi.
 
 \level{2}{Adapter} \label{app:adapter}
 	\begin{figure}[H]\centering
@@ -147,46 +191,71 @@ Come tutti i \insglo{pattern}, anche Abstract Factory ha delle ripercussioni neg
     \includegraphics[scale=0.7]{SpecificaTecnica/Pics/ObjectAdapter}
     \caption{Struttura del pattern Adapter nella versione ObjectAdapter}
 	\end{figure}
-Adapter è un \insglo{pattern} strutturale che, come suggerisce il suo nome, viene utilizzato per adattare l'interfaccia di una classe in un'altra permettendo alle classi di lavorare assieme, cosa altrimenti non possibile.\\
-Gli elementi del \insglo{pattern} sono:
-\begin{description}
-\item[Target:] è l'interfaccia di dominio, quella che di desidera mettere a disposizione del \insglo{Client};
-\item[Adaptee:] è l'interfaccia esistente che si vuole adattare (ad esempio una libreria esterna);
-\item[Adapter:] è la classe concreta che adatta Adaptee in Target.
-\end{description}
+	Adapter è un \insglo{pattern} strutturale che, come suggerisce il suo nome, viene utilizzato per adattare l'interfaccia di una classe in un'altra permettendo alle classi di lavorare assieme, cosa altrimenti non possibile.\\
+	Gli elementi del \insglo{pattern} sono:
+	\begin{description}
+		\item[Target:] è l'interfaccia di dominio, quella che di desidera mettere a disposizione del \insglo{Client};
+		\item[Adaptee:] è l'interfaccia esistente che si vuole adattare (ad esempio una libreria esterna);
+		\item[Adapter:] è la classe concreta che adatta Adaptee in Target.
+	\end{description}
+	Esso viene utilizzato ogni qualvolta sia necessario:
+	\begin{itemize}
+		\item utilizzare una classe esistente non conforme all'interfaccia Target;
+		\item creare classi riusabili anche con classi arbitrarie;
+		\item adattare un'interfaccia che non può essere adattata in altri modi.
+	\end{itemize}
+	Si può implementare questo \insglo{pattern} in due modi:
+	\begin{description}
+		\item[Class adapter:] in questo caso viene realizzata una classe concreta che implementa allo stesso tempo l'interfaccia esistente (quella da adattare) e l'interfaccia che si desidera per l'applicazione (detta interfaccia di dominio). Il vantaggio di questo metodo è che permette ad Adapter di modificare (anche estendendo) le caratteristiche di Adaptee; lo svantaggio è che non funziona quando bisogna adattare una classe alla base di una gerarchia;
+		\item[Object adapter:] in questo caso l'adattamento avviene sfruttando un campo dati del tipo dell'interfaccia da adattare all'interno della classe concreta; in questo modo l'interfaccia di dominio verrà implementata invocando i metodi dell'interfaccia Adaptee attraverso il campo dati. Il vantaggio di questo metodo è che permette ad Adapter di adattare più tipi; lo svantaggio è che non consente di modificare le caratteristiche dell'Adaptee.
+	\end{description}
+	Ne consegue che la scelta fra i due metodi va fatta in considerazione dell'uso che se ne vuole fare.
 
-Esso viene utilizzato ogni qualvolta sia necessario:
-\begin{itemize}
-\item utilizzare una classe esistente non conforme all'interfaccia Target;
-\item creare classi riusabili anche con classi arbitrarie;
-\item adattare un'interfaccia che non può essere adattata in altri modi.
-\end{itemize}
-
-Si può implementare questo \insglo{pattern} in due modi:
-\begin{description}
-\item[Class adapter:] in questo caso viene realizzata una classe concreta che implementa allo stesso tempo l'interfaccia esistente (quella da adattare) e l'interfaccia che si desidera per l'applicazione (detta interfaccia di dominio). Il vantaggio di questo metodo è che permette ad Adapter di modificare (anche estendendo) le caratteristiche di Adaptee; lo svantaggio è che non funziona quando bisogna adattare una classe alla base di una gerarchia;
-\item[Object adapter:] in questo caso l'adattamento avviene sfruttando un campo dati del tipo dell'interfaccia da adattare all'interno della classe concreta; in questo modo l'interfaccia di dominio verrà implementata invocando i metodi dell'interfaccia Adaptee attraverso il campo dati. Il vantaggio di questo metodo è che permette ad Adapter di adattare più tipi; lo svantaggio è che non consente di modificare le caratteristiche dell'Adaptee.
-\end{description}
-Ne consegue che la scelta fra i due metodi va fatta in considerazione dell'uso che se ne vuole fare.
-
-\level{2}{Bridge} \label{app:bridge}
+	\level{2}{Bridge} \label{app:bridge}
 	\begin{figure}[H]\centering
     \includegraphics[scale=0.7]{SpecificaTecnica/Pics/Bridge}
     \caption{Struttura del pattern Bridge}
 	\end{figure}
-Bridge è un \insglo{pattern} strutturale che permette di separare l’interfaccia di una classe dalla sua implementazione. \\
-Il \insglo{pattern} è composto da un’interfaccia che fa da ponte rendendo indipendenti le funzionalità della classe concreta dall’interfaccia che la implementa. Entrambe i tipi di classi possono essere modificati senza che questo causi problemi l’uno all’altro. \\
-Viene utilizzato quando:
-\begin{itemize}
-\item si desidera evitare un binding permanente tra astrazione e interfaccia;
-\item è necessario rendere estensibili tramite sub-classing astrazioni e implementazioni;
-\item si vuole nascondere al \insglo{client} l'implementazione di un'astrazione;
-\item si vuole condividere un'implementazione tra oggetti multipli nascondendo questo fatto al \insglo{client}.
-\end{itemize}
+	Bridge è un \insglo{pattern} strutturale che permette di separare l’interfaccia di una classe dalla sua implementazione. \\
+	Il \insglo{pattern} è composto da un’interfaccia che fa da ponte rendendo indipendenti le funzionalità della classe concreta dall’interfaccia che la implementa. Entrambe i tipi di classi possono essere modificati senza che questo causi problemi l’uno all’altro. \\
+	Viene utilizzato quando:
+	\begin{itemize}
+		\item si desidera evitare un binding permanente tra astrazione e interfaccia;
+		\item è necessario rendere estensibili tramite sub-classing astrazioni e implementazioni;
+		\item si vuole nascondere al \insglo{client} l'implementazione di un'astrazione;
+		\item si vuole condividere un'implementazione tra oggetti multipli nascondendo questo fatto al \insglo{client}.
+	\end{itemize}
 
-\level{3}{Vantaggi nell’uso di Bridge}
-L’utilizzo del \insglo{pattern} Bridge nella progettazione dell’architettura porta i seguenti vantaggi:
-\begin{itemize}
-\item maggiore estensibilità data dalla possibilità di estendere indipendentemente le gerarchie delle interfacce e delle classi che le implementano;
-\item mascheramento dei dettagli implementativi permesso dall'implementazione nascosta delle interfacce.
-\end{itemize}
+		\level{3}{Vantaggi nell’uso di Bridge}
+		L’utilizzo del \insglo{pattern} Bridge nella progettazione dell’architettura porta i seguenti vantaggi:
+		\begin{itemize}
+			\item maggiore estensibilità data dalla possibilità di estendere indipendentemente le gerarchie delle interfacce e delle classi che le implementano;
+			\item mascheramento dei dettagli implementativi permesso dall'implementazione nascosta delle interfacce.
+		\end{itemize}
+
+	\level{2}{Strategy} \label{app:strategy}
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.4]{SpecificaTecnica/Pics/Strategy}
+    \caption{Struttura del pattern Strategy}
+	\end{figure}
+	Strategy è un design pattern comportamentale che offre la possibilità di definire una famiglia di algoritmi, incapsularli e renderli intercambiabili. Esso permette all'algoritmo di variare in modo indipendente dai client che ne fanno uso. \\
+	La struttura di tale pattern è formata da:
+	\begin{description}
+		\item[Strategy:] è l'interfaccia comune a tutti gli algoritmi supportati. Context usa questa interfaccia per invocare l'algoritmo definito da un ConcreteStrategy.
+		\item[ConcreteStrategy:] implementa l'algoritmo utilizzando l'interfaccia Strategy.
+		\item[Context:] è configurato con un oggetto ConcreteStrategy. Contiene un riferimento ad un oggetto Strategy e può definire un'interfaccia che permetta a Strategy di accedere alla sua struttura dati. Questa classe inoltra le richieste dai propri client verso Strategy.
+	\end{description}
+		\level{3}{Vantaggi nell’uso di Strategy}
+		L'uso del pattern Strategy nell'architettura di un prodotto software porta i seguenti vantaggi:
+		\begin{itemize}
+			\item incapsulando l'algoritmo in una classe separata Strategy, viene reso possibile il cambiamento dell'algoritmo in modo dinamico;
+			\item consente di evitare i blocchi di scelte condizionali, grazie all'uso della classe Strategy seprata;
+			\item è possibile scegliere l'implementazione dell'algoritmo più adatta al problema che si presenta.
+		\end{itemize}
+		\level{3}{Vantaggi nell’uso di Strategy}
+		L'uso del pattern Strategy comporta anche alcuni svantaggi. 
+		\begin{itemize}
+			\item Il client è costretto a capire le differenze esistenti tra le varie strategie. Conviene, quindi usare tale pattern, solo quando le varianti di comportamento sono richieste dal client.
+			\item L'interfaccia Strategy è condivisa da tutte le classi ConcreteStrategy, ma non tutte useranno tutti i dati che l'interfaccia mette a disposizione. Questo comporta il verificarsi di casi in cui saranno creati e inizializzati parametri che non verranno usati da nessuno.
+			\item Vi è un aumento del numero di oggetti creati, ma questo può essere limitato implementando le strategie come oggetti senza stato, in tal modo i contesti potranno condividere le stesse istanze di Strategy. Nel Context verrà memorizzato l'eventuale stato necessario ad una strategia, il quale verrà passato da Context a Strategy ad ogni chiamata dei metodi di Strategy.
+		\end{itemize}
