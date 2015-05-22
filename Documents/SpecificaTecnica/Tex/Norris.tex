@@ -83,9 +83,9 @@
 			\level{5}{Contesto di utilizzo}
 				Il \insglo{pattern} Dependency Injection viene utilizzato con le classi che implementano le seguenti interfacce:
 				\begin{itemize}
-					\item ExternalAPIManager::EndpointFactory, inietta in ExternalAPIManager::ExternalAPIController le dipendenze verso i diversi Endpoint;
-					\item DataModel::ChartFactory, inietta in DataModel::ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
-					\item DataModel::Updater, inietta in DataModel::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
+					\item DataModel::NorrisChart::Updater, inietta in DataModel::NorrisChart::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano;
+					\item DataModel::NorrisChart::ChartFactory, inietta in DataModel::NorrisChart::ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
+					\item ExternalAPIManager::EndpointFactory, inietta in ExternalAPIManager::ExternalAPIController le dipendenze verso i diversi Endpoint.
 				\end{itemize}
 				\begin{figure}[H]\centering
 	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/DependencyInjection1}
@@ -108,26 +108,26 @@
 					\begin{itemize}
 						\item Interfacce:
 						\begin{itemize}
-							\item ChartFactory, con cui vengono generati i diversi tipi di grafici;
+							\item DataModel::NorrisChart::ChartFactory, con cui vengono generati i diversi tipi di grafici;
 							\item ExternalAPIManager::EndpointFactory, con cui sono generati i diversi tipi di controller dei grafici.
 						\end{itemize}
 						\item Classi:
 						\begin{itemize}
-							\item DataModel::BarChartFactory;
-							\item DataModel::LineChartFactory;
-							\item DataModel::MapChartFactory;
-							\item DataModel::TableFactory;
+							\item DataModel::NorrisChart::BarChartFactory;
+							\item DataModel::NorrisChart::LineChartFactory;
+							\item DataModel::NorrisChart::MapChartFactory;
+							\item DataModel::NorrisChart::TableFactory;
 							\item ExternalAPIManager::ChartEndpointFactory;
 							\item ExternalAPIManager::AuthenticationEndpointFactory;
 							\item ExternalAPIManager::ListEndpointFactory.
 						\end{itemize}
 					\end{itemize}
 					\begin{figure}[H]\centering
-	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Factory1}
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Factory2}
 	        		\caption{Factory Method pattern in Norris}
 	    			\end{figure}
 	    			\begin{figure}[H]\centering
-	        			\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Factory2}
+	        			\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Factory1}
 	        			\caption{Factory Method pattern in Norris}
 	    			\end{figure}
 			
@@ -138,7 +138,7 @@
 				Il \insglo{pattern} Observer si basa sugli oggetti “osservabili” e sugli “osservatori”.\\
 				Le interfacce che che estendono Observable sono le seguenti:
 				\begin{itemize}
-					\item DataModel::ChartModel;
+					\item DataModel::NorrisChart::ChartModel;
 					\item DataModel::NorrisModel.
 				\end{itemize}
 				L'interfaccia Observer è implementata dalla classe EventEmitter fornita da \insglo{Node.js}.
@@ -153,27 +153,27 @@
 			\level{5}{Contesto di utilizzo}    		
 				Le classi che implementano il Singleton sono quelle che si occupano di creare e di aggiornare i diversi tipi di grafici. Le riportiamo di seguito:
 				\begin{itemize}
-					\item DataModel::BarChartFactory;
-					\item DataModel::LineChartFactory;
-					\item DataModel::MapChartFactory;
-					\item DataModel::TableFactory;
-					\item DataModel::BarChartInPlaceUpdater;
-					\item DataModel::LineChartInPlaceUpdater;
-					\item DataModel::LineChartStreamUpdater;
-					\item DataModel::MapChartInPlaceUpdater;
-					\item DataModel::MapChartMovieUpdater;
-					\item DataModel::TableInPlaceUpdater;
-					\item DataModel::TableStreamUpdater
+					\item DataModel::NorrisChart::BarChartFactory;
+					\item DataModel::NorrisChart::LineChartFactory;
+					\item DataModel::NorrisChart::MapChartFactory;
+					\item DataModel::NorrisChart::TableFactory;
+					\item DataModel::NorrisChart::BarChartInPlaceUpdater;
+					\item DataModel::NorrisChart::LineChartInPlaceUpdater;
+					\item DataModel::NorrisChart::LineChartStreamUpdater;
+					\item DataModel::NorrisChart::MapChartInPlaceUpdater;
+					\item DataModel::NorrisChart::MapChartMovieUpdater;
+					\item DataModel::NorrisChart::TableInPlaceUpdater;
+					\item DataModel::NorrisChart::TableStreamUpdater
 					\item ExternalAPIManager::ChartEndpoitFactory;
 					\item ExternalAPIManager::AuthenticationEndpointFactory;
 					\item ExternalAPIManager::ListEndpointFactory.
 				\end{itemize}
 				\begin{figure}[H]\centering
-	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton1}
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton2}
 	        		\caption{Singleton pattern in Norris}
 	    		\end{figure}
 	    		\begin{figure}[H]\centering
-	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton2}
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton1}
 	        		\caption{Singleton pattern in Norris}
 	    		\end{figure}
 	    		\begin{figure}[H]\centering
@@ -187,13 +187,13 @@ algoritmi, incapsularli e renderli intercambiabili. Per la descrizione del \insg
 				\level{5}{Contesto di utilizzo}
 					Le classi che implementano lo Strategy sono quelle che si occupano di aggiornare i diversi tipi di grafici. Le riportiamo di seguito:
 					\begin{itemize}
-					\item DataModel::BarChartInPlaceUpdater;
-					\item DataModel::LineChartInPlaceUpdater;
-					\item DataModel::LineChartStreamUpdater;
-					\item DataModel::MapChartInPlaceUpdater;
-					\item DataModel::MapChartMovieUpdater;
-					\item DataModel::TableInPlaceUpdater;
-					\item DataModel::TableStreamUpdater
+					\item DataModel::NorrisChart::BarChartInPlaceUpdater;
+					\item DataModel::NorrisChart::LineChartInPlaceUpdater;
+					\item DataModel::NorrisChart::LineChartStreamUpdater;
+					\item DataModel::NorrisChart::MapChartInPlaceUpdater;
+					\item DataModel::NorrisChart::MapChartMovieUpdater;
+					\item DataModel::NorrisChart::TableInPlaceUpdater;
+					\item DataModel::NorrisChart::TableStreamUpdater
 				\end{itemize}
 				\begin{figure}[H]\centering
 	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Strategy}
