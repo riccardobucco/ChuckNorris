@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "BarChartSettings",
+    "description": "The data contained in a BarChart settings object",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "xLabel": {
+            "type": "string"
+        },
+        "yLabel": {
+            "type": "string"
+        },
+        "showGrid": {
+            "type": "boolean"
+        },
+        "legendPosition": {
+            "enum": [
+                "top-right",
+                "top-left",
+                "bottom-left",
+                "bottom-right",
+                "none"
+            ]
+        },
+        "orientation": {
+            "enum": [
+                "vertical",
+                "horizontal"
+            ]
+        },
+        "style": {
+            "type": "object",
+            "properties": {
+                "barValueSpacing": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "barDatasetSpacing":  {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        }
+    }
+}

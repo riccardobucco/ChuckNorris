@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "LineChartSettings",
+    "description": "The data contained in a LineChart settings object",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "xLabel": {
+            "type": "string"
+        },
+        "yLabel": {
+            "type": "string"
+        },
+        "showGrid": {
+            "type": "boolean"
+        },
+        "legendPosition": {
+            "enum": [
+                "top-right",
+                "top-left",
+                "bottom-left",
+                "bottom-right",
+                "none"
+            ]
+        },
+        "maxValues": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "style": {
+            "type": "object",
+            "properties": {
+                "pointDotRadius": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "bezierCurve":  {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

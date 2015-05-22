@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "MapChartSettings",
+    "description": "The data contained in a MapChart settings object",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "legendPosition": {
+            "enum": [
+                "top-right",
+                "top-left",
+                "bottom-left",
+                "bottom-right",
+                "none"
+            ]
+        },
+        "maxValues": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "centerCoordinates": {
+            "type": "object",
+            "properties": {
+                "x": {
+                    "type": "number"
+                },
+                "y": {
+                    "type": "number"
+                },
+                "required": ["x","y"]
+            }
+        },
+        "area": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        },
+        "style": {
+            "type": "object",
+            "properties": {
+                "marker": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
