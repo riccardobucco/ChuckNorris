@@ -18,9 +18,15 @@
                             "index": {
                                 "type": "integer",
                                 "minimum": 0
+                            },
+                            "id": {
+                                "type": "string"
                             }
                         },
-                        "required": ["series","index"]
+                        "oneOf": [
+                            {"required": ["series","index"]},
+                            {"required": ["id"]},
+                        ]
                     },
                     "data": {
                         "type": "object",
@@ -30,6 +36,9 @@
                             },
                             "y": {
                                 "type": "number"
+                            },
+                            "id": {
+                                "type": "string"
                             }
                         },
                         "required": ["x","y"]
@@ -55,6 +64,9 @@
                             },
                             "y": {
                                 "type": "number"
+                            },
+                            "id": {
+                                "type": "string"
                             }
                         },
                         "required": ["x","y"]
@@ -74,9 +86,15 @@
                     "index": {
                         "type": "integer",
                         "minimum": 0
+                    },
+                    "id": {
+                        "type": "string"
                     }
                 },
-                "required": ["series","index"]
+                "oneOf": [
+                    {"required": ["x","y"]},
+                    {"required": ["id"]},
+                ]
             }
         }
     }
