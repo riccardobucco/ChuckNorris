@@ -41,7 +41,6 @@
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
 			\item \textbf{Tipo:} classe
 			<xsl:call-template name="abstract"/>
-			<xsl:apply-templates select="*[local-name()='GeneralizableElement.generalization']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.stereotype']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
@@ -63,7 +62,6 @@
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
 			\item \textbf{Tipo:} interfaccia
-			<xsl:apply-templates select="*[local-name()='GeneralizableElement.generalization']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
 			<xsl:apply-templates select="*[local-name()='Classifier.feature']"/>
@@ -142,6 +140,19 @@
 	<xsl:template name="extends">
 		<xsl:param name="id"></xsl:param>
 		<xsl:call-template name="id-name"><xsl:with-param name="id" select="//*[@xmi.id=$id]/*[local-name()='Generalization.parent']/*[local-name()='GeneralizableElement']/@xmi.idref"/></xsl:call-template>
+	</xsl:template>
+
+	<!-- implementa -->
+	<xsl:template match="*[local-name()='ModelElement.clientDependency']">
+		\item \textbf{Implementa:}
+		<xsl:for-each select="*[local-name()='Dependency']">
+			<xsl:call-template name="implements"><xsl:with-param name="id" select="@xmi.idref"/></xsl:call-template><xsl:if test="position() != last()">, </xsl:if>
+		</xsl:for-each>
+	</xsl:template>
+
+	<xsl:template name="implements">
+		<xsl:param name="id"></xsl:param>
+		<xsl:call-template name="id-name"><xsl:with-param name="id" select="//*[@xmi.id=$id]/*[local-name()='Dependency.supplier']/*[local-name()='ModelElement']/@xmi.idref"/></xsl:call-template>
 	</xsl:template>
 
 	<!-- attributi e metodi -->
