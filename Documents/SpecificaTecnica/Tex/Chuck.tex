@@ -77,25 +77,6 @@
 	\input{Tex/InterazioniClassiChuck.tex}
 	\level{3}{Design pattern utilizzati con le classi}
 		Nella progettazione delle classi di \insglo{Chuck} abbiamo deciso di utilizzare alcuni \insglo{design pattern}. Riportiamo di seguito una loro breve descrizione e il contesto nel quale sono stati utilizzati.
-		\level{4}{Observer}
-			L'Observer è un \insglo{pattern} comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
-			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
-			\level{5}{Contesto di utilizzo}
-				Il \insglo{pattern} Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\In \insglo{Chuck} il nucleo dell'implementazione dell'Observer si trova nel \insglo{package} Utils, in cui sono contenute le interfacce Observer e Observable, e la classe ObservableImpl che è l'implementazione di Observable. Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il \insglo{pattern} completo.\\
-				Interfacce che estendono Observable:
-				\begin{itemize}
-					\item ChartView::View;
-					\item DataModel::ChartModel.
-				\end{itemize}
-				Interfacce che estendono Observer:
-				\begin{itemize}
-					\item ChartView::View.
-				\end{itemize}
-				Classi che estendono ObservableImpl:
-				\begin{itemize}
-					\item ChartView::ViewImpl;
-					\item DataModel::ChartImpl.
-				\end{itemize}
 		\level{4}{Bridge}
 			Il Bridge è un \insglo{pattern} strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione. In particolare, utilizza i concetti di \textit{encapsulation}, \textit{aggregation} ed \textit{inheritance} per separare varie responsabilità in classi differenti. \\
 			Il \insglo{design pattern} Bridge si differenzia dal \insglo{pattern} Adapter, in quanto il primo viene utilizzato fin dall'inizio della progettazione per consentire ad astrazioni ed implementazioni di variare in modo indipendente, mentre il secondo viene usato quando si vogliono adattare classi inizialmente non correlate e viene introdotto dopo che queste sono state progettate.
