@@ -25,6 +25,7 @@
 		\usepackage{float}
 		\usepackage{listings, lstautogobble}
 		\usepackage{amsmath}
+		\usepackage{pifont}
 
 		\colorlet{punct}{red!60!black}
 		\definecolor{background}{HTML}{EEEEEE}

@@ -136,7 +136,7 @@
 				\begin{itemize}
 				\setlength{\itemsep}{5pt}
 				<xsl:for-each select="*[local-name()='Attribute']">
-					\item <xsl:if test="@ownerScope = 'classifier'">\underline</xsl:if>{<xsl:choose>
+					\item[\ding{111}] <xsl:if test="@ownerScope = 'classifier'">\underline</xsl:if>{<xsl:choose>
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'public'">+</xsl:when>
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'package'">\(\sim\)</xsl:when>
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'protected'">\#</xsl:when>
@@ -153,7 +153,7 @@
 				\begin{itemize}
 				\setlength{\itemsep}{5pt}
 				<xsl:for-each select="*[local-name()='Operation']">
-					\item <xsl:if test="@isAbstract='true'">\textit</xsl:if>{<xsl:if test="@ownerScope = 'classifier'">\underline</xsl:if>{<xsl:choose>
+					\item[\ding{111}] <xsl:if test="@isAbstract='true'">\textit</xsl:if>{<xsl:if test="@ownerScope = 'classifier'">\underline</xsl:if>{<xsl:choose>
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'public'">+</xsl:when>
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'package'">\(\sim\)</xsl:when>
 							<xsl:when test="*[local-name()='Feature.visibility']/@xmi.value = 'protected'">\#</xsl:when>
