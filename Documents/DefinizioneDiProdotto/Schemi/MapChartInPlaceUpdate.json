@@ -18,7 +18,10 @@
                         "minimum": 0
                     }
                 },
-                "required": ["series","index"]
+                "oneOf": [
+                    {"required": ["x","y"]},
+                    {"required": ["id"]},
+                ]
             },
             "data": {
                 "type": "object",
@@ -33,10 +36,7 @@
                         "type": "string"
                     }
                 },
-                "oneOf": [
-                    {"required": ["x","y"]},
-                    {"required": ["id"]},
-                ]
+                "required": ["x","y"]
             }
         },
         "required": ["position", "data"]
