@@ -22,17 +22,17 @@
                             "type": "object",
                             "properties": {
                                 "r": {
-                                    "type": "number",
+                                    "type": "integer",
                                      "minimum": 0,
                                      "maximum": 255
                                 },
                                 "g": {
-                                    "type": "number",
+                                    "type": "integer",
                                      "minimum": 0,
                                      "maximum": 255
                                 },
                                 "b": {
-                                    "type": "number",
+                                    "type": "integer",
                                      "minimum": 0,
                                      "maximum": 255
                                 },
