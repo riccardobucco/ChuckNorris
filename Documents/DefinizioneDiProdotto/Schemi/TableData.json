@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Table data",
+    "title": "TableData",
     "description": "The data contained in a Table",
     "type": "object",
     "properties": {

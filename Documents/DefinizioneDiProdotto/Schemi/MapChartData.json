@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "MapChart data",
+    "title": "MapChartData",
     "description": "The data contained in a MapChart",
 
     "type": "array",

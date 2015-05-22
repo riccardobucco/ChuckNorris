@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "LineChart data",
-    "description": "The data contained in a LineChart",
+    "title": "BarChartData",
+    "description": "The data contained in a BarChart",
     "type": "object",
     "properties": {
         "labels": {
