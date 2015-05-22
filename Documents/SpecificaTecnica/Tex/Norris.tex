@@ -67,7 +67,15 @@
 			Il \insglo{design pattern} Bridge si differenzia dal \insglo{pattern} Adapter, in quanto il primo viene utilizzato fin dall'inizio della progettazione per consentire ad astrazioni ed implementazioni di variare in modo indipendente, mentre il secondo viene usato quando si vogliono adattare classi inizialmente non correlate e viene introdotto dopo che queste sono state progettate.
 			Per una descrizione più approfondita del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
 			\level{5}{Contesto di utilizzo}
-				In \insglo{Norris} questo \insglo{pattern} viene utilizzato nel \insglo{package} InternalAPIManager per separare l'implementazione dei chart (presente nel \insglo{package} DataModel) dall'interfaccia fornita allo sviluppatore.	
+				In \insglo{Norris} questo \insglo{pattern} viene utilizzato nel \insglo{package} InternalAPIManager per separare l'implementazione dei chart (presente nel \insglo{package} DataModel) dall'interfaccia fornita allo sviluppatore. Viene inoltre utilizzato nel package ExteralAPIManger.
+				\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Bridge1}
+	        		\caption{Bridge pattern in Norris}
+	    		\end{figure}
+	    		\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Bridge2}
+	        		\caption{Bridge pattern in Norris}
+	    		\end{figure}	
 				
 		\level{4}{Dependency Injection}
 			Dependency Injection è un \insglo{pattern} architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
@@ -81,7 +89,7 @@
 				\end{itemize}
 				
 				\level{4}{Factory Method}
-		Il \insglo{pattern} creazionale Factory Method si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
+				Il \insglo{pattern} creazionale Factory Method si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
 		Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:abstractfactory}.
 					\level{5}{Contesto di utilizzo}
 					Gli elementi che implementano Factory Method sono quelli indicati in seguito.
@@ -102,11 +110,19 @@
 							\item ExternalAPIManager::ListEndpointFactory.
 						\end{itemize}
 					\end{itemize}
+					\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Factory1}
+	        		\caption{Factory Method pattern in Norris}
+	    			\end{figure}
+	    			\begin{figure}[H]\centering
+	        			\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Factory2}
+	        			\caption{Factory Method pattern in Norris}
+	    			\end{figure}
 			
 				\level{4}{Observer}
 			L'Observer è un \insglo{pattern} comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
 			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
-			\level{5}{Contesto di utilizzo}
+			\level{5}{Contesto di utilizzo}	    	
 				Il \insglo{pattern} Observer si basa sugli oggetti “osservabili” e sugli “osservatori”.\\
 				Le interfacce che che estendono Observable sono le seguenti:
 				\begin{itemize}
@@ -114,12 +130,16 @@
 					\item DataModel::NorrisModel.
 				\end{itemize}
 				L'interfaccia Observer è implementata dalla classe EventEmitter fornita da \insglo{Node.js}.
+				\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Observer}
+	        		\caption{Observer pattern in Norris}
+	    		\end{figure}
 		
 		\level{4}{Singleton}
 			Il Singleton è un \insglo{pattern} creazionale il cui scopo è permettere la creazione di una sola istanza di una classe, nonchè di fornire un punto di accesso globale ad essa.\\
 			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
-			\level{5}{Contesto di utilizzo}
-				Le classi che implementano il Singleton sono quelle che si occupano di creare i diversi tipi di grafici. Le riportiamo di seguito:
+			\level{5}{Contesto di utilizzo}    		
+				Le classi che implementano il Singleton sono quelle che si occupano di creare e di aggiornare i diversi tipi di grafici. Le riportiamo di seguito:
 				\begin{itemize}
 					\item DataModel::BarChartFactory;
 					\item DataModel::LineChartFactory;
@@ -135,5 +155,30 @@
 					\item ExternalAPIManager::ChartEndpoitFactory;
 					\item ExternalAPIManager::AuthenticationEndpointFactory;
 					\item ExternalAPIManager::ListEndpointFactory.
+				\end{itemize}
+				\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton1}
+	        		\caption{Singleton pattern in Norris}
+	    		\end{figure}
+	    		\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton2}
+	        		\caption{Singleton pattern in Norris}
+	    		\end{figure}
+	    		\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton3}
+	        		\caption{Singleton pattern in Norris}
+	    		\end{figure}
+	    		
+			\level{4}{Strategy}
+				\level{5}{Contesto di utilizzo}
+					Le classi che implementano il Singleton sono quelle che si occupano di aggiornare i diversi tipi di grafici. Le riportiamo di seguito:
+					\begin{itemize}
+					\item DataModel::BarChartInPlaceUpdater;
+					\item DataModel::LineChartInPlaceUpdater;
+					\item DataModel::LineChartStreamUpdater;
+					\item DataModel::MapChartInPlaceUpdater;
+					\item DataModel::MapChartMovieUpdater;
+					\item DataModel::TableInPlaceUpdater;
+					\item DataModel::TableStreamUpdater
 				\end{itemize}
 		
