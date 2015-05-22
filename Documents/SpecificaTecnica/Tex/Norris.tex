@@ -1,14 +1,22 @@
-\level{2}{Norris}
+\level{1}{Norris}
+	Dopo che in precedenza è stata fornita una descrizione generale di Norris, è qui riportata la sua progettazione architetturale.\\
+	La presente sezione riporta i risultati ottenuti tramite una rigida struttura:
+	\begin{enumerate}
+		\item vengono presentate e successivamente descritte le componenti individuate;
+		\item vengono descritte le interazioni che possono avvenire tra le componenti che sono state individuate;
+		\item vengono descritti e contestualizzati gli eventuali design pattern che sono stati utilizzati durante la progettazione delle componenti;
+		\item vengono descritte le classi che sono state individuate all'interno di ciascuna componente (eventualmente suddivise per package di appartenenza);
+		\item vengono descritte le interazioni tra le classi che sono state individuate;
+		\item vengono descritti e contestualizzati i design pattern che sono stati utilizzati durante la progettazione delle classi.
+	\end{enumerate}
 
-	\begin{figure}[H]\centering
-        \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiNorris}
-        \caption{Diagramma delle componenti di Norris}
-    \end{figure}
-
-
-    \level{3}{Descrizione delle componenti di Norris}
-
-    	\level{4}{Internal API Manager}
+    \level{2}{Descrizione delle componenti di Norris}
+    	\begin{figure}[H]\centering
+	        \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiNorris}
+	        \caption{Diagramma delle componenti di Norris}
+	    \end{figure}
+    	Di seguito vengono descritti i ruoli e le responsabilità delle varie componenti che sono state individuate durante la progettazione architetturale di Norris.
+    	\level{3}{Internal API Manager}
 			La componente Internal \insglo{API} Manager rappresenta un controller per le \insglo{API} interne. Essa si occupa di implementare le funzionalità offerte dall'interfaccia delle \insglo{API} interne, ovvero:
 			\begin{itemize}
 				\item creare nuovi grafici;
@@ -22,10 +30,10 @@
 			\end{itemize}
 		Questa componente si occupa, inoltre, di generare in automatico le pagine create all'interno di un'istanza di \insglo{Norris}, a partire dai modelli in essa contenuti.
 
-		\level{4}{Data Model}
+		\level{3}{Data Model}
 			La componente Data Model è un modello che astrae un'istanza di \insglo{Norris}. Al suo interno vi sono le informazioni relative alla struttura di grafici e pagine, assieme alle rispettive impostazioni. Inoltre vengono fissate le regole con le quali grafici e pagine vengono composti assieme per formare un'istanza di \insglo{Norris}. Il Data Model fornisce i metodi per inserire i dati e configurare le impostazioni. Fornisce inoltre dei metodi per ottenere i valori di queste ultime, in modo da poterle riutilizzare per un altro grafico o pagina. Infine, è qui che vengono memorizzate le informazioni inerenti l'autenticazione.
 
-		\level{4}{External API Manager}
+		\level{3}{External API Manager}
 			La componente External \insglo{API} Manager rappresenta un controller per le \insglo{API} esterne. Essa implementa le funzionalità offerte dall'interfaccia delle \insglo{API} esterne, ovvero:
 			\begin{itemize}
 				\item ottenere la lista dei grafici;
@@ -35,13 +43,84 @@
 			\end{itemize}
 		Questa componente si occupa, inoltre, di gestire la comunicazione con il \insglo{server} web. Gestisce quindi sia le richieste \insglo{HTTP}, sia la comunicazione tramite un canale \insglo{websocket}.
 
-	\level{3}{Descrizione delle interazioni tra le componenti}
+	\level{2}{Descrizione delle interazioni tra le componenti}
 
-		\level{4}{Internal API Manager - Data Model}
+		\level{3}{Internal API Manager - Data Model}
 			Quando lo sviluppatore richiama una funzione definita dalle \insglo{API} interne, la componente Internal \insglo{API} Manager effettua le opportune operazioni di lettura/scrittura nel Data Model.
 
-		\level{4}{External API Manager - Data Model}
+		\level{3}{External API Manager - Data Model}
 			Per fornire le funzionalità descritte dalle \insglo{API} esterne, la componente External \insglo{API} Manager interroga il Data Model sullo stato attuale dell'istanza, richiedendo le informazioni in esso contenute.
 
-		\level{4}{Data Model - External API Manager}
+		\level{3}{Data Model - External API Manager}
 			Quando avviene una modifica nel Data Model, una notifica avvisa l'External \insglo{API} Manager di un avvenuto cambiamento nel modello dei dati. In particolare External \insglo{API} Manager viene notificato quando viene creato un nuovo grafico o quando un grafico esistente viene aggiornato.
+
+	\level{2}{Descrizione delle classi di Norris}
+		In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno del \insglo{prodotto} \insglo{Norris}. Queste sono state suddivise in base al componente nelle quali sono contenute.
+		\input{Classi/Norris.tex}
+		\input{Tex/ClassiAggiuntiveNorris.tex}
+	\input{Tex/InterazioniClassiNorris.tex}
+	\level{2}{Design pattern utilizzati con le classi}
+		Nella progettazione delle classi di \insglo{Norris} abbiamo deciso di utilizzare alcuni \insglo{design pattern}. Riportiamo di seguito una loro breve descrizione e il contesto nel quale sono stati utilizzati.
+		\level{3}{Observer}
+		L'Observer è un \insglo{pattern} comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
+		Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
+			\level{4}{Contesto di utilizzo}
+			Il \insglo{pattern} Observer si basa sugli oggetti “osservabili” e sugli “osservatori”.\\
+			Le interfacce che che estendono Observable sono le seguenti:
+			\begin{itemize}
+				\item DataModel::ChartModel;
+				\item DataModel::NorrisModel.
+			\end{itemize}
+			L'interfaccia Observer è implementata dalla classe EventEmitter fornita da \insglo{Node.js}.
+		\level{3}{Bridge}
+		Il Bridge è un \insglo{pattern} strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione. In particolare, utilizza i concetti di \textit{encapsulation}, \textit{aggregation} ed \textit{inheritance} per separare varie responsabilità in classi differenti. \\
+		Il \insglo{design pattern} Bridge si differenzia dal \insglo{pattern} Adapter, in quanto il primo viene utilizzato fin dall'inizio della progettazione per consentire ad astrazioni ed implementazioni di variare in modo indipendente, mentre il secondo viene usato quando si vogliono adattare classi inizialmente non correlate e viene introdotto dopo che queste sono state progettate.
+		Per una descrizione più approfondita del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
+			\level{4}{Contesto di utilizzo}
+			In \insglo{Norris} questo \insglo{pattern} viene utilizzato nel \insglo{package} InternalAPIManager per separare l'implementazione dei chart (presente nel \insglo{package} DataModel) dall'interfaccia fornita allo sviluppatore.	
+		\level{3}{Dependency Injection}
+		Dependency Injection è un \insglo{pattern} architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
+		Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
+			\level{4}{Contesto di utilizzo}
+			Il \insglo{pattern} Dependency Injection viene utilizzato con le classi che implementano le seguenti interfacce:
+			\begin{itemize}
+				\item ExternalAPIManager::EndpointFactory, inietta in ExternalAPIManager::ExternalAPIController le dipendenze verso i diversi Endpoint;
+				\item DataModel::ChartFactory, inietta in DataModel::ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
+				\item DataModel::Updater, inietta in DataModel::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
+			\end{itemize}
+		\level{3}{Singleton}
+			Il Singleton è un \insglo{pattern} creazionale il cui scopo è permettere la creazione di una sola istanza di una classe, nonchè di fornire un punto di accesso globale ad essa.\\
+			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
+			\level{4}{Contesto di utilizzo}
+				Le classi che implementano il Singleton sono quelle che si occupano di creare i diversi tipi di grafici. Le riportiamo di seguito:
+				\begin{itemize}
+					\item DataModel::BarChartFactory;
+					\item DataModel::LineChartFactory;
+					\item DataModel::MapChartFactory;
+					\item DataModel::TableFactory;
+					\item ExternalAPIManager::ChartEndpoitFactory;
+					\item ExternalAPIManager::AuthenticationEndpointFactory;
+					\item ExternalAPIManager::ListEndpointFactory.
+				\end{itemize}
+		\level{3}{Abstract Factory}
+		Il \insglo{pattern} creazionale Abstract Factory si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete.\\
+		Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:abstractfactory}.
+			\level{4}{Contesto di utilizzo}
+			Gli elementi che implementano Abstract Factory sono quelli indicati in seguito.
+			\begin{itemize}
+				\item Interfacce:
+				\begin{itemize}
+					\item ChartFactory, con cui vengono generati i diversi tipi di grafici;
+					\item ExternalAPIManager::EndpointFactory, con cui sono generati i diversi tipi di controller dei grafici.
+				\end{itemize}
+				\item Classi:
+				\begin{itemize}
+					\item DataModel::BarChartFactory;
+					\item DataModel::LineChartFactory;
+					\item DataModel::MapChartFactory;
+					\item DataModel::TableFactory;
+					\item ExternalAPIManager::ChartEndpointFactory;
+					\item ExternalAPIManager::AuthenticationEndpointFactory;
+					\item ExternalAPIManager::ListEndpointFactory.
+				\end{itemize}
+			\end{itemize}

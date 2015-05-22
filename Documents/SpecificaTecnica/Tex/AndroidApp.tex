@@ -1,15 +1,27 @@
-\level{2}{Applicazione Android}
-	\begin{figure}[H]\centering
-        \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiApplicazione}
-        \caption{Diagramma delle componenti dell'Applicazione Android}
-    \end{figure}
-    \level{3}{Descrizione delle componenti dell'Applicazione}
-    	\level{4}{Model} 
+\level{1}{Applicazione Android}
+    Dopo che in precedenza è stata fornita una descrizione generale dell'Applicazione Android, è qui riportata la sua progettazione architetturale.\\
+    La presente sezione riporta i risultati ottenuti tramite una rigida struttura:
+    \begin{enumerate}
+        \item vengono presentate e successivamente descritte le componenti individuate;
+        \item vengono descritte le interazioni che possono avvenire tra le componenti che sono state individuate;
+        \item vengono descritti e contestualizzati gli eventuali design pattern che sono stati utilizzati durante la progettazione delle componenti;
+        \item vengono descritte le classi che sono state individuate all'interno di ciascuna componente (eventualmente suddivise per package di appartenenza);
+        \item vengono descritte le interazioni tra le classi che sono state individuate;
+        \item vengono descritti e contestualizzati i design pattern che sono stati utilizzati durante la progettazione delle classi.
+    \end{enumerate}
+	
+    \level{2}{Descrizione delle componenti dell'Applicazione}
+        \begin{figure}[H]\centering
+            \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiApplicazione}
+            \caption{Diagramma delle componenti dell'Applicazione Android}
+        \end{figure}
+        Di seguito vengono descritti i ruoli e le responsabilità delle varie componenti che sono state individuate durante la progettazione architetturale dell'Applicazione Android.
+    	\level{3}{Model} 
             Il Model è la componente che rappresenta l'astrazione dei grafici visualizzati nell'applicazione. In essa sono contenuti i dati riguardanti i grafici, assieme alle relative impostazioni. In particolare sono presenti i modelli di tutte le tipologie di chart implementati da \insglo{Norris}. Il Model fornisce per ciascuna tipologia di grafico i metodi per inserire i dati e configurare alcune impostazioni. Si occupa inoltre di gestire gli aggiornamenti dei grafici mantenendo una comunicazione con Norris tramite un canale websocket e di richiedere un chart utilizzando le \insglo{API} esterne di \insglo{Norris}. Infine nel Model sono memorizzate tutte le informazioni inerenti lo stato della sessione con l'istanza di Norris contenente i grafici che si vogliono visualizzare con l'applicazione.
     
-       \level{4}{View}
+       \level{3}{View}
         La View è il componente che rappresenta le varie UI dell'applicazione. In tale componente potrebbero esser sollevati degli eventi scatenati dall'utente attraverso User Gesture. Questi eventi vengono mandati al Presenter che deciderà come comportarsi.
-       \level{4}{Presenter}
+       \level{3}{Presenter}
         Questo componente ha il compito di gestire tutto il controllo dell'applicazione. Le operazioni che esso gestisce sono riassunte nel seguente elenco:
         	\begin{itemize}
         		\item creazione del modello qualora questo sia necessario;
@@ -22,33 +34,108 @@
         		\item avvio delle varie \insglo{activity} dell'applicazione;
         		\item gestione delle \insglo{gesture} dell'utente.
         \end{itemize}
-    \level{3}{Descrizione delle interazioni tra le componenti}
+    \level{2}{Descrizione delle interazioni tra le componenti}
     	Le interazioni tra i componenti sono rappresentati con una freccia tratteggiata.\\
     	Riportiamo di seguito la descrizione di ogni interazione.
 
-    	\level{4}{View - Presenter}
+    	\level{3}{View - Presenter}
         In seguito all'esecuzione di una \insglo{gesture} da parte dell'utente, la View notifica il Presenter tramite l'emissione dell'evento opportuno. Il Presenter si occupa quindi di gestire quest'ultimo. Questa interazione si verifica in particolare quando l'utente seleziona un item della lista dei grafici presenti nell'istanza di \insglo{Norris} richiesta.
 
-        \level{4}{Presenter - View}
+        \level{3}{Presenter - View}
         Tale interazione rappresenta la selezione di un'activity modifica tale view. Ciò avviene ad ogni necessità di cambiare \insglo{Activity} e/o quando deve modificare o inizializare la view.
 
-        \level{4}{Presenter - Model}
+        \level{3}{Presenter - Model}
         Il Presenter richiede al Model di modificare il proprio stato. Ciò avviene per esempio subito dopo l'utilizzo dell'\insglo{API} esterna di \insglo{Norris} per richiedere un grafico o in seguito all'arrivo di un pacchetto di aggiornamento.
 
-        \level{4}{Model - Presenter}
+        \level{3}{Model - Presenter}
         Tale interazione rappresenta l'invio dei valori del chart provenienti dal server norris oppure, se nel Model è stato attivato il socket per l'aggiornamento, rappresenta la notifica del Model verso il Presenter di avvenuta modifica del chart sul server.
 
         
-    \level{3}{Design pattern utilizzati}
+    \level{2}{Design pattern utilizzati con le componenti}
     Riportiamo di seguito i pattern architetturali utilizzati nella progettazione delle componenti dell'applicazione Android.
-        \level{4}{Model View Presenter}
-        Model-View-Presenter (\insglo{MVP}) è un \insglo{pattern} architetturale utilizzato per separare il codice in blocchi di funzionalità ben distinte.\\
-        Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:MVP}.
-        \level{5}{Contesto di utilizzo}
-        L'\insglo{MVP} viene utilizzato per dividere le classi dell'applicazione \insglo{Android} in tre grandi componenti:
-        \begin{itemize}
-        \item Model;
-        \item View;
-        \item Presenter;
-        \end{itemize}
+        \level{3}{Model View Presenter}
+            Model-View-Presenter (\insglo{MVP}) è un \insglo{pattern} architetturale utilizzato per separare il codice in blocchi di funzionalità ben distinte.\\
+            Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:MVP}.
+            \level{4}{Contesto di utilizzo}
+                L'\insglo{MVP} viene utilizzato per dividere le classi dell'applicazione \insglo{Android} in tre grandi componenti:
+                \begin{itemize}
+                    \item Model;
+                    \item View;
+                    \item Presenter;
+                \end{itemize}
 
+    \level{2}{Descrizione delle classi dell'Applicazione Android}
+        In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno del \insglo{prodotto} Applicazione Android. Queste sono state suddivise in base al componente nelle quali sono contenute.
+        \input{Classi/Applicazione.tex}
+        \input{Tex/ClassiAggiuntiveApp.tex}
+    \input{Tex/InterazioniClassiApplicazione.tex}
+
+    \level{2}{Design pattern utilizzati con le classi}
+        Nella progettazione delle classi dell'applicazione abbiamo deciso di utilizzare alcuni \insglo{design pattern}. Riportiamo di seguito una loro breve descrizione e il contesto nel quale sono stati utilizzati.
+        \level{3}{Observer}
+            L'Observer è un \insglo{pattern} comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
+            Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
+            \level{4}{Contesto di utilizzo}
+                Il \insglo{pattern} Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\ Nell'applicazione \insglo{Android} il nucleo dell'implementazione dell'Observer si trova nel \insglo{package} Utils, in cui sono contenute le interfacce Utils::Observer e Utils::Observable, e la classe Utils::ObservableImpl (implementazione di Utils::Observable). Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il \insglo{pattern} completo.\\
+                Interfacce che estendono Observable:
+                \begin{itemize}
+                    \item Model::Chart.
+                \end{itemize}
+                Classi che implementano Observer:
+                \begin{itemize}
+                    \item Controller::Controller;
+                    \item View::ChartActivity.
+                \end{itemize}
+                Classi che estendono ObservableImpl:
+                \begin{itemize}
+                    \item View::ObservableImpl;
+                    \item Model::ChartImpl.
+                \end{itemize}
+        \level{3}{Dependency Injection}
+            Dependency Injection è un \insglo{pattern} architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
+            Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
+            \level{4}{Contesto di utilizzo}
+                La Dependency Injection viene utilizzata con le classi che implementano le seguenti interfacce:
+                \begin{itemize}
+                    \item Controller::ControllerFactory, inietta in Controller::ChartController le corrispondenze tra i tipi di controller e le rispettive classi factory;
+                    \item Model::ChartFactory, inietta in Model::ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
+                    \item Model::Updater, inietta in Model::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
+                \end{itemize}
+        \level{3}{Singleton}
+            Il Singleton è un \insglo{pattern} creazionale il cui scopo è permettere la creazione di una sola istanza di una classe, nonchè di fornire un punto di accesso globale ad essa.\\
+            Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
+            \level{4}{Contesto di utilizzo}
+                Nell'applicazione \insglo{Android} il Singleton viene implementato nella classe Controller::JSONParser.
+        \level{4}{Abstract Factory}
+            Il \insglo{pattern} creazionale Abstract Factory si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete. \\
+            Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:abstractfactory}.
+            \level{4}{Contesto di utilizzo}
+                Gli elementi che implementano Abstract Factory sono:
+                \begin{itemize}
+                \item Interfacce:
+                    \begin{itemize}
+                        \item Model::ChartFactory, con cui vengono generati i diversi tipi di grafici;
+                        \item Controller::ControllerFactory, con cui sono generati i diversi tipi di controller dei grafici.
+                    \end{itemize}
+                \item Classi:
+                    \begin{itemize}
+                        \item Model::BarChartFactory;
+                        \item Model::LineChartFactory;
+                        \item Model::MapChartFactory;
+                        \item Model::TableFactory;
+                        \item Controller::BarChartControllerFactory;
+                        \item Controller::LineChartControllerFactory;
+                        \item Controller::MapChartControllerFactory;
+                        \item Controller::TableControllerFactory.
+                    \end{itemize}
+                \end{itemize}
+        \level{3}{Adapter}
+            Il \insglo{pattern} strutturale Adapter viene utilizzato per adattare l'interfaccia di una classe in un'altra.\\
+            Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:adapter}.
+            \level{4}{Contesto di utilizzo}
+                Nell'applicazione \insglo{Android} l'Adapter viene utilizzato per calare le varie librerie esterne nel contesto di \projectname{}, e nello specifico sono rappresentate dalle diverse View, quindi:
+                \begin{itemize}
+                    \item View::BarChartActivity è un adattatore per MPABarChart;
+                    \item View::MapChartActivity è un adattatore per GoogleMap \insglo{Android} \insglo{API} v2;
+                    \item View::LineChartActivity è un adattatore per MPALineChart.
+                \end{itemize}

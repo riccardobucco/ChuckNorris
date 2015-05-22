@@ -1,17 +1,29 @@
-\level{2}{Chuck}
-	\begin{figure}[H]\centering
-        \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiChuck}
-        \caption{Diagramma delle componenti di Chuck}
-    \end{figure}
-	\level{3}{Descrizione delle componenti di Chuck}
-    	\level{4}{Model}
+\level{1}{Chuck}
+	Dopo che in precedenza è stata fornita una descrizione generale di Chuck, è qui riportata la sua progettazione architetturale.\\
+	La presente sezione riporta i risultati ottenuti tramite una rigida struttura:
+	\begin{enumerate}
+		\item vengono presentate e successivamente descritte le componenti individuate;
+		\item vengono descritte le interazioni che possono avvenire tra le componenti che sono state individuate;
+		\item vengono descritti e contestualizzati gli eventuali design pattern che sono stati utilizzati durante la progettazione delle componenti;
+		\item vengono descritte le classi che sono state individuate all'interno di ciascuna componente (eventualmente suddivise per package di appartenenza);
+		\item vengono descritte le interazioni tra le classi che sono state individuate;
+		\item vengono descritti e contestualizzati i design pattern che sono stati utilizzati durante la progettazione delle classi.
+	\end{enumerate}
+	
+	\level{2}{Descrizione delle componenti di Chuck}
+		\begin{figure}[H]\centering
+	        \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiChuck}
+	        \caption{Diagramma delle componenti di Chuck}
+	    \end{figure}
+	    Di seguito vengono descritti i ruoli e le responsabilità delle varie componenti che sono state individuate durante la progettazione architetturale di Chuck.
+    	\level{3}{Model}
 			La componente Model è un modello che astrae i grafici visualizzati nella pagina web. Si divide a sua volta in due sottocomponenti:
 			\begin{itemize}
 				\item NorrisChart: contiene i dati riguardanti i grafici, assieme alle relative impostazioni. In particolare sono presenti i modelli di tutte le tipologie di chart implementati da Norris, ovvero Bar Chart, Line Chart, Map Chart e Table. Per ciascuna tipologia di grafico sono forniti i metodi per inserire i dati e configurare alcune impostazioni. Fornisce inoltre dei metodi per ottenere i valori di queste ultime, in modo da poterle riutilizzare per un altro grafico. Infine, per ogni grafico sono disponibili le stesse modalità di aggiornamento fornite da Norris.
 				\item Services: si occupa della comunicazione con Norris attraverso l'utilizzo delle API esterne. In particolare gestisce le richieste dei grafici che lo sviluppatore client vuole inserire nel proprio sito e la ricezione degli aggiornamenti dei grafici stessi. Gestisce inoltre l'autenticazione presso l'istanza di Norris contenente tali grafici, fornendo allo sviluppatore le funzioni di login e logout.
 			\end{itemize}
 
-		\level{4}{Directive}
+		\level{3}{Directive}
 			La componente Directive fornisce le principali API di Chuck allo sviluppatore client. Le funzionalità offerte sono le seguenti:
 			\begin{itemize}
 				\item inserire nuovi grafici in un sito web;
@@ -21,36 +33,36 @@
 			\end{itemize}
 			Questa componente comunica le sccelte dell'utente al ViewModel e alla View.
     		
-		\level{4}{View}
+		\level{3}{View}
 			La componente View ha il compito di visualizzare i grafici all'interno della pagina web. I grafici possono essere del tipo Bar Chart, Line Chart, Map Chart e Table. Quando un grafico viene aggiornato, questa componente si occupa di aggiornare anche la sua visualizzazione nella pagina web. Un altro compito della View consiste nell'accogliere gli input inerenti il filtraggio dei dati di un determinato chart e inviarli al ViewModel.
 			
-		\level{4}{View Model}
+		\level{3}{View Model}
 			La componente ViewModel fa da tramite tra la View e il Model. Si occupa di richiamare le funzionalità delle librerie grafiche che permettono alla View di visualizzare i grafici. Inoltre ha lo scopo di ricevere gli input provenienti dalla View ed effettuarne la gestione. L'input consiste in un sottoinsieme di dataset scelti dall'utente che sta visualizzando la pagina web. Il ViewModel deve far sì che vengano visualizzati solo questi dataset, in modo da permettere all'utente di applicare un filtro sulle serie.
 			    
-	\level{3}{Descrizione delle interazioni tra le componenti}
-		\level{4}{Model - ViewModel}
+	\level{2}{Descrizione delle interazioni tra le componenti}
+		\level{3}{Model - ViewModel}
 			Quando avviene una modifica nel Model, una notifica avvisa il ViewModel dell'avvenuto cambiamento. In particolare quando arriva l'aggiormento di un grafico già presente, dopo aver aggiornato i dati del grafico il Model manda una notifica al ViewModel.
 
-		\level{4}{ViewModel - Model}
+		\level{3}{ViewModel - Model}
 			Quando il ViewModel deve aggiornare la visualizzazione del grafico, esso effettua una query sul Model per ottenere le nuove informazioni relative al grafico da aggiornare. Ciò avviene dopo che il ViewModel è stato notificato riguardo un cambiamento avvenuto nel Model. 
 			
-		\level{4}{View - ViewModel}
+		\level{3}{View - ViewModel}
 			Quando la View riceve un input dall'utente, una notifica avvisa il ViewModel in modo che intraprenda l'azione per gestirla. In particolare la View notifica il ViewModel quando l'utente seleziona i dataset che vuole visualizzare. La View invia al ViewModel anche le informazioni relative ai dataset selezionati, in modo che quets'ultimo possa effettuare le operazioni di filtraggio dei dati.
 			
-		\level{4}{ViewModel - View}
+		\level{3}{ViewModel - View}
 			Il ViewModel si occupa di aggiornare la View quando i dati del Model vengono modificati. In particolare ciò avviene dopo l'inserimento di un nuovo grafico o dopo un aggiornamento. Inoltre il ViewModel si occupa di modificare la View in seguito ad una richiesta di filtraggio dei dati.
 				
-		\level{4}{Directive - ViewModel}
+		\level{3}{Directive - ViewModel}
 			La Directive demanda l'implementazione delle funzionalità fornite dalle API di Chuck ai metodi del ViewModel. Si occupa dunque di richiamare i metodi del ViewModel necessari, passando loro i parametri corretti.
 			
-		\level{4}{Directive - View}
+		\level{3}{Directive - View}
 			La Directive si occupa di selezionare la View corrispondente al tipo di grafico che si vuole inserire nella pagina web.
-	\level{3}{Design pattern utilizzati}
+	\level{2}{Design pattern utilizzati con le componenti}
 		Riportiamo di seguito i pattern architetturali utilizzati nella progettazione delle componenti di Chuck.
-		\level{4}{Model View ViewModel}
+		\level{3}{Model View ViewModel}
 			Model-View-ViewModel (MVVM) è un pattern architetturale utilizzato per separare il codice in blocchi di funzionalità ben distinte.\\
 			Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:???}.
-			\level{5}{Contesto di utilizzo}
+			\level{4}{Contesto di utilizzo}
 				L'MVVM viene utilizzato per dividere le classi della libreria Chuck in tre grandi componenti:
 				\begin{itemize}
 					\item View;
@@ -58,3 +70,79 @@
 					\item ViewModel;
 				\end{itemize}
 	
+	\level{2}{Descrizione delle classi di Chuck}
+		In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno del \insglo{prodotto} \insglo{Chuck}. Queste sono state suddivise in base al componente nelle quali sono contenute.
+		\input{Classi/Chuck.tex}
+		\input{Tex/ClassiAggiuntiveChuck.tex}
+	\input{Tex/InterazioniClassiChuck.tex}
+	\level{2}{Design pattern utilizzati con le classi}
+		Nella progettazione delle classi di \insglo{Chuck} abbiamo deciso di utilizzare alcuni \insglo{design pattern}. Riportiamo di seguito una loro breve descrizione e il contesto nel quale sono stati utilizzati.
+		\level{3}{Observer}
+			L'Observer è un \insglo{pattern} comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
+			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
+			\level{4}{Contesto di utilizzo}
+				Il \insglo{pattern} Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\In \insglo{Chuck} il nucleo dell'implementazione dell'Observer si trova nel \insglo{package} Utils, in cui sono contenute le interfacce Observer e Observable, e la classe ObservableImpl che è l'implementazione di Observable. Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il \insglo{pattern} completo.\\
+				Interfacce che estendono Observable:
+				\begin{itemize}
+					\item ChartView::View;
+					\item DataModel::ChartModel.
+				\end{itemize}
+				Interfacce che estendono Observer:
+				\begin{itemize}
+					\item ChartView::View.
+				\end{itemize}
+				Classi che estendono ObservableImpl:
+				\begin{itemize}
+					\item ChartView::ViewImpl;
+					\item DataModel::ChartImpl.
+				\end{itemize}
+		\level{3}{Bridge}
+			Il Bridge è un \insglo{pattern} strutturale pensato per separare l'interfaccia di una classe dalla sua implementazione. In particolare, utilizza i concetti di \textit{encapsulation}, \textit{aggregation} ed \textit{inheritance} per separare varie responsabilità in classi differenti. \\
+			Il \insglo{design pattern} Bridge si differenzia dal \insglo{pattern} Adapter, in quanto il primo viene utilizzato fin dall'inizio della progettazione per consentire ad astrazioni ed implementazioni di variare in modo indipendente, mentre il secondo viene usato quando si vogliono adattare classi inizialmente non correlate e viene introdotto dopo che queste sono state progettate.
+			Per una descrizione più approfondita del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
+			\level{4}{Contesto di utilizzo}
+				In \insglo{Chuck} questo \insglo{pattern} viene utilizzato nel \insglo{package} ChuckAPIManager per separare l'implementazione dei chart (presente nel \insglo{package} DataModel) dall'interfaccia fornita allo sviluppatore \insglo{client}.
+		\level{3}{Dependency Injection}
+			Dependency Injection è un \insglo{pattern} architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
+			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
+			\level{4}{Contesto di utilizzo}
+				La Dependency Injection viene utilizzata con le classi che implementano le interfaccie DataModel::ChartFactory e DataModel::Updater. Attraverso queste classi vengono "iniettate" nella classe DataModel::ChartImpl rispettivamente le corrispondenze tra i tipi di grafico e le rispettive classi factory e le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
+		\level{3}{Singleton}
+			Il Singleton è un \insglo{pattern} creazionale il cui scopo è permettere la creazione di una sola istanza di una classe e fornire un punto di accesso globale ad essa.\\
+			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
+			\level{4}{Contesto di utilizzo}
+				Le classi che implementano il Singleton sono quelle che si occupano di creare i diversi tipi di grafici. cioè:
+				\begin{itemize}
+					\item DataModel::BarChartFactory;
+					\item DataModel::LineChartFactory;
+					\item DataModel::MapChartFactory;
+					\item DataModel::TableFactory.
+			\end{itemize}
+		\level{3}{Abstract Factory}
+			Il \insglo{pattern} creazionale Abstract Factory si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete. \\
+			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:abstractfactory}.
+			\level{4}{Contesto di utilizzo}
+				Gli elementi che implementano Abstract Factory sono:
+				\begin{itemize}
+				\item Interfacce:
+					\begin{itemize}
+						\item DataModel::ChartFactory, con cui vengono generati i diversi tipi di grafici.
+					\end{itemize}
+				\item Classi:
+					\begin{itemize}
+						\item DataModel::BarChartFactory;
+						\item DataModel::LineChartFactory;
+						\item DataModel::MapChartFactory;
+						\item DataModel::TableFactory.
+					\end{itemize}
+				\end{itemize}
+		\level{3}{Adapter}
+			Il \insglo{pattern} strutturale Adapter viene utilizzato per adattare l'interfaccia di una classe in un'altra.\\
+			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:adapter}.
+			\level{4}{Contesto di utilizzo}
+				In \insglo{Chuck} l'Adapter viene utilizzato per calare le varie librerie esterne nel contesto di \projectname{}, e nello specifico sono rappresentate dalle diverse View, quindi:
+				\begin{itemize}
+					\item View::BarChartView e View::LineChartView sono adattatori per \insglo{Chart.js};
+					\item View::MapChartView è un adattatore per OpenStreetMaps;
+					\item View::TableView è un adattatore per Dynatable.
+				\end{itemize}
