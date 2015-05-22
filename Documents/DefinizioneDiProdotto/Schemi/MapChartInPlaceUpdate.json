@@ -28,9 +28,15 @@
                     },
                     "y": {
                         "type": "number"
+                    },
+                    "id": {
+                        "type": "string"
                     }
                 },
-                "required": ["x","y"]
+                "oneOf": [
+                    {"required": ["x","y"]},
+                    {"required": ["id"]},
+                ]
             }
         },
         "required": ["position", "data"]
