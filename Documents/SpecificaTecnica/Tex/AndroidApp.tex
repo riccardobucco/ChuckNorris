@@ -140,15 +140,14 @@
 
                 
         \level{4}{Observer}
-            L'Observer è un \insglo{pattern} comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto.
-            Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
+            L'Observer è un \insglo{pattern} comportamentale che ha lo scopo di monitorare lo stato di diversi oggetti legati ad un soggetto. Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
             \level{5}{Contesto di utilizzo}
-                Il \insglo{pattern} Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\ Nell'applicazione \insglo{Android} il nucleo dell'implementazione dell'Observer si trova nel \insglo{package} Utils, in cui sono contenute le interfacce Utils::Observer e Utils::Observable, e la classe Utils::ObservableImpl (implementazione di Utils::Observable). Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il \insglo{pattern} completo.\\
+                % Il \insglo{pattern} Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\ Nell'applicazione \insglo{Android} il nucleo dell'implementazione dell'Observer si trova nel \insglo{package} Utils, in cui sono contenute le interfacce Utils::Observer e Utils::Observable, e la classe Utils::ObservableImpl (implementazione di Utils::Observable). Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il \insglo{pattern} completo.\\
                 Classi che implementano Observer:
                 \begin{itemize}
                     \item Presenter::ChartPresenterImpl;
                 \end{itemize}
-                Classi che estendono ObservableImpl:
+                Classi che estendono Observable:
                 \begin{itemize}
                     \item Model::Service::ChartReceiverImpl.
                 \end{itemize}
@@ -182,10 +181,10 @@
                     \end{itemize}
                     \begin{figure}[H]\centering
 	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton2}
-	        		\caption{Singleton pattern in Norris}
+	        		\caption{Singleton pattern nell'applicazione Android}
 	    		\end{figure}
 	    		\begin{figure}[H]\centering
 	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton1}
-	        		\caption{Singleton pattern in Norris}
+	        		\caption{Singleton pattern nell'applicazione Android}
 	    		\end{figure}
 
