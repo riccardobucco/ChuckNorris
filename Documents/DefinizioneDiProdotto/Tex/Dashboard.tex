@@ -4,13 +4,22 @@
         La dashboard utilizza una programmazione di tipo imperativo. Per rendere il codice più modulare, si è deciso di suddividere la logica in diverse funzioni. Quì di seguito è possibile trovare le funzioni individuate, insieme ad una descrizione.
 
         \begin{description}
-            \item \textbf{init\_norris() : Norris}
-            \item \textbf{init\_map(norris : Norris) : Chart}
-            \item \textbf{init\_bar(norris : Norris) : Chart}
-            \item \textbf{init\_table(norris : Norris) : Chart}
-            \item \textbf{init\_page(charts : Chart[]) : Page}
-            \item \textbf{getLines() : Dataset}
-            \item \textbf{update\_map(chart : Chart, old\_values : Dataset, new\_values : Dataset) : void}
-            \item \textbf{update\_bar(chart : Chart, old\_values : Dataset, new\_values : Dataset) : void}
-            \item \textbf{update\_table(chart : Chart, old\_values : Dataset, new\_values : Dataset) : void}
+            \item \textbf{init\_norris() : Norris} Tale metodo ha il compito di inizializzare l'istanza di Norris e ne ritorna il middleware. Ciò fa si che nel webserver si crei l'istanza vera e propria e ne vengano settate le impostazioni. Ne viene infine montato il middleware con express e ritornato.
+            
+            \item \textbf{init\_map(norris : Norris) : Chart} Tale metodo ha il compito di inizializzare un chart di tipo map nell'istanza di Norris (parametro norris) e viene ritornato. Vengono qui modificate le impostazioni del chart.
+            
+            \item \textbf{init\_bar(norris : Norris) : Chart} Tale metodo ha il compito di inizializzare un chart di tipo bar nell'istanza di Norris norris e viene ritornato.Vengono qui modificate le impostazioni del chart.
+            
+            \item \textbf{init\_table(norris : Norris) : Chart} Tale metodo ha il compito di inizializzare un chart di tipo table nell'istanza di Norris norris e viene ritornato.Vengono qui modificate le impostazioni del chart.
+            
+            \item \textbf{init\_page(norris : Norris, charts : Chart[]) : Page} Tale metodo ha il compito di inizializzare una pagina in una certa istanza di Norris (parametro norris) ed inserire i vari chart passati come parametro. Essa viene quindi ritornata. All'interno di tale metodo vengono mdificate le impostazioni della pagina come ad esempio il massimo numero di grafici.
+            
+            \item \textbf{getLines() : Dataset[]} Tale metodo ha il compito di ottenere le linee dei bus dal server APS. 
+            
+            \item \textbf{update\_map(chart : Chart, old\_values : Dataset[], new\_values : Dataset[]) : void} Tale metodo ha il compito di aggiornare il map chart utilizzando le Api interne di Norris. Tale metodo ha quindi il compito di creare il pacchetto di aggiornamento il quale viene passato come parametro al metodo di aggiornamento del chart in Norris.
+            
+            \item \textbf{update\_bar(chart : Chart, old\_values : Dataset[], new\_values : Dataset[]) : void} Tale metodo ha il compito di aggiornare il bar chart utilizzando le Api interne di Norris.Tale metodo ha quindi il compito di creare il pacchetto di aggiornamento il quale viene passato come parametro al metodo di aggiornamento del chart in Norris.
+            
+            \item \textbf{update\_table(chart : Chart, old\_values : Dataset[], new\_values : Dataset[]) : void} Tale metodo ha il compito di aggiornare la table utilizzando le Api interne di Norris.Tale metodo ha quindi il compito di creare il pacchetto di aggiornamento il quale viene passato come parametro al metodo di aggiornamento del chart in Norris.
+            
         \end{description}
