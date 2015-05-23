@@ -24,7 +24,7 @@
 			\item \textbf{Tipo:} package
 			\end{itemize}
 
-			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>
+			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"><xsl:sort select="@name"/></xsl:apply-templates>
 		</xsl:if>
 	</xsl:template>
 
@@ -47,7 +47,7 @@
 			<xsl:apply-templates select="*[local-name()='Classifier.feature']"/>
 			\end{itemize}
 
-			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>
+			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"><xsl:sort select="@name"/></xsl:apply-templates>
 	</xsl:template>
 
 	<!-- interfacce -->
@@ -67,7 +67,7 @@
 			<xsl:apply-templates select="*[local-name()='Classifier.feature']"/>
 			\end{itemize}
 
-			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"/>
+			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"><xsl:sort select="@name"/></xsl:apply-templates>
 		</xsl:if>
 	</xsl:template>
 
