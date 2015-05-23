@@ -87,11 +87,11 @@
 			Il \insglo{pattern} strutturale Adapter viene utilizzato per adattare l'interfaccia di una classe in un'altra.\\
 			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:adapter}.
 			\level{5}{Contesto di utilizzo}
-				In \insglo{Chuck} l'Adapter viene utilizzato per calare le varie librerie esterne nel contesto di \projectname{}, e nello specifico sono rappresentate dalle diverse View, quindi:
+				In \insglo{Chuck} l'Adapter viene utilizzato per calare le varie librerie esterne nel contesto di \projectname{}, e nello specifico sono rappresentate dai divers ViewModel, quindi:
 				\begin{itemize}
-					\item View::BarChartView e View::LineChartView sono adattatori per \insglo{Chart.js};
-					\item View::MapChartView è un adattatore per OpenStreetMaps;
-					\item View::TableView è un adattatore per Dynatable.
+					\item ViewModel::BarChartViewModel e ViewModel::LineChartViewModel sono adattatori per \insglo{Chart.js};
+					\item ViewModel::MapChartViewModel è un adattatore per OpenStreetMaps;
+					\item ViewModel::TableViewModel è un adattatore per DataTables.
 				\end{itemize}
 				
 		\level{4}{Bridge}
@@ -136,17 +136,17 @@
 			\level{5}{Contesto di utilizzo}
 				Le classi che implementano il Singleton sono quelle che si occupano di creare o aggiornare i diversi tipi di grafici. cioè:
 				\begin{itemize}
-					\item DataModel::NorrisChart::BarChartFactory;
-					\item DataModel::NorrisChart::LineChartFactory;
-					\item DataModel::NorrisChart::MapChartFactory;
-					\item DataModel::NorrisChart::TableFactory;
-					\item DataModel::NorrisChart::BarChartInPlaceUpdater;
-					\item DataModel::NorrisChart::LineChartInPlaceUpdater;
-					\item DataModel::NorrisChart::LineChartStreamUpdater;
-					\item DataModel::NorrisChart::MapChartInPlaceUpdater;
-					\item DataModel::NorrisChart::MapChartMovieUpdater;
-					\item DataModel::NorrisChart::TableInPlaceUpdater;
-					\item DataModel::NorrisChart::TableStreamUpdater.
+					\item Model::NorrisChart::BarChartFactory;
+					\item Model::NorrisChart::LineChartFactory;
+					\item Model::NorrisChart::MapChartFactory;
+					\item Model::NorrisChart::TableFactory;
+					\item Model::NorrisChart::BarChartInPlaceUpdater;
+					\item Model::NorrisChart::LineChartInPlaceUpdater;
+					\item Model::NorrisChart::LineChartStreamUpdater;
+					\item Model::NorrisChart::MapChartInPlaceUpdater;
+					\item Model::NorrisChart::MapChartMovieUpdater;
+					\item Model::NorrisChart::TableInPlaceUpdater;
+					\item Model::NorrisChart::TableStreamUpdater.
 			\end{itemize}
 			\begin{figure}[H]\centering
 	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton2}
@@ -163,13 +163,13 @@ algoritmi, incapsularli e renderli intercambiabili. Per la descrizione del \insg
 				\level{5}{Contesto di utilizzo}
 					Le classi che implementano lo Strategy sono quelle che si occupano di aggiornare i diversi tipi di grafici. Le riportiamo di seguito:
 					\begin{itemize}
-					\item DataModel::NorrisChart::BarChartInPlaceUpdater;
-					\item DataModel::NorrisChart::LineChartInPlaceUpdater;
-					\item DataModel::NorrisChart::LineChartStreamUpdater;
-					\item DataModel::NorrisChart::MapChartInPlaceUpdater;
-					\item DataModel::NorrisChart::MapChartMovieUpdater;
-					\item DataModel::NorrisChart::TableInPlaceUpdater;
-					\item DataModel::NorrisChart::TableStreamUpdater
+					\item Model::NorrisChart::BarChartInPlaceUpdater;
+					\item Model::NorrisChart::LineChartInPlaceUpdater;
+					\item Model::NorrisChart::LineChartStreamUpdater;
+					\item Model::NorrisChart::MapChartInPlaceUpdater;
+					\item Model::NorrisChart::MapChartMovieUpdater;
+					\item Model::NorrisChart::TableInPlaceUpdater;
+					\item Model::NorrisChart::TableStreamUpdater
 				\end{itemize}
 				\begin{figure}[H]\centering
 	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Strategy}
