@@ -144,23 +144,48 @@
             Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:observer}.
             \level{5}{Contesto di utilizzo}
                 Il \insglo{pattern} Observer si basa sugli oggetti “osservabili” e sugli “osservatori”. \\ Nell'applicazione \insglo{Android} il nucleo dell'implementazione dell'Observer si trova nel \insglo{package} Utils, in cui sono contenute le interfacce Utils::Observer e Utils::Observable, e la classe Utils::ObservableImpl (implementazione di Utils::Observable). Questi tre elementi vengono poi estesi o implementati dagli altri elementi della libreria per realizzare il \insglo{pattern} completo.\\
-                Interfacce che estendono Observable:
-                \begin{itemize}
-                    \item Model::Chart.
-                \end{itemize}
                 Classi che implementano Observer:
                 \begin{itemize}
-                    \item Controller::Controller;
-                    \item View::ChartActivity.
+                    \item Presenter::ChartPresenterImpl;
                 \end{itemize}
                 Classi che estendono ObservableImpl:
                 \begin{itemize}
-                    \item View::ObservableImpl;
-                    \item Model::ChartImpl.
+                    \item Model::Service::ChartReceiverImpl.
                 \end{itemize}
                 
         \level{4}{Singleton}
             Il Singleton è un \insglo{pattern} creazionale il cui scopo è permettere la creazione di una sola istanza di una classe, nonchè di fornire un punto di accesso globale ad essa.\\
             Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
             \level{5}{Contesto di utilizzo}
-                Nell'applicazione \insglo{Android} il Singleton viene implementato nella classe Controller::JSONParser.
+                Nell'applicazione \insglo{Android} il Singleton viene implementato nelle seguenti classi:
+                \begin{itemize}
+                        \item Model::NorrisChart::BarChartFactory;
+                        \item Model::NorrisChart::LineChartFactory;
+                        \item Model::NorrisChart::MapChartFactory;
+                        \item Model::NorrisChart::TableFactory;
+                        \item Model::NorrisChart::BarChartInPlaceUpdater;
+						\item Model::NorrisChart::LineChartInPlaceUpdater;
+						\item Model::NorrisChart::LineChartStreamUpdater;
+						\item Model::NorrisChart::MapChartInPlaceUpdater;
+						\item Model::NorrisChart::MapChartMovieUpdater;
+						\item Model::NorrisChart::TableInPlaceUpdater;
+						\item Model::NorrisChart::TableStreamUpdater
+                        \item Model::Service::ChartReceiverImpl;
+                        \item Model::NorrisSessionInfoImpl;
+                        \item Presenter::BarChartPresenterFactory;
+                        \item Presenter::LineChartPresenterFactory;
+                        \item Presenter::MapChartPresenterFactory;
+                        \item Presenter::TablePresenterFactory;
+                        \item Presenter::ListPresenterFactory;
+                        \item Presenter::LoginPresenterFactory;
+                        \item Presenter::JSONParser.
+                    \end{itemize}
+                    \begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton2}
+	        		\caption{Singleton pattern in Norris}
+	    		\end{figure}
+	    		\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton1}
+	        		\caption{Singleton pattern in Norris}
+	    		\end{figure}
+
