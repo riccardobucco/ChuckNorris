@@ -1,34 +1,34 @@
 \level{4}{Classi aggiuntive Chuck}
-	Le interfacce \insglo{Chuck}::DataModel::ChartData, \insglo{Chuck}::DataModel::ChartSettings e \linebreak \insglo{Chuck}::DataModel::ChartUpdate rappresentano genericamente i vari oggetti che utilizzeremo per rappresentare i dati, le impostazioni e gli aggiornamamenti. Tali oggetti sono nel formato \insglo{JSON} ed essendo molto numerosi abbiamo deciso di non inserirle nel diagramma ma di elencarle e descriverle di seguito.
+	Le interfacce \ignoreglo{Chuck::Model::NorrisChart::ChartData}, \ignoreglo{Chuck::Model::NorrisChart::ChartSettings} e \ignoreglo{Chuck::Model::NorrisChart::ChartUpdate} rappresentano genericamente i vari oggetti che utilizzeremo per rappresentare i dati, le impostazioni e gli aggiornamamenti. Tali oggetti sono nel formato \insglo{JSON} ed essendo molto numerosi abbiamo deciso di non inserirle nel diagramma ma di elencarle e descriverle di seguito.
 
 	\begin{itemize}
-		\item \textbf{\insglo{Chuck}::DataModel::BarChartData} Questa classe implementa l'interfaccia \linebreak \insglo{Chuck}::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{bar chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::BarChartData}} Questa classe implementa l'interfaccia \linebreak Chuck::Model::NorrisChart::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{bar chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::LineChartData} Questa classe implementa l'interfaccia \linebreak \insglo{Chuck}::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{line chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::LineChartData}} Questa classe implementa l'interfaccia \linebreak Chuck::Model::NorrisChart::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{line chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::MapChartData} Questa classe implementa l'interfaccia \linebreak \insglo{Chuck}::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{map chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::MapChartData}} Questa classe implementa l'interfaccia \linebreak Chuck::Model::NorrisChart::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{map chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::TableData} Questa classe implementa l'interfaccia \linebreak \insglo{Chuck}::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{table};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::TableData}} Questa classe implementa l'interfaccia \linebreak Chuck::Model::NorrisChart::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{table};
 
-		\item \textbf{\insglo{Chuck}::DataModel::BarChartSetting} Questa classe implementa l'interfaccia \linebreak \insglo{Chuck}::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{bar chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::BarChartSetting}} Questa classe implementa l'interfaccia \linebreak Chuck::Model::NorrisChart::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{bar chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::LineChartSetting} Questa classe implementa l'interfaccia \linebreak \insglo{Chuck}::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{line chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::LineChartSetting}} Questa classe implementa l'interfaccia \linebreak Chuck::Model::NorrisChart::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{line chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::MapChartSetting} Questa classe implementa l'interfaccia \linebreak \insglo{Chuck}::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{map chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::MapChartSetting}} Questa classe implementa l'interfaccia \linebreak Chuck::Model::NorrisChart::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{map chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::TableSetting} Questa classe implementa l'interfaccia \linebreak \insglo{Chuck}::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{table};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::TableSetting}} Questa classe implementa l'interfaccia \linebreak Chuck::Model::NorrisChart::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{table};
 
-		\item \textbf{\insglo{Chuck}::DataModel::BarChartInPlaceUpdate} Questa classe implementa l'interfaccia \insglo{Chuck}::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{bar chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::BarChartInPlaceUpdate}} Questa classe implementa l'interfaccia Chuck::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{bar chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::LineChartInPlaceUpdate} Questa classe implementa l'interfaccia \insglo{Chuck}::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{line chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::LineChartInPlaceUpdate}} Questa classe implementa l'interfaccia Chuck::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{line chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::LineChartStreamUpdate} Questa classe implementa l'interfaccia \insglo{Chuck}::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{stream} per un grafico di tipo \insglo{line chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::LineChartStreamUpdate}} Questa classe implementa l'interfaccia Chuck::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{stream} per un grafico di tipo \insglo{line chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::MapChartInPlaceUpdate} Questa classe implementa l'interfaccia \insglo{Chuck}::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{map chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::MapChartInPlaceUpdate}} Questa classe implementa l'interfaccia Chuck::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{map chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::MapChartMovieUpdate} Questa classe implementa l'interfaccia \insglo{Chuck}::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{movie} per un grafico di tipo \insglo{map chart};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::MapChartMovieUpdate}} Questa classe implementa l'interfaccia Chuck::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{movie} per un grafico di tipo \insglo{map chart};
 
-		\item \textbf{\insglo{Chuck}::DataModel::TableStreamUpdate} Questa classe implementa l'interfaccia \insglo{Chuck}::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{stream} per un grafico di tipo \insglo{table};
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::TableStreamUpdate}} Questa classe implementa l'interfaccia Chuck::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{stream} per un grafico di tipo \insglo{table};
 
-		\item \textbf{\insglo{Chuck}::DataModel::TableInPlaceUpdate} Questa classe implementa l'interfaccia \insglo{Chuck}::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{table}.
+		\item \ignoreglo{\textbf{Chuck::Model::NorrisChart::TableInPlaceUpdate}} Questa classe implementa l'interfaccia Chuck::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{table}.
 	\end{itemize}
