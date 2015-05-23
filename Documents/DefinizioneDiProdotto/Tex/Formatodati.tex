@@ -1,30 +1,35 @@
 % !TEX encoding = UTF-8 Unicode
 \level{1}{Richiesta dei dati dall'APS e loro formato} \label{app:aps}
 
-La richiesta dei dati all'APS viene effettuata tramite chiamata HTTP con metodo POST, passando come parametri nell'URL: option, view e format.
-Nell'header della richiesta viene specificato che il contenuto è da interpretarsi in formato URL encoded.
+La richiesta della posizione dell'autobus viene effettuata presso il server dell'APS tramite una richiesta HTTP con il seguente formato:
 
 \begin{table}[H]
 	\centering
-	\begin{tabu}{| X[0.5] | X |}
+	\begin{tabu}{| X[0.4] | X |}
 		\hline
-		hostname & www.apsholding.it \\ \hline 
-		port & 80 \\ \hline
+		hostname & www.apsholding.it \\ \hline
 		path & /index.php/informazioni/dov-e-il-mezzo-pubblico-in-tempo-reale?option=com\_mappeaps\&view=posmezzi\&format=raw  \\ \hline
+		port & 80 \\ \hline		
 		method & POST \\ \hline 
 		content-type & application/x-www-form-urlencoded \\ \hline
+		content & l=[linea] \\ \hline
 	\end{tabu}
-	\caption{Richiesta dei dati dall'APS}
+	\caption{Richiesta dei dati al server APS}
 \end{table}
 
-La risposta dal server dell'APS si suppone sia un JSON con codifica utf8. I dati ricevuti contengono:
+La risposta dal server dell'APS è un array JSON, il quale viene definito con il tipo \texttt{Dataset}. Gli elementi dell'array sono oggetti che rappresentano un singolo autobus e hanno la seguente struttura:
 
 \begin{table}[H]
 	\centering
-	\begin{tabu}{| X | X | X | X |}
+	\begin{tabu}{| X[0.4] | X |}
 		\hline
-		idMezzo & Coordinate GPS & Girometro & StatoPorte \\ \hline
-		numero identificativo del mezzo & coordinate GPS della posizione del mezzo & velocità ancgolare & stato delle porte del mezzo \\ \hline
-		\end{tabu}
-	\caption{Dati ricevuti dall'APS}
+		\rowfont{\bfseries}
+		Chiave & Descrizione \\ \hline
+		idMezzo & Identificativo univoco del mezzo \\ \hline
+		WGS84Fi & Latitudine del mezzo \\ \hline
+		WGS84La & Longitudine del mezzo \\ \hline
+		Girometro & Velocità angolare del mezzo \\ \hline
+		StatoPorte & Stato delle porte del mezzo \\ \hline
+	\end{tabu}
+	\caption{Dati ricevuti dal server APS}
 \end{table}
