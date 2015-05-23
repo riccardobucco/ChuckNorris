@@ -10,6 +10,7 @@
 
 	<sections>
         <name>Tex/Introduzione.tex</name>
+        <name>Tex/StandardProgetto.tex</name>
         <name>Tex/Norris.tex</name>
         <name>Tex/Chuck.tex</name>
         <name>Tex/Applicazione.tex</name>
@@ -18,6 +19,7 @@
 
     <appendix>
         <name>Tex/Schemi.tex</name>
+        <name>Tex/Formatodati.tex</name>
     </appendix>
 	   
 	<changes>

@@ -1,0 +1,30 @@
+% !TEX encoding = UTF-8 Unicode
+\level{1}{Richiesta dei dati dall'APS e loro formato} \label{app:aps}
+
+La richiesta dei dati all'APS viene effettuata tramite chiamata HTTP con metodo POST, passando come parametri nell'URL: option, view e format.
+Nell'header della richiesta viene specificato che il contenuto è da interpretarsi in formato URL encoded.
+
+\begin{table}[H]
+	\centering
+	\begin{tabu}{| X[0.5] | X |}
+		\hline
+		hostname & www.apsholding.it \\ \hline 
+		port & 80 \\ \hline
+		path & /index.php/informazioni/dov-e-il-mezzo-pubblico-in-tempo-reale?option=com\_mappeaps\&view=posmezzi\&format=raw  \\ \hline
+		method & POST \\ \hline 
+		content-type & application/x-www-form-urlencoded \\ \hline
+	\end{tabu}
+	\caption{Richiesta dei dati dall'APS}
+\end{table}
+
+La risposta dal server dell'APS si suppone sia un JSON con codifica utf8. I dati ricevuti contengono:
+
+\begin{table}[H]
+	\centering
+	\begin{tabu}{| X | X | X | X |}
+		\hline
+		idMezzo & Coordinate GPS & Girometro & StatoPorte \\ \hline
+		numero identificativo del mezzo & coordinate GPS della posizione del mezzo & velocità ancgolare & stato delle porte del mezzo \\ \hline
+		\end{tabu}
+	\caption{Dati ricevuti dall'APS}
+\end{table}
