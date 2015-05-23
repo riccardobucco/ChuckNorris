@@ -2,33 +2,33 @@
 	Le interfacce Applicazione::DataModel::ChartData, Applicazione::DataModel::ChartSettings e Applicazione::DataModel::ChartUpdate rappresentano genericamente i vari oggetti che utilizzeremo per rappresentare i dati, le impostazioni e gli aggiornamamenti. Tali oggetti sono nel formato \insglo{JSON} ed essendo molto numerosi abbiamo deciso di non inserirle nel diagramma ma di elencarle e descriverle di seguito.
 
 	\begin{itemize}
-		\item \textbf{Applicazione::DataModel::BarChartData} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{bar chart};
+		\item \textbf{Applicazione::Model::NorrisChart::BarChartData} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{bar chart};
 
-		\item \textbf{Applicazione::DataModel::LineChartData} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{line chart};
+		\item \textbf{Applicazione::Model::NorrisChart::LineChartData} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{line chart};
 
-		\item \textbf{Applicazione::DataModel::MapChartData} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{map chart};
+		\item \textbf{Applicazione::Model::NorrisChart::MapChartData} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{map chart};
 
-		\item \textbf{Applicazione::DataModel::TableData} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{table};
+		\item \textbf{Applicazione::Model::NorrisChart::TableData} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartData. Essa si occupa di rappresentare i dati di un grafico \insglo{table};
 
-		\item \textbf{Applicazione::DataModel::BarChartSetting} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{bar chart};
+		\item \textbf{Applicazione::Model::NorrisChart::BarChartSetting} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{bar chart};
 
-		\item \textbf{Applicazione::DataModel::LineChartSetting} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{line chart};
+		\item \textbf{Applicazione::Model::NorrisChart::LineChartSetting} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{line chart};
 
-		\item \textbf{Applicazione::DataModel::MapChartSetting} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{map chart};
+		\item \textbf{Applicazione::Model::NorrisChart::MapChartSetting} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{map chart};
 
-		\item \textbf{Applicazione::DataModel::TableSetting} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{table};
+		\item \textbf{Applicazione::Model::NorrisChart::TableSetting} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartSettings. Essa rappresenta le impostazioni di un grafico di tipo \insglo{table};
 
-		\item \textbf{Applicazione::DataModel::BarChartInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{bar chart};
+		\item \textbf{Applicazione::Model::NorrisChart::BarChartInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{bar chart};
 
-		\item \textbf{Applicazione::DataModel::LineChartInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{line chart};
+		\item \textbf{Applicazione::Model::NorrisChart::LineChartInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{line chart};
 
-		\item \textbf{Applicazione::DataModel::LineChartStreamUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{stream} per un grafico di tipo \insglo{line chart};
+		\item \textbf{Applicazione::Model::NorrisChart::LineChartStreamUpdate} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{stream} per un grafico di tipo \insglo{line chart};
 
-		\item \textbf{Applicazione::DataModel::MapChartInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{map chart};
+		\item \textbf{Applicazione::Model::NorrisChart::MapChartInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{map chart};
 
-		\item \textbf{Applicazione::DataModel::MapChartMovieUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{movie} per un grafico di tipo \insglo{map chart};
+		\item \textbf{Applicazione::Model::NorrisChart::MapChartMovieUpdate} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{movie} per un grafico di tipo \insglo{map chart};
 
-		\item \textbf{Applicazione::DataModel::TableStreamUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{stream} per un grafico di tipo \insglo{table};
+		\item \textbf{Applicazione::Model::NorrisChart::TableStreamUpdate} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{stream} per un grafico di tipo \insglo{table};
 
-		\item \textbf{Applicazione::DataModel::TableInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::DataModel::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{table}.
+		\item \textbf{Applicazione::Model::NorrisChart::TableInPlaceUpdate} Questa classe implementa l'interfaccia Applicazione::Model::NorrisChart::ChartUpdate. Essa rappresenta un pacchetto di aggiornamento di tipo \insglo{in place} per un grafico di tipo \insglo{table}.
 	\end{itemize}
