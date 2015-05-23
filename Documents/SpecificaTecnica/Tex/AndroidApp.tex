@@ -116,21 +116,27 @@
                 \begin{itemize}
                 \item Interfacce:
                     \begin{itemize}
-                        \item Model::ChartFactory, con cui vengono generati i diversi tipi di grafici;
-                        \item Controller::ControllerFactory, con cui sono generati i diversi tipi di controller dei grafici.
+                        \item Model::NorrisChart::ChartFactory, con cui vengono generati i diversi tipi di grafici;
+                        \item Presenter::PresenterFactory, con cui sono generati i diversi tipi di presenter dei grafici.
                     \end{itemize}
                 \item Classi:
                     \begin{itemize}
-                        \item Model::BarChartFactory;
-                        \item Model::LineChartFactory;
-                        \item Model::MapChartFactory;
-                        \item Model::TableFactory;
-                        \item Controller::BarChartControllerFactory;
-                        \item Controller::LineChartControllerFactory;
-                        \item Controller::MapChartControllerFactory;
-                        \item Controller::TableControllerFactory.
+                        \item Model::NorrisChart::BarChartFactory;
+                        \item Model::NorrisChart::LineChartFactory;
+                        \item Model::NorrisChart::MapChartFactory;
+                        \item Model::NorrisChart::TableFactory;
+                        \item Presenter::BarChartPresenterFactory;
+                        \item Presenter::LineChartPresenterFactory;
+                        \item Presenter::MapChartPresenterFactory;
+                        \item Presenter::TablePresenterFactory;
+                        \item Presenter::ListPresenterFactory;
+                        \item Presenter::LoginPresenterFactory.
                     \end{itemize}
                 \end{itemize}
+                \begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Factory2}
+	        		\caption{Factory Method pattern nell'applicazione Android}
+	    		\end{figure}
 
                 
         \level{4}{Observer}
