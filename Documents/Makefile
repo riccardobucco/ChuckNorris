@@ -60,6 +60,10 @@ _definizione: _force
 	@ sed -ri 's/\$$/\\\$$/gi;s/_/\\_/gi' DefinizioneDiProdotto/Classi/Chuck.tex
 	@ sed -ri 's/\$$/\\\$$/gi;s/_/\\_/gi' DefinizioneDiProdotto/Classi/Applicazione.tex
 
+	@ #download tabelle
+	@ curl http://kaizenteam.it/tracker/export/classi-requisiti.php > DefinizioneDiProdotto/TrackerClassiRequisiti.tex
+	@ curl http://kaizenteam.it/tracker/export/requisiti-classi.php > DefinizioneDiProdotto/TrackerRequisitiClassi.tex
+
 _glossario: _force
 	@ #creazione file latex termini
 	@ xmllint --noout --schema Glossario/Termini.xsd Glossario/Termini.xml
