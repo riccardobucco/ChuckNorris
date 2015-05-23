@@ -115,7 +115,7 @@
 				\begin{itemize}
 				\item Interfacce:
 					\begin{itemize}
-						\item DataModel::ChartFactory, con cui vengono generati i diversi tipi di grafici.
+						\item Model::ChartFactory, con cui vengono generati i diversi tipi di grafici.
 					\end{itemize}
 				\item Classi:
 					\begin{itemize}
@@ -134,13 +134,28 @@
 			Il Singleton è un \insglo{pattern} creazionale il cui scopo è permettere la creazione di una sola istanza di una classe e fornire un punto di accesso globale ad essa.\\
 			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:singleton}.
 			\level{5}{Contesto di utilizzo}
-				Le classi che implementano il Singleton sono quelle che si occupano di creare i diversi tipi di grafici. cioè:
+				Le classi che implementano il Singleton sono quelle che si occupano di creare o aggiornare i diversi tipi di grafici. cioè:
 				\begin{itemize}
-					\item DataModel::BarChartFactory;
-					\item DataModel::LineChartFactory;
-					\item DataModel::MapChartFactory;
-					\item DataModel::TableFactory.
+					\item DataModel::NorrisChart::BarChartFactory;
+					\item DataModel::NorrisChart::LineChartFactory;
+					\item DataModel::NorrisChart::MapChartFactory;
+					\item DataModel::NorrisChart::TableFactory;
+					\item DataModel::NorrisChart::BarChartInPlaceUpdater;
+					\item DataModel::NorrisChart::LineChartInPlaceUpdater;
+					\item DataModel::NorrisChart::LineChartStreamUpdater;
+					\item DataModel::NorrisChart::MapChartInPlaceUpdater;
+					\item DataModel::NorrisChart::MapChartMovieUpdater;
+					\item DataModel::NorrisChart::TableInPlaceUpdater;
+					\item DataModel::NorrisChart::TableStreamUpdater.
 			\end{itemize}
+			\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton2}
+	        		\caption{Singleton pattern in Chuck}
+	    		\end{figure}
+	    		\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton1}
+	        		\caption{Singleton pattern in Chuck}
+	    		\end{figure}
 						
 				\level{4}{Strategy}
 			Strategy è un design pattern comportamentale che offre la possibilità di definire una famiglia di
