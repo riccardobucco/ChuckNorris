@@ -54,6 +54,7 @@ _definizione: _force
 	@ xsltproc DefinizioneDiProdotto/Classi/ClassiDefinizione.xsl Commons/Classi/Norris.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' > DefinizioneDiProdotto/Classi/Norris.tex
 	@ xsltproc DefinizioneDiProdotto/Classi/ClassiDefinizione.xsl Commons/Classi/Chuck.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' > DefinizioneDiProdotto/Classi/Chuck.tex
 	@ xsltproc DefinizioneDiProdotto/Classi/ClassiDefinizione.xsl Commons/Classi/Applicazione.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' > DefinizioneDiProdotto/Classi/Applicazione.tex
+	@ xsltproc DefinizioneDiProdotto/Classi/ClassiAggiuntive.xsl Commons/Classi/ApplicazioneAggiuntive.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' > DefinizioneDiProdotto/Classi/ApplicazioneAggiuntive.tex
 
 	@ #escape caratteri
 	@ sed -ri 's/\$$/\\\$$/gi;s/_/\\_/gi' DefinizioneDiProdotto/Classi/Norris.tex
