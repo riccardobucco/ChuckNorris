@@ -25,6 +25,7 @@ $(DOCUMENTI): _force
 	@ test "$@" != "DefinizioneDiProdotto" || make _definizione
 	@ test "$@" != "Glossario" || make _glossario
 	@ test "$@" != "NormeDiProgetto" || make _norme
+	@ test "$@" != "PianoDiQualifica" || make _qualifica
 	@ test "$@" != "SpecificaTecnica" || make _specifica
 	@ test "$@" != "StudioDiFattibilita" || make _studio
 	
@@ -54,6 +55,7 @@ _definizione: _force
 	@ xsltproc DefinizioneDiProdotto/Classi/ClassiDefinizione.xsl Commons/Classi/Norris.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' > DefinizioneDiProdotto/Classi/Norris.tex
 	@ xsltproc DefinizioneDiProdotto/Classi/ClassiDefinizione.xsl Commons/Classi/Chuck.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' > DefinizioneDiProdotto/Classi/Chuck.tex
 	@ xsltproc DefinizioneDiProdotto/Classi/ClassiDefinizione.xsl Commons/Classi/Applicazione.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' > DefinizioneDiProdotto/Classi/Applicazione.tex
+	@ xsltproc DefinizioneDiProdotto/Classi/ClassiAggiuntive.xsl Commons/Classi/NorrisAggiuntive.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' > DefinizioneDiProdotto/Classi/NorrisAggiuntive.tex
 	@ xsltproc DefinizioneDiProdotto/Classi/ClassiAggiuntive.xsl Commons/Classi/ApplicazioneAggiuntive.xml | perl -MURI::Escape -e 'print uri_unescape(<STDIN>);' > DefinizioneDiProdotto/Classi/ApplicazioneAggiuntive.tex
 
 	@ #escape caratteri
@@ -76,6 +78,9 @@ _glossario: _force
 _norme: _force
 	@ #eliminazione lot
 	@ sed -ri 's/\\listoftables//' NormeDiProgetto/NormeDiProgetto.tex
+
+_qualifica: _force
+	@ curl http://kaizenteam.it/tracker/export/test-unita.php > PianoDiQualifica/TrackerTestUnita.tex
 
 _specifica: _force
 	@ #creazione file latex classi

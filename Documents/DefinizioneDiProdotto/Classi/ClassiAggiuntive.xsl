@@ -6,7 +6,9 @@
 	<xsl:variable name="system" select="/XMI/XMI.content/*[local-name()='Model']/@name"/>
 
 	<xsl:template match="/">
-		<xsl:apply-templates select="XMI/XMI.content/*[local-name()='Model']/*[local-name()='Namespace.ownedElement']/*[local-name()='Class']"/>
+		<xsl:apply-templates select="XMI/XMI.content/*[local-name()='Model']/*[local-name()='Namespace.ownedElement']/*[local-name()='Class']">
+			<xsl:sort select="@name"/>
+		</xsl:apply-templates>
 	</xsl:template>
 
 	<!-- classi -->
@@ -16,7 +18,7 @@
 				<xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
 			</xsl:variable>
 			\level{4}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
-			<xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
+			<xsl:call-template name="image"><xsl:with-param name="name" select="translate(@name,':','-')"/></xsl:call-template>
 			
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
@@ -77,10 +79,10 @@
 	<xsl:template name="image">
 		<xsl:param name="name"></xsl:param>
 
-		\IfFileExists{DefinizioneDiProdotto/Pics/Classi/<xsl:value-of select="$name"/>.pdf}{
+		\IfFileExists{DefinizioneDiProdotto/Pics/ClassiAggiuntive/<xsl:value-of select="$name"/>.pdf}{
 			\begin{figure}[H]
 				\centering
-				\includegraphics[scale=0.5]{DefinizioneDiProdotto/Pics/Classi/<xsl:value-of select="$name"/>}
+				\includegraphics[scale=0.5]{DefinizioneDiProdotto/Pics/ClassiAggiuntive/<xsl:value-of select="$name"/>}
 				\caption{<xsl:value-of select="translate($name,'-',':')"/>}
 			\end{figure}
 		}
