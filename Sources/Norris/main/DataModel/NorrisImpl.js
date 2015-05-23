@@ -22,7 +22,8 @@ module.exports = NorrisImpl;
 var defaults = {
     login : function() {return true;},
     logout: function() {return true;},
-    isLogged: function() {return true;}
+    isLogged: function() {return true;},
+    keepAlive: function() {return true;}
 };
 
 /**
