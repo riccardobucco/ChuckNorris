@@ -24,7 +24,7 @@ module.exports = NorrisBridge;
  * Creates an instance of NorrisBridge.
  * 
  * @constructor
- * @param {NorrisModel} model - The model to which attach the internal API.
+ * @param {NorrisImpl} model - The model to which attach the bridge.
  */
 function NorrisBridge(model) {
     if (!(this instanceof NorrisBridge)) return new NorrisBridge();
@@ -56,7 +56,7 @@ NorrisBridge.prototype.getSettings = function () {
  *
  * @param {String} chartType - The type of the chart to create.
  * @param {String} chartId - The id of the chart to create.
- * @return {ChartModel} The created chart.
+ * @return {ChartBridge} The created chart.
  */
 NorrisBridge.prototype.createChart = function (chartType, chartId) {
     var chart = this.model.createChart(chartType, chartId);
@@ -67,7 +67,7 @@ NorrisBridge.prototype.createChart = function (chartType, chartId) {
  * Retrieves a chart from the Norris instance.
  *
  * @param {String} chartId - The id of the chart to retrieve.
- * @return {ChartModel} The retrieved chart.
+ * @return {ChartBridge} The retrieved chart.
  */
 NorrisBridge.prototype.getChart = function (chartId) {
     var chart = this.model.getChart(chartId);
@@ -77,16 +77,14 @@ NorrisBridge.prototype.getChart = function (chartId) {
 /**
  * Retrieves all charts from the Norris instance.
  *
- * @return {ChartModel[]} The retrieved charts.
+ * @return {ChartBridge[]} The retrieved charts.
  */
 NorrisBridge.prototype.getCharts = function () {
     var modelCharts = this.model.getCharts();
-    var charts = {};
-    for(var chartKey in modelCharts) {
-        if(modelCharts.hasOwnProperty(chartKey)) {
-            charts[chartKey] = new ChartBridge(modelCharts[chartKey]);
-        };
-    };
+    var charts = [];
+    modelCharts.forEach(function (chart) {
+        charts.push(new ChartBridge(chart));
+    });
     return charts;
 };
 
@@ -94,7 +92,7 @@ NorrisBridge.prototype.getCharts = function () {
  * Creates a new page.
  *
  * @param {String} pageId - The id of the page to create.
- * @return {PageModel} The created page.
+ * @return {PageBridge} The created page.
  */
 NorrisBridge.prototype.createPage = function (pageId) {
     var page = this.model.createPage(pageId);
@@ -105,25 +103,23 @@ NorrisBridge.prototype.createPage = function (pageId) {
  * Retrieves a page from the Norris instance.
  *
  * @param {String} pageId - The id of the page to retrieve.
- * @return {PageModel} The retrieved page.
+ * @return {PageBridge} The retrieved page.
  */
 NorrisBridge.prototype.getPage = function (pageId) {
-    var page = this.model.getPage(pageId);
+    var page = this.Bridge.getPage(pageId);
     return new PageBridge(page);
 };
 
 /**
  * Retrieves all pages from the Norris instance.
  *
- * @return {PageModel[]} The retrieved pages.
+ * @return {PageBridge[]} The retrieved pages.
  */
 NorrisBridge.prototype.getPages = function () {
     var modelPages = this.model.getPages();
-    var pages = {};
-    for(var pageKey in modelPages) {
-        if(modelPages.hasOwnProperty(pageKey)) {
-            pages[pageKey] = new PageBridge(modelPages[pageKey]);
-        };
-    };
+    var pages = [];
+    modelPages.forEach(function (page) {
+        pages.push(new PageBridge(page));
+    });
     return pages;
 };
