@@ -95,9 +95,17 @@
             \level{5}{Contesto di utilizzo}
                 La Dependency Injection viene utilizzata con le classi che implementano le seguenti interfacce:
                 \begin{itemize}
-                    \item Controller::ControllerFactory, inietta in Controller::ChartController le corrispondenze tra i tipi di controller e le rispettive classi factory;
-                    \item Model::ChartFactory, inietta in Model::ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
-                    \item Model::Updater, inietta in Model::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
+                    \item Model::NorrisChart::ChartFactory, inietta in Model::NorrisChart::ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
+                    \item Model::NorrisChart::Updater, inietta in Model::NorrisChart::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano;
+                     \item Presenter::PresenterFactory, inietta in Presenter::PresenterImpl le corrispondenze tra i tipi di presenter e le rispettive classi factory.
+                    \begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/DependencyInjection2}
+	        		\caption{Dependency Injection pattern nell'applicazione Android}
+	    		\end{figure}
+	    		\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/DependencyInjection1}
+	        		\caption{Dependency Injection pattern nell'applicazione Android}
+	    		\end{figure}
                 \end{itemize}
                 
          \level{4}{Factory Method}
