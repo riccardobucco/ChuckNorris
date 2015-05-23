@@ -259,3 +259,32 @@
 			\item L'interfaccia Strategy è condivisa da tutte le classi ConcreteStrategy, ma non tutte useranno tutti i dati che l'interfaccia mette a disposizione. Questo comporta il verificarsi di casi in cui saranno creati e inizializzati parametri che non verranno usati da nessuno.
 			\item Vi è un aumento del numero di oggetti creati, ma questo può essere limitato implementando le strategie come oggetti senza stato, in tal modo i contesti potranno condividere le stesse istanze di Strategy. Nel Context verrà memorizzato l'eventuale stato necessario ad una strategia, il quale verrà passato da Context a Strategy ad ogni chiamata dei metodi di Strategy.
 		\end{itemize}
+
+	\level{2}{Factory method} \label{app:factorymethod}
+	\begin{figure}[H]\centering
+    \includegraphics[scale=0.5]{SpecificaTecnica/Pics/FactoryMethod}
+    \caption{Struttura del pattern Factory method}
+	\end{figure}
+	Factory method è un pattern creazionale, il quale definisce un'interfaccia per la creazione di un oggetto, lasciando alle sottoclassi la decisione su quale classe deve essere istanziata. 
+	Tale pattern può essere utilizzato quando una classe vuole che siano le sue sottoclassi a scegliere gli oggetti da creare o quando non è in grado di sapere in anticipo le classi degli oggetti che deve creare.
+	Il pattern Factory method è composto da:
+	\begin{description}
+		\item[Product:] definisce l'interfaccia degli oggetti creati dal metodo factory.
+		\item[ConcreteProduct:] implementa l'interfaccia Product.
+		\item[Creator:] è la classe che dichiara il metodo factory, il quale restituisce un oggetto di tipo Product. Creator lascia alle sue sottoclassi la ridefinizione del metodo factory per restituire un'istanza di un ConcreteProduct appropriato.
+		\item[ConcreteCreator:] è la classe che sovrascrive il factory method in modo da restituire un ConcreteProduct.
+	\end{description}
+	Vi sono due versioni di questo pattern:
+	\begin{itemize}
+		\item La prima è quella in cui la classe Creator è una classe astratta e non fornisce un'implementazione per il metodo factory. In questo caso le sottoclassi devono ridefinire il metodo. Questo approccio fornisce una soluzione al problema delle istanziazioni di classi non identificabili a priori. 
+		\item La seconda è il caso in cui la classe Creator è una classe concreta che fornisce un'implementazione di base per il metodo factory.
+		In questo caso, la classe Creator fa uso del metodo factory per la flessibilità che ne deriva, e le sottoclassi hanno la possibilità di cambiare, se necessario, la classe degli oggetti da istanziare.
+	\end{itemize}
+		\level{3}{Vantaggi nell’uso di Factory Method}
+		L'uso del pattern Factory Method nell'architettura di un prodotto software porta i seguenti vantaggi:
+		\begin{itemize}
+			\item permette di creare gerarchie di classi parallele, che si ottengono quando classe delega alcune delle sue responsabilità ad una classe separata;
+			\item fornire un metodo factory comporta una maggiore flessibilità rispetto alla creazione diretta dell'oggetto, poichè è possibile scegliere quale classe concreta istanziare e decidere di cambiarla senza avere nessun impatto verso il Client.
+		\end{itemize}
+		\level{3}{Svantaggi}
+		L'unico potenziale svantaggio di questo pattern è che il Client deve derivare la classe Creator solo per creare un particolare oggetto di ConcreteProduct.
