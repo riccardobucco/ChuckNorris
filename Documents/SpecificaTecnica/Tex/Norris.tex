@@ -83,9 +83,9 @@
 			\level{5}{Contesto di utilizzo}
 				Il \insglo{pattern} Dependency Injection viene utilizzato con le classi che implementano le seguenti interfacce:
 				\begin{itemize}
-					\item DataModel::NorrisChart::Updater, inietta in DataModel::NorrisChart::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano;
-					\item DataModel::NorrisChart::ChartFactory, inietta in DataModel::NorrisChart::ChartImpl le  corrispondenze tra i tipi di grafico e le rispettive classi factory;
-					\item ExternalAPIManager::EndpointFactory, inietta in ExternalAPIManager::ExternalAPIController le dipendenze verso i diversi Endpoint.
+					\item DataModel::NorrisChart::Updater: inietta in DataModel::NorrisChart::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano;
+					\item DataModel::NorrisChart::ChartFactory: inietta in DataModel::NorrisChart::ChartImpl le corrispondenze tra i tipi di grafico e le rispettive classi factory;
+					\item ExternalAPIManager::EndpointFactory: inietta in ExternalAPIManager::ExternalAPIController le dipendenze verso i diversi Endpoint.
 				\end{itemize}
 				\begin{figure}[H]\centering
 	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/DependencyInjection1}

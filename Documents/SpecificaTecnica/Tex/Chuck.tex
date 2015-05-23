@@ -99,14 +99,25 @@
 			Il \insglo{design pattern} Bridge si differenzia dal \insglo{pattern} Adapter, in quanto il primo viene utilizzato fin dall'inizio della progettazione per consentire ad astrazioni ed implementazioni di variare in modo indipendente, mentre il secondo viene usato quando si vogliono adattare classi inizialmente non correlate e viene introdotto dopo che queste sono state progettate.
 			Per una descrizione più approfondita del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
 			\level{5}{Contesto di utilizzo}
-				In \insglo{Chuck} questo \insglo{pattern} viene utilizzato nel \insglo{package} ChuckAPIManager per separare l'implementazione dei chart (presente nel \insglo{package} DataModel) dall'interfaccia fornita allo sviluppatore \insglo{client}.
+				In \insglo{Chuck} questo \insglo{pattern} viene utilizzato nel \insglo{package} ChuckAPIManager per separare l'implementazione dei chart (presente nel \insglo{package} Model) dall'interfaccia fornita allo sviluppatore \insglo{client}.
 				
 		\level{4}{Dependency Injection}
 			Dependency Injection è un \insglo{pattern} architetturale il cui scopo è separare il comportamento di una componente dalla risoluzione delle sue dipendenze.\\
 			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:dependencyinjection}.
 			\level{5}{Contesto di utilizzo}
-				La Dependency Injection viene utilizzata con le classi che implementano le interfaccie DataModel::ChartFactory e DataModel::Updater. Attraverso queste classi vengono "iniettate" nella classe DataModel::ChartImpl rispettivamente le corrispondenze tra i tipi di grafico e le rispettive classi factory e le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano.
-		
+				\begin{itemize}
+					\item Model::NorrisChart::Updater: inietta in Model::NorrisChart::ChartImpl le corrispondenze tra i diversi tipi di aggiornamenti e le classi che li implementano;
+					\item Model::NorrisChart::ChartFactory: inietta in Model::NorrisChart::ChartImpl le corrispondenze tra i tipi di grafico e le rispettive classi factory.
+					\end{itemize}
+				\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/DependencyInjection1}
+	        		\caption{Dependency Injection pattern in Chuck}
+	    		\end{figure}
+	    		\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/DependencyInjection2}
+	        		\caption{Dependency Injection pattern in Chuck}
+	    		\end{figure}
+	    		
 		\level{4}{Factory Method}
 			Il \insglo{pattern} creazionale Factory Method si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete. \\
 			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:factorymethod}.
