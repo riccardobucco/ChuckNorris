@@ -110,7 +110,7 @@
                 
          \level{4}{Factory Method}
             Il \insglo{pattern} creazionale Factory Method si occupa di fornire un'interfaccia per la creazione di famiglie di prodotti, senza dover specificare classi concrete. \\
-            Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:abstractfactory}.
+            Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:factorymethod}.
             \level{5}{Contesto di utilizzo}
                 Gli elementi che implementano Factory Method sono:
                 \begin{itemize}
@@ -186,5 +186,23 @@
 	    		\begin{figure}[H]\centering
 	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Singleton1}
 	        		\caption{Singleton pattern nell'applicazione Android}
+	    		\end{figure}
+	    		\level{4}{Strategy}
+			Strategy è un design pattern comportamentale che offre la possibilità di definire una famiglia di
+algoritmi, incapsularli e renderli intercambiabili. Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:strategy}.
+				\level{5}{Contesto di utilizzo}
+					Le classi che implementano lo Strategy sono quelle che si occupano di aggiornare i diversi tipi di grafici. Le riportiamo di seguito:
+					\begin{itemize}
+					\item Model::NorrisChart::BarChartInPlaceUpdater;
+					\item Model::NorrisChart::LineChartInPlaceUpdater;
+					\item Model::NorrisChart::LineChartStreamUpdater;
+					\item Model::NorrisChart::MapChartInPlaceUpdater;
+					\item Model::NorrisChart::MapChartMovieUpdater;
+					\item Model::NorrisChart::TableInPlaceUpdater;
+					\item Model::NorrisChart::TableStreamUpdater.
+				\end{itemize}
+				\begin{figure}[H]\centering
+	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Strategy}
+	        		\caption{Strategy pattern nell'applicazione Android}
 	    		\end{figure}
 
