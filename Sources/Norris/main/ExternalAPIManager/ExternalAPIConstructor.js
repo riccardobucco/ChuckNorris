@@ -15,6 +15,7 @@
  * =============================================================================================
  */
 
+var ExternalAPIController = require('./ExternalAPIController.js');
 module.exports = ExternalAPIConstructor;
 
 
@@ -52,5 +53,9 @@ ExternalAPIConstructor.registerEndpoint = function(endpoint) {
  * @param {String} endpoint -
  */
 ExternalAPIConstructor.prototype.construct = function (model, server, endpoint) {
+    var controller = new ExternalAPIController();
+    for (var i=0; i<ExternalAPIConstructor.prototype.endpoints.length; i++) {
+        ExternalAPIConstructor.prototype.endpoints[i].createEndpoint(controller);
+    }
 
 };

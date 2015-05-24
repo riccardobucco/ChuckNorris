@@ -15,6 +15,9 @@
  */
 
 var ExternalAPIController = require('./ExternalAPIController.js');
+var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
+
+var express = require('express');
 
 //- app : express
 
@@ -64,3 +67,6 @@ ChuckProviderEndpointFactory.getInstance = function() { // static
 ChuckProviderEndpointFactory.prototype.createEndpoint = function (controller) {
     return new ChuckProviderEndpoint (controller);
 };
+
+// Dependency injection:
+ExternalAPIConstructor.registerEndpoint(ChuckProviderEndpointFactory.getInstance());

@@ -15,6 +15,9 @@
  */
 
 var ExternalAPIController = require('./ExternalAPIController.js');
+var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
+
+var express = require('express');
 
 //- app : express
 
@@ -87,3 +90,6 @@ AuthenticationEndpointFactory.getInstance = function() { // static
 AuthenticationEndpointFactory.prototype.createEndpoint = function (controller) {
     return new AuthenticationEndpoint (controller);
 };
+
+// Dependency injection:
+ExternalAPIConstructor.registerEndpoint(AuthenticationEndpointFactory.getInstance());

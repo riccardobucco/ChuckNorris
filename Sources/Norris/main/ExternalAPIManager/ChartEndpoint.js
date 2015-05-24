@@ -15,6 +15,8 @@
  */
 
 var ExternalAPIController = require('./ExternalAPIController.js');
+var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
+
 var socketio = require('socket.io');
 
 /**
@@ -72,3 +74,6 @@ ChartEndpointFactory.getInstance = function() { // static
 ChartEndpointFactory.prototype.createEndpoint = function (controller) {
     return new ChartEndpoint (controller);
 };
+
+// Dependency injection:
+ExternalAPIConstructor.registerEndpoint(ChartEndpointFactory.getInstance());

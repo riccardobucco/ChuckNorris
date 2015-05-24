@@ -15,6 +15,9 @@
  */
 
 var ExternalAPIController = require('./ExternalAPIController.js');
+var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
+
+var express = require('express');
 
 //- app : express
 
@@ -72,3 +75,6 @@ ListEndpointFactory.getInstance = function() { // static
 ListEndpointFactory.prototype.createEndpoint = function (controller) {
     return new ListEndpoint (controller);
 };
+
+// Dependency injection:
+ExternalAPIConstructor.registerEndpoint(ListEndpointFactory.getInstance());
