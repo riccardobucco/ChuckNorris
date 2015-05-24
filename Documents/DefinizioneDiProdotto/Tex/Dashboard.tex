@@ -1,35 +1,38 @@
 \level{1}{Dashboard}
-
+    Nel documento \insdoc{Specifica Tecnica v4.00} è stato definito in modo generale quali sono i componenti di cui è composta la Dashboard e ne sono stati definiti in modo preciso i ruoli. In esso, inoltre, è stato descritto il modo in cui l'utilizzatore di Norris deve procedere per creare e rendere disponibile la Dashboard.\\
+    I task che lo sviluppatore deve eseguire durante la creazione della Dashboard sono talvolta complessi, nel senso che alcuni di essi implicano operazioni ulteriori rispetto al semplice uso dell API interne fornite da Norris. Si è dunque deciso di suddividere l'intera logica di creazione e aggiornamento dei grafici e della pagina che andranno a formare la Dashboard in diverse funzioni. È stato fatto questo perchè in tale modo il codice è più modulare e comprensibile.
     \level{2}{Funzioni}
-        La dashboard utilizza una programmazione di tipo imperativo. Per rendere il codice più modulare, si è deciso di suddividere la logica in diverse funzioni. Quì di seguito è possibile trovare le funzioni individuate, insieme ad una descrizione. Si faccia riferimento all'appendice \nameref{app:aps} per la richiesta dei dati ed il formato del tipo \texttt{Dataset}.
+        Nel presente paragrafo vengono presentate le funzioni nelle quali è stato suddiviso il codice necessario alla creazione e all'aggiornamento della Dashboard. Tali funzioni, si ricordi, fanno riferimento ai task che sono stati presentati e descritti nel documento \insdoc{Specifica Tecnica v4.00}.\\
+        Si noti che le funzioni qui presentate rappresentano solo una ulteriore semplificazione fornita agli sviluppatori per creare una Dashboard basata sui dati messi a disposizione dall'APS. Nessuno vieta loro, infatti, di utilizzare in modo base le API interne che sono messe a disposizione da Norris e che sono descritte e documentate all'interno del presente documento.\\
+        All'appendice \nameref{app:aps} si possono trovare le specifiche con le quali vengono effettuate le richieste al server APS. In tale appendice è riportato anche il formato della risposta che si ottiene, oltre ai criteri per interpretarlo.
 
         \begin{description}
 
             \item \textbf{init\_norris() : Norris} \\
-            Tale metodo ha il compito di inizializzare l'istanza di Norris. Ciò fa si che nel webserver si crei l'istanza vera e propria e ne vengano settate le impostazioni. Ne viene infine montato il middleware con express e ritornato.
+            Tale funzione ha il compito di inizializzare l'istanza di Norris. Ciò fa si che nel webserver si crei l'istanza vera e propria e ne vengano settate le impostazioni. Ne viene infine montato il middleware con express e ritornato.
             
             \item \textbf{init\_map(norris : Norris) : Chart} \\
-            Tale metodo ha il compito di inizializzare un chart di tipo map nell'istanza di Norris (parametro norris) e viene ritornato. Vengono qui modificate le impostazioni del chart.
+            Tale funzione ha il compito di inizializzare un map chart nell'istanza di Norris. Il chart non conterrà dati (che saranno inseriti in seguito, tramite aggiornamenti). Vengono inoltre impostate alcune opzioni di default. Il map chart che è stato creato da tale funzione viene ritornato, in modo che sia utilizzabile dallo sviluppatore in modo autonomo.
             
             \item \textbf{init\_bar(norris : Norris) : Chart} \\
-            Tale metodo ha il compito di inizializzare un chart di tipo bar nell'istanza di Norris norris e viene ritornato.Vengono qui modificate le impostazioni del chart.
+            Tale funzione ha il compito di inizializzare un bar chart nell'istanza di Norris. Il chart non conterrà dati (che saranno inseriti in seguito, tramite aggiornamenti). Vengono inoltre impostate alcune opzioni di default. Il bar chart che è stato creato da tale funzione viene ritornato, in modo che sia utilizzabile dallo sviluppatore in modo autonomo.
             
             \item \textbf{init\_table(norris : Norris) : Chart} \\
-            Tale metodo ha il compito di inizializzare un chart di tipo table nell'istanza di Norris norris e viene ritornato.Vengono qui modificate le impostazioni del chart.
+            Tale funzione ha il compito di inizializzare una table nell'istanza di Norris. Il chart viene inizializzato con dati riguardanti alcuni dei principali punti di interesse di Padova (Prato della Valle, Stazione FS, Ospedale Civile), che però sono impostati su "unknown". Essi saranno correttamente aggiornati in un momento successivo, quando vengono ricevuti i dati dal server APS.
             
             \item \textbf{init\_page(norris : Norris, charts : Chart[]) : Page} \\
-            Tale metodo ha il compito di inizializzare una pagina in una certa istanza di Norris (parametro norris) ed inserire i vari chart passati come parametro. Essa viene quindi ritornata. All'interno di tale metodo vengono mdificate le impostazioni della pagina come ad esempio il massimo numero di grafici.
+            Tale funzione ha il compito di inizializzare una pagina in una certa istanza di Norris. La pagina viene creata a partire dai grafici che sono stati passati come parametro alla funzione, e che presumibilmente (ma non obbligatoriamente) sono quelli ottenuti a partire dalle funzioni presentate in precedenza. Tale funzione si occupa inoltre di impostare alcune opzioni di default per la pagina.
             
             \item \textbf{getLines() : Dataset[]} \\
-            Tale metodo ha il compito di ottenere le linee dei bus dal server APS. 
+            Tale funzione ha il compito di ottenere tutti i dati riguardanti le linee che il server APS mette a disposizione. Si noti che i dati che vengono ritornati sono nel formato fornito dall'APS, e quindi devono essere correttamente interpretati e convertiti prima di essere usati tramite le API di Norris. Il formato con il quale sono restituiti i dati da tale funzione sono descritti nell'appendice \nameref{app:aps}.
             
             \item \textbf{update\_map(chart : Chart, old\_values : Dataset[], new\_values : Dataset[]) : void} \\
-            Tale metodo ha il compito di aggiornare il map chart utilizzando le Api interne di Norris. Tale metodo ha quindi il compito di creare il pacchetto di aggiornamento il quale viene passato come parametro al metodo di aggiornamento del chart in Norris.
+            Tale funzione ha il compito di aggiornare il map chart a partire dai dati che sono stati passati come parametro alla funzione. Tali dati sono quelli che sono stati ritornati dalla funzione getLines: essi sono dunque prima di tutto convertiti in un formato fruibile da Norris. In seguito, questi dati vengono utilizzati tramite le API interne per aggiornare il map chart: vengono aggiornate le posizioni di tutti i punti sulla mappa, vengono aggiunti eventuali nuovi punti e vengono tolti quelli non più presenti.
             
             \item \textbf{update\_bar(chart : Chart, old\_values : Dataset[], new\_values : Dataset[]) : void} \\
-            Tale metodo ha il compito di aggiornare il bar chart utilizzando le Api interne di Norris.Tale metodo ha quindi il compito di creare il pacchetto di aggiornamento il quale viene passato come parametro al metodo di aggiornamento del chart in Norris.
+            Tale funzione ha il compito di aggiornare il bar chart a partire dai dati che sono stati passati come parametro alla funzione. Tali dati sono quelli che sono stati ritornati dalla funzione getLines: essi devono dunque subire un'elaborazione, in quanto il bar chart deve contenere un'aggregazione dei dati che sono stati ottenuti, e non ogni singolo dato. In particolare, tale funzione si occupa di calcolare quanti mezzi sono attivi per ciascuna linea. A partire poi dal risultato ottenuto viene creato il pacchetto di aggiornamento tramite il quale le API interne possono effettuare l'aggiornamento vero e proprio del grafico.
             
             \item \textbf{update\_table(chart : Chart, old\_values : Dataset[], new\_values : Dataset[]) : void} \\
-            Tale metodo ha il compito di aggiornare la table utilizzando le Api interne di Norris.Tale metodo ha quindi il compito di creare il pacchetto di aggiornamento il quale viene passato come parametro al metodo di aggiornamento del chart in Norris.
+            Tale funzione ha il compito di aggiornare la table a partire dai dati che sono stati passati come parametro alla funzione. Tali dati sono quelli che sono stati ritornati dalla funzione getLines: essi devono dunque subire un'elaborazione, in quanto la table deve contenere un'aggregazione dei dati che sono stati ottenuti, e non ogni singolo dato. In particolare, tale funzione si occupa di calcolare qual'è il mezzo più vicino ai vari punti di interesse e qual'è il tempo di attesa medio. A partire poi dal risultato ottenuto viene creato il pacchetto di aggiornamento tramite il quale le API interne possono effettuare l'aggiornamento vero e proprio del grafico.
 
         \end{description}
