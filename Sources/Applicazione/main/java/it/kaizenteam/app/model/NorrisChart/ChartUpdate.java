@@ -1,7 +1,7 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * Created by Moro on 23/05/15.
+ * Created by Moro on 24/05/15.
  */
-public class ChartUpdate {
+public interface ChartUpdate {
 }

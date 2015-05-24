@@ -1,7 +1,9 @@
 package it.kaizenteam.app.model.NorrisChart;
 
+import org.json.JSONObject;
+
 /**
- * Created by Moro on 23/05/15.
+ * Created by Moro on 24/05/15.
  */
-public class ChartSettings {
+public interface ChartSettings {
 }
