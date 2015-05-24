@@ -20,37 +20,93 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+
+import java.util.ArrayList;
+
 import it.kaizenteam.app.R;
+import it.kaizenteam.app.model.NorrisChart.ChartData;
+import it.kaizenteam.app.presenter.BarChartPresenter;
+import it.kaizenteam.app.presenter.PresenterImpl;
 
 
-public class BarChartActivity extends ChartActivity {
+public class BarChartActivity extends ChartActivity implements BarChartView{
+    //TODO Barchart dei dati
+    private BarChart chart;
+    ArrayList<BarEntry> entries;
+    BarDataSet dataset;
+    ArrayList<String> labels;
+    BarData data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bar_chart);
+        presenter= PresenterImpl.create(PresenterImpl.BARCHART_TYPE,this);
+
+        //TODO rimuovi
+        ((BarChartPresenter)presenter).update(null,null);
     }
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_bar_chart, menu);
-        return true;
+    public void renderChart(ChartData data) {
+        //TODO use data
+        entries = new ArrayList<>();
+        entries.add(new BarEntry(4f, 0));
+        entries.add(new BarEntry(8f, 1));
+        entries.add(new BarEntry(6f, 2));
+        entries.add(new BarEntry(12f, 3));
+        entries.add(new BarEntry(18f, 4));
+        entries.add(new BarEntry(9f, 5));
+
+        dataset = new BarDataSet(entries, "# of Calls");
+
+        labels = new ArrayList<>();
+        labels.add("January");
+        labels.add("February");
+        labels.add("March");
+        labels.add("April");
+        labels.add("May");
+        labels.add("June");
+
+        chart = new BarChart(this.getBaseContext());
+        setContentView(chart);
+
+        this.data = new BarData(labels, dataset);
+        chart.setData(this.data);
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public void setAxisName(String x, String y) {
+//TODO
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+    @Override
+    public void showGrid(boolean show) {
+//TODO
+    }
 
-        return super.onOptionsItemSelected(item);
+    @Override
+    public void setLegendPosition(int position) {
+//TODO
+    }
+
+    @Override
+    public void setOrientation(int orientation) {
+//TODO
+    }
+
+    @Override
+    public void setSeriesColor(String[] colors) {
+//TODO
+    }
+
+    @Override
+    public void setTitle(String title) {
+//TODO
     }
 }

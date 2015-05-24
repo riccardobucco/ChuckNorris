@@ -16,15 +16,15 @@
 */
 package it.kaizenteam.app.view;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import it.kaizenteam.app.R;
+import it.kaizenteam.app.model.NorrisChart.ChartData;
 
 
-public class TableActivity extends ChartActivity {
+public class TableActivity extends ChartActivity implements TableView{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,26 +32,28 @@ public class TableActivity extends ChartActivity {
         setContentView(R.layout.activity_table);
     }
 
-
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_table, menu);
-        return true;
+    public void renderChart(ChartData data) {
+        //TODO
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public void setCellTextColor(int riga, int colonna, String colorRGB) {
+        //TODO
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+    @Override
+    public void setCellBackgroundColor(int riga, int colonna, String colorRGB) {
+        //TODO
+    }
 
-        return super.onOptionsItemSelected(item);
+    @Override
+    public void setTitle(String title) {
+        //TODO
+    }
+
+    @Override
+    public void showCellBorderLine(boolean border) {
+        //TODO
     }
 }
