@@ -281,6 +281,30 @@ I range di accettazione per questa metrica sono:
 					\end{itemize}
 			\level{4}{Metriche per il prodotto software}
 			Sono riportate di seguito le metriche utilizzate per determinare le diverse qualità del \insglo{prodotto} individuate nel paragrafo \nameref{subsec:obiettiviprodotto} del presente documento.
+			\\La corrispondenza fra le qualità ricercate e le metriche individuate viene evidenziata nella seguente tabella:\\
+			\begin{table}[H]
+			\begin{center}
+			\begin{tabular}{ | m{4cm} | m{8cm} | } 
+			\hline
+			\textbf{Qualità} & \textbf{Metriche} \\ \hline
+
+                        Funzionalità & \begin{itemize} \item Numero di requisiti funzionali realizzati \end{itemize} \\ \hline
+                        Affidabilità & \begin{itemize}
+                                 \item Percentuale test di robustezza superati
+                                 \item Copertura del codice
+                                \end{itemize} \\ \hline
+                        Manutenibilità     & \begin{itemize}
+                                    \item Complessità ciclomatica
+                                    \item Numero parametri per metodo
+                                    \item Numero statement per metodo
+                                    \item Numero campi dati per classe
+                                    \item Livello di annidamento
+                                    \item Grado Accoppiamento
+                                  \end{itemize}\\ \hline 
+			\end{tabular}
+			\end{center}
+			\caption{Tracciamento fra le qualità del software ricercate e le metriche utilizzate}
+			\end{table}
 				\level{5}{Numero di requisiti funzionali realizzati}
 					Questa metrica serve a misurare la funzionalità del \insglo{prodotto}. \\
 					I range di accettazione per questa metrica sono:
