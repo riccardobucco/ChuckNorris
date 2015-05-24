@@ -17,13 +17,15 @@
 package it.kaizenteam.app.view;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import it.kaizenteam.app.R;
+import it.kaizenteam.app.model.NorrisChart.ChartData;
 
 
-public class MapChartActivity extends ChartActivity {
+public class MapChartActivity extends ChartActivity implements MapChartView{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,24 +35,32 @@ public class MapChartActivity extends ChartActivity {
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_map_chart, menu);
-        return true;
+    public void renderChart(ChartData data) {
+        //TODO
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public void setCameraCoordinate(int latitude, int longitude) {
+//TODO
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+    @Override
+    public void setCameraZoom(int zoomLevel) {
+//TODO
+    }
 
-        return super.onOptionsItemSelected(item);
+    @Override
+    public void setMarkerShape(String shape) {
+//TODO
+    }
+
+    @Override
+    public void setSeriesColor(String[] colors) {
+//TODO
+    }
+
+    @Override
+    public void setTitle(String title) {
+//TODO
     }
 }

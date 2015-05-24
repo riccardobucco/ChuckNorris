@@ -17,5 +17,15 @@
 package it.kaizenteam.app.view;
 
 
-abstract class ChartActivity extends ObservableActivity{
+import it.kaizenteam.app.model.NorrisChart.ChartData;
+
+abstract class ChartActivity extends BaseActivity{
+    protected String idChart;
+
+    public abstract void renderChart(ChartData data);
+    public abstract void setTitle(String title);
+
+    public String getId(){
+        return idChart;
+    }
 }
