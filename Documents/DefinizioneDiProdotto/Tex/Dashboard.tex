@@ -6,7 +6,7 @@
         Si noti che le funzioni qui presentate rappresentano solo una ulteriore semplificazione fornita agli sviluppatori per creare una Dashboard basata sui dati messi a disposizione dall'APS. Nessuno vieta loro, infatti, di utilizzare in modo base le API interne che sono messe a disposizione da Norris e che sono descritte e documentate all'interno del presente documento.\\
         All'appendice \nameref{app:aps} si possono trovare le specifiche con le quali vengono effettuate le richieste al server APS. In tale appendice è riportato anche il formato della risposta che si ottiene, oltre ai criteri per interpretarlo.
 
-        \begin{description}
+        \begin{itemize}
 
             \item \textbf{init\_norris() : Norris} \\
             Tale funzione ha il compito di inizializzare l'istanza di Norris. Ciò fa si che nel webserver si crei l'istanza vera e propria e ne vengano settate le impostazioni. Ne viene infine montato il middleware con express e ritornato.
@@ -35,4 +35,4 @@
             \item \textbf{update\_table(chart : Chart, old\_values : Dataset[], new\_values : Dataset[]) : void} \\
             Tale funzione ha il compito di aggiornare la table a partire dai dati che sono stati passati come parametro alla funzione. Tali dati sono quelli che sono stati ritornati dalla funzione getLines: essi devono dunque subire un'elaborazione, in quanto la table deve contenere un'aggregazione dei dati che sono stati ottenuti, e non ogni singolo dato. In particolare, tale funzione si occupa di calcolare qual'è il mezzo più vicino ai vari punti di interesse e qual'è il tempo di attesa medio. A partire poi dal risultato ottenuto viene creato il pacchetto di aggiornamento tramite il quale le API interne possono effettuare l'aggiornamento vero e proprio del grafico.
 
-        \end{description}
+        \end{itemize}
