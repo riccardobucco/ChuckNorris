@@ -362,6 +362,13 @@ Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accet
 			\item Accoppiamento Afferente (CA): indica il numero di classi esterne ad un \insglo{package} che dipendono da classi interne ad esso. Un alto valore di CA è indice di un alto grado di dipendenza del resto del \insglo{software} dal \insglo{package}.
 			\item Accoppiamento Efferente (CE): indica il numero di classi interne al \insglo{package} che dipendono da classi esterne ad esso. Un basso valore di CE indica che la maggior parte delle funzionalità fornite dal \insglo{package} sono indipendenti dal resto del sistema.
 		\end{itemize}
+		I range di accettazione per questa metrica sono:
+		\begin{itemize}
+			\item valori maggiori di 10 sono considerati negativi;
+			\item valori compresi tra 5 e 7 sono considerati accettabili;
+			\item valori minori o uguali a 5 sono considerati ottimali.
+		\end{itemize}
+			
 		\level{5}{Copertura del codice}
 		La copertura del codice è la percentuale degli statement eseguiti, e quindi verificati, durante lo svolgimento dei test. Un'alta copertura del codice garantisce un'alta affidabilità del \insglo{software}, in quanto la probabilità che siano presenti errori in codice che sia stato sottoposto a test è molto bassa.\\
 		I range di accettazione per questa metrica sono:
