@@ -84,3 +84,19 @@ ExternalAPIController.prototype.getChart = function(chartId) {
     var chartR=new ChartRef(chart);
     return chartR;
 };
+
+/**
+ *
+ * @returns {http}
+ */
+ExternalAPIController.prototype.getServer = function() {
+    return this.server;
+};
+
+/**
+ *
+ * @returns {String}
+ */
+ExternalAPIController.prototype.getEndpoint = function() {
+    return this.endpoint;
+};

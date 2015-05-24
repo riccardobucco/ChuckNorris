@@ -15,8 +15,8 @@
  */
 
 var ExternalAPIController = require('./ExternalAPIController.js');
+var socketio = require('socket.io');
 
- // - io : socket.io
 /**
  * Creates a ChartEndpoint.
  * @param {ExternalAPIController} controller
@@ -27,8 +27,10 @@ function ChartEndpoint(controller) {
     if (!(this instanceof ChartEndpoint)) return new ChartEndpoint(controller);
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
+        this.socketio=soketio(controller.getServer());
     }else {
         this.controller=null;
+        this.socketio=null;
         console.log("ERROR: an ExternalAPIController is required.")
     }
 }
