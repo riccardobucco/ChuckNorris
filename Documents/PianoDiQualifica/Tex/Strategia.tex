@@ -18,7 +18,7 @@ Infine, il gruppo si impegna ad utilizzare strumenti che consentano di automatiz
 		L'applicazione del ciclo di miglioramento continuo ai processi, al fine di ottenere un aumento della loro qualità, avviene attraverso l'attuazione di tutte le fasi del ciclo, ovvero:
 		\begin{enumerate}
 		\item \textbf{Plan}: viene individuato il processo da eseguire e i risultati che si vogliono ottenere, si stimano i costi e i possibili rischi, infine il \insrole{Responsabile di Progetto} da inizio al processo assegnando i compiti ai membri del \insglo{team};
-		\item \textbf{Do}: il processo viene eseguito dai membri del \insglo{team} ad esso assegnati, che in quel momento assumono il ruolo idoneo a svolgerlo; come indicato nel paragrafo \nameref{subsec:responsabilità} del presente documento, è responsabilità di ogni membro del \groupname{} apportare qualità al progetto nel momento in cui riveste uno dei ruoli individuati, ciò significa che i processi devono essere svolti con la massima cura;
+		\item \textbf{Do}: il processo viene eseguito dai membri del \insglo{team} ad esso assegnati, che in quel momento assumono il ruolo idoneo a svolgerlo; come indicato nel paragrafo \nameref{subsec:responsabilita} del presente documento, è responsabilità di ogni membro del \groupname{} apportare qualità al progetto nel momento in cui riveste uno dei ruoli individuati, ciò significa che i processi devono essere svolti con la massima cura;
 		\item \textbf{Check}: in questa \insglo{fase} i \insrole{Verificatori} in carica hanno il compito di verificare l'andamento del processo calcolando, valutando ed eventualmente confrontando gli indici previsti, valutando la qualità dei prodotti, e confrontando lo stato attuale del processo coi livelli indicati dal modello \insglo{CMM} (vedi appendice \nameref{app:CMM});
 		\item \textbf{Act}: l'azione da intraprendere in questa \insglo{fase} è correlata all'esito della \insglo{fase} precedente:
 		\begin{itemize}
@@ -281,6 +281,30 @@ I range di accettazione per questa metrica sono:
 					\end{itemize}
 			\level{4}{Metriche per il prodotto software}
 			Sono riportate di seguito le metriche utilizzate per determinare le diverse qualità del \insglo{prodotto} individuate nel paragrafo \nameref{subsec:obiettiviprodotto} del presente documento.
+			\\La corrispondenza fra le qualità ricercate e le metriche individuate viene evidenziata nella seguente tabella:\\
+			\begin{table}[H]
+			\begin{center}
+			\begin{tabular}{ | m{4cm} | m{8cm} | } 
+			\hline
+			\textbf{Qualità} & \textbf{Metriche} \\ \hline
+
+                        Funzionalità & \begin{itemize} \item Numero di requisiti funzionali realizzati \end{itemize} \\ \hline
+                        Affidabilità & \begin{itemize}
+                                 \item Percentuale test di robustezza superati
+                                 \item Copertura del codice
+                                \end{itemize} \\ \hline
+                        Manutenibilità     & \begin{itemize}
+                                    \item Complessità ciclomatica
+                                    \item Numero parametri per metodo
+                                    \item Numero statement per metodo
+                                    \item Numero campi dati per classe
+                                    \item Livello di annidamento
+                                    \item Grado Accoppiamento
+                                  \end{itemize}\\ \hline 
+			\end{tabular}
+			\end{center}
+			\caption{Tracciamento fra le qualità del software ricercate e le metriche utilizzate}
+			\end{table}
 				\level{5}{Numero di requisiti funzionali realizzati}
 					Questa metrica serve a misurare la funzionalità del \insglo{prodotto}. \\
 					I range di accettazione per questa metrica sono:
@@ -346,3 +370,19 @@ Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accet
 			\item valori compresi tra 60\% e 80\% sono considerati accettabili;
 			\item valori maggiori di 80\% sono considerati ottimali.
 		\end{itemize}
+		
+		\level{2}{Strategie di applicazione delle metriche}
+		Al fine di perseguire le qualità del prodotto identificate nel paragrafo \nameref{subsec:obiettiviprodotto}, e nel complesso una buona qualità del prodotto finale, si è deciso di attuare durante le diverse fasi di progetto l'attività di misurazione, applicando le metriche individuate nella sezione \nameref{sec:metriche}, nel seguente modo:
+		\begin{description}
+		\item[Fase Documentation Beginning] In questa fase viene prodotta tutta la documentazione iniziale relativa al progetto, pertanto si è concordato di misurare l'indice di leggibilità Gulpease dei diversi documenti in corrispondenza della terminazione della stesura di ogni sezione per assicurarne una buona leggibilità dei contenuti. Per quanto riguarda le metriche di processo, il team ha deciso di calcolare la produttività dei processi di documentazione e verifica, e l'efficacia di revisione del processo di verifica in corrispondenza dei momenti di verifica indicati nel \insdoc{Piano di Progetto v3.00} per la \insphase{Fase DB}.
+		\item[Fase Documentation Improvement] In questa fase si procede alla sola correzione dei documenti rispetto alle segnalazioni fatte dal Proponente in seguito alla Revisione dei Requisiti. L'unica misurazione effettuata è quella dell'indice Gulpease per verificare che i documenti risultino leggibili anche dopo le correzioni apportate. Gli esiti di tale misurazione non vengono riportati in questo documento in quanto non si riferiscono a versioni di documenti che vengono presentate durante una revisione. 
+		\item[Fase Software Design] In questa fase gli incrementi apportati alla maggior parte dei documenti è minimale pertanto si è deciso di calcolare l'indice di leggibilità e la produttività del processo di documentazione relativa ad essi solo alla fine della fase. Questo non vale per la Specifica Tecnica, la cui redazione inizia in questa fase, e per la quale l'indice Gulpease e la produttività  del processo di documentazione vengono calcolati alla fine di ogni attività di verifica individuata nel \insdoc{Piano di Progetto v3.00} per un totale di cinque volte.
+		Per quanto riguarda i processi, vengono applicate nuove metriche per il monitoraggio dell'andamento del progetto, Schedule Variance e Budget Variance, in considerazione del fatto che la notevole quantità di tempo che intercorre tra la Revisione dei Requisiti e la Revisione di Progettazione può condurre ad errori di pianificazione, che possono essere invece corretti avendo una visione oggettiva della situazione.
+		\item[Fase Prototyping] In questa fase i documenti precedentemente redatti restano per lo più invariati, mentre si inizia la stesura della Definizione di Prodotto e del Manuale Utente. Essendo tali documenti alla prima versione, il calcolo dell'indice di leggibilità e la produttività del processo di documentazione avviene ad ogni verifica prevista dal \insdoc{Piano di Progetto v 3.00}. Una volta conclusa la progettazione di dettaglio, ha inizio l'attività di codifica del prototipo del prodotto. A questo punto vengono applicate le metriche individuate per perseguire gli obiettivi di qualità indicati in \nameref{subsec:obiettiviprodotto} con la stessa cadenza delle attività di verifica. Si continuano a monitorare le metriche di processo.
+		\item[Fase Increase of the Prototype] Durante questa fase vengono implementati i requisiti desiderabili e riportati nei documenti \insdoc{Definizione di Prodotto} e \insdoc{Manuale Utente}. Si continua quindi ad applicare le metriche del codice; l'indice  Gulpease a questo punto viene calcolato solo al termine della fase per avere un'indicazione del livello di leggibilità dei documenti. Vista la brevità della fase, le metriche per la qualità di processo vengono applicate solo al termine della fase, per poter agire tempestivamente con azioni correttive nel caso di risultati negativi in vista dell'ultima fase a ridosso dell'ultima revisione.
+		\item[Fase Completion of Product] L'applicazione delle metriche di qualità di questa fase segue lo stesso principio della precedente. I risultati delle metriche di processo veranno monitorati con maggiore frequenza per arrivare alla revisione di Qualificacon un buon livello di qualità.
+		\item[Fase Product Delivery] In quest'ultima fase del progetto vengono eseguiti i test di sistema e di validazione per verificare che il prodotto risponda alle richieste del committente, e viene eseguito un ultimo monitoraggio delle metriche stabilite per presentare i risultati finali della qualità del progetto.
+		\end{description}
+		Tutte le misurazioni delle metriche vengono fatte in modo automatizzato per ridurre la possibilità di errore, aumentare l'efficienza dell'attività di misurazione e poter agire prontamente in caso di risultati negativi.\\
+		Durante tutte le fasi del progetto viene applicato il ciclo di Deming allo scopo di garantire un miglior controllo delle diverse attività svolte; la proporzione delle fasi del PDCA viene riportata in modo aggregato negli esiti della fase.
+
