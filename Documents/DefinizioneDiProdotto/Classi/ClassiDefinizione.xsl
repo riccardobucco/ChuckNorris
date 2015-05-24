@@ -40,6 +40,8 @@
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
 			\item \textbf{Tipo:} classe
+			<xsl:apply-templates select="*[local-name()='GeneralizableElement.generalization']"/>
+			<xsl:if test="$system = 'Applicazione'"><xsl:apply-templates select="*[local-name()='ModelElement.clientDependency']"/></xsl:if>
 			<xsl:call-template name="abstract"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.stereotype']"/>
@@ -62,6 +64,7 @@
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
 			\item \textbf{Tipo:} interfaccia
+			<xsl:apply-templates select="*[local-name()='GeneralizableElement.generalization']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.visibility']"/>
 			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
 			<xsl:apply-templates select="*[local-name()='Classifier.feature']"/>
