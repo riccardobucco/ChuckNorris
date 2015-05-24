@@ -8,9 +8,9 @@
  * History:
  *
  * ================================================================================
- * Version Date Programmer Changes
+ * Version  Date        Author              Changes
  * ================================================================================
- * 0.01 2015-05-24 Chiara Bigarella {creation}
+ * 0.01     2015-05-24  Chiara Bigarella    {creation}
  * ================================================================================
  */
 
@@ -21,7 +21,7 @@ module.exports = ChartRef;
 
 
 /**
- * Creates a new chart.
+ * Creates a new ChartRef.
  * @constructor
  * @param {ChartImpl} chart - a ChartImpl, i.e. 'barchart', 'linechart', 'mapchart', 'table';
  */
