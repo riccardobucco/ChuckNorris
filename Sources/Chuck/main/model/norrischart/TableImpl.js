@@ -16,7 +16,7 @@
 
 angular.module('chuck-chart')
 
-.run(['ChartImpl', function (ChartImpl) {
+.run(['ChartImpl', 'TableInPlaceUpdater', 'TableStreamUpdater', function (ChartImpl, TableInPlaceUpdater, TableStreamUpdater) {
 
     var defaults = {
         description : 'This is a table.',
@@ -70,7 +70,7 @@ angular.module('chuck-chart')
     };
 
     ChartImpl.registerFactory('table' , TableFactory.getInstance());
-    //ChartImpl.registerUpdater('table:inplace', TableInPlaceUpdater.getInstance());
-    //ChartImpl.registerUpdater('table:stream', TableStreamUpdater.getInstance());
+    ChartImpl.registerUpdater('table:inplace', TableInPlaceUpdater.getInstance());
+    ChartImpl.registerUpdater('table:stream', TableStreamUpdater.getInstance());
 
 }]);

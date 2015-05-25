@@ -1,5 +1,5 @@
 /*
- * Name: {BarChartInPlaceUpdater.js}
+ * Name: {TableInPlaceUpdater.js}
  * Module: {}
  * Location: {Norris/Main/DataModel}
  * Date: {2015-05-15}
@@ -16,24 +16,19 @@
 
 angular.module('norris-chartupdater')
 
-.factory('BarChartInPlaceUpdater', [function () {
+.factory('TableInPlaceUpdater', [function () {
 
-    function BarChartInPlaceUpdater() {
-        if(!(this instanceof BarChartInPlaceUpdater)) return new BarChartInPlaceUpdater();
+    function TableInPlaceUpdater() {
+        if(!(this instanceof TableInPlaceUpdater)) return new TableInPlaceUpdater();
     }
 
-    BarChartInPlaceUpdater.prototype.instance=new BarChartInPlaceUpdater(); // static
+    TableInPlaceUpdater.prototype.instance=new TableInPlaceUpdater(); // static
 
-    BarChartInPlaceUpdater.getInstance = function() { // static
-        return BarChartInPlaceUpdater.prototype.instance;
+    TableInPlaceUpdater.getInstance = function() { // static
+        return TableInPlaceUpdater.prototype.instance;
     };
 
-    /**
-     * Updates a bar chart with in place method. The bar chart data should not be empty.
-     * @param {ChartImpl} chart - the bar chart to update;
-     * @param updateData - the updating.
-     */
-    BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
+    TableInPlaceUpdater.prototype.update = function (chart, updateData) {
         var isEmpty=function(obj) {
             for(var prop in obj) {
                 if(obj.hasOwnProperty(prop))
@@ -48,7 +43,9 @@ angular.module('norris-chartupdater')
                 for(var i=0; i<updateData.length; i++) {
                     var x=updateData[i].position.x;
                     var y=updateData[i].position.y;
-                    data.datasets[x].values[y]=updateData[i].value;
+                    data.datasets[x][y].color=updateData[i].data.color;
+                    data.datasets[x][y].background=updateData[i].data.background;
+                    data.datasets[x][y].value=updateData[i].data.value;
                 }
                 chart.setData(data);
             }
@@ -56,9 +53,11 @@ angular.module('norris-chartupdater')
                 console.log("ERROR: the chart has no data to update.");
                 throw ("emptyChart");
             }
-        };
+        }
     };
 
-    return BarChartInPlaceUpdater;
+
+
+    return TableInPlaceUpdater;
 
 }]);

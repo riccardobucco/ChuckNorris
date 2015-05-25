@@ -13,7 +13,7 @@
  * 0.01 2015-05-04 Chiara Bigarella {creation}
  * ================================================================================
  */
-
+angular.module('norris-chartupdater', []);
 angular.module('chuck-chart', ['norris-chartupdater'])
 
 .factory('ChartImpl', [function () {

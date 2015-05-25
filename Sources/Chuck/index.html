@@ -2,14 +2,19 @@
 <html ng-app="chuck">
     <head>
         <script src="bower_components/angular/angular.min.js"></script>
-        <script src="bower_components/chartjs/Chart.min.js"></script>
+
         <script src="bower_components/socket.io-client/socket.io.js"></script>
+        <script src="bower_components/chartjs/Chart.min.js"></script>
 
         <script src="main/app.js"></script>
 
         <script src="main/model/services/ChartRequester.js"></script>
+        <script src="main/model/services/ChuckAuthenticator.js"></script>
 
         <script src="main/directive/ChuckBarChart.js"></script>
+        <script src="main/directive/ChuckLineChart.js"></script>
+        <script src="main/directive/ChuckMapChart.js"></script>
+        <script src="main/directive/ChuckTable.js"></script>
 
         <script src="main/model/norrischart/ChartImpl.js"></script>
         <script src="main/model/norrischart/BarChartImpl.js"></script>
@@ -18,9 +23,15 @@
         <script src="main/model/norrischart/TableImpl.js"></script>
 
         <script src="main/model/norrischart/BarChartInPlaceUpdater.js"></script>
+        <script src="main/model/norrischart/LineChartInPlaceUpdater.js"></script>
+        <script src="main/model/norrischart/LineChartStreamUpdater.js"></script>
+        <script src="main/model/norrischart/MapChartInPlaceUpdater.js"></script>
+        <script src="main/model/norrischart/MapChartMovieUpdater.js"></script>
+        <script src="main/model/norrischart/TableInPlaceUpdater.js"></script>
+        <script src="main/model/norrischart/TableStreamUpdater.js"></script>
     </head>
     <body>
         Chuck example application <br>
-        <chuck-barchart/>
+        <chuck-linechart/>
     </body>
 </html>

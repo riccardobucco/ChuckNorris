@@ -16,7 +16,7 @@
 
 angular.module('chuck-chart')
 
-.run(['ChartImpl', function (ChartImpl) {
+.run(['ChartImpl', 'MapChartInPlaceUpdater', 'MapChartMovieUpdater', function (ChartImpl, MapChartInPlaceUpdater, MapChartMovieUpdater) {
 
     var defaults = {
         description: 'This is a map chart',
@@ -70,7 +70,7 @@ angular.module('chuck-chart')
     };
 
     ChartImpl.registerFactory('mapchart' , MapChartFactory.getInstance());
-    //ChartImpl.registerUpdater('mapchart:inplace', MapChartInPlaceUpdater.getInstance());
-    //ChartImpl.registerUpdater('mapchart:movie', MapChartMovieUpdater.getInstance());
+    ChartImpl.registerUpdater('mapchart:inplace', MapChartInPlaceUpdater.getInstance());
+    ChartImpl.registerUpdater('mapchart:movie', MapChartMovieUpdater.getInstance());
 
 }]);

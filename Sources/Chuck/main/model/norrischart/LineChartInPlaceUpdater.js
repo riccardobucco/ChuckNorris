@@ -1,5 +1,5 @@
 /*
- * Name: {BarChartInPlaceUpdater.js}
+ * Name: {LineChartInPlaceUpdater.js}
  * Module: {}
  * Location: {Norris/Main/DataModel}
  * Date: {2015-05-15}
@@ -16,24 +16,24 @@
 
 angular.module('norris-chartupdater')
 
-.factory('BarChartInPlaceUpdater', [function () {
+.factory('LineChartInPlaceUpdater', [function () {
 
-    function BarChartInPlaceUpdater() {
-        if(!(this instanceof BarChartInPlaceUpdater)) return new BarChartInPlaceUpdater();
-    }
+function LineChartInPlaceUpdater() {
+    if(!(this instanceof LineChartInPlaceUpdater)) return new LineChartInPlaceUpdater();
+}
 
-    BarChartInPlaceUpdater.prototype.instance=new BarChartInPlaceUpdater(); // static
+LineChartInPlaceUpdater.prototype.instance=new LineChartInPlaceUpdater(); // static
 
-    BarChartInPlaceUpdater.getInstance = function() { // static
-        return BarChartInPlaceUpdater.prototype.instance;
+    LineChartInPlaceUpdater.getInstance = function() { // static
+        return LineChartInPlaceUpdater.prototype.instance;
     };
 
     /**
-     * Updates a bar chart with in place method. The bar chart data should not be empty.
-     * @param {ChartImpl} chart - the bar chart to update;
+     * Updates a line chart with in place method. The line chart data should not be empty.
+     * @param {LineChartImpl} chart - the line chart to update;
      * @param updateData - the updating.
      */
-    BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
+    LineChartInPlaceUpdater.prototype.update = function (chart, updateData) {
         var isEmpty=function(obj) {
             for(var prop in obj) {
                 if(obj.hasOwnProperty(prop))
@@ -56,9 +56,9 @@ angular.module('norris-chartupdater')
                 console.log("ERROR: the chart has no data to update.");
                 throw ("emptyChart");
             }
-        };
+        }
     };
 
-    return BarChartInPlaceUpdater;
+    return LineChartInPlaceUpdater;
 
 }]);

@@ -1,7 +1,7 @@
 /*
- * Name: {BarChartInPlaceUpdater.js}
+ * Name: {MapChartInPlaceUpdater.js}
  * Module: {}
- * Location: {Norris/Main/DataModel}
+ * Location: {Norris/Main/DataModel/NorrisChart}
  * Date: {2015-05-15}
  * Version: {v0.1}
  *
@@ -16,24 +16,24 @@
 
 angular.module('norris-chartupdater')
 
-.factory('BarChartInPlaceUpdater', [function () {
+.factory('MapChartInPlaceUpdater', [function () {
 
-    function BarChartInPlaceUpdater() {
-        if(!(this instanceof BarChartInPlaceUpdater)) return new BarChartInPlaceUpdater();
+    function MapChartInPlaceUpdater() {
+        if(!(this instanceof MapChartInPlaceUpdater)) return new MapChartInPlaceUpdater();
     }
 
-    BarChartInPlaceUpdater.prototype.instance=new BarChartInPlaceUpdater(); // static
+    MapChartInPlaceUpdater.prototype.instance=new MapChartInPlaceUpdater(); // static
 
-    BarChartInPlaceUpdater.getInstance = function() { // static
-        return BarChartInPlaceUpdater.prototype.instance;
+    MapChartInPlaceUpdater.getInstance = function() { // static
+        return MapChartInPlaceUpdater.prototype.instance;
     };
 
     /**
-     * Updates a bar chart with in place method. The bar chart data should not be empty.
-     * @param {ChartImpl} chart - the bar chart to update;
+     * Updates a map chart with in place method. The map chart data should not be empty.
+     * @param {MapChartImpl} chart - the map chart to update;
      * @param updateData - the updating.
      */
-    BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
+    MapChartInPlaceUpdater.prototype.update = function (chart, updateData) {
         var isEmpty=function(obj) {
             for(var prop in obj) {
                 if(obj.hasOwnProperty(prop))
@@ -46,9 +46,10 @@ angular.module('norris-chartupdater')
             var data=chart.getData();
             if (!isEmpty(data)) {
                 for(var i=0; i<updateData.length; i++) {
-                    var x=updateData[i].position.x;
-                    var y=updateData[i].position.y;
-                    data.datasets[x].values[y]=updateData[i].value;
+                    var series=updateData[i].position.series;
+                    var index=updateData[i].position.index;
+                    data[series].values[index].x=updateData[i].data.x;
+                    data[series].values[index].y=updateData[i].data.y;
                 }
                 chart.setData(data);
             }
@@ -56,9 +57,9 @@ angular.module('norris-chartupdater')
                 console.log("ERROR: the chart has no data to update.");
                 throw ("emptyChart");
             }
-        };
+        }
     };
 
-    return BarChartInPlaceUpdater;
+    return MapChartInPlaceUpdater;
 
 }]);

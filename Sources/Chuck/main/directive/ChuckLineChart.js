@@ -1,10 +1,10 @@
 angular.module('chuck')
 
 
-.directive('chuckBarchart', ['ChartRequester', function (ChartRequester) {
+.directive('chuckLinechart', ['ChartRequester', function (ChartRequester) {
     return {
         restrict: 'E',
-        templateUrl: 'main/view/BarChartView.html',
+        templateUrl: 'main/view/LineChartView.html',
         link: function(scope, element, attrs) {
 
             var chartjs = null;
@@ -29,21 +29,24 @@ angular.module('chuck')
                     var obj = {};
                     obj.data = dataset.values;
                     obj.label = dataset.name;
-                    obj.fillColor = 'rgb(' + dataset.color.r + ',' + dataset.color.g + ',' + dataset.color.b + ')';
+                    obj.strokeColor = 'rgb(' + dataset.color.r + ',' + dataset.color.g + ',' + dataset.color.b + ')';
+                    obj.pointColor = 'rgb(' + dataset.color.r + ',' + dataset.color.g + ',' + dataset.color.b + ')';
                     data.datasets.push(obj);
                 });
 
-                var options = {}
+                var options = {
+                    datasetFill: false
+                }
                     
                 var ctx = element.contents()[0].getContext('2d');
-                chartjs = new Chart(ctx).Bar(data, options);
+                chartjs = new Chart(ctx).Line(data, options);
             };
 
             function render(newValue, oldValue) {
                 var data = scope.chart.getData();
                 for(var i = 0; i < data.datasets.length; i++)
                     for(var j = 0; j < data.datasets[i].values.length; j++)
-                        chartjs.datasets[i].bars[j].value = data.datasets[i].values[j];
+                        chartjs.datasets[i].points[j].value = data.datasets[i].values[j];
 
                 chartjs.update();
             };
