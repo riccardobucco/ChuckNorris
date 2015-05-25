@@ -1,5 +1,5 @@
 /*
- * Name: {TULineChartImpl.js}
+ * Name: {TUMapChartImpl.js}
  * Module: {}
  * Location: {Norris/test/unit}
  * Date: {2015-05-25}
@@ -14,36 +14,29 @@
  * ================================================================================
  */
 
-var LineChartImpl = require('../../main/DataModel/NorrisChart/LineChartImpl.js');
+var MapChartImpl = require('../../main/DataModel/NorrisChart/MapChartImpl.js');
 var assert = require("assert");
 
-describe('LineChartImpl(id: String)', function(){
-	describe('LineChartImpl()', function(){
+describe('MapChartImpl(id: String)', function(){
+	describe('MapChartImpl()', function(){
 		it('should memorize the right type of the chart',function(){
-			var linechart = new LineChartImpl('randomID');
-			assert.equal('linechart', linechart.type);
+			var mapchart = new MapChartImpl('randomID');
+			assert.equal('mapchart', mapchart.type);
 		});
 		it('should memorize the right id of the chart',function(){
-			var linechart = new LineChartImpl('randomID');
-			assert.equal('randomID', linechart.uid);
+			var mapchart = new MapChartImpl('randomID');
+			assert.equal('randomID', mapchart.uid);
 		});
 		it('should memorize some default values for the keys of the settings',function(){
-			var linechart = new LineChartImpl('randomID');
+			var mapchart = new MapChartImpl('randomID');
 			var defaults = {
 				title: '',
-				description : 'This is a line chart.',
-				xlabel : '',
-				ylabel : '',
-				showGrid : false,
+				description: 'This is a map chart',
 				showLegend : true,
 				legendPosition : 'top-right',
-				maxPoints : 10,
-				format : {
-					pointDotRadius : 1 ,
-					bezierCurve : true
-				}
+				maxPoints : 5
 			};
-			assert.deepEqual(defaults,linechart.settings);
+			assert.deepEqual(defaults,mapchart.settings);
 		});
 	})
 });
