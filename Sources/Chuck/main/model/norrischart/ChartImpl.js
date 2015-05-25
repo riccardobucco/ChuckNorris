@@ -14,7 +14,7 @@
  * ================================================================================
  */
 
-angular.module('chuck-chart', [])
+angular.module('chuck-chart', ['norris-chartupdater'])
 
 .factory('ChartImpl', [function () {
 
@@ -147,8 +147,6 @@ angular.module('chuck-chart', [])
 		if (ChartImpl.prototype.updaters.hasOwnProperty(type)) {
 			var dep=ChartImpl.prototype.updaters[type];
 			dep.update(this, updateData);
-			this.emit('update', updateType, updateData); // emits an 'update' signal
-			console.log("Chart updated: "+JSON.stringify(this)); // TOGLIERE
 		}
 		else {
 			console.log("ERROR: wrong updating type." );

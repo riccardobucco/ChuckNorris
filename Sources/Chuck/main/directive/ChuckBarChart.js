@@ -39,13 +39,11 @@ angular.module('chuck')
                 chartjs = new Chart(ctx).Bar(data, options);
             };
 
-            setTimeout(function () {
-                chartjs.scale.xLabels.push('pippo');
-                chartjs.scale.xLabels.shift();
-            }, 8000)
-
             function render() {
-
+                var data = scope.chart.getData();
+                for(var i = 0; i < data.datasets.length; i++)
+                    for(var j = 0; j < data.datasets[i].values.length; j++)
+                        chartjs.datasets[i].bars[j].value = data.datasets[i].values[j];
 
                 chartjs.update();
             };
