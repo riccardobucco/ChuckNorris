@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="chuck">
+    <head>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/chartjs/Chart.min.js"></script>
+        <script src="bower_components/socket.io-client/socket.io.js"></script>
+
+        <script src="main/app.js"></script>
+
+        <script src="main/model/services/ChartRequester.js"></script>
+
+        <script src="main/directive/ChuckBarChart.js"></script>
+
+        <script src="main/model/norrischart/ChartImpl.js"></script>
+        <script src="main/model/norrischart/BarChartImpl.js"></script>
+        <script src="main/model/norrischart/LineChartImpl.js"></script>
+        <script src="main/model/norrischart/MapChartImpl.js"></script>
+        <script src="main/model/norrischart/TableImpl.js"></script>
+    </head>
+    <body>
+        Chuck example application <br>
+        <chuck-barchart/>
+    </body>
+</html>
