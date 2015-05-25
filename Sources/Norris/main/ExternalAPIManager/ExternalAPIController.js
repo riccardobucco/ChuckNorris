@@ -33,34 +33,50 @@ function ExternalAPIController(model, server, endpoint) {
 };
 
 /**
- *
+ * Performs Norris' login.
  * @param {} cookies
  * @param {String} username
  * @param {String} password
  * @return {boolean}
  */
-ExternalAPIController.prototype.performLogin= function(cookies , username, password) {};
+ExternalAPIController.prototype.performLogin= function(cookies , username, password) {
+    var settings=this.model.getSettings();
+    var login=settings.login(cookies, username, password);
+    return login;
+};
 
 /**
-*
+* Performs Norris' logout.
 * @param {} cookies
 * @return {boolean}
 */
-ExternalAPIController.prototype.performLogout= function(cookies) {};
+ExternalAPIController.prototype.performLogout= function(cookies) {
+    var settings=this.model.getSettings();
+    var logout=settings.logout(cookies);
+    return logout;
+};
 
 /**
- *
+ * Performs Norris' keepAlive.
  * @param {} cookies
  * @return {boolean}
  */
-ExternalAPIController.prototype.performKeepAlive= function(cookies) {};
+ExternalAPIController.prototype.performKeepAlive= function(cookies) {
+    var settings=this.model.getSettings();
+    var keepAlive=settings.keepAlive(cookies);
+    return keepAlive;
+};
 
 /**
- *
+ * Performs Norris' isLogged.
  * @param {} cookies
  * @return {boolean}
  */
-ExternalAPIController.prototype.isLogged= function(cookies) {};
+ExternalAPIController.prototype.isLogged= function(cookies) {
+    var settings=this.model.getSettings();
+    var isLogged=settings.isLogged(cookies);
+    return isLogged;
+};
 
 
 /**
@@ -86,7 +102,7 @@ ExternalAPIController.prototype.getChart = function(chartId) {
 };
 
 /**
- *
+ * Gets the server.
  * @returns {http}
  */
 ExternalAPIController.prototype.getServer = function() {
@@ -94,7 +110,7 @@ ExternalAPIController.prototype.getServer = function() {
 };
 
 /**
- *
+ * Gets the endpoint.
  * @returns {String}
  */
 ExternalAPIController.prototype.getEndpoint = function() {
