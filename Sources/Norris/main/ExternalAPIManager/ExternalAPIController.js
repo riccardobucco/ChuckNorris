@@ -16,6 +16,8 @@
 var NorrisImpl=require('../DataModel/NorrisImpl.js');
 var ChartRef=require('./ChartRef.js');
 var http=require('http');
+var events=require('events');
+
 
 /**
  * Creates a new ExternalAPIController.
@@ -27,10 +29,14 @@ var http=require('http');
 function ExternalAPIController(model, server, endpoint) {
     if(!(this instanceof ExternalAPIController))
         return new ExternalAPIController(model, server, endpoint);
+    events.EventEmitter.call(this); //ExternalAPIController inherits from events.EventEmitter
     this.model=model;
     this.server=server;
     this.endpoint=endpoint;
 };
+
+ExternalAPIController.prototype.__proto__=events.EventEmitter.prototype;
+
 
 /**
  * Performs Norris' login.
@@ -90,6 +96,7 @@ ExternalAPIController.prototype.getCharts= function() {
     }
     return chartR;
 };
+
 /**
  *
  * @param {String} chartId
