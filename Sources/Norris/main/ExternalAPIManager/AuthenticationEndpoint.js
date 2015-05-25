@@ -19,8 +19,6 @@ var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
 
 var express = require('express');
 
-//- app : express
-
 /**
  * Creates an AuthenticationEndpoint.
  * @param {ExternalAPIController} controller
@@ -31,8 +29,10 @@ function AuthenticationEndpoint(controller) {
     if (!(this instanceof AuthenticationEndpoint)) return new AuthenticationEndpoint(controller);
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
+        this.app=express();
     }else {
         this.controller=null;
+        this.app=null;
         console.log("ERROR: an ExternalAPIController is required.")
     }
 }

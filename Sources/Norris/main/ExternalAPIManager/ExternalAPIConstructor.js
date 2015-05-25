@@ -53,9 +53,12 @@ ExternalAPIConstructor.registerEndpoint = function(endpoint) {
  * @param {String} endpoint -
  */
 ExternalAPIConstructor.prototype.construct = function (model, server, endpoint) {
-    var controller = new ExternalAPIController();
+    var controller = new ExternalAPIController(model, server, endpoint);
     for (var i=0; i<ExternalAPIConstructor.prototype.endpoints.length; i++) {
         ExternalAPIConstructor.prototype.endpoints[i].createEndpoint(controller);
     }
 
 };
+
+//Dependency injection:
+var ChartEdpoint=require('./ChartEndpoint.js');

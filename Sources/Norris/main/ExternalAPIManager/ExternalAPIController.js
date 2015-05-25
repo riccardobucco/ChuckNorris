@@ -18,6 +18,8 @@ var ChartRef=require('./ChartRef.js');
 var http=require('http');
 var events=require('events');
 
+module.exports=ExternalAPIController;
+
 
 /**
  * Creates a new ExternalAPIController.
