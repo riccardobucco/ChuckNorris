@@ -1,19 +1,19 @@
 /*
-* Name: {MapChartImpl.java}
-* Package: {it.kaizenteam.app.model}
-* Location: {src.main.java.it.kaizenteam.model}
-* Date: {data di creazione del file}
-* Version: {0.01}
+* Name: MapChartImpl.java
+* Package: it.kaizenteam.app.model.NorrisChart
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
+* Date: 24/05/2015
+* Version: 0.01
 *
 * History:
-*
 * =================================================================
-* Version Date Programmer Changes
+* Version	Date	Programmer	Changes
 * =================================================================
-* 0.01 GG-MM-AAAA Aessandro Moretto {creation}
+* v0.01	2015-05-24	Alessandro Moretto	Creazione file
 * =================================================================
 *
 */
+
 package it.kaizenteam.app.model.NorrisChart;
 
 
