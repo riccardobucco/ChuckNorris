@@ -29,8 +29,45 @@ angular.module('norris-chartupdater')
     };
 
     MapChartMovieUpdater.prototype.update = function (chart, updateData) {
-        // aggiornamento movie
-        chart.setData(updateData);
+        var isEmpty=function(obj) {
+            for(var prop in obj) {
+                if(obj.hasOwnProperty(prop))
+                    return false;
+            }
+            return true;
+        };
+
+        if (!isEmpty(updateData)) {
+            var data=chart.getData();
+            if (!isEmpty(data)) {
+                /* In place: */
+                for(var i=0; i<updateData.inplace.length; i++) {
+                    var series=updateData.inplace[i].position.series;
+                    var index=updateData.inplace[i].position.index;
+                    data[series].values[index].x=updateData.inplace[i].data.x;
+                    data[series].values[index].y=updateData.inplace[i].data.y;
+                }
+
+                /* Stream: */
+                for(var i=0; i<updateData.stream.length; i++) {
+                    data.push(updateData.stream[i]);
+                }
+
+                /* Delete: */
+                for(var i=0; i<updateData.delete.length; i++) {
+                    var series=updateData.delete[i].series;
+                    var index=updateData.delete[i].index;
+                    data[series].values[index]=null;
+                    data[series].values = data[series].values.filter(function (e) {return e!=null;});
+                }
+
+                chart.setData(data);
+            }
+            else {
+                console.log("ERROR: the chart has no data to update.");
+                throw ("emptyChart");
+            }
+        }
     };
 
     return MapChartMovieUpdater;
