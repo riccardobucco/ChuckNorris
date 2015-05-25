@@ -66,44 +66,4 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
         });
         socket.connect();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public void S(){
-        socket.on("ciao", new Emitter.Listener() {
-            @Override
-            public void call(Object... args) {
-                ChartReceiverImpl.this.notifyObservers("ciao");
-
-                Log.println(Log.INFO, "Service CALL", "ciao");
-            }
-        });
-    }
-
-    public void M(){
-        socket.on("hello", new Emitter.Listener() {
-            @Override
-            public void call(Object... args) {
-                ChartReceiverImpl.this.notifyObservers("hello");
-
-                Log.println(Log.INFO, "Service CALL", "hello");
-            }
-        });
-    }
-
 }

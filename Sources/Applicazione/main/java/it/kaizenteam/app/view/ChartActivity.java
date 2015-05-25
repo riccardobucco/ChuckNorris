@@ -19,7 +19,7 @@ package it.kaizenteam.app.view;
 
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 
-abstract class ChartActivity extends BaseActivity{
+public abstract class ChartActivity extends BaseActivity{
     protected String idChart;
 
     public abstract void renderChart(ChartData data);

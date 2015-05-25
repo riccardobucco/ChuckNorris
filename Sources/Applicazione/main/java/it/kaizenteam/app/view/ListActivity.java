@@ -31,8 +31,6 @@ import java.util.HashMap;
 
 import it.kaizenteam.app.R;
 import it.kaizenteam.app.presenter.ListPresenter;
-import it.kaizenteam.app.presenter.LoginPresenter;
-import it.kaizenteam.app.presenter.Presenter;
 import it.kaizenteam.app.presenter.PresenterImpl;
 
 

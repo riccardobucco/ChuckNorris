@@ -8,6 +8,6 @@ import it.kaizenteam.app.presenter.Presenter;
 /**
  * Created by Moro on 22/05/15.
  */
-public class BaseActivity extends Activity implements View {
+public class BaseActivity extends ActionBarActivity implements View {
     protected Presenter presenter;
 }

@@ -16,12 +16,16 @@
 */
 package it.kaizenteam.app.view;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TableLayout;
+import android.widget.TextView;
 
 import it.kaizenteam.app.R;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
+import it.kaizenteam.app.presenter.PresenterImpl;
 
 
 public class TableActivity extends ChartActivity implements TableView{
@@ -30,11 +34,14 @@ public class TableActivity extends ChartActivity implements TableView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
+        presenter= PresenterImpl.create(PresenterImpl.TABLE_TYPE, this);
     }
 
     @Override
     public void renderChart(ChartData data) {
-        //TODO
+        TableLayout table = (TableLayout)findViewById(R.id.table);
+        table.removeAllViews();
+        //for ogni dato in data...
     }
 
     @Override
@@ -49,11 +56,10 @@ public class TableActivity extends ChartActivity implements TableView{
 
     @Override
     public void setTitle(String title) {
-        //TODO
+        ((TextView)findViewById(R.id.tableTitle)).setText(title);
     }
 
     @Override
     public void showCellBorderLine(boolean border) {
-        //TODO
     }
 }
