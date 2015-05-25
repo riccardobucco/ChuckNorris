@@ -279,19 +279,17 @@
 			\item codifica di ciascuna unità identificata e descritta durante la progettazione di dettaglio;
 			\item scrittura della documentazione riguardante la codifica del punto precedente.
 		\end{enumerate}
-		Durante l'esecuzione dei task precedentemente citati si devono rispettare determinate norme.\\
-		In particolare, quando si codifica utilizzando un certo linguaggio si devono rispettare le convenzioni che sono state fissate (consultare la sezione \nameref{sec:LineeGuida}).\\
+		Durante l'esecuzione dei task precedentemente citati si devono rispettare determinate norme. In particolare, quando si codifica utilizzando un certo linguaggio si devono rispettare le convenzioni che sono state fissate (consultare la sezione \nameref{sec:LineeGuida}).\\
 		Ogni file, inoltre, deve possedere un'intestazione nel formato corretto (vedi \nameref{sec:CodificaIntestazione}).\\
-		Infine, ulteriori regole generali da rispettare durante l'attività di codifica sono riportate in \nameref{sec:CodificaNormeGenerali}.
-
+		Infine, ulteriori regole generali da seguire durante l'attività di codifica sono riportate in \nameref{sec:CodificaNormeGenerali}.
 		\level{4}{Norme}
 			\level{5}{Regole generali da seguire durante la codifica di un file} \label{sec:CodificaNormeGenerali}
-				Durante la codifica di un file si devono rispettare alcune regole generali.
+				Durante la codifica di un file si devono rispettare alcune regole generali:
 				\begin{itemize}
 					\item l'indentazione del codice deve essere di quattro spazi;
-					\item le righe non devono essere più lunghe di 80 caratteri;
+					\item le righe non devono essere più lunghe di 80 caratteri.
 				\end{itemize}
-				Inoltre, ogniqualvolta la difficoltà di certi passaggi lo richieda, il programmatore è tenuto a commentare il codice da lui scritto. Si tenga presente che i commenti devono essere tassativamente in lingua inglese. Inoltre, essi devono essere significativi, ovvero devono essere determinanti per la corretta comprensione e interpretazione del codice scritto.\\
+				Inoltre, ogniqualvolta la difficoltà di certi passaggi lo richieda, il programmatore è tenuto a commentare il codice da lui scritto. Per quanto riguarda le norme da seguire per la stesura dei commenti, si consulti la sezione \nameref{sec:NormeCommenti}. 
 				Infine, tutti i file di codice devono seguire quanto riportato nella sezione \nameref{sec:CodificaFile}.
 			\level{5}{Linee guida all'utilizzo dei linguaggi di programmazione} \label{sec:LineeGuida}
 				Nel corso del progetto vengono utilizzati alcuni linguaggi di programmazione. Quando si utilizza uno di essi si devono rispettare alcune regole, in modo tale da favorire nel maggior modo possibile la comprensibilità del codice. Si cerca, dove possibile, di adottare linee guida accettate a livello internazionale.\\
@@ -329,7 +327,58 @@
 					\item[Version] indica l'attuale versione del codice, il cui formato da seguire è descritto nella sezione \nameref{sec:versioni};
 					\item[History] visualizza lo storico delle modifiche del file in questione, comprensive di versione, data, descrizione e nome del programmatore che ha modificato il codice.
 				\end{description}
-		
+			\level{5}{Commenti} \label{sec:NormeCommenti}
+			Allo scopo di mantenere ordinato e leggibile il codice, è necessario commentarlo nel modo più appropriato. In questo modo, il codice risulterà più comprensibile, non solo per gli altri membri del team e per il programmatore stesso, ma anche per i fruitori esterni che utilizzeranno il prodotto. In questo modo sarà facilitato il riuso del codice e la sua leggibilità. \\
+			I commenti devono essere tassativamente in lingua inglese, significativi e determinanti per la corretta comprensione e per l'interpretazione del codice scritto.\\
+			Al fine di usufruire della generazione automatica della documentazione del codice, grazie a strumenti specifici, come JSDOC e JAVADOC, è fondamentale l'utilizzo di una precisa sintassi per la scrittura dei commenti.
+			Di seguito, si elencano le norme da seguire a seconda del linguaggio di programmazione adottato.
+			\begin{description}
+					\item[JavaScript] I commenti devono rispettare la seguente struttura:
+						\begin{itemize}
+							\item Prima di ogni dichiarazione di classe deve essere scritto un commento che deve cominciare con i simboli “/**”, deve avere, all'inizio di ogni riga “*” e deve terminare con “*/” (particolare forma di commento multi-linea). Esso deve riflettere la seguente struttura:
+							\begin{lstlisting} 
+								/**
+								* Creates a new NomeClasse. 
+								* @constructor
+								* @param {tipoParametro} Descrizione del parametro 
+								*/
+								function NomeClasse(listaParametri){}
+							\end{lstlisting}
+							Si fa presente che “@param” deve essere ripetuto per ogni parametro della lista dei parametri, ciascuno in una riga diversa e successiva alla precedente (in caso non ci siano parametri questa riga non va scritta).\\
+							Si noti che il tipo del parametro deve essere scritto tra parentesi graffe.
+							\item Prima di ogni metodo deve essere scritto un commento che rispetti la seguente struttura:
+							\begin{lstlisting} 
+								/**
+								* Descrizione del metodo 
+								* @param {tipoParametro} nomeParametro Descrizione del parametro
+								* @return {tipoDiRitorno} Descrizione 
+								*/
+								public tipoDiRitorno nomeMetodo(listaParametri){}
+							\end{lstlisting}
+							Si noti che anche per i commenti che precedono i metodi si devono utilizzare i simboli descritti per quelli che precedono le classi (“/**”, “*”, “*/”). Inoltre, si seguano le stesse regole, descritte nel punto precedente per “@param”. Infine, “@return” deve essere specificato solo quando viene effettivimante ritornato qualcosa. \\
+							Anche in questo caso, si fa presente che il tipo del parametro e il tipo di ritorno devono essere racchiusi tra parentesi graffe.
+						\end{itemize}
+					\item[Java] I commenti devono rispettare la seguente struttura:
+						\begin{itemize}
+							\item Prima di ogni dichiarazione di classe deve essere scritto un commento che ne descriva la funzionalità e lo scopo. Esso deve cominciare con i simboli “/**”, deve avere, all'inizio di ogni riga “*” e deve terminare con “*/” (particolare forma di commento multi-linea).
+							\begin{lstlisting}
+								/**
+								* Descrizione della classe
+								*/
+								public class NomeClasse(){}
+							\end{lstlisting}
+							\item Prima di ogni metodo deve essere scritto un commento che rispetti la seguente struttura:
+							\begin{lstlisting}
+								/**
+								* Descrizione del metodo
+								* @param nomeParametro Descrizione del parametro 
+								* @return tipoDiRitorno Descrizione 
+								*/
+								public tipoDiRitorno nomeMetodo(lista parametri){}
+							\end{lstlisting}
+							Si noti che anche per i commenti che precedono i metodi si devono utilizzare i simboli descritti per quelli che precedono le classi (“/**”, “*”, “*/”). Inoltre, “@param” deve essere ripetuto per ogni parametro della lista dei parametri del metodo, ciascuno in una riga diversa e successiva alla precedente (in caso non ci siano parametri questa riga non va scritta). Infine, “@return” deve essere specificato solo quando il tipo di ritorno del metodo non è “void”.
+						\end{itemize}
+			\end{description}
 		\level{4}{Strumenti}
-			Per la scrittura di codice \insglo{JavaScript} non è richiesto l'utilizzo di un particolare \insglo{IDE}; la scelta dell'editor di testo è a discrezione dello sviluppatore.\\
+			Per la scrittura di codice \insglo{JavaScript} non è richiesto l'utilizzo di un particolare \insglo{IDE}; la scelta dell'editor di testo è affidata alla discrezione dello sviluppatore.\\
 			Per lo sviluppo dell'applicazione \insglo{Android} si utilizza l'\insglo{IDE} \ignoreglo{Android} Studio, descritto nell'appendice \nameref{app:strumenti} del presente documento.
