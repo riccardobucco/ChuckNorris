@@ -20,3 +20,6 @@ Documents/SpecificaTecnica/Classi/*.xml
 
 #hidden files
 **/.*
+
+**/bower_components
+**/node_modules
