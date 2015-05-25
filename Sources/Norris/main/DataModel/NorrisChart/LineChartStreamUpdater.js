@@ -15,12 +15,20 @@
  */
 module.exports=LineChartStreamUpdater;
 
+/**
+ * Creates a new LineChartStreamUpdater.
+ * @constructor
+ */
 function LineChartStreamUpdater() {
     if(!(this instanceof LineChartStreamUpdater)) return new LineChartStreamUpdater();
 }
 
 LineChartStreamUpdater.prototype.instance=new LineChartStreamUpdater(); // static
 
+/**
+ * Gets the LineChartStreamUpdater's instance.
+ * @returns {LineChartStreamUpdater} the LineChartStreamUpdater's instance.
+ */
 LineChartStreamUpdater.getInstance = function() { // static
     return LineChartStreamUpdater.prototype.instance;
 };

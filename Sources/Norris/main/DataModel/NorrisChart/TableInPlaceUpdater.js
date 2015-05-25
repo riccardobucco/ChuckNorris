@@ -15,12 +15,20 @@
  */
 module.exports=TableInPlaceUpdater;
 
+/**
+ * Creates a new TableInPlaceUpdater.
+ * @constructor
+ */
 function TableInPlaceUpdater() {
     if(!(this instanceof TableInPlaceUpdater)) return new TableInPlaceUpdater();
 }
 
 TableInPlaceUpdater.prototype.instance=new TableInPlaceUpdater(); // static
 
+/**
+ * Gets the TableInPlaceUpdater's instance.
+ * @returns {MapChartInPlaceUpdater} the TableInPlaceUpdater's instance.
+ */
 TableInPlaceUpdater.getInstance = function() { // static
     return TableInPlaceUpdater.prototype.instance;
 };

@@ -15,12 +15,20 @@
  */
 module.exports=MapChartMovieUpdater;
 
+/**
+ * Creates a new MapChartMovieUpdater.
+ * @constructor
+ */
 function MapChartMovieUpdater() {
     if(!(this instanceof MapChartMovieUpdater)) return new MapChartMovieUpdater();
 }
 
 MapChartMovieUpdater.prototype.instance=new MapChartMovieUpdater(); // static
 
+/**
+ * Gets the MapChartMovieUpdater's instance.
+ * @returns {MapChartMovieUpdater} the MapChartMovieUpdater's instance.
+ */
 MapChartMovieUpdater.getInstance = function() { // static
     return MapChartMovieUpdater.prototype.instance;
 };
@@ -89,7 +97,7 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
         { position: {series:0, index:1}, data: {x:1, y:1} }
     ], // modifico 2 valori già esistenti
     stream: [
-        {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}], // aggiungo una serie
+        {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // aggiungo una serie
     ],
     delete: [
         {series:0, index:0},

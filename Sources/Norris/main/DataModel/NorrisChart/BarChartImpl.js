@@ -1,7 +1,7 @@
 /*
  * Name: {BarChartImpl.js}
  * Module: {}
- * Location: {Norris/Main/DataModel}
+ * Location: {Norris/Main/DataModel/NorrisChart}
  * Date: {2015-05-04}
  * Version: {v0.1}
  *
@@ -16,7 +16,7 @@
 var ChartImpl = require('./ChartImpl.js');
 var BarChartInPlaceUpdater = require('./BarChartInPlaceUpdater.js');
 
-//module.exports = BarChartImpl;
+module.exports = BarChartImpl;
 
 var defaults = {
 	description : 'This is a bar chart.',

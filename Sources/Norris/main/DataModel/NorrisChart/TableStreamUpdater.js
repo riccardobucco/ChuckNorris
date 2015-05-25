@@ -15,12 +15,20 @@
  */
 module.exports=TableStreamUpdater;
 
+/**
+ * Creates a new TableStreamUpdater.
+ * @constructor
+ */
 function TableStreamUpdater() {
     if(!(this instanceof TableStreamUpdater)) return new TableStreamUpdater();
 }
 
 TableStreamUpdater.prototype.instance=new TableStreamUpdater(); // static
 
+/**
+ * Gets the TableStreamUpdater's instance.
+ * @returns {TableStreamUpdater} the TableStreamUpdater's instance.
+ */
 TableStreamUpdater.getInstance = function() { // static
     return TableStreamUpdater.prototype.instance;
 };

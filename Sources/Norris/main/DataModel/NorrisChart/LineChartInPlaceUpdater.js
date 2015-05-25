@@ -15,12 +15,20 @@
  */
 module.exports=LineChartInPlaceUpdater;
 
+/**
+ * Creates a new LineChartInPlaceUpdater.
+ * @constructor
+ */
 function LineChartInPlaceUpdater() {
     if(!(this instanceof LineChartInPlaceUpdater)) return new LineChartInPlaceUpdater();
 }
 
 LineChartInPlaceUpdater.prototype.instance=new LineChartInPlaceUpdater(); // static
 
+/**
+ * Gets the LineChartInPlaceUpdater's instance.
+ * @returns {LineChartInPlaceUpdater} the LineChartInPlaceUpdater's instance.
+ */
 LineChartInPlaceUpdater.getInstance = function() { // static
     return LineChartInPlaceUpdater.prototype.instance;
 };

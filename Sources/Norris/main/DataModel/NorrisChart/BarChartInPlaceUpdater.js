@@ -15,12 +15,20 @@
  */
 module.exports=BarChartInPlaceUpdater;
 
+/**
+ * Creates a new BarChartInPlaceUpdater.
+ * @constructor
+ */
 function BarChartInPlaceUpdater() {
     if(!(this instanceof BarChartInPlaceUpdater)) return new BarChartInPlaceUpdater();
 }
 
 BarChartInPlaceUpdater.prototype.instance=new BarChartInPlaceUpdater(); // static
 
+/**
+ * Gets the BarChartInPlaceUpdater's instance.
+ * @returns {BarChartInPlaceUpdater} the BarChartInPlaceUpdater's instance.
+ */
 BarChartInPlaceUpdater.getInstance = function() { // static
     return BarChartInPlaceUpdater.prototype.instance;
 };

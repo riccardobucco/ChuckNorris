@@ -15,12 +15,20 @@
  */
 module.exports=MapChartInPlaceUpdater;
 
+/**
+ * Creates a new MapChartInPlaceUpdater.
+ * @constructor
+ */
 function MapChartInPlaceUpdater() {
     if(!(this instanceof MapChartInPlaceUpdater)) return new MapChartInPlaceUpdater();
 }
 
 MapChartInPlaceUpdater.prototype.instance=new MapChartInPlaceUpdater(); // static
 
+/**
+ * Gets the MapChartInPlaceUpdater's instance.
+ * @returns {MapChartInPlaceUpdater} the MapChartInPlaceUpdater's instance.
+ */
 MapChartInPlaceUpdater.getInstance = function() { // static
     return MapChartInPlaceUpdater.prototype.instance;
 };
