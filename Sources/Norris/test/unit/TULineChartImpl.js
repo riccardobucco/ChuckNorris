@@ -1,5 +1,5 @@
 /*
- * Name: {TUBarChartImpl.js}
+ * Name: {TULineChartImpl.js}
  * Module: {}
  * Location: {Norris/test/unit}
  * Date: {2015-05-25}
@@ -14,10 +14,10 @@
  * ================================================================================
  */
 
-var BarChartImpl = require('../../main/DataModel/NorrisChart/BarChartImpl.js');
+var BarChartImpl = require('../../main/DataModel/NorrisChart/LineChartImpl.js');
 var assert = require("assert");
 
-describe('BarChartImpl(id: String)', function(){
+describe('LineChartImpl(id: String)', function(){
 	describe('BarChartImpl()', function(){
 		it('should memorize the right type of the chart',function(){
 			var barchart = new BarChartImpl('randomID');

@@ -15,7 +15,6 @@
  */
 var ChartImpl = require('../../main/DataModel/NorrisChart/ChartImpl.js');
 var assert = require("assert");
-var _ = require('lodash');
 
 describe('ChartImpl', function(){
 
@@ -24,7 +23,7 @@ describe('ChartImpl', function(){
 			var chart = new ChartImpl('table','RandomID');
 			var factory = {'method1':'RandomMethod1', 'method2':'RandomMethod2', 'attribute':'RandomAttribute'};
 			ChartImpl.registerFactory('mapchart',factory);
-			assert.equal(true, _.isEqual(factory,chart.factories['mapchart']));
+			assert.deepEqual(factory,chart.factories['mapchart']);
 		});
 	});
 
@@ -33,7 +32,7 @@ describe('ChartImpl', function(){
 			var chart = new ChartImpl('table','RandomID');
 			var updater = {'method1':'RandomMethod1', 'method2':'RandomMethod2', 'attribute':'RandomAttribute'};
 			ChartImpl.registerUpdater('inplace',updater);
-			assert.equal(true, _.isEqual(updater,chart.updaters['inplace']));
+			assert.deepEqual(updater,chart.updaters['inplace']);
 		});
 	});
 
@@ -43,7 +42,7 @@ describe('ChartImpl', function(){
 			factory.createChart = function(id) {return 'factoryReturn';}; 
 			ChartImpl.registerFactory('barchart',factory);
 			assert.equal('factoryReturn', ChartImpl.createChart('barchart','randomID'));
-			assert.equal(true, _.isNull(ChartImpl.createChart('randomType','randomID')));
+			assert.deepEqual(null,ChartImpl.createChart('randomType','randomID'));
 		});
 	});
 
@@ -85,7 +84,7 @@ describe('ChartImpl', function(){
 			var data = {'randomKey1':'randomValue1', 'randomKey2':'randomValue2'};
 			var chart = new ChartImpl('linechart','randomID');
 			chart.setData(data);
-			assert.equal(true, _.isEqual(data, chart.data));
+			assert.deepEqual(data, chart.data);
 		});
 	});
 
@@ -93,7 +92,7 @@ describe('ChartImpl', function(){
 		it('should return the data object of the chart',function(){
 			var chart = new ChartImpl('linechart','randomID');
 			chart.data = {'randomKey1':'randomValue1', 'randomKey2':'randomValue2'};
-			assert.equal(true, _.isEqual(chart.data,chart.getData()));
+			assert.deepEqual(chart.data,chart.getData());
 		});
 	});
 
@@ -102,10 +101,10 @@ describe('ChartImpl', function(){
 			var settings = {'randomKey1':'randomValue1', 'randomKey2':'randomValue2'};
 			var chart = new ChartImpl('linechart','randomID');
 			chart.setSettings(settings);
-			assert.equal(false, _.isEqual(settings, chart.settings));
+			assert.notDeepEqual(settings, chart.settings);
 			settings = {'title':'randomTitle', 'description':'randomDescription'};
 			chart.setSettings(settings);
-			assert.equal(true, _.isEqual(settings, chart.settings));
+			assert.deepEqual(settings, chart.settings);
 		});
 	});
 
@@ -114,7 +113,7 @@ describe('ChartImpl', function(){
 			var settings = {'randomKey1':'randomValue1', 'randomKey2':'randomValue2'};
 			var chart = new ChartImpl('linechart','randomID');
 			chart.settings = settings;
-			assert.equal(true, _.isEqual(chart.settings, chart.getSettings()));
+			assert.deepEqual(chart.settings, chart.getSettings());
 		})
 	});
 
