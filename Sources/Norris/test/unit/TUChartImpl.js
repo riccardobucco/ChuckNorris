@@ -20,15 +20,31 @@ var _ = require('lodash');
 describe('ChartImpl', function(){
 
 	describe('registerFactory(chartType: String, factory: ChartFactory): void',function(){
-
+		it('should register the correspondence between a type of chart and its factory',function(){
+			var chart = new ChartImpl('table','RandomID');
+			var factory = {'method1':'RandomMethod1', 'method2':'RandomMethod2', 'attribute':'RandomAttribute'};
+			ChartImpl.registerFactory('mapchart',factory);
+			assert.equal(true, _.isEqual(factory,chart.factories['mapchart']));
+		});
 	});
 
 	describe('registerUpdater(updateType: String, updater: ChartUpdater): void',function(){
-		
+		it('should register the correspondence between a type of chart and its updater',function(){
+			var chart = new ChartImpl('table','RandomID');
+			var updater = {'method1':'RandomMethod1', 'method2':'RandomMethod2', 'attribute':'RandomAttribute'};
+			ChartImpl.registerUpdater('inplace',updater);
+			assert.equal(true, _.isEqual(updater,chart.updaters['inplace']));
+		});
 	});
 
 	describe('createChart(chartType: String, chartId: String): ChartImpl',function(){
-		
+		it('should allow you to create a chart only if its type is registered in the "factories" attribute', function(){
+			var factory = {};
+			factory.createChart = function(id) {return 'factoryReturn';}; 
+			ChartImpl.registerFactory('barchart',factory);
+			assert.equal('factoryReturn', ChartImpl.createChart('barchart','randomID'));
+			assert.equal(true, _.isNull(ChartImpl.createChart('randomType','randomID')));
+		});
 	});
 
 	describe('ChartImpl(chartType: String, chartId: String)', function(){
@@ -100,10 +116,6 @@ describe('ChartImpl', function(){
 			chart.settings = settings;
 			assert.equal(true, _.isEqual(chart.settings, chart.getSettings()));
 		})
-	});
-
-	describe('update(updateType: String, updateData: ChartUpdate): void', function(){
-
 	});
 
 });
