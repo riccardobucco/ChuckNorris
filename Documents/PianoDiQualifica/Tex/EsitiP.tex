@@ -1,0 +1,68 @@
+\level{1}{Resoconto delle varie attività di verifica - Fase P}
+	Sono riportati in questa appendice tutti i risultati ottenuti nei momenti di verifica, stabiliti nel \insdoc{Piano di Progetto v4.00} secondo la strategia di misurazione per il perseguimento della qualità individuata nel presente documento. Ove fosse necessario, sono state tratte anche delle conclusioni sui risultati ottenuti e su come essi possano essere migliorati.
+	\level{2}{Verifica dei prodotti}
+		\level{3}{Documenti}
+			In questa sezione vengono riportati i risultati delle attività di verifica svolte sui documenti. Esse sono di due tipi:
+			\begin{itemize}
+				\item verifiche manuali;
+				\item verifiche automatizzate.
+			\end{itemize}
+			\level{4}{Verifiche manuali}
+				Le attività di verifica manuale della documentazione prodotta sono state svolte in base alla procedura riguardante la verifica dei documenti che è descritta nel documento \insdoc{Norme di Progetto v4.00}.\\
+				La verifica manuale ha permesso di individuare soprattutto errori riguardanti le seguenti tipologie:
+				\begin{itemize}
+					\item descrizioni imprecise di classi e metodi;
+					\item errori concettuali;
+					\item errori nell'utilizzo della lingua inglese.
+				\end{itemize}
+				Si riporta di seguito la quantità degli errori rilevati e risolti, per ciascuna tipologia, durante l'intera fase.
+				\begin{table}[H]
+					\centering
+						\begin{tabu}{| l | c |}
+							\hline
+								Descrizioni imprecise	&	20\\ \hline
+								Errori concettuali	&	13\\ \hline
+								Errori di inglese  &  34\\ \hline
+						\end{tabu}
+						\caption{Errori trovati tramite verifica manuale dei documenti durante la Fase P}
+				\end{table}
+				La verifica manuale dei diagrammi UML, effettuata per controllare la correttezza dei metodi e dei campi dati inseriti per procedere con la stesura della \insdoc{Definizione di Prodotto v1.00}, è risultata piuttosto onerosa, ma poco produttiva, in quanto i \insrole{Progettisti} hanno posto molta attenzione nell'attività di progettazione di dettaglio.\\
+				Si può inoltre notare come gli errori concettuali che sono stati trovati siano in leggera diminuzione, segno del fatto che i documenti si stanno piano piano avvicinando al loro contenuto ottimale.\\
+				Si noti invece come vi sia una notevole quantità di errori nell'uso della lingua inglese, che nelle altre fasi non c'erano. Questo è dovuto al fatto che è stata cominciata la stesura del manuale, ed esso è scritto in lingua inglese.
+			\level{4}{Verifiche automatizzate}
+				Le attività di verifica automatizzate sono state effettuate secondo le procedure e attraverso gli strumenti descritti nel documento \insdoc{Norme di Progetto v4.00}. Esse hanno permesso di rilevare diversi errori riguardanti le seguenti tipologie:
+				\begin{itemize}
+					\item ortografia errata;
+					\item utilizzo errato dei comandi \LaTeX{} indicati nelle \insdoc{Norme di Progetto v4.00};
+					\item norme tipografiche non rispettate.
+				\end{itemize}
+				Di seguito è presentato un riassunto della quantità di errori trovati (e successivamente risolti) utilizzando la verifica automatica.
+				\begin{table}[H]
+					\centering
+						\begin{tabu}{| l | c |}
+							\hline
+							Errori ortografici	& 78	\\ \hline
+							Utilizzo errato \LaTeX{}	& 2	\\ \hline
+							Errori riguardanti norme tipografiche	& 12	\\ \hline
+						\end{tabu}
+					\caption{Errori trovati tramite verifica automatica dei documenti durante la Fase P}
+				\end{table}
+				Come si può notare, gli errori ortografici sono diminuti rispetto alla fase precedente. Tuttavia, questo è anche imputabile alla minor mole di documentazione che è stata prodotta durante questa fase.\\
+				Per quanto riguarda le altre due tipologie di errori, si può notare una certa stabilità rispetto alla fase precedente.\\
+				Si riportano i risultati delle misurazioni dell'indice di leggibilità Gulpease relative ai documenti modificati in questa fase.
+				\begin{table}[H]
+					\centering
+						\begin{tabu}{| l | c | c |}
+							\hline
+							Documenti 							& Gulpease	& Esito		\\ \hline \hline
+							Piano di progetto v4.00				& 89 		& Superato  \\ \hline
+							Norme di Progetto v4.00 			& 68		& Superato  \\ \hline
+							Piano di Qualifica v4.00 			& 74		& Superato  \\ \hline
+							Definizione di prodotto v1.00		& 84		& Superato \\ \hline
+							Glossario v4.00					 	& 68 		& Superato  \\ \hline
+						\end{tabu}
+					\caption{Esiti del calcolo dell'indice di leggibilità effettuato tramite strumenti automatici durante la Fase P}
+				\end{table}
+				Si noti che non è stato calcolato l'indice Gulpease relativo al \insdoc{Manuale Utente v1.00} in quanto esso è scritto in lingua inglese e tale indice è relativo alla sola lingua italiana.
+		\level{3}{Codice}
+			In questa sezione sono riportate, per le parti del progetto implementate in questa prima fase di codifica, i risultati delle metriche calcolate nei momenti di verifica.
