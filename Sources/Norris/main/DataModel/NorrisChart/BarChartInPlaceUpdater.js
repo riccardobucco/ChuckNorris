@@ -27,22 +27,21 @@ BarChartInPlaceUpdater.getInstance = function() { // static
 
 /**
  * Updates a bar chart with in place method. The bar chart data should not be empty.
- * @param {ChartImpl} chart - the bar chart to update;
+ * @param {BarChartImpl} chart - the bar chart to update;
  * @param updateData - the updating.
  */
 
-
 BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
-    if (updateData != null) {
-        var data=chart.getData();
-        console.log(JSON.stringify(data));
-        var isEmpty=function(obj) {
-            for(var prop in obj) {
-                if(obj.hasOwnProperty(prop))
-                    return false;
-            }
-            return true;
+    var isEmpty=function(obj) {
+        for(var prop in obj) {
+            if(obj.hasOwnProperty(prop))
+                return false;
         }
+        return true;
+    };
+
+    if (!isEmpty(updateData)) {
+        var data=chart.getData();
         if (!isEmpty(data)) {
             for(var i=0; i<updateData.length; i++) {
                 var x=updateData[i].position.x;
@@ -56,8 +55,6 @@ BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
             throw ("emptyChart");
         }
     }
-
-
 };
 
 /*
