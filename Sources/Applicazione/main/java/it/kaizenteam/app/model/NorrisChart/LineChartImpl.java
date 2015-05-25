@@ -24,6 +24,10 @@ class LineChartImpl extends ChartImpl {
         registerFactory("linechart", LineChartFactory.getInstance());
     }
 
+    /**
+     *
+     * @param chartId
+     */
     private LineChartImpl(String chartId) {
         super("linechart", chartId);
     }
@@ -35,16 +39,28 @@ class LineChartImpl extends ChartImpl {
     protected static class LineChartFactory implements ChartFactory{
         private static LineChartFactory instance;
 
+        /**
+         *
+         * @return
+         */
         public static ChartFactory getInstance(){
             if(instance!=null)
                 return instance;
             return new LineChartFactory();
         }
 
+        /**
+         *
+         */
         private LineChartFactory(){
             instance=this;
         }
 
+        /**
+         *
+         * @param chartId
+         * @return
+         */
         @Override
         public ChartModel createChart(String chartId) {
             return new LineChartImpl(chartId);

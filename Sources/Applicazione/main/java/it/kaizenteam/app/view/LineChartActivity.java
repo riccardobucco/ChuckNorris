@@ -32,7 +32,10 @@ import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.presenter.LineChartPresenter;
 import it.kaizenteam.app.presenter.PresenterImpl;
 
-
+/**
+ *
+ *
+ */
 public class LineChartActivity extends ChartActivity implements LineChartView {
     //TODO Barchart dei dati
     private LineChart chart;
@@ -41,6 +44,10 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     ArrayList<String> labels;
     LineData data;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +59,10 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     }
 
 
+    /**
+     *
+     * @param data
+     */
     @Override
     public void renderChart(ChartData data) {
         //TODO use data
@@ -80,31 +91,56 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
         chart.setData(this.data);
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     */
     @Override
     public void setAxisName(String x, String y) {
 //TODO
     }
 
+    /**
+     *
+     * @param show
+     */
     @Override
     public void showGrid(boolean show) {
 //TODO
     }
 
+    /**
+     *
+     * @param position
+     */
     @Override
     public void setLegendPosition(int position) {
 //TODO
     }
 
+    /**
+     *
+     * @param colors
+     */
     @Override
     public void setSeriesColor(String[] colors) {
 //TODO
     }
 
+    /**
+     *
+     * @param title
+     */
     @Override
     public void setTitle(String title) {
 //TODO
     }
 
+    /**
+     *
+     * @param dotted
+     */
     @Override
     public void setDottedLines(boolean dotted) {
 //TODO

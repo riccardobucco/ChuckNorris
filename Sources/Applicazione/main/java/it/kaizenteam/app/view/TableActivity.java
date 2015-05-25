@@ -28,8 +28,15 @@ import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.presenter.PresenterImpl;
 
 
+/**
+ *
+ */
 public class TableActivity extends ChartActivity implements TableView{
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +44,10 @@ public class TableActivity extends ChartActivity implements TableView{
         presenter= PresenterImpl.create(PresenterImpl.TABLE_TYPE, this);
     }
 
+    /**
+     *
+     * @param data
+     */
     @Override
     public void renderChart(ChartData data) {
         TableLayout table = (TableLayout)findViewById(R.id.table);
@@ -44,21 +55,41 @@ public class TableActivity extends ChartActivity implements TableView{
         //for ogni dato in data...
     }
 
+    /**
+     *
+     * @param riga
+     * @param colonna
+     * @param colorRGB
+     */
     @Override
     public void setCellTextColor(int riga, int colonna, String colorRGB) {
         //TODO
     }
 
+    /**
+     *
+     * @param riga
+     * @param colonna
+     * @param colorRGB
+     */
     @Override
     public void setCellBackgroundColor(int riga, int colonna, String colorRGB) {
         //TODO
     }
 
+    /**
+     *
+     * @param title
+     */
     @Override
     public void setTitle(String title) {
         ((TextView)findViewById(R.id.tableTitle)).setText(title);
     }
 
+    /**
+     *
+     * @param border
+     */
     @Override
     public void showCellBorderLine(boolean border) {
     }

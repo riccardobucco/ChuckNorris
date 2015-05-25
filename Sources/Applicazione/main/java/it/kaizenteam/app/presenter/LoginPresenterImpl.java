@@ -13,6 +13,12 @@ public class LoginPresenterImpl extends PresenterImpl implements LoginPresenter{
         registerFactory(LOGIN_TYPE, LoginPresenterFactory.getInstance());
     }
 
+    /**
+     *
+     * @param addressNorris
+     * @param login
+     * @param password
+     */
     @Override
     public void onLoginClick(String addressNorris, String login, String password) {
         //TODO use http...
@@ -26,22 +32,39 @@ public class LoginPresenterImpl extends PresenterImpl implements LoginPresenter{
             ((LoginView) view).showAuthenticationError();
     }
 
+    /**
+     *
+     */
     private LoginPresenterImpl(){}
 
+    /**
+     *
+     */
     protected static class LoginPresenterFactory implements PresenterImpl.PresenterFactory {
 
         private static PresenterFactory instance;
 
+        /**
+         *
+         * @return
+         */
         private static PresenterFactory getInstance(){
             if(instance!=null)
                 return instance;
             return new LoginPresenterFactory();
         }
 
+        /**
+         *
+         */
         private LoginPresenterFactory(){
             instance=this;
         }
 
+        /**
+         *
+         * @return
+         */
         @Override
         public PresenterImpl createPresenter() {
             return new LoginPresenterImpl();

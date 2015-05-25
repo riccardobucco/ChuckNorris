@@ -14,17 +14,28 @@ public class ListPresenterImpl extends PresenterImpl implements ListPresenter{
         registerFactory(LIST_TYPE, ListPresenterFactory.getInstance());
     }
 
+    /**
+     *
+     * @param type
+     * @param id
+     */
     @Override
     public void onItemClicked(String type, String id) {
         ((ListView)view).showChartDetailView(type, id);
     }
 
+    /**
+     *
+     */
     @Override
     public void onLogoutClick() {
         NorrisSessionInfoImpl.getInstance().logout();
         ((ListView)view).navigateToLoginView();
     }
 
+    /**
+     *
+     */
     @Override
     public void onResume() {
         //TODO
@@ -32,26 +43,43 @@ public class ListPresenterImpl extends PresenterImpl implements ListPresenter{
         a.add(new String[]{"id1","barchart"});
         a.add(new String[]{"id2","linechart"});
         a.add(new String[]{"id3","mapchart"});
-        a.add(new String[]{"id4","table"});
+        a.add(new String[]{"id4", "table"});
         ((ListView)view).renderList(a);
     }
 
+    /**
+     *
+     */
     private ListPresenterImpl(){}
 
+    /**
+     *
+     */
     protected static class ListPresenterFactory implements PresenterImpl.PresenterFactory {
 
         private static PresenterFactory instance;
 
+        /**
+         *
+         * @return
+         */
         private static PresenterFactory getInstance(){
             if(instance!=null)
                 return instance;
             return new ListPresenterFactory();
         }
 
+        /**
+         *
+         */
         private ListPresenterFactory(){
             instance=this;
         }
 
+        /**
+         *
+         * @return
+         */
         @Override
         public PresenterImpl createPresenter() {
             return new ListPresenterImpl();

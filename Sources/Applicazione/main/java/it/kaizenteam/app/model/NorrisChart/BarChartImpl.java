@@ -17,7 +17,7 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * This class rapresent a
+ *
  */
 class BarChartImpl extends ChartImpl{
 
@@ -26,6 +26,10 @@ class BarChartImpl extends ChartImpl{
         registerFactory("barchart", BarChartFactory.getInstance());
     }
 
+    /**
+     *
+     * @param chartId
+     */
     private BarChartImpl(String chartId) {
         super("barchart", chartId);
     }
@@ -37,16 +41,28 @@ class BarChartImpl extends ChartImpl{
     protected static class BarChartFactory implements ChartFactory{
         private static BarChartFactory instance;
 
+        /**
+         *
+         * @return
+         */
         public static ChartFactory getInstance(){
             if(instance!=null)
                 return instance;
             return new BarChartFactory();
         }
 
+        /**
+         *
+         */
         private BarChartFactory(){
             instance=this;
         }
 
+        /**
+         *
+         * @param chartId
+         * @return
+         */
         @Override
         public ChartModel createChart(String chartId) {
             return new BarChartImpl(chartId);

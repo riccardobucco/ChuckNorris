@@ -8,16 +8,19 @@ import com.github.mikephil.charting.charts.LineChart;
 public class LineChartDataImpl implements ChartData{
     private LineChart values;
 
+    /**
+     *
+     * @param values
+     */
     public LineChartDataImpl(LineChart values){
         this.values=values;
     }
 
+    /**
+     *
+     * @return
+     */
     public LineChart getData(){
         return values;
-    }
-
-    //TODO rimuovere...viene modificato per riferimento
-    public void setData(LineChart values){
-        this.values=values;
     }
 }

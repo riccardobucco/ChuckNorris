@@ -10,11 +10,23 @@ import it.kaizenteam.app.model.NorrisChart.ChartSettings;
  */
 public abstract class ChartPresenterImpl extends PresenterImpl implements Observer {
 
+    /**
+     *
+     */
     protected ChartPresenterImpl(){}
 
+    /**
+     *
+     * @param observable
+     * @param data
+     */
     @Override
     public abstract void update(Observable observable, Object data);
 
+    /**
+     *
+     * @param settings
+     */
     protected abstract void applySettings(ChartSettings settings);
 
 }

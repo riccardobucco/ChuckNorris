@@ -8,20 +8,38 @@ public class LineChartElementInPlaceUpdate {
     private double xpos;
     private double ypos;
 
+    /**
+     *
+     * @param xpos
+     * @param ypos
+     * @param value
+     */
     public LineChartElementInPlaceUpdate(double xpos, double ypos, double value){
         this.xpos=xpos;
         this.ypos=ypos;
         this.value=value;
     }
 
+    /**
+     *
+     * @return
+     */
     public double getData(){
         return value;
     }
 
+    /**
+     *
+     * @return
+     */
     public double getX(){
         return xpos;
     }
 
+    /**
+     *
+     * @return
+     */
     public double getY(){
         return ypos;
     }

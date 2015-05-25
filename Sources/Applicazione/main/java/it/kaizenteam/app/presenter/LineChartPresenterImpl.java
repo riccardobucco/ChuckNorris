@@ -15,10 +15,18 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
         registerFactory(LINECHART_TYPE, LineChartPresenterFactory.getInstance());
     }
 
+    /**
+     *
+     */
     private LineChartPresenterImpl() {
     //TODO richiesta socket e add observer e update start
     }
 
+    /**
+     *
+     * @param observable
+     * @param data
+     */
     @Override
     public void update(Observable observable, Object data) {
         //TODO jsonparser mod model e renderchart e settings
@@ -27,25 +35,43 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
         ((LineChartView)view).renderChart(null);
     }
 
+    /**
+     *
+     * @param settings
+     */
     @Override
     protected void applySettings(ChartSettings settings) {
         //TODO
     }
 
+    /**
+     *
+     */
     protected static class LineChartPresenterFactory implements PresenterImpl.PresenterFactory {
 
         private static PresenterFactory instance;
 
+        /**
+         *
+         * @return
+         */
         private static PresenterFactory getInstance(){
             if(instance!=null)
                 return instance;
             return new LineChartPresenterFactory();
         }
 
+        /**
+         *
+         */
         private LineChartPresenterFactory(){
             instance=this;
         }
 
+        /**
+         *
+         * @return
+         */
         @Override
         public PresenterImpl createPresenter() {
             return new LineChartPresenterImpl();

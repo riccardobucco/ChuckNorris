@@ -8,10 +8,18 @@ import java.util.ArrayList;
 public class MapChartInPlaceUpdate implements ChartUpdate {
     private ArrayList<MapChartElementInPlaceUpdate> values;
 
+    /**
+     *
+     * @param values
+     */
     public MapChartInPlaceUpdate(ArrayList<MapChartElementInPlaceUpdate> values){
         this.values=values;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<MapChartElementInPlaceUpdate> getData(){
         return values;
     }

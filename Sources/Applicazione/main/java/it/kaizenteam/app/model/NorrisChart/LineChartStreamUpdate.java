@@ -8,10 +8,18 @@ import java.util.ArrayList;
 public class LineChartStreamUpdate implements ChartUpdate  {
     private ArrayList<LineChartElementStreamUpdate> values;
 
+    /**
+     *
+     * @param values
+     */
     public LineChartStreamUpdate(ArrayList<LineChartElementStreamUpdate> values){
         this.values=values;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<LineChartElementStreamUpdate> getData(){
         return values;
     }

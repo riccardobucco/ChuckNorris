@@ -41,18 +41,35 @@ public class PresenterImpl implements Presenter{
         }.load(classi);
     }
 
+    /**
+     *
+     * @param presenterType
+     * @param factory
+     */
     protected static void registerFactory(Integer presenterType, PresenterFactory factory){
         factories.put(presenterType,factory);
     }
 
+    /**
+     *
+     * @param presenterType
+     * @param view
+     * @return
+     */
     public static Presenter create(Integer presenterType, View view){
         PresenterImpl ret = factories.get(presenterType).createPresenter();
         ret.view=view;
         return ret;
     }
 
+    /**
+     *
+     */
     protected PresenterImpl(){}
 
+    /**
+     *
+     */
     protected interface PresenterFactory{
         PresenterImpl createPresenter();
     }

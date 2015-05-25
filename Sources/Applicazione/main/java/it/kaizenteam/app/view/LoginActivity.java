@@ -13,8 +13,15 @@ import it.kaizenteam.app.presenter.Presenter;
 import it.kaizenteam.app.presenter.PresenterImpl;
 
 
+/**
+ *
+ */
 public class LoginActivity extends BaseActivity implements LoginView{
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,11 +29,17 @@ public class LoginActivity extends BaseActivity implements LoginView{
         presenter= PresenterImpl.create(PresenterImpl.LOGIN_TYPE,this);
     }
 
+    /**
+     *
+     */
     @Override
     public void showAuthenticationError() {
         ((TextView)findViewById(R.id.errorloginlbl)).setVisibility(View.VISIBLE);
     }
 
+    /**
+     *
+     */
     @Override
     public void showListView() {
         Intent i = new Intent(this,ListActivity.class);
@@ -34,6 +47,10 @@ public class LoginActivity extends BaseActivity implements LoginView{
         startActivity(i);
     }
 
+    /**
+     *
+     * @param show
+     */
     @Override
     public void showProgress(boolean show) {
         if(show)
@@ -42,6 +59,10 @@ public class LoginActivity extends BaseActivity implements LoginView{
             ((ImageView)findViewById(R.id.progressimage)).setVisibility(View.INVISIBLE);
     }
 
+    /**
+     *
+     * @param view
+     */
     @Override
     public void onLoginClick(View view) {
         ((LoginPresenter)presenter).onLoginClick(

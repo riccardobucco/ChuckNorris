@@ -6,12 +6,24 @@ package it.kaizenteam.app.model.NorrisChart;
 public class BarChartInPlaceUpdater implements Updater {
     private static BarChartInPlaceUpdater instance;
 
+    /**
+     *
+     * @return
+     */
     public static Updater getInstance(){
         return instance;
     }
 
+    /**
+     *
+     */
     private BarChartInPlaceUpdater(){}
 
+    /**
+     *
+     * @param chart
+     * @param updateData
+     */
     @Override
     public void update(ChartImpl chart, ChartUpdate updateData) {
 //TODO

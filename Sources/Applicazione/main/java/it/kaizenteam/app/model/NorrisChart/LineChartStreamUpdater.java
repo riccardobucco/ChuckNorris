@@ -6,13 +6,23 @@ package it.kaizenteam.app.model.NorrisChart;
 public class LineChartStreamUpdater implements Updater {
     private static LineChartStreamUpdater instance;
 
+    /**
+     *
+     * @return
+     */
     public static Updater getInstance(){
         return instance;
     }
 
+    /**
+     *
+     */
     private LineChartStreamUpdater(){}
 
     @Override
+/**
+ *
+ */
     public void update(ChartImpl chart, ChartUpdate updateData) {
 //TODO
     }

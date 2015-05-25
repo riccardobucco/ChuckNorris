@@ -10,12 +10,23 @@ public class MapChartElementInPlaceUpdate {
     private String id;
     private boolean useId;
 
+    /**
+     *
+     * @param value
+     * @param id
+     */
     public MapChartElementInPlaceUpdate(MapPoint value, String id){
         this.value=value;
         this.id=id;
         useId=true;
     }
 
+    /**
+     *
+     * @param value
+     * @param x
+     * @param y
+     */
     public MapChartElementInPlaceUpdate(MapPoint value, double x, double y){
         this.value=value;
         this.x=x;
@@ -23,22 +34,41 @@ public class MapChartElementInPlaceUpdate {
         useId=false;
     }
 
+    /**
+     *
+     * @return
+     */
     public MapPoint getData(){
         return value;
     }
 
+    /**
+     *
+     * @return
+     * @throws Exception
+     */
     public double getX() throws Exception {
         if(!useId)
             return x;
         throw new Exception("Impossible to use. Use getId().");
     }
 
+    /**
+     *
+     * @return
+     * @throws Exception
+     */
     public double getY() throws Exception {
         if(!useId)
             return y;
         throw new Exception("Impossible to use. Use getId().");
     }
 
+    /**
+     *
+     * @return
+     * @throws Exception
+     */
     public String getId() throws Exception {
         if(useId)
             return id;

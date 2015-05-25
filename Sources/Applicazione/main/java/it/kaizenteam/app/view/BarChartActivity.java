@@ -33,6 +33,9 @@ import it.kaizenteam.app.presenter.BarChartPresenter;
 import it.kaizenteam.app.presenter.PresenterImpl;
 
 
+/**
+ *
+ */
 public class BarChartActivity extends ChartActivity implements BarChartView{
     //TODO Barchart dei dati
     private BarChart chart;
@@ -41,6 +44,10 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     ArrayList<String> labels;
     BarData data;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +59,10 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     }
 
 
+    /**
+     *
+     * @param data
+     */
     @Override
     public void renderChart(ChartData data) {
         //TODO use data
@@ -80,31 +91,56 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
         chart.setData(this.data);
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     */
     @Override
     public void setAxisName(String x, String y) {
 //TODO
     }
 
+    /**
+     *
+     * @param show
+     */
     @Override
     public void showGrid(boolean show) {
 //TODO
     }
 
+    /**
+     *
+     * @param position
+     */
     @Override
     public void setLegendPosition(int position) {
 //TODO
     }
 
+    /**
+     *
+     * @param orientation
+     */
     @Override
     public void setOrientation(int orientation) {
 //TODO
     }
 
+    /**
+     *
+     * @param colors
+     */
     @Override
     public void setSeriesColor(String[] colors) {
 //TODO
     }
 
+    /**
+     *
+     * @param title
+     */
     @Override
     public void setTitle(String title) {
 //TODO

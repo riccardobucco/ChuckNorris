@@ -17,6 +17,9 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 
+/**
+ *
+ */
 class TableImpl extends ChartImpl{
 
     static {
@@ -24,6 +27,10 @@ class TableImpl extends ChartImpl{
         registerFactory("table", TableFactory.getInstance());
     }
 
+    /**
+     *
+     * @param chartId
+     */
     private TableImpl(String chartId) {
         super("table", chartId);
     }
@@ -35,16 +42,28 @@ class TableImpl extends ChartImpl{
 
         private static TableFactory instance;
 
+        /**
+         *
+         * @return
+         */
         public static ChartFactory getInstance(){
             if(instance!=null)
                 return instance;
             return new TableFactory();
         }
 
+        /**
+         *
+         */
         private TableFactory(){
             instance=this;
         }
 
+        /**
+         *
+         * @param chartId
+         * @return
+         */
         @Override
         public ChartModel createChart(String chartId) {
             return new TableImpl(chartId);

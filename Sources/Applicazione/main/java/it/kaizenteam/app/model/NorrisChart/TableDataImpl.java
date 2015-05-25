@@ -9,21 +9,29 @@ public class TableDataImpl implements ChartData {
     private ArrayList<TableRow> values;
     private ArrayList<String> labels;
 
+    /**
+     *
+     * @param values
+     * @param labels
+     */
     public TableDataImpl(ArrayList<TableRow> values, ArrayList<String> labels){
         this.values=values;
         this.labels=labels;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<TableRow> getData(){
         return values;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<String> getLabels(){
         return labels;
-    }
-
-    //TODO rimuovere...viene modificato per riferimento
-    public void setData(ArrayList<TableRow> values){
-        this.values=values;
     }
 }

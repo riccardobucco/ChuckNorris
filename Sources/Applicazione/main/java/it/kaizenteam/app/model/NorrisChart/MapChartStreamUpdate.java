@@ -8,10 +8,18 @@ import java.util.ArrayList;
 public class MapChartStreamUpdate {
     private ArrayList<MapSet> values;
 
+    /**
+     *
+     * @param values
+     */
     public MapChartStreamUpdate(ArrayList<MapSet> values){
         this.values=values;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<MapSet> getData(){
         return values;
     }

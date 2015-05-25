@@ -8,16 +8,19 @@ import java.util.ArrayList;
 public class TableRow {
     private ArrayList<TableCell> values;
 
+    /**
+     *
+     * @param values
+     */
     public TableRow(ArrayList<TableCell> values){
         this.values=values;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<TableCell> getData(){
         return values;
-    }
-
-    //TODO rimuovere...viene modificato per riferimento
-    public void setData(ArrayList<TableCell> values){
-        this.values=values;
     }
 }

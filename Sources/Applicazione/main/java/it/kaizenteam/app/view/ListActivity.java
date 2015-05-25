@@ -34,8 +34,15 @@ import it.kaizenteam.app.presenter.ListPresenter;
 import it.kaizenteam.app.presenter.PresenterImpl;
 
 
+/**
+ *
+ */
 public class ListActivity extends BaseActivity implements ListView,AdapterView.OnItemClickListener {
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +52,9 @@ public class ListActivity extends BaseActivity implements ListView,AdapterView.O
         ((ListPresenter)presenter).onResume();
     }
 
+    /**
+     *
+     */
     @Override
     public void navigateToLoginView() {
         //TODO
@@ -53,11 +63,19 @@ public class ListActivity extends BaseActivity implements ListView,AdapterView.O
         startActivity(i);
     }
 
+    /**
+     *
+     * @param view
+     */
     @Override
     public void onLogoutClick(View view) {
         ((ListPresenter)presenter).onLogoutClick();
     }
 
+    /**
+     *
+     * @param list
+     */
     @Override
     public void renderList(ArrayList<String[]> list) {
         ArrayList<HashMap<String, Object>> data=new ArrayList<>();
@@ -105,6 +123,11 @@ public class ListActivity extends BaseActivity implements ListView,AdapterView.O
         ((android.widget.ListView)findViewById(R.id.chartslist)).setAdapter(adapter);
     }
 
+    /**
+     *
+     * @param type
+     * @param id
+     */
     @Override
     public void showChartDetailView(String type, String id) {
         Intent i=null;
@@ -120,6 +143,13 @@ public class ListActivity extends BaseActivity implements ListView,AdapterView.O
         startActivity(i);
     }
 
+    /**
+     *
+     * @param parent
+     * @param view
+     * @param position
+     * @param id
+     */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         ((ListPresenter)presenter).onItemClicked(((TextView) view.findViewById(R.id.type_listitem)).getText().toString(), ((TextView) view.findViewById(R.id.id_listitem)).getText().toString());

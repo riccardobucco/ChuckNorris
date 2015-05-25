@@ -17,6 +17,10 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +29,9 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
         presenter= PresenterImpl.create(PresenterImpl.MAPCHART_TYPE,this);
     }
 
+    /**
+     *
+     */
     @Override
     protected void onResume() {
         super.onResume();
@@ -69,31 +76,56 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
         mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
     }
 
+    /**
+     *
+     * @param data
+     */
     @Override
     public void renderChart(ChartData data) {
     //TODO
     }
 
+    /**
+     *
+     * @param latitude
+     * @param longitude
+     */
     @Override
     public void setCameraCoordinate(int latitude, int longitude) {
 //TODO
     }
 
+    /**
+     *
+     * @param zoomLevel
+     */
     @Override
     public void setCameraZoom(int zoomLevel) {
 //TODO
     }
 
+    /**
+     *
+     * @param shape
+     */
     @Override
     public void setMarkerShape(String shape) {
 //TODO
     }
 
+    /**
+     *
+     * @param colors
+     */
     @Override
     public void setSeriesColor(String[] colors) {
 //TODO
     }
 
+    /**
+     *
+     * @param title
+     */
     @Override
     public void setTitle(String title) {
 //TODO

@@ -8,10 +8,18 @@ import java.util.ArrayList;
 public class MapChartDeleteUpdate {
     private ArrayList<MapPoint> values;
 
+    /**
+     *
+     * @param values
+     */
     public MapChartDeleteUpdate(ArrayList<MapPoint> values){
         this.values=values;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<MapPoint> getData(){
         return values;
     }

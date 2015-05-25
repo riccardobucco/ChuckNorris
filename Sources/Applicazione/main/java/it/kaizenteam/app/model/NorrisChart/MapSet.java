@@ -8,17 +8,20 @@ import java.util.ArrayList;
 public class MapSet {
     private ArrayList<MapPoint> values;
 
+    /**
+     *
+     * @param values
+     */
     public MapSet(ArrayList<MapPoint> values){
         this.values=values;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<MapPoint> getData(){
         return values;
-    }
-
-    //TODO rimuovere...viene modificato per riferimento
-    public void setData(ArrayList<MapPoint> values){
-        this.values=values;
     }
 
 }

@@ -24,6 +24,10 @@ class MapChartImpl extends ChartImpl {
         registerFactory("mapchart", MapChartFactory.getInstance());
     }
 
+    /**
+     *
+     * @param chartId
+     */
     private MapChartImpl(String chartId) {
         super("mapchart", chartId);
     }
@@ -34,16 +38,28 @@ class MapChartImpl extends ChartImpl {
     protected static class MapChartFactory implements ChartFactory{
         private static MapChartFactory instance;
 
+        /**
+         *
+         * @return
+         */
         public static ChartFactory getInstance(){
             if(instance!=null)
                 return instance;
             return new MapChartFactory();
         }
 
+        /**
+         *
+         */
         private MapChartFactory(){
             instance=this;
         }
 
+        /**
+         *
+         * @param chartId
+         * @return
+         */
         @Override
         public ChartModel createChart(String chartId) {
             return new MapChartImpl(chartId);

@@ -19,12 +19,28 @@ package it.kaizenteam.app.view;
 
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 
+/**
+ *
+ */
 public abstract class ChartActivity extends BaseActivity{
     protected String idChart;
 
+    /**
+     *
+     * @param data
+     */
     public abstract void renderChart(ChartData data);
+
+    /**
+     *
+     * @param title
+     */
     public abstract void setTitle(String title);
 
+    /**
+     *
+     * @return
+     */
     public String getId(){
         return idChart;
     }

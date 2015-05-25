@@ -52,6 +52,12 @@ public abstract class ChartImpl extends Observable implements ChartModel{
         }.load(classi);
     }
 
+    /**
+     *
+     * @param type
+     * @param id
+     * @return
+     */
     public static ChartModel create(String type, String id) {//todo throws Exception {
         ChartFactory factory = factories.get(type);
 
@@ -61,44 +67,88 @@ public abstract class ChartImpl extends Observable implements ChartModel{
             return null; //TODO throw new Exception();
     }
 
+    /**
+     *
+     * @param chartType
+     * @param factory
+     */
     protected static void registerFactory(String chartType, ChartFactory factory) {
         factories.put(chartType, factory);
     }
 
+    /**
+     *
+     * @param updatetype
+     * @param updater
+     */
     protected void registerUpdater(String updatetype, Updater updater) {
         updaters.put(updatetype, updater);
     }
 
+    /**
+     *
+     * @param chartType
+     * @param chartId
+     */
     protected ChartImpl(String chartType, String chartId) {
         this.id = chartId;
         this.type=chartType;
     }
 
+    /**
+     *
+     * @return
+     */
     public ChartData getData(){
         return data;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getId(){
         return id;
     }
 
+    /**
+     *
+     * @return
+     */
     public ChartSettings getSettings(){
         return settings;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getType(){
         return type;
     }
 
+    /**
+     *
+     * @param data
+     */
     public void setData(ChartData data){
         this.data=data;
 
     }
 
+    /**
+     *
+     * @param settings
+     */
     public void setSettings(ChartSettings settings){
         this.settings=settings;
     }
 
+    /**
+     *
+     * @param updateType
+     * @param updateData
+     */
     public void update(String updateType, ChartUpdate updateData) {
         Updater updater = updaters.get(type);
 
@@ -109,6 +159,9 @@ public abstract class ChartImpl extends Observable implements ChartModel{
         */
     }
 
+    /**
+     *
+     */
     protected interface ChartFactory {
         ChartModel createChart(String chartId);
     }
