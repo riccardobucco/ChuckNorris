@@ -66,3 +66,270 @@
 				Si noti che non è stato calcolato l'indice Gulpease relativo al \insdoc{Manuale Utente v1.00} in quanto esso è scritto in lingua inglese e tale indice è relativo alla sola lingua italiana.
 		\level{3}{Codice}
 			In questa sezione sono riportate, per le parti del progetto implementate in questa prima fase di codifica, i risultati delle metriche calcolate nei momenti di verifica.
+			
+		%FINO A QUI HA CONTROLLATO RICCARDO
+		
+		\level{4}{Numero di requisiti funzionali realizzati}
+
+Si riportano di seguito le percentuali di requisiti funzionali realizzati dalle componenti di Norris.
+\begin{table}[H]
+	\centering
+		\begin{tabu}{| l | c | c |}
+			\hline
+			Componente	& Percentuale requisiti funzionali soddisfatti	& Esito		\\ \hline \hline
+			InternalAPIManager	& 100\% 	& Ottimale  \\ \hline
+			ExternalAPIManager  & 	100\%	& Ottimale  \\ \hline
+			DataModel  & 	100\%	& Ottimale  \\ \hline
+		\end{tabu}
+	\caption{Esiti del calcolo delle percentuali di requisiti funzionali realizzati da Norris durante la Fase P}
+\end{table}
+
+Si riportano di seguito le percentuali di requisiti funzionali realizzati dalle componenti di Chuck.
+\begin{table}[H]
+	\centering
+		\begin{tabu}{| l | c | c |}
+			\hline
+			Componente	& Numero requisiti funzionali superati	& Esito		\\ \hline \hline
+			Directive	& 100\% 	& Ottimale  \\ \hline
+			ChartView  & 	91\%	& Accettabile  \\ \hline
+			ViewModel  & 	91\%	& Accettabile  \\ \hline
+			DataModel  & 	91\%	& Accettabile  \\ \hline
+		\end{tabu}
+	\caption{Esiti del calcolo delle percentuali di requisiti funzionali realizzati da Chuck durante la Fase P}
+\end{table}
+
+\level{4}{Numeri di parametri di un metodo}
+Si riportano di seguito le percentuali dei metodi di Norri e Chuck per numero di parametri.
+\begin{table}[H]
+	\centering
+		\begin{tabu}{| l | c | c | c | c | c |}
+			\hline
+			Componente	& 0 parametri & 1 parametro & 2 parametri & 3 parametri & Esito		\\ \hline \hline
+			Norris	& 41\% & 37\% & 20\% & 2\%	& Superato  \\ \hline
+			Chuck  & 55\% & 10\% & 18\% & 2\%	& Superato  \\ \hline
+		\end{tabu}
+	\caption{Esiti del calcolo della percentuale di metodi per numero di parametri}
+\end{table}
+
+
+\level{2}{Verifica dei processi}
+
+\level{3}{Processo di documentazione}
+\level{4}{Livello CMM}
+Nonostante i progressi fatti nella capacità di gestione dei processi da parte del gruppo, non è ancora possibile affermare di essere 
+giunti al quarto livello CMM, poichè non è ancora in grado di gestire appieno le misurazioni in un'ottica di miglioramento
+del processo.
+\level{4}{Schedule Variance}
+Tutte le attività pianificate nel \insdoc{Piano di Progetto v4.00} sono state svolte rispettando le scadenze; lievi ritardi si sono verificato 
+solo nella redazione del \insdoc{Manuale Utente v1.00}, a causa di impegni universitari dei membri del team preposti alla sua stesura, e della 
+\insdoc{Definizione di Prodotto v1.00}, per delle indecisioni dei \insrole{progettisti} su come affrontare alcune questioni. Tali ritardi sono 
+comunque accettabili e sono stati compensati da una maggiore velocità di svolgimento di altre attività.
+Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sui tempi di stesura di ogni documento:
+			\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+							\hline
+							Documenti 							& Schedule Variance	& Esito		\\ \hline \hline
+							
+							Piano di progetto v4.00				& 2\% 		& Ottimale  \\ \hline
+							Norme di Progetto v4.00 			& 3\%		& Ottimale  \\ \hline
+							Piano di Qualifica v4.00 			& 1\%		& Ottimale  \\ \hline
+							Specifica Tecnica v2.00 			& 1\%		& Ottimali  \\ \hline
+							Manuale Utente v1.00 			& -3\%		& Accettabile  \\ \hline
+							Definizione di Prodotto v1.00 			& -2\%		& Accettabile  \\ \hline
+							Glossario v4.00					 	& 0\% 		& Ottimale  \\ \hline
+							Totale processo di documentazione & 2\% & Ottimale \\ \hline
+						\end{tabu}
+					\caption{Esiti del calcolo della Schedule Variance durante la Fase P}
+				\end{table}
+\level{4}{Budget Variance}
+Le risorse impiegate nella stesura della \insdoc{Definizione di Prodotto v1.00} hanno ecceduto leggermente rispetto alle stime fatte, tuttavia sono state ampiamente coperte 
+da quelle previste per l'incremento degli altri documenti che, al contrario, sono risultate sovrabbondanti.
+Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sulle risorse utilizzate per la stesura di ogni documento:
+			\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+							\hline
+							Documenti 							& Budget Variance	& Esito		\\ \hline \hline
+							
+							Piano di progetto v4.00				& 0\% 		& Ottimale  \\ \hline
+							Norme di Progetto v4.00 			& 3\%		& Ottimale  \\ \hline
+							Piano di Qualifica v4.00 			& 1\%		& Ottimale  \\ \hline
+							Specifica Tecnica v2.00 			& 2\%		& Ottimale  \\ \hline
+							Manuale Utente  			& 0\%		& Ottimale  \\ \hline
+							Definizione di Prodotto v1.00 			& -2\%		& Accettabile  \\ \hline
+							Glossario v4.00					 	& 0\% 		& Ottimale  \\ \hline
+							Totale processo di documentazione & 4\% & Ottimale \\ \hline
+						\end{tabu}
+					\caption{Esiti del calcolo della Budget Variance durante la Fase P}
+				\end{table}
+\level{4}{Produttività}
+Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di documentazione. Questo indice è stato calcolato durante tutti i momenti di verifica previsti dal \insdoc{Piano di Progetto v4.00} per la \insphase{Fase P}, e ciò è stato fatto per ogni documento che è stato redatto nel periodo antecedente la verifica. Ogni documento è stato sottoposto al processo di verifica al più cinque volte. Il calcolo fatto di volta in volta sullo stesso documento tiene conto solo delle nuove sezioni introdotte in esso.\\
+Segue un riassunto di quanto è stato fatto.
+\begin{table}[H]
+      \centering
+		\begin{tabu}{| l | c | c | c | c | c |}
+		\hline
+		&1	&2	&3	&4	&5	\\ \hline
+		Norme di Progetto	& 173 &	&	&	& \\ \hline
+		Piano di Progetto	& 170 &	&	&	& \\ \hline
+		Piano di Qualifica	& 253	&	&	&	&\\ \hline
+		Definizione di Prodotto & 156 &	 	&	&  	&\\ \hline
+		Manuale Utente & 143	&	&	&	& \\ \hline
+		Glossario & 120 &  & & &\\ \hline
+		\end{tabu}
+		\caption{Produttività delle varie attività del processo di documentazione durante la fase P}
+\end{table}
+Di seguito vengono riportati in un grafico i valori della produttività del processo di documentazione rilevati nei vari periodi della \insphase{Fase P} nei quali è stato applicato il processo di verifica. Il grafico fa riferimento alla tabella precedente.\\
+% TO DOOOOOOOOOOO!!!!
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=12cm]{PianoDiQualifica/Pics/ProduttivitaDocumentazioneFaseSD.pdf}
+	\caption{Produttività del processo di documentazione durante la Fase P}
+\end{figure}
+L'alta produttività dei documenti che hanno subito un incremento deriva dal fatto che le nuove parti aggiunte, seppur ampie, hanno richiesto solo una modesta quantità di risorse.
+Al contrario, i livelli di produttività della \insdoc{Definizione di Prodotto v1.00} e del \insdoc{Manuale Utente} risultano leggermente più bassi in quanto la stesura della loro prima versione ha richiesto maggior tempo.
+
+\level{3}{Processo di verifica}
+\level{4}{Livello CMM}
+	Nonostante l'adozione di nuove metriche e una maggiore regolamentazione del processo di verifica, il team non è ancora in grado di individuare miglioramenti tali da comportare un oggettivo aumento della capacità di gestione del processo, necessario per raggiungere il quarto livello CMM, pertanto il processo di verifica rimane al terzo livello (Definito).
+\level{4}{Schedule Variance}
+	Il processo di verifica è stato sempre svolto rispettando le scadenze temporali previste nel \insdoc{Piano di Progetto v4.00}. I valori della Schedule Variance calcolati per questo processo risultano quindi ottimi.\\
+			Riportiamo di seguito il valore ottenuti:
+			\begin{table}[H]
+				\centering
+				\begin{tabu}{| l | c | c |}
+					\hline
+						Processi 							& Schedule Variance	& Esito		\\ \hline \hline
+						Processo di verifica & 0\% & Ottimale \\ \hline
+				\end{tabu}
+				\caption{Esiti del calcolo della Schedule Variance durante la Fase P}
+			\end{table}	
+
+\level{4}{Budget Variance}
+Le risorse utilizzate nel processo di verifica sono risultate in linea con le stime del \insdoc{Piano di Progetto v4.00}, risultando anche leggermente sovrastimate.
+Riportiamo di seguito il valore ottenuti:
+\begin{table}[H]
+	\centering
+	\begin{tabu}{| l | c | c |}
+	\hline
+	Processi 							& Budget Variance	& Esito		\\ \hline \hline
+	Processo di verifica & 1\% & Ottimale \\ \hline
+	\end{tabu}
+	\caption{Esiti del calcolo della Budget Variance durante la Fase P}
+\end{table}	
+
+\level{4}{Produttività}
+Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di verifica. Tale indice è stato calcolato in seguito a tutti i momenti di verifica previsti dal \insdoc{Piano di Progetto v4.00} per la \insphase{Fase P}. Di seguito vengono riportati i valori calcolati e una loro rappresentazione grafica.
+\begin{table}[H]
+	\centering
+	\begin{tabu}{| c | c |}
+		\hline
+		Data verifica &Produttività\\ \hline \hline
+		06/04 & 6 \\ \hline
+		07/04 & 10 \\ \hline
+		09/04 & 3 \\ \hline
+		12-14/04 & 3 \\ \hline
+		15/04 & 15 \\ \hline
+		18/04 & 8 \\ \hline							
+	\end{tabu}
+	\caption{Produttività del processo di verifica durante la fase P}
+\end{table}
+% TO DOOOOOOOOOOO!!!
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{PianoDiQualifica/Pics/ProduttivitaVerificaFaseSD.pdf}
+	\caption{Produttività del processo di verifica durante la Fase P}
+\end{figure}
+
+\level{4}{Efficacia di una revisione}
+Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata l'efficacia delle varie revisioni che sono state fatte durante la \insphase{Fase P}. Di seguito vengono riportati i valori calcolati e una loro rappresentazione grafica.
+\begin{table}[H]
+	\centering
+	\begin{tabu}{| c | c |}
+	\hline
+	Data verifica &Efficacia\\ \hline \hline
+	06/04 & 7 \\ \hline
+	07/04 & 9 \\ \hline
+	09/04 & 2 \\ \hline
+	12-14/04 & 0.2 \\ \hline
+	15/04 & 0.8 \\ \hline
+	18/04 & 6 \\ \hline				
+	\end{tabu}
+	\caption{Efficacia delle revisioni durante la fase P}
+\end{table}
+% TO DOOOOOOOOOOO!!!
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{PianoDiQualifica/Pics/EfficaciaRevisioniFaseSD.pdf}
+	\caption{Efficacia delle revisioni durante la Fase P}
+\end{figure}
+
+I valori delle due metriche di processo sopra riportate devono essere letti considerando che:
+\begin{itemize}
+	\item il 6 aprile è stato in gran parte dedicato alle verifiche sugli incrementi apportati ai documenti precedentemente redatti;
+	\item il 7 aprile è stata verificata la \insdoc{Definizione di Prodotto v1.00}, riscontrando diversi errori, vista la sua prima stesura, e impiegando una discreta quantità di tempo;
+	\item le verifiche avvenute nei giorni 12, 13, 14 e 15 aprile hanno avuto per oggetto codice sorgente e non documenti, pertanto il rapporto viene fatto su righe di codice esaminate, risultando così molto basso;
+	\item il 18 aprile si è proceduto a verificare il \insdoc{Manuale utente}, anch'esso alla prima versione, riscontrando diversi errori.
+\end{itemize}
+
+\level{3}{PDCA}
+In questa sezione viene riportato il grafico \insglo{PDCA} della \insphase{Fase P}. In ascissa è rappresentato il tempo, in ordinata le attività.
+% TO DOOOOOOOOOOO!!!
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{PianoDiQualifica/Pics/GraficoPDCAFaseSD.pdf}
+	\caption{PDCA Fase P}
+\end{figure}
+Dal grafico si può evincere facilmente che l'andamento delle attività ha seguito orientativamente quanto stabilito nel \insdoc{Piano di Progetto v4.00} per questa fase, non richiedendo particolari attività di assestamento.
+
+\level{3}{Processo di sviluppo}
+Si riportano in questa sezione gli esiti delle misurazioni effettuate rispetto all'attività di codifica.
+\level{4}{Livello CMM}
+Il livello CMM identificato dal \groupname{} per l'attività di codifica è il due, in quanto è stato condotta in maniera normata, facendo attenzione a porre sotto documentazione le scelte progettuali prese e fornendo una discreta documentazione relativa ai prodotti realizzati. Il processo di sviluppo, rispetto a tale attività, risulta infatti disciplinato e ripetibile.
+\level{4}{Schedule Variance}
+Tutte le attività di codifica sono state svolte secondo le tempistiche programmate nel \insdoc{Piano di Progetto v4.00}.\\
+
+Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sui tempi di stesura del codice sorgente.
+			\begin{table}[H]
+				\centering
+				\begin{tabu}{| l | c | c |}
+					\hline
+						Processi 							& Schedule Variance	& Esito		\\ \hline \hline
+						Processo di sviluppo (codifica) & 0\% & Ottimale \\ \hline
+				\end{tabu}
+				\caption{Esiti del calcolo della Schedule Variance durante la Fase P}
+			\end{table}	
+			
+\level{4}{Budget Variance}
+Le risorse previste per l'attività di codifica in questa fase sono risultate leggermente sovrastimate, in quanto i codici sorgenti della libreria grafica Chuck sono molto simili, in alcune loro parti, a quelle del \textit{framework} Norris.
+			\begin{table}[H]
+				\centering
+				\begin{tabu}{| l | c | c |}
+					\hline
+						Processi 							& Budget Variance	& Esito		\\ \hline \hline
+						Processo di sviluppo (codifica) & 1\% & Ottimale \\ \hline
+				\end{tabu}
+				\caption{Esiti del calcolo della Budgett Variance dell'attività di codifica durante la Fase P}
+			\end{table}	
+\level{4}{Produttività}
+Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di sviluppo, limitatamente all'attività di codifica. Questo indice è stato calcolato durante i due momenti di verifica previsti dal \insdoc{Piano di Progetto v4.00} per la \insphase{Fase P}.\\
+Seguono i risultati delle misurazioni.
+\\begin{table}[H]
+				\centering
+				\begin{tabu}{| l | c | c |}
+					\hline
+						Processi 							& 1	& 2		\\ \hline \hline
+						Processo di sviluppo (codifica) & 33 & 29  \\ \hline
+				\end{tabu}
+				\caption{Esiti del calcolo della produttività della codifica durante la Fase P}
+			\end{table}	
+
+
+							
+
+
+
+
+
+
