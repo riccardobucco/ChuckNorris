@@ -1,19 +1,19 @@
 /*
-* Name: {ListActivity.java}
-* Package: {it.kaizenteam.app.view}
-* Location: {src.main.java.it.kaizenteam.view}
-* Date: {data di creazione del file}
-* Version: {0.01}
+* Name: ListActivity.java
+* Package: it.kaizenteam.app.view
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
+* Date: 19/05/2015
+* Version: 0.01
 *
 * History:
-*
 * =================================================================
-* Version Date Programmer Changes
+* Version	Date	Programmer	Changes
 * =================================================================
-* 0.01 GG-MM-AAAA Aessandro Moretto {creation}
+* v0.01	2015-05-23	Alessandro Moretto	Creazione file
 * =================================================================
 *
 */
+
 package it.kaizenteam.app.view;
 
 import android.content.Intent;
@@ -35,13 +35,13 @@ import it.kaizenteam.app.presenter.PresenterImpl;
 
 
 /**
- *
+ * ListActivity shows a list of graphics content in an Norris instance. Each element in the chart represent an instance that clicked warn its presenter of the user gesture.
  */
 public class ListActivity extends BaseActivity implements ListView,AdapterView.OnItemClickListener {
 
     /**
-     *
-     * @param savedInstanceState
+     * This method is performed by android at the creation of the Activity. It will be tasked to initializing its presenter.
+     * @param savedInstanceState instance state
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,7 @@ public class ListActivity extends BaseActivity implements ListView,AdapterView.O
     }
 
     /**
-     *
+     * This method initiates the activity home. It is called by the presenter if the user log out.
      */
     @Override
     public void navigateToLoginView() {
@@ -64,7 +64,7 @@ public class ListActivity extends BaseActivity implements ListView,AdapterView.O
     }
 
     /**
-     *
+     * This method is called automatically by Android when the button is clicked logout. It will notify its presenter the pressure.
      * @param view
      */
     @Override
@@ -73,8 +73,8 @@ public class ListActivity extends BaseActivity implements ListView,AdapterView.O
     }
 
     /**
-     *
-     * @param list
+     * This method is invoked with the purpose of display an array of chart (list parameter) in the list.
+     * @param list array of chart
      */
     @Override
     public void renderList(ArrayList<String[]> list) {
@@ -124,9 +124,9 @@ public class ListActivity extends BaseActivity implements ListView,AdapterView.O
     }
 
     /**
-     *
-     * @param type
-     * @param id
+     * This method starts the activity in which will be present the detail of a specific chart. The method decide which activity to start.
+     * @param type type of the chart
+     * @param id id of the chart
      */
     @Override
     public void showChartDetailView(String type, String id) {
@@ -144,7 +144,7 @@ public class ListActivity extends BaseActivity implements ListView,AdapterView.O
     }
 
     /**
-     *
+     * 
      * @param parent
      * @param view
      * @param position

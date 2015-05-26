@@ -1,19 +1,19 @@
 /*
-* Name: {LineChartActivity.java}
-* Package: {it.kaizenteam.app.view}
-* Location: {src.main.java.it.kaizenteam.view}
-* Date: {data di creazione del file}
-* Version: {0.01}
+* Name: LineChartActivity.java
+* Package: it.kaizenteam.app.view
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
+* Date: 19/05/2015
+* Version: 0.01
 *
 * History:
-*
 * =================================================================
-* Version Date Programmer Changes
+* Version	Date	Programmer	Changes
 * =================================================================
-* 0.01 GG-MM-AAAA Aessandro Moretto {creation}
+* v0.01	2015-05-19	Alessandro Moretto	Creazione file
 * =================================================================
 *
 */
+
 package it.kaizenteam.app.view;
 
 import android.os.Bundle;
@@ -33,8 +33,7 @@ import it.kaizenteam.app.presenter.LineChartPresenter;
 import it.kaizenteam.app.presenter.PresenterImpl;
 
 /**
- *
- *
+ * LineChartActivity specializes ChartActivity and constitutes an Activity for line charts. It provides static constants that represent the possible values to pass to methods to change the view.
  */
 public class LineChartActivity extends ChartActivity implements LineChartView {
     //TODO Barchart dei dati
@@ -45,8 +44,8 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     LineData data;
 
     /**
-     *
-     * @param savedInstanceState
+     * This method is performed by android at the creation of the Activity. It will be tasked to initializing its presenter.
+     * @param savedInstanceState instance state
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +59,8 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
 
 
     /**
-     *
-     * @param data
+     * This method will display correctly the chart passed as a parameter.
+     * @param data chart
      */
     @Override
     public void renderChart(ChartData data) {
@@ -92,9 +91,9 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     }
 
     /**
-     *
-     * @param x
-     * @param y
+     * This method provides the ability to display in the view the name of axes of the chart.
+     * @param x name of x-axis
+     * @param y name of y-axis
      */
     @Override
     public void setAxisName(String x, String y) {
@@ -102,8 +101,8 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     }
 
     /**
-     *
-     * @param show
+     * This method provides the ability to view or not the grid in the chart. If the parameter is true appears and hidden otherwise.
+     * @param show boolean show / hidden the chart grid
      */
     @Override
     public void showGrid(boolean show) {
@@ -111,8 +110,8 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     }
 
     /**
-     *
-     * @param position
+     * This method provides the ability to set the position of the legend. The positions available are eligible as static variables of the class.
+     * @param position position of the legend
      */
     @Override
     public void setLegendPosition(int position) {
@@ -120,8 +119,8 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     }
 
     /**
-     *
-     * @param colors
+     * This method provides the ability to change the color of various series Data chart.
+     * @param colors color to change
      */
     @Override
     public void setSeriesColor(String[] colors) {
@@ -129,8 +128,8 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     }
 
     /**
-     *
-     * @param title
+     * This method allows the display in the correct way the title of the chart.
+     * @param title title of the chart
      */
     @Override
     public void setTitle(String title) {
@@ -138,8 +137,8 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     }
 
     /**
-     *
-     * @param dotted
+     * This method allows to display the lines of the line chart with points or not (depending on the boolean parameter).
+     * @param dotted disply / not display the lines of the line chart with points or not
      */
     @Override
     public void setDottedLines(boolean dotted) {

@@ -1,3 +1,19 @@
+/*
+* Name: MapChartActivity.java
+* Package: it.kaizenteam.app.view
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
+* Date: 19/05/2015
+* Version: 0.01
+*
+* History:
+* =================================================================
+* Version	Date	Programmer	Changes
+* =================================================================
+* v0.01	2015-05-23	Alessandro Moretto	Creazione file
+* =================================================================
+*
+*/
+
 package it.kaizenteam.app.view;
 
 import android.support.v4.app.FragmentActivity;
@@ -13,13 +29,16 @@ import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.presenter.PresenterImpl;
 import it.kaizenteam.app.view.ChartActivity;
 
+/**
+ * MapChartActivity specializes ChartActivity and constitutes an Activity for map charts. It provides static constants that represent the possible values to be passed to methods to change the view.
+ */
 public class MapChartActivity extends ChartActivity implements MapChartView {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
     /**
-     *
-     * @param savedInstanceState
+     * This method is performed by android at the creation of the Activity. It will be tasked to initializing its presenter.
+     * @param savedInstanceState instance state
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,8 +96,8 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
     }
 
     /**
-     *
-     * @param data
+     * This method will display correctly the chart passed as a parameter.
+     * @param data chart
      */
     @Override
     public void renderChart(ChartData data) {
@@ -86,9 +105,9 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
     }
 
     /**
-     *
-     * @param latitude
-     * @param longitude
+     * This method provides the ability to change the display position of the map chart, or the coordinates of the central point.
+     * @param latitude latitude coordinate of the central point
+     * @param longitude longitude coordinate of the central point
      */
     @Override
     public void setCameraCoordinate(int latitude, int longitude) {
@@ -96,8 +115,8 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
     }
 
     /**
-     *
-     * @param zoomLevel
+     * This method provides the ability to change the display height of the map chart. The permitted heights are available in static constants of class (X_ZOOM_LEVEL) or intermediate values to them.
+     * @param zoomLevel level of display height
      */
     @Override
     public void setCameraZoom(int zoomLevel) {
@@ -105,8 +124,8 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
     }
 
     /**
-     *
-     * @param shape
+     * This method provides the ability to change the map markers chart. The markers permits are available in static constants of class (X_SHAPE).
+     * @param shape map marker to change
      */
     @Override
     public void setMarkerShape(String shape) {
@@ -114,8 +133,8 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
     }
 
     /**
-     *
-     * @param colors
+     * This method provides the ability to change the color of various series Data chart.
+     * @param colors colour to change
      */
     @Override
     public void setSeriesColor(String[] colors) {
@@ -123,8 +142,8 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
     }
 
     /**
-     *
-     * @param title
+     * This method allows the display in the correct way the title of the chart.
+     * @param title title of the chart
      */
     @Override
     public void setTitle(String title) {

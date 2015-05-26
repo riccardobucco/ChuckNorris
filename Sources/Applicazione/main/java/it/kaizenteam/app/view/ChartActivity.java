@@ -1,45 +1,45 @@
 /*
-* Name: {ChartActivity.java}
-* Package: {it.kaizenteam.app.view}
-* Location: {src.main.java.it.kaizenteam.view}
-* Date: {data di creazione del file}
-* Version: {0.01}
+* Name: ChartActivity.java
+* Package: it.kaizenteam.app.view
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
+* Date: 19/05/2015
+* Version: 0.01
 *
 * History:
-*
 * =================================================================
-* Version Date Programmer Changes
+* Version	Date	Programmer	Changes
 * =================================================================
-* 0.01 GG-MM-AAAA Aessandro Moretto {creation}
+* v0.01	2015-05-19	Alessandro Moretto	Creazione file
 * =================================================================
 *
 */
+
 package it.kaizenteam.app.view;
 
 
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 
 /**
- *
+ * ChartActivity is an abstract class that represents an Activity for the representation of generic chart.
  */
 public abstract class ChartActivity extends BaseActivity{
     protected String idChart;
 
     /**
-     *
-     * @param data
+     * This method is abstract and all specializations of this class must implement it. It will display properly the chart.
+     * @param data the chart to display
      */
     public abstract void renderChart(ChartData data);
 
     /**
-     *
-     * @param title
+     * This method is abstract and all specializations of this class must implement it. It will display properly the title of the chart.
+     * @param title title of the chart
      */
     public abstract void setTitle(String title);
 
     /**
-     *
-     * @return
+     * This method returns the id of the graph shown.
+     * @return id of the graph shown.
      */
     public String getId(){
         return idChart;

@@ -1,3 +1,19 @@
+/*
+* Name: LoginActivity.java
+* Package: it.kaizenteam.app.view
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
+* Date: 19/05/2015
+* Version: 0.01
+*
+* History:
+* =================================================================
+* Version	Date	Programmer	Changes
+* =================================================================
+* v0.01	2015-05-23	Alessandro Moretto	Creazione file
+* =================================================================
+*
+*/
+
 package it.kaizenteam.app.view;
 
 import android.content.Intent;
@@ -14,13 +30,13 @@ import it.kaizenteam.app.presenter.PresenterImpl;
 
 
 /**
- *
+ * LoginActivity shows the authentication screen, where the user can enter the address of the instance of Norris, uername and password. If the user clicks the login button will be experienced its presenter who will handle the request.
  */
 public class LoginActivity extends BaseActivity implements LoginView{
 
     /**
-     *
-     * @param savedInstanceState
+     * This method is performed by android at the creation of the Activity. It will be tasked to initializing its presenter.
+     * @param savedInstanceState instance state
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +46,7 @@ public class LoginActivity extends BaseActivity implements LoginView{
     }
 
     /**
-     *
+     * This method shows the view of the message authentication failure.
      */
     @Override
     public void showAuthenticationError() {
@@ -38,7 +54,7 @@ public class LoginActivity extends BaseActivity implements LoginView{
     }
 
     /**
-     *
+     * This method starts the activity in which it will present the list of the instance of the Norris chart.
      */
     @Override
     public void showListView() {
@@ -48,8 +64,8 @@ public class LoginActivity extends BaseActivity implements LoginView{
     }
 
     /**
-     *
-     * @param show
+     * This method displays the view of a waiting signal if the parameter is true and hides otherwise.
+     * @param show display / hide the view of a waiting signal
      */
     @Override
     public void showProgress(boolean show) {
@@ -60,7 +76,7 @@ public class LoginActivity extends BaseActivity implements LoginView{
     }
 
     /**
-     *
+     * This method is called automatically by Android when the button is clicked login. It will notify its presenter have pressed.
      * @param view
      */
     @Override

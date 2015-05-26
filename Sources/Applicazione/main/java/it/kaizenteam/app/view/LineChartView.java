@@ -1,51 +1,68 @@
+/*
+* Name: LineChartView.java
+* Package: it.kaizenteam.app.view
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
+* Date: 23/05/2015
+* Version: 0.01
+*
+* History:
+* =================================================================
+* Version	Date	Programmer	Changes
+* =================================================================
+* v0.01	2015-05-23	Alessandro Moretto	Creazione file
+* =================================================================
+*
+*/
+
 package it.kaizenteam.app.view;
 
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 
 /**
- * Created by Moro on 23/05/15.
+ * This interface has the task of allowing the use of methods to change the view to represent a line chart from the outside of the package View (indicated by a
+LineChartPresenterImpl).
  */
 public interface LineChartView extends View {
     /**
-     *
-     * @param data
+     * This method will display correctly the chart passed as a parameter.
+     * @param data chart
      */
     void renderChart(ChartData data);
 
     /**
-     *
-     * @param x
-     * @param y
+     * This method provides the ability to display in the view the name of axes of the chart.
+     * @param x name of x-axis
+     * @param y name of y-axis
      */
     void setAxisName(String x, String y);
 
     /**
-     *
-     * @param show
+     * This method provides the ability to view or not the grid in the chart. If the parameter is true appears and hidden otherwise.
+     * @param show boolean show / hidden the chart grid
      */
     void showGrid(boolean show);
 
     /**
-     *
-     * @param position
+     * This method provides the ability to set the position of the legend. The positions available are eligible as static variables of the class.
+     * @param position position of the legend
      */
     void setLegendPosition(int position);
 
     /**
-     *
-     * @param colors
+     * This method provides the ability to change the color of various series Data chart.
+     * @param colors color to change
      */
     void setSeriesColor(String[] colors);
 
     /**
-     *
-     * @param title
+     * This method allows the display in the correct way the title of the chart.
+     * @param title title of the chart
      */
     void setTitle(String title);
 
     /**
-     *
-     * @param dotted
+     * This method allows to display the lines of the line chart with points or not (depending on the boolean parameter).
+     * @param dotted disply / not display the lines of the line chart with points or not
      */
     void setDottedLines(boolean dotted);
 }

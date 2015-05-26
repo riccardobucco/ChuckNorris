@@ -1,19 +1,19 @@
 /*
-* Name: {BarChartActivity.java}
-* Package: {it.kaizenteam.app.view}
-* Location: {src.main.java.it.kaizenteam.view}
-* Date: {data di creazione del file}
-* Version: {0.01}
+* Name: BarChartActivity.java
+* Package: it.kaizenteam.app.view
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
+* Date: 19/05/2015
+* Version: 0.01
 *
 * History:
-*
 * =================================================================
-* Version Date Programmer Changes
+* Version	Date	Programmer	Changes
 * =================================================================
-* 0.01 GG-MM-AAAA Aessandro Moretto {creation}
+* v0.01	2015-05-23	Alessandro Moretto	Creazione file
 * =================================================================
 *
 */
+
 package it.kaizenteam.app.view;
 
 import android.os.Bundle;
@@ -34,7 +34,7 @@ import it.kaizenteam.app.presenter.PresenterImpl;
 
 
 /**
- *
+ * BarChartActivity specializes ChartActivity and constitutes an Activity for bar charts. It provides static constants that represent the possible values to be passed to methods to change the view.
  */
 public class BarChartActivity extends ChartActivity implements BarChartView{
     //TODO Barchart dei dati
@@ -45,8 +45,8 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     BarData data;
 
     /**
-     *
-     * @param savedInstanceState
+     * This method is performed by android at the creation of the Activity. It will be tasked to initializing its presenter.
+     * @param savedInstanceState instance state
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +60,8 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
 
 
     /**
-     *
-     * @param data
+     * This method will display correctly the chart passed as a parameter.
+     * @param data chart
      */
     @Override
     public void renderChart(ChartData data) {
@@ -92,9 +92,9 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     }
 
     /**
-     *
-     * @param x
-     * @param y
+     * This method provides the ability to display in the view the name of axes of the chart.
+     * @param x name of x-axis
+     * @param y name of y-axis
      */
     @Override
     public void setAxisName(String x, String y) {
@@ -102,8 +102,8 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     }
 
     /**
-     *
-     * @param show
+     * This method provides the ability to view or not the grid in the chart. If the parameter is true appears and hidden otherwise.
+     * @param show boolean show / hidden the chart grid
      */
     @Override
     public void showGrid(boolean show) {
@@ -111,8 +111,8 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     }
 
     /**
-     *
-     * @param position
+     * This method provides the ability to set the position of the legend. The positions available are eligible as static variables of the class.
+     * @param position position of the legend
      */
     @Override
     public void setLegendPosition(int position) {
@@ -120,8 +120,9 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     }
 
     /**
-     *
-     * @param orientation
+     * This method provides the ability to change the orientation of the chart based on the parameter.
+     * The parameters allowed are available in static constants in the class.
+     * @param orientation orientation of the chart
      */
     @Override
     public void setOrientation(int orientation) {
@@ -129,8 +130,8 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     }
 
     /**
-     *
-     * @param colors
+     * This method provides the ability to change the color of various series Data chart.
+     * @param colors color to change
      */
     @Override
     public void setSeriesColor(String[] colors) {
@@ -138,8 +139,8 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     }
 
     /**
-     *
-     * @param title
+     * This method allows the display in the correct way the title of the chart.
+     * @param title title of the chart
      */
     @Override
     public void setTitle(String title) {
