@@ -3992,7 +3992,7 @@
                             <UML:Namespace xmi.idref="aiu-fbc2b9fcebec1d6b8e8fd0d62102f4d0"/>
                           </UML:ModelElement.namespace>
                           <UML:ModelElement.visibility xmi.value="public"/>
-                          <UML:ModelElement.definition xmi.value="Tale+metodo+ha+il+compito+di+creare+la+relativa+spevializzazione+di+ChartImpl.+Esso+pu%C3%B2+accedere+al+suo+costruttore+perch%C3%A8+questa+classe+factory+%C3%A8+interna+alla+relativa+classe+TableImpl"/>
+                          <UML:ModelElement.definition xmi.value="Tale+metodo+ha+il+compito+di+creare+la+relativa+specializzazione+di+ChartImpl.+Esso+pu%C3%B2+accedere+al+suo+costruttore+perch%C3%A8+questa+classe+factory+%C3%A8+interna+alla+relativa+classe+TableImpl"/>
                           <UML:ModelElement.taggedValue>
                             <UML:TaggedValue xmi.id="6fs0-ac6bbf78370960eac9ca14ca1ce67227" version="0" tag="jude.type_modifier">
                               <UML:TaggedValue.modelElement>
@@ -4285,7 +4285,7 @@
                             <UML:Namespace xmi.idref="7wf-fbc2b9fcebec1d6b8e8fd0d62102f4d0"/>
                           </UML:ModelElement.namespace>
                           <UML:ModelElement.visibility xmi.value="public"/>
-                          <UML:ModelElement.definition xmi.value="Tale+metodo+ha+il+compito+di+creare+la+relativa+spevializzazione+di+ChartImpl.+Esso+pu%C3%B2+accedere+al+suo+costruttore+perch%C3%A8+questa+classe+factory+%C3%A8+interna+alla+relativa+classe+MapChartImpl."/>
+                          <UML:ModelElement.definition xmi.value="Tale+metodo+ha+il+compito+di+creare+la+relativa+specializzazione+di+ChartImpl.+Esso+pu%C3%B2+accedere+al+suo+costruttore+perch%C3%A8+questa+classe+factory+%C3%A8+interna+alla+relativa+classe+MapChartImpl."/>
                           <UML:ModelElement.taggedValue>
                             <UML:TaggedValue xmi.id="6aay-ac6bbf78370960eac9ca14ca1ce67227" version="0" tag="jude.type_modifier">
                               <UML:TaggedValue.modelElement>
@@ -4578,7 +4578,7 @@
                             <UML:Namespace xmi.idref="8xg-fbc2b9fcebec1d6b8e8fd0d62102f4d0"/>
                           </UML:ModelElement.namespace>
                           <UML:ModelElement.visibility xmi.value="public"/>
-                          <UML:ModelElement.definition xmi.value="Tale+metodo+ha+il+compito+di+creare+la+relativa+spevializzazione+di+ChartImpl.+Esso+pu%C3%B2+accedere+al+suo+costruttore+perch%C3%A8+questa+classe+factory+%C3%A8+interna+alla+relativa+classe+LineChartImpl."/>
+                          <UML:ModelElement.definition xmi.value="Tale+metodo+ha+il+compito+di+creare+la+relativa+specializzazione+di+ChartImpl.+Esso+pu%C3%B2+accedere+al+suo+costruttore+perch%C3%A8+questa+classe+factory+%C3%A8+interna+alla+relativa+classe+LineChartImpl."/>
                           <UML:ModelElement.taggedValue>
                             <UML:TaggedValue xmi.id="64p1-ac6bbf78370960eac9ca14ca1ce67227" version="0" tag="jude.type_modifier">
                               <UML:TaggedValue.modelElement>
@@ -4871,7 +4871,7 @@
                             <UML:Namespace xmi.idref="9qk-fbc2b9fcebec1d6b8e8fd0d62102f4d0"/>
                           </UML:ModelElement.namespace>
                           <UML:ModelElement.visibility xmi.value="public"/>
-                          <UML:ModelElement.definition xmi.value="Tale+metodo+ha+il+compito+di+creare+la+relativa+spevializzazione+di+ChartImpl.+Esso+pu%C3%B2+accedere+al+suo+costruttore+perch%C3%A8+questa+classe+factory+%C3%A8+interna+alla+relativa+classe+BarChartImpl."/>
+                          <UML:ModelElement.definition xmi.value="Tale+metodo+ha+il+compito+di+creare+la+relativa+specializzazione+di+ChartImpl.+Esso+pu%C3%B2+accedere+al+suo+costruttore+perch%C3%A8+questa+classe+factory+%C3%A8+interna+alla+relativa+classe+BarChartImpl."/>
                           <UML:ModelElement.taggedValue>
                             <UML:TaggedValue xmi.id="qzo-43c639a1e9fd341b844cc1177dbaf302" version="0" tag="jude.type_modifier">
                               <UML:TaggedValue.modelElement>
@@ -5131,7 +5131,7 @@
                             <UML:Namespace xmi.idref="3ww-fbc2b9fcebec1d6b8e8fd0d62102f4d0"/>
                           </UML:ModelElement.namespace>
                           <UML:ModelElement.visibility xmi.value="public"/>
-                          <UML:ModelElement.definition xmi.value="Tale+metodo+ha+il+compito+di+creare+la+relativa+spevializzazione+di+ChartImpl.+Esso+pu%C3%B2+accedere+al+suo+costruttore+perch%C3%A8+questa+classe+factory+%C3%A8+interna+alla+relativa+classe+MapChartImpl."/>
+                          <UML:ModelElement.definition xmi.value="Tale+metodo+ha+il+compito+di+creare+la+relativa+specializzazione+di+ChartImpl.+Esso+pu%C3%B2+accedere+al+suo+costruttore+perch%C3%A8+questa+classe+factory+%C3%A8+interna+alla+relativa+classe+MapChartImpl."/>
                           <UML:ModelElement.taggedValue>
                             <UML:TaggedValue xmi.id="7wi-dbbefdb81baa17da755029b670290e04" version="0" tag="jude.type_modifier">
                               <UML:TaggedValue.modelElement>
@@ -9962,7 +9962,7 @@
                     <UML:Namespace xmi.idref="18lg-9512d442c1df97544e11affbf78f1c29"/>
                   </UML:ModelElement.namespace>
                   <UML:ModelElement.visibility xmi.value="public"/>
-                  <UML:ModelElement.definition xmi.value="Tale+metodo+avvia+l%27activity+home.+Essa+vine+richiamata+dal+presenter+qualora+l%27utente+effettua+il+logout."/>
+                  <UML:ModelElement.definition xmi.value="Tale+metodo+avvia+l%27activity+home.+Essa+viene+richiamata+dal+presenter+qualora+l%27utente+effettua+il+logout."/>
                   <UML:ModelElement.taggedValue>
                     <UML:TaggedValue xmi.id="1lzpg-a5b36e8832135e7cd0ded839c3c8960a" version="0">
                       <UML:TaggedValue.modelElement>
@@ -10338,7 +10338,7 @@
                     <UML:Namespace xmi.idref="ag7y-68e13bcece53f9622c58d8e302bf3ecd"/>
                   </UML:ModelElement.namespace>
                   <UML:ModelElement.visibility xmi.value="public"/>
-                  <UML:ModelElement.definition xmi.value="Tale+metodo+avvia+l%27activity+home.+Essa+vine+richiamata+dal+presenter+qualora+l%27utente+effettua+il+logout."/>
+                  <UML:ModelElement.definition xmi.value="Tale+metodo+avvia+l%27activity+home.+Essa+viene+richiamata+dal+presenter+qualora+l%27utente+effettua+il+logout."/>
                   <UML:ModelElement.taggedValue>
                     <UML:TaggedValue xmi.id="l303-ac8c3ffc60566ec811a6eef4bfabc6ac" version="0">
                       <UML:TaggedValue.modelElement>
@@ -12917,6 +12917,7 @@
                 <UML:Namespace xmi.idref="tvf-4d4bbb4ff6272d36975d04c3300d7cc2"/>
               </UML:ModelElement.namespace>
               <UML:ModelElement.visibility xmi.value="package"/>
+              <UML:ModelElement.definition xmi.value="Tale+classe+rappresenta+l%27implementazione+di+un+presenter+per+table."/>
               <UML:ModelElement.clientDependency>
                 <JUDE:Dependency xmi.idref="s55o-3ee628d4cf4c6d13581e131d825f21b1"/>
               </UML:ModelElement.clientDependency>
@@ -13500,6 +13501,7 @@
                 <UML:Namespace xmi.idref="tvf-4d4bbb4ff6272d36975d04c3300d7cc2"/>
               </UML:ModelElement.namespace>
               <UML:ModelElement.visibility xmi.value="package"/>
+              <UML:ModelElement.definition xmi.value="Tale+classe+rappresenta+l%27implementazione+di+un+presenter+per+table."/>
               <UML:ModelElement.clientDependency>
                 <JUDE:Dependency xmi.idref="rsgn-3ee628d4cf4c6d13581e131d825f21b1"/>
               </UML:ModelElement.clientDependency>
@@ -14149,6 +14151,7 @@
                     <UML:Namespace xmi.idref="1725-4d4bbb4ff6272d36975d04c3300d7cc2"/>
                   </UML:ModelElement.namespace>
                   <UML:ModelElement.visibility xmi.value="private"/>
+                  <UML:ModelElement.definition xmi.value="Tale+hashmap+contiene+le+associazioni+di+tutti+i+tipi+di+presenter+possibilli+con+la+relativa+factory+dei+presenter."/>
                   <UML:ModelElement.taggedValue>
                     <UML:TaggedValue xmi.id="1nus-5db9b53f01a863c3ac22fea911c90e29" version="0" tag="jude.type_modifier">
                       <UML:TaggedValue.modelElement>
@@ -14879,7 +14882,7 @@
                     <UML:Namespace xmi.idref="1ehi-4d4bbb4ff6272d36975d04c3300d7cc2"/>
                   </UML:ModelElement.namespace>
                   <UML:ModelElement.visibility xmi.value="public"/>
-                  <UML:ModelElement.definition xmi.value="Tale+metodo+vine+invocato+in+risposta+ad+un+evento+nella+view%2C+ovvero+la+visualizzazione+dell%27activity+con+la+lista+dei+chart.+Esso+ha+il+compito+di+ottenere+la+lista+%28attraverso+HttpRequesterWithCookie%29+e+modificare+la+view+con+tali+valori."/>
+                  <UML:ModelElement.definition xmi.value="Tale+metodo+viene+invocato+in+risposta+ad+un+evento+nella+view%2C+ovvero+la+visualizzazione+dell%27activity+con+la+lista+dei+chart.+Esso+ha+il+compito+di+ottenere+la+lista+%28attraverso+HttpRequesterWithCookie%29+e+modificare+la+view+con+tali+valori."/>
                   <UML:ModelElement.taggedValue>
                     <UML:TaggedValue xmi.id="1gg4u-a5b36e8832135e7cd0ded839c3c8960a" version="0">
                       <UML:TaggedValue.modelElement>
@@ -16238,7 +16241,7 @@
                     <UML:Namespace xmi.idref="r6se-68e13bcece53f9622c58d8e302bf3ecd"/>
                   </UML:ModelElement.namespace>
                   <UML:ModelElement.visibility xmi.value="public"/>
-                  <UML:ModelElement.definition xmi.value="Tale+metodo+vine+invocato+in+risposta+ad+un+evento+nella+view%2C+ovvero+la+visualizzazione+dell%27activity+con+la+lista+dei+chart.+Esso+ha+il+compito+di+ottenere+la+lista+%28attraverso+HttpRequesterWithCookie%29+e+modificare+la+view+con+tali+valori."/>
+                  <UML:ModelElement.definition xmi.value="Tale+metodo+viene+invocato+in+risposta+ad+un+evento+nella+view%2C+ovvero+la+visualizzazione+dell%27activity+con+la+lista+dei+chart.+Esso+ha+il+compito+di+ottenere+la+lista+%28attraverso+HttpRequesterWithCookie%29+e+modificare+la+view+con+tali+valori."/>
                   <UML:ModelElement.taggedValue>
                     <UML:TaggedValue xmi.id="cok4-ac8c3ffc60566ec811a6eef4bfabc6ac" version="0">
                       <UML:TaggedValue.modelElement>
