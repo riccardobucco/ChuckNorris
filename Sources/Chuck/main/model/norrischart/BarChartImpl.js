@@ -16,7 +16,7 @@
 
 angular.module('chuck-chart')
 
-.run(['ChartImpl', 'BarChartInPlaceUpdater', function (ChartImpl, BarChartInPlaceUpdater) {
+.factory('BarChartImpl', ['ChartImpl', 'BarChartInPlaceUpdater', function (ChartImpl, BarChartInPlaceUpdater) {
 
     var defaults = {
         description : 'This is a bar chart.',
@@ -82,5 +82,7 @@ angular.module('chuck-chart')
 
     ChartImpl.registerFactory('barchart' , BarChartFactory.getInstance());
     ChartImpl.registerUpdater('barchart:inplace', BarChartInPlaceUpdater.getInstance());
+
+    return BarChartImpl;
 
 }]);

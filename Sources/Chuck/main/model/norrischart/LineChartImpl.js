@@ -16,7 +16,7 @@
 
 angular.module('chuck-chart')
 
-.run(['ChartImpl', 'LineChartInPlaceUpdater', 'LineChartStreamUpdater', function (ChartImpl, LineChartInPlaceUpdater, LineChartStreamUpdater) {
+.factory('LineChartImpl', ['ChartImpl', 'LineChartInPlaceUpdater', 'LineChartStreamUpdater', function (ChartImpl, LineChartInPlaceUpdater, LineChartStreamUpdater) {
 
     var defaults = {
         description : 'This is a line chart.',
@@ -79,5 +79,7 @@ angular.module('chuck-chart')
     ChartImpl.registerFactory('linechart' , LineChartFactory.getInstance());
     ChartImpl.registerUpdater('linechart:inplace', LineChartInPlaceUpdater.getInstance());
     ChartImpl.registerUpdater('linechart:stream', LineChartStreamUpdater.getInstance());
+
+    return LineChartImpl;
 
 }]);

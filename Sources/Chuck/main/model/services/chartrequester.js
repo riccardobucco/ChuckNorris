@@ -1,6 +1,6 @@
 angular.module('chuck-requester', ['chuck-chart'])
 
-.factory('ChartRequester', ['ChartImpl','$rootScope', '$timeout', '$q', function (ChartImpl, $rootScope, $timeout, $q) {
+.factory('ChartRequester', ['ChartImpl','$rootScope', '$timeout', '$q', 'BarChartImpl', 'LineChartImpl', 'MapChartImpl', 'TableImpl', function (ChartImpl, $rootScope, $timeout, $q) {
     return {
         bind: function (endpoint, id) {
             var deferred = $q.defer();
