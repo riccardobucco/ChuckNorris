@@ -32,7 +32,7 @@
             "type": "integer",
             "minimum": 1
         },
-        "style": {
+        "format": {
             "type": "object",
             "properties": {
                 "pointDotRadius": {

@@ -40,7 +40,7 @@
             "minimum": 0,
             "exclusiveMinimum": true
         },
-        "style": {
+        "format": {
             "type": "object",
             "properties": {
                 "marker": {

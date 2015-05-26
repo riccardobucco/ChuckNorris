@@ -25,7 +25,6 @@ var defaults = {
 	xlabel : '',
 	ylabel : '',
 	showGrid : false,
-	showLegend : true,
 	legendPosition : 'top-right',
 	maxPoints : 10,
 	format : {

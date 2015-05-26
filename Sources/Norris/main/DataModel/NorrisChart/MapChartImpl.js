@@ -22,7 +22,6 @@ var MapChartMovieUpdater = require('./MapChartMovieUpdater.js');
 
 var defaults = {
 	description: 'This is a map chart',
-	showLegend : true,
 	legendPosition : 'top-right', // values: top-right, top-left, bottom-right, bottom-left, none (the legend will not be shown)
 	maxPoints : 5
 };

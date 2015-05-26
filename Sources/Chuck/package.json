@@ -1,0 +1,14 @@
+{
+  "name": "chuck-rtc",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine"
+  },
+  "author": "Kaizen Team",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.3.1"
+  }
+}
