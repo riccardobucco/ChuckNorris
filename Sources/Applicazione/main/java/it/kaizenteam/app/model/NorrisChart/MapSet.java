@@ -1,15 +1,34 @@
+/*
+* Name: MapSet.java
+* Package: it.kaizenteam.app.model.NorrisChart
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
+* Date: 24/05/2015
+* Version: 0.01
+*
+* History:
+* =================================================================
+* Version	Date	Programmer	Changes
+* =================================================================
+* v0.01	2015-05-24	Alessandro Moretto	Creazione file
+* =================================================================
+*
+*/
+
 package it.kaizenteam.app.model.NorrisChart;
 
 import java.util.ArrayList;
 
 /**
- * Created by Moro on 24/05/15.
+ * This class represents the data of a set of a map chart.
  */
 public class MapSet {
+    /**
+     * This attribute represents the values of a series of map chart.
+     */
     private ArrayList<MapPoint> values;
 
     /**
-     *
+     * This method is the constructor of MapSet. It has as a parameter data values of a series of mapchart.
      * @param values
      */
     public MapSet(ArrayList<MapPoint> values){
@@ -17,11 +36,18 @@ public class MapSet {
     }
 
     /**
-     *
-     * @return
+     * This method has the task of returning the data of the series.
+     * @return the data of the series
      */
     public ArrayList<MapPoint> getData(){
         return values;
     }
 
+    /**
+     * This method has the task to set the data of the series.
+     * @param 
+     */
+    public void setData(ArrayList<MapPoint> values){
+        this.values= values;
+    }
 }

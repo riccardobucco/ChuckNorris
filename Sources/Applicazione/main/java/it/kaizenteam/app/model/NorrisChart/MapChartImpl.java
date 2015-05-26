@@ -16,7 +16,11 @@
 
 package it.kaizenteam.app.model.NorrisChart;
 
-
+/**
+ * This class represent a map chart. It contains within it data (MapChartDataObject) and settings (MapChartSettingsObject) related to the graph.
+ * It contains also the classes MapChartInPlaceUpdater and MapChartMovieUpdater, which respectively implement in place and movie update for the plot.
+ * MapChartImpl instance of the class is created by the factory class MapChartFactory.
+ */
 class MapChartImpl extends ChartImpl {
 
     static {
@@ -25,22 +29,25 @@ class MapChartImpl extends ChartImpl {
     }
 
     /**
-     *
-     * @param chartId
+     * This method is the constructor. It is private because only the factory class can create the instance.
+     * @param chartId id of the chart
      */
     private MapChartImpl(String chartId) {
         super("mapchart", chartId);
     }
 
     /**
-     * factory class for a BarChart
+     * This class is responsible for creating a MapChartImpl. In particular, it configure the data and the settings of the chart.
      */
     protected static class MapChartFactory implements ChartFactory{
-        private static MapChartFactory instance;
+        /**
+         * This static attribute represent the unique instance of the class
+         */        
+	private static MapChartFactory instance;
 
         /**
-         *
-         * @return
+         * This method has the task of returning the unique instance of the class, and creating it if it not exists.
+         * @return the instance of the class
          */
         public static ChartFactory getInstance(){
             if(instance!=null)
@@ -49,19 +56,19 @@ class MapChartImpl extends ChartImpl {
         }
 
         /**
-         *
+         * This method is the constructor of the class. It is private because anyone creation of the instance is not wanted except through getInstance() method.
          */
         private MapChartFactory(){
             instance=this;
         }
 
         /**
-         *
-         * @param chartId
-         * @return
+         * This method has the task of creating the specialization of ChartImpl. It can access its manufacturer because this factory class is internal to the related class MapChartImpl.
+         * @param chartId 
+         * @return the specialization of ChartImpl
          */
         @Override
-        public ChartModel createChart(String chartId) {
+        public ChartImpl createChart(String chartId) {
             return new MapChartImpl(chartId);
         }
     }
