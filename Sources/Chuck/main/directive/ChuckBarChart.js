@@ -40,10 +40,10 @@ angular.module('chuck')
             };
 
             function render(newValue, oldValue) {
-                var data = scope.chart.getData();
-                for(var i = 0; i < data.datasets.length; i++)
-                    for(var j = 0; j < data.datasets[i].values.length; j++)
-                        chartjs.datasets[i].bars[j].value = data.datasets[i].values[j];
+                var newData = newValue.getData();
+                for(var i = 0; i < newData.datasets.length; i++)
+                    for(var j = 0; j < newData.datasets[i].values.length; j++)
+                        chartjs.datasets[i].bars[j].value = newData.datasets[i].values[j];
 
                 chartjs.update();
             };

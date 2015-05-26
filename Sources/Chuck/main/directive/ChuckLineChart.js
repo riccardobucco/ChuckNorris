@@ -8,6 +8,7 @@ angular.module('chuck')
         link: function(scope, element, attrs) {
 
             var chartjs = null;
+            var ctx = element.contents()[0].getContext('2d');
 
             ChartRequester.bind('foo','bar')
                 .then(function (chart) {
@@ -18,7 +19,9 @@ angular.module('chuck')
                     console.error(reason);
                 });
 
-            function init() {
+            function init() {};
+
+            function render(newValue, oldValue) {
                 var chartData = scope.chart.getData();
                 var chartSettings = scope.chart.getSettings();
 
@@ -37,18 +40,9 @@ angular.module('chuck')
                 var options = {
                     datasetFill: false
                 }
-                    
-                var ctx = element.contents()[0].getContext('2d');
+
+                if(chartjs) chartjs.destroy();
                 chartjs = new Chart(ctx).Line(data, options);
-            };
-
-            function render(newValue, oldValue) {
-                var data = scope.chart.getData();
-                for(var i = 0; i < data.datasets.length; i++)
-                    for(var j = 0; j < data.datasets[i].values.length; j++)
-                        chartjs.datasets[i].points[j].value = data.datasets[i].values[j];
-
-                chartjs.update();
             };
         }
     };
