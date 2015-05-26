@@ -80,17 +80,17 @@
 		Approfondendo la progettazione del \insglo{prodotto} fino ad arrivare a moduli abbastanza semplici da essere capiti da una sola persona, si otterranno le istruzioni necessarie ai \insrole{Programmatori} per ottenere il \insglo{prodotto} finito.
 			
 		\level{4}{Progettazione architetturale}
-			Prima di procedere alla definizione vera e propria dell'architettura dei vari prodotti software, devono essere eseguiti e successivamente documentati i seguenti task:
+			Prima di procedere alla definizione vera e propria dell'architettura dei vari prodotti \insglo{software}, devono essere eseguiti e successivamente documentati i seguenti task:
 			\begin{enumerate}
 				\item si individuano i prodotti che si intendono realizzare;
 				\item si definiscono ruoli e responsabilità di ognuno dei prodotti individuati;
 				\item si definiscono le interazioni che i prodotti hanno fra di loro;
 				\item ci si assicura che ogni requisito sia soddisfatto da almeno uno dei prodotti individuati e descritti;
-				\item ci si assicura che ogni prodotto realizzi almeno un requisito.
+				\item ci si assicura che ogni \insglo{prodotto} realizzi almeno un requisito.
 			\end{enumerate}
-			A questo punto si può procedere con la progettazione dell'architettura dei prodotti software che si intendono realizzare. Si devono eseguire e successivamente documentare i seguenti task per ognuno dei prodotti individuati:
+			A questo punto si può procedere con la progettazione dell'architettura dei prodotti \insglo{software} che si intendono realizzare. Si devono eseguire e successivamente documentare i seguenti task per ognuno dei prodotti individuati:
 			\begin{enumerate}
-				\item si suddivide il prodotto in componenti;
+				\item si suddivide il \insglo{prodotto} in componenti;
 				\item si definisce il ruolo di ogni componente individuato;
 				\item si definiscono le interazioni che i componenti hanno fra loro;
 				\item si definiscono le eventuali interfacce che ogni componente mette a disposizione dell'ambiente esterno;
@@ -98,8 +98,8 @@
 				\item ci si assicura che ogni componente realizzi almeno un requisito;
 				\item si realizzano e si documentano i test di integrazione, necessari per verificare il corretto funzionamento di più componenti assemblati insieme (le norme da seguire sono presenti nella sezione \nameref{sec:TestIntegrazione}).
 			\end{enumerate}
-			Durante la suddivisione del prodotto in componenti è auspicabile che i \insrole{Progettisti} utilizzino in modo appropriato i design pattern. Qualora ciò dovesse avvenire, si documenta la cosa procedendo con una loro descrizione e contestualizzazione (per maggiori informazioni si consulti la sezione \nameref{sec:ProgArcDesingPattern}).\\
-			Un utile supporto alla documentazione di tutti i task precedentemente descritti sono i diagrammi UML. Per maggiori informazioni si culsulti la sezione \nameref{sec:ProgArcUML}.\\
+			Durante la suddivisione del \insglo{prodotto} in componenti è auspicabile che i \insrole{Progettisti} utilizzino in modo appropriato i \insglo{design pattern}. Qualora ciò dovesse avvenire, si documenta la cosa procedendo con una loro descrizione e contestualizzazione (per maggiori informazioni si consulti la sezione \nameref{sec:ProgArcDesingPattern}).\\
+			Un utile supporto alla documentazione di tutti i task precedentemente descritti sono i diagrammi \insglo{UML}. Per maggiori informazioni si culsulti la sezione \nameref{sec:ProgArcUML}.\\
 			Il modo in cui viene effettuato il tracciamento dei requisiti viene descritto in modo più approfondito nella sezione \nameref{sec:ProgTracCompReq}.
 			\level{5}{Norme}
 				\level{6}{Design Pattern} \label{sec:ProgArcDesingPattern}
@@ -113,7 +113,7 @@
 					La documentazione riguardante i prodotti e i componenti individuati deve sempre fare uso di diagrammi \insglo{UML}. Essi sono necessari per esplicitare e formalizzare in modo migliore i vari aspetti che sono stati descritti testualmente.\\
 					In particolare, durante la progettazione architetturale è necessario fare uso dei seguenti diagrammi:
 					\begin{description}
-						\item[diagrammi dei componenti] Essi hanno lo scopo di rappresentare la struttura interna di un prodotto software modellato in termini dei suoi componenti principali e delle relazioni fra di essi. Questo tipo di diagramma viene dunque utilizzato per evidenziare i componenti (e le relazioni che essi hanno fra di loro) individuati all'interno di ciascun prodotto software.
+						\item[diagrammi dei componenti] Essi hanno lo scopo di rappresentare la struttura interna di un \insglo{prodotto} \insglo{software} modellato in termini dei suoi componenti principali e delle relazioni fra di essi. Questo tipo di diagramma viene dunque utilizzato per evidenziare i componenti (e le relazioni che essi hanno fra di loro) individuati all'interno di ciascun \insglo{prodotto} \insglo{software}.
 						\item[diagrammi delle attività] Essi hanno lo scopo di definire le attività da svolgere per realizzare una certa funzionalità. Vengono dunque usati per mostrare come determinate interazioni tra componenti (o fra prodotti) realizzino una funzionalità che si intende rendere disponibile.
 					\end{description}
 					Tali diagrammi dovranno seguire le indicazioni fornite nella sezione \nameref{sec:UML}.
@@ -121,10 +121,10 @@
 				\level{6}{Classificazione dei componenti} \label{sec:ClassificareComponenti}
 					I componenti vengono identificati univocamente da una descrizione nella forma NomeProdotto::NomeComponente.
 					\begin{itemize}
-						\item NomeProdotto rappresenta il nome del prodotto software che i \insrole{Progettisti} hanno deciso di realizzare.
+						\item NomeProdotto rappresenta il nome del \insglo{prodotto} \insglo{software} che i \insrole{Progettisti} hanno deciso di realizzare.
 						\item NomeComponente rappresenta il nome che è stato dato dai \insrole{Progettisti} al componente individuato.
 					\end{itemize}
-					A ogni componente è inoltre associato un codice univoco nella forma XY, dove X è l'iniziale del del nome del prodotto e Y un numero intero crescente (che parte da 0).
+					A ogni componente è inoltre associato un codice univoco nella forma XY, dove X è l'iniziale del del nome del \insglo{prodotto} e Y un numero intero crescente (che parte da 0).
 				\level{6}{Test di integrazione} \label{sec:TestIntegrazione}
 					Per ottenere maggior efficienza ed efficacia durante l'attività di test, è auspicabile che i \insrole{Progettisti} si preoccupino di definire delle classi di verifica per appurare che il funzionamento dei componenti sia quello previsto. Sarebbe infatti ideale poter fornire degli strumenti completamente automatici ai \insrole{Verificatori}.\\
 					La progettazione delle classi per la verifica deve essere fatta da persone diverse da coloro che hanno progettato la classe da verificare, quando ciò fosse possibile.
@@ -137,9 +137,9 @@
 				Il \insglo{software} \insglo{Astah} è descritto in modo dettagliato nell'appendice \nameref{app:strumenti}, mentre l'applicazione web per il tracciamento viene descritta nell'appendice \nameref{sec:tracker}.
 			\level{5}{Procedure}
 				\level{6}{Tracciamento componenti-requisiti} \label{sec:ProgTracCompReq}
-					È fondamentale che ogni requisito sia soddisfatto da almeno un componente. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente procedura. Si noti che qui si da per scontato che i componenti e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento dei componenti fare riferimento alla procedura descritta nella sezione \nameref{sec:InsComponente}).
+					È fondamentale che ogni requisito sia soddisfatto da almeno un componente. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente \insglo{procedura}. Si noti che qui si da per scontato che i componenti e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento dei componenti fare riferimento alla \insglo{procedura} descritta nella sezione \nameref{sec:InsComponente}).
 					\begin{enumerate}
-						\item Accedere al Kaizen Team Tracker (\insuri{http://kaizenteam.it/tracker/}).
+						\item Accedere al Kaizen \insglo{Team} Tracker (\insuri{http://kaizenteam.it/tracker/}).
 						\item Entrare all'interno della sezione “Requisiti”.
 						\begin{figure}[H]
 							\centering
@@ -158,9 +158,9 @@
 						\item Eseguire il passo precedente per tutti i requisiti.
 					\end{enumerate}
 				\level{6}{Inserimento di un componente sul Tracker} \label{sec:InsComponente}
-					Per poter effettuare correttamente i vari tracciamenti necessari si deve inserire all'interno del tracker del gruppo tutti i componenti che sono stati individuati dai \insrole{Progettisti} durante la progettazione architetturale. Per fare ciò si segua la seguente procedura.
+					Per poter effettuare correttamente i vari tracciamenti necessari si deve inserire all'interno del tracker del gruppo tutti i componenti che sono stati individuati dai \insrole{Progettisti} durante la progettazione architetturale. Per fare ciò si segua la seguente \insglo{procedura}.
 					\begin{enumerate}
-						\item Accedere al Kaizen Team Tracker (\insuri{http://kaizenteam.it/tracker/}).
+						\item Accedere al Kaizen \insglo{Team} Tracker (\insuri{http://kaizenteam.it/tracker/}).
 						\item Entrare all'interno della sezione “Progettazione”.
 						\begin{figure}[H]
 							\centering
@@ -187,8 +187,8 @@
 				\item ci si assicura che ogni classe realizzi almeno un requisito;
 				\item si realizzano e si documentano i test di unità, necessari per verificare il corretto comportamento delle classi (le norme da seguire sono presenti nella sezione \nameref{sec:TestUnita}).
 			\end{enumerate}
-			Durante la suddivisione di un componente in classi è auspicabile che i \insrole{Progettisti} utilizzino in modo appropriato i design pattern. Qualora ciò dovesse avvenire, si documenta la cosa procedendo con una loro descrizione e contestualizzazione (per maggiori informazioni si consulti la sezione \nameref{sec:ProgDetDesingPattern}).\\
-			Un utile supporto alla documentazione di tutti i task precedentemente descritti sono i diagrammi UML. Per maggiori informazioni si culsulti la sezione \nameref{sec:ProgDetUML}.\\
+			Durante la suddivisione di un componente in classi è auspicabile che i \insrole{Progettisti} utilizzino in modo appropriato i \insglo{design pattern}. Qualora ciò dovesse avvenire, si documenta la cosa procedendo con una loro descrizione e contestualizzazione (per maggiori informazioni si consulti la sezione \nameref{sec:ProgDetDesingPattern}).\\
+			Un utile supporto alla documentazione di tutti i task precedentemente descritti sono i diagrammi \insglo{UML}. Per maggiori informazioni si culsulti la sezione \nameref{sec:ProgDetUML}.\\
 			Il modo in cui viene effettuato il tracciamento dei requisiti viene descritto in modo più approfondito nella sezione \nameref{sec:ProgTracClasReq}.
 
 			\level{5}{Norme}
@@ -211,11 +211,11 @@
 				\level{6}{Classificazione delle classi} \label{sec:ClassificareClassi}
 					Le classi vengono identificate univocamente da una descrizione nella forma\\ NomeProdotto::NomeComponente::NomeClasse.
 					\begin{itemize}
-						\item NomeProdotto rappresenta il nome del prodotto software che i \insrole{Progettisti} hanno deciso di realizzare.
+						\item NomeProdotto rappresenta il nome del \insglo{prodotto} \insglo{software} che i \insrole{Progettisti} hanno deciso di realizzare.
 						\item NomeComponente rappresenta il nome che è stato dato dai \insrole{Progettisti} al componente al quale appartiene la classe.
 						\item NomeClasse rappresenta il nome che è stato dato dai \insrole{Progettisti} alla classe individuata.
 					\end{itemize}
-					A ogni classe è inoltre associato un codice univoco nella forma XY, dove X è l'iniziale del del nome del prodotto e Y un numero intero crescente (che parte da 0).\\
+					A ogni classe è inoltre associato un codice univoco nella forma XY, dove X è l'iniziale del del nome del \insglo{prodotto} e Y un numero intero crescente (che parte da 0).\\
 				\level{6}{Descrivere le classi} \label{sec:DescrizioneClasse}
 					Per descrivere in modo completo una classe, i \insrole{Progettisti} devono preoccuparsi di individuare e descrivere:
 					\begin{itemize}
@@ -233,9 +233,9 @@
 
 			\level{5}{Procedure}
 				\level{6}{Tracciamento classi-requisiti} \label{sec:ProgTracClasReq}
-					È fondamentale che ogni requisito sia soddisfatto da almeno una classe. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente procedura. Si noti che qui si da per scontato che le classi e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento delle classi fare riferimento alla procedura descritta nella sezione \nameref{sec:InsClasse}).
+					È fondamentale che ogni requisito sia soddisfatto da almeno una classe. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente \insglo{procedura}. Si noti che qui si da per scontato che le classi e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento delle classi fare riferimento alla \insglo{procedura} descritta nella sezione \nameref{sec:InsClasse}).
 					\begin{enumerate}
-						\item Accedere al Kaizen Team Tracker (\insuri{http://kaizenteam.it/tracker/}).
+						\item Accedere al Kaizen \insglo{Team} Tracker (\insuri{http://kaizenteam.it/tracker/}).
 						\item Entrare all'interno della sezione “Requisiti”.
 						\begin{figure}[H]
 							\centering
@@ -254,9 +254,9 @@
 						\item Eseguire il passo precedente per tutti i requisiti.
 					\end{enumerate}
 				\level{6}{Inserimento di una classe sul Tracker} \label{sec:InsClasse}
-					Per poter effettuare correttamente i vari tracciamenti necessari si deve inserire all'interno del tracker del gruppo tutti le classi che sono state individuate dai \insrole{Progettisti} durante la progettazione di dettaglio. Per fare ciò si segua la seguente procedura.
+					Per poter effettuare correttamente i vari tracciamenti necessari si deve inserire all'interno del tracker del gruppo tutti le classi che sono state individuate dai \insrole{Progettisti} durante la progettazione di dettaglio. Per fare ciò si segua la seguente \insglo{procedura}.
 					\begin{enumerate}
-						\item Accedere al Kaizen Team Tracker (\insuri{http://kaizenteam.it/tracker/}).
+						\item Accedere al Kaizen \insglo{Team} Tracker (\insuri{http://kaizenteam.it/tracker/}).
 						\item Entrare all'interno della sezione “Progettazione”.
 						\begin{figure}[H]
 							\centering
@@ -295,11 +295,11 @@
 				Nel corso del progetto vengono utilizzati alcuni linguaggi di programmazione. Quando si utilizza uno di essi si devono rispettare alcune regole, in modo tale da favorire nel maggior modo possibile la comprensibilità del codice. Si cerca, dove possibile, di adottare linee guida accettate a livello internazionale.\\
 				In seguito, per ogni linguaggio adottato, viene indicata una sorgente alla quale è possibile trovare le linee guida da seguire.
 				\begin{description}
-					\item[JavaScript] Quando si fa uso di questo linguaggio di programmazione si deve rispettare quanto riportato all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml}.
-					\item[Java] Quando si fa uso di questo linguaggio di programmazione si deve rispettare quanto riportato all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javaguide.html}
+					\item[\insglo{JavaScript}] Quando si fa uso di questo linguaggio di programmazione si deve rispettare quanto riportato all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml}.
+					\item[\insglo{Java}] Quando si fa uso di questo linguaggio di programmazione si deve rispettare quanto riportato all'indirizzo \insuri{https://google-styleguide.googlecode.com/svn/trunk/javaguide.html}
 				\end{description}
 			\level{5}{Intestazione dei file} \label{sec:CodificaIntestazione}
-				Ogni file prodotto durante l'attività di codifica (a prescindere dal linguaggio di programmazione usato) deve iniziare con un'intestazione che rifletta la seguente struttura:
+				Ogni file \insglo{prodotto} durante l'attività di codifica (a prescindere dal linguaggio di programmazione usato) deve iniziare con un'intestazione che rifletta la seguente struttura:
 				\begin{lstlisting}
 					/*
 					* Name: [nome del file]
@@ -328,12 +328,12 @@
 					\item[History] visualizza lo storico delle modifiche del file in questione, comprensive di versione, data, descrizione e nome del programmatore che ha modificato il codice.
 				\end{description}
 			\level{5}{Commenti} \label{sec:NormeCommenti}
-			Allo scopo di mantenere ordinato e leggibile il codice, è necessario commentarlo nel modo più appropriato. In questo modo, il codice risulterà più comprensibile, non solo per gli altri membri del team e per il programmatore stesso, ma anche per i fruitori esterni che utilizzeranno il prodotto. In questo modo sarà facilitato il riuso del codice e la sua leggibilità. \\
+			Allo scopo di mantenere ordinato e leggibile il codice, è necessario commentarlo nel modo più appropriato. In questo modo, il codice risulterà più comprensibile, non solo per gli altri membri del \insglo{team} e per il programmatore stesso, ma anche per i fruitori esterni che utilizzeranno il \insglo{prodotto}. In questo modo sarà facilitato il riuso del codice e la sua leggibilità. \\
 			I commenti devono essere tassativamente in lingua inglese, significativi e determinanti per la corretta comprensione e per l'interpretazione del codice scritto.\\
-			Al fine di usufruire della generazione automatica della documentazione del codice, grazie a strumenti specifici, come JSDOC e JAVADOC, è fondamentale l'utilizzo di una precisa sintassi per la scrittura dei commenti.
+			Al fine di usufruire della generazione automatica della documentazione del codice, grazie a strumenti specifici, come \insglo{JSDOC} e \insglo{JAVADOC}, è fondamentale l'utilizzo di una precisa sintassi per la scrittura dei commenti.
 			Di seguito, si elencano le norme da seguire a seconda del linguaggio di programmazione adottato.
 			\begin{description}
-					\item[JavaScript] I commenti devono rispettare la seguente struttura:
+					\item[\insglo{JavaScript}] I commenti devono rispettare la seguente struttura:
 						\begin{itemize}
 							\item Prima di ogni dichiarazione di classe deve essere scritto un commento che deve cominciare con i simboli “/**”, deve avere, all'inizio di ogni riga “*” e deve terminare con “*/” (particolare forma di commento multi-linea). Esso deve riflettere la seguente struttura:
 							\begin{lstlisting} 
@@ -358,7 +358,7 @@
 							Si noti che anche per i commenti che precedono i metodi si devono utilizzare i simboli descritti per quelli che precedono le classi (“/**”, “*”, “*/”). Inoltre, si seguano le stesse regole, descritte nel punto precedente per “@param”. Infine, “@return” deve essere specificato solo quando viene effettivimante ritornato qualcosa. \\
 							Anche in questo caso, si fa presente che il tipo del parametro e il tipo di ritorno devono essere racchiusi tra parentesi graffe.
 						\end{itemize}
-					\item[Java] I commenti devono rispettare la seguente struttura:
+					\item[\insglo{Java}] I commenti devono rispettare la seguente struttura:
 						\begin{itemize}
 							\item Prima di ogni dichiarazione di classe deve essere scritto un commento che ne descriva la funzionalità e lo scopo. Esso deve cominciare con i simboli “/**”, deve avere, all'inizio di ogni riga “*” e deve terminare con “*/” (particolare forma di commento multi-linea).
 							\begin{lstlisting}

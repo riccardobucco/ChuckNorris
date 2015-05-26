@@ -2,19 +2,19 @@
 	\level{3}{Prerequisites}
 		Before you begin, make sure
 		\begin{description}
-			\item[you have Node.js and npm installed] Get the latest version from \url{http://nodejs.org}. If you're using Mac or Windows, the best way to install Node.js is to use one of the pre-built installers. If you're using Linux, you can use the installer or you can download the source code.\\
-			Node.js comes with npm installed so you should have a version of npm. However, npm gets updated more frequently than Node does, so you'll want to make sure it's the latest version.
-			\item[you have a \texttt{package.json} file in the root directory of your application] It holds various metadata relevant to your project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies.\\
-			If \texttt{package.json} file does not exist already, you can create it with the \texttt{npm init} command. A second option is to create it manually (specifics of npm's \texttt{package.json} handling can be found at \url{https://docs.npmjs.com/files/package.json}).
-			\item[you have Express.js installed in the app directory and saved in the dependencies list] This package can be downloaded and added to the dependencies list with the \texttt{npm install express --save} command (detailed instructions can be found at \url{http://expressjs.com/starter/installing.html}).
+			\item[you have \insglo{Node.js} and npm installed] Get the latest version from \url{\insglo{http}://nodejs.org}. If you're using Mac or Windows, the best way to install \insglo{Node.js} is to use one of the pre-built installers. If you're using Linux, you can use the installer or you can download the source code.\\
+			\insglo{Node.js} comes with npm installed so you should have a version of npm. However, npm gets updated more frequently than Node does, so you'll want to make sure it's the latest version.
+			\item[you have a \texttt{\insglo{package}.\insglo{json}} file in the root directory of your application] It holds various metadata relevant to your project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies.\\
+			If \texttt{\insglo{package}.\insglo{json}} file does not exist already, you can create it with the \texttt{npm init} command. A second option is to create it manually (specifics of npm's \texttt{\insglo{package}.\insglo{json}} handling can be found at \url{https://docs.npmjs.com/files/\insglo{package}.\insglo{json}}).
+			\item[you have \insglo{Express.js} installed in the app directory and saved in the dependencies list] This \insglo{package} can be downloaded and added to the dependencies list with the \texttt{npm install express --save} command (detailed instructions can be found at \url{\insglo{http}://expressjs.com/starter/installing.html}).
 		\end{description}
 	\level{3}{Performing the installation}
 		First, make the app directory your working directory. Then use the following npm command:
 		\begin{lstlisting}
-			$ npm install norris --save
+			$ npm install \insglo{norris} --save
 		\end{lstlisting}
-		This will create the \texttt{node\_modules} directory (if one doesn't exist yet), and will download the package to that directory. It will also add the package to the dependencies in \texttt{package.json} (unless it was already there).\\
-		You might want to add Norris temporarily, just to it out, without adding it to the dependencies list in the \texttt{package.json} file. Just avoid using \texttt{--save} flag:
+		This will create the \texttt{node\_modules} directory (if one doesn't exist yet), and will download the \insglo{package} to that directory. It will also add the \insglo{package} to the dependencies in \texttt{\insglo{package}.\insglo{json}} (unless it was already there).\\
+		You might want to add \insglo{Norris} temporarily, just to it out, without adding it to the dependencies list in the \texttt{\insglo{package}.\insglo{json}} file. Just avoid using \texttt{--save} flag:
 		\begin{lstlisting}
-			$ npm install norris
+			$ npm install \insglo{norris}
 		\end{lstlisting}

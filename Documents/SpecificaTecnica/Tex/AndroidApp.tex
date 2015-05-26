@@ -1,13 +1,13 @@
 \level{2}{Applicazione Android}
-    Dopo che in precedenza è stata fornita una descrizione generale dell'Applicazione Android, è qui riportata la sua progettazione architetturale.\\
+    Dopo che in precedenza è stata fornita una descrizione generale dell'Applicazione \insglo{Android}, è qui riportata la sua progettazione architetturale.\\
     La presente sezione riporta i risultati ottenuti tramite una rigida struttura:
     \begin{enumerate}
         \item vengono presentate e successivamente descritte le componenti individuate;
         \item vengono descritte le interazioni che possono avvenire tra le componenti che sono state individuate;
-        \item vengono descritti e contestualizzati gli eventuali design pattern che sono stati utilizzati durante la progettazione delle componenti;
-        \item vengono descritte le classi che sono state individuate all'interno di ciascuna componente (eventualmente suddivise per package di appartenenza);
+        \item vengono descritti e contestualizzati gli eventuali \insglo{design pattern} che sono stati utilizzati durante la progettazione delle componenti;
+        \item vengono descritte le classi che sono state individuate all'interno di ciascuna componente (eventualmente suddivise per \insglo{package} di appartenenza);
         \item vengono descritte le interazioni tra le classi che sono state individuate;
-        \item vengono descritti e contestualizzati i design pattern che sono stati utilizzati durante la progettazione delle classi.
+        \item vengono descritti e contestualizzati i \insglo{design pattern} che sono stati utilizzati durante la progettazione delle classi.
     \end{enumerate}
 	
     \level{3}{Descrizione delle componenti dell'Applicazione}
@@ -15,12 +15,12 @@
             \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiApplicazione}
             \caption{Diagramma delle componenti dell'Applicazione Android}
         \end{figure}
-        Di seguito vengono descritti i ruoli e le responsabilità delle varie componenti che sono state individuate durante la progettazione architetturale dell'Applicazione Android.
+        Di seguito vengono descritti i ruoli e le responsabilità delle varie componenti che sono state individuate durante la progettazione architetturale dell'Applicazione \insglo{Android}.
     	\level{4}{Model} 
-            Il Model è la componente che rappresenta l'astrazione dei grafici visualizzati nell'applicazione. In essa sono contenuti i dati riguardanti i grafici, assieme alle relative impostazioni. In particolare sono presenti i modelli di tutte le tipologie di chart implementati da \insglo{Norris}. Il Model fornisce per ciascuna tipologia di grafico i metodi per inserire i dati e configurare alcune impostazioni. Si occupa inoltre di gestire gli aggiornamenti dei grafici mantenendo una comunicazione con Norris tramite un canale websocket e di richiedere un chart utilizzando le \insglo{API} esterne di \insglo{Norris}. Infine nel Model sono memorizzate tutte le informazioni inerenti lo stato della sessione con l'istanza di Norris contenente i grafici che si vogliono visualizzare con l'applicazione.
+            Il Model è la componente che rappresenta l'astrazione dei grafici visualizzati nell'applicazione. In essa sono contenuti i dati riguardanti i grafici, assieme alle relative impostazioni. In particolare sono presenti i modelli di tutte le tipologie di chart implementati da \insglo{Norris}. Il Model fornisce per ciascuna tipologia di grafico i metodi per inserire i dati e configurare alcune impostazioni. Si occupa inoltre di gestire gli aggiornamenti dei grafici mantenendo una comunicazione con \insglo{Norris} tramite un canale \insglo{websocket} e di richiedere un chart utilizzando le \insglo{API} esterne di \insglo{Norris}. Infine nel Model sono memorizzate tutte le informazioni inerenti lo stato della sessione con l'istanza di \insglo{Norris} contenente i grafici che si vogliono visualizzare con l'applicazione.
     
        \level{4}{View}
-        La View è il componente che rappresenta le varie UI dell'applicazione. In tale componente potrebbero esser sollevati degli eventi scatenati dall'utente attraverso User Gesture. Questi eventi vengono mandati al Presenter che deciderà come comportarsi.
+        La View è il componente che rappresenta le varie UI dell'applicazione. In tale componente potrebbero esser sollevati degli eventi scatenati dall'utente attraverso User \insglo{Gesture}. Questi eventi vengono mandati al Presenter che deciderà come comportarsi.
        \level{4}{Presenter}
         Questo componente ha il compito di gestire tutto il controllo dell'applicazione. Le operazioni che esso gestisce sono riassunte nel seguente elenco:
         	\begin{itemize}
@@ -42,13 +42,13 @@
         In seguito all'esecuzione di una \insglo{gesture} da parte dell'utente, la View notifica il Presenter tramite l'emissione dell'evento opportuno. Il Presenter si occupa quindi di gestire quest'ultimo. Questa interazione si verifica in particolare quando l'utente seleziona un item della lista dei grafici presenti nell'istanza di \insglo{Norris} richiesta.
 
         \level{4}{Presenter - View}
-        Tale interazione rappresenta la selezione di un'activity modifica tale view. Ciò avviene ad ogni necessità di cambiare \insglo{Activity} e/o quando deve modificare o inizializare la view.
+        Tale interazione rappresenta la selezione di un'\insglo{activity} modifica tale view. Ciò avviene ad ogni necessità di cambiare \insglo{Activity} e/o quando deve modificare o inizializare la view.
 
         \level{4}{Presenter - Model}
         Il Presenter richiede al Model di modificare il proprio stato. Ciò avviene per esempio subito dopo l'utilizzo dell'\insglo{API} esterna di \insglo{Norris} per richiedere un grafico o in seguito all'arrivo di un pacchetto di aggiornamento.
 
         \level{4}{Model - Presenter}
-        Tale interazione rappresenta l'invio dei valori del chart provenienti dal server norris oppure, se nel Model è stato attivato il socket per l'aggiornamento, rappresenta la notifica del Model verso il Presenter di avvenuta modifica del chart sul server.
+        Tale interazione rappresenta l'invio dei valori del chart provenienti dal \insglo{server} \insglo{norris} oppure, se nel Model è stato attivato il socket per l'aggiornamento, rappresenta la notifica del Model verso il Presenter di avvenuta modifica del chart sul \insglo{server}.
         
 		\level{4}{Esempio di interazione tra le componenti}
 			\begin{figure}[H]\centering
@@ -57,12 +57,12 @@
 	    		\end{figure}
         
     \level{3}{Design pattern utilizzati con le componenti}
-    Riportiamo di seguito i pattern architetturali utilizzati nella progettazione delle componenti dell'applicazione Android.
+    Riportiamo di seguito i \insglo{pattern} architetturali utilizzati nella progettazione delle componenti dell'applicazione \insglo{Android}.
         \level{4}{Model View Presenter}
-            Model-View-Presenter (\insglo{MVP}) è un \insglo{pattern} architetturale utilizzato per separare il codice in blocchi di funzionalità ben distinte.\\
+            Model-View-Presenter (MVP) è un \insglo{pattern} architetturale utilizzato per separare il codice in blocchi di funzionalità ben distinte.\\
             Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:MVP}.
             \level{5}{Contesto di utilizzo}
-                L'\insglo{MVP} viene utilizzato per dividere le classi dell'applicazione \insglo{Android} in tre grandi componenti:
+                L'MVP viene utilizzato per dividere le classi dell'applicazione \insglo{Android} in tre grandi componenti:
                 \begin{itemize}
                     \item Model;
                     \item View;
@@ -70,7 +70,7 @@
                 \end{itemize}
 
     \level{3}{Descrizione delle classi dell'Applicazione Android}
-        In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno del \insglo{prodotto} Applicazione Android. Queste sono state suddivise in base al componente nelle quali sono contenute.
+        In questa sezione sono presenti le descrizioni di tutte le classi presenti all'interno del \insglo{prodotto} Applicazione \insglo{Android}. Queste sono state suddivise in base al componente nelle quali sono contenute.
         \input{Classi/Applicazione.tex}
         \input{Tex/ClassiAggiuntiveApp.tex}
     \input{Tex/InterazioniClassiApplicazione.tex}
@@ -217,7 +217,7 @@
 	        			\caption{Singleton pattern nell'applicazione Android}
 	    			\end{figure}
 	    		\level{4}{Strategy}
-			Strategy è un design pattern comportamentale che offre la possibilità di definire una famiglia di
+			Strategy è un \insglo{design pattern} comportamentale che offre la possibilità di definire una famiglia di
 algoritmi, incapsularli e renderli intercambiabili. Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:strategy}.
 				\level{5}{Contesto di utilizzo}
 					Le classi che implementano lo Strategy sono quelle che si occupano di aggiornare i diversi tipi di grafici. Le riportiamo di seguito:

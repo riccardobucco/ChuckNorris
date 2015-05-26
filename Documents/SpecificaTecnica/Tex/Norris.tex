@@ -1,13 +1,13 @@
 \level{2}{Norris}
-	Dopo che in precedenza è stata fornita una descrizione generale di Norris, è qui riportata la sua progettazione architetturale.\\
+	Dopo che in precedenza è stata fornita una descrizione generale di \insglo{Norris}, è qui riportata la sua progettazione architetturale.\\
 	La presente sezione riporta i risultati ottenuti tramite una rigida struttura:
 	\begin{enumerate}
 		\item vengono presentate e successivamente descritte le componenti individuate;
 		\item vengono descritte le interazioni che possono avvenire tra le componenti che sono state individuate;
-		\item vengono descritti e contestualizzati gli eventuali design pattern che sono stati utilizzati durante la progettazione delle componenti;
-		\item vengono descritte le classi che sono state individuate all'interno di ciascuna componente (eventualmente suddivise per package di appartenenza);
+		\item vengono descritti e contestualizzati gli eventuali \insglo{design pattern} che sono stati utilizzati durante la progettazione delle componenti;
+		\item vengono descritte le classi che sono state individuate all'interno di ciascuna componente (eventualmente suddivise per \insglo{package} di appartenenza);
 		\item vengono descritte le interazioni tra le classi che sono state individuate;
-		\item vengono descritti e contestualizzati i design pattern che sono stati utilizzati durante la progettazione delle classi.
+		\item vengono descritti e contestualizzati i \insglo{design pattern} che sono stati utilizzati durante la progettazione delle classi.
 	\end{enumerate}
 
     \level{3}{Descrizione delle componenti di Norris}
@@ -15,7 +15,7 @@
 	        \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiNorris}
 	        \caption{Diagramma delle componenti di Norris}
 	    \end{figure}
-    	Di seguito vengono descritti i ruoli e le responsabilità delle varie componenti che sono state individuate durante la progettazione architetturale di Norris.
+    	Di seguito vengono descritti i ruoli e le responsabilità delle varie componenti che sono state individuate durante la progettazione architetturale di \insglo{Norris}.
     	\level{4}{Internal API Manager}
 			La componente Internal \insglo{API} Manager rappresenta un controller per le \insglo{API} interne. Essa si occupa di implementare le funzionalità offerte dall'interfaccia delle \insglo{API} interne, ovvero:
 			\begin{itemize}
@@ -67,7 +67,7 @@
 			Il \insglo{design pattern} Bridge si differenzia dal \insglo{pattern} Adapter, in quanto il primo viene utilizzato fin dall'inizio della progettazione per consentire ad astrazioni ed implementazioni di variare in modo indipendente, mentre il secondo viene usato quando si vogliono adattare classi inizialmente non correlate e viene introdotto dopo che queste sono state progettate.
 			Per una descrizione più approfondita del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:bridge}.
 			\level{5}{Contesto di utilizzo}
-				In \insglo{Norris} questo \insglo{pattern} viene utilizzato nel \insglo{package} InternalAPIManager per separare l'implementazione dei chart (presente nel \insglo{package} DataModel) dall'interfaccia fornita allo sviluppatore. Viene inoltre utilizzato nel package ExteralAPIManger.
+				In \insglo{Norris} questo \insglo{pattern} viene utilizzato nel \insglo{package} InternalAPIManager per separare l'implementazione dei chart (presente nel \insglo{package} DataModel) dall'interfaccia fornita allo sviluppatore. Viene inoltre utilizzato nel \insglo{package} ExteralAPIManger.
 				\begin{figure}[H]\centering
 	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternNorris/Bridge1}
 	        		\caption{Bridge pattern in Norris}
@@ -182,7 +182,7 @@
 	    		\end{figure}
 	    		
 			\level{4}{Strategy}
-			Strategy è un design pattern comportamentale che offre la possibilità di definire una famiglia di
+			Strategy è un \insglo{design pattern} comportamentale che offre la possibilità di definire una famiglia di
 algoritmi, incapsularli e renderli intercambiabili. Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:strategy}.
 				\level{5}{Contesto di utilizzo}
 					Le classi che implementano lo Strategy sono quelle che si occupano di aggiornare i diversi tipi di grafici. Le riportiamo di seguito:

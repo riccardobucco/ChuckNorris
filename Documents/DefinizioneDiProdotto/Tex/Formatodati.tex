@@ -1,7 +1,7 @@
 % !TEX encoding = UTF-8 Unicode
 \level{1}{Richiesta dati al server APS} \label{app:aps}
-In tale appendice è riportato il formato che devono rispettare le richieste di dati al server messo a disposizione dall'APS. Viene inoltre riportato il modo in cui tale server risponde alla nostra richiesta, ovvero il formato che i dati assumono nella risposta che si riceve.\\
-La richiesta della posizione dell'autobus viene effettuata presso il server dell'APS tramite una richiesta HTTP con il seguente formato:
+In tale appendice è riportato il formato che devono rispettare le richieste di dati al \insglo{server} messo a disposizione dall'\insglo{APS}. Viene inoltre riportato il modo in cui tale \insglo{server} risponde alla nostra richiesta, ovvero il formato che i dati assumono nella risposta che si riceve.\\
+La richiesta della posizione dell'autobus viene effettuata presso il \insglo{server} dell'\insglo{APS} tramite una richiesta \insglo{HTTP} con il seguente formato:
 
 \begin{table}[H]
 	\centering
@@ -17,7 +17,7 @@ La richiesta della posizione dell'autobus viene effettuata presso il server dell
 	\caption{Richiesta dei dati al server APS}
 \end{table}
 
-La risposta dal server dell'APS è un array JSON, il quale viene definito con il tipo \texttt{Dataset}. Gli elementi dell'array sono oggetti che rappresentano un singolo autobus e hanno la seguente struttura:
+La risposta dal \insglo{server} dell'\insglo{APS} è un array \insglo{JSON}, il quale viene definito con il tipo \texttt{Dataset}. Gli elementi dell'array sono oggetti che rappresentano un singolo autobus e hanno la seguente struttura:
 
 \begin{table}[H]
 	\centering

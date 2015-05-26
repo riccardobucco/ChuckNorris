@@ -1,65 +1,65 @@
 \level{1}{Schemi JSON} \label{app:schemi}
-    In tale appendice vengono riportati i vari formati che sono assunti dagli oggetti JSON che sono presenti all'interno del progetto. Fare riferimento ad essi per creare e interpretare correttamente i vari pacchetti utilizzati dai metodi delle varie classi descritte all'interno del presente documento.\\
-    Per ogni tipologia di grafico (bar chart, line chart, map chart e table) sono qui presentati i formati dei pacchetti necessari durante le seguenti situazioni:
+    In tale appendice vengono riportati i vari formati che sono assunti dagli oggetti \insglo{JSON} che sono presenti all'interno del progetto. Fare riferimento ad essi per creare e interpretare correttamente i vari pacchetti utilizzati dai metodi delle varie classi descritte all'interno del presente documento.\\
+    Per ogni tipologia di grafico (\insglo{bar chart}, \insglo{line chart}, \insglo{map chart} e \insglo{table}) sono qui presentati i formati dei pacchetti necessari durante le seguenti situazioni:
     \begin{itemize}
         \item inserimento di dati durante l'inizializzazione del grafico;
         \item inserimento di impostazioni durante l'inizializzazione del grafico;
         \item inserimento di nuovi dati durante uno dei vari aggiornamenti a cui il grafico è soggetto.
     \end{itemize}
     \level{2}{BarChart}
-        In tale sezione viene riportato il formato che devono rispettare i pacchetti JSON quando vengono utilizzati all'interno di un bar chart.
+        In tale sezione viene riportato il formato che devono rispettare i pacchetti \insglo{json} quando vengono utilizzati all'interno di un \insglo{bar chart}.
         \level{3}{Dati}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante l'inizializzazione dei dati di un bar chart.
-            \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/BarChartData.json}
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante l'inizializzazione dei dati di un \insglo{bar chart}.
+            \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/BarChartData.json}}
         \level{3}{Impostazioni}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante l'inizializzazione dei delle impostazioni di un bar chart.
-            \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/BarChartSettings.json}
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante l'inizializzazione dei delle impostazioni di un \insglo{bar chart}.
+            \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/BarChartSettings.json}}
         \level{3}{Aggiornamenti}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante uno dei vari aggiornamenti a cui può essere sottoposto un bar chart (inplace).
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante uno dei vari aggiornamenti a cui può essere sottoposto un \insglo{bar chart} (inplace).
             \level{4}{InPlace}
-                \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/BarChartInPlaceUpdate.json}
+                \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/BarChartInPlaceUpdate.json}}
 
     \level{2}{LineChart}
-        In tale sezione viene riportato il formato che devono rispettare i pacchetti JSON quando vengono utilizzati all'interno di un line chart.
+        In tale sezione viene riportato il formato che devono rispettare i pacchetti \insglo{json} quando vengono utilizzati all'interno di un \insglo{line chart}.
         \level{3}{Dati}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante l'inizializzazione dei dati di un line chart.
-            \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/LineChartData.json}
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante l'inizializzazione dei dati di un \insglo{line chart}.
+            \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/LineChartData.json}}
         \level{3}{Impostazioni}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante l'inizializzazione dei delle impostazioni di un line chart.
-            \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/LineChartSettings.json}
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante l'inizializzazione dei delle impostazioni di un \insglo{line chart}.
+            \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/LineChartSettings.json}}
         \level{3}{Aggiornamenti}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante uno dei vari aggiornamenti a cui può essere sottoposto un line chart (inplace e stream).
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante uno dei vari aggiornamenti a cui può essere sottoposto un \insglo{line chart} (inplace e \insglo{stream}).
             \level{4}{InPlace}
-                \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/LineChartInPlaceUpdate.json}
+                \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/LineChartInPlaceUpdate.json}}
             \level{4}{Stream}
-                \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/LineChartStreamUpdate.json}
+                \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/LineChartStreamUpdate.json}}
 
     \level{2}{MapChart}
-        In tale sezione viene riportato il formato che devono rispettare i pacchetti JSON quando vengono utilizzati all'interno di un map chart.
+        In tale sezione viene riportato il formato che devono rispettare i pacchetti \insglo{json} quando vengono utilizzati all'interno di un \insglo{map chart}.
         \level{3}{Dati}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante l'inizializzazione dei dati di un map chart.
-            \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/MapChartData.json}
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante l'inizializzazione dei dati di un \insglo{map chart}.
+            \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/MapChartData.json}}
         \level{3}{Impostazioni}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante l'inizializzazione dei delle impostazioni di un map chart.
-            \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/MapChartSettings.json}
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante l'inizializzazione dei delle impostazioni di un \insglo{map chart}.
+            \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/MapChartSettings.json}}
         \level{3}{Aggiornamenti}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante uno dei vari aggiornamenti a cui può essere sottoposto un map chart (inplace e movie).
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante uno dei vari aggiornamenti a cui può essere sottoposto un \insglo{map chart} (inplace e \insglo{movie}).
             \level{4}{InPlace}
-                \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/MapChartInPlaceUpdate.json}
+                \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/MapChartInPlaceUpdate.json}}
             \level{4}{Movie}
-                \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/MapChartMovieUpdate.json}
+                \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/MapChartMovieUpdate.json}}
 
     \level{2}{Table}
-        In tale sezione viene riportato il formato che devono rispettare i pacchetti JSON quando vengono utilizzati all'interno di una table.
+        In tale sezione viene riportato il formato che devono rispettare i pacchetti \insglo{json} quando vengono utilizzati all'interno di una \insglo{table}.
         \level{3}{Dati}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante l'inizializzazione dei dati di una table.
-            \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/TableData.json}
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante l'inizializzazione dei dati di una \insglo{table}.
+            \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/TableData.json}}
         \level{3}{Impostazioni}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante l'inizializzazione dei delle impostazioni di una table.
-            \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/TableSettings.json}
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante l'inizializzazione dei delle impostazioni di una \insglo{table}.
+            \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/TableSettings.json}}
         \level{3}{Aggiornamenti}
-            Qui si fa riferimento al formato del pacchetto JSON che deve essere usato durante uno dei vari aggiornamenti a cui può essere sottoposto una table (inplace e stream).
+            Qui si fa riferimento al formato del pacchetto \insglo{json} che deve essere usato durante uno dei vari aggiornamenti a cui può essere sottoposto una \insglo{table} (inplace e \insglo{stream}).
             \level{4}{InPlace}
-                \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/TableInPlaceUpdate.json}
+                \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/TableInPlaceUpdate.json}}
             \level{4}{Stream}
-                \lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/TableStreamUpdate.json}
+                \ignoreglo{\lstinputlisting[language=json]{DefinizioneDiProdotto/Schemi/TableStreamUpdate.json}}

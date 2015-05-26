@@ -1,13 +1,13 @@
 \level{2}{Chuck}
-	Dopo che in precedenza è stata fornita una descrizione generale di Chuck, è qui riportata la sua progettazione architetturale.\\
+	Dopo che in precedenza è stata fornita una descrizione generale di \insglo{Chuck}, è qui riportata la sua progettazione architetturale.\\
 	La presente sezione riporta i risultati ottenuti tramite una rigida struttura:
 	\begin{enumerate}
 		\item vengono presentate e successivamente descritte le componenti individuate;
 		\item vengono descritte le interazioni che possono avvenire tra le componenti che sono state individuate;
-		\item vengono descritti e contestualizzati gli eventuali design pattern che sono stati utilizzati durante la progettazione delle componenti;
-		\item vengono descritte le classi che sono state individuate all'interno di ciascuna componente (eventualmente suddivise per package di appartenenza);
+		\item vengono descritti e contestualizzati gli eventuali \insglo{design pattern} che sono stati utilizzati durante la progettazione delle componenti;
+		\item vengono descritte le classi che sono state individuate all'interno di ciascuna componente (eventualmente suddivise per \insglo{package} di appartenenza);
 		\item vengono descritte le interazioni tra le classi che sono state individuate;
-		\item vengono descritti e contestualizzati i design pattern che sono stati utilizzati durante la progettazione delle classi.
+		\item vengono descritti e contestualizzati i \insglo{design pattern} che sono stati utilizzati durante la progettazione delle classi.
 	\end{enumerate}
 	
 	\level{3}{Descrizione delle componenti di Chuck}
@@ -15,16 +15,16 @@
 	        \includegraphics[width=\textwidth]{SpecificaTecnica/Pics/ComponentiChuck}
 	        \caption{Diagramma delle componenti di Chuck}
 	    \end{figure}
-	    Di seguito vengono descritti i ruoli e le responsabilità delle varie componenti che sono state individuate durante la progettazione architetturale di Chuck.
+	    Di seguito vengono descritti i ruoli e le responsabilità delle varie componenti che sono state individuate durante la progettazione architetturale di \insglo{Chuck}.
     	\level{4}{Model}
 			La componente Model è un modello che astrae i grafici visualizzati nella pagina web. Si divide a sua volta in due sottocomponenti:
 			\begin{itemize}
-				\item NorrisChart: contiene i dati riguardanti i grafici, assieme alle relative impostazioni. In particolare sono presenti i modelli di tutte le tipologie di chart implementati da Norris, ovvero Bar Chart, Line Chart, Map Chart e Table. Per ciascuna tipologia di grafico sono forniti i metodi per inserire i dati e configurare alcune impostazioni. Fornisce inoltre dei metodi per ottenere i valori di queste ultime, in modo da poterle riutilizzare per un altro grafico. Infine, per ogni grafico sono disponibili le stesse modalità di aggiornamento fornite da Norris.
-				\item Services: si occupa della comunicazione con Norris attraverso l'utilizzo delle API esterne. In particolare gestisce le richieste dei grafici che lo sviluppatore client vuole inserire nel proprio sito e la ricezione degli aggiornamenti dei grafici stessi. Gestisce inoltre l'autenticazione presso l'istanza di Norris contenente tali grafici, fornendo allo sviluppatore le funzioni di login e logout.
+				\item NorrisChart: contiene i dati riguardanti i grafici, assieme alle relative impostazioni. In particolare sono presenti i modelli di tutte le tipologie di chart implementati da \insglo{Norris}, ovvero \insglo{Bar Chart}, \insglo{Line Chart}, \insglo{Map Chart} e \insglo{Table}. Per ciascuna tipologia di grafico sono forniti i metodi per inserire i dati e configurare alcune impostazioni. Fornisce inoltre dei metodi per ottenere i valori di queste ultime, in modo da poterle riutilizzare per un altro grafico. Infine, per ogni grafico sono disponibili le stesse modalità di aggiornamento fornite da \insglo{Norris}.
+				\item Services: si occupa della comunicazione con \insglo{Norris} attraverso l'utilizzo delle \insglo{API} esterne. In particolare gestisce le richieste dei grafici che lo sviluppatore \insglo{client} vuole inserire nel proprio sito e la ricezione degli aggiornamenti dei grafici stessi. Gestisce inoltre l'autenticazione presso l'istanza di \insglo{Norris} contenente tali grafici, fornendo allo sviluppatore le funzioni di login e logout.
 			\end{itemize}
 
 		\level{4}{Directive}
-			La componente Directive fornisce le principali API di Chuck allo sviluppatore client. Le funzionalità offerte sono le seguenti:
+			La componente Directive fornisce le principali \insglo{API} di \insglo{Chuck} allo sviluppatore \insglo{client}. Le funzionalità offerte sono le seguenti:
 			\begin{itemize}
 				\item inserire nuovi grafici in un sito web;
 				\item scegliere i grafici da inserire;
@@ -34,7 +34,7 @@
 			Questa componente comunica le sccelte dell'utente al ViewModel e alla View.
     		
 		\level{4}{View}
-			La componente View ha il compito di visualizzare i grafici all'interno della pagina web. I grafici possono essere del tipo Bar Chart, Line Chart, Map Chart e Table. Quando un grafico viene aggiornato, questa componente si occupa di aggiornare anche la sua visualizzazione nella pagina web. Un altro compito della View consiste nell'accogliere gli input inerenti il filtraggio dei dati di un determinato chart e inviarli al ViewModel.
+			La componente View ha il compito di visualizzare i grafici all'interno della pagina web. I grafici possono essere del tipo \insglo{Bar Chart}, \insglo{Line Chart}, \insglo{Map Chart} e \insglo{Table}. Quando un grafico viene aggiornato, questa componente si occupa di aggiornare anche la sua visualizzazione nella pagina web. Un altro compito della View consiste nell'accogliere gli input inerenti il filtraggio dei dati di un determinato chart e inviarli al ViewModel.
 			
 		\level{4}{View Model}
 			La componente ViewModel fa da tramite tra la View e il Model. Si occupa di richiamare le funzionalità delle librerie grafiche che permettono alla View di visualizzare i grafici. Inoltre ha lo scopo di ricevere gli input provenienti dalla View ed effettuarne la gestione. L'input consiste in un sottoinsieme di dataset scelti dall'utente che sta visualizzando la pagina web. Il ViewModel deve far sì che vengano visualizzati solo questi dataset, in modo da permettere all'utente di applicare un filtro sulle serie.
@@ -53,7 +53,7 @@
 			Il ViewModel si occupa di aggiornare la View quando i dati del Model vengono modificati. In particolare ciò avviene dopo l'inserimento di un nuovo grafico o dopo un aggiornamento. Inoltre il ViewModel si occupa di modificare la View in seguito ad una richiesta di filtraggio dei dati.
 				
 		\level{4}{Directive - ViewModel}
-			La Directive demanda l'implementazione delle funzionalità fornite dalle API di Chuck ai metodi del ViewModel. Si occupa dunque di richiamare i metodi del ViewModel necessari, passando loro i parametri corretti.
+			La Directive demanda l'implementazione delle funzionalità fornite dalle \insglo{API} di \insglo{Chuck} ai metodi del ViewModel. Si occupa dunque di richiamare i metodi del ViewModel necessari, passando loro i parametri corretti.
 			
 		\level{4}{Directive - View}
 			La Directive si occupa di selezionare la View corrispondente al tipo di grafico che si vuole inserire nella pagina web.
@@ -64,12 +64,12 @@
 	    		\end{figure}
 	    		
 	\level{3}{Design pattern utilizzati con le componenti}
-		Riportiamo di seguito i pattern architetturali utilizzati nella progettazione delle componenti di Chuck.
+		Riportiamo di seguito i \insglo{pattern} architetturali utilizzati nella progettazione delle componenti di \insglo{Chuck}.
 		\level{4}{Model View ViewModel}
-			Model-View-ViewModel (MVVM) è un pattern architetturale utilizzato per separare il codice in blocchi di funzionalità ben distinte.\\
-			Per la descrizione del pattern e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:???}.
+			Model-View-ViewModel (MVVM) è un \insglo{pattern} architetturale utilizzato per separare il codice in blocchi di funzionalità ben distinte.\\
+			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:???}.
 			\level{5}{Contesto di utilizzo}
-				L'MVVM viene utilizzato per dividere le classi della libreria Chuck in tre grandi componenti:
+				L'MVVM viene utilizzato per dividere le classi della libreria \insglo{Chuck} in tre grandi componenti:
 				\begin{itemize}
 					\item View;
 					\item Model;
@@ -91,7 +91,7 @@
 				\begin{itemize}
 					\item ViewModel::BarChartViewModel e ViewModel::LineChartViewModel sono adattatori per \insglo{Chart.js};
 					\item ViewModel::MapChartViewModel è un adattatore per OpenStreetMaps;
-					\item ViewModel::TableViewModel è un adattatore per DataTables.
+					\item ViewModel::TableViewModel è un adattatore per \insglo{DataTables}.
 				\end{itemize}
 				  \begin{figure}[H]\centering
 	        		\includegraphics[width=\textwidth]{SpecificaTecnica/Pics/DesignPatternChuck/Adapter}
@@ -166,7 +166,7 @@
 	    		\end{figure}
 						
 				\level{4}{Strategy}
-			Strategy è un design pattern comportamentale che offre la possibilità di definire una famiglia di
+			Strategy è un \insglo{design pattern} comportamentale che offre la possibilità di definire una famiglia di
 algoritmi, incapsularli e renderli intercambiabili. Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:strategy}.
 				\level{5}{Contesto di utilizzo}
 					Le classi che implementano lo Strategy sono quelle che si occupano di aggiornare i diversi tipi di grafici. Le riportiamo di seguito:
