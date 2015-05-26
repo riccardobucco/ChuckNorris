@@ -55,7 +55,6 @@ describe('ChartRef(chart: ChartImpl)', function(){
 	            xlabel : '',
 	            ylabel : '',
 	            showGrid : false,
-	            showLegend : true,
 	            legendPosition : 'top-right',
 	            orientation : 'vertical',
 	            maxBars: 10,
