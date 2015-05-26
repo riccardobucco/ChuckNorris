@@ -15,7 +15,7 @@
  */
 
 describe('MapChartInPlaceUpdater', function(){
-    beforeEach(module('chuck-chart'));
+    beforeEach(module('norris-chartupdater'));
 
     var MapChartInPlaceUpdater;
 
