@@ -125,7 +125,7 @@ gulpease: _force
 	@ rm -f gulpease.tmp
 
 glossary: terms = $(shell xmllint --xpath '//entry/@name' Glossario/Termini.xml | grep -o '"[[:alpha:]|\.| ]*"' | grep -o '[[:alpha:]|\.| ]*' | tr "\n" "|" | head -c -1 | sed 's/\./\\./g')
-glossary: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|level\{[^}]*\}|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics[^{]*|caption|label|ref|nameref|pageref|hyperref|addtocounter
+glossary: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|level\{[^}]*\}|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics[^{]*|caption|label|ref|nameref|pageref|hyperref|addtocounter|texttt
 glossary: _force
 	@ #eliminazione tag
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/\\insglo\{([^\}]*)\}/\1/gi' {} \;

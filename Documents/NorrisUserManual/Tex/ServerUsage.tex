@@ -7,11 +7,11 @@
 				\begin{lstlisting}
 					var \insglo{http} = require('\insglo{http}');
 				\end{lstlisting}
-				\item Create a new instance of \texttt{\insglo{http}.\insglo{Server}}:
+				\item Create a new instance of \texttt{http.Server}:
 				\begin{lstlisting}
 					var \insglo{server} = \insglo{http}.createServer();
 				\end{lstlisting}
-				\texttt{\insglo{server}} will emit events you can listen. For example the event \texttt{'request'} is emitted each time there is a request.
+				\texttt{server} will emit events you can listen. For example the event \texttt{'request'} is emitted each time there is a request.
 				\item Make the \insglo{HTTP} \insglo{server} accept connections on the specified \texttt{port}:
 				\begin{lstlisting}
 					\insglo{server}.listen(port);
@@ -38,7 +38,7 @@
 				\begin{lstlisting}
 					var \insglo{norris} = require('\insglo{norris}');
 				\end{lstlisting}
-				\item Create a new instance of \insglo{Norris}, and make it accessible by a \insglo{client} application at the given endpoint (e.g. \texttt{'/\insglo{norris}'}):
+				\item Create a new instance of \insglo{Norris}, and make it accessible by a \insglo{client} application at the given endpoint (e.g. \texttt{'/norris'}):
 				\begin{lstlisting}
 					var nrr = \insglo{norris}(\insglo{server}, endpoint);
 				\end{lstlisting}
