@@ -9,7 +9,8 @@
 	<distribution></distribution>
 
 	<sections>
-        <name>Tex/Server.tex</name>        
+        <name>Tex/Server.tex</name>
+        <name>Tex/ObjectsDescription.tex</name>     
     </sections>
 	   
 	<changes>

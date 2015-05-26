@@ -1,0 +1,134 @@
+\level{1}{Objects description}
+	In this section it's described the format that every JSON object should follow when they are used inside this product. You may use them in the following situations:
+	\begin{itemize}
+		\item addition of data during the chart's inizialization;
+		\item addition of settings during the chart's initialization;
+		\item addition of new data during the different updates.
+	\end{itemize}
+
+	\level{2}{Data inizialization}
+	When you are creating a chart and you want to add some data, make sure to set the properties of the \textbf{Data} object described below, with the right format.
+		\level{3}{Bar chart and Line chart} \label{sec:dataBarLine}
+		\begin{description}
+			\item[labels] This is an array of items, which have type String. It indicates the values of the “x” axis.
+			\item[datasets] This is an array of objects, which have the following properties: 
+				\begin{itemize}
+					\item \textbf{name}: it's a String, which describes the name of the object. 
+					\item \textbf{color}: it's an object with the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1. 
+					\item \textbf{values}: it's an array of numbers which indicates the values of the “y” axis.
+					Note that this property it's mandatory.
+				\end{itemize}
+		\end{description}
+		Note that the “labels”, “dataset” and “values” properties are mandatory, and when you want to specify a color you neccesarily have to indicate at least the value of “r”, “g” and “b”.
+		\level{3}{Map chart}
+		The Data object of a map chart it's an array of objects with the following “name/value” pairs.
+		\begin{description}
+			\item[name] This is a String, which represents the name of the object.
+			\item[color] It contains the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1. 
+			\item[values] This is an array of objects, which contains the following properties:
+				\begin{itemize}
+					\item \textbf{x}: it's a number that represents the longitude;
+					\item \textbf{y}: it's a number that represents the latitude;
+					\item \textbf{id}: it's a String for arbitrary text containing the notes.
+				\end{itemize}
+		\end{description}
+		Note that the “values” properties it's mandatory, in particular “x” and “y” are indispensable.
+		\level{3}{Table}
+		\begin{description}
+			\item[headers] This is an array of String data, which represent the headers of each columns.
+			\item[datasets] This is an array containing an array of objects, which have the following properties:
+			\begin{itemize}
+				\item \textbf{color}: it's an object with the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1.
+				“color” sets the color of the text in a cell.
+				\item \textbf{background}: it's an object with the same properties of “color” but it sets the background color of the cell.
+			\end{itemize}
+			Each array contained in “datasets” forms a row of the table.
+			\item[value] It's a String which represents the text of the cell.
+		\end{description}
+		You have to keep in mind that the “headers”, “datasets” and “values” properties are mandatory. The same applies for the properties “r”, “g”, “b” of “color”.
+
+	\level{2}{Settings}
+	When you want to specify the settings of a chart, you have to set the properties of the JSON object in the right way, depending on the type of the chart.\\
+	For every type of charts, there are some basic properties that can be set. The description of those settings follows.
+	\begin{description}
+			\item[title] It's a String which represents the title of the chart.
+			\item[description] It's a String which gives a description of the chart.
+	\end{description}
+	A description of the properties specific for the different type of chart, follows.
+		\level{3}{Bar chart}
+		\begin{description}
+			\item[xLabel] It's a String used for setting the label's name of the “x” axis.
+			\item[yLabel] It's a String used for setting the label's name of the “y” axis.
+			\item[showGrid] This is a boolean which specify if the grid of the chart has to be shown or not.
+			\item[legendPosition] It's a String, chosen from a set of values, which tells where the legend has to be positioned. This property can assume the values: “top-left”, “bottom-left”, “top-right” or “bottom-right”.
+			\item[orientation] It'a String which specify the orientation of the chart. It can assume the value “vertical” or “horizontal”.
+			\item[style] It's an object with the following properties:
+			\begin{itemize}
+				\item \textbf{barValueSpacing}: 
+				\item \textbf{barDatasetSpacing}:
+			\end{itemize}
+		\end{description}
+		\level{3}{Line chart}
+		The line chart has some of the same settings properties already described for the bar chart, such as “xLabel”, “yLabel”, “showGrid” and “legendPosition” but it doesn't have the property for the orientation of it. \\
+		The line chart can also change the following settings:
+		\begin{itemize}
+			\item \textbf{maxPoints}: it's an integer describing the maximum number of points of the chart (the minimum is 1);
+			\item \textbf{format}: it's an object with two properties. The first (“pointDotRadius”) it's a number indicating the radius of each dot in pixels. The second one (“bezierCurve”) is a boolean which indicates whether the line is curved between the points.
+		\end{itemize}
+		\level{3}{Map chart}
+		The map chart, in addition to the “legendPosition” property, which has already been described for the bar chart and the “maxPoint” property, already specified for the line chart, permits, also, to change the following settings:
+		\begin{itemize}
+			\item \textbf{centerCoordinates}: it's an object with two properties. They both are two numbers (“x” and “y”) that indicates the center of the map and they're mandatory if you add this property.
+			\item \textbf{area}: it's a number which has a minimum value of 0. It represents the value of the area of the map.
+			\item \textbf{style}: it contains the “marker” property, which is a String, usefull to set the type of the marker.
+		\end{itemize}
+		\level{3}{Table}
+		\begin{description}
+			\item[maxRows] It's an integer which indicates the maximum number of rows of the table. The minimum value is 1.
+			\item[showTableGrid] This is a boolean which specify if the grid of the table has to be shown or not.
+			\item[newLinePosition] It's a String, chosen from a set of values, which tells where the new line has to be positioned. This property can assume the values: “top” or “bottom”.
+		\end{description}
+
+	\level{2}{Updates}
+	A description of the JSON format of an update package, depending on the type of the chart, follows. 
+		\level{3}{Bar chart}
+		The bar chart can be updated with the “in place” method. The format of this kind of package should have the properties described below.
+		\begin{description}
+			\item[position] It's an object with two “name/value” pairs: “x” and “y”. They both are two integers, that can assume a minimum value of 0, and specify the position of the data that has to be updated.
+			\item[data] It's a number that represents the update data.
+		\end{description}
+		Both these properties are mandatory.
+		\level{3}{Line chart}
+		The line chart can be updated with the “in place” method or the “stream” method. \\
+		For the “in place” method, the format of the JSON object is the same of the one already described for the bar chart. Instead, the properties of the “stream” method are described below.
+		\begin{description}
+			\item[label] It's a String that indicates the x-value of what it's going to be updated.
+			\item[data] It's an array of number which represents the y-values of the data that's going to be updated.
+		\end{description}
+		Both these properties are mandatory.
+		\level{3}{Map chart}
+		The map chart can be updated with the “in place” method or the “movie” method. \\
+		The first one requests the properties described below.
+		\begin{description}
+			\item[position] It's an object formed by two “name/value” pairs: “series” and “index”. Both are integers that can assume at least a 0 value.
+			\item[data] It's an object formed by three “name/value” pairs: 
+			“x” and “y”, which are two numbers indicating the update value and “id” which is a String. It's mandatory to set at least the values “x” and “y” or the “id” property.
+		\end{description}
+		The “movie” method follow the format described below.
+		\begin{description}
+			\item[inplace] It's an array containing the “position” and “data” properties described for the “in place” method.
+			\item[stream] It's an array of objects with the following properties:
+			\begin{itemize}
+				\item \textbf{series}: it's an integer representing the number of the series;
+				\item \textbf{data}: it's an object with the “x”, “y” and “id” properties.
+			\end{itemize}
+			\item[delete] It's an array of objects with the “series” and “index” properties (they must be integers), the “id” property (which has to be a String).
+		\end{description}
+		\level{3}{Table}
+		The table can be updated with the “in place” method or the “stream” method.
+		The properties required by the “in place” method are described below.
+		\begin{description}
+			\item[position] It's an object with two “name/value” pairs: “x” and “y”. They both are integers that can assume at least a 0 value.
+			\item[data] It's an object with three properties: “color” (which has been described in the section \nameref{sec:dataBarLine}), “background” and “value” which is a String that indicates the update value.
+		\end{description}
+		The “stream” method, instead, just requires the “color”, “background” and “value” properties, already described above.
