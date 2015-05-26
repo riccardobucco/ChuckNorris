@@ -33,27 +33,25 @@ describe('LineChartInPlaceUpdater', function(){
 		it('should update a given linechart with the inplace method',function(){
 			var chart = {
 				data: {
-    				headers: ['uno','due','tre'],
-    				datasets: [
-				        [ {value: '1'}, {value: '2'}, {value: '3'} ],
-				        [ {value: '4'}, {value: '5'}, {value: '6'} ]
-				    ]
- 				}
+				    datasets: [
+				        {values: [1,2,3,4]},
+				        {values: [1,2,3,4]},
+				        {values: [1,2,3,4]}
+					]
+				}
 			};
 			chart.getData = function() {return this.data;};
 			chart.setData = function(par) {this.data = par;};
 			var newData = [
-        		[ {value: '9999'}, {value: '8888'}, {value: '7777'} ],
-        		[ {value: '6666'}, {value: '5555'}, {value: '4444'} ]
-    		];
+			    { position: {x:0, y:0}, value: 'foo' },
+			    { position: {x:0, y:1}, value: 'foo' }
+			];
 			var updatedData = {
-				headers: ['uno','due','tre'],
 				datasets: [
-			        [ {value: '1'}, {value: '2'}, {value: '3'} ],
-			        [ {value: '4'}, {value: '5'}, {value: '6'} ],
-			        [ {value: '9999'}, {value: '8888'}, {value: '7777'} ],
-        			[ {value: '6666'}, {value: '5555'}, {value: '4444'} ]
-			    ]
+			        {values: ['foo','foo',3,4]},
+			        {values: [1,2,3,4]},
+			        {values: [1,2,3,4]}
+				]
 			};
 			(new LineChartInPlaceUpdater()).update(chart, newData);
 			assert.deepEqual(updatedData, chart.data);

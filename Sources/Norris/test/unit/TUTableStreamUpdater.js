@@ -21,9 +21,15 @@ describe('TableStreamUpdater', function(){
 
 	describe('update(chart: ChartImpl, updateData: ChartUpdate): void', function(){
 		it('should not accept a chart without data',function(){
-			var chart = {data: {}};
+			var chart = {
+				data: {},
+				settings: {
+					maxRows: 10
+				}
+			};
 			chart.getData = function() {return this.data;};
 			chart.setData = function(data) {this.data = data;};
+			chart.getSettings = function() {return this.settings;};
 			var newData = [
 		        [{value: '9999'}, {value: '8888'}, {value: '7777'}],
 		        [{value: '6666'}, {value: '5555'}, {value: '4444'}]
@@ -38,10 +44,14 @@ describe('TableStreamUpdater', function(){
 				        [ {value: '1'}, {value: '2'}, {value: '3'} ],
 				        [ {value: '1'}, {value: '1'}, {value: '1'} ]
 				    ]
-				 }
+				},
+				settings: {
+					maxRows: 10
+				}
 			};
 			chart.getData = function() {return this.data;};
 			chart.setData = function(par) {this.data = par;};
+			chart.getSettings = function() {return this.settings;};
 			var newData = [
 		        [ {value: '9999'}, {value: '8888'}, {value: '7777'}, {value: 'tooMuch1'} ],
 		        [ {value: '6666'}, {value: '5555'}, {value: '4444'}, {value: 'tooMuch2'} ]
@@ -56,10 +66,14 @@ describe('TableStreamUpdater', function(){
 				        [ {value: '1'}, {value: '2'}, {value: '3'} ],
 				        [ {value: '1'}, {value: '1'}, {value: '1'} ]
 				    ]
-				 }
+				},
+				settings: {
+					maxRows: 10
+				}
 			};
 			chart.getData = function() {return this.data;};
 			chart.setData = function(par) {this.data = par;};
+			chart.getSettings = function() {return this.settings;};
 			var newData = [
 		        [ {value: '9999'}, {value: '8888'}, {value: '7777'} ],
 		        [ {value: '6666'}, {value: '5555'}, {value: '4444'} ]
