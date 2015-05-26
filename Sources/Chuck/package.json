@@ -1,7 +1,7 @@
 {
   "name": "chuck-rtc",
   "version": "0.0.0",
-  "description": "",
+  "description": "Norris real time charts",
   "scripts": {
     "pretest": "npm install",
     "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
