@@ -1,3 +1,19 @@
+/*
+* Name: PresenterImpl.java
+* Package: it.kaizenteam.app.presenter
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/presenter
+* Date: 19/05/2015
+* Version: 0.01
+*
+* History:
+* =================================================================
+* Version	Date	Programmer	Changes
+* =================================================================
+* v0.01	2015-05-19	Alessandro Moretto	Creazione file
+* =================================================================
+*
+*/
+
 package it.kaizenteam.app.presenter;
 
 import java.util.HashMap;
@@ -6,16 +22,49 @@ import java.util.Map;
 import it.kaizenteam.app.view.View;
 
 /**
- * Created by Moro on 19/05/15.
+ * This class represents a generic presenter and therefore is an abstract class. It contains inside the reference to the view in which it is associated.
+ * It contains also the interface PresenterFactory and a hashmap that deals with the correspondence between the types of presenters and their factory classes.
+ * The class contains constants static serving to identify the various types of presenter.
  */
 public class PresenterImpl implements Presenter{
+    /**
+     * Hashmap that deals with the correspondence between the types of presenters and their factory classes
+     */
     private static Map<Integer,PresenterFactory> factories=new HashMap<>();
+
+    /**
+     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
+     */
     public static Integer LOGIN_TYPE=0;
+
+    /**
+     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
+     */
     public static Integer LIST_TYPE=1;
+
+    /**
+     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
+     */
     public static Integer BARCHART_TYPE=2;
+
+    /**
+     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
+     */
     public static Integer MAPCHART_TYPE=3;
+
+    /**
+     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
+     */
     public static Integer LINECHART_TYPE=4;
+
+    /**
+     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
+     */
     public static Integer TABLE_TYPE=5;
+
+    /**
+     * This attribute is a reference to the view on the presenter.
+     */
     protected View view;
 
 
@@ -42,7 +91,7 @@ public class PresenterImpl implements Presenter{
     }
 
     /**
-     *
+     * This method is used to record a certain factory to its presenter nell'hashmap class.
      * @param presenterType
      * @param factory
      */
@@ -51,10 +100,10 @@ public class PresenterImpl implements Presenter{
     }
 
     /**
-     *
+     * This method creates the presenter of the parameter presenterType, initializes the view field with the parameter view and finally returns the interface Presenter of the instance created.
      * @param presenterType
      * @param view
-     * @return
+     * @return the interface Presenter of the instance created
      */
     public static Presenter create(Integer presenterType, View view){
         PresenterImpl ret = factories.get(presenterType).createPresenter();
@@ -63,12 +112,12 @@ public class PresenterImpl implements Presenter{
     }
 
     /**
-     *
+     * This method is the constructor of the class. It is protected to disallow direct creation of an instance of that class by classes not authorized.
      */
     protected PresenterImpl(){}
 
     /**
-     *
+     * PresenterFactory is the interface of the factory classes that deal creation of various types of presenter. It is internal to the class PresenterImpl.
      */
     protected interface PresenterFactory{
         PresenterImpl createPresenter();
