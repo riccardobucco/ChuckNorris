@@ -2,14 +2,14 @@
 * Name: MapChartStreamUpdate.java
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
-* Date: 24/05/2015
+* Date: 2015-05-19
 * Version: 0.01
 *
 * History:
 * =================================================================
 * Version	Date	Programmer	Changes
 * =================================================================
-* v0.01	2015-05-24	Alessandro Moretto	Creazione file
+* v0.01	2015-05-19	Kaizen Team	Creazione file
 * =================================================================
 *
 */

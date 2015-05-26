@@ -2,14 +2,14 @@
 * Name: BaseActivity.java
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
-* Date: 19/05/2015
+* Date: 2015-05-24
 * Version: 0.01
 *
 * History:
 * =================================================================
 * Version	Date	Programmer	Changes
 * =================================================================
-* v0.01	2015-05-22	Alessandro Moretto	Creazione file
+* v0.01	2015-05-22	Kaizen Team	Creazione file
 * =================================================================
 *
 */

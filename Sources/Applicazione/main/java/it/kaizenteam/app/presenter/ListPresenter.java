@@ -2,14 +2,14 @@
 * Name: ListPresenter.java
 * Package: it.kaizenteam.app.presenter
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/presenter
-* Date: 19/05/2015
+* Date: 2015-05-22
 * Version: 0.01
 *
 * History:
 * =================================================================
 * Version	Date	Programmer	Changes
 * =================================================================
-* v0.01	2015-05-19	Alessandro Moretto	Creazione file
+* v0.01	2015-05-22	Kaizen Team	Creazione file
 * =================================================================
 *
 */
