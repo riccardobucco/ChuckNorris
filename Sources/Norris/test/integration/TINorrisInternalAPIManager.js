@@ -1,9 +1,4 @@
 /*
-Viene verificato il corretto funzionamento delle API interne, ovvero si controlla che le API interne 
-apportino al modello le modifiche corrette a seconda dell'azione richiesta.
-*/
-
-/*
  * Name: {TINorrisNorrisInternalAPIManager.js}
  * Module: {}
  * Location: {Norris/test/integration}
