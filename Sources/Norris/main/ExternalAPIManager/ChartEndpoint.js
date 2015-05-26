@@ -17,7 +17,7 @@
 var ExternalAPIController = require('./ExternalAPIController.js');
 var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
 
-var socketio = require('socket.io');
+var sio = require('socket.io');
 
 /**
  * Creates a ChartEndpoint.
@@ -29,9 +29,9 @@ function ChartEndpoint(controller) {
     if (!(this instanceof ChartEndpoint)) return new ChartEndpoint(controller);
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
-        this.socketio=socketio(controller.getServer()); // the server is listening for socket.io connections
-        this.controller.on('create', function (chart) {
-            var nsp = this.socketio.of('/' + chart.getId());
+        var socketio = sio(controller.getServer()); // the server is listening for socket.io connections
+        this.controller.model.on('create', function (chart) {
+            var nsp = socketio.of('/' + chart.getId());
 
             nsp.on('connection', function (socket) {
                 socket.emit('chart', chart.getType(), chart.getSettings(), chart.getData());

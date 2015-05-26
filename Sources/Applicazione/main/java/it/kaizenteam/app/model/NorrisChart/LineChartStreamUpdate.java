@@ -19,22 +19,25 @@ package it.kaizenteam.app.model.NorrisChart;
 import java.util.ArrayList;
 
 /**
- * Created by Moro on 24/05/15.
+ * This class represents a update stream package of a line chart.
  */
 public class LineChartStreamUpdate implements ChartUpdate  {
+    /**
+     * This attribute represents the values of the given date.
+     */
     private ArrayList<LineChartElementStreamUpdate> values;
 
     /**
-     *
-     * @param values
+     * This method is the constructor to create the update package.
+     * @param values elements of the update package
      */
     public LineChartStreamUpdate(ArrayList<LineChartElementStreamUpdate> values){
         this.values=values;
     }
 
     /**
-     *
-     * @return
+     * This method is responsible for returning the data of the update package.
+     * @return data of the update package
      */
     public ArrayList<LineChartElementStreamUpdate> getData(){
         return values;

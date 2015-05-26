@@ -19,22 +19,25 @@ package it.kaizenteam.app.model.NorrisChart;
 import java.util.ArrayList;
 
 /**
- * Created by Moro on 24/05/15.
+ * This class represents a removal package of a map chart.
  */
 public class MapChartDeleteUpdate {
+    /**
+     * This attribute represents the values of the given date.
+     */
     private ArrayList<MapPoint> values;
 
     /**
-     *
-     * @param values
+     * This method is the constructor to create the update package.
+     * @param values of the update package
      */
     public MapChartDeleteUpdate(ArrayList<MapPoint> values){
         this.values=values;
     }
 
     /**
-     *
-     * @return
+     * This method is responsible for returning the new data of the update package.
+     * @return data of the update package
      */
     public ArrayList<MapPoint> getData(){
         return values;

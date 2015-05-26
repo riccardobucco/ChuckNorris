@@ -10,7 +10,7 @@
         "description": {
             "type": "string"
         },
-        "maxValues": {
+        "maxRows": {
             "type": "integer",
             "minimum": 1
         },

@@ -1,19 +1,34 @@
+/*
+* Name: TableSettingsImpl.java
+* Package: it.kaizenteam.app.model.NorrisChart
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
+* Date: 24/05/2015
+* Version: 0.01
+*
+* History:
+* =================================================================
+* Version	Date	Programmer	Changes
+* =================================================================
+* v0.01	2015-05-24	Alessandro Moretto	Creazione file
+* =================================================================
+*
+*/
+
 package it.kaizenteam.app.model.NorrisChart;
 
 import org.json.JSONObject;
 
 /**
- * Created by Moro on 24/05/15.
- */
-
-/**
- *
+ * This class represents the settings for a table.
  */
 public class TableSettingsImpl implements ChartSettings {
+    /**
+     * This attribute stores the JSON object with the settings of the chart.
+     */
     private JSONObject settings;
 
     /**
-     *
+     * Constructor
      * @param settings
      */
     public TableSettingsImpl(JSONObject settings){
@@ -21,8 +36,8 @@ public class TableSettingsImpl implements ChartSettings {
     }
 
     /**
-     *
-     * @return
+     * This method has the task to returning a boolean that says if the border lines of the cells must be visible or not.
+     * @return boolean that says if the border lines of the cells must be visible or not
      */
     public boolean getBorderLineVisibility(){
         //TODO

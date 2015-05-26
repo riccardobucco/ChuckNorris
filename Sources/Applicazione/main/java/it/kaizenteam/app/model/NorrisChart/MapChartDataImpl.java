@@ -19,22 +19,25 @@ package it.kaizenteam.app.model.NorrisChart;
 import java.util.ArrayList;
 
 /**
- * Created by Moro on 24/05/15.
+ * This class represents the data of a map chart.
  */
 public class MapChartDataImpl implements ChartData {
+    /**
+     * This attribute represents the values of the chart.
+     */
     private ArrayList<MapSet> values;
 
     /**
-     *
-     * @param values
+     * This method is the constructor of MapChartDataImpl. It has values of chart as parameter.
+     * @param values of chart
      */
     public MapChartDataImpl(ArrayList<MapSet> values){
         this.values=values;
     }
 
     /**
-     *
-     * @return
+     * This method has the task of returning the data of the chart.
+     * @return data of the chart
      */
     public ArrayList<MapSet> getData(){
         return values;
@@ -43,8 +46,8 @@ public class MapChartDataImpl implements ChartData {
     //TODO rimuovere...viene modificato per riferimento
 
     /**
-     *
-     * @param values
+     * This method has the task to set the data of the chart.
+     * @param values data of the chart to set
      */
     public void setData(ArrayList<MapSet> values){
         this.values=values;

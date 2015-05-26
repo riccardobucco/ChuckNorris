@@ -29,13 +29,21 @@ function ChuckProviderEndpoint(controller) {
     if (!(this instanceof ChuckProviderEndpoint)) return new ChuckProviderEndpoint(controller);
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
-        this.app=express();
+        var app = this.app = express();
+        this.controller.getServer().on('request', app);
+        this.app.get(this.controller.getEndpoint() + '/chuck', this.handleRequest);
     }else {
         this.controller=null;
         this.app=null;
         console.log("ERROR: an ExternalAPIController is required.")
     }
 }
+
+ChuckProviderEndpoint.prototype.handleRequest = function (req, res) {
+    res.sendFile(__dirname + '../../resources/Chuck.min.js');
+};
+
+
 
 /* ChuckProviderEndpointFactory ------------------------------------------------------- */
 

@@ -17,19 +17,38 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * Created by Moro on 24/05/15.
+ * This class represents an element of the update package in place of a map chart.
  */
 public class MapChartElementInPlaceUpdate {
+    /**
+     * This attribute represents the values of the given date.
+     */
     private MapPoint value;
+
+    /**
+     * This attribute is the abscissa in the map of the data to be replaced.
+     */
     private double x;
+
+    /**
+     * This attribute is the ordinate in the map of the data to be replaced.
+     */
     private double y;
+
+    /**
+     * This attribute is the id of the data to be replaced.
+     */
     private String id;
+
+    /**
+     * 
+     */
     private boolean useId;
 
     /**
-     *
-     * @param value
-     * @param id
+     * This method is a constructor to create the update package.
+     * @param value new data of update package
+     * @param id of the point to be modified
      */
     public MapChartElementInPlaceUpdate(MapPoint value, String id){
         this.value=value;
@@ -38,10 +57,10 @@ public class MapChartElementInPlaceUpdate {
     }
 
     /**
-     *
-     * @param value
-     * @param x
-     * @param y
+     * This method is a constructor to create the update package.
+     * @param value new data of update package
+     * @param x position of point
+     * @param y position of point
      */
     public MapChartElementInPlaceUpdate(MapPoint value, double x, double y){
         this.value=value;
@@ -51,16 +70,16 @@ public class MapChartElementInPlaceUpdate {
     }
 
     /**
-     *
-     * @return
+     * This method is responsible for returning the new data of the update package.
+     * @return new data of the update package
      */
     public MapPoint getData(){
         return value;
     }
 
     /**
-     *
-     * @return
+     * This method is responsible for returning the position in mapchart of the point to edit.
+     * @return x-coordinate of point to edit
      * @throws Exception
      */
     public double getX() throws Exception {
@@ -70,8 +89,8 @@ public class MapChartElementInPlaceUpdate {
     }
 
     /**
-     *
-     * @return
+     * This method is responsible for returning the position in mapchart of the point to edit.
+     * @return y-coordinate of point to edit
      * @throws Exception
      */
     public double getY() throws Exception {
@@ -81,8 +100,8 @@ public class MapChartElementInPlaceUpdate {
     }
 
     /**
-     *
-     * @return
+     * This method is responsible for returning the id of the point to edit.
+     * @return id of the point to be point to edit
      * @throws Exception
      */
     public String getId() throws Exception {

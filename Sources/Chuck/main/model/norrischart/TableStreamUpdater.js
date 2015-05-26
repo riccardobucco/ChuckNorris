@@ -43,6 +43,10 @@ angular.module('norris-chartupdater')
                 for(var i=0; i<updateData.length; i++) {
                     if (updateData[i].length==data.headers.length) {
                         data.datasets.push(updateData[i]);
+                        if (data.datasets.length>chart.getSettings().maxRows) {
+                            data.datasets[0]=null;
+                            data.datasets== data.datasets.filter(function (e) {return e!=null;});
+                        }
                     }
                     else {
                         throw ("wrongUpdateData");

@@ -1,26 +1,46 @@
+/*
+* Name: MapChartMovieUpdater.java
+* Package: it.kaizenteam.app.model.NorrisChart
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
+* Date: 24/05/2015
+* Version: 0.01
+*
+* History:
+* =================================================================
+* Version	Date	Programmer	Changes
+* =================================================================
+* v0.01	2015-05-24	Alessandro Moretto	Creazione file
+* =================================================================
+*
+*/
+
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * Created by Moro on 19/05/15.
+ * This class is responsible for defining the movie update method of a map chart. It can access the MapChartImpl private data fields because it is an inner class.  
+ * In particular it can access in DataObject contained in MapChartImpl and change its values.
  */
 public class MapChartMovieUpdater implements Updater {
+    /**
+     * The static attribute is the unique instance of the class.
+     */
     private static MapChartMovieUpdater instance;
 
     /**
-     *
-     * @return
+     * This method has the task of returning the unique instance of that class, and creating it if not exists.
+     * @return the unique instance of the class
      */
     public static Updater getInstance(){
         return instance;
     }
 
     /**
-     *
+     * Constructor
      */
     private MapChartMovieUpdater(){}
 
     /**
-     *
+     * This method has the task of updating the chart passed as a parameter (chart) by using the update package (UpdateData).
      * @param chart
      * @param updateData
      */

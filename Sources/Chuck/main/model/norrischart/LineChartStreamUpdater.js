@@ -41,11 +41,18 @@ angular.module('norris-chartupdater')
             var data=chart.getData();
             if (!isEmpty(data)) {
                 for(var i=0; i<updateData.length; i++) {
-                    data.labels.push(updateData[i].label);
                     if (updateData[i].data.length==data.datasets.length) {
                         for(var k=0; k<data.datasets.length; k++) {
                             data.datasets[k].values.push(updateData[i].data[k]);
+                            if (data.datasets[k].values.length>chart.getSettings().maxPoints) {
+                                data.datasets[k].values.shift();
+                            }
                         }
+                        data.labels.push(updateData[i].label);
+                        if (data.labels.length>chart.getSettings().maxPoints) {
+                            data.labels.shift();
+                        }
+
                     }
                     else {
                         throw ("wrongUpdateData");
