@@ -21,9 +21,15 @@ describe('LineChartStreamUpdater', function(){
 
 	describe('update(chart: ChartImpl, updateData: ChartUpdate): void', function(){
 		it('should not accept a chart without data',function(){
-			var chart = {data: {}};
+			var chart = {
+				data: {},
+				settings: {
+					maxPoints: 10
+				}
+			};
 			chart.getData = function() {return this.data;};
 			chart.setData = function(data) {this.data = data;};
+			chart.getSettings = function() {return this.settings;};
 			var newData = [
 			    {label: 'foo', data: [1,2,3,4,5]},
     			{label: 'bar', data: [1,2,3,4,5]}
@@ -39,10 +45,14 @@ describe('LineChartStreamUpdater', function(){
         				{name: 'pluto', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]},
         				{name: 'paperino', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]}
     				]
- 				}
+ 				},
+ 				settings: {
+					maxPoints: 10
+				}
 			};
 			chart.getData = function() {return this.data;};
 			chart.setData = function(par) {this.data = par;};
+			chart.getSettings = function() {return this.settings;};
 			var newData = [
 			    {label: 'foo', data: [1,2,3,4,5]},
     			{label: 'bar', data: [1,2,3,4,5]}
@@ -58,10 +68,14 @@ describe('LineChartStreamUpdater', function(){
         				{values: [1,2,3,4]},
         				{values: [1,2,3,4]}
     				]
- 				}
+ 				},
+ 				settings: {
+					maxPoints: 10
+				}
 			};
 			chart.getData = function() {return this.data;};
 			chart.setData = function(par) {this.data = par;};
+			chart.getSettings = function() {return this.settings;};
 			var newData = [
 			    {label: 'foo', data: [777,888,999]},
     			{label: 'bar', data: [111,222,333]}
