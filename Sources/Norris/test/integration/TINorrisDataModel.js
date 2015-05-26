@@ -17,7 +17,7 @@ var NorrisImpl = require('../../main/DataModel/NorrisImpl.js');
 
 var assert = require("assert");
 
-describe('TINorrisDataModel',function(){
+describe('Norris::DataModel',function(){
 	var nrr = new NorrisImpl();
 
 	var data1 = {
