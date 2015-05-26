@@ -3,9 +3,9 @@
 <document>
 	<title>Analisi Dei Requisiti</title>
 	<type>Esterno</type>
-	<redactedby>Carlon Chiara \\ Pavanello Fabio Matteo \\ Rubin Marco</redactedby>
-	<verifiedby>Bigarella Chiara \\ Bucco Riccardo \\ Dal Bianco Davide \\ Moretto Alessandro</verifiedby>
-	<approvedby>Bucco Riccardo</approvedby>
+	<redactedby>Carlon Chiara</redactedby>
+	<verifiedby>Bigarella Chiara</verifiedby>
+	<approvedby>Pavanello Fabio Matteo</approvedby>
 	<distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<sections>
@@ -21,6 +21,72 @@
     </appendix>
 
     <changes>
+<!-- fine fase 6-->
+        <version>
+            <id>6.00</id>
+            <date>2015-05-13</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>5.02</id>
+            <date>2015-05-12</date>
+            <author>Bigarella Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+        <version>
+            <id>5.01</id>
+            <date>2015-05-12</date>
+            <author>Charlon Chiara</author>
+            <role>Analista</role>
+            <description>Modifica riferimenti</description>
+        </version>
+<!-- fine fase 5-->
+        <version>
+            <id>5.00</id>
+            <date>2015-05-10</date>
+            <author>Bigarella Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>4.02</id>
+            <date>2015-05-09</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+        <version>
+            <id>4.01</id>
+            <date>2015-05-08</date>
+            <author>Moretto Alessandro</author>
+            <role>Analista</role>
+            <description>Modifica riferimenti</description>
+        </version>
+<!-- fine fase 4-->
+        <version>
+            <id>4.00</id>
+            <date>2015-04-07</date>
+            <author>Dal Bianco Davide</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>3.02</id>
+            <date>2015-04-06</date>
+            <author>Rubin Marco</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+        <version>
+            <id>3.01</id>
+            <date>2015-04-04</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Analista</role>
+            <description>Modifica riferimenti</description>
+        </version>
 <!-- fine fase 3-->
         <version>
             <id>3.00</id>
