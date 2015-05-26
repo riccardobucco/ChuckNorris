@@ -22,7 +22,7 @@ angular.module('chuck-chart')
         description : 'This is a line chart.',
         xlabel : '',
         ylabel : '',
-        showLegend : true,
+        showGrid : false,
         legendPosition : 'top-right',
         maxPoints : 10,
         format : {
