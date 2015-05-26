@@ -17,8 +17,8 @@
 var LineChartImpl = require('../../main/DataModel/NorrisChart/LineChartImpl.js');
 var assert = require("assert");
 
-describe('LineChartImpl(id: String)', function(){
-	describe('LineChartImpl()', function(){
+describe('LineChartImpl', function(){
+	describe('LineChartImpl(id: String)', function(){
 		it('should memorize the right type of the chart',function(){
 			var linechart = new LineChartImpl('randomID');
 			assert.equal('linechart', linechart.type);

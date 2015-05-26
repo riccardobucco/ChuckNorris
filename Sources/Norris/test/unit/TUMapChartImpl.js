@@ -17,8 +17,8 @@
 var MapChartImpl = require('../../main/DataModel/NorrisChart/MapChartImpl.js');
 var assert = require("assert");
 
-describe('MapChartImpl(id: String)', function(){
-	describe('MapChartImpl()', function(){
+describe('MapChartImpl', function(){
+	describe('MapChartImpl(id:String)', function(){
 		it('should memorize the right type of the chart',function(){
 			var mapchart = new MapChartImpl('randomID');
 			assert.equal('mapchart', mapchart.type);

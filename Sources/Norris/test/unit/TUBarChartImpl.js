@@ -17,8 +17,8 @@
 var BarChartImpl = require('../../main/DataModel/NorrisChart/BarChartImpl.js');
 var assert = require("assert");
 
-describe('BarChartImpl(id: String)', function(){
-	describe('BarChartImpl()', function(){
+describe('BarChartImpl', function(){
+	describe('BarChartImpl(id:String)', function(){
 		it('should memorize the right type of the chart',function(){
 			var barchart = new BarChartImpl('randomID');
 			assert.equal('barchart', barchart.type);

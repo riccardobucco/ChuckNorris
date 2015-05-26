@@ -17,7 +17,7 @@
 var BarChartInPlaceUpdater = require('../../main/DataModel/NorrisChart/BarChartInPlaceUpdater.js');
 var assert = require("assert");
 
-describe('BarChartInPlaceUpdater(id: String)', function(){
+describe('BarChartInPlaceUpdater', function(){
 
 	describe('update(chart: ChartImpl, updateData: ChartUpdate): void', function(){
 		it('should reject chart without data',function(){

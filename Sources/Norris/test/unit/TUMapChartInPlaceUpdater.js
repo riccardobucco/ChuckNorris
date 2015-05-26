@@ -17,7 +17,7 @@
 var MapChartInPlaceUpdater = require('../../main/DataModel/NorrisChart/MapChartInPlaceUpdater.js');
 var assert = require("assert");
 
-describe('MapChartInPlaceUpdater(id: String)', function(){
+describe('MapChartInPlaceUpdater', function(){
 
 	describe('update(chart: ChartImpl, updateData: ChartUpdate): void', function(){
 		it('should reject chart without data',function(){

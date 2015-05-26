@@ -17,7 +17,7 @@
 var LineChartInPlaceUpdater = require('../../main/DataModel/NorrisChart/LineChartInPlaceUpdater.js');
 var assert = require("assert");
 
-describe('LineChartInPlaceUpdater(id: String)', function(){
+describe('LineChartInPlaceUpdater', function(){
 
 	describe('update(chart: ChartImpl, updateData: ChartUpdate): void', function(){
 		it('should reject chart without data',function(){
