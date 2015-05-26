@@ -18,6 +18,7 @@ var ExternalAPIController = require('./ExternalAPIController.js');
 var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
 
 var express = require('express');
+var cookieParser = require('cookie-parser');
 
 /**
  * Creates an AuthenticationEndpoint.
@@ -30,6 +31,11 @@ function AuthenticationEndpoint(controller) {
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
         this.app=express();
+        this.app.use(cookieParser());
+        this.controller.getServer().on('request', this.app);
+        this.app.post(this.controller.getEndpoint() + '/auth/login', this.handleLogin);
+        this.app.post(this.controller.getEndpoint() + '/auth/logout', this.handleLogout);
+        this.app.post(this.controller.getEndpoint() + '/auth/keepalive', this.handleKeepAlive);
     }else {
         this.controller=null;
         this.app=null;
@@ -42,21 +48,57 @@ function AuthenticationEndpoint(controller) {
  * @param req
  * @param res
  */
-AuthenticationEndpoint.prototype.handleLogin = function(req, res) {};
+AuthenticationEndpoint.prototype.handleLogin = function(req, res) {
+    var cookies = {
+        get: req.cookies,
+        getSigned: req.signedCookies,
+        set: res.cookie,
+        clear: res.clearCookie
+    };
+    var query = querystring.parse();
+    if(!query.username || !query.password)
+        res.sendStatus(400);
+    else if(!this.controller.handleLogin(cookies, query.username, query.password))
+        res.sendStatus(401);
+    else
+        res.sendStatus(200);
+};
 
 /**
  *
  * @param req
  * @param res
  */
-AuthenticationEndpoint.prototype.handleLogout = function(req, res) {};
+AuthenticationEndpoint.prototype.handleLogout = function(req, res) {
+    var cookies = {
+        get: req.cookies,
+        getSigned: req.signedCookies,
+        set: res.cookie,
+        clear: res.clearCookie
+    };
+    else if(!this.controller.handleLogout(cookies))
+        res.sendStatus(401);
+    else
+        res.sendStatus(200);
+};
 
 /**
  *
  * @param req
  * @param res
  */
-AuthenticationEndpoint.prototype.handleKeepAlive = function(req, res) {};
+AuthenticationEndpoint.prototype.handleKeepAlive = function(req, res) {
+    var cookies = {
+        get: req.cookies,
+        getSigned: req.signedCookies,
+        set: res.cookie,
+        clear: res.clearCookie
+    };
+    else if(!this.controller.handleKeepAlive(cookies))
+        res.sendStatus(401);
+    else
+        res.sendStatus(200);
+};
 
 
 

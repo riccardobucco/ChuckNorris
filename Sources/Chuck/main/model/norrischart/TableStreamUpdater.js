@@ -58,7 +58,7 @@ angular.module('norris-chartupdater')
                 console.log("ERROR: the chart has no data to update.");
                 throw ("emptyChart");
             }
-        }};
+        }
     };
 
     return TableStreamUpdater;
