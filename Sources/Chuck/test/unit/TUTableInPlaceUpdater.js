@@ -68,7 +68,7 @@ describe('TableInPlaceUpdater', function(){
                 ]
             };
             (new TableInPlaceUpdater()).update(chart, newData);
-            //expect(updatedData).toEqual(chart.data);
+            expect(updatedData).toEqual(chart.data);
         });
     });
 });
