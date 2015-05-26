@@ -22,9 +22,9 @@ var TableStreamUpdater = require('./TableStreamUpdater.js');
 
 var defaults = {
 	description : 'This is a table.',
-	showLegend : true,
-	legendPosition : 'top-right',
-	maxPoints : 5
+	maxRows : 10 ,
+	showTableGrid : true ,
+	newLinePosition : 'bottom'
 };
 
 /**
