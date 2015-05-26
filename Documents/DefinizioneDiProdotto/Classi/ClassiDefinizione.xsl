@@ -22,6 +22,7 @@
 			\begin{itemize}
 			\item \textbf{Nome:} <xsl:value-of select="@name"/>
 			\item \textbf{Tipo:} package
+			<xsl:apply-templates select="*[local-name()='ModelElement.definition']"/>
 			\end{itemize}
 
 			<xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"><xsl:sort select="@name"/></xsl:apply-templates>
