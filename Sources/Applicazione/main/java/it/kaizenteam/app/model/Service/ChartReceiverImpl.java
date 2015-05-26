@@ -1,3 +1,19 @@
+/*
+* Name: ChartReceiverImpl.java
+* Package: it.kaizenteam.app.model.service
+* Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/Service
+* Date: 23/05/2015
+* Version: 0.01
+*
+* History:
+* =================================================================
+* Version	Date	Programmer	Changes
+* =================================================================
+* v0.01	2015-05-23	Alessandro Moretto	Creazione file
+* =================================================================
+*
+*/
+
 package it.kaizenteam.app.model.Service;
 
 import android.util.Log;
@@ -11,15 +27,16 @@ import java.util.Observable;
 import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 
 /**
- * Created by Moro on 23/05/15.
+ * 
+This class has a responsibility to communicate and receive events through the socket channel between app and server. Updates can be started or stopped out or it can be made the request for a full chart by external api of Norris.
  */
 public class ChartReceiverImpl extends Observable implements ChartReceiver {
     private static ChartReceiverImpl instance;
     private Socket socket;
 
     /**
-     *
-     * @return
+     * This method has the task of returning the unique instance of that class, and creating it if it not exists
+     * @return the unique instance of that class
      */
     public static ChartReceiver getInstance(){
         if(instance!=null)
@@ -28,15 +45,15 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
     }
 
     /**
-     *
+     * This method is the constructor of the class. It is private because only getInstance() method is allowed to create an instance.
      */
     private ChartReceiverImpl(){
         instance=this;
     }
 
     /**
-     *
-     * @param chartId
+     * This method has the task to enable updates through the socket channel for the chart with id idchart.
+     * @param chartId id of the chart
      */
     @Override
     public void startUpdateEvent(String chartId) {
@@ -51,8 +68,8 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
     }
 
     /**
-     *
-     * @param chartId
+     * This method has the task of finishing the receipt of the updates through the socket channel for the chart with id idchart.
+     * @param chartId id of the chart
      */
     @Override
     public void stopUpdateEvent(String chartId) {
@@ -62,8 +79,8 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
     }
 
     /**
-     *
-     * @param chartId
+     * This method has the task of finding data and settings of a chart whose id is chartId. This method returns a HashMap in which are stored data with the keys "data" and "settings".
+     * @param chartId id of the chart
      */
     @Override
     public void getChart(String chartId) {

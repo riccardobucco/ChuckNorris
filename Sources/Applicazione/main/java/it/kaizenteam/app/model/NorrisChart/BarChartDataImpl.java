@@ -19,33 +19,30 @@ package it.kaizenteam.app.model.NorrisChart;
 import com.github.mikephil.charting.charts.BarChart;
 
 /**
-* Tale classe rappresenta i dati di un bar chart
+* This class represents the data in a bar chart
 */
 public class BarChartDataImpl implements ChartData {
-    /**
-    * Tale attributo rappresenta i valori del chart.
-    */
     private BarChart values;
 
     /**
-    * Tale metodo è il costruttore di BarChartDataImpl. Esso ha come parametro i valori dei dati del chart.
-    * @param values valori dei dati del chart
+    * This method is the constructor of BarChartDataImpl. It has as a parameter data values in the chart.
+    * @param values values of the chart
     */
     public BarChartDataImpl(BarChart values){
         this.values=values;
     }
 
     /**
-    * Tale metodo ha il compito di ritornare i dati del chart.
-    * @return BarChart dati del chart
+    * This method has the task of returning the data of the chart.
+    * @return data of the chart
     */
     public BarChart getData(){
         return values;
     }
 
     /** TODO rimuovere...viene modificato per riferimento
-    * Tale metodo ha il compito di impostare i dati del chart.
-    * @param values dati del chart 
+    * This method has the task to set the data of the chart.
+    * @param values data of the chart
     */
     public void setData(BarChart values){
         this.values=values;

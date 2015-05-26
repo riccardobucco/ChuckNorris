@@ -17,29 +17,18 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * Tale classe rappresenta un elemento di pacchetto di aggiornamento in place di un line chart.
+ * This class represents an element of the in place update package of a line chart.
  */
 public class LineChartElementInPlaceUpdate {
-    /**
-     * Tale attributo rappresenta i valori del dato aggiornato.
-     */
     private double value;
-
-    /**
-     * Tale attributo rappresenta l’ordinata del dato da sostituire.
-     */
     private double xpos;
-
-    /**
-     * Tale attributo rappresenta l’ascissa del dato da sostituire.
-     */
     private double ypos;
 
     /**
-     * Tale metodo è un costruttore per create tale pacchetto di aggiornamento.
-     * @param xpos ascissa del dato da modificare
-     * @param ypos ordinata del dato da modificare
-     * @param value nuovo dato del pacchetto di aggiornamento
+     * This method is a constructor to create this update package.
+     * @param xpos abscissa of the data to update
+     * @param ypos ordinate of the data to update
+     * @param value new data of the update package
      */
     public LineChartElementInPlaceUpdate(double xpos, double ypos, double value){
         this.xpos=xpos;
@@ -48,24 +37,24 @@ public class LineChartElementInPlaceUpdate {
     }
 
     /**
-     * Tale metodo ha il compito di ritornare il nuovo dato del pacchetto di aggiornamento.
-     * @return double ritorna il nuovo dato del pacchetto di aggiornamento
+     * This method is responsible for returning the new data of the update package.
+     * @return the new data of the update package
      */
     public double getData(){
         return value;
     }
 
     /**
-     * Tale metodo ha il compito di ritornare l’ascissa del dato da modificare.
-     * @return double ritorna l'ascissa del dato da modificare
+     * This method has the task of returning the abscissa of the data to be modified.
+     * @return the abscissa of the data
      */
     public double getX(){
         return xpos;
     }
 
     /**
-     * Tale metodo ha il compito di ritornare l’ordinata del dato da modificare.
-     * @return double ritorna l'ordinata del dato da modificare
+     * This method has the task of returning the ordinate of the data to be modified.
+     * @return the ordinate of the data
      */
     public double getY(){
         return ypos;

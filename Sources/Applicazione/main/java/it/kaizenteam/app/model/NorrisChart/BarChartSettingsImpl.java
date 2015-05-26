@@ -20,16 +20,16 @@ import org.json.JSONObject;
 
 
 /**
- * Tale classe rappresenta le impostazioni di un bar chart.
+ * This class represents the settings for a bar chart.
  */
 public class BarChartSettingsImpl implements ChartSettings {
     /*
-     * Tale attributo memorizza l’Oggetto JSON con le impostazioni del chart.
+     * This attribute stores the JSON object with the settings of the chart.
      */
     private JSONObject settings;
 
     /**
-     *
+     * Constructor
      * @param settings
      */
     public BarChartSettingsImpl(JSONObject settings){
@@ -37,8 +37,8 @@ public class BarChartSettingsImpl implements ChartSettings {
     }
 
     /**
-     * Tale metodo ha il compito di ritornare il nome del nome dell’asse delle ascisse.
-     * @return String ritorna il nome dell'asse delle ascisse.
+     * This method has the task of returning the title of the abscissa axis.
+     * @return the title of the abscissa axis
      */
     public String getXAxisName(){
         //TODO
@@ -46,8 +46,8 @@ public class BarChartSettingsImpl implements ChartSettings {
     }
 
     /**
-     * Tale metodo ha il compito di ritornare il nome del nome dell’asse delle ordinate.
-     * @return String ritorna il nome del nome dell’asse delle ordinate
+     * This method has the task of returning the title of the ordinates axis.
+     * @return the title of the ordinates axis
      */
     public String getYAxisName(){
         //TODO
@@ -55,8 +55,8 @@ public class BarChartSettingsImpl implements ChartSettings {
     }
 
     /**
-     * Tale metodo ha il compito di ritornare un booleano che dica se la griglia è visualizzata o no.
-     * @return booolean ritorna true se la griglia è visualizzata, altrimenti false
+     * This method has the task to return a boolean that says if the grid is displayed or not.
+     * @return display / hide the grid
      */
     public boolean getGridVisibility(){
         //TODO
@@ -64,8 +64,8 @@ public class BarChartSettingsImpl implements ChartSettings {
     }
 
     /**
-     * Tale metodo ha il compito di ritornare la posizione della legenda.
-     * @return String ritorna la posizione della legenda
+     * This method has the task of returning the position of the legend.
+     * @return the position of the legend
      */
     public String getLegendPosition(){
         //TODO
@@ -73,8 +73,8 @@ public class BarChartSettingsImpl implements ChartSettings {
     }
 
     /**
-     * Tale metodo ha il compito di ritornare l’orientamento del chart.
-     * @return String ritorna l'orientamento del chart
+     * This method has the task of returning the orientation of the chart.
+     * @return the chart orientation
      */
     public String getOrientation(){
         //TODO

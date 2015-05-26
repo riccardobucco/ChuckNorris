@@ -17,7 +17,7 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * ChartData è l’interfaccia delle classi che rappresentano i dati di un grafico.
+ * ChartData is the interface of the classes that represent the data in a chart.
  */
 public interface ChartData {
 }

@@ -17,23 +17,23 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * Tale classe rappresenta un elemento di pacchetto di aggiornamento stream di un line chart.
+ * This class represents an element of stream update package of a line chart.
  */
 public class LineChartElementStreamUpdate {
     /**
-     * Tale attributo rappresenta il valore del dato aggiornato.
+     * This attribute is the value of the updated data.
     */
     private double value;
 
     /**
-     * Tale attributo rappresenta il valore della nuova etichetta da inserire nel chart.
+     * This attribute is the value of the new label to be included in the chart.
     */
     private String label;
 
     /**
-     * Tale metodo è il costruttore per create tale pacchetto di aggiornamento.
-     * @param label valore del dato aggiornato
-     * @param value valore etichetta chart
+     * This method is the constructor to create update package.
+     * @param label value of chart label
+     * @param value updated value
      */
     public LineChartElementStreamUpdate(String label, double value){
         this.label=label;
@@ -41,16 +41,16 @@ public class LineChartElementStreamUpdate {
     }
 
     /**
-     * Tale metodo ha il compito di ritornare il nuovo dato del pacchetto di aggiornamento.
-     * @return double ritorna il nuovo dato del pacchetto di aggiornamento
+     * This method is responsible for returning the new data of the update package.
+     * @return the new data of the update package
      */
     public double getData(){
         return value;
     }
 
     /**
-     * Tale metodo ha il compito di ritornare il valore nella nuova etichetta.
-     * @return String ritorna il valore della nuova etichetta
+     * This method has the task to return the value of new label.
+     * @return the value of new label
      */
     public String getLabel(){
         return label;

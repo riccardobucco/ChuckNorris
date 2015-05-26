@@ -17,11 +17,7 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * Questa classe rappresenta un grafico di tipo bar chart. Essa contiene al suo
- * interno i dati (BarChartDataObject) e le impostazioni (BarChartSettingsObject) relativi al
- * grafico. Inoltre contiene la classe BarChartInPlaceUpdater, la quale implementa l’aggiornamento
- * di tipo in place per il grafico in questione. Un’istanza della classe BarChartImpl viene
- * creata dalla classe factory BarChartFactory.
+This class is a bar chart. It contains within it the data (BarChartDataObject) and settings (BarChartSettingsObject) relative to the chart. It also contains BarChartInPlaceUpdater class, which implements the update type in place for the plot. BarChartImpl instance of the class is created by the class factory BarChartFactory.
  */
 class BarChartImpl extends ChartImpl{
     static {
@@ -30,8 +26,8 @@ class BarChartImpl extends ChartImpl{
     }
 
     /**
-    * Questo metodo è il costruttore della classe.
-    * @param chartId
+    * This method is the constructor of the class.
+    * @param chartId id of the chart
     */
     private BarChartImpl(String chartId) {
         super("barchart", chartId);
@@ -39,18 +35,14 @@ class BarChartImpl extends ChartImpl{
 
 
     /**
-    * Questa classe si occupa della creazione di un grafico di tipo BarChartImpl. In
-    * particolare si occupa di configurare i dati e le impostazioni del grafico.
+    * This class is responsible for creating a BarChartImpl. In particular, it deals with the data and configure the settings of the chart.
     */
     protected static class BarChartFactory implements ChartFactory{
-    	/**
-    	 * Questo attributo è il riferimento all’unica istanza della classe.
-    	 */
         private static BarChartFactory instance;
 
         /**
-         * Questo metodo permette di ottenere l’unica istanza esistente della classe.
-         * @return ChartFactory instanza della classe
+         * This method allows to get the unique existing instance of the class.
+         * @return ChartFactory instance of the class
          */
         public static ChartFactory getInstance(){
             if(instance!=null)
@@ -59,16 +51,16 @@ class BarChartImpl extends ChartImpl{
         }
 
         /**
-         * Questo metodo è il costruttore della classe.
+         * This method is the constructor of the class.
          */
         private BarChartFactory(){
             instance=this;
         }
 
         /**
-         * Questo metodo permette di costruire un’istanza di BarChartImpl.
-         * @param chartId Id del chart
-         * @return ChartModel istanza di BarChartImpl
+         * This method allows to build an instance of BarChartImpl.
+         * @param chartId Id of the chart
+         * @return ChartModel BarChartImpl instance
          */
         @Override
         public ChartModel createChart(String chartId) {

@@ -18,34 +18,31 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * Questa classe si occupa di definire il metodo di aggiornamento in place per
- * un grafico di tipo bar chart. Essendo una classe interna di BarChartImpl, ha acceso ai
- * campi dati privati di questa classe. In particolare può accedere al DataObject contenuto in
- * BarChartImpl e modificarne i valori.
+ * This class is responsible for defining the in place update method for a bar chart. It can access to the BarChartImpl private data fields because it is an inner class of BarChartImpl. In particular, it can access to DataObject contained in  BarChartImpl and change its values.
  */
 public class BarChartInPlaceUpdater implements Updater {
     /*
-     * Tale attributo statico rappresenta l’istanza univoca di tale classe.
+     * The static attribute is the unique instance of that class.
      */
     private static BarChartInPlaceUpdater instance;
 
     /**
-     * Tale metodo ha il compito di ritornare l’istanza unica di tale classe e se non esiste lacrea.
-     * @return Updater ritorna l'istanza unica della classe
+     * This method is responsible for returning the unique instance of this class and creating it if it not exists.
+     * @return the unique instance of the class
      */
     public static Updater getInstance(){
         return instance;
     }
 
     /**
-     * 
+     * Constructor
      */
     private BarChartInPlaceUpdater(){}
 
     /**
-     * Tale metodo ha il compito di aggiornare il chart passato come parametro (chart) utilizzando il pacchetto di aggiornamento (updatedata).
+     * This method has the task of updating the chart as a parameter (chart) by using the update package (UpdateData).
      * @param chart
-     * @param updateData pacchetto di aggiornamento
+     * @param updateData update package
      */
     @Override
     public void update(ChartImpl chart, ChartUpdate updateData) {

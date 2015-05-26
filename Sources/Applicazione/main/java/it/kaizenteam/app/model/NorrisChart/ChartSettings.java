@@ -19,7 +19,7 @@ package it.kaizenteam.app.model.NorrisChart;
 import org.json.JSONObject;
 
 /**
- * ChartSettings è l’interfaccia delle classi che si occupano delle impostazioni di un grafico.
+ * ChartSettings is the interface of classes that deal with the settings of a graph.
  */
 public interface ChartSettings {
 }

@@ -17,30 +17,18 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
-* Tale classe rappresenta un elemento di pacchetto di aggiornamento in place di un bar chart.
+* This class represents an element of the in place update package of a bar chart.
 */
 public class BarChartElementInPlaceUpdate {
-    
-    /**
-    * Tale attributo rappresenta i valori del dato aggiornato.
-    */
     private double value;
-
-    /**
-    * Tale attributo rappresenta l’ordinata del dato da sostituire.
-    */
     private double xpos;
-
-    /**
-    * Tale attributo rappresenta l’ascissa del dato da sostituire.
-    */
     private double ypos;
 
     /**
-    * Tale metodo è il costruttore per create tale pacchetto di aggiornamento.
-    * @param xpos ascissa
-    * @param ypos ordinata
-    * @param value dato
+    * This method is the constructor to create the update package.
+    * @param xpos value of abscissa
+    * @param ypos value of ordinate
+    * @param value value of the chart
     */
     public BarChartElementInPlaceUpdate(double xpos, double ypos, double value){
         this.xpos=xpos;
@@ -49,24 +37,24 @@ public class BarChartElementInPlaceUpdate {
     }
 
     /**
-    * Tale metodo ha il compito di ritornare il nuovo dato del pacchetto di aggiornamento.
-    * @return getData dato del pacchetto di aggiornamento
+    * This method is responsible for returning the new data of the update package.
+    * @return getData data of the update package
     */
     public double getData(){
         return value;
     }
 
     /**
-    * Tale metodo ha il compito di ritornare l’ascissa del dato da modificare.
-    * @return double ascissa del dato
+    * This method has the task of returning the abscissa of the data to be modified.
+    * @return double value of abscissa to be modified
     */
     public double getX(){
         return xpos;
     }
 
     /**
-    * Tale metodo ha il compito di ritornare l’ordinata del dato da modificare.
-    * @return double ordinata del dato
+    * This method has the task of returning the ordinate of data to be modified.
+    * @return double value of ordinate to be modified
     */
     public double getY(){
         return ypos;

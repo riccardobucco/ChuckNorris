@@ -17,12 +17,7 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * Questa classe rappresenta un grafico di tipo line chart. Essa contiene al suo
- * interno i dati (LineChartDataObject) e le impostazioni (LineChartSettingsObject) relativi
- * al grafico. Inoltre contiene le classi LineChartInPlaceUpdater e LineChartStreamUpdater,
- * le quali implementano rispettivamente l’aggiornamento di tipo in place e stream per il grafico
- * in questione. Un’istanza della classe LineChartImpl viene creata dalla classe factory
- * LineChartFactory.
+ * This class represents a line chart. It contains within it the data (LineChartDataObject) and settings (LineChartSettingsObject) relative to the chart. It contains also classes LineChartInPlaceUpdater and LineChartStreamUpdater, which respectively implement the update type in place and stream for the graph. LineChartImpl instance of the class is created by the class factory LineChartFactory.
  */
 class LineChartImpl extends ChartImpl {
 
@@ -32,8 +27,8 @@ class LineChartImpl extends ChartImpl {
     }
 
     /**
-     * Tale metodo è il costruttore. Esso è privato perchè non può esser creata una istanza se non dalla sua classe interna factory.
-     * @param chartId id del chart
+     * This method is the constructor. It is private because it can not be created an instance except from a request of his inner class factory
+     * @param chartId id of the chart
      */
     private LineChartImpl(String chartId) {
         super("linechart", chartId);
@@ -42,17 +37,14 @@ class LineChartImpl extends ChartImpl {
 
     /**
      * factory class for a LineChartImp
-     * Questa classe si occupa della creazione di un grafico di tipo LineChartImpl. In particolare si occupa di configurare i dati e le impostazioni del grafico.
+     * This class is responsible for creating a LineChartImpl. In particular, it deals with the data and configure the settings of the chart.
      */
     protected static class LineChartFactory implements ChartFactory{
-        /**
-         * Tale attributo statico rappresenta l’istanza univoca di tale classe.
-         */
         private static LineChartFactory instance;
 
         /**
-         * Tale metodo ha il compito di ritornare l’istanza unica di tale classe e se non esiste la crea.
-         * @return ChartFactory ritorna istanza unica della classe
+         * This method is responsible for returning the unique instance of this class and creating it if it not exists.
+         * @return the unique instance of the class
          */
         public static ChartFactory getInstance(){
             if(instance!=null)
@@ -61,15 +53,16 @@ class LineChartImpl extends ChartImpl {
         }
 
         /**
-         * Tale metodo è il costruttore della classe. Esso è privato perchè non si vuole permettere a nessuno di poter creare un’istanza se non utilizzando il metodo getInstance().
+         * This method is the constructor of the class. It is private because only 
+getInstance() method request can create an instance.
          */
         private LineChartFactory(){
             instance=this;
         }
 
         /**
-         * Tale metodo ha il compito di creare la relativa specializzazione di ChartImpl. Esso può accedere al suo costruttore perchè questa classe factory è interna alla relativa classe LineChartImpl.
-         * @param chartId id del chart
+         * This method has the task of creating the relative specialization of ChartImpl. It can access its constructor because this factory class is internal to the relevant class LineChartImpl.
+         * @param chartId id of the chart
          * @return ChartImpl
          */
         @Override

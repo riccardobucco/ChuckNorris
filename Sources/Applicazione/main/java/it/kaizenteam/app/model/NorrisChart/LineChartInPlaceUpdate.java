@@ -19,25 +19,25 @@ package it.kaizenteam.app.model.NorrisChart;
 import java.util.ArrayList;
 
 /**
- * Tale classe rappresenta un pacchetto di aggiornamento in place di un line chart.
+ * This class represents an in place update package of a line chart.
  */
 public class LineChartInPlaceUpdate implements ChartUpdate {
     /**
-     * Tale attributo rappresenta i valori del dato aggiornato.
+     * This attribute represents the values of the updated date.
      */    
     private ArrayList<LineChartElementInPlaceUpdate> values;
 
     /**
-     * Tale metodo è il costruttore per creare tale pacchetto di aggiornamento.
-     * @param values dati pacchetto di aggiornamento
+     * This method is the constructor to create the update package.
+     * @param values udpate package
      */
     public LineChartInPlaceUpdate(ArrayList<LineChartElementInPlaceUpdate> values){
         this.values=values;
     }
 
     /**
-     * Tale metodo ha il compito di ritornare i dati del pacchetto di aggiornamento.
-     * @return ArrayList<LineChartElementInPlaceUpdate> ritorna i dati del pacchetto di aggiornamento
+     * This method is responsible for returning the data of the update package.
+     * @return the data of the update package
      */
     public ArrayList<LineChartElementInPlaceUpdate> getData(){
         return values;

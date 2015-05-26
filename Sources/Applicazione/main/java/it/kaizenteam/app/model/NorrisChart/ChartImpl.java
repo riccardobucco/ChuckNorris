@@ -21,44 +21,14 @@ import java.util.Map;
 import java.util.Observable;
 
 /**
- * Questa classe rappresenta un grafico generico e per questo motivo è una classe
- * astratta. Essa contiene al suo interno i dati (DatObject) e le impostazioni (SettingsObject)
- * relativi ad un grafico. Contiene, inoltre, l’interfaccia ChartFactory e due hashmap: la prima
- * si occupa della corrispondenza tra le tipologie di grafico e le rispettive classi factory, la
- * seconda invece si occupa della corrispondenza tra le varie tipologie di aggiornamento e la
- * classe che implementa tale aggiornamento per un tipo specifico di grafico. ChartImpl ha una
- * dipendenza verso l’interfaccia UpdateObject, in quanto deve conoscere il tipo del pacchetto
- * degli aggiornamenti.
+ * This class is a generic chart and for this reason it is an abstract class. It contains within it the data (DataObject) and settings (SettingsObject) relative to a chart. It also contains the interface and two ChartFactory hashmap: the first deals with the correspondence between the types of graphic and their factory classes, while the second deals with the correspondence between the various types of renovation and the class that implements this update a specific type of chart. ChartImpl has a dependency on the interface UpdateObject, as it has to know the type of package updates.
  */
 public abstract class ChartImpl extends Observable implements ChartModel{
-    /**
-     * Tale hashmap contiene le associazioni di tutti i tipi di chart possibilli con la relativa factory del chart.
-     */
     private static Map<String,ChartFactory> factories = new HashMap<>();
-
-    /**
-     * Tale hashmap contiene le associazioni di tutti gli aggiornamenti possibilli con l’oggetto ChartUpdater.
-     */
     private static HashMap<String,Updater> updaters = new HashMap<>();
-
-    /**
-     * Tale attributo rappresenta l’id del chart.
-     */
     final String id;
-
-    /**
-     * Tale attributo rappresenta il tipo del chart.
-     */
     final String type;
-
-    /**
-     * Tale attributo rappresenta i valori del chart.
-     */
     ChartData data;
-
-    /**
-     * Tale attributo rappresenta le impostazioni del chart.
-     */
     ChartSettings settings;
 
     static {
@@ -82,10 +52,10 @@ public abstract class ChartImpl extends Observable implements ChartModel{
     }
 
     /**
-     * Tale metodo non fa altro che creare il chart associato al parametro type e ritornare l’interfaccia ChartModel di tale istanza creata.
-     * @param type tipo di chart
-     * @param id id del chart
-     * @return ChartModel ritorna l'interfaccia dell'instanza creata
+     * This method creates the chart associated with the type parameter and returns the interface of ChartModel created instance.
+     * @param type type of the graph
+     * @param id id of the chart
+     * @return return the interface of ChartModel created instance
      */
     public static ChartModel create(String type, String id) {//todo throws Exception {
         ChartFactory factory = factories.get(type);
@@ -97,27 +67,27 @@ public abstract class ChartImpl extends Observable implements ChartModel{
     }
 
     /**
-     * Tale metodo serve per registrare una certa factory al relativo chart nell’hashmap della classe (factories).
-     * @param chartType tipo di chart
-     * @param factory hashmap della classe
+     * This method is used to record a certain factory at its chart nell'hashmap class (factories).
+     * @param chartType type of the chart
+     * @param factory hashmap of the class
      */
     protected static void registerFactory(String chartType, ChartFactory factory) {
         factories.put(chartType, factory);
     }
 
     /**
-     * Tale metodo serve per registrare un certo updater al relativo tipo di update nell’hashmap della classe (updaters).
-     * @param updatetype tipo di update
-     * @param updater hashmap della classe
+     * This method is used to record a updater to its type of update in the hashmap of the class (updaters).
+     * @param updatetype type of update
+     * @param updater hashmap of the class
      */
     protected void registerUpdater(String updatetype, Updater updater) {
         updaters.put(updatetype, updater);
     }
 
     /**
-     * Tale metodo è il costuttore della classe. Esso è accessibile solamente alle sottoclassi nella creazione del sottoggetto.
-     * @param chartType tipo di chart
-     * @param chartId id del chart
+     * This method is the constructor of the class. It is only accessible to subclasses in the creation of the subobject.
+     * @param chartType chart type
+     * @param chartId id of the chart
      */
     protected ChartImpl(String chartType, String chartId) {
         this.id = chartId;
@@ -125,40 +95,40 @@ public abstract class ChartImpl extends Observable implements ChartModel{
     }
 
     /**
-     * Tale metodo ha il compito di ritornare i dati del chart.
-     * @return ChartData ritorna i dati del chart
+     * This method has the task of returning the data of the chart.
+     * @return the data of the chart.
      */
     public ChartData getData(){
         return data;
     }
 
     /**
-     * Tale metodo ha il compito di ritornare l’id del chart.
-     * @return String ritorna l'id del chart
+     * This method has the task to return the id of the chart.
+     * @return id of the chart
      */
     public String getId(){
         return id;
     }
 
     /**
-     * Tale metodo ha il compito di ritornare le impostazioni del chart.
-     * @return ChartSettings ritorna le impostazioni del chart
+     * This method has the task to return the settings of the chart.
+     * @return the chart settings
      */
     public ChartSettings getSettings(){
         return settings;
     }
 
     /**
-     * Tale metodo ha il compito di ritornare il tipo del chart.
-     * @return String ritorna il tipo di chart
+     * This method has the task to return the type of the chart.
+     * @return type of the chart
      */
     public String getType(){
         return type;
     }
 
     /**
-     * Tale metodo ha il compito di impostare i dati del chart.
-     * @param data dati del chart da impostare
+     * This method has the task to set the data of the chart.
+     * @param data data of the chart to set
      */
     public void setData(ChartData data){
         this.data=data;
@@ -166,17 +136,17 @@ public abstract class ChartImpl extends Observable implements ChartModel{
     }
 
     /**
-     * Tale metodo ha il compito di assegnare le impostazioni del chart.
-     * @param settings impostazioni da assegnare
+     * This method has the task of setting the settings of the chart.
+     * @param settings chart settings to set
      */
     public void setSettings(ChartSettings settings){
         this.settings=settings;
     }
 
     /**
-     * Tale metodo ha il compito di aggiornare i chart utilizzando la tipologia di aggiornamento presente in updateType e il pacchetto di aggiornamento updateData.
-     * @param updateType tipologia di aggiornamento
-     * @param updateData pacchetto di aggiornamento
+     * This method has the task of updating the chart using the type of update of updateType and the update package UpdateData.
+     * @param updateType type of update
+     * @param updateData update package
      */
     public void update(String updateType, ChartUpdate updateData) {
         Updater updater = updaters.get(type);
@@ -189,7 +159,7 @@ public abstract class ChartImpl extends Observable implements ChartModel{
     }
 
     /**
-     * ChartFactory è l’interfaccia delle classi factory che si occupano della creazione dei vari tipi di grafici. È interna alla classe ChartImpl.
+     * ChartFactory is the interface of the factory classes that deal with the creation of various types of graphs. It is internal to the class ChartImpl.
      */
     protected interface ChartFactory {
         ChartModel createChart(String chartId);

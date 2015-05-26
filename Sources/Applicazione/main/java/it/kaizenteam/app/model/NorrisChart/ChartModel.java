@@ -18,49 +18,49 @@ package it.kaizenteam.app.model.NorrisChart;
 
 
 /**
- * Chart è l’interfaccia che rappresenta un grafico generico e viene implementata da ChartImpl. Essa contiene i metodi set e get relativi alle impostazioni e ai dati ed i metodi relativi agli aggiornamenti dei grafici.
+ * Chart is a graphical interface that is generic and is implemented by ChartImpl. It contains the set and get methods related to the settings and data and methods related to updates of the charts.
  */
 public interface ChartModel {
     /**
-     * Tale metodo ha il compito di assegnare le impostazioni del chart.
-     * @param object impostazioni del chart da assegnare
+     * This method has the task of setting the settings of the chart.
+     * @param object chart settings to set
      */
     public void setSettings(ChartSettings object);
 
     /**
-     * Tale metodo ha il compito di impostare i dati del chart.
-     * @param object dati del chart da impostare
+     * This method has the task of setting the data of the chart.
+     * @param object chart data to set
      */
     public void setData(ChartData object);
 
     /**
-     * Tale metodo ha il compito di ritornare le impostazioni del chart.
-     * @return ChartSettings ritorna le impostazioni del chart
+     * This method has the task to return the settings of the chart.
+     * @return the settings of the chart
      */
     public ChartSettings getSettings();
 
     /**
-     * Tale metodo ha il compito di ritornare i dati del chart.
-     * @return ChartData ritorna i dati del chart
+     * This method has the task of returning the data of the chart.
+     * @return the data of the chart
      */
     public ChartData getData();
 
     /**
-     * Tale metodo ha il compito di ritornare l’id del chart.
-     * @return String ritorna l'id del chart
+     * This method has the task to return the id of the chart.
+     * @return id of the chart
      */
     public String getId();
 
     /**
-     * Tale metodo ha il compito di aggiornare i chart utilizzando la tipologia di aggiornamento presente in updateType e il pacchetto di aggiornamento updateData.
-     * @param type tipo dell'aggiornamento
-     * @param object pacchetto di aggiornamento
+     * This method has the task of updating the chart using type of update in UpdateType and the update package UpdateData.
+     * @param type update type
+     * @param object update package
      */
     public void update(String type, ChartUpdate object);
 
     /**
-     * Tale metodo ha il compito di ritornare il tipo del chart.
-     * @return String ritorna il tipo di chart
+     * This method has the task to return the type of the chart.
+     * @return type of the chart
      */
     public String getType();
 }

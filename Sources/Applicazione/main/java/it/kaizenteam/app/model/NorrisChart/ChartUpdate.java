@@ -17,7 +17,7 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
- * ChartUpdate è l’interfaccia delle classi che si occupano dell’aggiornamento di un grafico. In particolare rappresenta il pacchetto di aggiornamento di un grafico.
+ * ChartUpdate is the interface of classes that deal with the update of a chart. In particular it represent the update package of a graph.
  */
 public interface ChartUpdate {
 }
