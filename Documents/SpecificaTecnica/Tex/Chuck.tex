@@ -31,7 +31,7 @@
 				\item scegliere il tag HTML in cui inserire un grafico;
 				\item modificare alcune impostazioni dei grafici.
 			\end{itemize}
-			Questa componente comunica le sccelte dell'utente al ViewModel e alla View.
+			Questa componente comunica le scelte dell'utente al ViewModel e alla View.
     		
 		\level{4}{View}
 			La componente View ha il compito di visualizzare i grafici all'interno della pagina web. I grafici possono essere del tipo \insglo{Bar Chart}, \insglo{Line Chart}, \insglo{Map Chart} e \insglo{Table}. Quando un grafico viene aggiornato, questa componente si occupa di aggiornare anche la sua visualizzazione nella pagina web. Un altro compito della View consiste nell'accogliere gli input inerenti il filtraggio dei dati di un determinato chart e inviarli al ViewModel.
@@ -47,7 +47,7 @@
 			Quando il ViewModel deve aggiornare la visualizzazione del grafico, esso effettua una query sul Model per ottenere le nuove informazioni relative al grafico da aggiornare. Ciò avviene dopo che il ViewModel è stato notificato riguardo un cambiamento avvenuto nel Model. 
 			
 		\level{4}{View - ViewModel}
-			Quando la View riceve un input dall'utente, una notifica avvisa il ViewModel in modo che intraprenda l'azione per gestirla. In particolare la View notifica il ViewModel quando l'utente seleziona i dataset che vuole visualizzare. La View invia al ViewModel anche le informazioni relative ai dataset selezionati, in modo che quets'ultimo possa effettuare le operazioni di filtraggio dei dati.
+			Quando la View riceve un input dall'utente, una notifica avvisa il ViewModel in modo che intraprenda l'azione per gestirla. In particolare la View notifica il ViewModel quando l'utente seleziona i dataset che vuole visualizzare. La View invia al ViewModel anche le informazioni relative ai dataset selezionati, in modo che quest'ultimo possa effettuare le operazioni di filtraggio dei dati.
 			
 		\level{4}{ViewModel - View}
 			Il ViewModel si occupa di aggiornare la View quando i dati del Model vengono modificati. In particolare ciò avviene dopo l'inserimento di un nuovo grafico o dopo un aggiornamento. Inoltre il ViewModel si occupa di modificare la View in seguito ad una richiesta di filtraggio dei dati.
@@ -87,7 +87,7 @@
 			Il \insglo{pattern} strutturale Adapter viene utilizzato per adattare l'interfaccia di una classe in un'altra.\\
 			Per la descrizione del \insglo{pattern} e dei vantaggi derivanti dalla sua applicazione si rimanda all'appendice \nameref{app:adapter}.
 			\level{5}{Contesto di utilizzo}
-				In \insglo{Chuck} l'Adapter viene utilizzato per calare le varie librerie esterne nel contesto di \projectname{}, e nello specifico sono rappresentate dai divers ViewModel, quindi:
+				In \insglo{Chuck} l'Adapter viene utilizzato per calare le varie librerie esterne nel contesto di \projectname{}, e nello specifico sono rappresentate dai diversi ViewModel, quindi:
 				\begin{itemize}
 					\item ViewModel::BarChartViewModel e ViewModel::LineChartViewModel sono adattatori per \insglo{Chart.js};
 					\item ViewModel::MapChartViewModel è un adattatore per OpenStreetMaps;

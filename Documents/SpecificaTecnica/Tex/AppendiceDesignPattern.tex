@@ -45,7 +45,7 @@
 			\level{4}{Presenter}
 			Il Presenter rappresenta il collante tra il Model e la View e funge da \textit{Man in the middle}. È a conoscenza dell'esistenza sia del modello che della View, mentre la View non è a conoscenza del modello e viceversa. Il presenter implementa i metodi che rappresentano gli eventi che l'utente può effettuare nella relativa view attraverso user \insglo{gesture}. All'invocazione di queste, il presenter ha lo scopo di gestirle, ovvero di decidere come comportarsi nei confronti del modello e della view. La comunicazione passa, quindi, attraverso il Presenter.
 		\level{3}{Vantaggi nell'uso di MVP}
-		L'utilizzo del \insglo{pattern} MVP comporta un minore livello di accoppiamento tra le componenti, poichè il Presenter funge da intermediario tra View e Model, il che permette alla View e al modello di evolvere indipendentemente. \\
+		L'utilizzo del \insglo{pattern} MVP comporta un minore livello di accoppiamento tra le componenti, poiché il Presenter funge da intermediario tra View e Model, il che permette alla View e al modello di evolvere indipendentemente. \\
 		Un altro vantaggio nel separare responsabilità diverse alle varie componenti, consiste nella maggiore facilità dell'implementazione dei test e nella possibilità di riusare il codice del Model in diverse applicazioni.
 		\level{3}{Svantaggi nell'uso di MVP}
 		Uno dei maggiori svantaggi di tale \insglo{pattern} è la complessità elevata, dovuta ai livelli di indirezione introdotti dalla separazione delle responsabilità nei vari componenti. \\
@@ -180,7 +180,7 @@
 			\item favorisce la consistenza dei prodotti concreti.
 		\end{itemize}
 		\level{3}{Svantaggi nell'uso di Abstract Factory}
-		Come tutti i \insglo{pattern}, anche Abstract Factory ha delle ripercussioni negative nella progettazione del \insglo{software}: in questo caso risulta difficile estendere la classe factory astratta, perchè ciò comporta il cambiamento di tutte le sotto classi.
+		Come tutti i \insglo{pattern}, anche Abstract Factory ha delle ripercussioni negative nella progettazione del \insglo{software}: in questo caso risulta difficile estendere la classe factory astratta, perché ciò comporta il cambiamento di tutte le sotto classi.
 
 \level{2}{Adapter} \label{app:adapter}
 	\begin{figure}[H]\centering
@@ -249,7 +249,7 @@
 		L'uso del \insglo{pattern} Strategy nell'architettura di un \insglo{prodotto} \insglo{software} porta i seguenti vantaggi:
 		\begin{itemize}
 			\item incapsulando l'algoritmo in una classe separata Strategy, viene reso possibile il cambiamento dell'algoritmo in modo dinamico;
-			\item consente di evitare i blocchi di scelte condizionali, grazie all'uso della classe Strategy seprata;
+			\item consente di evitare i blocchi di scelte condizionali, grazie all'uso della classe Strategy separata;
 			\item è possibile scegliere l'implementazione dell'algoritmo più adatta al problema che si presenta.
 		\end{itemize}
 		\level{3}{Vantaggi nell’uso di Strategy}
@@ -284,7 +284,7 @@
 		L'uso del \insglo{pattern} Factory Method nell'architettura di un \insglo{prodotto} \insglo{software} porta i seguenti vantaggi:
 		\begin{itemize}
 			\item permette di creare gerarchie di classi parallele, che si ottengono quando classe delega alcune delle sue responsabilità ad una classe separata;
-			\item fornire un metodo factory comporta una maggiore flessibilità rispetto alla creazione diretta dell'oggetto, poichè è possibile scegliere quale classe concreta istanziare e decidere di cambiarla senza avere nessun impatto verso il \insglo{Client}.
+			\item fornire un metodo factory comporta una maggiore flessibilità rispetto alla creazione diretta dell'oggetto, poiché è possibile scegliere quale classe concreta istanziare e decidere di cambiarla senza avere nessun impatto verso il \insglo{Client}.
 		\end{itemize}
 		\level{3}{Svantaggi}
 		L'unico potenziale svantaggio di questo \insglo{pattern} è che il \insglo{Client} deve derivare la classe Creator solo per creare un particolare oggetto di ConcreteProduct.
