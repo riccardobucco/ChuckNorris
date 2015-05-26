@@ -16,34 +16,33 @@
 
 package it.kaizenteam.app.model;
 
-/** NorrisSessionInfo è l’interfaccia di NorrisSessionInfoImpl */
+/** NorrisSessionInfo is the interface NorrisSessionInfoImpl */
 public interface NorrisSessionInfo {
-    /** Tale metodo ha il compito di ritornare l’indirizzo dell’istanza di Norris.
-    * @return String indirizzo dell'instanza di Norris
+    /** This method has the task to return the address of the instance of Norris.
+    * @return String address of Norris instance
     */
     String getAddress();
 
-    /** Tale metodo ha il compito di memorizzare l’indirizzo dell’istanza di Norris acceduta.
-    * @param address indirizzo dell'istanza di Norris
+    /** This method has the task of storing the address of the instance of Norris accessed.
+    * @param address address of Norris instance
     */
     void setAddress(String address);
 
-    /** Tale metodo ha il compito di memorizzare il fatto che è avvenuto il login all’istanza di Norris.
+    /** This method has the task of storing that login done in instance of Norris.
     */
     void login();
 
-    /** Tale metodo ha il compito di memorizzare il fatto che è avvenuto il logout all’istanza
-di Norris. */
+    /** This method has the task of storing that logout done in instance of Norris. */
     void logout();
 
-    /** Tale metodo ha il compito di informare attraverso una valore booleano se la sessione all’istanza di Norris è attiva.
-    * @param boolean instanza di Norris attiva / non attiva
+    /** This method has the task of informing through a Boolean value if the session instance of Norris is active.
+    * @param boolean Norris instance active / not active
     */
     boolean isLogged();
 
     /**TODO
-    * Tale metodo ha il compito di ritornare l’insieme dei cookie di autenticazione per l’istanza di Norris.
-    * @return Cookie[] insieme dei cookie di autenticazione per l'istanza di Norris
+    * This method is responsible for returning the list of authentication cookies for the instance of Norris.
+    * @return Cookie[] list of authentication cookies for the instance of Norris
     public Cookie[] getAuthCookie();
     */
 }

@@ -16,31 +16,31 @@
 
 package it.kaizenteam.app.model;
 
-/** Tale classe ha lo scopo di salvare i vari dati necessari alla sessione. Infatti in essa sono contenuti i vari cookie di autenticazione e l’indirizzo al quale la sessione appartiene. */
+/** This class stores the various data necessary for the session. In fact it contains the various authentication cookie and the address to which the session belongs. */
 public class NorrisSessionInfoImpl implements NorrisSessionInfo {
     /**
-    * Tale attributo statico rappresenta l’istanza univoca di tale classe.
+    * The static attribute is the unique instance of that class.
     */
     private static NorrisSessionInfoImpl instance;
 
     /**
-    * Tale attributo rappresenta l’indirizzo di Norris appartenente alla sessione attiva.
+    * This attribute is the address belonging to Norris active session.
     */
     private String address="";
 
     /**
-    * Tale attributo rappresenta lo stato della sessione.
+    * This attribute represents the state of the session.
     */
     private boolean isLogged=false;
 
     /**
-    * Tale attributo rappresenta i cookie di l’autenticazione della sessione che dovranno essere inviati per effettuare le richieste.
+    * This attribute represents the cookie authentication session to be sent to make requests.
     */
     //TODO private Cookie[] authCookie;
 
     /**
-    * Tale metodo ha il compito di ritornare l’istanza unica di tale classe e se non esiste la crea.
-    * @return NorrisSessionInfo - istanza unica di Norris
+    * This method is responsible for returning the unique instance of this class and creating it if it not exists.
+    * @return the unique Norris instance
     */
     public static NorrisSessionInfo getInstance(){
         if(instance!=null)
@@ -49,51 +49,51 @@ public class NorrisSessionInfoImpl implements NorrisSessionInfo {
     }
 
     /**
-    * Tale metodo è il costruttore della classe. Esso è privato perchè non si vuole permettere a nessuno di poter creare un’istanza se non utilizzando il metodo getInstance().
+    * This method is the constructor of the class. It is private because only through getInstance() method it is allowed to create the instance.
     */
     private NorrisSessionInfoImpl(){}
 
     /**
-    * Tale metodo ha il compito di ritornare l’indirizzo dell’istanza di Norris.
-    * @return String indirizzo instanza di Norris
+    * This method has the task to return the address of the instance of Norris.
+    * @return Norris instance address
     */
     public String getAddress(){
         return address;
     }
 
     /**
-    * Tale metodo ha il compito di memorizzare l’indirizzo dell’istanza di Norris acceduta.
-    * @param String indirizzo dell'instanza di Norris
+    * This method has the task of storing the address of the instance of Norris accessed.
+    * @param address Norris instance address
     */
     public void setAddress(String address){
         this.address=address;
     }
 
     /**
-    * Tale metodo ha il compito di memorizzare il fatto che è avvenuto il login all’istanza di Norris.
+    * This method has the task of storing that login happened in instance of Norris.
     */
     public void login(){
         isLogged=true;
     }
 
     /**
-    * Tale metodo ha il compito di memorizzare il fatto che è avvenuto il logout all’istanza di Norris.
+    * This method has the task of storing that logout happened in instance of Norris.
     */
     public void logout(){
         isLogged=false;
     }
 
     /**
-    * Tale metodo ha il compito di informare attraverso una valore booleano se la sessione all’istanza di Norris è attiva.
-    * @return boolean instanza di Norris attiva / disattiva
+    * This method has the task of informing through a Boolean value if the session instance of Norris is active.
+    * @return Norris instance active / not active
     */
     public boolean isLogged(){
         return isLogged;
     }
 
     /**
-    * Tale metodo ha il compito di ritornare l’inieme dei cookie di autenticazione per l’istanza di Norris.
-    * @return Cookie[] insieme dei cookie di autenticazione
+    * This method is responsible for returning the list of authentication cookies for the instance of Norris.
+    * @return Cookie[] list of authentication cookies
     */
     /**TODO
     public Cookie[] getAuthCookie(){
