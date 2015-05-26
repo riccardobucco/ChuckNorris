@@ -80,7 +80,7 @@ _norme: _force
 	@ sed -ri 's/\\listoftables//' NormeDiProgetto/NormeDiProgetto.tex
 
 _qualifica: _force
-	@ curl http://kaizenteam.it/tracker/export/test-unita.php > PianoDiQualifica/TrackerTestUnita.tex
+	@ curl http://kaizenteam.it/tracker/export/test-unita.php > PianoDiQualifica/Tex/TestUnita.tex
 
 _specifica: _force
 	@ #creazione file latex classi
