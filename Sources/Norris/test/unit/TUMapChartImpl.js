@@ -32,7 +32,6 @@ describe('MapChartImpl', function(){
 			var defaults = {
 				title: '',
 				description: 'This is a map chart',
-				showLegend : true,
 				legendPosition : 'top-right',
 				maxPoints : 5
 			};
