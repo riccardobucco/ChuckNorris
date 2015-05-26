@@ -19,7 +19,7 @@
                 "none"
             ]
         },
-        "maxValues": {
+        "maxPoints": {
             "type": "integer",
             "minimum": 1
         },
