@@ -54,9 +54,9 @@ LineChartStreamUpdater.prototype.update = function (chart, updateData) {
                 if (updateData[i].data.length==data.datasets.length) {
                     for(var k=0; k<data.datasets.length; k++) {
                         data.datasets[k].values.push(updateData[i].data[k]);
-                        if (data.datasets[k].values>chart.getSettings().maxPoints) {
+                        if (data.datasets[k].values.length>chart.getSettings().maxPoints) {
                             data.datasets[k].values[0]=null;
-                            data.datasets[k].values== data.datasets.values.filter(function (e) {return e!=null;});
+                            data.datasets[k].values == data.datasets.values.filter(function (e) {return e!=null;});
                         }
                     }
                     data.labels.push(updateData[i].label);
