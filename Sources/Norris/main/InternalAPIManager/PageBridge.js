@@ -11,7 +11,7 @@
  * =============================================================================================
  * Version   Date         Author               Description
  * =============================================================================================
- * 0.01      2015-05-17   Davide Dal Bianco    Creation
+ * 0.01      2015-05-17   kaizenteam    Creation
  * =============================================================================================
  */
 
@@ -57,7 +57,7 @@ PageBridge.prototype.getId = function () {
  * @param {PageSettings} settings - The page's settings.
  */
 PageBridge.prototype.setSettings = function (settings) {
-    this.page.setSettings(setSettings);
+    this.page.setSettings(settings);
 };
 
 /**
