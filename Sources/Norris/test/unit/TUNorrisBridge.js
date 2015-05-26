@@ -23,7 +23,7 @@ describe('NorrisBridge', function(){
 
 	describe('createPage(pageId: String): void',function(){
 		it('should create a page with the indicated id',function(){
-		  	var page = {'page':{'charts': [],'settings': {'maxChartsCol': 3,'maxChartsRow': 2,'title': 'Norris's page'},'uid': '00'}};
+		  	var page = {'page':{'charts': [],'settings': {'maxChartsCol': 3,'maxChartsRow': 2,'title': 'Norris page'},'uid': '00'}};
 ;
 			
 			var norrisImpl = new NorrisImpl();
