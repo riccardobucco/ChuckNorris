@@ -36,8 +36,8 @@
 		\level{3}{Table}
 			The Data object of a Table has the following “name/value” pairs:
 			\begin{description}
-				\item[headers] This is an array of Strings. Every String represents the header of a column of the table.
-				\item[datasets] This is an array of arrays of objects. The main array represents the entire table. Internal arrays represent rows of the table. Every object represents a cell of the specified row, and they have the following properties:
+				\item[headers] This is an array of Strings. Every String represents the header of a column of the Table.
+				\item[datasets] This is an array of arrays of objects. The main array represents the entire Table. Internal arrays represent rows of the Table. Every object represents a cell of the specified row, and they have the following properties:
 				\begin{itemize}
 					\item \textbf{color}: it's an object with the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1.
 					This object represents the color of text in the cell: it uses the RGB color model with an alpha channel to set opacity.
@@ -56,6 +56,7 @@
 		\end{description}
 		This is a description of specific properties for different types of charts.
 		\level{3}{Bar chart}
+			In a \insglo{Bar Chart} you can set the following settings:
 			\begin{description}
 				\item[xLabel] It's a String used to set the name of the “x” axis.
 				\item[yLabel] It's a String used to set the name of the “y” axis.
@@ -68,46 +69,52 @@
 					\item \textbf{barDatasetSpacing}:
 				\end{itemize}
 			\end{description}
-		\level{3}{Line chart}
-			The \insglo{line chart} has some of the same settings properties already described for the \insglo{bar chart}, such as “xLabel”, “yLabel”, “showGrid” and “legendPosition” but it doesn't have the property for the orientation of it. \\
-			The \insglo{line chart} can also change the following settings:
-			\begin{itemize}
-				\item \textbf{maxPoints}: it's an integer describing the maximum number of points of the chart (the minimum is 1);
-				\item \textbf{format}: it's an object with two properties. The first (“pointDotRadius”) it's a number indicating the radius of each dot in pixels. The second one (“bezierCurve”) is a boolean which indicates whether the line is curved between the points.
-			\end{itemize}
-			\level{3}{Map chart}
-			The \insglo{map chart}, in addition to the “legendPosition” property, which has already been described for the \insglo{bar chart} and the “maxPoint” property, already specified for the \insglo{line chart}, permits, also, to change the following settings:
-			\begin{itemize}
-				\item \textbf{centerCoordinates}: it's an object with two properties. They both are two numbers (“x” and “y”) that indicates the center of the map and they're mandatory if you add this property.
-				\item \textbf{area}: it's a number which has a minimum value of 0. It represents the value of the area of the map.
-				\item \textbf{style}: it contains the “marker” property, which is a String, usefull to set the type of the marker.
-			\end{itemize}
+		\level{3}{Line Chart}
+			In a \insglo{Line Chart} you can set the following settings:
+			\begin{description}
+				\item[xLabel] It's a String used to set the name of the “x” axis.
+				\item[yLabel] It's a String used to set the name of the “y” axis.
+				\item[showGrid] This is a boolean value which specifies if the grid of the chart has to be shown or not.
+				\item[legendPosition] It's a String, chosen from a set of values, which sets where the legend has to be positioned. This property can assume the following values: “top-left”, “bottom-left”, “top-right” or “bottom-right”.
+				\item[maxPoints]: it's an integer describing the maximum number of dependent values of the chart, that is to say tha maximum number of points for every line (the minimum is 1);
+				\item[format]: it's an object with two properties. The first (“pointDotRadius”) it's a number indicating the radius of each point in pixels. The second one (“bezierCurve”) is a boolean value which indicates whether the line is curved between the points.
+			\end{description}
+		\level{3}{Map chart}
+			In a \insglo{Map Chart} you can set the following settings:
+			\begin{description}
+				\item[legendPosition]: It's a String, chosen from a set of values, which sets where the legend has to be positioned. This property can assume the following values: “top-left”, “bottom-left”, “top-right” or “bottom-right”.
+				\item[maxPoints]: It's an integer describing the maximum number of dependent values of the chart, that is to say tha maximum number of points for every line (the minimum is 1).
+				\item[centerCoordinates]: it's an object with two properties. They both are two numbers (“x” and “y”) that indicates the center of the map and they're mandatory if you add this property.
+				\item[area]: it's a number which has a minimum value of 0. It represents the value of the area of the map.
+				\item[style]: it contains the “marker” property, which is a String, usefull to set the type of the marker.
+			\end{description}
 		\level{3}{Table}
-		\begin{description}
-			\item[maxRows] It's an integer which indicates the maximum number of rows of the \insglo{table}. The minimum value is 1.
-			\item[showTableGrid] This is a boolean which specify if the grid of the \insglo{table} has to be shown or not.
-			\item[newLinePosition] It's a String, chosen from a set of values, which tells where the new line has to be positioned. This property can assume the values: “top” or “bottom”.
-		\end{description}
+			In a \insglo{Table} you can set the following settings:
+			\begin{description}
+				\item[maxRows] It's an integer which indicates the maximum number of rows of the \insglo{Table}. The minimum value is 1.
+				\item[showTableGrid] This is a boolean which specify if the grid of the \insglo{Table} has to be shown or not.
+				\item[newLinePosition] It's a String, chosen from a set of values, which tells where the new line has to be positioned. This property can assume the values: “top” or “bottom”.
+			\end{description}
 
 	\level{2}{Updates}
 	A description of the \insglo{JSON} format of an update \insglo{package}, depending on the type of the chart, follows. 
 		\level{3}{Bar chart}
-		The \insglo{bar chart} can be updated with the “\insglo{in place}” method. The format of this kind of \insglo{package} should have the properties described below.
+		The \insglo{Bar Chart} can be updated with the “\insglo{in place}” method. The format of this kind of \insglo{package} should have the properties described below.
 		\begin{description}
 			\item[position] It's an object with two “name/value” pairs: “x” and “y”. They both are two integers, that can assume a minimum value of 0, and specify the position of the data that has to be updated.
 			\item[data] It's a number that represents the update data.
 		\end{description}
 		Both these properties are mandatory.
 		\level{3}{Line chart}
-		The \insglo{line chart} can be updated with the “\insglo{in place}” method or the “\insglo{stream}” method. \\
-		For the “\insglo{in place}” method, the format of the \insglo{JSON} object is the same of the one already described for the \insglo{bar chart}. Instead, the properties of the “\insglo{stream}” method are described below.
+		The \insglo{Line Chart} can be updated with the “\insglo{in place}” method or the “\insglo{stream}” method. \\
+		For the “\insglo{in place}” method, the format of the \insglo{JSON} object is the same of the one already described for the \insglo{Bar Chart}. Instead, the properties of the “\insglo{stream}” method are described below.
 		\begin{description}
 			\item[label] It's a String that indicates the x-value of what it's going to be updated.
 			\item[data] It's an array of number which represents the y-values of the data that's going to be updated.
 		\end{description}
 		Both these properties are mandatory.
 		\level{3}{Map chart}
-		The \insglo{map chart} can be updated with the “\insglo{in place}” method or the “\insglo{movie}” method. \\
+		The \insglo{Map Chart} can be updated with the “\insglo{in place}” method or the “\insglo{movie}” method. \\
 		The first one requests the properties described below.
 		\begin{description}
 			\item[position] It's an object formed by two “name/value” pairs: “series” and “index”. Both are integers that can assume at least a 0 value.
@@ -125,7 +132,7 @@
 			\item[delete] It's an array of objects with the “series” and “index” properties (they must be integers), the “id” property (which has to be a String).
 		\end{description}
 		\level{3}{Table}
-		The \insglo{table} can be updated with the “\insglo{in place}” method or the “\insglo{stream}” method.
+		The \insglo{Table} can be updated with the “\insglo{in place}” method or the “\insglo{stream}” method.
 		The properties required by the “\insglo{in place}” method are described below.
 		\begin{description}
 			\item[position] It's an object with two “name/value” pairs: “x” and “y”. They both are integers that can assume at least a 0 value.
