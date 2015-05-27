@@ -1,7 +1,8 @@
-\level{2}{Description of Norris' External API}
+\level{1}{Description of Norris' External API} \label{sec:ExternalAPI}
+    This section describes the functionality provided by the External API of Norris. Through those API it's possible to request a chart to an instance of Norris. It will be automatically updated. You can render the chart with a library of your choice.\\
     In this section we refer \texttt{[endpoint]} as the Internal API given endpoint.
 
-    \level{3}{Chart request API}
+    \level{2}{Chart request API}
         The Chart request API provides the functionalities to get a chart. The API is available over WebSocket. Once opened a WebSocket, you will get both the chart and its own updates until you close the connection. \\
         Request details:
         \begin{enumerate}
@@ -10,7 +11,7 @@
             \item For each update you will get an \texttt{update} event with update type and update data as parameters.
         \end{enumerate}
 
-    \level{3}{List request API}
+    \level{2}{List request API}
         The List request API provides the list of all charts contained in a Norris instance. The API is available over HTTP and you will get the list of the charts with the following details:
         \begin{itemize}
             \item Chart id;
@@ -30,7 +31,7 @@
             \caption{External API - list request}
         \end{table}
 
-    \level{3}{Authentication API}
+    \level{2}{Authentication API}
         The Authentication APIs provides the functionalities to perform authentication to a Norris instance. The APIs is available over HTTP requests and may sets some cookies.
         \level{4}{Login}
             The login starts a new session for the given user. \\
@@ -46,7 +47,7 @@
                 \end{tabu}
                 \caption{External API - login request}
             \end{table}
-        \level{4}{Keep alive}
+        \level{3}{Keep alive}
             The keep alive prevents the user session to expire. \\
             \begin{table}[H]
                 \centering
@@ -58,7 +59,7 @@
                 \end{tabu}
                 \caption{External API - keep alive request}
             \end{table}
-        \level{4}{Logout}
+        \level{3}{Logout}
             The logout ends the user session. \\
             \begin{table}[H]
                 \centering

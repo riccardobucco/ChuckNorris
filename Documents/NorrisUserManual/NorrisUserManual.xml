@@ -9,8 +9,10 @@
 	<distribution></distribution>
 
 	<sections>
-        <name>Tex/Server.tex</name>
-		<name>Tex/Client.tex</name>
+        <name>Tex/ServerInstallationDetails.tex</name>
+		<name>Tex/ServerUsage.tex</name>
+        <name>Tex/InternalAPIDescription.tex</name>
+        <name>Tex/ExternalAPIDescription.tex</name>
         <name>Tex/ObjectsDescription.tex</name>     
     </sections>
 	   

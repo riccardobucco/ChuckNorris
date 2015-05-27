@@ -1,5 +1,5 @@
-\level{2}{Installation details}
-	\level{3}{Prerequisites}
+\level{1}{Installation details}
+	\level{2}{Prerequisites}
 		Before you begin, make sure
 		\begin{description}
 			\item[you have \insglo{Node.js} and npm installed] Get the latest version from \insuri{http://nodejs.org}. If you're using Mac or Windows, the best way to install \insglo{Node.js} is to use one of the pre-built installers. If you're using Linux, you can use the installer or you can download the source code.\\
@@ -8,7 +8,7 @@
 			If \texttt{package.json} file does not exist already, you can create it with the \texttt{npm init} command. A second option is to create it manually (specifics of npm's \texttt{package.json} handling can be found at \insuri{https://docs.npmjs.com/files/package.json}).
 			\item[you have \insglo{Express.js} installed in the app directory and saved in the dependencies list] This \insglo{package} can be downloaded and added to the dependencies list with the \texttt{npm install express --save} command (detailed instructions can be found at \insuri{http://expressjs.com/starter/installing.html}).
 		\end{description}
-	\level{3}{Performing the installation}
+	\level{2}{Performing the installation}
 		First, make the app directory your working directory. Then use the following npm command:
 		\begin{lstlisting}
 			$ npm install (*\ignoreglo{norris}*)-rtc --save
@@ -16,5 +16,5 @@
 		This will create the \texttt{node\_modules} directory (if one doesn't exist yet), and will download the \insglo{package} to that directory. It will also add the \insglo{package} to the dependencies in \texttt{package.json} (unless it was already there).\\
 		You might want to add \insglo{Norris} temporarily, just to it out, without adding it to the dependencies list in the \texttt{package.json} file. Just avoid using \texttt{--save} flag:
 		\begin{lstlisting}
-			$ npm install (*\ignoreglo{norris}*)
+			$ npm install (*\ignoreglo{norris}*)-rtc
 		\end{lstlisting}
