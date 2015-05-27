@@ -76,16 +76,60 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				L'analisi dinamica è una forma di valutazione di un sistema \insglo{software} o di un suo componente basato sulla osservazione del suo comportamento in esecuzione. Tali tecniche, dunque, sono applicabili solo a componenti \insglo{software} e vengono svolte tramite l'esecuzione di test su essi.\\
 				Deve essere preoccupazione di chi scrive i test fare in modo che essi siano di grande valore dimostrativo, in quanto il numero di test che devono essere effettuati è per forza di cose in numero finito e relativamente piccolo.
 		\level{3}{Test}
-					\level{4}{Test di integrazione}
-					I test di integrazione servono per verificare il corretto funzionamento di più moduli assemblati insieme; in particolare servono per rilevare bug nei moduli nel momento in cui essi interagiscono con altri moduli coi quali hanno dipendenze.\\
-					I test di integrazione vengono identificati dalla sintassi TI[Componente], dove Componente si riferisce al componente del sistema del quale si sta testando l'integrazione tra i suoi elementi.
-					\level{4}{Test di sistema}
-					I test di sistema validano i requisiti individuati nell'\insdoc{Analisi dei Requisiti v3.00}, ovvero validano il \insglo{prodotto} \insglo{software}, e vengono eseguiti dopo i test di integrazione.
-					I test di sistema vengono identificati dalla sintassi TS[Codice del requisito], dove il codice del requisito è quello del requisito che sarà testato.\\
-					Nel documento \insdoc{Piano di Qualità v6.00} vengono riportati i test di sistema relativi ai soli requisiti funzionali specifici.
-					\level{4}{Test di accettazione}
-					I test di accettazione avvengono al momento del collaudo del \insglo{software} col proponente.
-					I test di accettazione sono identificati dalla sintassi TA[Codice del requisito], dove il Codice del requisito si riferisce al requisito che sarà testato.
+		I test effettuati su un prodotto software hanno lo scopo di verificare dinamicamente che il comportamento di un programma corrisponda ai risultati attesi. Esso viene testato su un insieme finito di casi, che, in realtà, è solo un sottoinsieme di tutti quelli che sarebbe possibile eseguire.\\
+		I test si distinguono in varie tipologie, le quali vengono di seguito descritte. Nella sezione \nameref{sec:procedure} vengono spiegate le procedure da effettuare per eseguire i test sui prodotti realizzati.
+			\level{4}{Norme}
+				\level{5}{Test di integrazione}
+				I test di integrazione servono per verificare il corretto funzionamento di più moduli assemblati insieme; in particolare servono per rilevare bug nei moduli, nel momento in cui essi interagiscono con altri moduli con i quali hanno dipendenze.\\
+				Essi vengono identificati dalla sintassi TI[Componente], dove Componente si riferisce al componente del sistema del quale si sta testando l'integrazione tra i suoi elementi.
+				\level{5}{Test di sistema}
+				I test di sistema validano i requisiti individuati nell'\insdoc{Analisi dei Requisiti v3.00}, ovvero validano il \insglo{prodotto} \insglo{software}, e vengono eseguiti dopo i test di integrazione.
+				I test di sistema vengono identificati dalla sintassi TS[Codice del requisito], dove il codice del requisito è quello del requisito che sarà testato.\\
+				Nel documento \insdoc{Piano di Qualità v6.00} vengono riportati i test di sistema relativi ai soli requisiti funzionali specifici.
+				\level{5}{Test di accettazione}
+				I test di accettazione avvengono al momento del collaudo del \insglo{software} col proponente.
+				I test di accettazione sono identificati dalla sintassi TA[Codice del requisito], dove il Codice del requisito si riferisce al requisito che sarà testato.
+			\level{4}{Procedure} \label{sec:procedure}
+			Di seguito vengono descritte le procedure da seguire per effettuare due diverse tipologie di test (test di unità e test di integrazione) sui prodotti \textit{Norris} e \textit{Chuck}.
+				\level{5}{Norris}
+					\level{6}{Test di unità}
+						Per eseguire i test di unità su Norris, si procede nel modo di seguito esposto dando per scontato che sia già installato il \textit{package manager} \texttt{npm} di node.js.
+						\begin{itemize}
+							\item Da terminale ci si sposti nella cartella \inspath{Sources/Norris}.
+							\item In caso non sia presente, si installi il test framework “mocha”, tramite il comando \texttt{npm install -g mocha}. Per ulteriori informazioni e approfondimenti si visiti il sito \insuri{http://mochajs.org/}.
+							\item Una volta installato “mocha”, ci si sposti nella cartella \inspath{Sources/Norris/test/unit} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire. 
+							\item In caso il test dia risultato positivo, comparirà l'elenco dei metodi testati con il segno di spunta, come nella figura seguente.
+							\begin{figure}[H]
+								\centering
+								\includegraphics[scale=0.5]{Pics/TUPassing.jpg}
+								\caption{Esempio di Test di unità passato}
+							\end{figure}
+							\item In caso contrario, comparirà l'identificazione degli errori riguardanti i vari metodi che non superano il test. Un esempio è riportato nell'immagine seguente.
+							\begin{figure}[H]
+								\centering
+								\includegraphics[scale=0.4]{Pics/TUNotPassing.jpg}
+								\caption{Esempio di Test di unità fallito}
+							\end{figure}
+						\end{itemize}
+					\level{6}{Test di integrazione}
+					Per eseguire i test di integrazione su Norris, si procede nel modo di seguito esposto dando per scontato che sia già installato il \textit{package manager} \texttt{npm} di node.js.
+					\begin{itemize}
+							\item Da terminale ci si sposti nella cartella \inspath{Sources/Norris}.
+							\item In caso non sia presente, si installi il test framework “mocha”, tramite il comando \texttt{npm install -g mocha}. Per ulteriori informazioni e approfondimenti si visiti il sito \insuri{http://mochajs.org/}.
+							\item Una volta installato “mocha”, ci si sposti nella cartella \inspath{Sources/Norris/test/integration} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire.
+							\item In caso il test dia risultato positivo, comparirà l'elenco delle funzionalità testate con il segno di spunta, come nella figura seguente.
+							\begin{figure}[H]
+								\centering
+								\includegraphics[scale=0.5]{Pics/TIPassing.jpg}
+								\caption{Esempio di Test di integrazione passato}
+							\end{figure}
+							\item In caso l'esito sia negativo, comparirà la lista degli errori individuati, come nell'imagine seguente.
+							\begin{figure}[H]
+								\centering
+								\includegraphics[scale=0.5]{Pics/TINotPassing.jpg}
+								\caption{Esempio di Test di integrazione fallito}
+							\end{figure}
+					\end{itemize}
 		\level{3}{Issue tracking}
 			L'\insglo{issue} tracking è un attività di supporto dei \insrole{Verificatori}. Essa permettere non solo di tracciare tutti i potenziali difetti dalla comparsa fino alla risoluzione, ma consente al \insrole{Responsabile di Progetto} di assegnare i compiti di correzione ai singoli membri del \insglo{team}.
 			\level{4}{Norme}
