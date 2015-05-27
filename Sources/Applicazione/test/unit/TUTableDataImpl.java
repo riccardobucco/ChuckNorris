@@ -1,11 +1,5 @@
-package it.kaizenteam.app.model.NorrisChart;
-
-import junit.framework.TestCase;
-
-import java.util.ArrayList;
-
 /*
-* Name: NorrisSessionInfo.java
+* Name: TUTableDataImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -13,7 +7,7 @@ import java.util.ArrayList;
 *
 * History:
 * =================================================================
-* Version	Date	Programmer	Changes
+* Version   Date    Programmer  Changes
 * =================================================================
 * v0.02 2015-05-22  Davide Dal Bianco   Verify
 * =================================================================
@@ -21,6 +15,12 @@ import java.util.ArrayList;
 * =================================================================
 *
 */
+package it.kaizenteam.app.model.NorrisChart;
+
+import junit.framework.TestCase;
+
+import java.util.ArrayList;
+
 public class TUTableDataImpl extends TestCase {
 
     public void testGetData() throws Exception {

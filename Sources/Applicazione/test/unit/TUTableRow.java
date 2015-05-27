@@ -1,11 +1,5 @@
-package it.kaizenteam.app.model.NorrisChart;
-
-import junit.framework.TestCase;
-
-import java.util.ArrayList;
-
 /*
-* Name: NorrisSessionInfo.java
+* Name: TUTableRow.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,6 +15,12 @@ import java.util.ArrayList;
 * =================================================================
 *
 */
+package it.kaizenteam.app.model.NorrisChart;
+
+import junit.framework.TestCase;
+
+import java.util.ArrayList;
+
 public class TUTableRow extends TestCase {
 
     public void testGetData() throws Exception {

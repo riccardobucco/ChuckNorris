@@ -1,9 +1,5 @@
-package it.kaizenteam.app.model.NorrisChart;
-
-import junit.framework.TestCase;
-
 /*
-* Name: NorrisSessionInfoImpl.java
+* Name: TULineChartInPlaceUpdater.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,6 +15,10 @@ import junit.framework.TestCase;
 * =================================================================
 *
 */
+package it.kaizenteam.app.model.NorrisChart;
+
+import junit.framework.TestCase;
+
 public class TULineChartInPlaceUpdater extends TestCase {
 
     public void testGetInstance() throws Exception {

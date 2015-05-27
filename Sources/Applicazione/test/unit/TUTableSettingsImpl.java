@@ -1,11 +1,5 @@
-package it.kaizenteam.app.model.NorrisChart;
-
-import junit.framework.TestCase;
-
-import org.json.JSONObject;
-
 /*
-* Name: NorrisSessionInfo.java
+* Name: TUTableSettingsImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,6 +15,11 @@ import org.json.JSONObject;
 * =================================================================
 *
 */
+package it.kaizenteam.app.model.NorrisChart;
+
+import junit.framework.TestCase;
+
+import org.json.JSONObject;
 public class TUTableSettingsImpl extends TestCase {
 
     public void testGetBorderLineVisibility() throws Exception {

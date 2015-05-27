@@ -1,11 +1,5 @@
-package it.kaizenteam.app.model.NorrisChart;
-
-import junit.framework.TestCase;
-
-import org.json.JSONObject;
-
 /*
-* Name: NorrisSessionInfo.java
+* Name: TUMapChartSettingsImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -13,7 +7,7 @@ import org.json.JSONObject;
 *
 * History:
 * =================================================================
-* Version	Date	Programmer	Changes
+* Version   Date    Programmer  Changes
 * =================================================================
 * v0.02 2015-05-22  Davide Dal Bianco   Verify
 * =================================================================
@@ -21,6 +15,12 @@ import org.json.JSONObject;
 * =================================================================
 *
 */
+package it.kaizenteam.app.model.NorrisChart;
+
+import junit.framework.TestCase;
+
+import org.json.JSONObject;
+
 public class TUMapChartSettingsImpl extends TestCase {
 
     public void testGetMarkerType() throws Exception {

@@ -1,9 +1,6 @@
-package it.kaizenteam.app.model.NorrisChart;
-
-import android.test.InstrumentationTestCase;
 
 /*
-* Name: NorrisSessionInfoImpl.java
+* Name: TUChartImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -11,7 +8,7 @@ import android.test.InstrumentationTestCase;
 *
 * History:
 * =================================================================
-* Version	Date	Programmer	Changes
+* Version   Date    Programmer  Changes
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
@@ -19,6 +16,9 @@ import android.test.InstrumentationTestCase;
 * =================================================================
 *
 */
+package it.kaizenteam.app.model.NorrisChart;
+
+import android.test.InstrumentationTestCase;
 public class TUChartImpl extends InstrumentationTestCase {
 
     public void testRegisterFactory() throws Exception {

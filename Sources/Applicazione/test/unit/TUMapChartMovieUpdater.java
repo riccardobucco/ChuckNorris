@@ -1,7 +1,3 @@
-package it.kaizenteam.app.model.NorrisChart;
-
-import junit.framework.TestCase;
-
 /*
 * Name: TUMapChartMovieUpdater.java
 * Package: it.kaizenteam.app.model
@@ -19,6 +15,10 @@ import junit.framework.TestCase;
 * =================================================================
 *
 */
+package it.kaizenteam.app.model.NorrisChart;
+
+import junit.framework.TestCase;
+
 public class TUMapChartMovieUpdater extends TestCase {
 
     public void testGetInstance() throws Exception {
