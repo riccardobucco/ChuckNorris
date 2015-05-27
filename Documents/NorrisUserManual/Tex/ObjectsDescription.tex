@@ -38,12 +38,12 @@
 			\begin{description}
 				\item[headers] This is an array of Strings. Every String represents the header of a column of the Table.
 				\item[datasets] This is an array of arrays of objects. The main array represents the entire Table. Internal arrays represent rows of the Table. Every object represents a cell of the specified row, and they have the following properties:
-				\begin{itemize}
-					\item \textbf{color}: it's an object with the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1.
+				\begin{description}
+					\item[color]: it's an object with the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1.
 					This object represents the color of text in the cell: it uses the RGB color model with an alpha channel to set opacity.
-					\item \textbf{background}: it's an object with the same properties of “color” but it sets the background color of the cell.
-				\end{itemize}
-				\item[value] It's a String which represents the text of the cell.
+					\item[background]: it's an object with the same properties of “color” but it sets the background color of the cell.
+					\item[value] It's a String which represents the text of the cell.
+				\end{description}
 			\end{description}
 			You have to keep in mind that the “headers”, “datasets” and “values” properties are mandatory. The same applies for the properties “r”, “g”, “b” of “color”. Moreover, the length of each array contained in datasets must be the same of that of headers array.
 
@@ -91,51 +91,76 @@
 		\level{3}{Table}
 			In a \insglo{Table} you can set the following settings:
 			\begin{description}
-				\item[maxRows] It's an integer which indicates the maximum number of rows of the \insglo{Table}. The minimum value is 1.
-				\item[showTableGrid] This is a boolean which specify if the grid of the \insglo{Table} has to be shown or not.
-				\item[newLinePosition] It's a String, chosen from a set of values, which tells where the new line has to be positioned. This property can assume the values: “top” or “bottom”.
+				\item[maxRows] It's an integer value which indicates the maximum number of rows of the \insglo{Table}. The minimum value is 1.
+				\item[showTableGrid] This is a boolean value which specifies if the grid of the \insglo{Table} has to be shown or not.
+				\item[newLinePosition] It's a String, chosen from a set of values, which sets where the new line has to be positioned. This property can assume one of the following values: “top” or “bottom”.
 			\end{description}
 
 	\level{2}{Updates}
-	A description of the \insglo{JSON} format of an update \insglo{package}, depending on the type of the chart, follows. 
+		In this section there is a description of the format of update \insglo{packages}, depending on charts type. 
 		\level{3}{Bar chart}
-		The \insglo{Bar Chart} can be updated with the “\insglo{in place}” method. The format of this kind of \insglo{package} should have the properties described below.
-		\begin{description}
-			\item[position] It's an object with two “name/value” pairs: “x” and “y”. They both are two integers, that can assume a minimum value of 0, and specify the position of the data that has to be updated.
-			\item[data] It's a number that represents the update data.
-		\end{description}
-		Both these properties are mandatory.
+			The \insglo{Bar Chart} can be updated with the “\insglo{in place}” method. The parameter of such method must be an array of objects. Every object should have the properties described below.
+			\begin{description}
+				\item[position] It's an object with two “name/value” pairs: “x” and “y”. They both are two integer values, that can assume a minimum value of 0. “x” value specifies which bar set has to be modified, “y” specifies which bar of the chosen set has to be updated.
+				\item[data] It's the new dependent value for the chosen bar.
+			\end{description}
+			Both these properties are mandatory.
 		\level{3}{Line chart}
-		The \insglo{Line Chart} can be updated with the “\insglo{in place}” method or the “\insglo{stream}” method. \\
-		For the “\insglo{in place}” method, the format of the \insglo{JSON} object is the same of the one already described for the \insglo{Bar Chart}. Instead, the properties of the “\insglo{stream}” method are described below.
-		\begin{description}
-			\item[label] It's a String that indicates the x-value of what it's going to be updated.
-			\item[data] It's an array of number which represents the y-values of the data that's going to be updated.
-		\end{description}
-		Both these properties are mandatory.
+			The \insglo{Line Chart} can be updated with the “\insglo{in place}” method or the “\insglo{stream}” method.\\
+			The parameter of the “\insglo{in place}” method must be an array of objects. Every object should have the properties described below.
+			\begin{description}
+				\item[position] It's an object with two “name/value” pairs: “x” and “y”. They both are two integer values, that can assume a minimum value of 0. “x” value specifies which line has to be modified, “y” specifies which point of the chosen line has to be updated.
+				\item[data] It's the new dependent value for the chosen point.
+			\end{description}
+			The parameter of the “\insglo{stream}” method must be an array of objects. Every object should have the properties described below.
+			\begin{description}
+				\item[label] It's a String that indicates the new x-value (independent value) that would be added.
+				\item[data] It's an array of values. If “n” is the index of a value in the array, it has to be added to the line number “n” of the chart, in corresponondence of the new x-value (label).
+			\end{description}
+			Both these properties are mandatory.
 		\level{3}{Map chart}
-		The \insglo{Map Chart} can be updated with the “\insglo{in place}” method or the “\insglo{movie}” method. \\
-		The first one requests the properties described below.
-		\begin{description}
-			\item[position] It's an object formed by two “name/value” pairs: “series” and “index”. Both are integers that can assume at least a 0 value.
-			\item[data] It's an object formed by three “name/value” pairs: 
-			“x” and “y”, which are two numbers indicating the update value and “id” which is a String. It's mandatory to set at least the values “x” and “y” or the “id” property.
-		\end{description}
-		The “\insglo{movie}” method follow the format described below.
-		\begin{description}
-			\item[inplace] It's an array containing the “position” and “data” properties described for the “\insglo{in place}” method.
-			\item[\insglo{stream}] It's an array of objects with the following properties:
-			\begin{itemize}
-				\item \textbf{series}: it's an integer representing the number of the series;
-				\item \textbf{data}: it's an object with the “x”, “y” and “id” properties.
-			\end{itemize}
-			\item[delete] It's an array of objects with the “series” and “index” properties (they must be integers), the “id” property (which has to be a String).
-		\end{description}
+			The \insglo{Map Chart} can be updated with the “\insglo{in place}” method or the “\insglo{movie}” method.\\
+			The parameter of the “\insglo{in place}” method must be an array of objects. Every object should have the properties described below.
+			\begin{description}
+				\item[position] It's an object formed by two “name/value” pairs: “series” and “index”. Both are integers that can assume at least a 0 value. The first indicates which series has to be modified, the second one indicates the point of the chosen series whose coordinates must change. 
+				\item[data] It's an object formed by three “name/value” pairs: “x” and “y”, which are two numbers, and “id”, which is a String. It's mandatory to set at least the values “x” and “y” or the “id” property. “x” and “y” stand for the new coordinates that have to be assigned to the chosen point (position).
+			\end{description}
+			The parameter of the “\insglo{movie}” method must be an object with the following properties:
+			\begin{description}
+				\item[inplace] It's an array of objects. Every object represent the new position of a point of the chart. Every object should have the properties described below.
+				\begin{description}
+					\item[position] It's an object formed by two “name/value” pairs: “series” and “index”. Both are integers that can assume at least a 0 value. The first indicates which series has to be modified, the second one indicates the point of the chosen series whose coordinates must change. 
+					\item[data] It's an object formed by three “name/value” pairs: “x” and “y”, which are two numbers, and “id”, which is a String. It's mandatory to set at least the values “x” and “y” or the “id” property. “x” and “y” stand for the new coordinates that have to be assigned to the chosen point (position).
+				\end{description}
+				\item[stream] It's an array of objects. Objects represent points that have to be added to the chart. Every object has the following properties:
+				\begin{description}
+					\item[series]: it's an integer value representing the series that has to be modified.
+					\item[data]: it's an array of objects that represents the points that have to be added to the chosen series. Every object has the “x”, “y” (coordinates of the new point) and “id” properties.
+				\end{description}
+				\item[delete] It's an array of objects. Every object represent a point of the chart that has to be removed. Every object has the following properties:
+				\begin{description}
+					\item[series] it's an integer value representing the series that has to be modified.
+					\item[index] it's an integer value representing a point of the chosen series.
+					\item[id] it's a String representing the id of the point that has to be deleted.
+				\end{description}
+			\end{description}
 		\level{3}{Table}
-		The \insglo{Table} can be updated with the “\insglo{in place}” method or the “\insglo{stream}” method.
-		The properties required by the “\insglo{in place}” method are described below.
-		\begin{description}
-			\item[position] It's an object with two “name/value” pairs: “x” and “y”. They both are integers that can assume at least a 0 value.
-			\item[data] It's an object with three properties: “color” (which has been described in the section \nameref{sec:dataBarLine}), “background” and “value” which is a String that indicates the update value.
-		\end{description}
-		The “\insglo{stream}” method, instead, just requires the “color”, “background” and “value” properties, already described above.
+			The \insglo{Table} can be updated with the “\insglo{in place}” method or the “\insglo{stream}” method.\\
+			The parameter of the “\insglo{in place}” method must be an array of objects. Every object represents a cell to be modified with its new value. Every object has the following properties:
+			\begin{description}
+				\item[position] It's an object which represents a cell to be modified. It has two properties “x” and “y”: they represent the row and the column of the cell that has to be modified. They both are integers that can assume at least a 0 value.
+				\item[data] It's an object with three properties:
+				\begin{description}
+					\item[color]: it's an object with the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1.
+					This object represents the color of text in the cell: it uses the RGB color model with an alpha channel to set opacity.
+					\item[background]: it's an object with the same properties of “color” but it sets the background color of the cell.
+					\item[value] It's a String which represents the text of the cell.
+				\end{description}
+			\end{description}
+			The parameter of the “\insglo{stream}” method must be an array of arrays of objects. The main array represents the set of rows that have to be added. Internal arrays represent rows of the Table. Every object represents a cell of the specified row, and they have the following properties:
+			\begin{description}
+				\item[color]: it's an object with the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1.
+				This object represents the color of text in the cell: it uses the RGB color model with an alpha channel to set opacity.
+				\item[background]: it's an object with the same properties of “color” but it sets the background color of the cell.
+				\item[value] It's a String which represents the text of the cell.
+			\end{description}
