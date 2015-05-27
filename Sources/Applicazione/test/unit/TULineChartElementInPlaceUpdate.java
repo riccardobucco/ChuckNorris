@@ -1,5 +1,5 @@
 /*
-* Name: TULineChartElementInPlaceUpdate.java
+* Name: TUApplicazioneLineChartElementInPlaceUpdate.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,7 +19,7 @@ package it.kaizenteam.app.model.NorrisChart;
 
 import junit.framework.TestCase;
 
-public class TULineChartElementInPlaceUpdate extends TestCase {
+public class TUApplicazioneLineChartElementInPlaceUpdate extends TestCase {
 
     public void testGetData() throws Exception {
         LineChartElementInPlaceUpdate a = new LineChartElementInPlaceUpdate(23,23,23);

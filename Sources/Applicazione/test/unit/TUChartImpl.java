@@ -1,6 +1,6 @@
 
 /*
-* Name: TUChartImpl.java
+* Name: TUApplicazioneChartImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,7 +19,7 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 import android.test.InstrumentationTestCase;
-public class TUChartImpl extends InstrumentationTestCase {
+public class TUApplicazioneChartImpl extends InstrumentationTestCase {
 
     public void testRegisterFactory() throws Exception {
         ChartImpl a;

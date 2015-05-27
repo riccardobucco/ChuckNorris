@@ -1,5 +1,5 @@
 /*
-* Name: TUTableRow.java
+* Name: TUApplicazioneTableRow.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,7 +21,7 @@ import junit.framework.TestCase;
 
 import java.util.ArrayList;
 
-public class TUTableRow extends TestCase {
+public class TUApplicazioneTableRow extends TestCase {
 
     public void testGetData() throws Exception {
         ArrayList<TableCell> val = new ArrayList<>();

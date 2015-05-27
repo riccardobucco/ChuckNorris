@@ -1,5 +1,5 @@
 /*
-* Name: TUTableInPlaceUpdate.java
+* Name: TUApplicazioneTableInPlaceUpdate.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,7 +21,7 @@ import junit.framework.TestCase;
 
 import java.util.ArrayList;
 
-public class TUTableInPlaceUpdate extends TestCase {
+public class TUApplicazioneTableInPlaceUpdate extends TestCase {
 
     public void testGetData() throws Exception {
         ArrayList<TableCellInPlaceUpdate> arr = new ArrayList<>();

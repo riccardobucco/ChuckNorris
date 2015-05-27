@@ -1,5 +1,5 @@
 /*
-* Name: TUMapChartSettingsImpl.java
+* Name: TUApplicazioneMapChartSettingsImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,7 +21,7 @@ import junit.framework.TestCase;
 
 import org.json.JSONObject;
 
-public class TUMapChartSettingsImpl extends TestCase {
+public class TUApplicazioneMapChartSettingsImpl extends TestCase {
 
     public void testGetMarkerType() throws Exception {
         MapChartSettingsImpl a = new MapChartSettingsImpl(new JSONObject("marker:bus"));

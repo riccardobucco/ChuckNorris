@@ -1,5 +1,5 @@
 /*
-* Name: TULineChartElementStreamUpdate.java
+* Name: TUApplicazioneLineChartElementStreamUpdate.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,7 +19,7 @@ package it.kaizenteam.app.model.NorrisChart;
 
 import junit.framework.TestCase;
 
-public class TULineChartElementStreamUpdate extends TestCase {
+public class TUApplicazioneLineChartElementStreamUpdate extends TestCase {
 
     public void testGetData() throws Exception {
         LineChartElementStreamUpdate a = new LineChartElementStreamUpdate("lab",23);

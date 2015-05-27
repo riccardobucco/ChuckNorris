@@ -1,5 +1,5 @@
 /*
-* Name: TUMapChartDataImpl.java
+* Name: TUApplicazioneMapChartDataImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,7 +19,7 @@ package it.kaizenteam.app.model.NorrisChart;
 
 import junit.framework.TestCase;
 
-public class TUMapChartDataImpl extends TestCase {
+public class TUApplicazioneMapChartDataImpl extends TestCase {
 
     public void testGetData() throws Exception {
         MapChartDataImpl a = new MapChartDataImpl(null);

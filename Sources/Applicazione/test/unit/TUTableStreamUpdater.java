@@ -1,5 +1,5 @@
 /*
-* Name: TUTableStreamUpdater.java
+* Name: TUApplicazioneTableStreamUpdater.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -20,7 +20,7 @@ package it.kaizenteam.app.model.NorrisChart;
 import junit.framework.TestCase;
 
 
-public class TUTableStreamUpdater extends TestCase {
+public class TUApplicazioneTableStreamUpdater extends TestCase {
 
     public void testGetInstance() throws Exception {
         Updater a = TableStreamUpdater.getInstance();

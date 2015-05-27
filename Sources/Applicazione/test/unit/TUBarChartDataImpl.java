@@ -1,5 +1,5 @@
 /*
-* Name: TUBarChartDataImpl.java
+* Name: TUApplicazioneBarChartDataImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,7 +19,7 @@ package it.kaizenteam.app.model.NorrisChart;
 
 import android.test.InstrumentationTestCase;
 
-public class TUBarChartDataImpl extends InstrumentationTestCase {
+public class TUApplicazioneBarChartDataImpl extends InstrumentationTestCase {
 
     public void testGetData() throws Exception {
         BarChartDataImpl a=new BarChartDataImpl(null);

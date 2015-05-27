@@ -1,5 +1,5 @@
 /*
-* Name: TUTableDataImpl.java
+* Name: TUApplicazioneTableDataImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,7 +21,7 @@ import junit.framework.TestCase;
 
 import java.util.ArrayList;
 
-public class TUTableDataImpl extends TestCase {
+public class TUApplicazioneTableDataImpl extends TestCase {
 
     public void testGetData() throws Exception {
         ArrayList<String> label = new ArrayList<>();

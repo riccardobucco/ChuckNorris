@@ -1,5 +1,5 @@
 /*
-* Name: TULineChartSettingsImpl.java
+* Name: TUApplicazioneLineChartSettingsImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,7 +21,7 @@ import junit.framework.TestCase;
 
 import org.json.JSONObject;
 
-public class TULineChartSettingsImpl extends TestCase {
+public class TUApplicazioneLineChartSettingsImpl extends TestCase {
 
     public void testGetXAxisName() throws Exception {
         LineChartSettingsImpl a = new LineChartSettingsImpl(new JSONObject("{x: xx}"));

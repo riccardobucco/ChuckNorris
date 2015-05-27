@@ -1,5 +1,5 @@
 /*
-* Name: TUTableStreamUpdate.java
+* Name: TUApplicazioneTableStreamUpdate.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,7 +21,7 @@ import junit.framework.TestCase;
 
 import java.util.ArrayList;
 
-public class TUTableStreamUpdate extends TestCase {
+public class TUApplicazioneTableStreamUpdate extends TestCase {
 
     public void testGetData() throws Exception {
         ArrayList<TableRow> arr = new ArrayList<>();

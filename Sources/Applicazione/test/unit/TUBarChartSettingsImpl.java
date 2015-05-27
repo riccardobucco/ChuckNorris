@@ -1,5 +1,5 @@
 /*
-* Name: TUBarChartSettingsImpl.java
+* Name: TUApplicazioneBarChartSettingsImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,7 +21,7 @@ import junit.framework.TestCase;
 
 import org.json.JSONObject;
 
-public class TUBarChartSettingsImpl extends TestCase {
+public class TUApplicazioneBarChartSettingsImpl extends TestCase {
 
     public void testGetXAxisName() throws Exception {
         BarChartSettingsImpl a = new BarChartSettingsImpl(new JSONObject("{settings: set}"));

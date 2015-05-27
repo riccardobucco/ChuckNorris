@@ -1,5 +1,5 @@
 /*
-* Name: TUMapChartElementInPlaceUpdate.java
+* Name: TUApplicazioneMapChartElementInPlaceUpdate.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,7 +19,7 @@ package it.kaizenteam.app.model.NorrisChart;
 
 import junit.framework.TestCase;
 
-public class TUMapChartElementInPlaceUpdate extends TestCase {
+public class TUApplicazioneMapChartElementInPlaceUpdate extends TestCase {
 
     public void testGetData() throws Exception {
         MapPoint p = new MapPoint(23,23,233030);

@@ -1,5 +1,5 @@
 /*
-* Name: TUNorrisSessionInfoImpl.java
+* Name: TUApplicazioneNorrisSessionInfoImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,7 +19,7 @@ package it.kaizenteam.app.model;
 
 import junit.framework.TestCase;
 
-public class TUNorrisSessionInfoImpl extends TestCase {
+public class TUApplicazioneNorrisSessionInfoImpl extends TestCase {
 
     public void testGetInstance() throws Exception {
         NorrisSessionInfo a = NorrisSessionInfoImpl.getInstance();

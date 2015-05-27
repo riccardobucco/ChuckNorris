@@ -1,5 +1,5 @@
 /*
-* Name: TUTableSettingsImpl.java
+* Name: TUApplicazioneTableSettingsImpl.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -20,7 +20,7 @@ package it.kaizenteam.app.model.NorrisChart;
 import junit.framework.TestCase;
 
 import org.json.JSONObject;
-public class TUTableSettingsImpl extends TestCase {
+public class TUApplicazioneTableSettingsImpl extends TestCase {
 
     public void testGetBorderLineVisibility() throws Exception {
         TableSettingsImpl a = new TableSettingsImpl(new JSONObject("{border:true}"));

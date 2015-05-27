@@ -1,5 +1,5 @@
 /*
-* Name: TUTableInPlaceUpdater.java
+* Name: TUApplicazioneTableInPlaceUpdater.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,7 +19,7 @@ package it.kaizenteam.app.model.NorrisChart;
 
 import junit.framework.TestCase;
 
-public class TUTableInPlaceUpdater extends TestCase {
+public class TUApplicazioneTableInPlaceUpdater extends TestCase {
 
     public void testGetInstance() throws Exception {
         Updater a = TableInPlaceUpdater.getInstance();

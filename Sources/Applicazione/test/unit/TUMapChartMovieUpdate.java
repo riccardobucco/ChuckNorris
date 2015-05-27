@@ -1,5 +1,5 @@
 /*
-* Name: TUMapChartMovieUpdate.java
+* Name: TUApplicazioneMapChartMovieUpdate.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,7 +19,7 @@ package it.kaizenteam.app.model.NorrisChart;
 
 import junit.framework.TestCase;
 
-public class TUMapChartMovieUpdate extends TestCase {
+public class TUApplicazioneMapChartMovieUpdate extends TestCase {
 
     public void testGetInPlaceData() throws Exception {
         MapChartInPlaceUpdate u=new MapChartInPlaceUpdate(null);

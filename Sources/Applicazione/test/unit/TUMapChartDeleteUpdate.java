@@ -1,5 +1,5 @@
 /*
-* Name: TUMapChartDeleteUpdate.java
+* Name: TUApplicazioneMapChartDeleteUpdate.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -19,7 +19,7 @@ package it.kaizenteam.app.model.NorrisChart;
 
 import junit.framework.TestCase;
 
-public class TUMapChartDeleteUpdate extends TestCase {
+public class TUApplicazioneMapChartDeleteUpdate extends TestCase {
 
     public void testGetData() throws Exception {
         MapChartDeleteUpdate a =new MapChartDeleteUpdate(null);

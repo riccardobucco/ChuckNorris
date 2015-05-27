@@ -1,5 +1,5 @@
 /*
-* Name: TUMapChartStreamUpdate.java
+* Name: TUApplicazioneMapChartStreamUpdate.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,7 +21,7 @@ import junit.framework.TestCase;
 
 import java.util.ArrayList;
 
-public class TUMapChartStreamUpdate extends TestCase {
+public class TUApplicazioneMapChartStreamUpdate extends TestCase {
 
     public void testGetData() throws Exception {
         ArrayList<MapSet> data=new ArrayList<MapSet>();
