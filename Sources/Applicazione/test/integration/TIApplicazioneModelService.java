@@ -1,5 +1,5 @@
 /*
-* Name: TIApplicazioneNorrisChart.java
+* Name: TIApplicazioneModelService.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,11 +21,12 @@ import junit.framework.TestCase;
 
 import java.util.ArrayList;
 
-public class TIApplicazioneNorrisChart extends TestCase {
+
+public class TIApplicazioneModelService extends TestCase {
     public void testCreation(){
-        ChartModel chart= ChartImpl.create("barchart","idchart");
-        chart.setData(null);
-        chart.update("inplace",new BarChartInPlaceUpdate(new ArrayList<BarChartElementInPlaceUpdate>()));
-        assertEquals(null,chart.getData());
+        ChartReceiver receiver = ChartReceiverImpl.getInstance();
+        ((ChartReceiverImpl)receiver).addObserver(this);
+        receiver.getChart("idchart");
+        receiver.startUpdateEvent("idchart");
     }
 }
