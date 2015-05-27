@@ -15,11 +15,97 @@
     </sections>
 	   
 	<changes>
+	    <version>
+            <id>3.00</id>
+            <date>2015-05-25</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Project Manager</role>
+            <description>Document's approval</description>
+        </version>
+	    <version>
+            <id>2.05</id>
+            <date>2015-05-24</date>
+            <author>Bigarella Chiara</author>
+            <role>Verifier</role>
+            <description>Document's checking</description>
+        </version>
+        <version>
+            <id>2.04</id>
+            <date>2015-05-22</date>
+            <author>Bucco Riccardo</author>
+            <role>Verifier</role>
+            <description>Document's checking</description>
+        </version>
+	    <version>
+            <id>2.03</id>
+            <date>2015-05-20</date>
+            <author>Alessandro Moretto</author>
+            <role>Programmer</role>
+            <description>Writing section updates</description>
+        </version>
+        <version>
+            <id>2.02</id>
+            <date>2015-05-16</date>
+            <author>Dal Bianco Davide</author>
+            <role>Programmer</role>
+            <description>Writing section settings</description>
+        </version>
+        <version>
+            <id>2.01</id>
+            <date> 2015-05-15</date>
+            <author>Moretto Alessandro</author>
+            <role>Programmer</role>
+            <description>Writing section data inizialization</description>
+        </version>
+        <!-- Fine fase IP-->
+        <version>
+            <id>2.00</id>
+            <date>2015-04-31</date>
+            <author>Bigarella Chiara</author>
+            <role>Project Manager</role>
+            <description>Document's approval</description>
+        </version>
+        <version>
+            <id>1.02</id>
+            <date>2015-04-30</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Verifier</role>
+            <description>Document's checking</description>
+        </version>
+        <version>
+            <id>1.01</id>
+            <date>2015-04-28</date>
+            <author>Dal Bianco Davide</author>
+            <role>Programmer</role>
+            <description>Writing section usage</description>
+        </version>
+        <!-- Fine fase P-->
+	    <version>
+            <id>1.00</id>
+            <date>2015-04-18</date>
+            <author>Dal Bianco Davide</author>
+            <role>Project Manager</role>
+            <description>Document's approval</description>
+        </version>
+	    <version>
+            <id>0.03</id>
+            <date>2015-04-18</date>
+            <author>Rubin Marco</author>
+            <role>Verifier</role>
+            <description>Document's checking</description>
+        </version>
+	    <version>
+            <id>0.02</id>
+            <date>2015-04-17</date>
+            <author>Bucco Riccardo</author>
+            <role>Programmer</role>
+            <description>Writing section installation details</description>
+        </version>
         <version>
             <id>0.01</id>
-            <date></date>
-            <author></author>
-            <role></role>
+            <date>2015-04-15</date>
+            <author>Bucco Riccardo</author>
+            <role>Programmer</role>
             <description>Creation of the document structure</description>
         </version>
 	</changes>
