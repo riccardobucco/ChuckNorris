@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import java.util.ArrayList;
 
 /*
-* Name: TINorrisChart.java
+* Name: TIApplicazioneNorrisChart.java
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/test/unit
 * Date: 2015-05-19
@@ -21,7 +21,7 @@ import java.util.ArrayList;
 * =================================================================
 *
 */
-public class TINorrisChart extends TestCase {
+public class TIApplicazioneNorrisChart extends TestCase {
     public void testCreation(){
         ChartModel chart= ChartImpl.create("barchart","idchart");
         chart.setData(null);
