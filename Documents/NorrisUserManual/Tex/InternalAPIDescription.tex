@@ -1,11 +1,11 @@
-\level{1}{Description of Norris' Internal API}
+\level{2}{Description of Norris' Internal API}
 	This section describes the functionality provided by the Internal API of Norris. Through those API it's possible to create four types of chart, i.e. bar chart, line chart, map chart and table. It's also possible to set their settings and the type of updating.\\ The methods of the different classes are explained in the following paragraph.
 	\begin{description}
-	\item[Norris] Norris is an interface which represents a Norris instance. It allows to create new charts and pages and to set the authentication settings. Its methods are:
+	\item[Norris] Norris is an interface which represents a Norris' instance. It allows to create new charts and pages and to set the authentication settings. Its methods are:
 		\begin{itemize}
-		\item \texttt{setSettings(settings): void} : This method sets the Norris settings. In particular it allows you to set the authentication settings.
-		\item \texttt{getSettings(): NorrisSettings} : This method gets the Norris settings. The method returns a JSON object containing all settings.
-		\item \texttt{createChart(chartType, chartId): Chart} : This method creates an instance of a chart and adds it to the Norris instance. It takes two String object as parameter, \texttt{chartType} and \texttt{chartId}, and returns a chart of the indicated type, with the indicated id in its settings.
+		\item \texttt{setSettings(settings): void} : This method sets the Norris' settings. In particular it allows you to set the authentication settings.
+		\item \texttt{getSettings(): NorrisSettings} : This method gets the Norris' settings. The method returns a JSON object containing all settings.
+		\item \texttt{createChart(chartType, chartId): Chart} : This method creates an instance of a chart and adds it to the Norris' instance. It takes two \texttt{String} object as parameter, \texttt{chartType} and \texttt{chartId}, and returns a chart of the indicated type, with the indicated id in its settings.
 		\item \texttt{getChart(chartId): Chart} : This method gets the instance of a \texttt{Chart} contained in the invocation method. The id of the chart is given as parameter of the method.
 		\item \texttt{getCharts(): Chart[]} : This method returns an array with all instances of \texttt{Chart} which are contained in the invocation object.
 		\item \texttt{createPage(pageId): Page} : This method creates an instance of \texttt{Page} and adds it to the Norris instance. It sets the id of the created object with the id received as parameter.
@@ -13,22 +13,20 @@
 		\item \texttt{getPages(): Page[]} : This method returns an array with all instances of \texttt{Page} which are into the invocation object.
 		
 		\end{itemize}
-	\item[Page] \texttt{Page} is an interface which represents a web page. It allows you to set the page's settings and to add charts to the page.\\
-	Its methods are:
+	\item[Page] \texttt{Page} is an interface which represents a web page. It allows you to set the page's settings and to add charts to the page. Its methods are:
 	\begin{itemize}
 		\item \texttt{add(chart: Chart): Page} : This method adds the chart in input to the represented page. It returns the instance of the page.
-		\item \texttt{getId(): String} : This method gets the page's id. The id is returned as a String object.
+		\item \texttt{getId(): String} : This method gets the page's id. The id is returned as a \texttt{String} object.
 		\item \texttt{setSettings(settings: PageSettings): void} : This method sets the page's settings. The method doesn't return any value.
 		\item \texttt{getSettings(): PageSettings} : This method gets the page's settings. It returns the settings in form of JSON object.
 		\item \texttt{setCharts(charts: Chart[]): void} : This method sets the page's charts. Using this method, all charts previously inserted will be deleted and changed with those into the array in input. It doesn't return any object.
 		\item \texttt{getCharts(): Chart[]} : This method gets the charts contained into the invocation object. It returns the charts in form of array.
 	\end{itemize}
 	
-	\item[Chart] \texttt{Chart} is an interface which represents a chart. It allows you to set the chart's settings and the chart's data.\\
-	Its methods are:
+	\item[Chart] \texttt{Chart} is an interface which represents a chart. It allows you to set the chart's settings and the chart's data. Its methods are:
 	\begin{itemize}
-		\item \texttt{getId(): String} : This method gets the chart's id. It returns the id in form of String object.
-		\item \texttt{getType(): String} : This method gets the chart's type. It returns the type in form of String object.
+		\item \texttt{getId(): String} : This method gets the chart's id. It returns the id in form of \texttt{String} object.
+		\item \texttt{getType(): String} : This method gets the chart's type. It returns the type in form of \texttt{String} object.
 		\item \texttt{setData(data): void} : This method takes as input the data to represent and it sets in the chart's settings.
 		\item \texttt{getData(): ChartData} : This method gets the chart's data. It returns the data in form of JSON object.
 		\item \texttt{setSettings(settings: ChartSettings): void} : This method sets the chart's settings. The method doesn't return any value.
