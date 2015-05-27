@@ -28,7 +28,7 @@ var ChartImpl = require('./ChartImpl.js');
 var TableInPlaceUpdater = require('./TableInPlaceUpdater.js');
 var TableStreamUpdater = require('./TableStreamUpdater.js');
 
-// module.exports = TableImpl;
+module.exports = TableImpl;
 
 var defaults = {
 	description : 'This is a table.',

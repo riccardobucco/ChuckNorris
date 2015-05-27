@@ -28,7 +28,7 @@ var ChartImpl = require('./ChartImpl.js');
 var MapChartInPlaceUpdater = require('./MapChartInPlaceUpdater.js');
 var MapChartMovieUpdater = require('./MapChartMovieUpdater.js');
 
-//module.exports = MapChartImpl;
+module.exports = MapChartImpl;
 
 var defaults = {
 	description: 'This is a map chart',

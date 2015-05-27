@@ -26,7 +26,7 @@ var ChartImpl = require('./ChartImpl.js');
 var LineChartInPlaceUpdater = require('./LineChartInPlaceUpdater.js');
 var LineChartStreamUpdater = require('./LineChartStreamUpdater.js');
 
-// module.exports = LineChartImpl;
+module.exports = LineChartImpl;
 
 var defaults = {
 	description : 'This is a line chart.',
