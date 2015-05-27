@@ -66,18 +66,25 @@
             <description>Document's approval</description>
         </version>
         <version>
-            <id>1.02</id>
+            <id>1.03</id>
             <date>2015-04-30</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Verifier</role>
             <description>Document's checking</description>
         </version>
         <version>
-            <id>1.01</id>
-            <date>2015-04-28</date>
+            <id>1.02</id>
+            <date>2015-04-29</date>
             <author>Dal Bianco Davide</author>
             <role>Programmer</role>
-            <description>Writing section usage</description>
+            <description>Writing section description of Norris' external API</description>
+        </version>
+        <version>
+            <id>1.01</id>
+            <date>2015-04-28</date>
+            <author>Bigarella Chiara</author>
+            <role>Programmer</role>
+            <description>Writing section description of Norris' internal API</description>
         </version>
         <!-- Fine fase P-->
 	    <version>
@@ -88,15 +95,22 @@
             <description>Document's approval</description>
         </version>
 	    <version>
-            <id>0.03</id>
+            <id>0.04</id>
             <date>2015-04-18</date>
             <author>Rubin Marco</author>
             <role>Verifier</role>
             <description>Document's checking</description>
         </version>
+        <version>
+            <id>0.03</id>
+            <date>2015-04-17</date>
+            <author>Carlon Chiara</author>
+            <role>Programmer</role>
+            <description>Writing section usage</description>
+        </version>
 	    <version>
             <id>0.02</id>
-            <date>2015-04-17</date>
+            <date>2015-04-16</date>
             <author>Bucco Riccardo</author>
             <role>Programmer</role>
             <description>Writing section installation details</description>
