@@ -63,7 +63,7 @@
 			var page = new nrr.Page('myFirstPage');
 			// add the myChart to the new page
 			page.add(myChart);
-			// any page created inside nrr (in our case only myPage) will be available at '/norris' path
+			// myPage will be available at '/norris' path
 			app.use('/norris', nrr.getMiddleware());
 			// keep myChart updated using inplace method (some values will be replaced)
 			myChart.update('inplace', {...});
