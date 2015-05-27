@@ -324,7 +324,7 @@
 					\item[\ignoreglo{Package}] indica il \insglo{package} al quale appartiene il file, comprensivo di gerarchia;
 					\item[Location] indica il path della directory in cui è presente il file;
 					\item[Date] indica la data di creazione del file: si veda la sezione \nameref{sec:formatoDate} per il formato da utilizzare;
-					\item[Version] indica l'attuale versione del codice, il cui formato da seguire è descritto nella sezione \nameref{sec:versioni};
+					\item[Version] indica l'attuale versione del codice, il cui formato da seguire è descritto nella sezione \nameref{sec:versionecodice};
 					\item[History] visualizza lo storico delle modifiche del file in questione, comprensive di versione, data, descrizione e nome del programmatore che ha modificato il codice.
 				\end{description}
 			\level{5}{Commenti} \label{sec:NormeCommenti}
@@ -379,6 +379,12 @@
 							Si noti che anche per i commenti che precedono i metodi si devono utilizzare i simboli descritti per quelli che precedono le classi (“/**”, “*”, “*/”). Inoltre, “@param” deve essere ripetuto per ogni parametro della lista dei parametri del metodo, ciascuno in una riga diversa e successiva alla precedente (in caso non ci siano parametri questa riga non va scritta). Infine, “@return” deve essere specificato solo quando il tipo di ritorno del metodo non è “void”.
 						\end{itemize}
 			\end{description}
+			\level{5}{Versionamento dei file di codice} \label{sec:versionecodice}
+			Il numero di versione dei file di codice appare solamente nell'intestazione di ciascuno di essi. Questa deve seguire il formato X.YY, dove:
+			\begin{itemize}
+				\item X è un numero intero, incrementale, corrispondente all'ultima versione stabile del codice;
+				\item YY è un numero intero, incrementale, corrispondente al numero di modifiche apportate al codice, partendo dall'ultima versione stabile.
+			\end{itemize}
 		\level{4}{Strumenti}
 			Per la scrittura di codice \insglo{JavaScript} non è richiesto l'utilizzo di un particolare \insglo{IDE}; la scelta dell'editor di testo è affidata alla discrezione dello sviluppatore.\\
 			Per lo sviluppo dell'applicazione \insglo{Android} si utilizza l'\insglo{IDE} \ignoreglo{Android} Studio, descritto nell'appendice \nameref{app:strumenti} del presente documento.
