@@ -79,6 +79,15 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 		I test effettuati su un prodotto software hanno lo scopo di verificare dinamicamente che il comportamento di un programma corrisponda ai risultati attesi. Esso viene testato su un insieme finito di casi, che, in realtà, è solo un sottoinsieme di tutti quelli che sarebbe possibile eseguire.\\
 		I test si distinguono in varie tipologie, le quali vengono di seguito descritte. Nella sezione \nameref{sec:procedure} vengono spiegate le procedure da effettuare per eseguire i test sui prodotti realizzati.
 			\level{4}{Norme}
+				\level{5}{Test di unità}
+				I test di unità hanno lo scopo di verificare la logica interna del codice delle unità, le quali sono state individuate nella progettazione di dettaglio. \\
+				I test di unità sono identificati da un codice univoco con la seguente sintassi: TU[Parte del prodotto]-[Nome della classe testata][Numero progressivo a due cifre]. Si noti che nel nome della classe testata non deve essere compreso il package di appartenenza, e la parte del prodotto viene indicata con:
+				\begin{itemize}
+					\item A, per indicare l'applicazione Android;
+					\item C, per indicare la libreria Chuck;
+					\item N, per indicare il framework Norris.
+				\end{itemize}
+				I test di unità vengono riportati nel \insdoc{Piano di Qualità v6.00}.
 				\level{5}{Test di integrazione}
 				I test di integrazione servono per verificare il corretto funzionamento di più moduli assemblati insieme; in particolare servono per rilevare bug nei moduli, nel momento in cui essi interagiscono con altri moduli con i quali hanno dipendenze.\\
 				Essi vengono identificati dalla sintassi TI[Componente], dove Componente si riferisce al componente del sistema del quale si sta testando l'integrazione tra i suoi elementi.
