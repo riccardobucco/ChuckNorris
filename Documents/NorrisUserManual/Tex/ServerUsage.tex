@@ -5,42 +5,42 @@
 			\begin{enumerate}
 				\item Include the library:
 				\begin{lstlisting}
-					var \insglo{http} = require('\insglo{http}');
+					var (*\ignoreglo{http}*) = require('(*\ignoreglo{http}*)');
 				\end{lstlisting}
-				\item Create a new instance of \texttt{http.Server}:
+				\item Create a new instance of \texttt{\ignoreglo{http}.Server}:
 				\begin{lstlisting}
-					var \insglo{server} = \insglo{http}.createServer();
+					var (*\ignoreglo{server}*) = (*\ignoreglo{http}*).createServer();
 				\end{lstlisting}
 				\texttt{server} will emit events you can listen. For example the event \texttt{'request'} is emitted each time there is a request.
 				\item Make the \insglo{HTTP} \insglo{server} accept connections on the specified \texttt{port}:
 				\begin{lstlisting}
-					\insglo{server}.listen(port);
+					(*\ignoreglo{server}*).listen(port);
 				\end{lstlisting}
 			\end{enumerate}
 			\item You have to create an Express web \insglo{server}.
 			\begin{enumerate}
 				\item Include the library:
 				\begin{lstlisting}
-					var express = require('express');
+					var (*\ignoreglo{express}*) = require('(*\ignoreglo{express}*)');
 				\end{lstlisting}
 				\item Create a new instance of Express:
 				\begin{lstlisting}
-					var app = new express();
+					var app = new (*\ignoreglo{express}*)();
 				\end{lstlisting}
 			\end{enumerate}
 			\item You have to add a listener (\texttt{app}) to the end of the listeners array for the \texttt{'request'} event:
 			\begin{lstlisting}
-				\insglo{server}.on('request',app);
+				(*\ignoreglo{server}*).on('request',app);
 			\end{lstlisting}
 			\item You have to create an instance of \insglo{Norris}.
 			\begin{enumerate}
 				\item Include the library:
 				\begin{lstlisting}
-					var \insglo{norris} = require('\insglo{norris}');
+					var (*\ignoreglo{norris}*) = require('(*\ignoreglo{norris}*)');
 				\end{lstlisting}
 				\item Create a new instance of \insglo{Norris}, and make it accessible by a \insglo{client} application at the given endpoint (e.g. \texttt{'/norris'}):
 				\begin{lstlisting}
-					var nrr = \insglo{norris}(\insglo{server}, endpoint);
+					var nrr = (*\ignoreglo{norris}*)((*\ignoreglo{server}*), endpoint);
 				\end{lstlisting}
 				\item (optional) You can choose some settings (properties) that affect how \insglo{Norris} behaves:
 				\begin{lstlisting}
@@ -53,8 +53,8 @@
 		This section contains some code that show you a common scenario. It is explained how it works and what it does. For more detailed information about the internal \insglo{API}, you can check out \insglo{API} REFERENCE.\\
 		You can create one of the charts \insglo{Norris} has available. In the example below, we will build a \insglo{Bar Chart} based on some data and settings. Then we will add it to a page, and we keep it updated.
 		\begin{lstlisting}
-			// create a new empty \insglo{Bar Chart} whose id is 'cp3'
-			var myChart = new nrr.Chart('barchart', 'cp3');
+			// create a new empty (*\ignoreglo{Bar Chart}*) whose id is 'cp3'
+			var myChart = new nrr.Chart('(*\ignoreglo{barchart}*)', 'cp3');
 			// enter data for the chart
 			myChart.data({...});
 			// choose options for the chart [optional]
@@ -63,10 +63,10 @@
 			var page = new nrr.Page('myFirstPage');
 			// add the myChart to the new page
 			page.add(myChart);
-			// myPage will be available at '/norris' path
-			app.use('/norris', nrr.getMiddleware());
-			// keep myChart updated using inplace method (some values will be replaced)
-			myChart.update('inplace', {...});
+			// myPage will be available at '/(*\ignoreglo{norris}*)' path
+			app.use('/(*\ignoreglo{norris}*)', nrr.getMiddleware());
+			// keep myChart updated using (*\ignoreglo{inplace}*) method (some values will be replaced)
+			myChart.update('(*\ignoreglo{inplace}*)', {...});
 		\end{lstlisting}
 		\level{4}{Data object structure}
 			The \insglo{Bar Chart} requires an array of labels for each of the data points (independent values). This is shown on the X-axis or on the Y-axis, depending on the settings relating to the orientation of the bars. The data for Bar Charts is broken up into an array of datasets. Each dataset has a name and an array of dependent values, whose length is equal to that of the array of labels. Each dataset represents a set of bars.\\

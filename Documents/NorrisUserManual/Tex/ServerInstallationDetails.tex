@@ -11,10 +11,10 @@
 	\level{3}{Performing the installation}
 		First, make the app directory your working directory. Then use the following npm command:
 		\begin{lstlisting}
-			$ npm install norris-rtc --save
+			$ npm install (*\ignoreglo{norris}*)-rtc --save
 		\end{lstlisting}
 		This will create the \texttt{node\_modules} directory (if one doesn't exist yet), and will download the \insglo{package} to that directory. It will also add the \insglo{package} to the dependencies in \texttt{package.json} (unless it was already there).\\
 		You might want to add \insglo{Norris} temporarily, just to it out, without adding it to the dependencies list in the \texttt{package.json} file. Just avoid using \texttt{--save} flag:
 		\begin{lstlisting}
-			$ npm install \insglo{norris}
+			$ npm install (*\ignoreglo{norris}*)
 		\end{lstlisting}
