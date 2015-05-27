@@ -13,11 +13,11 @@
 			\begin{description}
 				\item[labels] This is an array of items, which have String type. It indicates the values of the “x” axis (dependent values of the chart). Note that this property is mandatory.
 				\item[datasets] This is an array of objects. Every object represents a set of bars (in a Bar Chart) or a line (in a Line Chart). They have the following properties: 
-				\begin{itemize}
-					\item \textbf{name}: it's a String, which describes the name of the bar set (in a Bar Chart) or of the line (in a Line Chart). 
-					\item \textbf{color}: it's an object with the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1. This object represents the color of the specified bar set (in a Bar Chart) or line (in a Line Chart): it uses the RGB color model with an alpha channel to set opacity.
-					\item \textbf{values}: it's an array of numbers which indicates the dependent values corresponding to the values of the “x” axis in a given bar set or line. The length of this array must be the same of that of the labels array. Note that this property is mandatory.
-				\end{itemize}
+				\begin{description}
+					\item[name]: it's a String, which describes the name of the bar set (in a Bar Chart) or of the line (in a Line Chart). 
+					\item[color]: it's an object with the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1. This object represents the color of the specified bar set (in a Bar Chart) or line (in a Line Chart): it uses the RGB color model with an alpha channel to set opacity.
+					\item[values]: it's an array of numbers which indicates the dependent values corresponding to the values of the “x” axis in a given bar set or line. The length of this array must be the same of that of the labels array. Note that this property is mandatory.
+				\end{description}
 			\end{description}
 			Note that the “labels”, “dataset” and “values” properties are mandatory, and when you want to specify a color you neccesarily have to indicate at least the value of “r”, “g” and “b”.
 		\level{3}{Map chart}
@@ -26,11 +26,11 @@
 				\item[name] This is a String, which represents the name of the series of points.
 				\item[color] It contains the properties “r”, “g”, “b” and “a”. The first three are integers which can vary from 0 to 255. The “a” property must be a number included between 0 and 1. This object represents the color of the specified series of points in the Map Chart: it uses the RGB color model with an alpha channel to set opacity.
 				\item[values] This is an array of objects. Every object represents a single point of the series, and they have the following properties:
-					\begin{itemize}
-						\item \textbf{x}: it's a number that represents the longitude;
-						\item \textbf{y}: it's a number that represents the latitude;
-						\item \textbf{id}: it's a String for arbitrary text containing notes about the described point.
-					\end{itemize}
+					\begin{description}
+						\item[x]: it's a number that represents the longitude;
+						\item[y]: it's a number that represents the latitude;
+						\item[id]: it's a String for arbitrary text containing notes about the described point.
+					\end{description}
 			\end{description}
 			Note that the “values” properties is mandatory, in particular “x” and “y” are indispensable. Different series can have a different number of points.
 		\level{3}{Table}
@@ -64,10 +64,10 @@
 				\item[legendPosition] It's a String, chosen from a set of values, which sets where the legend has to be positioned. This property can assume the following values: “top-left”, “bottom-left”, “top-right” or “bottom-right”.
 				\item[orientation] It'a String which specifies the orientation of the chart. It can assume one of the following values: “vertical” or “horizontal”.
 				\item[style] It's an object with the following properties:
-				\begin{itemize}
-					\item \textbf{barValueSpacing}: 
-					\item \textbf{barDatasetSpacing}:
-				\end{itemize}
+				\begin{description}
+					\item[barValueSpacing]: this property sets the distance between two bars of the same set. 
+					\item[barDatasetSpacing]: this property sets the distance between two set of bars.
+				\end{description}
 			\end{description}
 		\level{3}{Line Chart}
 			In a \insglo{Line Chart} you can set the following settings:
