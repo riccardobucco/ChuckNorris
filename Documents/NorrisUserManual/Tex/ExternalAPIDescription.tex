@@ -1,54 +1,72 @@
 \level{2}{Description of Norris' External API}
-\begin{description}
-	\item[AuthenticationEndpoint] This class manages the authentication, in particular it executes the function of login and logout defined by the developer. It has two fields: \texttt{app} is a reference to an instance of \texttt{express}, \texttt{controller} is a reference to the object that allows to know the information about the instance of Norris. Its methods are:
-		\begin{itemize}
-			\item \texttt{AuthenticationEndpoint(controller: ExternalAPIController)} : This is the constructor method of \texttt{AuthenticationEndpoint}. It checks the parameter is an instance of ExternalAPIController and activates the authentication functions.
-			\item \texttt{handleLogin(req,res): void} : This method manages the login function setting cookies with the callback system used by Norris.
-			\item \texttt{handleLogout(req, res): void)} : This method manages the logout function setting cookies with the callback system used by Norris.
-			\item \texttt{handleKeepAlive(req, res): void} : This method manages the function used to control if an user is logged, setting cookies with the callback system used by Norris.
-		\end{itemize} 
-	\item[ChartEndpoint] This class manages the requests of chart made by the clients sending the information about chart and the related update. It has two fields:  \texttt{io} is a reference to an instance of socket.io, \texttt{controller} is a reference to the object that allows to know the information about the instance of Norris. Its methods are:
-	\begin{itemize}
-			\item \texttt{ChartEndpoint(controller: ExternalAPIController)} : This is the constructor method of \texttt{ChartEndpoint}. It checks the parameter is an instance of ExternalAPIController and puts the server in listening for socket.io connections.
-			\item \texttt{handleConnection(socket: socket.io::socket): void} : This methods manage the request to get a chart. % non implementato
-	\end{itemize}
-	\item[ChartRef]	This class represents a reference to a chart object. Its methods are:
-		\begin{itemize}
-			\item \texttt{ChartRef(chart: ChartImpl)} : It's the constructor method of the class. It takes a \texttt{ChartImpl} object as parameter.
-			\item \texttt{getId(): String} : This method is used to get the id of the referenced chart. It returns the id in form of String object.
-			\item \texttt{getType(): String} : This method is used to get the type of the referenced chart. It returns the type in form of String object.
-			\item \texttt{getData(): ChartData} : This method is used to get the data of the referenced chart. It returns the data in form of JSON object.
-			\item \texttt{getSettings(): ChartSettings} : This method is used to get the settings of the ChartImpl'instance contained into the invocation object. It returns the settings in form of JSON object.
-		\end{itemize}
-	\item[ChuckProviderEndpoint] This class provides the source code of the Chuck graphic library to the clients.\\It has two fields: \texttt{app} is a reference to an express instance, \texttt{controller} is a reference to the object that allows to know the information about the instance of Norris. Its methods are:
-	\begin{itemize}
-		\item \texttt{ChuckProviderEndpoint(app: express, controller: ExternalAPIController)} It's the constructor method of \texttt{ChuckProviderEndpoint}. It checks the parameter is an instance of ExternalAPIController and puts the server in listening for socket.io connections.
-		\item \texttt{handleRequest(req, res): void} : This methods manage the request of the Chuck's source code sent by clients. It uses the callback system used by Norris.
-	\end{itemize}
-	\item[ExternalAPIConstructor] This class builds the ExternalAPIManager Component and than it builds an endpoint for each dependency saved in the \texttt{endpoints} field. This class implements the Singleton design pattern, therefore it has a \texttt{instance} field to check that there is an only instance of this class of each instance of Norris.\\Its methods are:
-	\begin{itemize}
-		\item \texttt{ExternalAPIConstructor()} : It's the constructor method of the class. In this method is implemented a check to control that there isn't another instance of the class.
-		\item \texttt{getInstance(): ExternalAPIController} : This method is used to get the unique instance of the ExternalAPIController.
-		\item \texttt{construct(model: NorrisImpl, server: http, endpoint: String): void} : This method allows to build the ExternalAPImanager with the given parameters
-	\end{itemize}
-	\item[ExternalAPIController] This class contains a reference to a NorrisModel, a reference to an instance of the \texttt{http} module of Node.js and a reference to the endpoint interface.
-		\begin{itemize}
-			\item \texttt{ExternalAPIController(model: NorrisImpl, server: http, endpoint: String): void} : It's the constructor method of \texttt{ExternalAPIController}.
-			\item \texttt{performLogin(cookies: express::cookie, username: String, password: String): boolean} : This method starts a new user session and allows to set the token through the \texttt{cookies} parameter. It returns true, if cookies have been correctly setted, or false if they haven't been.
-			\item \texttt{performLogout(cookies: express::cookie): boolean} : This method allows to end a session giving \texttt{cookies} in input. It returns  boolean value to indicate if the session has been correctly ended.
-			\item \texttt{performKeepAlive(cookies: express::cookies): boolean} : This method allows to continue the user session using the cookies given in input. It returns a boolean value to indicate if the session has been correctly restored.
-			\item \texttt{isLogged(cookie: express::cookie): boolean} : This method allows to check if the user is authenticated through the cookies passed as parameter. It returns a boolean value to indicate the check result.
-			\item \texttt{getCharts(): ChartRef[]} : This method is used to get a chart list contained in the represented instance of Norris' DataModel. It returns the list in form of array.
-			\item \texttt{getChart(chartId: String): void} : This method is used to get a particular instance of a chart contained in the represented instance of Norris' DataModel passing the chart id as parameter.
-			\item \texttt{getServer(): http} : This method is used to get the server instance. It returns the server instance in form of \texttt{http} express object.
-			\item \texttt{getEndpoint(): String} : This method is used to get the endpoint instance, that's returned in form of String object.
-		\end{itemize} 
-	\item[ListEndpoint] This class manages requests of chart list sent by clients. For each request, it is controlled if the client is authenticated to the Norris' instance before sending the list.\\It has two fields: \texttt{app} is a reference to an express instance, \texttt{controller} is a reference to the object that allows to know the information about the instance of Norris. Its methods are:
-	\begin{itemize}
-		\item \texttt{ListEndpoint(controller: ExternalAPiController)} It's the constructor method of the class. It takes a \texttt{ExternalAPIController} object as a parameter.
-		\item \texttt{handleRequest(req, res): void} : This methods manage the request of the chart lists sent by clients. It uses the callback system used by Norris.
-	\end{itemize}
-	
-\end{description}
-	
- 
+    In this section we refer \texttt{[endpoint]} as the Internal API given endpoint.
+
+    \level{3}{Chart request API}
+        The Chart request API provides the functionalities to get a chart. The API is available over WebSocket. Once opened a WebSocket, you will get both the chart and its own updates until you close the connection. \\
+        Request details:
+        \begin{enumerate}
+            \item Open the WebSocket at \texttt{[endpoint]/chart} using \texttt{/[chartid]} as namespace;
+            \item You will get a \texttt{chart} event with chart type, chart settings and chart data as parameters;
+            \item For each update you will get an \texttt{update} event with update type and update data as parameters.
+        \end{enumerate}
+
+    \level{3}{List request API}
+        The List request API provides the list of all charts contained in a Norris instance. The API is available over HTTP and you will get the list of the charts with the following details:
+        \begin{itemize}
+            \item Chart id;
+            \item Chart type;
+            \item Chart description.
+        \end{itemize}
+        Request details:
+        \begin{table}[H]
+            \centering
+            \begin{tabu}{|l|l|}
+                \hline
+                \textbf{Host} & your host \\ \hline
+                \textbf{Path} & [endpoint]/list \\ \hline
+                \textbf{Method} & GET \\ \hline
+                \textbf{Accept} & application/json \\ \hline
+            \end{tabu}
+            \caption{External API - list request}
+        \end{table}
+
+    \level{3}{Authentication API}
+        The Authentication APIs provides the functionalities to perform authentication to a Norris instance. The APIs is available over HTTP requests and may sets some cookies.
+        \level{4}{Login}
+            The login starts a new session for the given user. \\
+            \begin{table}[H]
+                \centering
+                \begin{tabu}{|l|l|}
+                    \hline
+                    \textbf{Host} & your host \\ \hline
+                    \textbf{Path} & [endpoint]/auth/login \\ \hline
+                    \textbf{Method} & POST \\ \hline
+                    \textbf{Content-Type} & application/application/x-www-form-urlencoded \\ \hline
+                    \textbf{Content} & username=[username]\&password=[password] \\ \hline
+                \end{tabu}
+                \caption{External API - login request}
+            \end{table}
+        \level{4}{Keep alive}
+            The keep alive prevents the user session to expire. \\
+            \begin{table}[H]
+                \centering
+                \begin{tabu}{|l|l|}
+                    \hline
+                    \textbf{Host} & your host \\ \hline
+                    \textbf{Path} & [endpoint]/auth/keepalive \\ \hline
+                    \textbf{Method} & POST \\ \hline
+                \end{tabu}
+                \caption{External API - keep alive request}
+            \end{table}
+        \level{4}{Logout}
+            The logout ends the user session. \\
+            \begin{table}[H]
+                \centering
+                \begin{tabu}{|l|l|}
+                    \hline
+                    \textbf{Host} & your host \\ \hline
+                    \textbf{Path} & [endpoint]/auth/logout \\ \hline
+                    \textbf{Method} & POST \\ \hline
+                \end{tabu}
+                \caption{External API - logout request}
+            \end{table}
