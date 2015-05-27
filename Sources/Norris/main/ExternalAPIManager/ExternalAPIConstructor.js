@@ -1,13 +1,20 @@
 /**
- * An handle to manage a Norris model
- * @module {ExternalAPIConstructor} ExternalAPIManager/ExternalAPIConstructor
- * @author Davide Dal Bianco
- * @version 0.01
- */
-
-/*
- * Changelog:
+ * Name: {ExternalAPIConstructor.js}
+ * Package: {ExternalAPIConstructor} 
+ * Location{Norris/Main/ExternalAPIConstructor}
+ * Date: {2015-04-12}
+ * Version: {0.04}
  *
+ *
+ *
+ * History:
+ *
+ * ================================================================================
+ * Version Date Programmer Changes
+ * ================================================================================
+ * 0.04 2015-05-24 Carlon Chiara   Verify
+ * ================================================================================
+ * 0.03 2015-05-21 Pavanello Fabio Matteo   Edit
  * ================================================================================
  * 0.02 2015-04-14 Bigarella Chiara   Verify
  * ================================================================================

@@ -1,9 +1,9 @@
 /*
  * Name: {MapChartMovieUpdater.js}
- * Module: {}
+ * Module: {DataModel/NorrisChart}
  * Location: {Norris/Main/DataModel}
- * Date: {2015-05-15}
- * Version: {v0.1}
+ * Date: {2015-04-12}
+ * Version: {v0.6}
  *
  * History:
  *

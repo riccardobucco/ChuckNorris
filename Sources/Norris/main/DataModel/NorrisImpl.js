@@ -2,8 +2,8 @@
  * Name: {NorrisImpl.js}
  * Module: {}
  * Location: {Norris/Main/DataModel}
- * Date: {2015-05-04}
- * Version: {v0.1}
+ * Date: {2015-04-10}
+ * Version: {v0.6}
  *
  * History:
  * ================================================================================

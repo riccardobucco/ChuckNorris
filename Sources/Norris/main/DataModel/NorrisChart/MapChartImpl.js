@@ -1,9 +1,9 @@
 /*
  * Name: {MapChartImpl.js}
- * Module: {}
- * Location: {Norris/Main/DataModel}
- * Date: {2015-05-04}
- * Version: {v0.1}
+ * Module: {DataModel/NorrisChart}
+ * Location: {Norris/Main/DataModel/NorrisChart}
+ * Date: {2015-04-10}
+ * Version: {v0.6}
  *
  * History:
  *

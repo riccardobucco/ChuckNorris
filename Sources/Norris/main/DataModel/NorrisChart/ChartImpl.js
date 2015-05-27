@@ -1,9 +1,9 @@
 /*
  * Name: {ChartImpl.js}
- * Module: {DataModel}
+ * Module: {DataModel/NorrisChart}
  * Location: {Norris/Main/DataModel/NorrisChart}
- * Date: {2015-05-04}
- * Version: {v0.01}
+ * Date: {2015-04-10}
+ * Version: {v0.06}
  *
  * History:
  *

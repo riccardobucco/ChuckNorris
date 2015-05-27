@@ -1,9 +1,9 @@
 /*
  * Name: {BarChartInPlaceUpdater.js}
- * Module: {}
+ * Module: {DataModel/NorrisChart}
  * Location: {Norris/Main/DataModel/NorrisChart}
- * Date: {2015-05-15}
- * Version: {v0.1}
+ * Date: {2015-04-10}
+ * Version: {v0.6}
  *
  * History:
  *
