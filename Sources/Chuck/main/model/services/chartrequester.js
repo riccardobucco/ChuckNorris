@@ -30,7 +30,17 @@ angular.module('chuck-requester', ['chuck-chart'])
         bind: function (endpoint, id) {
             var deferred = $q.defer();
 
-            var socket = io.connect('localhost:9000/bar');
+            var hostRegExp = new RegExp(/[\w\.]*(:\d*)?/);
+            var host = endpoint.match(hostRegExp)[0];
+
+            var pathRegExp = new RegExp(/\/.*/);
+            var path = (endpoint.match(pathRegExp) || ['/'])[0];
+
+            if(path.substr(-1) !== '/') {
+                path += '/';
+            }
+
+            var socket = io(host + '/' + id, {path: path + 'socket.io'});
 
             socket.on('chart', function (type, settings, data) {
                 var chart = ChartImpl.createChart(type, id);

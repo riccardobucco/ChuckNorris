@@ -34,8 +34,8 @@ angular.module('chuck')
         link: function(scope, element, attrs) {
 
             var chartjs = null;
-
-            ChartRequester.bind('foo','bar')
+            
+            ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
                 .then(function (chart) {
                     scope.chart = chart;
                     init();
@@ -59,7 +59,7 @@ angular.module('chuck')
                     data.datasets.push(obj);
                 });
 
-                var options = {}
+                var options = {};
                     
                 var ctx = element.contents()[0].getContext('2d');
                 chartjs = new Chart(ctx).Bar(data, options);

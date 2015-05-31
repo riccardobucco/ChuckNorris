@@ -32,10 +32,10 @@ angular.module('chuck')
         templateUrl: 'main/view/LineChartView.html',
         link: function(scope, element, attrs) {
 
-            var chartjs = null;
             var ctx = element.contents()[0].getContext('2d');
+            var chartjs = null;
 
-            ChartRequester.bind('foo','bar')
+            ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
                 .then(function (chart) {
                     scope.chart = chart;
                     init();

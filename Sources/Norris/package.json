@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
+    "prestart": "npm install",
     "pretest": "npm install",
+    "start": "node index.js",
     "test": "./node_modules/.bin/mocha test/unit/*.js"
   },
   "author": "Kaizen Team",

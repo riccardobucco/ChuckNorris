@@ -2,8 +2,11 @@
   "name": "chuck-rtc",
   "version": "0.0.0",
   "description": "Norris real time charts",
+  "main": "index.js",
   "scripts": {
     "pretest": "npm install",
+    "prestart": "npm install",
+    "start": "node index.js",
     "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
     "test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js --single-run",
     "postinstall": "node node_modules/bower/bin/bower install"
@@ -15,5 +18,8 @@
     "karma": "^0.12.16",
     "karma-chrome-launcher": "^0.1.4",
     "karma-jasmine": "^0.1.5"
+  },
+  "dependencies": {
+    "express": "^4.12.4"
   }
 }
