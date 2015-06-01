@@ -31,8 +31,10 @@ describe('TableStreamUpdater', function(){
 			chart.setData = function(data) {this.data = data;};
 			chart.getSettings = function() {return this.settings;};
 			var newData = [
-		        [{value: '9999'}, {value: '8888'}, {value: '7777'}],
-		        [{value: '6666'}, {value: '5555'}, {value: '4444'}]
+		        [{color: 'blue', background: 'white', value: '1'}, {color: 'blue', background: 'white', value: '1'}, 
+		            {color: 'blue', background: 'white', value: '1'}], 
+		        [{color: 'blue', background: 'white', value: '1'}, {color: 'blue', background: 'white', value: '1'}, 
+		            {color: 'blue', background: 'white', value: '1'}]
 			];
 			assert.throws(function () {(new TableStreamUpdater()).update(chart, newData)});
 		});
