@@ -38,7 +38,7 @@ var defaults = {
 		x: 0,
 		y: 0
 	},
-	area: 15
+	area: 1
 };
 
 /**

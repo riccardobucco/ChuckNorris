@@ -45,6 +45,7 @@ angular.module('chuck')
                 });
 
             function init() {
+                var settings = scope.chart.getSettings();
                 var data = scope.chart.getData();
                 var info = {};
 
@@ -54,6 +55,9 @@ angular.module('chuck')
                 });
 
                 info.data = [];
+                info.bFilter = settings.allowFilter;
+                info.bSort = settings.allowSort;
+                info.bPaginate = settings.allowPaginate;
 
                 table = $(element.contents()[0]).DataTable(info);
             };

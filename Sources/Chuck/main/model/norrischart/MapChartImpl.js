@@ -36,7 +36,7 @@ angular.module('chuck-chart')
             x: 0,
             y: 0
         },
-        area: 15
+        area: 1
     };
 
     /**

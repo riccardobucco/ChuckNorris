@@ -31,8 +31,11 @@ angular.module('chuck-chart')
     var defaults = {
         description : 'This is a table.',
         maxRows : 10 ,
-	    showTableGrid : true ,
-	    newLinePosition : 'bottom'
+        showTableGrid : true ,
+        newLinePosition : 'bottom',
+        allowFilter: false,
+        allowSort: false,
+        allowPaginate: false
     };
 
     /**

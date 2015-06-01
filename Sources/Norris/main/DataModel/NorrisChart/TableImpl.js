@@ -34,7 +34,10 @@ var defaults = {
 	description : 'This is a table.',
 	maxRows : 10 ,
 	showTableGrid : true ,
-	newLinePosition : 'bottom'
+	newLinePosition : 'bottom',
+	allowFilter: false,
+	allowSort: false,
+	allowPaginate: false
 };
 
 /**
