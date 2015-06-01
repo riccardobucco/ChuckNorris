@@ -64,7 +64,6 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
                 if (updateData[i].length==data.headers.length) {
                     data.datasets.push(updateData[i]);
                     if (data.datasets.length>chart.getSettings().maxRows) {
-                        data.datasets[0]=null;
                         data.datasets.shift();
                     }
                 }
