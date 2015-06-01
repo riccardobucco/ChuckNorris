@@ -70,13 +70,25 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
 
             /* Stream: */
             for(var i=0; i<updateData.stream.length; i++) {
-                data.push(updateData.stream[i]);
+                var series=updateData.stream[i].series;
+                var val=updateData.stream[i].data;
+                console.log("SERIE "+series);
+                console.log(JSON.stringify(data[series]));
+                data[series].values.push(val);
+                if (data[series].values.length > chart.getSettings().maxPoints) {
+                    data[series].values.shift();
+                }
             }
 
             /* Delete: */
             for(var i=0; i<updateData.delete.length; i++) {
                 var series=updateData.delete[i].series;
                 var index=updateData.delete[i].index;
+                for (var k=i; k<updateData.delete; k++) {
+                    if ( series== updateData.delete[k].series ){
+                        updateData.delete[k].index--;
+                    }
+                }
                 data[series].values[index]=null;
                 data[series].values = data[series].values.filter(function (e) {return e!=null;});
             }
@@ -97,23 +109,27 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
  data = [
  {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // serie1
  {name: 'pluto', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // serie2
- {name: 'paperino', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // serie3
+ {name: 'paperino', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]} // serie3
  ]
 
  mapchart:movie:
  update = {
     inplace : [
         { position: {series:0, index:0}, data: {x:1, y:1} },
-        { position: {series:0, index:1}, data: {x:1, y:1} }
+        { position: {series:0, index:1}, data: {x:2, y:2} }
     ], // modifico 2 valori già esistenti
     stream: [
-        {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // aggiungo una serie
+        {series : 1, data : {x: 1, y: 2} },
+        {series : 3, data: {x: 1, y: 3} }
     ],
     delete: [
         {series:0, index:0},
-        {series:0, index:0},
-        {series:0, index:0}
+        {series:0, index:1},
+        {series:0, index:3}
     ] // elimino 3 punti
  }
 
+ series : 1, data {x: 1, y: 2}
+
 */
+
