@@ -65,7 +65,7 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
                     data.datasets.push(updateData[i]);
                     if (data.datasets.length>chart.getSettings().maxRows) {
                         data.datasets[0]=null;
-                        data.datasets== data.datasets.filter(function (e) {return e!=null;});
+                        data.datasets== data.datasets.shift();
                     }
                 }
                 else {
@@ -93,7 +93,7 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
         [ {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
             {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
             {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'}
-        ], // riga2
+        ] // riga2
     ]
  }
 
