@@ -54,8 +54,7 @@ angular.module('norris-chartupdater')
                     if (updateData[i].length==data.headers.length) {
                         data.datasets.push(updateData[i]);
                         if (data.datasets.length>chart.getSettings().maxRows) {
-                            data.datasets[0]=null;
-                            data.datasets== data.datasets.filter(function (e) {return e!=null;});
+                            data.datasets.shift();
                         }
                     }
                     else {

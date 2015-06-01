@@ -12,7 +12,7 @@ server.listen(9000);
 
 var bc = nor.createChart('barchart', 'bc');
 var lc = nor.createChart('linechart', 'lc');
-var mc = nor.createChart('mapchart', 'mp');
+var mc = nor.createChart('mapchart', 'mc');
 var t = nor.createChart('table', 't');
 
 
@@ -40,8 +40,11 @@ lc.setData({
 });
 setInterval(linechart, 4000);
 
-mc.setData({});
-//setInterval(mapchart, 4000);
+mc.setData([
+    {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]},
+    {name: 'pluto', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
+]);
+setInterval(mapchart, 4000);
 
 t.setData({
     headers: ['pippo','pluto','paperino'],

@@ -31,7 +31,12 @@ angular.module('chuck-chart')
     var defaults = {
         description: 'This is a map chart',
         legendPosition : 'top-right', // values: top-right, top-left, bottom-right, bottom-left, none (the legend will not be shown)
-        maxPoints : 5
+        maxPoints : 5,
+        centerCoordinates: {
+            x: 0,
+            y: 0
+        },
+        area: 15
     };
 
     /**
