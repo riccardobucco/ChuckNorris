@@ -65,13 +65,17 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
                 if (updateData[i].length==data.headers.length) {
                     if(newLinePosition=='bottom') {
                         data.datasets.push(updateData[i]);
+                        if (data.datasets.length>chart.getSettings().maxRows) {
+                            data.datasets.shift();
+                        }
                     }
                     else {
-                        data.dataset.unshift(updateData[i]); /* inserts in top */
+                        data.datasets.unshift(updateData[i]); /* inserts in top */
+                        if (data.datasets.length>chart.getSettings().maxRows) {
+                            data.datasets[data.datasets.length-1]=null;
+                            data.datasets = data.datasets.filter(function (e) {return e!=null;});                        }
                     }
-                    if (data.datasets.length>chart.getSettings().maxRows) {
-                        data.datasets.shift();
-                    }
+
                 }
                 else {
                     throw ("wrongUpdateData");
