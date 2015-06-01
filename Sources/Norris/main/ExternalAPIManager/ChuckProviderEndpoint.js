@@ -35,7 +35,7 @@ function ChuckProviderEndpoint(controller) {
     if (!(this instanceof ChuckProviderEndpoint)) return new ChuckProviderEndpoint(controller);
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
-        var app = this.app = express();
+        var app = this.app = controller.getApp();
         this.controller.getServer().on('request', app);
         this.app.get(this.controller.getEndpoint() + '/chuck', this.handleRequest);
     }else {

@@ -23,6 +23,7 @@ var NorrisImpl=require('../DataModel/NorrisImpl.js');
 var ChartRef=require('./ChartRef.js');
 var http=require('http');
 var events=require('events');
+var express=require('express');
 
 module.exports=ExternalAPIController;
 
@@ -30,17 +31,23 @@ module.exports=ExternalAPIController;
 /**
  * Creates a new ExternalAPIController.
  * @constructor
- * @param {NorrisImpl} model -
+ * @param {NorrisImpl} model - a Norris' instance;
  * @param {http} server -
  * @param {String} endpoint -
  */
-function ExternalAPIController(model, server, endpoint) {
+function ExternalAPIController(model, server, endpoint, app) {
     if(!(this instanceof ExternalAPIController))
-        return new ExternalAPIController(model, server, endpoint);
+        return new ExternalAPIController(model, server, endpoint, app);
     events.EventEmitter.call(this); //ExternalAPIController inherits from events.EventEmitter
     this.model=model;
     this.server=server;
     this.endpoint=endpoint;
+    if (app != '' ){
+        this.app=app;
+    }
+    else {
+        this.app=express();
+    }
 };
 
 ExternalAPIController.prototype.__proto__=events.EventEmitter.prototype;
@@ -130,4 +137,12 @@ ExternalAPIController.prototype.getServer = function() {
  */
 ExternalAPIController.prototype.getEndpoint = function() {
     return this.endpoint;
+};
+
+/**
+ * Gets the Express app.
+ * @returns {}
+ */
+ExternalAPIController.prototype.getApp = function() {
+    return this.app;
 };

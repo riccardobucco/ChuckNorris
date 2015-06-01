@@ -35,7 +35,7 @@ function ListEndpoint(controller) {
     if (!(this instanceof ListEndpoint)) return new ListEndpoint(controller);
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
-        this.app=express();
+        this.app=controller.getApp();
     }else {
         this.controller=null;
         this.app=null;
