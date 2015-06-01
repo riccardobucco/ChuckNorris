@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="chuck">
     <head>
-        <script src="bower_components/angular/angular.min.js"></script>
+
+	<meta charset="utf-8">
+   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+	<script src="bower_components/angular/angular.min.js"></script>
 
         <script src="bower_components/socket.io-client/socket.io.js"></script>
         <script src="bower_components/chartjs/Chart.min.js"></script>
@@ -9,6 +14,7 @@
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
         <link rel="stylesheet" type="text/css" href="bower_components/datatables/media/css/jquery.dataTables.min.css"/>
+    	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
         <script src="main/app.js"></script>
 
@@ -33,10 +39,59 @@
         <script src="main/model/norrischart/MapChartMovieUpdater.js"></script>
         <script src="main/model/norrischart/TableInPlaceUpdater.js"></script>
         <script src="main/model/norrischart/TableStreamUpdater.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS --> 
+	<link href="css/custom.css" rel="stylesheet">
     </head>
     <body>
-        <chuck-barchart chart-endpoint="localhost:9000" chart-id="bc" style="float: left"></chuck-barchart>
-        <chuck-linechart chart-endpoint="localhost:9000" chart-id="lc" style="float: right"></chuck-linechart>
-        
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <header class="jumbotron text-center">
+      <div class="container">
+        <img src="images/norris-hor.png" height="100px" title="Norris" alt="Norris Logo" />
+          <h1>My graphs</h1>
+      </div>
+    </header>
+    <div class="container content">
+      <div class="row">
+        <div class="col-sm-6">
+            <h3>Table</h3>
+            <chuck-barchart chart-endpoint="localhost:9000" chart-id="bc"></chuck-barchart>
+          </div>
+        <div class="col-sm-6">
+            <h3>Map</h3>
+            <chuck-linechart chart-endpoint="localhost:9000" chart-id="lc"></chuck-linechart>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+            <h3>Pie Chart 1</h3>
+            <img src="images/example/pie.jpg" title="Pie chart" alt="Example of Pie chart" >
+          </div>
+        <div class="col-sm-3">
+            <h3>Pie Chart 2</h3>
+            <img src="images/example/pie2.jpg" title="Pie chart" alt="Example of Pie chart" >
+        </div>
+        <div class="col-sm-3">
+            <h3>Pie Chart 3</h3>
+            <img src="images/example/pie3.jpg" title="Pie chart" alt="Example of Pie chart" >
+          </div>
+        <div class="col-sm-3">
+            <h3>Pie Chart 4</h3>
+            <img src="images/example/pie4.jpg" title="Pie chart" alt="Example of Pie chart" >
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12 text-center">
+              <h2>Line chart</h2>
+                <img src="images/example/linechart.jpg" title="Line chart" alt="Example of line chart" />
+          </div>
+      </div>
+    </div>
+    <footer class="text-center">
+          <img src="images/kt-trademark.png" alt="Kaizen Team Trademark" title="Kaizen Team" height="100px" />
+    </footer>
     </body>
 </html>
