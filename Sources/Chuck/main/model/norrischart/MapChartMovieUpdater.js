@@ -50,7 +50,7 @@ angular.module('norris-chartupdater')
         if (!isEmpty(updateData)) {
             var data=chart.getData();
             if (!isEmpty(data)) {
-                /* In place: */
+            /* In place: */
                 for(var i=0; i<updateData.inplace.length; i++) {
                     var series=updateData.inplace[i].position.series;
                     var index=updateData.inplace[i].position.index;
@@ -60,13 +60,23 @@ angular.module('norris-chartupdater')
 
                 /* Stream: */
                 for(var i=0; i<updateData.stream.length; i++) {
-                    data.push(updateData.stream[i]);
+                    var series=updateData.stream[i].series;
+                    var val=updateData.stream[i].data;
+                    data[series].values.push(val);
+                    if (data[series].values.length > chart.getSettings().maxPoints) {
+                        data[series].values.shift();
+                    }
                 }
 
                 /* Delete: */
                 for(var i=0; i<updateData.delete.length; i++) {
                     var series=updateData.delete[i].series;
                     var index=updateData.delete[i].index;
+                    for (var k=i; k<updateData.delete; k++) {
+                        if ( series== updateData.delete[k].series ){
+                            updateData.delete[k].index--;
+                        }
+                    }
                     data[series].values[index]=null;
                     data[series].values = data[series].values.filter(function (e) {return e!=null;});
                 }

@@ -91,7 +91,17 @@ function linechart() {
     }
 };
 
-function mapchart() {};
+function mapchart() {
+    var update = {
+        inplace: [],
+        delete: [],
+        stream: [
+            {series: 0, data: {x: Math.floor(Math.random() * 360) - 180, y: Math.floor(Math.random() * 180) - 90} },
+            {series: 1, data: {x: Math.floor(Math.random() * 360) - 180, y: Math.floor(Math.random() * 180) - 90} }
+        ]
+    };
+    mc.update('movie', update);
+};
 
 var it = 0;
 function table() {
