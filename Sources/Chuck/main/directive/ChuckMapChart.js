@@ -75,7 +75,7 @@
 
                     layers = [];
 
-                    newData.datasets.forEach(function (dataset) {
+                    newData.forEach(function (dataset) {
                         var markers = new OpenLayers.Layer.Markers('Markers');
 
                         dataset.values.forEach(function (value) {

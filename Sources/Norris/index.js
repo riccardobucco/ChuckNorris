@@ -40,10 +40,10 @@ lc.setData({
 });
 setInterval(linechart, 4000);
 
-mc.setData({datasets: [
+mc.setData([
     {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]},
     {name: 'pluto', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
-]});
+]);
 setInterval(mapchart, 4000);
 
 t.setData({
