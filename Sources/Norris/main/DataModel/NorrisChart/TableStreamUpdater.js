@@ -59,10 +59,16 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
 
     if (!isEmpty(updateData)) {
         var data=chart.getData();
+        var newLinePosition=chart.getSettings().newLinePosition;
         if (!isEmpty(data)) {
             for(var i=0; i<updateData.length; i++) {
                 if (updateData[i].length==data.headers.length) {
-                    data.datasets.push(updateData[i]);
+                    if(newLinePosition=='bottom') {
+                        data.datasets.push(updateData[i]);
+                    }
+                    else {
+                        data.dataset.unshift(updateData[i]); /* inserts in top */
+                    }
                     if (data.datasets.length>chart.getSettings().maxRows) {
                         data.datasets.shift();
                     }
