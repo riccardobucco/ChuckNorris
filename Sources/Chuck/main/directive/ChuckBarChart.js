@@ -30,6 +30,7 @@ angular.module('chuck')
 .directive('chuckBarchart', ['ChartRequester', function (ChartRequester) {
     return {
         restrict: 'E',
+        scope: {},
         templateUrl: 'main/view/BarChartView.html',
         link: function(scope, element, attrs) {
 

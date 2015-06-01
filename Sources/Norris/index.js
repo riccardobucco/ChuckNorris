@@ -24,7 +24,7 @@ bc.setData({
     labels: ['1','2','3','4','5'],
     datasets: [
         {color: {r: 255, g: 0, b: 0}, values: [1,2,3,4,5]},
-        {color: {r: 0, g: 255, b: 0}, values: [1,2,3,4,5]},
+        {color: {r: 0, g: 255, b: 0}, values: [1,2,0,4,5]},
         {color: {r: 0, g: 0, b: 255}, values: [1,2,3,4,5]}
     ]
 });
@@ -56,12 +56,12 @@ function barchart() {
         },
         value: Math.floor(Math.random() * 10)
     }];
-    //bc.update('inplace', update);
+    bc.update('inplace', update);
 };
 
 function linechart() {
     var i = 0;
-    if(false) {
+    if(Math.random() > 0.5) {
         var update = [{
             position: {
                 x: Math.floor(Math.random() * 3),

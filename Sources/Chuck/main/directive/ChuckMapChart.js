@@ -29,6 +29,7 @@
 .directive('chuckMapchart', ['ChartRequester', function (ChartRequester) {
     return {
         restrict: 'E',
+        scope: {},
         templateUrl: 'main/view/MapChartView.html',
         link: function(scope, element, attrs) {
 

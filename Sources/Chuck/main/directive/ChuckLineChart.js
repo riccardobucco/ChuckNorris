@@ -29,6 +29,7 @@ angular.module('chuck')
 .directive('chuckLinechart', ['ChartRequester', function (ChartRequester) {
     return {
         restrict: 'E',
+        scope: {},
         templateUrl: 'main/view/LineChartView.html',
         link: function(scope, element, attrs) {
 

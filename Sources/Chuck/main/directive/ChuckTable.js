@@ -29,6 +29,7 @@ angular.module('chuck')
 .directive('chuckTable', ['ChartRequester', function (ChartRequester) {
     return {
         restrict: 'E',
+        scope: {},
         templateUrl: 'main/view/TableView.html',
         link: function(scope, element, attrs) {
 
