@@ -74,8 +74,6 @@ Si riportano i risultati delle misurazioni dell'indice di leggibilità Gulpease 
 	\caption{Esiti del calcolo dell'indice di leggibilità effettuato tramite strumenti automatici durante la Fase CP}
 \end{table}
 
-%TODO
-
 \level{3}{Codice}
 In questa sezione sono riportati i risultati delle metriche, calcolati nei momenti di verifica, per l'Applicazione \insglo{Android}, sviluppata per ultima in quanto rispondente ad un requisito opzionale.
 
@@ -189,6 +187,74 @@ Si riportano di seguito le percentuali di requisiti funzionali realizzati dalle 
 \end{table}
 Come è possibile notare dalla tabella la percentuale dei requisiti funzionali soddisfatti dell'Applicazione non ha raggiunto un esito generalmente accettabile.
 
+\level{4}{Numero di parametri per metodo}
+
+Si riportano di seguito, per ogni componente, le percentuali dei suoi metodi con un dato numero di parametri.
+\begin{table}[H]
+	\centering
+		\begin{tabu}{| l | c | c | c | c | c | }
+			\hline
+			Componente	& 0 & 1 & 2 & 3 & Esito		\\ \hline \hline
+			Norris::InternalAPIManager	& 44\% & 48\% & 8\% & 0\% & Ottimale  \\ \hline
+			Norris::ExternalAPIManager  & 	47\% & 36\% & 14\% & 3\%	& Ottimale  \\ \hline
+			Norris::DataModel  & 	53\%	&  37,5\% & 9,5\% & 0\% & Ottimale  \\ \hline
+			Chuck::Model & 52\% & 20\% & 26\% & 2\% & Ottimale \\ \hline
+			Chuck::ViewModel & 50\% & 50\% & 0\% & 0\% & Ottimale \\ \hline
+			App::Model & 52\% & 25\% & 22\% & 0\% & Ottimale \\ \hline
+			App::Presenter & 66\% & 18\% & 12\% & 4\% & Ottimale \\ \hline
+			App::View & 9\% & 74\% & 12\% & 5\% & Ottimale \\ \hline
+		\end{tabu}
+	\caption{Esiti del calcolo delle percentuali del numero di parametri per metodo durante la Fase CP}
+\end{table}
+Come è possibile notare dalla tabella tutti i metodi hanno un numero di parametri accettabile. 
+\\ \\
+
+\level{4}{Numero di campi dati per classe}
+
+Si riportano di seguito, per ogni componente, le percentuali delle sue classi con un dato numero di campi dati.
+\begin{table}[H]
+	\centering
+		\begin{tabu}{| l | c | c | c | c | c | c | c | c | c | c | }
+			\hline
+			Componente	& 0 & 1 & 2 & 3 & 4 & 6 & 8 & 9 & 11 & Esito		\\ \hline \hline
+			Norris::InternalAPIManager	& 0\% & 100\% & 0\% & 0\% & 0\% & 0\% & 0\% & 0\% & 0\% & Ottimale  \\ \hline
+			Norris::ExternalAPIManager  & 0\% & 33\% & 47\% & 20\% & 0\% & 0\% & 0\% & 0\% & 0\% & Ottimale  \\ \hline
+			Norris::DataModel  & 27\% & 53\% & 0\% & 13\% & 0\% & 7\% & 0\% & 0\% & 0\% & Ottimale  \\ \hline
+			Chuck::Model & 23,5\% & 70,5\% & 0\% & 0\% & 0\% & 6\% & 0\% & 0\% & 0\% & Ottimale  \\ \hline
+			Chuck::ViewModel & 0\% & 100\% & 0\% & 0\% & 0\% & 0\% & 0\% & 0\% & 0\% & Ottimale  \\ \hline
+			Chuck::Directive & 0\% & 0\% & 50\% & 50\% & 0\% & 0\% & 0\% & 0\% & 0\% & Ottimale  \\ \hline
+			App::Model & 22\% & 61,5\% & 5,5\% & 0\% & 5,5\% & 5,5\% & 0\% & 0\% & 0\% & Ottimale  \\ \hline
+			App::Presenter & 37,5\% & 56,5\% & 0\% & 0\% & 0\% & 0\% & 6\% & 0\% & 0\% & Ottimale  \\ \hline
+			App::View & 37,5\% & 25\% & 0\% & 0\% & 0\% & 0\% & 0\% & 25\% & 12,5\% & Accettabile  \\ \hline
+		\end{tabu}
+	\caption{Esiti del calcolo delle percentuali del numero di campi dati per classi durante la Fase CP}
+\end{table}
+Come è possibile notare dalla tabella la maggior parte delle tabelle possiede un numero ottimale di campi dati, ad eccezzione solamente di alcune classi della componente View dell'applicazione, le quali però hanno un numero comunque accettabile di campi dati.
+\\ \\
+
+\level{4}{Grado di accoppiamento dei componenti}
+
+Si riportano di seguito, per ogni componente, le percentuali delle sue classi con un dato numero di campi dati.
+\begin{table}[H]
+	\centering
+		\begin{tabu}{| l | c | c | c | c | c | c | }
+			\hline
+			Componente	& Afferente & Esiti Afferente & Efferente & Esiti Efferente & Esiti Totali		\\ \hline \hline
+			Norris::InternalAPIManager	& 1 & Ottimale & 3 & Ottimale & Ottimale  \\ \hline
+			Norris::ExternalAPIManager  & 0 & Ottimale & 9 & Non Accettabile & Accettabile  \\ \hline
+			Norris::DataModel  & 4 & Ottimale & 3 & Ottimale & Ottimale  \\ \hline
+			Chuck::Model & 2 & Ottimale & 4 & Ottimale & Ottimale  \\ \hline
+			Chuck::ViewModel & 8 & Non Accettabile & 6 & Accettabile & Non Accettabile  \\ \hline
+			Chuck::Directive & 0 & Ottimale & 12 & Non Accettabile & Accettabile  \\ \hline
+			Chuck::View & 4 & Ottimale & 4 & Ottimale & Ottimale  \\ \hline
+			App::Model & 4 & Ottimale & 2 & Ottimale & Ottimale  \\ \hline
+			App::Presenter & 3 & Ottimale & 6 & Accettabile & Accettabile  \\ \hline
+			App::View & 1 & Ottimale & 6 & Accettabile & Accettabile  \\ \hline
+		\end{tabu}
+	\caption{Esiti del calcolo del grado di accoppiamento per le componenti durante la Fase CP}
+\end{table}
+Come è possibile notare dalla tabella, abbiamo ottenuto buoni risultati sia per Norris sia per l'applicazione Android, mentre i valori del grado di accoppiamento afferente della componente ViewModel di Chuck sono risultati molto alti, in quanto rappresenta la componente principale di Chuck.
+\\ \\
  
 \level{2}{Verifica dei processi}
 
@@ -249,7 +315,7 @@ Segue un riassunto di quanto è stato fatto.
 		Norme di Progetto	& 24 &	&	&	& \\ \hline
 		Piano di Progetto	& 170 &	&	&	& \\ \hline
 		Piano di Qualifica	& 159	&	&	&	&\\ \hline
-		Specifica Tecnica & 135 & & & \\ \hline
+		Specifica Tecnica & 135 & & & & \\ \hline
 		Definizione di \insglo{Prodotto} & 120 &	 	&	&  	&\\ \hline
 		Manuale Utente & 118	&	&	&	& \\ \hline
 		Glossario & 120 &  & & &\\ \hline
