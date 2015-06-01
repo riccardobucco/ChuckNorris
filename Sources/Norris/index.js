@@ -43,8 +43,13 @@ setInterval(linechart, 4000);
 mc.setData({});
 //setInterval(mapchart, 4000);
 
-t.setData({});
-//setInterval(table, 4000);
+t.setData({
+    headers: ['pippo','pluto','paperino'],
+    datasets: [
+        [{value: 'foo'}, {value: 'bar'}, {value: 'baz'}]
+    ]
+});
+setInterval(table, 4000);
 
 
 
@@ -59,8 +64,8 @@ function barchart() {
     bc.update('inplace', update);
 };
 
+var ilc = 0;
 function linechart() {
-    var i = 0;
     if(Math.random() > 0.5) {
         var update = [{
             position: {
@@ -72,7 +77,7 @@ function linechart() {
         lc.update('inplace', update);
     } else {
         var update = [{
-            label: 'foo',
+            label: 'foo' + ilc++,
             data: [
                 Math.floor(Math.random() * 10),
                 Math.floor(Math.random() * 10),
@@ -85,4 +90,10 @@ function linechart() {
 
 function mapchart() {};
 
-function table() {};
+var it = 0;
+function table() {
+    var update = [
+        [{value: 'foo' + it++}, {value: 'bar' + it++}, {value: 'baz' + it++}]
+    ];
+    t.update('stream', update);
+};
