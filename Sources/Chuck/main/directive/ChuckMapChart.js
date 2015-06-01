@@ -52,7 +52,8 @@
                 var lat = settings.centerCoordinates.y;
                 var zoom = settings.area;
 
-                map = new OpenLayers.Map('demoMap');
+                map = new OpenLayers.Map(element.contents()[0]);
+
                 map.addLayer(new OpenLayers.Layer.OSM('OSM'));
 
                 var lonLat = new OpenLayers.LonLat(lon,lat)
@@ -65,7 +66,7 @@
             };
 
             function render(newValue, oldValue) {
-                if(false) {
+                if(map) {
                     var newData = newValue.getData();
 
                     layers.forEach(function (layer) {
@@ -74,11 +75,11 @@
 
                     layers = [];
 
-                    newData.forEach(function (dataset) {
+                    newData.datasets.forEach(function (dataset) {
                         var markers = new OpenLayers.Layer.Markers('Markers');
 
                         dataset.values.forEach(function (value) {
-                            var lonLat = new OpenLayers.LonLat( 11.72 ,44.35 )
+                            var lonLat = new OpenLayers.LonLat(value.x, value.y)
                                 .transform(
                                     new OpenLayers.Projection("EPSG:4326"),
                                     map.getProjectionObject()
@@ -87,6 +88,7 @@
                         });
 
                         map.addLayer(markers);
+                        layers.push(markers);
                     });
                 }
             };
