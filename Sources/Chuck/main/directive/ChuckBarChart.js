@@ -1,9 +1,9 @@
 /*
- * Name: {ChuckBarChart.js}
- * Module: {Directive}
- * Location: {Chuck/Main/Directive}
- * Date: {2015-04-12}
- * Version: {v0.6}
+ * Name: ChuckBarChart.js
+ * Module: Directive
+ * Location: Chuck/Main/Directive
+ * Date: 2015-04-12
+ * Version: v0.06
  *
  * History:
  *
