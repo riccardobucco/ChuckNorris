@@ -50,6 +50,7 @@ angular.module('chuck')
                 var info = {};
 
                 info.columns = [];
+                info.columns.push({title: '_ordering'})
                 data.headers.forEach(function (header) {
                     info.columns.push({title: header});
                 });
@@ -60,19 +61,23 @@ angular.module('chuck')
                 info.bPaginate = settings.allowPaginate;
 
                 table = $(element.contents()[0]).DataTable(info);
+
+                table.column(0).visible(false);
             };
 
             function render(newValue, oldValue) {
                 var newData = newValue.getData();
 
                 table.rows().remove();
-                newData.datasets.forEach(function (dataset) {
+
+                for (var i = 0; i < newData.datasets.length; i++) {
                     var row = [];
-                    dataset.forEach(function (item) {
+                    row.push(0);
+                    newData.datasets[i].forEach(function (item) {
                         row.push(item.value);
                     });
                     table.row.add(row);
-                });
+                }
 
 
                 table.draw();
