@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.presenter
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/presenter
 * Date: 2015-05-22
-* Version: 0.01
+* Version: v0.02
 *
 * History:
 * =================================================================

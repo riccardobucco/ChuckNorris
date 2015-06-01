@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 2015-05-24
-* Version: 0.01
+* Version: v0.02
 *
 * History:
 * =================================================================

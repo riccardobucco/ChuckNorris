@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.presenter
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/presenter
 * Date: 2015-05-22
-* Version: 0.01
+* Version: v0.02
 *
 * History:
 * =================================================================
@@ -35,8 +35,7 @@ public interface ListPresenter extends Presenter{
     void onLogoutClick();
 
     /**
-     * This method is invoked in response to an event in the view, or the display of Activity with the list of chart. Its task is to get the list (through
-HttpRequesterWithCookie) and change the view with those values.
+     * This method is invoked in response to an event in the view, or the display of Activity with the list of chart. Its task is to get the list (through HttpRequesterWithCookie) and change the view with those values.
      */
     void onResume();
 }

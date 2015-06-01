@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model.service
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/Service
 * Date: 2015-05-19
-* Version: 0.01
+* Version: v0.02
 *
 * History:
 * =================================================================

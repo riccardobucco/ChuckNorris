@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 23/05/2015
-* Version: 0.01
+* Version: v0.02
 *
 * History:
 * =================================================================
@@ -21,8 +21,7 @@ package it.kaizenteam.app.view;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 
 /**
- * This interface has the task of allowing the use of methods to change the view to represent a line chart from the outside of the package View (indicated by a
-LineChartPresenterImpl).
+ * This interface has the task of allowing the use of methods to change the view to represent a line chart from the outside of the package View (indicated by a LineChartPresenterImpl).
  */
 public interface LineChartView extends View {
     /**
