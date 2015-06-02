@@ -49,9 +49,9 @@ function AuthenticationEndpoint(controller) {
 }
 
 /**
- *
- * @param req
- * @param res
+ * Manages an authentication request
+ * @param {express::request} req
+ * @param {express::response} res
  */
 AuthenticationEndpoint.prototype.handleLogin = function(req, res) {
     var cookies = {
@@ -70,9 +70,9 @@ AuthenticationEndpoint.prototype.handleLogin = function(req, res) {
 };
 
 /**
- *
- * @param req
- * @param res
+ * Manages an end-session request
+ * @param {express::request} req
+ * @param {express::response} res
  */
 AuthenticationEndpoint.prototype.handleLogout = function(req, res) {
     var cookies = {
@@ -88,9 +88,9 @@ AuthenticationEndpoint.prototype.handleLogout = function(req, res) {
 };
 
 /**
- *
- * @param req
- * @param res
+ * Manages a request in order to renew an activated session
+ * @param {express::request} req
+ * @param {express::response} res
  */
 AuthenticationEndpoint.prototype.handleKeepAlive = function(req, res) {
     var cookies = {

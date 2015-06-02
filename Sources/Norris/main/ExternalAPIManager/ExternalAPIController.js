@@ -101,6 +101,7 @@ ExternalAPIController.prototype.isLogged= function(cookies) {
 
 
 /**
+ * Gets the list of chart in the represented Norris' instance
  * @return {ChartRef[]}
  */
 ExternalAPIController.prototype.getCharts= function() {
@@ -113,7 +114,7 @@ ExternalAPIController.prototype.getCharts= function() {
 };
 
 /**
- *
+ * Gets the chart with the indicated id in the represented Norris' instance
  * @param {String} chartId
  * @returns {ChartRef}
  */

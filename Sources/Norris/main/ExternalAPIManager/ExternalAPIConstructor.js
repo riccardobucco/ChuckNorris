@@ -44,7 +44,6 @@ ExternalAPIConstructor.getInstance = function() { // static
 
 /**
  * A static method which registers the endpoints' factories.
- *
  * @param {EndpointFactory} endpoint - the endponint's factory instance.
  */
 ExternalAPIConstructor.registerEndpoint = function(endpoint) {
@@ -53,8 +52,7 @@ ExternalAPIConstructor.registerEndpoint = function(endpoint) {
 };
 
 /**
- *
- *
+ * Creates an ExternalAPIManager component using the indicated parameters
  * @param {NorrisImpl} model -
  * @param {http} server -
  * @param {String} endpoint -

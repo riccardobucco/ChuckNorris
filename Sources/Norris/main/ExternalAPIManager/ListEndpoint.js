@@ -44,7 +44,7 @@ function ListEndpoint(controller) {
 }
 
 /**
- *
+ * Manages a request to get the chart list
  * @param req
  * @param res
  */

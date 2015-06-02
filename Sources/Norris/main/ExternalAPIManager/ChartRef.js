@@ -47,7 +47,6 @@ ChartRef.prototype.__proto__=events.EventEmitter.prototype;
 
 /**
  * Gets the chart's ID.
- *
  * @return {String} the chart's ID.
  */
 ChartRef.prototype.getId = function() {
@@ -56,7 +55,6 @@ ChartRef.prototype.getId = function() {
 
 /**
  * Gets the chart's type.
- *
  * @return {String} the chart's type.
  */
 ChartRef.prototype.getType = function() {
@@ -65,7 +63,6 @@ ChartRef.prototype.getType = function() {
 
 /**
  * Gets the chart's data.
- *
  * @return 	{ChartData} the chart's data.
  */
 ChartRef.prototype.getData = function() {
@@ -74,7 +71,6 @@ ChartRef.prototype.getData = function() {
 
 /**
  * Gets the chart's settings.
- *
  * @return 	{ChartSettings} the chart's settings.
  */
 ChartRef.prototype.getSettings = function() {

@@ -83,8 +83,7 @@ NorrisImpl.prototype.getSettings = function() {
  * @return {ChartImpl} the created chart.
  */
 NorrisImpl.prototype.createChart = function(chartType, chartId) {
-    // controllo che chartType sia in NorrisChart.factories -> lo fa già ChartImpl.createChart
-
+    
     if (!this.charts.hasOwnProperty(chartId)) {     //the chart's ID should be unique
         var chart = NorrisChart.createChart(chartType, chartId);
         if (chart != null) {
