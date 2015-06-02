@@ -49,13 +49,22 @@ angular.module('norris-chartupdater')
 
         if (!isEmpty(updateData)) {
             var data=chart.getData();
+            var newLinePosition=chart.getSettings().newLinePosition;
             if (!isEmpty(data)) {
                 for(var i=0; i<updateData.length; i++) {
                     if (updateData[i].length==data.headers.length) {
-                        data.datasets.push(updateData[i]);
-                        if (data.datasets.length>chart.getSettings().maxRows) {
-                            data.datasets.shift();
+                        if(newLinePosition=='bottom') {
+                            data.datasets.push(updateData[i]);
+                            if (data.datasets.length>chart.getSettings().maxRows) {
+                                data.datasets.shift();
+                            }
                         }
+                        else {
+                            data.datasets.unshift(updateData[i]); /* inserts in top */
+                            if (data.datasets.length>chart.getSettings().maxRows) {
+                                data.datasets.pop();
+                        }
+
                     }
                     else {
                         throw ("wrongUpdateData");

@@ -72,8 +72,7 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
                     else {
                         data.datasets.unshift(updateData[i]); /* inserts in top */
                         if (data.datasets.length>chart.getSettings().maxRows) {
-                            data.datasets[data.datasets.length-1]=null;
-                            data.datasets = data.datasets.filter(function (e) {return e!=null;});                        }
+                            data.datasets.pop();
                     }
 
                 }
@@ -87,7 +86,8 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
             console.log("ERROR: the chart has no data to update.");
             throw ("emptyChart");
         }
-    }};
+    }
+};
 
 /*
 

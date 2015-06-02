@@ -22,6 +22,15 @@
                 "top",
                 "bottom"
             ]
+        },
+        "allowFilter": {
+            "type": "boolean"
+        },
+        "allowSort": {
+            "type": "boolean"
+        },
+        "allowPaginate": {
+            "type": "boolean"
         }
     }
 }
