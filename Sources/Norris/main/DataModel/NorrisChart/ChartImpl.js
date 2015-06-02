@@ -134,7 +134,14 @@ ChartImpl.prototype.setSettings = function(settings) {
 	if(typeof settings == 'object') {
 		for(var key in settings) {
 			if(this.settings.hasOwnProperty(key)) {
-				this.settings[key] = settings[key];
+				if ( typeof settings[key] == 'object') {
+					for(var key2 in settings[key]) {
+						this.settings[key][key2] = settings[key][key2];
+					}
+				}
+				else {
+					this.settings[key] = settings[key];
+				}
 			}
 		}
 	}

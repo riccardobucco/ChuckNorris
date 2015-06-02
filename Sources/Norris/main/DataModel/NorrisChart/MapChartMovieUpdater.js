@@ -72,8 +72,6 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
             for(var i=0; i<updateData.stream.length; i++) {
                 var series=updateData.stream[i].series;
                 var val=updateData.stream[i].data;
-                console.log("SERIE "+series);
-                console.log(JSON.stringify(data[series]));
                 data[series].values.push(val);
                 if (data[series].values.length > chart.getSettings().maxPoints) {
                     data[series].values.shift();
