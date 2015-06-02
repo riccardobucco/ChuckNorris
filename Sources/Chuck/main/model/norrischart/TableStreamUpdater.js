@@ -63,6 +63,7 @@ angular.module('norris-chartupdater')
                             data.datasets.unshift(updateData[i]); /* inserts in top */
                             if (data.datasets.length>chart.getSettings().maxRows) {
                                 data.datasets.pop();
+                            }
                         }
 
                     }
