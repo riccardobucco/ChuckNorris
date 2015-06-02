@@ -132,3 +132,38 @@ NorrisBridge.prototype.getPages = function () {
     });
     return pages;
 };
+
+NorrisBridge.prototype.getMiddleware = function () {
+
+    var middleware = function(page) {
+        var express=require('express');
+        var app = express();
+        app.set('views', './templates'); /* sets the directory which contains the template */
+        app.set('view engine', 'ejs'); /* sets the default template engine */
+        app.engine('html', require('ejs').renderFile);
+        app.listen(3000);
+
+        var settings=page.getSettings();
+        var title= settings.title;
+        var maxChartsRow=settings.maxChartsRow;
+        var maxChartsCol=settings.maxChartsCol;
+        var content=[];
+        var charts=page.getCharts();
+
+        for(var i in charts) {
+            var chart=charts[i].getChartModel();
+            var type=chart.getType();
+            var id=chart.getId();
+            content.push({html: "<chuck-"+type+" chart-endpoint='localhost:9000' chart-id="+id+"></chuck-"+type+">"});
+        }
+        console.log (content);
+
+        app.get('/', function(req, res) {
+                res.render('index.html', {title: title,
+                    maxChartsRow : maxChartsRow,
+                    maxChartsCol : maxChartsCol,
+                    body: content});
+            });
+    };
+    return middleware;
+};
