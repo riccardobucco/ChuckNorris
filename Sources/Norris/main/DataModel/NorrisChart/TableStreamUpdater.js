@@ -73,6 +73,7 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
                         data.datasets.unshift(updateData[i]); /* inserts in top */
                         if (data.datasets.length>chart.getSettings().maxRows) {
                             data.datasets.pop();
+                        }
                     }
 
                 }
