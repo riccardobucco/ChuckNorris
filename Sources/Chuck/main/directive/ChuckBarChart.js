@@ -34,8 +34,9 @@ angular.module('chuck')
         templateUrl: 'main/view/BarChartView.html',
         link: function(scope, element, attrs) {
 
-            var chartjs = null;
-            
+            var barchart = null;
+            var options = {};
+
             ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
                 .then(function (chart) {
                     scope.chart = chart;
@@ -49,30 +50,37 @@ angular.module('chuck')
                 var chartData = scope.chart.getData();
                 var chartSettings = scope.chart.getSettings();
 
-                var data = {};
-                data.labels = chartData.labels;
-                data.datasets = [];
-                chartData.datasets.forEach(function (dataset) {
-                    var obj = {};
-                    obj.data = dataset.values;
-                    obj.label = dataset.name;
-                    obj.fillColor = 'rgb(' + dataset.color.r + ',' + dataset.color.g + ',' + dataset.color.b + ')';
-                    data.datasets.push(obj);
-                });
-
-                var options = {};
-                    
-                var ctx = element.contents()[0].getContext('2d');
-                chartjs = new Chart(ctx).Bar(data, options);
+                options.animation = {
+                    duration: 1000,
+                    easing: 'inAndOut',
+                    startup: true
+                };
+                if(chartSettings.orientation === 'horizontal')
+                    barchart = new google.visualization.BarChart(element.contents()[0]);
+                else
+                    barchart = new google.visualization.ColumnChart(element.contents()[0]);
             };
 
             function render(newValue, oldValue) {
                 var newData = newValue.getData();
-                for(var i = 0; i < newData.datasets.length; i++)
-                    for(var j = 0; j < newData.datasets[i].values.length; j++)
-                        chartjs.datasets[i].bars[j].value = newData.datasets[i].values[j];
 
-                chartjs.update();
+                var data = new google.visualization.DataTable();
+
+                data.addColumn('string', 'headers');
+                newData.datasets.forEach(function (dataset) {
+                    data.addColumn('number', dataset.name || 'unknow');
+                });
+
+                for(var i = 0; i < newData.labels.length; i++) {
+                    var row = [];
+                    row.push(newData.labels[i]);
+                    newData.datasets.forEach(function (dataset) {
+                        row.push(dataset.values[i]);
+                    });
+                    data.addRow(row);
+                }
+
+                barchart.draw(data, options);
             };
         }
     };

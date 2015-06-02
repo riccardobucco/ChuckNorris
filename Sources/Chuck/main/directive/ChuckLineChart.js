@@ -30,11 +30,11 @@ angular.module('chuck')
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: 'main/view/LineChartView.html',
+        templateUrl: 'main/view/BarChartView.html',
         link: function(scope, element, attrs) {
 
-            var ctx = element.contents()[0].getContext('2d');
-            var chartjs = null;
+            var linechart = null;
+            var options = {};
 
             ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
                 .then(function (chart) {
@@ -45,30 +45,39 @@ angular.module('chuck')
                     console.error(reason);
                 });
 
-            function init() {};
-
-            function render(newValue, oldValue) {
+            function init() {
                 var chartData = scope.chart.getData();
                 var chartSettings = scope.chart.getSettings();
 
-                var data = {};
-                data.labels = chartData.labels;
-                data.datasets = [];
-                chartData.datasets.forEach(function (dataset) {
-                    var obj = {};
-                    obj.data = dataset.values;
-                    obj.label = dataset.name;
-                    obj.strokeColor = 'rgb(' + dataset.color.r + ',' + dataset.color.g + ',' + dataset.color.b + ')';
-                    obj.pointColor = 'rgb(' + dataset.color.r + ',' + dataset.color.g + ',' + dataset.color.b + ')';
-                    data.datasets.push(obj);
+                options.animation = {
+                    duration: 1000,
+                    easing: 'inAndOut',
+                    startup: true
+                };
+
+                linechart = new google.visualization.ColumnChart(element.contents()[0]);
+            };
+
+            function render(newValue, oldValue) {
+                var newData = newValue.getData();
+
+                var data = new google.visualization.DataTable();
+
+                data.addColumn('string', 'headers');
+                newData.datasets.forEach(function (dataset) {
+                    data.addColumn('number', dataset.name || 'unknow');
                 });
 
-                var options = {
-                    datasetFill: false
+                for(var i = 0; i < newData.labels.length; i++) {
+                    var row = [];
+                    row.push(newData.labels[i]);
+                    newData.datasets.forEach(function (dataset) {
+                        row.push(dataset.values[i]);
+                    });
+                    data.addRow(row);
                 }
 
-                if(chartjs) chartjs.destroy();
-                chartjs = new Chart(ctx).Line(data, options);
+                linechart.draw(data, options);
             };
         }
     };
