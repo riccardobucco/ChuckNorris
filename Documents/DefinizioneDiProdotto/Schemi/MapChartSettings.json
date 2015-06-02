@@ -19,11 +19,11 @@
                 "none"
             ]
         },
-        "maxPoints": {
+        "maxValues": {
             "type": "integer",
             "minimum": 1
         },
-        "centerCoordinates": {
+        "area": {
             "type": "object",
             "properties": {
                 "x": {
@@ -32,20 +32,11 @@
                 "y": {
                     "type": "number"
                 },
+                "zoom": {
+                    "type": "number",
+                    "minimum": 1
+                },
                 "required": ["x","y"]
-            }
-        },
-        "area": {
-            "type": "number",
-            "minimum": 0,
-            "exclusiveMinimum": true
-        },
-        "format": {
-            "type": "object",
-            "properties": {
-                "marker": {
-                    "type": "string"
-                }
             }
         }
     }

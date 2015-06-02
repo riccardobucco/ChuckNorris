@@ -48,9 +48,9 @@
             function init() {
                 var settings = scope.chart.getSettings();
 
-                var lon = settings.centerCoordinates.x;
-                var lat = settings.centerCoordinates.y;
-                var zoom = settings.area;
+                var lon = settings.area.x;
+                var lat = settings.area.y;
+                var zoom = settings.area.zoom;
 
                 map = new OpenLayers.Map(element.contents()[0]);
 
@@ -84,6 +84,7 @@
                                     new OpenLayers.Projection("EPSG:4326"),
                                     map.getProjectionObject()
                                 );
+                            console.log(lonLat);
                             markers.addMarker(new OpenLayers.Marker(lonLat));
                         });
 

@@ -63,7 +63,7 @@ angular.module('norris-chartupdater')
                     var series=updateData.stream[i].series;
                     var val=updateData.stream[i].data;
                     data[series].values.push(val);
-                    if (data[series].values.length > chart.getSettings().maxPoints) {
+                    if (data[series].values.length > chart.getSettings().maxValues) {
                         data[series].values.shift();
                     }
                 }

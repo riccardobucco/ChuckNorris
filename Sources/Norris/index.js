@@ -97,8 +97,8 @@ function mapchart() {
         inplace: [],
         delete: [],
         stream: [
-            {series: 0, data: {x: Math.floor(Math.random() * 360) - 180, y: Math.floor(Math.random() * 180) - 90} },
-            {series: 1, data: {x: Math.floor(Math.random() * 360) - 180, y: Math.floor(Math.random() * 180) - 90} }
+            {series: 0, data: {x: Math.floor(Math.random() * 180) - 90, y: Math.floor(Math.random() * 90) - 45}},
+            {series: 1, data: {x: Math.floor(Math.random() * 180) - 90, y: Math.floor(Math.random() * 90) - 45}}
         ]
     };
     mc.update('movie', update);
