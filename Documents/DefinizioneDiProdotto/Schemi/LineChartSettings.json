@@ -16,31 +16,36 @@
         "yLabel": {
             "type": "string"
         },
-        "showGrid": {
-            "type": "boolean"
-        },
         "legendPosition": {
             "enum": [
-                "top-right",
-                "top-left",
-                "bottom-left",
-                "bottom-right",
+                "top",
+                "right",
+                "bottom",
+                "left",
+                "int",
                 "none"
             ]
         },
-        "maxPoints": {
+        "maxValues": {
             "type": "integer",
             "minimum": 1
         },
-        "format": {
+        "style": {
             "type": "object",
             "properties": {
-                "pointDotRadius": {
+                "pointDotSize": {
                     "type": "integer",
                     "minimum": 0
                 },
-                "bezierCurve":  {
+                "bezierCurve": {
                     "type": "boolean"
+                },
+                "showGrid": {
+                    "type": "boolean"
+                },
+                "animationDuration": {
+                    "type": "integer",
+                    "minimum": 0
                 }
             }
         }
