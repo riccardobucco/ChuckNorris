@@ -26,6 +26,13 @@
 
 angular.module('norris-chartupdater')
 
+
+/**
+ * Creates a new LineChartInPlaceUpdater using the inversion of control.
+ * @param {String} className
+ * @param settings
+ * @constructor
+ */
 .factory('LineChartInPlaceUpdater', [function () {
 
 function LineChartInPlaceUpdater() {

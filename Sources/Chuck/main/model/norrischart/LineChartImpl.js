@@ -26,6 +26,13 @@
 
 angular.module('chuck-chart')
 
+
+/**
+ * Creates a new LineChartImpl using the inversion of control.
+ * @param {String} className
+ * @param settings
+ * @constructor
+ */
 .factory('LineChartImpl', ['ChartImpl', 'LineChartInPlaceUpdater', 'LineChartStreamUpdater', function (ChartImpl, LineChartInPlaceUpdater, LineChartStreamUpdater) {
 
     var defaults = {

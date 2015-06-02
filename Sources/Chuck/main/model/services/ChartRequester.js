@@ -25,8 +25,21 @@
  */
 angular.module('chuck-requester', ['chuck-chart'])
 
+/**
+ * Creates a new ChartRequester using the inversion of control.
+ * @param {String} className
+ * @param settings
+ * @constructor
+ */
 .factory('ChartRequester', ['ChartImpl','$rootScope', '$timeout', '$q', 'BarChartImpl', 'LineChartImpl', 'MapChartImpl', 'TableImpl', function (ChartImpl, $rootScope, $timeout, $q) {
     return {
+		
+		/**
+		 * Gets the chart into a Norris' instance; it's updated automatically.
+		 * @param {String} endpoint
+		 * @param {String} id
+		 * @returns {ChartImpl} - The requested chart
+		 */
         bind: function (endpoint, id) {
             var deferred = $q.defer();
 
