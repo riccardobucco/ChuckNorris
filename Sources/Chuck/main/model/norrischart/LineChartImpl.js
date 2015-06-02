@@ -37,8 +37,8 @@ angular.module('chuck-chart')
 
     var defaults = {
         description : 'This is a line chart.',
-        xlabel : '',
-        ylabel : '',
+        xLabel : '',
+        yLabel : '',
         legendPosition : 'right',
         maxValues : 10,
         style : {

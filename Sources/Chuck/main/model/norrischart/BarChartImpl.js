@@ -30,8 +30,8 @@ angular.module('chuck-chart')
 
     var defaults = {
         description : 'This is a bar chart.',
-        xlabel : '',
-        ylabel : '',
+        xLabel : '',
+        yLabel : '',
         legendPosition : 'right',
         orientation : 'vertical',
         style: {

@@ -38,6 +38,7 @@ lc.setData({
         {name: 'paperino', color: {r: 0, g: 0, b: 255}, values: [1,2,3,4,5]}
     ]
 });
+lc.setSettings({xLabel: 'xLabel', yLabel: 'yLabel'})
 setInterval(linechart, 4000);
 
 mc.setData([
