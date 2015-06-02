@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="chuck">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+        <script src="bower_components/angular/angular.min.js"></script>
+
+        <script src="bower_components/socket.io-client/socket.io.js"></script>
+        <script src="bower_components/chartjs/Chart.min.js"></script>
+        <script src="bower_components/openlayers/lib/OpenLayers.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="main/app.js"></script>
+
+        <script src="main/model/services/ChartRequester.js"></script>
+        <script src="main/model/services/ChuckAuthenticator.js"></script>
+
+        <script src="main/directive/ChuckBarChart.js"></script>
+        <script src="main/directive/ChuckLineChart.js"></script>
+        <script src="main/directive/ChuckMapChart.js"></script>
+        <script src="main/directive/ChuckTable.js"></script>
+
+        <script src="main/model/norrischart/ChartImpl.js"></script>
+        <script src="main/model/norrischart/BarChartImpl.js"></script>
+        <script src="main/model/norrischart/LineChartImpl.js"></script>
+        <script src="main/model/norrischart/MapChartImpl.js"></script>
+        <script src="main/model/norrischart/TableImpl.js"></script>
+
+        <script src="main/model/norrischart/BarChartInPlaceUpdater.js"></script>
+        <script src="main/model/norrischart/LineChartInPlaceUpdater.js"></script>
+        <script src="main/model/norrischart/LineChartStreamUpdater.js"></script>
+        <script src="main/model/norrischart/MapChartInPlaceUpdater.js"></script>
+        <script src="main/model/norrischart/MapChartMovieUpdater.js"></script>
+        <script src="main/model/norrischart/TableInPlaceUpdater.js"></script>
+        <script src="main/model/norrischart/TableStreamUpdater.js"></script>
+
+
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="bower_components/datatables/media/css/jquery.dataTables.min.css"/>
+        <link href="css/custom.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <header class="jumbotron text-center">
+      <div class="container">
+        <img src="images/norris-hor.png" height="100px" title="Norris" alt="Norris Logo" />
+          <h1>My graphs</h1>
+      </div>
+    </header>
+    <div class="container content">
+       <%- content %>
+    </div>
+    <footer class="text-center">
+          <img src="images/kt-trademark.png" alt="Kaizen Team Trademark" title="Kaizen Team" height="100px" />
+    </footer>
+    </body>
+</html>
