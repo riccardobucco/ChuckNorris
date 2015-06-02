@@ -1,0 +1,4 @@
+.jumbotron {padding-top:20px; padding-bottom: 20px; background-image: linear-gradient(to bottom, #DDD 0%, #EEE 100%);}
+.jumbotron h1 { font-size:30px; }
+.content img { width:100%;}
+footer {padding:20px 0px; background-color:#DDD; margin:50px auto 0px auto; }

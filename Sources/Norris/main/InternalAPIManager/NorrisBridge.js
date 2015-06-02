@@ -134,36 +134,38 @@ NorrisBridge.prototype.getPages = function () {
 };
 
 NorrisBridge.prototype.getMiddleware = function (page) {
+    var express=require('express');
+    var app = express();
+    app.set('views', __dirname+'/../../templates'); /* sets the directory which contains the template */
+    app.set('view engine', 'ejs'); /* sets the default template engine */
+    app.engine('html', require('ejs').renderFile);
 
-    var middleware = function(req, res, next) {
-        var express=require('express');
-        var app = express();
-        app.set('views', './templates'); /* sets the directory which contains the template */
-        app.set('view engine', 'ejs'); /* sets the default template engine */
-        app.engine('html', require('ejs').renderFile);
-        app.listen(3000);
+    var settings=page.getSettings();
+    var title= settings.title;
+    var maxChartsRow=settings.maxChartsRow;
+    var maxChartsCol=settings.maxChartsCol;
+    var content=[];
+    var charts=page.getCharts();
 
-        var settings=page.getSettings();
-        var title= settings.title;
-        var maxChartsRow=settings.maxChartsRow;
-        var maxChartsCol=settings.maxChartsCol;
-        var content=[];
-        var charts=page.getCharts();
+    for(var i in charts) {
+        var chart=charts[i].getChartModel();
+        var type=chart.getType();
+        var id=chart.getId();
+        content.push({html: "<chuck-"+type+" chart-endpoint='localhost:9000' chart-id="+id+"></chuck-"+type+">"});
+    }
+    console.log (content);
 
-        for(var i in charts) {
-            var chart=charts[i].getChartModel();
-            var type=chart.getType();
-            var id=chart.getId();
-            content.push({html: "<chuck-"+type+" chart-endpoint='localhost:9000' chart-id="+id+"></chuck-"+type+">"});
-        }
-        console.log (content);
+    app.get('/', function(req, res) {
+        res.render('index.html', {title: title,
+            maxChartsRow : maxChartsRow,
+            maxChartsCol : maxChartsCol,
+            body: content});
+        });
 
-        app.get('/', function(req, res) {
-                res.render('index.html', {title: title,
-                    maxChartsRow : maxChartsRow,
-                    maxChartsCol : maxChartsCol,
-                    body: content});
-            });
-    };
-    return middleware;
+    /* static middleware */
+    app.use('/images', express.static(__dirname+'/../../images') );
+    app.use('/bower_components', express.static(__dirname+'/../../bower_components') );
+    app.use('/css', express.static(__dirname+'/../../css') );
+
+    return app;
 };
