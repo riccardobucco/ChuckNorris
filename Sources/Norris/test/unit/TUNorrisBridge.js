@@ -23,7 +23,7 @@ describe('NorrisBridge', function(){
 
 	describe('createPage(pageId: String): void',function(){
 		it('should create a page with the indicated id',function(){
-		  	var page = {'page':{'charts': [],'settings': {'maxChartsCol': 3,'maxChartsRow': 2,'title': 'Norris page'},'uid': '00'}};
+		  	var page = {'page':{'charts': [],'settings': {'maxChartsCol': 3,'maxChartsRow': 2,'title': "Norris's page"},'uid': '00'}};
 ;
 			
 			var norrisImpl = new NorrisImpl();
@@ -75,20 +75,24 @@ describe('NorrisBridge', function(){
 			var norrisBridge = new NorrisBridge(norris);
 			norrisBridge.createChart('mapchart','01');
 			
-			var chart = {'chart': {
-				'_events': {},
-				'_maxListeners': 10,
-				'data': {},
-				'domain': null,
-				'settings': {
-					'description': 'This is a map chart',
-					'legendPosition': 'top-right',
-					'maxPoints': 5,
-					'showLegend': true,
-					'title': ''
+			var chart = {chart: {
+				_events: {},
+				_maxListeners: 10,
+				data: {},
+				domain: null,
+				settings: {
+					'area': 1,
+					'centerCoordinates' : {
+						'x': 0,
+						'y':0,
+					},
+					description: 'This is a map chart',
+					legendPosition: 'top-right',
+					maxPoints: 5,
+					title: ''
 				  },
-				'type': 'mapchart',
-				'uid': '01',
+				type: 'mapchart',
+				uid: '01',
 			}};
 			
 		  	assert.deepEqual(chart,norrisBridge.getChart('01'));

@@ -30,8 +30,13 @@ describe('MapChartImpl', function(){
 		it('should memorize some default values for the keys of the settings',function(){
 			var mapchart = new MapChartImpl('randomID');
 			var defaults = {
-				title: '',
-				description: 'This is a map chart',
+				area : 1,
+				centerCoordinates : {
+					x : 0,
+					y : 0,
+				},				
+				title : '',
+				description : 'This is a map chart',
 				legendPosition : 'top-right',
 				maxPoints : 5
 			};

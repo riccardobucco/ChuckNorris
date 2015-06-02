@@ -83,11 +83,12 @@ describe('TableStreamUpdater', function(){
 			var updatedData = {
 				headers: ['col1','col2','col3'],
 			    datasets: [
-			        [ {value: '1'}, {value: '2'}, {value: '3'} ],
-			        [ {value: '1'}, {value: '1'}, {value: '1'} ],
+			        // those are the expected values, because new values are inserted in top of the array   
+			        [ {value: '6666'}, {value: '5555'}, {value: '4444'} ],
 			        [ {value: '9999'}, {value: '8888'}, {value: '7777'} ],
-		        	[ {value: '6666'}, {value: '5555'}, {value: '4444'} ]
-			    ]
+			        [ {value: '1'}, {value: '2'}, {value: '3'} ],
+			        [ {value: '1'}, {value: '1'}, {value: '1'} ]
+		        ]
  			};
 			(new TableStreamUpdater()).update(chart, newData);
 			assert.deepEqual(updatedData, chart.data);

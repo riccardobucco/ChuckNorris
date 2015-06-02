@@ -34,7 +34,10 @@ describe('TableImpl', function(){
 				description : 'This is a table.',
 				maxRows : 10 ,
 				showTableGrid : true ,
-				newLinePosition : 'bottom'
+				newLinePosition : 'bottom',
+				allowFilter: false,
+				allowSort: false,
+				allowPaginate: false
 			};
 			assert.deepEqual(defaults,table.settings);
 		});
