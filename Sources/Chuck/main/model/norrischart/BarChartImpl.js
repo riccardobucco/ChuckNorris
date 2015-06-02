@@ -32,13 +32,11 @@ angular.module('chuck-chart')
         description : 'This is a bar chart.',
         xlabel : '',
         ylabel : '',
-        showGrid : false,
-        legendPosition : 'top-right',
+        legendPosition : 'right',
         orientation : 'vertical',
-        maxBars: 10,
-        format : {
-            barValueSpacing : 1 , //Number - Spacing between each of the X value sets
-            barDatasetSpacing : 5 //Number - Spacing between data sets within X values
+        style: {
+            animationDuration: 1000,
+            showGrid : false,
         }
     };
 

@@ -35,12 +35,7 @@
                                     "type": "integer",
                                      "minimum": 0,
                                      "maximum": 255
-                                },
-                                "a": {
-                                    "type": "number",
-                                     "minimum": 0,
-                                     "maximum": 1
-                                },
+                                }
                             },
                             "required": ["r","g","b"]
                     },

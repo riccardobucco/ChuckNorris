@@ -51,10 +51,51 @@ angular.module('chuck')
                 var chartSettings = scope.chart.getSettings();
 
                 options.animation = {
-                    duration: 1000,
+                    duration: chartSettings.style.animationDuration,
                     easing: 'inAndOut',
                     startup: true
                 };
+
+                options.hAxis = {
+                    title: chartSettings.xLabel
+                };
+
+                options.vAxis = {
+                    title: chartSettings.yLabel
+                };
+
+                options.legend = {
+                    position: chartSettings.legendPosition
+                };
+
+                options.series = {};
+                for (var i = 0; i < chartData.datasets.length; i++) {
+                    if(chartData.datasets[i].color) {
+                        options.series[i.toString()] = {
+                            color: '#' + 
+                            ('0' + chartData.datasets[i].color.r.toString(16)).slice(-2) +
+                            ('0' + chartData.datasets[i].color.g.toString(16)).slice(-2) +
+                            ('0' + chartData.datasets[i].color.b.toString(16)).slice(-2)
+                        }
+                    }
+                }
+
+                if(chartSettings.showGrid) {
+                    options.hAxis.gridlines = {
+                        count: -1
+                    };
+                    options.vAxis.gridlines = {
+                        count: -1
+                    }
+                } else {
+                    options.hAxis.gridlines = {
+                        count: 2
+                    };
+                    options.vAxis.gridlines = {
+                        count: 2
+                    }
+                }
+
                 if(chartSettings.orientation === 'horizontal')
                     barchart = new google.visualization.BarChart(element.contents()[0]);
                 else

@@ -16,15 +16,13 @@
         "yLabel": {
             "type": "string"
         },
-        "showGrid": {
-            "type": "boolean"
-        },
         "legendPosition": {
             "enum": [
-                "top-right",
-                "top-left",
-                "bottom-left",
-                "bottom-right",
+                "top",
+                "right",
+                "bottom",
+                "left",
+                "in",
                 "none"
             ]
         },
@@ -34,14 +32,21 @@
                 "horizontal"
             ]
         },
-        "format": {
+        "style": {
             "type": "object",
             "properties": {
-                "barValueSpacing": {
+                /*"barValueSpacing": {
                     "type": "integer",
                     "minimum": 0
                 },
                 "barDatasetSpacing":  {
+                    "type": "integer",
+                    "minimum": 0
+                },*/
+                "showGrid": {
+                    "type": "boolean"
+                },
+                "animationDuration": {
                     "type": "integer",
                     "minimum": 0
                 }

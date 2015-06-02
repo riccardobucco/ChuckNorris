@@ -23,9 +23,9 @@ page.add(bc).add(lc).add(mc).add(t);
 bc.setData({
     labels: ['1','2','3','4','5'],
     datasets: [
-        {color: {r: 255, g: 0, b: 0}, values: [1,2,3,4,5]},
-        {color: {r: 0, g: 255, b: 0}, values: [1,2,0,4,5]},
-        {color: {r: 0, g: 0, b: 255}, values: [1,2,3,4,5]}
+        {name: 'pippo', color: {r: 255, g: 0, b: 0}, values: [1,2,3,4,5]},
+        {name: 'pluto', color: {r: 0, g: 255, b: 0}, values: [1,2,0,4,5]},
+        {name: 'paperino', color: {r: 0, g: 0, b: 255}, values: [1,2,3,4,5]}
     ]
 });
 setInterval(barchart, 4000);

@@ -55,7 +55,7 @@ angular.module('chuck')
                     startup: true
                 };
 
-                linechart = new google.visualization.ColumnChart(element.contents()[0]);
+                linechart = new google.visualization.LineChart(element.contents()[0]);
             };
 
             function render(newValue, oldValue) {
