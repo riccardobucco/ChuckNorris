@@ -163,8 +163,11 @@ NorrisBridge.prototype.getMiddleware = function (page) {
         });
 
     /* static middleware */
-    app.use('/images', express.static(__dirname+'/../../images') );
+    //app.use('/static', express.static(__dirname+'/../../static') );
+
     app.use('/bower_components', express.static(__dirname+'/../../bower_components') );
+    app.use('/main', express.static(__dirname+'/../../Chuck/main') );
+    app.use('/images', express.static(__dirname+'/../../images') );
     app.use('/css', express.static(__dirname+'/../../css') );
 
     return app;
