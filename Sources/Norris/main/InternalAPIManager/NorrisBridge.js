@@ -133,9 +133,9 @@ NorrisBridge.prototype.getPages = function () {
     return pages;
 };
 
-NorrisBridge.prototype.getMiddleware = function () {
+NorrisBridge.prototype.getMiddleware = function (page) {
 
-    var middleware = function(page) {
+    var middleware = function(req, res, next) {
         var express=require('express');
         var app = express();
         app.set('views', './templates'); /* sets the directory which contains the template */
