@@ -56,11 +56,25 @@
       </div>
     </header>
     <div class="container content">
+<% 
+	var nrigheeffettive = Math.floor(ntot/maxChartsCol) 
+	var nultimariga = ntot%maxChartsCol
+	var i = 0
+	var rigacorrente=0
+%>
         <% body.forEach(function(chart) { %>
-        <div>
-            <%- chart.html %>
-        </div>
+		<% i++ %>
+		<% if(i==1) { rigacorrente++ %><div class="row"><% } %>
+				<% if(rigacorrente>nrigheeffettive) { %>
+					<div class="col-md-<%=12/nultimariga %>">
+				<% } else { %>
+					<div class="col-md-<%=12/maxChartsCol %>">
+				<% } %>
+			    <%- chart.html %>
+			</div>
+		<% if(i==maxChartsCol) { i=0 %></div><% } %>
         <% }); %>
+		<% if(i<maxChartsCol) { %></div><% } %>
     </div>
     <footer class="text-center">
           <img src="images/kt-trademark.png" alt="Kaizen Team Trademark" title="Kaizen Team" height="100px" />

@@ -157,6 +157,7 @@ NorrisBridge.prototype.getMiddleware = function (page) {
 
     app.get('/', function(req, res) {
         res.render('index.html', {title: title,
+	    ntot : charts.length,
             maxChartsRow : maxChartsRow,
             maxChartsCol : maxChartsCol,
             body: content});
