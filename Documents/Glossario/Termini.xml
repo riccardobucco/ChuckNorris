@@ -163,6 +163,10 @@
 	<entry name="GitHub">
 		Servizio web di hosting per lo sviluppo di progetti software che usa il sistema di controllo di versione \insglo{Git}. GitHub offre diversi piani per repository privati sia a pagamento, sia gratuiti, molto utilizzati per lo sviluppo di progetti \insglo{open source}.
 	</entry>
+	
+	<entry name="Google Chart">
+		Ricca libreria grafica JavaScript, realizzata da Google, per la creazione di un'ampia varietà di grafici. Consente la personalizzazione di molte impostazioni dei grafici e il loro aggiornamento con dati dinamici.
+	</entry>
 
 	<entry name="Hardware">
 		In ingegneria elettronica e informatica con il termine hardware si indica la parte fisica di un computer, ovvero tutte quelle parti elettroniche, elettriche, meccaniche, magnetiche, ottiche che ne consentono il funzionamento (dette anche strumentario). Più in generale il termine si riferisce a qualsiasi componente fisico di una periferica o di una apparecchiatura elettronica.
@@ -198,6 +202,10 @@
 
 	<entry name="Issue">
 		Unità di lavoro per realizzare un miglioramento in un progetto software. Un issue potrebbe essere un bug, una funzione richiesta, un compito, una documentazione mancante e così via.
+	</entry>
+	
+	<entry name="Jasmine">
+		Framework open source per testare codice JavaScript. Può essere eseguito su qualsiasi piattaforma in cui JavaScript sia abilitato.
 	</entry>
 
 	<entry name="Java">
@@ -258,6 +266,10 @@
 
 	<entry name="Milestone">
 		In italiano “Pietra miliare”. Questo termine indica importanti traguardi in termini di tempo o di attività, che sanciscono una metrica di avanzamento del progetto.
+	</entry>
+	
+	<entry name="Mocha">
+		Framework per testare codice JavaScript su Node.js. Supporta i test asincroni e l'utilizzo di qualsiasi libreria per le asserzioni.
 	</entry>
 	
 	<entry name="Mockup">
