@@ -27,17 +27,30 @@
 angular.module('norris-chartupdater')
 
 .factory('MapChartMovieUpdater', [function () {
-
+	
+	/**
+	 * Creates an instance of a new MapChartMovieUpdater, or returns the existing instance, if it already exits.
+	 * @constructor
+	 */
     function MapChartMovieUpdater() {
         if(!(this instanceof MapChartMovieUpdater)) return new MapChartMovieUpdater();
     }
 
     MapChartMovieUpdater.prototype.instance=new MapChartMovieUpdater(); // static
 
+	/**
+     * Returns the unique existing instance of the MapChartMovieUpdater
+     * @return {MapChartMovieUpdater} - the unique existing instance of the class
+     */
     MapChartMovieUpdater.getInstance = function() { // static
         return MapChartMovieUpdater.prototype.instance;
     };
 
+	/**
+     * Updates a map chart with in place method. The map chart data should not be empty.
+     * @param {ChartImpl} chart - the map chart to update;
+     * @param updateData - the updating.
+     */
     MapChartMovieUpdater.prototype.update = function (chart, updateData) {
         var isEmpty=function(obj) {
             for(var prop in obj) {
