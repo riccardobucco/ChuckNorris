@@ -131,20 +131,41 @@ ChartImpl.prototype.getData = function() {
  * @param {ChartSettings} settings - a JSON object containing the chart's settings you wish to add.
  */
 ChartImpl.prototype.setSettings = function(settings) {
-	if(typeof settings == 'object') {
-		for(var key in settings) {
-			if(this.settings.hasOwnProperty(key)) {
-				if ( typeof settings[key] == 'object') {
-					for(var key2 in settings[key]) {
-						this.settings[key][key2] = settings[key][key2];
+
+	function set(mySettings, settings) {
+		if(typeof settings == 'object') {
+			for(var key in settings) {
+				if(mySettings.hasOwnProperty(key)) {
+					if ( typeof settings[key] == 'object') {
+						set(mySettings[key], settings[key])
 					}
-				}
-				else {
-					this.settings[key] = settings[key];
+					else {
+						mySettings[key] = settings[key];
+					}
 				}
 			}
 		}
 	}
+
+    var mySettings=this.settings;
+	set(mySettings, settings);
+
+	/*if(typeof settings == 'object') {
+	 	for(var key in settings) {
+	 		if(this.settings.hasOwnProperty(key)) {
+	 			if ( typeof settings[key] == 'object') {
+	 				for(var key2 in settings[key]) {
+	 					if(this.settings.hasOwnProperty(key)) {
+	 						this.settings[key][key2] = settings[key][key2];
+	 					}
+	 				}
+	 			}
+		 		else {
+					this.settings[key] = settings[key];
+	 			}
+			}
+		}
+	}*/
 };
 
 /**
@@ -181,36 +202,3 @@ var BarChartImpl = require('./BarChartImpl.js');
 var LineChartImpl = require('./LineChartImpl.js');
 var MapChartImpl = require('./MapChartImpl.js');
 var TableImpl = require('./TableImpl.js');
-
-/*
-/**
- * ChartModel.prototype.set allows you to set the ChartModel's settings property.
- *
- * @param param descrizione paramentro
- * @param info descrizione paramentro
- * @return descrizione tipo ritornato
- * /
-ChartModel.prototype.set = function (param, info) {
-	if(typeof param == 'object') {
-		for(var key in param) {
-			if(param.hasOwnProperty(key)) {
-				this.settings[key] = param[key];
-			}
-		}
-	} else {
-		this.settings[param] = info;
-	}
-};
-
-/**
- * ChartModel.prototype.get allows you to get the ChartModel's settings property.
- * @param key descrizione paramentro
- * @return descrizione tipo ritornato
- * /
-ChartModel.prototype.get = function (param) {
-	if (param != '')
-		return this.settings[param];
-	else
-		return this.settings;
-};
-*/
