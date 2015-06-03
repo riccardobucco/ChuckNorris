@@ -27,17 +27,30 @@
 angular.module('norris-chartupdater')
 
 .factory('TableInPlaceUpdater', [function () {
-
+	
+	/**
+	 * Creates an instance of a new TableInPlaceUpdater, or returns the existing instance, if it already exits.
+	 * @constructor
+	 */
     function TableInPlaceUpdater() {
         if(!(this instanceof TableInPlaceUpdater)) return new TableInPlaceUpdater();
     }
 
     TableInPlaceUpdater.prototype.instance=new TableInPlaceUpdater(); // static
-
+	
+	/**
+     * Returns the unique existing instance of the TableInPlaceUpdater
+     * @return {TableInPlaceUpdater} - the unique existing instance of the class
+     */
     TableInPlaceUpdater.getInstance = function() { // static
         return TableInPlaceUpdater.prototype.instance;
     };
-
+	
+	/**
+     * Updates a table with in place method. The bar chart data should not be empty.
+     * @param {ChartImpl} chart - the table to update;
+     * @param updateData - the updating.
+     */
     TableInPlaceUpdater.prototype.update = function (chart, updateData) {
         var isEmpty=function(obj) {
             for(var prop in obj) {

@@ -27,13 +27,20 @@
 angular.module('norris-chartupdater')
 
 .factory('MapChartInPlaceUpdater', [function () {
-
+	/**
+	 * Creates an instance of a new MapChartInPlaceUpdater, or returns the existing instance, if it already exits.
+	 * @constructor
+	 */
     function MapChartInPlaceUpdater() {
         if(!(this instanceof MapChartInPlaceUpdater)) return new MapChartInPlaceUpdater();
     }
 
     MapChartInPlaceUpdater.prototype.instance=new MapChartInPlaceUpdater(); // static
-
+	
+	/**
+     * Returns the unique existing instance of the MapChartInPlaceUpdater
+     * @return {MapChartInPlaceUpdater} - the unique existing instance of the class
+     */
     MapChartInPlaceUpdater.getInstance = function() { // static
         return MapChartInPlaceUpdater.prototype.instance;
     };

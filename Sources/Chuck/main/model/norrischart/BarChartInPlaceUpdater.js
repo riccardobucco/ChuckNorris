@@ -27,13 +27,20 @@
 angular.module('norris-chartupdater')
 
 .factory('BarChartInPlaceUpdater', [function () {
-
+	/**
+	 * Creates an instance of a new BarChartInPlaceUpdater, or returns the existing instance, if it already exits.
+	 * @constructor
+	 */
     function BarChartInPlaceUpdater() {
         if(!(this instanceof BarChartInPlaceUpdater)) return new BarChartInPlaceUpdater();
     }
 
     BarChartInPlaceUpdater.prototype.instance=new BarChartInPlaceUpdater(); // static
-
+	
+	/**
+     * Returns the unique existing instance of the BarChartInPlaceUpdater
+     * @return {BarChartInPlaceUpdater} - the unique existing instance of the class
+     */
     BarChartInPlaceUpdater.getInstance = function() { // static
         return BarChartInPlaceUpdater.prototype.instance;
     };
