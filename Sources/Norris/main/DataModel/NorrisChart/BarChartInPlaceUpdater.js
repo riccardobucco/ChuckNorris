@@ -60,11 +60,12 @@ BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
 
     if (!isEmpty(updateData)) {
         var data=chart.getData();
+        var update=udateData['inplace'];
         if (!isEmpty(data)) {
-            for(var i=0; i<updateData.length; i++) {
-                var x=updateData[i].position.x;
-                var y=updateData[i].position.y;
-                data.datasets[x].values[y]=updateData[i].value;
+            for(var i=0; i<update.length; i++) {
+                var x=update[i].position.x;
+                var y=update[i].position.y;
+                data.datasets[x].values[y]=update[i].value;
             }
             chart.setData(data);
         }
@@ -76,19 +77,21 @@ BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
 };
 
 /*
- BarChart:
- data = {
+BarChart:
+data = {
     labels: ['2010','2011','2012','2013'], // asse indipendente
     datasets: [
         {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]}, // serie1
         {name: 'pluto', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]}, // serie2
         {name: 'paperino', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]}, // serie3
     ]
- }
+}
 
- barchart:inplace:
- update = [
-    { position: {x:0, y:0}, value='foo' },
-    { position: {x:0, y:1}, value='foo' }
- ] // modifico 2 valori già esistenti
+barchart:inplace:
+update = {
+    inplace: [
+        { position: {x:0, y:0}, data='0' },
+        { position: {x:0, y:1}, data='1' }
+    ] // modifico 2 valori già esistenti
+}
 */
