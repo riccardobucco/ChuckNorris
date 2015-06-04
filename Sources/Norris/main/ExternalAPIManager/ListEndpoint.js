@@ -1,22 +1,22 @@
 /*
- * Name: {ListEndpoint.js}
- * Module: {ExternalAPIManager}
- * Location: {Norris/Main/ExternalAPIManager}
- * Date: {2015-04-12}
- * Version: {v0.04}
+ * Name: ListEndpoint.js
+ * Module: ExternalAPIManager
+ * Location: Norris/Main/ExternalAPIManager
+ * Date: 2015-04-12
+ * Version: v0.04
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.04 2015-05-21 Bigarella Chiara   Verify
+ * v0.04 2015-05-21 Bigarella Chiara   Verify
  * ================================================================================
- * 0.03 2015-04-25 Dal Bianco Davide   Edit
+ * v0.03 2015-04-25 Dal Bianco Davide   Edit
  * ================================================================================
- * 0.02 2015-04-14 Pavanello Fabio Matteo   Verify
+ * v0.02 2015-04-14 Pavanello Fabio Matteo   Verify
  * ================================================================================
- * 0.01 2015-04-12 Moretto Alessandro   Creation
+ * v0.01 2015-04-12 Moretto Alessandro   Creation
  * ================================================================================
  */
 

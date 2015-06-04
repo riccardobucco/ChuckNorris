@@ -1,21 +1,21 @@
 /*
- * Name: {AuthenticationEndpoint.js}
- * Module: {ExternalAPIManager}
- * Location: {Norris/Main/ExternalAPIManager}
- * Date: {2015-05-24}
- * Version: {v0.04}
+ * Name: AuthenticationEndpoint.js
+ * Module: ExternalAPIManager
+ * Location: Norris/Main/ExternalAPIManager
+ * Date: 2015-05-24
+ * Version: v0.04
  *
  * History:
  *
  * Version Date Programmer Changes
  * ================================================================================
- * 0.04 2015-05-24 Carlon Chiara   Verify
+ * v0.04 2015-05-24 Carlon Chiara   Verify
  * ================================================================================
- * 0.03 2015-05-21 Pavanello Fabio Matteo   Edit
+ * v0.03 2015-05-21 Pavanello Fabio Matteo   Edit
  * ================================================================================
- * 0.02 2015-04-14 Pavanello Fabio Matteo   Verify
+ * v0.02 2015-04-14 Pavanello Fabio Matteo   Verify
  * ================================================================================
- * 0.01 2015-04-12 Moretto Alessandro   Creation
+ * v0.01 2015-04-12 Moretto Alessandro   Creation
  * ================================================================================
  */
 
