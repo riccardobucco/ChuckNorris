@@ -27,17 +27,30 @@
 angular.module('norris-chartupdater')
 
 .factory('TableStreamUpdater', [function () {
-
+	
+	/**
+	 * Creates an instance of a new TableStreamUpdater, or returns the existing instance, if it already exits.
+	 * @constructor
+	 */
     function TableStreamUpdater() {
         if(!(this instanceof TableStreamUpdater)) return new TableStreamUpdater();
     }
 
     TableStreamUpdater.prototype.instance=new TableStreamUpdater(); // static
 
+	/**
+     * Returns the unique existing instance of the TableStreamUpdater
+     * @return {TableStreamUpdater} - the unique existing instance of the class
+     */
     TableStreamUpdater.getInstance = function() { // static
         return TableStreamUpdater.prototype.instance;
     };
 
+	/**
+     * Updates a table with stream method. The table data should not be empty.
+     * @param {ChartImpl} chart - the table to update;
+     * @param updateData - the updating.
+     */
     TableStreamUpdater.prototype.update = function (chart, updateData) {
         var isEmpty=function(obj) {
             for(var prop in obj) {

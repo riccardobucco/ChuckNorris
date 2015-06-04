@@ -1,18 +1,18 @@
 /*
- * Name: ChuckBarChart.js
- * Module: Directive
- * Location: Chuck/Main/Directive
- * Date: 2015-04-12
- * Version: v0.06
+ * Name: {ChuckLineChart.js}
+ * Module: {Directive}
+ * Location: {Chuck/Main/Directive}
+ * Date: {2015-04-12}
+ * Version: {v0.6}
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.06 2015-05-21 Bigarella Chiara   Verify
+ * 0.06 2015-05-24 Carlon Chiara   Verify
  * ================================================================================
- * 0.05 2015-04-25 Dal Bianco Davide   Edit
+ * 0.05 2015-05-21 Pavanello Fabio Matteo   Edit
  * ================================================================================
  * 0.04 2015-04-27 Carlon Chiara   Verify
  * ================================================================================
@@ -23,18 +23,17 @@
  * 0.01 2015-04-12 Moretto Alessandro   Creation
  * ================================================================================
  */
-
 angular.module('chuck')
 
 
-.directive('chuckBarchart', ['ChartRequester', function (ChartRequester) {
+.directive('chuckLinechart', ['ChartRequester', function (ChartRequester) {
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: 'main/view/BarChartView.html',
+        templateUrl: '/main/view/linechartView.html',
         link: function(scope, element, attrs) {
 
-            var barchart = null;
+            var linechart = null;
             var options = {};
 
             ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
@@ -96,10 +95,13 @@ angular.module('chuck')
                     }
                 }
 
-                if(chartSettings.orientation === 'horizontal')
-                    barchart = new google.visualization.BarChart(element.contents()[0]);
-                else
-                    barchart = new google.visualization.ColumnChart(element.contents()[0]);
+                options.pointSize = chartSettings.style.pointDotSize;
+
+                if(chartSettings.style.bezierCurve) {
+                    options.curveType = 'function';
+                }
+
+                linechart = new google.visualization.LineChart(element.contents()[0]);
             };
 
             function render(newValue, oldValue) {
@@ -121,7 +123,7 @@ angular.module('chuck')
                     data.addRow(row);
                 }
 
-                barchart.draw(data, options);
+                linechart.draw(data, options);
             };
         }
     };

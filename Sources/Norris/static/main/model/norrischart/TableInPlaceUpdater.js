@@ -1,8 +1,8 @@
 /*
- * Name: {BarChartInPlaceUpdater.js}
+ * Name: {TableInPlaceUpdater.js}
  * Module: {Model/NorrisChart}
  * Location: {Chuck/Main/Model/NorrisChart}
- * Date: {2015-04-12}
+ * Date: {2015-04-10}
  * Version: {v0.6}
  *
  * History:
@@ -10,40 +10,48 @@
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.06 2015-05-24 Carlon Chiara   Verify
+ * 0.06 2015-05-21 Bigarella Chiara   Verify
  * ================================================================================
- * 0.05 2015-05-21 Pavanello Fabio Matteo   Edit
+ * 0.05 2015-04-25 Dal Bianco Davide   Edit
  * ================================================================================
- * 0.04 2015-04-27 Bigarella Chiara   Verify
+ * 0.04 2015-04-27 Carlon Chiara   Verify
  * ================================================================================
- * 0.03 2015-04-25 Dal Bianco Davide   Edit
+ * 0.03 2015-04-25 Pavanello Fabio Matteo   Edit
  * ================================================================================
- * 0.02 2015-04-14 Bigarella Chiara   Verify
+ * 0.02 2015-04-14 Carlon Chiara   Verify
  * ================================================================================
- * 0.01 2015-04-12 Bucco Riccardo   Creation
+ * 0.01 2015-04-10 Chiara Bigarella   Creation
  * ================================================================================
  */
 
 angular.module('norris-chartupdater')
 
-.factory('BarChartInPlaceUpdater', [function () {
-
-    function BarChartInPlaceUpdater() {
-        if(!(this instanceof BarChartInPlaceUpdater)) return new BarChartInPlaceUpdater();
+.factory('TableInPlaceUpdater', [function () {
+	
+	/**
+	 * Creates an instance of a new TableInPlaceUpdater, or returns the existing instance, if it already exits.
+	 * @constructor
+	 */
+    function TableInPlaceUpdater() {
+        if(!(this instanceof TableInPlaceUpdater)) return new TableInPlaceUpdater();
     }
 
-    BarChartInPlaceUpdater.prototype.instance=new BarChartInPlaceUpdater(); // static
-
-    BarChartInPlaceUpdater.getInstance = function() { // static
-        return BarChartInPlaceUpdater.prototype.instance;
+    TableInPlaceUpdater.prototype.instance=new TableInPlaceUpdater(); // static
+	
+	/**
+     * Returns the unique existing instance of the TableInPlaceUpdater
+     * @return {TableInPlaceUpdater} - the unique existing instance of the class
+     */
+    TableInPlaceUpdater.getInstance = function() { // static
+        return TableInPlaceUpdater.prototype.instance;
     };
-
-    /**
-     * Updates a bar chart with in place method. The bar chart data should not be empty.
-     * @param {ChartImpl} chart - the bar chart to update;
+	
+	/**
+     * Updates a table with in place method. The bar chart data should not be empty.
+     * @param {ChartImpl} chart - the table to update;
      * @param updateData - the updating.
      */
-    BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
+    TableInPlaceUpdater.prototype.update = function (chart, updateData) {
         var isEmpty=function(obj) {
             for(var prop in obj) {
                 if(obj.hasOwnProperty(prop))
@@ -58,7 +66,9 @@ angular.module('norris-chartupdater')
                 for(var i=0; i<updateData.length; i++) {
                     var x=updateData[i].position.x;
                     var y=updateData[i].position.y;
-                    data.datasets[x].values[y]=updateData[i].value;
+                    data.datasets[x][y].color=updateData[i].data.color;
+                    data.datasets[x][y].background=updateData[i].data.background;
+                    data.datasets[x][y].value=updateData[i].data.value;
                 }
                 chart.setData(data);
             }
@@ -66,9 +76,11 @@ angular.module('norris-chartupdater')
                 console.log("ERROR: the chart has no data to update.");
                 throw ("emptyChart");
             }
-        };
+        }
     };
 
-    return BarChartInPlaceUpdater;
+
+
+    return TableInPlaceUpdater;
 
 }]);

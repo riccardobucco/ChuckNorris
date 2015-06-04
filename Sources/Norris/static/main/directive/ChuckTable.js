@@ -30,7 +30,7 @@ angular.module('chuck')
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: 'main/view/TableView.html',
+        templateUrl: '/main/view/TableView.html',
         link: function(scope, element, attrs) {
 
             var table = null;
@@ -72,13 +72,23 @@ angular.module('chuck')
 
                 for (var i = 0; i < newData.datasets.length; i++) {
                     var row = [];
-                    row.push(0);
+                    row.push(i);
                     newData.datasets[i].forEach(function (item) {
                         row.push(item.value);
                     });
                     table.row.add(row);
                 }
 
+                table.cells().every(function () {
+                    var row = this.index().row;
+                    var column = this.index().column - 1;
+                    if(column >= 0) {
+                        if(newData.datasets[row][column].color)
+                            $(this.node()).css('color', newData.datasets[row][column].color);
+                        if(newData.datasets[row][column].background)
+                            $(this.node()).css('background-color', newData.datasets[row][column].background);
+                    }
+                });
 
                 table.draw();
             };

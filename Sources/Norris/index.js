@@ -19,7 +19,7 @@ var t = nor.createChart('table', 't');
 var page = nor.createPage('page');
 page.add(bc).add(lc).add(mc).add(t);
 
-app.use('/', nor.getMiddleware(page));
+app.use('/', nor.getMiddleware());
 
 bc.setData({
     labels: ['1','2','3','4','5'],

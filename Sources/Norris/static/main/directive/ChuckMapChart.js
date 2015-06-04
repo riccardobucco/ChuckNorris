@@ -30,7 +30,7 @@
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: 'main/view/MapChartView.html',
+        templateUrl: '/main/view/MapChartView.html',
         link: function(scope, element, attrs) {
 
             var map = null;
@@ -66,32 +66,29 @@
             };
 
             function render(newValue, oldValue) {
-                if(map) {
-                    var newData = newValue.getData();
+                var newData = newValue.getData();
 
-                    layers.forEach(function (layer) {
-                        map.removeLayer(layer);
+                layers.forEach(function (layer) {
+                    map.removeLayer(layer);
+                });
+
+                layers = [];
+
+                newData.forEach(function (dataset) {
+                    var markers = new OpenLayers.Layer.Markers('Markers');
+
+                    dataset.values.forEach(function (value) {
+                        var lonLat = new OpenLayers.LonLat(value.x, value.y)
+                            .transform(
+                                new OpenLayers.Projection("EPSG:4326"),
+                                map.getProjectionObject()
+                            );
+                        markers.addMarker(new OpenLayers.Marker(lonLat));
                     });
 
-                    layers = [];
-
-                    newData.forEach(function (dataset) {
-                        var markers = new OpenLayers.Layer.Markers('Markers');
-
-                        dataset.values.forEach(function (value) {
-                            var lonLat = new OpenLayers.LonLat(value.x, value.y)
-                                .transform(
-                                    new OpenLayers.Projection("EPSG:4326"),
-                                    map.getProjectionObject()
-                                );
-                            console.log(lonLat);
-                            markers.addMarker(new OpenLayers.Marker(lonLat));
-                        });
-
-                        map.addLayer(markers);
-                        layers.push(markers);
-                    });
-                }
+                    map.addLayer(markers);
+                    layers.push(markers);
+                });
             };
 
         }

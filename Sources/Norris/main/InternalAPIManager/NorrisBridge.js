@@ -24,6 +24,7 @@
  * ================================================================================
  */
 
+var express = require('express');
 var ChartBridge = require('./ChartBridge.js');
 var PageBridge = require('./PageBridge.js');
 
@@ -80,7 +81,10 @@ NorrisBridge.prototype.createChart = function (chartType, chartId) {
  */
 NorrisBridge.prototype.getChart = function (chartId) {
     var chart = this.model.getChart(chartId);
-    return new ChartBridge(chart);
+    if(chart)
+        return new ChartBridge(chart);
+    else
+        return null;
 };
 
 /**
@@ -115,8 +119,11 @@ NorrisBridge.prototype.createPage = function (pageId) {
  * @return {PageBridge} The retrieved page.
  */
 NorrisBridge.prototype.getPage = function (pageId) {
-    var page = this.Bridge.getPage(pageId);
-    return new PageBridge(page);
+    var page = this.model.getPage(pageId);
+    if(page)
+        return new PageBridge(page);
+    else
+        return null;
 };
 
 /**
@@ -134,42 +141,20 @@ NorrisBridge.prototype.getPages = function () {
 };
 
 NorrisBridge.prototype.getMiddleware = function (page) {
-    var express=require('express');
+    var instance = this;
     var app = express();
-    app.set('views', __dirname+'/../../templates'); /* sets the directory which contains the template */
-    app.set('view engine', 'ejs'); /* sets the default template engine */
-    app.engine('html', require('ejs').renderFile);
+    app.set('views', __dirname + '/../../templates');
+    app.engine('ejs', require('ejs').renderFile);
 
-    var settings=page.getSettings();
-    var title= settings.title;
-    var maxChartsRow=settings.maxChartsRow;
-    var maxChartsCol=settings.maxChartsCol;
-    var content=[];
-    var charts=page.getCharts();
+    app.get('/pages/:pageId', function (req, res) {
+        var page = instance.getPage(req.params.pageId);
+        if(page)
+            res.render('index.ejs', page);
+        else
+            res.sendStatus(404);
+    });
 
-    for(var i in charts) {
-        var chart=charts[i].getChartModel();
-        var type=chart.getType();
-        var id=chart.getId();
-        content.push({html: "<chuck-"+type+" chart-endpoint='localhost:9000' chart-id="+id+"></chuck-"+type+">"});
-    }
-    console.log (content);
-
-    app.get('/', function(req, res) {
-        res.render('index.html', {title: title,
-	    ntot : charts.length,
-            maxChartsRow : maxChartsRow,
-            maxChartsCol : maxChartsCol,
-            body: content});
-        });
-
-    /* static middleware */
-    //app.use('/static', express.static(__dirname+'/../../static') );
-
-    app.use('/bower_components', express.static(__dirname+'/../../bower_components') );
-    app.use('/main', express.static(__dirname+'/../../Chuck/main') );
-    app.use('/images', express.static(__dirname+'/../../images') );
-    app.use('/css', express.static(__dirname+'/../../css') );
+    app.use('/', express.static(__dirname + '/../../static'));
 
     return app;
 };

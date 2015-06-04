@@ -75,7 +75,6 @@ angular.module('chuck-chart', ['norris-chartupdater'])
 
 	/**
 	 * A static method which registers the correspondence between an updating type and its updater.
-	 *
 	 * @param {String} updateType - the chart's updating type, i.e. 'linechart:stream', 'barchart:inplace',
 	 * 'mapchart:movie', and so on;
 	 * @param {ChartUpdater} updater - the updater instance which corresponds to the updating type in updateType.
@@ -87,7 +86,6 @@ angular.module('chuck-chart', ['norris-chartupdater'])
 
 	/**
 	 * Gets the chart's ID.
-	 *
 	 * @return {String} the chart's ID.
 	 */
 	ChartImpl.prototype.getId = function() {
@@ -96,7 +94,6 @@ angular.module('chuck-chart', ['norris-chartupdater'])
 
 	/**
 	 * Gets the chart's type.
-	 *
 	 * @return {String} the chart's type.
 	 */
 	ChartImpl.prototype.getType = function() {
@@ -105,7 +102,6 @@ angular.module('chuck-chart', ['norris-chartupdater'])
 
 	/**
 	 * Sets the chart's data.
-	 *
 	 * @param {ChartData} data - a JSON object containing the chart's data.
 	 */
 	ChartImpl.prototype.setData = function(data) {
@@ -114,8 +110,7 @@ angular.module('chuck-chart', ['norris-chartupdater'])
 
 	/**
 	 * Gets the chart's data.
-	 *
-	 * @return 	{ChartData} the chart's data.
+	 * @return {ChartData} the chart's data.
 	 */
 	ChartImpl.prototype.getData = function() {
 		return this.data;
@@ -124,7 +119,6 @@ angular.module('chuck-chart', ['norris-chartupdater'])
 	/**
 	 * Sets the chart's settings. You're allowed to change value to the default properties, but you cannot add
 	 * new properties to the chart's settings.
-	 *
 	 * @param {ChartSettings} settings - a JSON object containing the chart's settings you wish to add.
 	 */
 	ChartImpl.prototype.setSettings = function(settings) {
@@ -139,7 +133,6 @@ angular.module('chuck-chart', ['norris-chartupdater'])
 
 	/**
 	 * Gets the chart's settings.
-	 *
 	 * @return 	{ChartSettings} the chart's settings.
 	 */
 	ChartImpl.prototype.getSettings = function() {
@@ -148,7 +141,6 @@ angular.module('chuck-chart', ['norris-chartupdater'])
 
 	/**
 	 * Updates the chart's data.
-	 *
 	 * @param {String} updateType - the chart's updating type, i.e. 'stream', 'inplace', 'movie';
 	 * @param {ChartUpdate} updateData - contains the new data and the information needed to update the chart.
 	 */

@@ -30,7 +30,7 @@
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: 'main/view/MapChartView.html',
+        templateUrl: '/main/view/MapChartView.html',
         link: function(scope, element, attrs) {
 
             var map = null;

@@ -34,17 +34,30 @@ angular.module('norris-chartupdater')
  * @constructor
  */
 .factory('LineChartStreamUpdater', [function () {
-
+	
+	/**
+	 * Creates an instance of a new LineChartStreamUpdater, or returns the existing instance, if it already exits.
+	 * @constructor
+	 */
     function LineChartStreamUpdater() {
         if(!(this instanceof LineChartStreamUpdater)) return new LineChartStreamUpdater();
     }
 
     LineChartStreamUpdater.prototype.instance=new LineChartStreamUpdater(); // static
 
+	/**
+     * Returns the unique existing instance of the LineChartStreamUpdater
+     * @return {LineChartStreamUpdater} - the unique existing instance of the class
+     */
     LineChartStreamUpdater.getInstance = function() { // static
         return LineChartStreamUpdater.prototype.instance;
     };
 
+	/**
+     * Updates a line chart with in place method. The line chart data should not be empty.
+     * @param {ChartImpl} chart - the line chart to update;
+     * @param updateData - the updating.
+     */
     LineChartStreamUpdater.prototype.update = function (chart, updateData) {
         var isEmpty=function(obj) {
             for(var prop in obj) {
