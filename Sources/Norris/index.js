@@ -59,13 +59,15 @@ setInterval(table, 4000);
 
 
 function barchart() {
-    var update = [{
-        position: {
-            x: Math.floor(Math.random() * 3),
-            y: Math.floor(Math.random() * 5)
-        },
-        value: Math.floor(Math.random() * 10)
-    }];
+    var update = {'inplace' : 
+        [{
+            position: {
+                x: Math.floor(Math.random() * 3),
+                y: Math.floor(Math.random() * 5)
+            },
+            value: Math.floor(Math.random() * 10)
+        }]
+    };
     bc.update('inplace', update);
 };
 

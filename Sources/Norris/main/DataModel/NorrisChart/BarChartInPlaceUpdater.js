@@ -60,7 +60,7 @@ BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
 
     if (!isEmpty(updateData)) {
         var data=chart.getData();
-        var update=udateData['inplace'];
+        var update=updateData['inplace'];
         if (!isEmpty(data)) {
             for(var i=0; i<update.length; i++) {
                 var x=update[i].position.x;
