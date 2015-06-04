@@ -1,5 +1,8 @@
 <%
 var charts = getCharts();
+var settings = getSettings();
+var maxChartsRow = settings.maxChartsRow;
+var maxChartsCol = settings.maxChartsCol;
 
 function printTag(chart) {
     return '<chuck-' + chart.getType() + ' chart-endpoint="localhost:9000" chart-id="' + chart.getId() + '"></chuck-' + chart.getType() + '>';
@@ -63,13 +66,31 @@ function printTag(chart) {
     <header class="jumbotron text-center">
       <div class="container">
         <img src="/images/norris-hor.png" height="100px" title="Norris" alt="Norris Logo" />
-          <h1><%= getId() %></h1>
+          <h1><%= settings.title %></h1>
       </div>
     </header>
     <div class="container content">
-        <% for (var i = 0; i < charts.length; i++) { %>
-            <%- printTag(charts[i]) %>
-        <% } %>
+        <%
+        var nTot = charts.length < maxChartsRow * maxChartsRow ? charts.length : maxChartsRow * maxChartsRow;
+        var nRows = Math.floor(nTot / maxChartsCol);
+        var lastRow = nTot % maxChartsCol;
+        var currentRow = 0;
+
+        for (var i = 0; i < charts.length && i < nTot; i++) {
+            if( i % maxChartsCol == 0) {
+                currentRow++;
+                %><div class="row"><%
+            }
+            if(currentRow <= nRows) {
+                %><div class="col-md-<%=12 / maxChartsCol %>"><%
+            } else {
+                %><div class="col-md-<%=12 / lastRow %>"><%
+            } %>
+                <%- printTag(charts[i]) %>
+            </div>
+            <% if(i % maxChartsCol == maxChartsCol - 1) { %></div><% }
+        };
+        if(maxChartsCol * maxChartsRow != nTot) { %></div><% } %>
     </div>
     <footer class="text-center">
           <img src="/images/kt-trademark.png" alt="Kaizen Team Trademark" title="Kaizen Team" height="100px" />
