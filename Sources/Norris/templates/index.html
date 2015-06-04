@@ -56,25 +56,33 @@
       </div>
     </header>
     <div class="container content">
-<% 
-	var nrigheeffettive = Math.floor(ntot/maxChartsCol) 
-	var nultimariga = ntot%maxChartsCol
-	var i = 0
-	var rigacorrente=0
-%>
-        <% body.forEach(function(chart) { %>
-		<% i++ %>
-		<% if(i==1) { rigacorrente++ %><div class="row"><% } %>
-				<% if(rigacorrente>nrigheeffettive) { %>
-					<div class="col-md-<%=12/nultimariga %>">
-				<% } else { %>
-					<div class="col-md-<%=12/maxChartsCol %>">
-				<% } %>
-			    <%- chart.html %>
-			</div>
-		<% if(i==maxChartsCol) { i=0 %></div><% } %>
-        <% }); %>
-		<% if(i<maxChartsCol) { %></div><% } %>
+    <%
+        if(ntot>maxChartsCol*maxChartsRow)
+            ntot=maxChartsCol*maxChartsRow;
+
+        var nRows = Math.floor(ntot/maxChartsCol) 
+        var lastRow = ntot%maxChartsCol
+        var i = 0
+        var currentRow=0
+
+        body.forEach(function(chart) {
+            i++;
+            if(i<=ntot) {
+                if(i%maxChartsCol==1) {
+                    currentRow++
+                    %><div class="row"><%
+                }
+                if(currentRow>nRows) {
+                    %><div class="col-md-<%=12/lastRow %>"><%
+                } else {
+                    %><div class="col-md-<%=12/maxChartsCol %>"><%
+                } %>
+                    <%- chart.html %>
+                </div>
+                <% if(i%maxChartsCol==0) { %></div><% }
+            }
+        });
+        if(i%maxChartsCol!=0) { %></div><% } %>
     </div>
     <footer class="text-center">
           <img src="images/kt-trademark.png" alt="Kaizen Team Trademark" title="Kaizen Team" height="100px" />
