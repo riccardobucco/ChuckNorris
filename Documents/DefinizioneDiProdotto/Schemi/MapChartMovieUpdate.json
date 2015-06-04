@@ -2,6 +2,7 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "MapChartMovieUpdate",
     "description": "The data contained in a MapChart Movie update object",
+    "type": "object",
     "properties": {
         "inplace": {
             "type": "array",
@@ -92,7 +93,7 @@
                     }
                 },
                 "oneOf": [
-                    {"required": ["x","y"]},
+                    {"required": ["series","index"]},
                     {"required": ["id"]},
                 ]
             }

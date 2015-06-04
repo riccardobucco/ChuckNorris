@@ -2,86 +2,91 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "TableInPlaceUpdate",
     "description": "The data contained in a Table InPlace update object",
-    "type": "array",
-    "items": {
-        "type": "object",
-        "properties": {
-            "position": {
+    "type": "object",
+    "properties": {
+        "inplace": {
+            "type": "array",
+            "items": {
                 "type": "object",
                 "properties": {
-                    "x": {
-                        "type": "integer",
-                        "minimum": 0
-                    },
-                    "y": {
-                        "type": "integer",
-                        "minimum": 0
-                    }
-                },
-                "required": ["x","y"]
-            },
-            "data": {
-                "type": "object",
-                "properties": {
-                    "color": {
+                    "position": {
                         "type": "object",
                         "properties": {
-                            "r": {
+                            "x": {
                                 "type": "integer",
-                                 "minimum": 0,
-                                 "maximum": 255
+                                "minimum": 0
                             },
-                            "g": {
+                            "y": {
                                 "type": "integer",
-                                 "minimum": 0,
-                                 "maximum": 255
-                            },
-                            "b": {
-                                "type": "integer",
-                                 "minimum": 0,
-                                 "maximum": 255
-                            },
-                            "a": {
-                                "type": "number",
-                                 "minimum": 0,
-                                 "maximum": 1
-                            },
+                                "minimum": 0
+                            }
                         },
-                        "required": ["r","g","b"]
+                        "required": ["x","y"]
                     },
-                    "background": {
+                    "data": {
                         "type": "object",
                         "properties": {
-                            "r": {
-                                "type": "integer",
-                                 "minimum": 0,
-                                 "maximum": 255
+                            "color": {
+                                "type": "object",
+                                "properties": {
+                                    "r": {
+                                        "type": "integer",
+                                         "minimum": 0,
+                                         "maximum": 255
+                                    },
+                                    "g": {
+                                        "type": "integer",
+                                         "minimum": 0,
+                                         "maximum": 255
+                                    },
+                                    "b": {
+                                        "type": "integer",
+                                         "minimum": 0,
+                                         "maximum": 255
+                                    },
+                                    "a": {
+                                        "type": "number",
+                                         "minimum": 0,
+                                         "maximum": 1
+                                    },
+                                },
+                                "required": ["r","g","b"]
                             },
-                            "g": {
-                                "type": "integer",
-                                 "minimum": 0,
-                                 "maximum": 255
+                            "background": {
+                                "type": "object",
+                                "properties": {
+                                    "r": {
+                                        "type": "integer",
+                                         "minimum": 0,
+                                         "maximum": 255
+                                    },
+                                    "g": {
+                                        "type": "integer",
+                                         "minimum": 0,
+                                         "maximum": 255
+                                    },
+                                    "b": {
+                                        "type": "integer",
+                                         "minimum": 0,
+                                         "maximum": 255
+                                    },
+                                    "a": {
+                                        "type": "number",
+                                         "minimum": 0,
+                                         "maximum": 1
+                                    },
+                                },
+                                "required": ["r","g","b"]
                             },
-                            "b": {
-                                "type": "integer",
-                                 "minimum": 0,
-                                 "maximum": 255
-                            },
-                            "a": {
-                                "type": "number",
-                                 "minimum": 0,
-                                 "maximum": 1
-                            },
+                            "value": {
+                                "type": "string"
+                            }
                         },
-                        "required": ["r","g","b"]
-                    },
-                    "value": {
-                        "type": "string"
+                        "required": ["value"]
                     }
                 },
-                "required": ["value"]
+                "required": ["position", "data"]
             }
-        },
-        "required": ["position", "data"]
+        }
     }
 }

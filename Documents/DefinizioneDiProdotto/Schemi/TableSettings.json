@@ -14,7 +14,7 @@
             "type": "integer",
             "minimum": 1
         },
-        "showGrid": {
+        "showTableGrid": {
             "type": "boolean"
         },
         "newLinePosition": {
