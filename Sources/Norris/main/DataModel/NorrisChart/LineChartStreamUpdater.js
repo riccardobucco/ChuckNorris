@@ -1,26 +1,26 @@
 /*
- * Name: {LineChartStreamUpdater.js}
- * Module: {DataModel/NorrisChart}
- * Location: {Norris/Main/DataModel/NorrisChart}
- * Date: {2015-04-10}
- * Version: {v0.6}
+ * Name: LineChartStreamUpdater.js
+ * Module: DataModel/NorrisChart
+ * Location: Norris/Main/DataModel/NorrisChart
+ * Date: 2015-04-10
+ * Version: v0.06
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.06 2015-05-21 Bigarella Chiara   Verify
+ * v0.06 2015-05-21 Bigarella Chiara   Verify
  * ================================================================================
- * 0.05 2015-04-25 Dal Bianco Davide   Edit
+ * v0.05 2015-04-25 Dal Bianco Davide   Edit
  * ================================================================================
- * 0.04 2015-04-27 Carlon Chiara   Verify
+ * v0.04 2015-04-27 Carlon Chiara   Verify
  * ================================================================================
- * 0.03 2015-04-25 Chiara Bigarella   Edit
+ * v0.03 2015-04-25 Chiara Bigarella   Edit
  * ================================================================================
- * 0.02 2015-04-14 Carlon Chiara   Verify
+ * v0.02 2015-04-14 Carlon Chiara   Verify
  * ================================================================================
- * 0.01 2015-04-10 Pavanello Fabio Matteo   Creation
+ * v0.01 2015-04-10 Pavanello Fabio Matteo   Creation
  * ===============================================================================
  */
 module.exports=LineChartStreamUpdater;

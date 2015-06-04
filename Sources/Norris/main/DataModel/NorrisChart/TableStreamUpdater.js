@@ -1,26 +1,26 @@
 /*
- * Name: {TableStreamUpdater.js}
- * Module: {DataModel/NorrisChart}
- * Location: {Norris/Main/DataModel/NorrisChart}
- * Date: {2015-04-10}
- * Version: {v0.6}
+ * Name: TableStreamUpdater.js
+ * Module: DataModel/NorrisChart
+ * Location: Norris/Main/DataModel/NorrisChart
+ * Date: 2015-04-10
+ * Version: v0.06
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.06 2015-05-24 Carlon Chiara   Verify
+ * v0.06 2015-05-24 Carlon Chiara   Verify
  * ================================================================================
- * 0.05 2015-05-21 Pavanello Fabio Matteo   Edit
+ * v0.05 2015-05-21 Pavanello Fabio Matteo   Edit
  * ================================================================================
- * 0.04 2015-04-27 Bigarella Chiara   Verify
+ * v0.04 2015-04-27 Bigarella Chiara   Verify
  * ================================================================================
- * 0.03 2015-04-25 Bucco Riccardo   Edit
+ * v0.03 2015-04-25 Bucco Riccardo   Edit
  * ================================================================================
- * 0.02 2015-04-14 Carlon Chiara   Verify
+ * v0.02 2015-04-14 Carlon Chiara   Verify
  * ================================================================================
- * 0.01 2015-04-10 Pavanello Fabio Matteo   Creation
+ * v0.01 2015-04-10 Pavanello Fabio Matteo   Creation
  * ================================================================================
  */
 module.exports=TableStreamUpdater;

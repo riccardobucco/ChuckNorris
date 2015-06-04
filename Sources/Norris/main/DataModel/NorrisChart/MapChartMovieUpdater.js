@@ -1,26 +1,26 @@
 /*
- * Name: {MapChartMovieUpdater.js}
- * Module: {DataModel/NorrisChart}
- * Location: {Norris/Main/DataModel}
- * Date: {2015-04-12}
- * Version: {v0.6}
+ * Name: MapChartMovieUpdater.js
+ * Module: DataModel/NorrisChart
+ * Location: Norris/Main/DataModel
+ * Date: 2015-04-12
+ * Version: v0.06
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.06 2015-05-21 Bigarella Chiara   Verify
+ * v0.06 2015-05-21 Bigarella Chiara   Verify
  * ================================================================================
- * 0.05 2015-04-25 Dal Bianco Davide   Edit
+ * v0.05 2015-04-25 Dal Bianco Davide   Edit
  * ================================================================================
- * 0.04 2015-04-27 Carlon Chiara   Verify
+ * v0.04 2015-04-27 Carlon Chiara   Verify
  * ================================================================================
- * 0.03 2015-04-25 Chiara Bigarella   Edit
+ * v0.03 2015-04-25 Chiara Bigarella   Edit
  * ================================================================================
- * 0.02 2015-04-14 Bigarella Chiara   Verify
+ * v0.02 2015-04-14 Bigarella Chiara   Verify
  * ================================================================================
- * 0.01 2015-04-12 Bucco Riccardo   Creation
+ * v0.01 2015-04-12 Bucco Riccardo   Creation
  * ================================================================================
  */
 module.exports=MapChartMovieUpdater;
