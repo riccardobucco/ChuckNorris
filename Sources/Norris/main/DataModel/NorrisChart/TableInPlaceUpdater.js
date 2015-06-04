@@ -75,7 +75,7 @@ TableInPlaceUpdater.prototype.update = function (chart, updateData) {
 
  Table:
  data = {
-    headers: ['anno','mese','giorno','ora'], // intestazioni colonne
+    headers: ['anno','mese','giorno'], // intestazioni colonne
     datasets: [
         [ {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
             {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
@@ -89,9 +89,12 @@ TableInPlaceUpdater.prototype.update = function (chart, updateData) {
  }
 
  table:inplace:
- update = [
-    { position: {x:0, y:0}, data: {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value:'foo'} },
-    { position: {x:0, y:1}, data: {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value:'foo'} }
- ] // modifico 2 valori già esistenti
+ update = {
+    inplace: [
+        { position: {x:0, y:0}, data: {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value:'1'} },
+        { position: {x:0, y:1}, data: {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value:'1'} }
+    ] // modifico 2 valori già esistenti
+ }
+ 
 
 */

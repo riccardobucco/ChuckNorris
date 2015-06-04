@@ -85,8 +85,11 @@ LineChartInPlaceUpdater.prototype.update = function (chart, updateData) {
  }
 
  linechart:inplace:
-    update = [
-        { position: {x:0, y:0}, value='foo' },
-        { position: {x:0, y:1}, value='foo' }
+ update = {
+    inplace = [
+        { position: {x:0, y:0}, data='0' },
+        { position: {x:0, y:1}, value='1' }
     ] // modifico 2 valori già esistenti
+ }
+    
 */

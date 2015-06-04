@@ -108,8 +108,10 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
  }
 
 table:stream:
-    update= [
-        [{color: 'blue', background: 'white', value: '1'}, {color: 'blue', background: 'white', value: '1'}, {color: 'blue', background: 'white', value: '1'}], // riga 1
-        [{color: 'blue', background: 'white', value: '1'}, {color: 'blue', background: 'white', value: '1'}, {color: 'blue', background: 'white', value: '1'}] // riga 2
+update = {
+    stream: [
+        [ {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'}, {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'}, {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'} ], // riga 1
+        [ {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'}, {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'}, {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'} ], // riga 2
     ] // aggiungo 2 righe nella posizione indicata nelle impostazioni (in testa o in coda)
+}
 */

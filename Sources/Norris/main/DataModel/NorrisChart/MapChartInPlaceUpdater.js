@@ -81,12 +81,14 @@ MapChartInPlaceUpdater.prototype.update = function (chart, updateData) {
  data = [
     {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // serie1
     {name: 'pluto', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // serie2
-    {name: 'paperino', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // serie3
+    {name: 'paperino', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]} // serie3
  ]
 
  mapchart:inplace:
- update = [
-    { position: {series:0, index:0}, data: {x:1, y:1} },
-    { position: {series:0, index:1}, data: {x:1, y:1} }
- ] // modifico 2 valori già esistenti
+ update = {
+    inplace = [
+        { position: {series:0, index:0}, data: {x:1, y:1} },
+        { position: {series:0, index:1}, data: {x:1, y:1} }
+    ] // modifico 2 valori già esistenti
+ }
  */

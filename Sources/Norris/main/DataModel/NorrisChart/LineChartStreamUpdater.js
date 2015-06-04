@@ -98,8 +98,10 @@ LineChartStreamUpdater.prototype.update = function (chart, updateData) {
  }
 
  linechart:stream
- update = [
-    {label: 'foo', data: [1,2,3,4,5]},
-    {label: 'bar', data: [1,2,3,4,5]}
- ] // aggiungo 2 valori indipendenti con i rispettivi valori dipendenti per ogni linea
+ update = {
+    stream: [
+        {label: 'foo', data: [1,2,3,4,5]},
+        {label: 'bar', data: [1,2,3,4,5]}
+    ] // aggiungo 2 valori indipendenti con i rispettivi valori dipendenti per ogni linea
+ }
 */
