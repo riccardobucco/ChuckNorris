@@ -61,12 +61,12 @@ PageImpl.prototype.add = function (chart) {
 		}
 		else {
 			console.log("ERROR: wrong type. A NorrisChart widget is required.");
-			return null;
+            throw("PageImpl:requiredNorrisChart");
 		}
 	}
 	else {
 		console.log("ERROR: maximum number of charts is reached. You cannot add other charts to the page.");
-		return null;
+        throw("PageImpl:reachedMaximunNumberOfCharts");
 	}
 
 };
