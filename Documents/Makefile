@@ -84,6 +84,8 @@ _qualifica: _force
 	@ curl http://kaizenteam.it/tracker/export/test-integrazione_componenti.php > PianoDiQualifica/Tex/TracciamentoTestIntegrazioneClassiMetodi.tex
 	@ curl http://kaizenteam.it/tracker/export/test-unita.php > PianoDiQualifica/Tex/TestUnita.tex
 	@ curl http://kaizenteam.it/tracker/export/test-unita_metodi.php > PianoDiQualifica/Tex/TracciamentoTestUnitaClassiMetodi.tex
+	@ curl http://kaizenteam.it/tracker/export/metodi_CN.php > PianoDiQualifica/TrackerMetricheCN.tex
+	@ curl http://kaizenteam.it/tracker/export/metodi_A.php > PianoDiQualifica/TrackerMetricheA.tex
 
 _specifica: _force
 	@ #creazione file latex classi
