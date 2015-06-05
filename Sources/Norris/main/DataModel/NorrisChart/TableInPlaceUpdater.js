@@ -43,6 +43,11 @@ TableInPlaceUpdater.getInstance = function() { // static
     return TableInPlaceUpdater.prototype.instance;
 };
 
+/**
+ * Updates a table with in place method. The table data should not be empty.
+ * @param {TableImpl} chart - the table to update;
+ * @param updateData - the updating.
+ */
 TableInPlaceUpdater.prototype.update = function (chart, updateData) {
     var isEmpty=function(obj) {
         for(var prop in obj) {
@@ -54,13 +59,14 @@ TableInPlaceUpdater.prototype.update = function (chart, updateData) {
 
     if (!isEmpty(updateData)) {
         var data=chart.getData();
+        var update=updateData['inplace'];
         if (!isEmpty(data)) {
-            for(var i=0; i<updateData.length; i++) {
-                var x=updateData[i].position.x;
-                var y=updateData[i].position.y;
-                data.datasets[x][y].color=updateData[i].data.color;
-                data.datasets[x][y].background=updateData[i].data.background;
-                data.datasets[x][y].value=updateData[i].data.value;
+            for(var i=0; i<update.length; i++) {
+                var x=update[i].position.x;
+                var y=update[i].position.y;
+                data.datasets[x][y].color=update[i].data.color;
+                data.datasets[x][y].background=update[i].data.background;
+                data.datasets[x][y].value=update[i].data.value;
             }
             chart.setData(data);
         }

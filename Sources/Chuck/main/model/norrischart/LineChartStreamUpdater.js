@@ -1,26 +1,26 @@
 /*
- * Name: {LineChartStreamUpdater.js}
- * Module: {Model/NorrisChart}
- * Location: {Norris/Main/DataModel/NorrisChart}
- * Date: {2015-04-10}
- * Version: {v0.6}
+ * Name: LineChartStreamUpdater.js
+ * Module: Model/NorrisChart
+ * Location: Norris/Main/DataModel/NorrisChart
+ * Date: 2015-04-10
+ * Version: v0.06
  *
  * History:
  *
  * ================================================================================
- * 0.06 2015-05-21 Bigarella Chiara   Verify
+ * v0.06 2015-05-21 Bigarella Chiara   Verify
  * ================================================================================
- * 0.05 2015-04-25 Dal Bianco Davide   Edit
+ * v0.05 2015-04-25 Dal Bianco Davide   Edit
  * ================================================================================
- * 0.04 2015-04-27 Carlon Chiara   Verify
+ * v0.04 2015-04-27 Carlon Chiara   Verify
  * ================================================================================
- * 0.03 2015-04-25 Pavanello Fabio Matteo   Edit
+ * v0.03 2015-04-25 Pavanello Fabio Matteo   Edit
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.02 2015-04-14 Bigarella Chiara   Verify
+ * v0.02 2015-04-14 Bigarella Chiara   Verify
  * ================================================================================
- * 0.01 2015-04-10 Carlon Chiara   Creation
+ * v0.01 2015-04-10 Carlon Chiara   Creation
  * ================================================================================
  */
 
@@ -69,16 +69,17 @@ angular.module('norris-chartupdater')
 
         if (!isEmpty(updateData)) {
             var data=chart.getData();
+            var update=updateData['stream'];
             if (!isEmpty(data)) {
-                for(var i=0; i<updateData.length; i++) {
-                    if (updateData[i].data.length==data.datasets.length) {
+                for(var i=0; i<update.length; i++) {
+                    if (update[i].data.length==data.datasets.length) {
                         for(var k=0; k<data.datasets.length; k++) {
-                            data.datasets[k].values.push(updateData[i].data[k]);
+                            data.datasets[k].values.push(update[i].data[k]);
                             if (data.datasets[k].values.length>chart.getSettings().maxValues) {
                                 data.datasets[k].values.shift();
                             }
                         }
-                        data.labels.push(updateData[i].label);
+                        data.labels.push(update[i].label);
                         if (data.labels.length>chart.getSettings().maxValues) {
                             data.labels.shift();
                         }

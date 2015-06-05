@@ -59,11 +59,12 @@ LineChartInPlaceUpdater.prototype.update = function (chart, updateData) {
 
     if (!isEmpty(updateData)) {
         var data=chart.getData();
+        var update=updateData['inplace'];
         if (!isEmpty(data)) {
-            for(var i=0; i<updateData.length; i++) {
-                var x=updateData[i].position.x;
-                var y=updateData[i].position.y;
-                data.datasets[x].values[y]=updateData[i].value;
+            for(var i=0; i<update.length; i++) {
+                var x=update[i].position.x;
+                var y=update[i].position.y;
+                data.datasets[x].values[y]=update[i].data;
             }
             chart.setData(data);
         }
@@ -88,7 +89,7 @@ LineChartInPlaceUpdater.prototype.update = function (chart, updateData) {
  update = {
     inplace = [
         { position: {x:0, y:0}, data='0' },
-        { position: {x:0, y:1}, value='1' }
+        { position: {x:0, y:1}, data='1' }
     ] // modifico 2 valori già esistenti
  }
     

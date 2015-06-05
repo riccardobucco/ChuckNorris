@@ -48,7 +48,6 @@ BarChartInPlaceUpdater.getInstance = function() { // static
  * @param {BarChartImpl} chart - the bar chart to update;
  * @param updateData - the updating.
  */
-
 BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
     var isEmpty=function(obj) {
         for(var prop in obj) {
@@ -65,7 +64,7 @@ BarChartInPlaceUpdater.prototype.update = function (chart, updateData) {
             for(var i=0; i<update.length; i++) {
                 var x=update[i].position.x;
                 var y=update[i].position.y;
-                data.datasets[x].values[y]=update[i].value;
+                data.datasets[x].values[y]=update[i].data;
             }
             chart.setData(data);
         }

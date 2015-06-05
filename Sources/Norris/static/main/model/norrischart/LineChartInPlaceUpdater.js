@@ -1,26 +1,26 @@
 /*
- * Name: {LineChartInPlaceUpdater.js}
- * Module: {Model/NorrisChart}
- * Location: {Chuck/Main/Model/NorrisChart}
- * Date: {2015-04-10}
- * Version: {v0.6}
+ * Name: LineChartInPlaceUpdater.js
+ * Module: Model/NorrisChart
+ * Location: Chuck/Main/Model/NorrisChart
+ * Date: 2015-04-10
+ * Version: v0.06
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.06 2015-05-21 Bigarella Chiara   Verify
+ * v0.06 2015-05-21 Bigarella Chiara   Verify
  * ================================================================================
- * 0.05 2015-04-25 Dal Bianco Davide   Edit
+ * v0.05 2015-04-25 Dal Bianco Davide   Edit
  * ================================================================================
- * 0.04 2015-04-27 Carlon Chiara   Verify
+ * v0.04 2015-04-27 Carlon Chiara   Verify
  * ================================================================================
- * 0.03 2015-04-25 Pavanello Fabio Matteo   Edit
+ * v0.03 2015-04-25 Pavanello Fabio Matteo   Edit
  * ================================================================================
- * 0.02 2015-04-14 Carlon Chiara   Verify
+ * v0.02 2015-04-14 Carlon Chiara   Verify
  * ================================================================================
- * 0.01 2015-04-10 Pavanello Fabio Matteo   Creation
+ * v0.01 2015-04-10 Pavanello Fabio Matteo   Creation
  * ================================================================================
  */
 
@@ -61,11 +61,12 @@ LineChartInPlaceUpdater.prototype.instance=new LineChartInPlaceUpdater(); // sta
 
         if (!isEmpty(updateData)) {
             var data=chart.getData();
+            var update=updateData['inplace'];
             if (!isEmpty(data)) {
-                for(var i=0; i<updateData.length; i++) {
-                    var x=updateData[i].position.x;
-                    var y=updateData[i].position.y;
-                    data.datasets[x].values[y]=updateData[i].value;
+                for(var i=0; i<update.length; i++) {
+                    var x=update[i].position.x;
+                    var y=update[i].position.y;
+                    data.datasets[x].values[y]=update[i].data;
                 }
                 chart.setData(data);
             }

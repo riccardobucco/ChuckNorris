@@ -10,17 +10,17 @@
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.06 2015-05-21 Bigarella Chiara   Verify
+ * v0.06 2015-05-21 Bigarella Chiara   Verify
  * ================================================================================
- * 0.05 2015-04-25 Dal Bianco Davide   Edit
+ * v0.05 2015-04-25 Dal Bianco Davide   Edit
  * ================================================================================
- * 0.04 2015-04-27 Carlon Chiara   Verify
+ * v0.04 2015-04-27 Carlon Chiara   Verify
  * ================================================================================
- * 0.03 2015-04-25 Pavanello Fabio Matteo   Edit
+ * v0.03 2015-04-25 Pavanello Fabio Matteo   Edit
  * ================================================================================
- * 0.02 2015-04-14 Pavanello Fabio Matteo   Verify
+ * v0.02 2015-04-14 Pavanello Fabio Matteo   Verify
  * ================================================================================
- * 0.01 2015-04-12 Moretto Alessandro   Creation
+ * v0.01 2015-04-12 Moretto Alessandro   Creation
  * ================================================================================
  */
 
@@ -61,12 +61,13 @@ angular.module('norris-chartupdater')
 
         if (!isEmpty(updateData)) {
             var data=chart.getData();
+            var update=updateData['inplace'];
             if (!isEmpty(data)) {
-                for(var i=0; i<updateData.length; i++) {
-                    var series=updateData[i].position.series;
-                    var index=updateData[i].position.index;
-                    data[series].values[index].x=updateData[i].data.x;
-                    data[series].values[index].y=updateData[i].data.y;
+                for(var i=0; i<update.length; i++) {
+                    var series=update[i].position.series;
+                    var index=update[i].position.index;
+                    data[series].values[index].x=update[i].data.x;
+                    data[series].values[index].y=update[i].data.y;
                 }
                 chart.setData(data);
             }

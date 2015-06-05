@@ -1,26 +1,26 @@
 /*
- * Name: {TableStreamUpdater.js}
- * Module: {Model/NorrisChart}
- * Location: {Chuck/Main/Model/NorrisChart}
- * Date: {2015-04-12}
- * Version: {v0.6}
+ * Name: TableStreamUpdater.js
+ * Module: Model/NorrisChart
+ * Location: Chuck/Main/Model/NorrisChart
+ * Date: 2015-04-12
+ * Version: v0.06
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.06 2015-05-24 Carlon Chiara   Verify
+ * v0.06 2015-05-24 Carlon Chiara   Verify
  * ================================================================================
- * 0.05 2015-05-21 Pavanello Fabio Matteo   Edit
+ * v0.05 2015-05-21 Pavanello Fabio Matteo   Edit
  * ================================================================================
- * 0.04 2015-04-27 Bigarella Chiara   Verify
+ * v0.04 2015-04-27 Bigarella Chiara   Verify
  * ================================================================================
- * 0.03 2015-04-25 Dal Bianco Davide   Edit
+ * v0.03 2015-04-25 Dal Bianco Davide   Edit
  * ================================================================================
- * 0.02 2015-04-14 Bigarella Chiara   Verify
+ * v0.02 2015-04-14 Bigarella Chiara   Verify
  * ================================================================================
- * 0.01 2015-04-12 Bucco Riccardo   Creation
+ * v0.01 2015-04-12 Bucco Riccardo   Creation
  * ================================================================================
  */
 
@@ -62,18 +62,19 @@ angular.module('norris-chartupdater')
 
         if (!isEmpty(updateData)) {
             var data=chart.getData();
+            var update=updateData['stream'];
             var newLinePosition=chart.getSettings().newLinePosition;
             if (!isEmpty(data)) {
-                for(var i=0; i<updateData.length; i++) {
-                    if (updateData[i].length==data.headers.length) {
+                for(var i=0; i<update.length; i++) {
+                    if (update[i].length==data.headers.length) {
                         if(newLinePosition=='bottom') {
-                            data.datasets.push(updateData[i]);
+                            data.datasets.push(update[i]);
                             if (data.datasets.length>chart.getSettings().maxRows) {
                                 data.datasets.shift();
                             }
                         }
                         else {
-                            data.datasets.unshift(updateData[i]); /* inserts in top */
+                            data.datasets.unshift(update[i]); /* inserts in top */
                             if (data.datasets.length>chart.getSettings().maxRows) {
                                 data.datasets.pop();
                             }

@@ -59,12 +59,13 @@ MapChartInPlaceUpdater.prototype.update = function (chart, updateData) {
 
     if (!isEmpty(updateData)) {
         var data=chart.getData();
+        var update=updateData['inplace'];
         if (!isEmpty(data)) {
-            for(var i=0; i<updateData.length; i++) {
-                var series=updateData[i].position.series;
-                var index=updateData[i].position.index;
-                data[series].values[index].x=updateData[i].data.x;
-                data[series].values[index].y=updateData[i].data.y;
+            for(var i=0; i<update.length; i++) {
+                var series=update[i].position.series;
+                var index=update[i].position.index;
+                data[series].values[index].x=update[i].data.x;
+                data[series].values[index].y=update[i].data.y;
             }
             chart.setData(data);
         }

@@ -59,16 +59,17 @@ LineChartStreamUpdater.prototype.update = function (chart, updateData) {
 
     if (!isEmpty(updateData)) {
         var data=chart.getData();
+        var update=updateData['stream'];
         if (!isEmpty(data)) {
-            for(var i=0; i<updateData.length; i++) {
-                if (updateData[i].data.length==data.datasets.length) {
+            for(var i=0; i<update.length; i++) {
+                if (update[i].data.length==data.datasets.length) {
                     for(var k=0; k<data.datasets.length; k++) {
-                        data.datasets[k].values.push(updateData[i].data[k]);
+                        data.datasets[k].values.push(update[i].data[k]);
                         if (data.datasets[k].values.length>chart.getSettings().maxValues) {
                             data.datasets[k].values.shift();
                         }
                     }
-                    data.labels.push(updateData[i].label);
+                    data.labels.push(update[i].label);
                     if (data.labels.length>chart.getSettings().maxValues) {
                         data.labels.shift();
                     }
