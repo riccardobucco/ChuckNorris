@@ -59,7 +59,7 @@ setInterval(table, 4000);
 
 
 function barchart() {
-    var update = {'inplace' : 
+    var update = {inplace : 
         [{
             position: {
                 x: Math.floor(Math.random() * 3),
@@ -74,23 +74,23 @@ function barchart() {
 var ilc = 0;
 function linechart() {
     if(Math.random() > 0.5) {
-        var update = [{
+        var update = {inplace: [{
             position: {
                 x: Math.floor(Math.random() * 3),
                 y: Math.floor(Math.random() * 5)
             },
             value: Math.floor(Math.random() * 10)
-        }];
+        }]};
         lc.update('inplace', update);
     } else {
-        var update = [{
+        var update = {stream: [{
             label: 'foo' + ilc++,
             data: [
                 Math.floor(Math.random() * 10),
                 Math.floor(Math.random() * 10),
                 Math.floor(Math.random() * 10)
             ]
-        }];
+        }]};
         lc.update('stream', update);
     }
 };
@@ -109,8 +109,8 @@ function mapchart() {
 
 var it = 0;
 function table() {
-    var update = [
+    var update = {stream: [
         [{value: 'foo' + it++}, {value: 'bar' + it++}, {value: 'baz' + it++}]
-    ];
+    ]};
     t.update('stream', update);
 };
