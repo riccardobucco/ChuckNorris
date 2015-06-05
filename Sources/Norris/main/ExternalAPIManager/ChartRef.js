@@ -38,8 +38,8 @@ function ChartRef (chart) {
         this.chart = chart;
     }
     else {
-        this.chart=null;
         console.log("ERROR: chart is not a ChartImpl");
+        throw("ChartEndpoint:requiredChartImpl");
     }
 }
 

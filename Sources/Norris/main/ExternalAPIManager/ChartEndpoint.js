@@ -47,9 +47,8 @@ function ChartEndpoint(controller) {
             });
         });
     }else {
-        this.controller=null;
-        this.socketio=null;
-        console.log("ERROR: an ExternalAPIController is required.")
+        console.log("ERROR: an ExternalAPIController is required.");
+        throw("ChartEndpoint:requiredExternalAPIController");
     }
 }
 

@@ -36,10 +36,9 @@ function ListEndpoint(controller) {
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
         this.app=controller.getApp();
-    }else {
-        this.controller=null;
-        this.app=null;
-        console.log("ERROR: an ExternalAPIController is required.")
+    } else {
+        console.log("ERROR: an ExternalAPIController is required.");
+        throw("ListEndpoint:requiredExternalAPIController");
     }
 }
 
