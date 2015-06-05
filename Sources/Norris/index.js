@@ -65,7 +65,7 @@ function barchart() {
                 x: Math.floor(Math.random() * 3),
                 y: Math.floor(Math.random() * 5)
             },
-            value: Math.floor(Math.random() * 10)
+            data: Math.floor(Math.random() * 10)
         }]
     };
     bc.update('inplace', update);
@@ -79,7 +79,7 @@ function linechart() {
                 x: Math.floor(Math.random() * 3),
                 y: Math.floor(Math.random() * 5)
             },
-            value: Math.floor(Math.random() * 10)
+            data: Math.floor(Math.random() * 10)
         }]};
         lc.update('inplace', update);
     } else {
