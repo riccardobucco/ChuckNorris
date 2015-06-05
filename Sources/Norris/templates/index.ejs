@@ -18,42 +18,12 @@ function printTag(chart) {
         
         <meta name="viewport" content="width=device-width, initial-scale=1">    
     
-        <script src="/bower_components/angular/angular.min.js"></script>
+        <script src="/chuck.js"></script>
 
-        <script src="/bower_components/socket.io-client/socket.io.js"></script>
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script type="text/javascript">
             google.load('visualization', '1.0', {'packages':['corechart']});
             google.setOnLoadCallback(function () {angular.bootstrap(document.body, ['chuck'])});
         </script>
-        <script src="/bower_components/openlayers/lib/OpenLayers.js"></script>
-        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <script src="/main/app.js"></script>
-
-        <script src="/main/model/services/ChartRequester.js"></script>
-        <script src="/main/model/services/ChuckAuthenticator.js"></script>
-
-        <script src="/main/directive/ChuckBarChart.js"></script>
-        <script src="/main/directive/ChuckLineChart.js"></script>
-        <script src="/main/directive/ChuckMapChart.js"></script>
-        <script src="/main/directive/ChuckTable.js"></script>
-
-        <script src="/main/model/norrischart/ChartImpl.js"></script>
-        <script src="/main/model/norrischart/BarChartImpl.js"></script>
-        <script src="/main/model/norrischart/LineChartImpl.js"></script>
-        <script src="/main/model/norrischart/MapChartImpl.js"></script>
-        <script src="/main/model/norrischart/TableImpl.js"></script>
-
-        <script src="/main/model/norrischart/BarChartInPlaceUpdater.js"></script>
-        <script src="/main/model/norrischart/LineChartInPlaceUpdater.js"></script>
-        <script src="/main/model/norrischart/LineChartStreamUpdater.js"></script>
-        <script src="/main/model/norrischart/MapChartInPlaceUpdater.js"></script>
-        <script src="/main/model/norrischart/MapChartMovieUpdater.js"></script>
-        <script src="/main/model/norrischart/TableInPlaceUpdater.js"></script>
-        <script src="/main/model/norrischart/TableStreamUpdater.js"></script>
 
 
         <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
