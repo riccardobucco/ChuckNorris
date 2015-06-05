@@ -81,7 +81,7 @@ AuthenticationEndpoint.prototype.handleLogout = function(req, res) {
         set: res.cookie,
         clear: res.clearCookie
     };
-    else if(!this.controller.handleLogout(cookies))
+   if(!this.controller.handleLogout(cookies))
         res.sendStatus(401);
     else
         res.sendStatus(200);
@@ -99,7 +99,7 @@ AuthenticationEndpoint.prototype.handleKeepAlive = function(req, res) {
         set: res.cookie,
         clear: res.clearCookie
     };
-    else if(!this.controller.handleKeepAlive(cookies))
+    if(!this.controller.handleKeepAlive(cookies))
         res.sendStatus(401);
     else
         res.sendStatus(200);
