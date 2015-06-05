@@ -109,8 +109,8 @@ individuata nel presente documento.
 						\begin{tabu}{| l | c | c |}
 							\hline
 							Componente			& 	Percentuale requisiti desiderabili funzionali soddisfatti	& Esito		\\ \hline \hline
-							InternalAPIManager	& 	100\% 	& Accettabile  \\ \hline
-							ExternalAPIManager  & 	100\%	& Accettabile  \\ \hline
+							InternalAPIManager	& 	100\% 	& Ottimale  \\ \hline
+							ExternalAPIManager  & 	100\%	& Ottimale  \\ \hline
 							DataModel  			& 	100\%	& Ottimale  \\ \hline
 						\end{tabu}
 					\caption{Esiti del calcolo delle percentuali di requisiti desiderabili funzionali realizzati da Norris durante la Fase PD}
@@ -123,9 +123,9 @@ individuata nel presente documento.
 						\begin{tabu}{| l | c | c |}
 							\hline
 							Componente	& Numero requisiti desiderabili funzionali soddisfatti	& Esito		\\ \hline \hline
-							Directive	&	100\% 	& Accettabile  \\ \hline
-							ChartView	& 	100\%	& Accettabile  \\ \hline
-							ViewModel	& 	100\%	& Accettabile  \\ \hline
+							Directive	&	100\% 	& Ottimale  \\ \hline
+							ChartView	& 	100\%	& Ottimale  \\ \hline
+							ViewModel	& 	100\%	& Ottimale  \\ \hline
 							DataModel	& 	100\%	& Ottimale  	\\ \hline
 						\end{tabu}
 					\caption{Esiti del calcolo delle percentuali di requisiti desiderabili funzionali realizzati da Chuck durante la Fase PD}
@@ -160,6 +160,17 @@ individuata nel presente documento.
 			\level{4}{Percentuale di test di robustezza effettuati}
 			Nella tabella seguente, vengono riportate le percentuali dei test effettuati sui tre prodotti: Norris, Chuck e applicazione Android.
 %CALCOLARE
+			\begin{table}[H]
+					\centering
+						\begin{tabu}{| l | c | c |}
+							\hline
+							Prodotto	& Percentuale test effettuati	& Esito		\\ \hline \hline
+							Norris	&	100\% 	& Ottimale  \\ \hline
+							Chuck	& 	100\%	& Ottimale  \\ \hline
+							Applicazione Android	& 	100\%	& Ottimale  \\ \hline
+						\end{tabu}
+					\caption{Esiti del calcolo delle percentuali di requisiti desiderabili funzionali realizzati da Chuck durante la Fase PD}
+				\end{table}
 			\level{4}{Copertura del codice}
 %CALCOLARE
 			\level{4}{Complessità ciclomatica, numero di statement per metodo e livello di annidamento}
@@ -167,11 +178,9 @@ individuata nel presente documento.
 				\input{PianoDiQualifica/TrackerMetricheCN.tex}
 			Per ogni classe (in particolare ogni metodo di ciascuna classe) diell'applicazione Android, sono indicati, nella seguente tabella, i valori calcolati per le tre metriche: complessità ciclomatica (indicata con C.C.), numero di statement per metodo (indicato con N.S.) e livello di annidamento (indicato con L.A.).
 				\input{PianoDiQualifica/TrackerMetricheA.tex}
-			\level{4}{Numero di campi dati per classe}
-%CALCOLARE
-			\level{4}{Grado di accoppiamento dei componenti}
-			Si riporta di seguito, per ogni componente, la percentuale del grado di accoppiamento afferente ed efferente.
-%CALCOLARE appena progettazione completata, se no eliminare
+			% \level{4}{Grado di accoppiamento dei componenti}
+			% Si riporta di seguito, per ogni componente, la percentuale del grado di accoppiamento afferente ed efferente.
+%CALCOLARE se cambia la progettazione, altrimenti eliminare il paragrafo
 			% \begin{table}[H]
 			% 	\centering
 			% 		\begin{tabu}{| l | c | c | c | c | c | c | }
@@ -205,37 +214,37 @@ individuata nel presente documento.
 					\begin{tabu}{| l | c | c |}
 							\hline
 							Documenti 							& Schedule Variance	& Esito		\\ \hline \hline						
-							Piano di progetto v6.00				& 4\% 		& Ottimale  \\ \hline
-							Norme di Progetto v6.00 			& -1\%		& Ottimale  \\ \hline
+							Piano di progetto v6.00				& 4\% 		& Accettabile  \\ \hline
+							Norme di Progetto v6.00 			& 0\%		& Ottimale  \\ \hline
 							Piano di Qualifica v6.00 			& -1\%		& Accettabile  \\ \hline
-							Manuale Utente v3.00 				& -2\%		& Ottimale  \\ \hline
+							Manuale Utente v3.00 				& -2\%		& Accettabile  \\ \hline
 							Definizione di Prodotto v3.00 		& -1\%		& Accettabile  \\ \hline
-							Glossario v6.00					 	& 3\% 		& Ottimale  \\ \hline
-							Totale processo di documentazione 	& 2\% 		& Accettabile \\ \hline
+							Glossario v6.00					 	& 3\% 		& Accettabile \\ \hline
+							Totale processo di documentazione 	& 3\% 		& Accettabile \\ \hline
 					\end{tabu}
 				\caption{Esiti del calcolo della Schedule Variance durante la Fase PD}
 			\end{table}
 							
 			\level{4}{Budget Variance}
 %modificare, se pdp cambia, confrontare preventivo con consuntivo
-			% Le risorse impiegate per la correzione degli errori e per l'avanzamento delle attività pianificate non hanno subito grosse modifiche rispetto a quanto pianificato. Questo deriva dal fatto che le modifiche apportate alla documentazione, in questa fase, sono state minime, mentre ci si è dedicati, in maggior misura, all'attività di codifica del codice sorgente e dei test e alla loro esecuzione.
-			% Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sulle risorse utilizzate per la stesura di ogni documento:
-			% \begin{table}[H]
-			% 		\centering
-			% 		\begin{tabu}{| l | c | c |}
-			% 				\hline
-			% 				Documenti 							& Budget Variance	& Esito		\\ \hline \hline							
-			% 				Piano di progetto v6.00				& 0\% 		& Ottimale  \\ \hline
-			% 				Norme di Progetto v6.00 			& 0\%		& Accettabile  \\ \hline
-			% 				Piano di Qualifica v6.00 			& 2\%		& Ottimale  \\ \hline
-			% 				Specifica Tecnica v4.00 			& 0\%		& Ottimale  \\ \hline
-			% 				Manuale Utente v3.00 				& -3\%		& Ottimale  \\ \hline
-			% 				Definizione di Prodotto v3.00 		& -2\%		& Accettabile  \\ \hline
-			% 				Glossario v6.00					 	& 3\% 		& Ottimale  \\ \hline
-			% 				Totale processo di documentazione 	& 2\% 		& Ottimale \\ \hline
-			% 		\end{tabu}
-			% 	\caption{Esiti del calcolo della Budget Variance durante la Fase PD}
-			% \end{table}
+			Le risorse impiegate per la correzione degli errori e per l'avanzamento delle attività pianificate non hanno subito grosse modifiche rispetto a quanto pianificato. Questo deriva dal fatto che le modifiche apportate alla documentazione, in questa fase, sono state minime, mentre ci si è dedicati, in maggior misura, all'attività di codifica, del codice sorgente e dei test, e alla loro esecuzione.
+			Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sulle risorse utilizzate per la stesura di ogni documento:
+			\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+							\hline
+							Documenti 							& Budget Variance	& Esito		\\ \hline \hline							
+							Piano di progetto v6.00				& 0\% 		& Ottimale  \\ \hline
+							Norme di Progetto v6.00 			& 0\%		& Ottimale  \\ \hline
+							Piano di Qualifica v6.00 			& 2\%		& Accettabile  \\ \hline
+							Specifica Tecnica v4.00 			& 0\%		& Ottimale  \\ \hline
+							Manuale Utente v3.00 				& -3\%		& Accettabile  \\ \hline
+							Definizione di Prodotto v3.00 		& -2\%		& Accettabile  \\ \hline
+							Glossario v6.00					 	& 3\% 		& Accettabile  \\ \hline
+							Totale processo di documentazione 	& 2\% 		& Accettabile \\ \hline
+					\end{tabu}
+				\caption{Esiti del calcolo della Budget Variance durante la Fase PD}
+			\end{table}
 							
 			\level{4}{Produttività}
 			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di documentazione. Questo indice è stato calcolato durante tutti i momenti di verifica previsti dal \insdoc{Piano di Progetto v6.00} per la \insphase{Fase PD}, per ogni documento redatto nel periodo antecedente la verifica. Il calcolo fatto di volta in volta sullo stesso documento tiene conto solo delle nuove sezioni introdotte in esso.\\
@@ -282,14 +291,14 @@ individuata nel presente documento.
 			\end{table}	
 
 			\level{4}{Budget Variance}
-			Le risorse utilizzate nel processo di verifica sono di poco maggiori rispetto a qelle preventivate, a causa della necessità di correggere gli errori rilevati nella Revisione di Qualifica. Ciò ha causato un valore di poco inferiore alla soglia di accettabilità della Budget Variance.
+			Le risorse utilizzate nel processo di verifica sono di poco maggiori rispetto a qelle preventivate, a causa della necessità di correggere gli errori rilevati nella Revisione di Qualifica. Ciò ha causato un valore accettabile della Budget Variance.
 			Riportiamo di seguito il valore ottenuto:
 			\begin{table}[H]
 				\centering
 				\begin{tabu}{| l | c | c |}
 				\hline
 				Processi 			& Budget Variance	& Esito		\\ \hline \hline
-				Processo di verifica & -2\% & Non Accettabile \\ \hline
+				Processo di verifica & -2\% & Accettabile \\ \hline
 				\end{tabu}
 				\caption{Esiti del calcolo della Budget Variance durante la Fase PD}
 			\end{table}	
@@ -316,7 +325,7 @@ individuata nel presente documento.
 				\caption{Produttività del processo di verifica durante la Fase PD}
 			\end{figure}
 
-			La produttività ha avuto un picco finale dovuto alla necessità di rivedere i documenti presentati alla Revisione di Qualifica, in seguito alle valutazioni ricevute, e alla necessità di verificare il codice prodotto. Si può notare che il livello di produttività è, in media, minore rispetto alle fasi precedenti, questo è dovuto, sempre, al fatto che sono state apportate meno modifiche ai documenti rispetto alle fasi precedenti.
+			La produttività ha avuto un picco finale dovuto alla necessità di rivedere i documenti presentati alla Revisione di Qualifica, in seguito alle valutazioni ricevute in quel periodo, e alla necessità di verificare il codice prodotto. Si può notare che il livello di produttività è, in media, minore rispetto alle fasi precedenti, questo è dovuto, sempre, al fatto che sono state apportate meno modifiche ai documenti rispetto alle fasi precedenti.
 
 			\level{4}{Efficacia di una revisione}
 			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata l'efficacia delle varie revisioni che sono state fatte durante la \insphase{Fase PD}. Di seguito vengono riportati i valori calcolati ed una loro rappresentazione grafica.
@@ -359,7 +368,7 @@ individuata nel presente documento.
 			\end{table}	
 						
 			\level{4}{Budget Variance}
-			Conseguentemente ai ritardi conseguiti nella fase precedente, le risorse impiegate sono state maggiori del previsto, al punto da richiedere la redistribuzione del monte ore totale fra i ruoli, come indicato nel \insdoc{Piano di Progetto v6.00}, e da sforare i range di accettazione della metrica.
+			% Conseguentemente ai ritardi conseguiti nella fase precedente, le risorse impiegate sono state maggiori del previsto, al punto da richiedere la redistribuzione del monte ore totale fra i ruoli, come indicato nel \insdoc{Piano di Progetto v6.00}, e da sforare i range di accettazione della metrica.
 %CALCOLARE, dopo pdp
 			% \\
 			% \begin{table}[H]
@@ -367,7 +376,7 @@ individuata nel presente documento.
 			% 	\begin{tabu}{| l | c | c |}
 			% 		\hline
 			% 			Processi 						& Budget Variance	& Esito		\\ \hline \hline
-			% 			Processo di sviluppo (codifica) & -7\% & Non accettabile \\ \hline
+			% 			Processo di sviluppo (codifica) & -7\% & Accettabile \\ \hline
 			% 	\end{tabu}
 			% 	\caption{Esiti del calcolo della Budget Variance dell'attività di codifica durante la Fase PD}
 			% \end{table}	
