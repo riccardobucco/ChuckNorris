@@ -57,8 +57,8 @@ ExternalAPIConstructor.registerEndpoint = function(endpoint) {
  * @param {http} server -
  * @param {String} endpoint -
  */
-ExternalAPIConstructor.prototype.construct = function (model, server, endpoint, app) {
-    var controller = new ExternalAPIController(model, server, endpoint, app);
+ExternalAPIConstructor.prototype.construct = function (model, server, app) {
+    var controller = new ExternalAPIController(model, server, app);
     for (var i=0; i<ExternalAPIConstructor.prototype.endpoints.length; i++) {
         ExternalAPIConstructor.prototype.endpoints[i].createEndpoint(controller);
     }

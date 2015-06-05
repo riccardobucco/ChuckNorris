@@ -37,13 +37,19 @@ var defaults = {
  * Creates a Norris instance.
  * @constructor
  */
-function NorrisImpl () {
+function NorrisImpl (endpoint) {
     if (!(this instanceof NorrisImpl)) return new NorrisImpl();
     events.EventEmitter.call(this); //NorrisImpl inherits from events.EventEmitter
-    this.settings = {};
-    this.charts = {};
-    this.pages = {};
-    this.setSettings(defaults);
+    if (endpoint != '') {
+        this.endpoint=endpoint;
+        this.settings = {};
+        this.charts = {};
+        this.pages = {};
+        this.setSettings(defaults);
+    }
+    else {
+        throw ("missingEndpoint");
+    }
 }
 
 NorrisImpl.prototype.__proto__=events.EventEmitter.prototype;
@@ -156,4 +162,13 @@ NorrisImpl.prototype.getPage = function(pageId){
  */
 NorrisImpl.prototype.getPages = function(){
     return this.pages;
+};
+
+/**
+ *Gets all Norris' endpoint.
+ *
+ * @return {String} the endpoint.
+ */
+NorrisImpl.prototype.getEndpoint = function(){
+    return this.endpoint;
 };

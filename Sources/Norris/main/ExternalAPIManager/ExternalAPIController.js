@@ -35,13 +35,13 @@ module.exports=ExternalAPIController;
  * @param {http} server -
  * @param {String} endpoint -
  */
-function ExternalAPIController(model, server, endpoint, app) {
+function ExternalAPIController(model, server, app) {
     if(!(this instanceof ExternalAPIController))
         return new ExternalAPIController(model, server, endpoint, app);
     events.EventEmitter.call(this); //ExternalAPIController inherits from events.EventEmitter
     this.model=model;
     this.server=server;
-    this.endpoint=endpoint;
+    this.endpoint=model.getEndpoint();
     if (app != '' ){
         this.app=app;
     }
@@ -147,3 +147,5 @@ ExternalAPIController.prototype.getEndpoint = function() {
 ExternalAPIController.prototype.getApp = function() {
     return this.app;
 };
+
+
