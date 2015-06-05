@@ -1,11 +1,12 @@
 <%
-var charts = getCharts();
-var settings = getSettings();
+var charts = page.getCharts();
+var settings = page.getSettings();
 var maxChartsRow = settings.maxChartsRow;
 var maxChartsCol = settings.maxChartsCol;
+var endpoint = endpoint;
 
 function printTag(chart) {
-    return '<chuck-' + chart.getType() + ' chart-endpoint="/" chart-id="' + chart.getId() + '"></chuck-' + chart.getType() + '>';
+    return '<chuck-' + chart.getType() + ' chart-endpoint="' + endpoint + '" chart-id="' + chart.getId() + '"></chuck-' + chart.getType() + '>';
 }
 %>
 

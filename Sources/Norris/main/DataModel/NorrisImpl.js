@@ -165,7 +165,7 @@ NorrisImpl.prototype.getPages = function(){
 };
 
 /**
- *Gets all Norris' endpoint.
+ * Gets all Norris' endpoint.
  *
  * @return {String} the endpoint.
  */

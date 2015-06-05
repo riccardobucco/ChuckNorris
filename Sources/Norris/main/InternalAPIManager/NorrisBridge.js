@@ -44,6 +44,16 @@ function NorrisBridge(model) {
 }
 
 /**
+ * Gets the Norris' endpoint.
+ *
+ * @return {String} the endpoint.
+ */
+NorrisBridge.prototype.getEndpoint = function(){
+    return this.model.getEndpoint();
+};
+
+
+/**
  * Sets the settings for the Norris instance.
  *
  * @param {NorrisSettings} settings - The settings to set to the Norris instance.
@@ -144,12 +154,11 @@ NorrisBridge.prototype.getMiddleware = function (page) {
     var instance = this;
     var app = express();
     app.set('views', __dirname + '/../../templates');
-    app.engine('ejs', require('ejs').renderFile);
 
     app.get('/pages/:pageId', function (req, res) {
         var page = instance.getPage(req.params.pageId);
         if(page)
-            res.render('index.ejs', page);
+            res.render('index.ejs', {page: page, endpoint: instance.getEndpoint()});
         else
             res.sendStatus(404);
     });
