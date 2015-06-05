@@ -34,7 +34,7 @@
         link: function(scope, element, attrs) {
 
             var map = null;
-            var layers = [];
+            var overlays = [];
 
             ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
                 .then(function (chart) {
@@ -52,43 +52,53 @@
                 var lat = settings.area.y;
                 var zoom = settings.area.zoom;
 
-                map = new OpenLayers.Map(element.contents()[0]);
+                map = new ol.Map({
+                    controls: ol.control.defaults(),
+                    layers: [
+                        new ol.layer.Tile({
+                            source: new ol.source.OSM()
+                        })
+                    ],
+                    target: 'map',
+                    view: new ol.View({
+                        center: ol.proj.transform([lon, lat], 'EPSG:4326', 'EPSG:3857'),
+                        zoom: zoom
+                    })
+                });
 
-                map.addLayer(new OpenLayers.Layer.OSM('OSM'));
-
-                var lonLat = new OpenLayers.LonLat(lon,lat)
-                    .transform(
-                        new OpenLayers.Projection('EPSG:4326'),
-                        map.getProjectionObject()
-                    );
-
-                map.setCenter(lonLat, zoom);
             };
 
             function render(newValue, oldValue) {
                 var newData = newValue.getData();
 
-                layers.forEach(function (layer) {
-                    map.removeLayer(layer);
+                overlays.forEach(function (overlay) {
+                    map.removeOverlay(overlay);
                 });
-
-                layers = [];
+                overlays = [];
 
                 newData.forEach(function (dataset) {
-                    var markers = new OpenLayers.Layer.Markers('Markers');
-
                     dataset.values.forEach(function (value) {
-                        var lonLat = new OpenLayers.LonLat(value.x, value.y)
-                            .transform(
-                                new OpenLayers.Projection("EPSG:4326"),
-                                map.getProjectionObject()
-                            );
-                        markers.addMarker(new OpenLayers.Marker(lonLat));
-                    });
 
-                    map.addLayer(markers);
-                    layers.push(markers);
+                        var icon = document.createElement('object');
+                        icon.type = 'image/svg+xml';
+                        icon.data = '/marker.svg';
+                        if(dataset.color) {
+                            icon.addEventListener('load', function () {
+                                icon.contentDocument.getElementsByTagName('svg')[0].setAttribute('style','fill: ' + dataset.color);
+                            });
+                        }
+
+                        var overlay = new ol.Overlay({
+                            element: icon,
+                            position: ol.proj.transform([value.x, value.y], 'EPSG:4326', 'EPSG:3857'),
+                            positioning: 'bottom-center'
+                        });
+                        map.addOverlay(overlay);
+                        overlays.push(overlay);
+                    });
                 });
+                
+
             };
 
         }
