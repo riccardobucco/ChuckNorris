@@ -370,7 +370,8 @@ I range di accettazione per questa metrica sono:
 
 				\level{5}{Percentuale di test di robustezza superati}
 					Questa metrica serve a misurare l'affidabilità del \insglo{prodotto}.
-					I range di accettazione per questa metrica sono:
+					\\I test di robustezza hanno lo scopo di verificare che il sistema non collasi nel momento in cui vengono passati input diversi da quelli attesi, piuttosto che vengano invocati metodi su istanze di oggetti di altre classi. In diversi casi è stata prevista la gestione di situazioni anomale attraverso procedure alternative o la loro segnalazione tramite la visualizzazione di messaggi di errore sul terminale. I test di robustezza vanno a verificare che tali situazioni vengano gestite come previsto.
+					\\I range di accettazione per questa metrica sono:
 					\begin{itemize}
 					\item valori minori di 90\% sono considerati negativi;
 					\item valori compresi tra 90\% e 100\% sono considerati accettabili;
@@ -383,7 +384,7 @@ I range di accettazione per questa metrica sono:
 					\item gli archi del grafo collegano due nodi solo se è possibile che i comandi del secondo nodo vengano eseguiti subito dopo i comandi del primo nodo.
 				\end{itemize}
 				La misura ottenuta corrisponde quindi al numero di casi di prova necessari per verificare ogni possibile esito di ogni ramo di decisione della componente alla quale viene applicata. La complessità ciclomatica è dunque molto importante in quanto, oltre a dare una misura della complessità del codice, permette di dare un limite superiore al numero di test necessari al raggiungimento della massima copertura del codice.\\
-Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accettabile per valori inferiori a 10, ottimale per valori inferiori a 5. Nel valutare i valori bisogna tenere conto che il costrutto switch viene visto come una sequenza di if annidati, e quindi la sua presenza nel programma porta ad un innalzamento della complessità ciclomatica superiore rispetto alla reale complessità. Viceversa, in caso di oscuramento del codice, il valore della complessità ciclomatica sarà minore rispetto alla complessità reale.
+				Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accettabile per valori inferiori a 10, ottimale per valori inferiori a 5. Nel valutare i valori bisogna tenere conto che il costrutto switch viene visto come una sequenza di if annidati, e quindi la sua presenza nel programma porta ad un innalzamento della complessità ciclomatica superiore rispetto alla reale complessità. Viceversa, in caso di oscuramento del codice, il valore della complessità ciclomatica sarà minore rispetto alla complessità reale.
 			\level{5}{Numero di parametri di un metodo}
 			Un metodo con un numero troppo elevato di parametri formali in input risulta essere complesso e poco manutenibile rispetto ad un metodo con un basso numero di parametri formali. È dunque necessario, per garantire un discreto livello di manutenibilità, che il numero di parametri di ogni metodo sia inferiore a 10. Il numero di parametri di un metodo può considerarsi ottimale quando assume valori inferiori a 5.
 			\level{5}{Numero di statement di un metodo}
