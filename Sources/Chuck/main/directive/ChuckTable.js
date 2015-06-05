@@ -60,7 +60,15 @@ angular.module('chuck')
                 info.bSort = settings.allowSort;
                 info.bPaginate = settings.allowPaginate;
 
-                table = $(element.contents()[0]).DataTable(info);
+                var tableElement = $(element.contents()[0]);
+                if(settings.showTableGrid) {
+                    tableElement.addClass('table');
+                    tableElement.addClass('table-striped');
+                } else {
+                    tableElement.addClass('nowrap');
+                }
+                table = tableElement.DataTable(info);
+
 
                 table.column(0).visible(false);
             };
