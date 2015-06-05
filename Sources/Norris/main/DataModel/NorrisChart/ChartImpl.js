@@ -189,10 +189,11 @@ ChartImpl.prototype.update = function(updateType, updateData) {
 		var dep=ChartImpl.prototype.updaters[type];
 		dep.update(this, updateData);
 		this.emit('update', updateType, updateData); // emits an 'update' signal
-		console.log("Chart updated: "+JSON.stringify(this)); // TOGLIERE
+		console.log("Chart updated: "+updateType+" "+JSON.stringify(this)); // TOGLIERE
 	}
 	else {
 		console.log("ERROR: wrong updating type." );
+		throw("wrongUpdatingType");
 
 	}
 };
