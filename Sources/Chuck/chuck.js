@@ -12,7 +12,7 @@
             google.load('visualization', '1.0', {'packages':['corechart']});
             google.setOnLoadCallback(function () {angular.bootstrap(document.body, ['chuck'])});
         </script>'*/
-        chuckdir + 'bower_components/openlayers/lib/OpenLayers.js',
+        'http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript',
         chuckdir + 'bower_components/jquery/dist/jquery.min.js',
         chuckdir + 'bower_components/datatables/media/js/jquery.dataTables.min.js',
         chuckdir + 'bower_components/bootstrap/dist/js/bootstrap.min.js',
