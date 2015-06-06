@@ -83,7 +83,7 @@
 
                             var icon = document.createElement('object');
                             icon.type = 'image/svg+xml';
-                            icon.data = '/marker.svg';
+                            icon.data = '/bower_components/chuck-rtc/resources/markers/marker.svg';
                             if(dataset.color) {
                                 icon.addEventListener('load', function () {
                                     icon.contentDocument.getElementsByTagName('svg')[0].setAttribute('style','fill: ' + dataset.color);
