@@ -9,6 +9,7 @@
   "scripts": {
     "prestart": "npm install",
     "pretest": "npm install",
+    "postinstall": "sh -c 'cd static; npm install'",
     "start": "node index.js",
     "test": "./node_modules/.bin/mocha test/unit/*.js"
   },

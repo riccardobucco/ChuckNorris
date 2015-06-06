@@ -8,7 +8,7 @@
 
         chuckdir + '../socket.io-client/socket.io.js',
         'https://www.google.com/jsapi',
-        'http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript',
+        'http://openlayers.org/en/v3.5.0/build/ol.js',
         chuckdir + '../jquery/dist/jquery.min.js',
         chuckdir + '../datatables/media/js/jquery.dataTables.min.js',
         chuckdir + '../bootstrap/dist/js/bootstrap.min.js',
