@@ -1,7 +1,7 @@
 /**
  * Name: ExternalAPIConstructor.js
- * Package: ExternalAPIConstructor
- * Location: Norris/Main/ExternalAPIConstructor
+ * Package: ExternalAPIManager
+ * Location: Norris/Main/ExternalAPIManager
  * Date: 2015-04-12
  * Version: v0.04
  *

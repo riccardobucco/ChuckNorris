@@ -1,16 +1,16 @@
 /*
- * Name: {TINorrisDataModel.js}
- * Module: {}
- * Location: {Norris/test/integration}
- * Date: {2015-05-25}
- * Version: {v0.1}
+ * Name: TINorrisDataModel.js
+ * Module: 
+ * Location: Norris/test/integration
+ * Date: 2015-05-25
+ * Version: v0.01
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.01 2015-05-25 Riccardo Bucco {creation}
+ * v0.01 2015-05-25 Riccardo Bucco {creation}
  * ================================================================================
  */
 var NorrisImpl = require('../../main/DataModel/NorrisImpl.js');

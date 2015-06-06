@@ -3,7 +3,7 @@
  * Module: DataModel
  * Location: Norris/Main/DataModel
  * Date: 2015-04-12
- * Version: {v0.06
+ * Version: v0.06
  *
  * History:
  *
