@@ -80,9 +80,9 @@ BarChart:
 data = {
     labels: ['2010','2011','2012','2013'], // asse indipendente
     datasets: [
-        {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]}, // serie1
-        {name: 'pluto', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]}, // serie2
-        {name: 'paperino', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]}, // serie3
+        {name: 'pippo', color : '#aaaaaa', values: [1,2,3,4]}, // serie1
+        {name: 'pluto', color : '#bbbbbb' , values: [1,2,3,4]}, // serie2
+        {name: 'paperino', color : '#cccccc' , values: [1,2,3,4]}, // serie3
     ]
 }
 

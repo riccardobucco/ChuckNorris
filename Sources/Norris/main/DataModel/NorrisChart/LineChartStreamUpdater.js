@@ -92,9 +92,9 @@ LineChartStreamUpdater.prototype.update = function (chart, updateData) {
  data = {
     labels: ['2010','2011','2012','2013'], // asse indipendente
     datasets: [
-        {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]}, // linea1
-        {name: 'pluto', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]}, // linea2
-        {name: 'paperino', color : {r: 255, g: 255, b: 255}, values: [1,2,3,4]}, // linea3
+        {name: 'pippo', color : '#aaaaaa', values: [1,2,3,4]}, // linea1
+        {name: 'pluto', color : '#bbbbbb', values: [1,2,3,4]}, // linea2
+        {name: 'paperino', color : '#cccccc' , values: [1,2,3,4]} // linea3
     ]
  }
 

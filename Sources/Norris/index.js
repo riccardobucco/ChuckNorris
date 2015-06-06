@@ -51,7 +51,10 @@ setInterval(mapchart, 4000);
 t.setData({
     headers: ['pippo','pluto','paperino'],
     datasets: [
-        [{value: 'foo'}, {value: 'bar'}, {value: 'baz'}]
+        [{color: '#000000', background: '#ffffff', value: 'foo'}, {color: '#ffffff', background: '#000000', value: 'bar'}, 
+        {color: '#000000', background: '#ffffff', value: 'baz'}],
+        [{color: '#000000', background: '#ffffff', value: 'foo'}, {color: '#ffffff', background: '#000000', value: 'bar'}, 
+        {color: '#000000', background: '#ffffff', value: 'baz'}]
     ]
 });
 setInterval(table, 4000);
@@ -109,8 +112,18 @@ function mapchart() {
 
 var it = 0;
 function table() {
-    var update = {stream: [
-        [{value: 'foo' + it++}, {value: 'bar' + it++}, {value: 'baz' + it++}]
-    ]};
-    t.update('stream', update);
+    if(Math.random() > 0.5) {
+        var update = {stream: [
+            [{color: '#000000', background: '#aaaaaa', value: 'foo' + it++}, 
+            {color: '#000000', background: '#aaaaaa', value: 'bar' + it++}, 
+            {color: '#000000', background: '#aaaaaa', value: 'baz' + it++}]
+        ]};
+        t.update('stream', update);
+    } else {
+        var update = { inplace: [
+            { position: {x:0, y:0}, data: {color: '#000000', background: '#aaaaaa', value:'1'} },
+            { position: {x:0, y:1}, data: {color: '#aaaaaa', background: '#000000', value:'1'} }
+        ] };
+        t.update('inplace', update);
+    }
 };
