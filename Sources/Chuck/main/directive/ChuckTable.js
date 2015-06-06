@@ -30,7 +30,7 @@ angular.module('chuck')
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: '/main/view/TableView.html',
+        templateUrl: '/bower_components/chuck-rtc/main/view/TableView.html',
         link: function(scope, element, attrs) {
 
             var table = null;

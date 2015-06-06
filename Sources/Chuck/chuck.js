@@ -4,18 +4,14 @@
     var chuckdir = path.split('/').slice(0, -1).join('/')+'/';
 
     var SCRIPTS = [
-        chuckdir + 'bower_components/angular/angular.min.js',
+        chuckdir + '../angular/angular.min.js',
 
-        chuckdir + 'bower_components/socket.io-client/socket.io.js',
+        chuckdir + '../socket.io-client/socket.io.js',
         'https://www.google.com/jsapi',
-        /*'<script type="text/javascript">
-            google.load('visualization', '1.0', {'packages':['corechart']});
-            google.setOnLoadCallback(function () {angular.bootstrap(document.body, ['chuck'])});
-        </script>'*/
         'http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript',
-        chuckdir + 'bower_components/jquery/dist/jquery.min.js',
-        chuckdir + 'bower_components/datatables/media/js/jquery.dataTables.min.js',
-        chuckdir + 'bower_components/bootstrap/dist/js/bootstrap.min.js',
+        chuckdir + '../jquery/dist/jquery.min.js',
+        chuckdir + '../datatables/media/js/jquery.dataTables.min.js',
+        chuckdir + '../bootstrap/dist/js/bootstrap.min.js',
 
         chuckdir + 'main/app.js',
 
@@ -45,4 +41,16 @@
     SCRIPTS.forEach(function (path) {
         document.write('<script type="text/javascript" src="' + path + '"></script>');
     });
+
+    document.write(
+        '<script type="text/javascript"> \
+                google.load(\'visualization\', \'1.0\', {\'packages\':[\'corechart\']}); \
+                google.setOnLoadCallback(function () {angular.bootstrap(document.body, [\'chuck\'])}); \
+        </script>'
+    );
+
+    document.write(
+        '<script type="text/javascript"> \
+        </script>'
+    );
 })()

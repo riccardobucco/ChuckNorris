@@ -31,7 +31,7 @@ angular.module('chuck')
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: '/main/view/BarChartView.html',
+        templateUrl: '/bower_components/chuck-rtc/main/view//BarChartView.html',
         link: function(scope, element, attrs) {
 
             var barchart = null;
