@@ -71,10 +71,7 @@ angular.module('chuck')
                 for (var i = 0; i < chartData.datasets.length; i++) {
                     if(chartData.datasets[i].color) {
                         options.series[i.toString()] = {
-                            color: '#' + 
-                            ('0' + chartData.datasets[i].color.r.toString(16)).slice(-2) +
-                            ('0' + chartData.datasets[i].color.g.toString(16)).slice(-2) +
-                            ('0' + chartData.datasets[i].color.b.toString(16)).slice(-2)
+                            color: chartData.datasets[i].color
                         }
                     }
                 }

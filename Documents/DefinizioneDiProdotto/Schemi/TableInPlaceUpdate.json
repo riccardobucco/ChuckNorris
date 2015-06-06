@@ -27,56 +27,12 @@
                         "type": "object",
                         "properties": {
                             "color": {
-                                "type": "object",
-                                "properties": {
-                                    "r": {
-                                        "type": "integer",
-                                         "minimum": 0,
-                                         "maximum": 255
-                                    },
-                                    "g": {
-                                        "type": "integer",
-                                         "minimum": 0,
-                                         "maximum": 255
-                                    },
-                                    "b": {
-                                        "type": "integer",
-                                         "minimum": 0,
-                                         "maximum": 255
-                                    },
-                                    "a": {
-                                        "type": "number",
-                                         "minimum": 0,
-                                         "maximum": 1
-                                    },
-                                },
-                                "required": ["r","g","b"]
+                                "type": "string",
+                                "pattern": "^#[0-9a-fA-F]{6}$"
                             },
                             "background": {
-                                "type": "object",
-                                "properties": {
-                                    "r": {
-                                        "type": "integer",
-                                         "minimum": 0,
-                                         "maximum": 255
-                                    },
-                                    "g": {
-                                        "type": "integer",
-                                         "minimum": 0,
-                                         "maximum": 255
-                                    },
-                                    "b": {
-                                        "type": "integer",
-                                         "minimum": 0,
-                                         "maximum": 255
-                                    },
-                                    "a": {
-                                        "type": "number",
-                                         "minimum": 0,
-                                         "maximum": 1
-                                    },
-                                },
-                                "required": ["r","g","b"]
+                                "type": "string",
+                                "pattern": "^#[0-9a-fA-F]{6}$"
                             },
                             "value": {
                                 "type": "string"

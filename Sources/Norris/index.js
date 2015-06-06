@@ -24,9 +24,9 @@ app.use('/', nor.getMiddleware());
 bc.setData({
     labels: ['1','2','3','4','5'],
     datasets: [
-        {name: 'pippo', color: {r: 255, g: 0, b: 0}, values: [1,2,3,4,5]},
-        {name: 'pluto', color: {r: 0, g: 255, b: 0}, values: [1,2,0,4,5]},
-        {name: 'paperino', color: {r: 0, g: 0, b: 255}, values: [1,2,3,4,5]}
+        {name: 'pippo', color: '#ff0000', values: [1,2,3,4,5]},
+        {name: 'pluto', color: '#00ff00', values: [1,2,0,4,5]},
+        {name: 'paperino', color: '#0000ff', values: [1,2,3,4,5]}
     ]
 });
 setInterval(barchart, 4000);
@@ -34,9 +34,9 @@ setInterval(barchart, 4000);
 lc.setData({
     labels: ['1','2','3','4','5'],
     datasets: [
-        {name: 'pippo', color: {r: 255, g: 0, b: 0}, values: [1,2,3,4,5]},
-        {name: 'pluto', color: {r: 0, g: 255, b: 0}, values: [1,2,3,4,5]},
-        {name: 'paperino', color: {r: 0, g: 0, b: 255}, values: [1,2,3,4,5]}
+        {name: 'pippo', color: '#ff0000', values: [1,2,3,4,5]},
+        {name: 'pluto', color: '#00ff00', values: [1,2,0,4,5]},
+        {name: 'paperino', color: '#0000ff', values: [1,2,3,4,5]}
     ]
 });
 lc.setSettings({xLabel: 'xLabel', yLabel: 'yLabel'})
