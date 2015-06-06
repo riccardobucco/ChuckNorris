@@ -24,9 +24,9 @@ app.use('/', nor.getMiddleware());
 bc.setData({
     labels: ['1','2','3','4','5'],
     datasets: [
-        {name: 'pippo', color: '#ff0000', values: [1,2,3,4,5]},
-        {name: 'pluto', color: '#00ff00', values: [1,2,0,4,5]},
-        {name: 'paperino', color: '#0000ff', values: [1,2,3,4,5]}
+        {name: 'pippo', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]},
+        {name: 'pluto', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,0,4,5]},
+        {name: 'paperino', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]}
     ]
 });
 setInterval(barchart, 4000);
@@ -34,17 +34,17 @@ setInterval(barchart, 4000);
 lc.setData({
     labels: ['1','2','3','4','5'],
     datasets: [
-        {name: 'pippo', color: '#ff0000', values: [1,2,3,4,5]},
-        {name: 'pluto', color: '#00ff00', values: [1,2,0,4,5]},
-        {name: 'paperino', color: '#0000ff', values: [1,2,3,4,5]}
+        {name: 'pippo', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]},
+        {name: 'pluto', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,0,4,5]},
+        {name: 'paperino', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]}
     ]
 });
 lc.setSettings({xLabel: 'xLabel', yLabel: 'yLabel', legendPosition: 'top'})
 setInterval(linechart, 4000);
 
 mc.setData([
-    {name: 'pippo', color : '#0000ff', values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]},
-    {name: 'pluto', color : '#ffff00', values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
+    {name: 'pippo', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]},
+    {name: 'pluto', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
 ]);
 setInterval(mapchart, 4000);
 
