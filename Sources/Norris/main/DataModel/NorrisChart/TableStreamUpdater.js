@@ -63,7 +63,7 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
         var newLinePosition=chart.getSettings().newLinePosition;
         if (!isEmpty(data)) {
             for(var i=0; i<update.length; i++) {
-                if (update[i].length==data.headers.length) {
+                if (update[i].row.length==data.headers.length) {
                     if(newLinePosition=='bottom') {
                         data.datasets.push(update[i]);
                         if (data.datasets.length>chart.getSettings().maxRows) {
@@ -93,26 +93,36 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
 
 /*
 
- Table:
+Table:
  data = {
     headers: ['anno','mese','giorno'], // intestazioni colonne
     datasets: [
-        [ {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
-            {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
-            {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'}
-        ], // riga1
-        [ {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
-            {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
-            {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'}
-        ] // riga2
+        { row: [ 
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'}
+        ]}, // riga1
+        { row: [ 
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'}
+        ]} // riga2
     ]
  }
 
 table:stream:
 update = {
     stream: [
-        [ {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'}, {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'}, {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'} ], // riga 1
-        [ {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'}, {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'}, {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value: '1'} ], // riga 2
+        { row: [ 
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'}
+        ]}, // riga1
+        { row: [ 
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'}
+        ]} // riga2
     ] // aggiungo 2 righe nella posizione indicata nelle impostazioni (in testa o in coda)
 }
 */

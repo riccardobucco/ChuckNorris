@@ -64,9 +64,9 @@ TableInPlaceUpdater.prototype.update = function (chart, updateData) {
             for(var i=0; i<update.length; i++) {
                 var x=update[i].position.x;
                 var y=update[i].position.y;
-                data.datasets[x][y].color=update[i].data.color;
-                data.datasets[x][y].background=update[i].data.background;
-                data.datasets[x][y].value=update[i].data.value;
+                data.datasets[x].row[y].color=update[i].data.color;
+                data.datasets[x].row[y].background=update[i].data.background;
+                data.datasets[x].row[y].value=update[i].data.value;
             }
             chart.setData(data);
         }
@@ -83,22 +83,24 @@ TableInPlaceUpdater.prototype.update = function (chart, updateData) {
  data = {
     headers: ['anno','mese','giorno'], // intestazioni colonne
     datasets: [
-        [ {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
-            {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
-            {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'}
-        ], // riga1
-        [ {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
-            {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'},
-            {color : {r: 255, g: 255, b: 255}, background : {r: 255, g: 255, b: 255}, value: '1'}
-        ], // riga2
+        { row: [ 
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'}
+        ]}, // riga1
+        { row: [ 
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'},
+            {color : '#000000', background : '#fffffff', value: '1'}
+        ]} // riga2
     ]
  }
 
  table:inplace:
  update = {
     inplace: [
-        { position: {x:0, y:0}, data: {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value:'1'} },
-        { position: {x:0, y:1}, data: {color: {r: 255, g: 255, b: 255}, background: {r: 255, g: 255, b: 255}, value:'1'} }
+        { position: {x:0, y:0}, data: {color: '#000000', background: '#fffffff', value:'1'} },
+        { position: {x:0, y:1}, data: {color: '#000000', background: '#fffffff', value:'1'} }
     ] // modifico 2 valori già esistenti
  }
  

@@ -51,10 +51,14 @@ setInterval(mapchart, 4000);
 t.setData({
     headers: ['pippo','pluto','paperino'],
     datasets: [
-        [{color: '#000000', background: '#ffffff', value: 'foo'}, {color: '#ffffff', background: '#000000', value: 'bar'}, 
-        {color: '#000000', background: '#ffffff', value: 'baz'}],
-        [{color: '#000000', background: '#ffffff', value: 'foo'}, {color: '#ffffff', background: '#000000', value: 'bar'}, 
-        {color: '#000000', background: '#ffffff', value: 'baz'}]
+        { row: [
+            {color: '#000000', background: '#ffffff', value: 'foo'}, {color: '#ffffff', background: '#000000', value: 'bar'}, 
+            {color: '#000000', background: '#ffffff', value: 'baz'}
+        ]},
+        { row: [
+            {color: '#000000', background: '#ffffff', value: 'foo'}, {color: '#ffffff', background: '#000000', value: 'bar'}, 
+            {color: '#000000', background: '#ffffff', value: 'baz'}
+        ]}
     ]
 });
 setInterval(table, 4000);
@@ -114,9 +118,11 @@ var it = 0;
 function table() {
     if(Math.random() > 0.5) {
         var update = {stream: [
-            [{color: '#000000', background: '#aaaaaa', value: 'foo' + it++}, 
-            {color: '#000000', background: '#aaaaaa', value: 'bar' + it++}, 
-            {color: '#000000', background: '#aaaaaa', value: 'baz' + it++}]
+            { row: [
+                {color: '#000000', background: '#aaaaaa', value: 'foo' + it++}, 
+                {color: '#000000', background: '#aaaaaa', value: 'bar' + it++}, 
+                {color: '#000000', background: '#aaaaaa', value: 'baz' + it++}
+            ]}
         ]};
         t.update('stream', update);
     } else {
