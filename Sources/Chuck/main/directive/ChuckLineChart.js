@@ -36,7 +36,7 @@ angular.module('chuck')
             GoogleCharts.then(function () {
 
                 var linechart = null;
-                var options = {};
+                var options = { height:400 };
 
                 ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
                     .then(function (chart) {
@@ -68,6 +68,12 @@ angular.module('chuck')
                     options.legend = {
                         position: chartSettings.legendPosition
                     };
+
+                    if(chartSettings.legendPosition=='right' || chartSettings.legendPosition=='left') {
+            	        options.chartArea = {width: '60%', height: '70%'}
+                    } else {
+                        options.chartArea = {width: '70%', height: '60%'}
+                    }
 
                     options.series = {};
                     for (var i = 0; i < chartData.datasets.length; i++) {
