@@ -42,10 +42,10 @@ lc.setData({
 lc.setSettings({xLabel: 'xLabel', yLabel: 'yLabel', legendPosition: 'top'})
 setInterval(linechart, 4000);
 
-mc.setData([
+mc.setData({ datasets: [
     {name: 'pippo', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]},
     {name: 'pluto', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
-]);
+]});
 setInterval(mapchart, 4000);
 
 t.setData({

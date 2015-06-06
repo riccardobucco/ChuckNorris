@@ -64,8 +64,8 @@ MapChartInPlaceUpdater.prototype.update = function (chart, updateData) {
             for(var i=0; i<update.length; i++) {
                 var series=update[i].position.series;
                 var index=update[i].position.index;
-                data[series].values[index].x=update[i].data.x;
-                data[series].values[index].y=update[i].data.y;
+                data.datasets[series].values[index].x=update[i].data.x;
+                data.datasets[series].values[index].y=update[i].data.y;
             }
             chart.setData(data);
         }
@@ -79,11 +79,11 @@ MapChartInPlaceUpdater.prototype.update = function (chart, updateData) {
 /*
 
  MapChart:
- data = [
+ data = {datasets: [
     {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // serie1
     {name: 'pluto', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // serie2
     {name: 'paperino', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]} // serie3
- ]
+ ]}
 
  mapchart:inplace:
  update = {

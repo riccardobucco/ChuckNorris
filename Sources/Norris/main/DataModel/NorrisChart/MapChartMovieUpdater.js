@@ -65,8 +65,8 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
                 for(var i=0; i<updateData.inplace.length; i++) {
                     var series=updateData.inplace[i].position.series;
                     var index=updateData.inplace[i].position.index;
-                    data[series].values[index].x=updateData.inplace[i].data.x;
-                    data[series].values[index].y=updateData.inplace[i].data.y;
+                    data.datasets[series].values[index].x=updateData.inplace[i].data.x;
+                    data.datasets[series].values[index].y=updateData.inplace[i].data.y;
                 }
             }
 
@@ -75,9 +75,9 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
                 for(var i=0; i<updateData.stream.length; i++) {
                     var series=updateData.stream[i].series;
                     var val=updateData.stream[i].data;
-                    data[series].values.push(val);
-                    if (data[series].values.length > chart.getSettings().maxValues) {
-                        data[series].values.shift();
+                    data.datasets[series].values.push(val);
+                    if (data.datasets[series].values.length > chart.getSettings().maxValues) {
+                        data.datasets[series].values.shift();
                     }
                 }
             }
@@ -122,8 +122,8 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
                             updateData.delete[k].index--;
                         }
                     }*/
-                    data[series].values[index]=null;
-                    data[series].values = data[series].values.filter(function (e) {return e!=null;});
+                    data.datasets[series].values[index]=null;
+                    data.datasets[series].values = data.datasets[series].values.filter(function (e) {return e!=null;});
                 }
 
             }
@@ -142,11 +142,11 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
 /*
 
  MapChart:
- data = [
+ data = {datasets: [
     {name: 'pippo', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // serie1
     {name: 'pluto', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]}, // serie2
     {name: 'paperino', color : {r: 255, g: 255, b: 255}, values: [{x:1, y:1}, {x:1, y:1}, {x:1, y:1}, {x:1, y:1}]} // serie3
- ]
+ ]}
 
  mapchart:movie:
  update = {
