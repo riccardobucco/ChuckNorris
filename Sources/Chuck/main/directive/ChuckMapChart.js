@@ -26,80 +26,84 @@
  angular.module('chuck')
 
 
-.directive('chuckMapchart', ['ChartRequester', function (ChartRequester) {
+.directive('chuckMapchart', ['ChartRequester', 'OpenLayers', function (ChartRequester, OpenLayers) {
     return {
         restrict: 'E',
         scope: {},
         templateUrl: '/bower_components/chuck-rtc/main/view/MapChartView.html',
         link: function(scope, element, attrs) {
 
-            var map = null;
-            var overlays = [];
+            OpenLayers.then(function () {
 
-            ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
-                .then(function (chart) {
-                    scope.chart = chart;
-                    init();
-                    scope.$watch('chart', render, true);
-                }, function (reason) {
-                    console.error(reason);
-                });
+                var map = null;
+                var overlays = [];
 
-            function init() {
-                var settings = scope.chart.getSettings();
-
-                var lon = settings.area.x;
-                var lat = settings.area.y;
-                var zoom = settings.area.zoom;
-
-                map = new ol.Map({
-                    controls: ol.control.defaults(),
-                    layers: [
-                        new ol.layer.Tile({
-                            source: new ol.source.OSM()
-                        })
-                    ],
-                    target: 'map',
-                    view: new ol.View({
-                        center: ol.proj.transform([lon, lat], 'EPSG:4326', 'EPSG:3857'),
-                        zoom: zoom
-                    })
-                });
-
-            };
-
-            function render(newValue, oldValue) {
-                var newData = newValue.getData();
-
-                overlays.forEach(function (overlay) {
-                    map.removeOverlay(overlay);
-                });
-                overlays = [];
-
-                newData.forEach(function (dataset) {
-                    dataset.values.forEach(function (value) {
-
-                        var icon = document.createElement('object');
-                        icon.type = 'image/svg+xml';
-                        icon.data = '/marker.svg';
-                        if(dataset.color) {
-                            icon.addEventListener('load', function () {
-                                icon.contentDocument.getElementsByTagName('svg')[0].setAttribute('style','fill: ' + dataset.color);
-                            });
-                        }
-
-                        var overlay = new ol.Overlay({
-                            element: icon,
-                            position: ol.proj.transform([value.x, value.y], 'EPSG:4326', 'EPSG:3857'),
-                            positioning: 'bottom-center'
-                        });
-                        map.addOverlay(overlay);
-                        overlays.push(overlay);
+                ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
+                    .then(function (chart) {
+                        scope.chart = chart;
+                        init();
+                        scope.$watch('chart', render, true);
+                    }, function (reason) {
+                        console.error(reason);
                     });
-                });
-                
 
-            };
+                function init() {
+                    var settings = scope.chart.getSettings();
+
+                    var lon = settings.area.x;
+                    var lat = settings.area.y;
+                    var zoom = settings.area.zoom;
+
+                    map = new ol.Map({
+                        controls: ol.control.defaults(),
+                        layers: [
+                            new ol.layer.Tile({
+                                source: new ol.source.OSM()
+                            })
+                        ],
+                        target: 'map',
+                        view: new ol.View({
+                            center: ol.proj.transform([lon, lat], 'EPSG:4326', 'EPSG:3857'),
+                            zoom: zoom
+                        })
+                    });
+
+                };
+
+                function render(newValue, oldValue) {
+                    var newData = newValue.getData();
+
+                    overlays.forEach(function (overlay) {
+                        map.removeOverlay(overlay);
+                    });
+                    overlays = [];
+
+                    newData.forEach(function (dataset) {
+                        dataset.values.forEach(function (value) {
+
+                            var icon = document.createElement('object');
+                            icon.type = 'image/svg+xml';
+                            icon.data = '/marker.svg';
+                            if(dataset.color) {
+                                icon.addEventListener('load', function () {
+                                    icon.contentDocument.getElementsByTagName('svg')[0].setAttribute('style','fill: ' + dataset.color);
+                                });
+                            }
+
+                            var overlay = new ol.Overlay({
+                                element: icon,
+                                position: ol.proj.transform([value.x, value.y], 'EPSG:4326', 'EPSG:3857'),
+                                positioning: 'bottom-center'
+                            });
+                            map.addOverlay(overlay);
+                            overlays.push(overlay);
+                        });
+                    });
+                    
+
+                };
+
+            });
 
         }
     };

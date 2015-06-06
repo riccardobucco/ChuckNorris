@@ -27,99 +27,103 @@
 angular.module('chuck')
 
 
-.directive('chuckBarchart', ['ChartRequester', function (ChartRequester) {
+.directive('chuckBarchart', ['ChartRequester', 'GoogleCharts', function (ChartRequester, GoogleCharts) {
     return {
         restrict: 'E',
         scope: {},
         templateUrl: '/bower_components/chuck-rtc/main/view//BarChartView.html',
         link: function(scope, element, attrs) {
 
-            var barchart = null;
-            var options = {};
+            GoogleCharts.then(function () {
 
-            ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
-                .then(function (chart) {
-                    scope.chart = chart;
-                    init();
-                    scope.$watch('chart', render, true);
-                }, function (reason) {
-                    console.error(reason);
-                });
+                var barchart = null;
+                var options = {};
 
-            function init() {
-                var chartData = scope.chart.getData();
-                var chartSettings = scope.chart.getSettings();
+                ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
+                    .then(function (chart) {
+                        scope.chart = chart;
+                        init();
+                        scope.$watch('chart', render, true);
+                    }, function (reason) {
+                        console.error(reason);
+                    });
 
-                options.animation = {
-                    duration: chartSettings.style.animationDuration,
-                    easing: 'inAndOut',
-                    startup: true
-                };
+                function init() {
+                    var chartData = scope.chart.getData();
+                    var chartSettings = scope.chart.getSettings();
 
-                options.hAxis = {
-                    title: chartSettings.xLabel
-                };
+                    options.animation = {
+                        duration: chartSettings.style.animationDuration,
+                        easing: 'inAndOut',
+                        startup: true
+                    };
 
-                options.vAxis = {
-                    title: chartSettings.yLabel
-                };
+                    options.hAxis = {
+                        title: chartSettings.xLabel
+                    };
 
-                options.legend = {
-                    position: chartSettings.legendPosition
-                };
+                    options.vAxis = {
+                        title: chartSettings.yLabel
+                    };
 
-                options.series = {};
-                for (var i = 0; i < chartData.datasets.length; i++) {
-                    if(chartData.datasets[i].color) {
-                        options.series[i.toString()] = {
-                            color: chartData.datasets[i].color
+                    options.legend = {
+                        position: chartSettings.legendPosition
+                    };
+
+                    options.series = {};
+                    for (var i = 0; i < chartData.datasets.length; i++) {
+                        if(chartData.datasets[i].color) {
+                            options.series[i.toString()] = {
+                                color: chartData.datasets[i].color
+                            }
                         }
                     }
-                }
 
-                if(chartSettings.showGrid) {
-                    options.hAxis.gridlines = {
-                        count: -1
-                    };
-                    options.vAxis.gridlines = {
-                        count: -1
+                    if(chartSettings.showGrid) {
+                        options.hAxis.gridlines = {
+                            count: -1
+                        };
+                        options.vAxis.gridlines = {
+                            count: -1
+                        }
+                    } else {
+                        options.hAxis.gridlines = {
+                            count: 2
+                        };
+                        options.vAxis.gridlines = {
+                            count: 2
+                        }
                     }
-                } else {
-                    options.hAxis.gridlines = {
-                        count: 2
-                    };
-                    options.vAxis.gridlines = {
-                        count: 2
-                    }
-                }
 
-                if(chartSettings.orientation === 'horizontal')
-                    barchart = new google.visualization.BarChart(element.contents()[0]);
-                else
-                    barchart = new google.visualization.ColumnChart(element.contents()[0]);
-            };
+                    if(chartSettings.orientation === 'horizontal')
+                        barchart = new google.visualization.BarChart(element.contents()[0]);
+                    else
+                        barchart = new google.visualization.ColumnChart(element.contents()[0]);
+                };
 
-            function render(newValue, oldValue) {
-                var newData = newValue.getData();
+                function render(newValue, oldValue) {
+                    var newData = newValue.getData();
 
-                var data = new google.visualization.DataTable();
+                    var data = new google.visualization.DataTable();
 
-                data.addColumn('string', 'headers');
-                newData.datasets.forEach(function (dataset) {
-                    data.addColumn('number', dataset.name || 'unknow');
-                });
-
-                for(var i = 0; i < newData.labels.length; i++) {
-                    var row = [];
-                    row.push(newData.labels[i]);
+                    data.addColumn('string', 'headers');
                     newData.datasets.forEach(function (dataset) {
-                        row.push(dataset.values[i]);
+                        data.addColumn('number', dataset.name || 'unknow');
                     });
-                    data.addRow(row);
-                }
 
-                barchart.draw(data, options);
-            };
+                    for(var i = 0; i < newData.labels.length; i++) {
+                        var row = [];
+                        row.push(newData.labels[i]);
+                        newData.datasets.forEach(function (dataset) {
+                            row.push(dataset.values[i]);
+                        });
+                        data.addRow(row);
+                    }
+
+                    barchart.draw(data, options);
+                };
+
+            });
         }
     };
 }]);

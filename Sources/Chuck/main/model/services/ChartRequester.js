@@ -23,7 +23,7 @@
  * 0.01 2015-04-12 Bucco Riccardo   Creation
  * ================================================================================
  */
-angular.module('chuck-requester', ['chuck-chart'])
+angular.module('chuck-requester')
 
 /**
  * Creates a new ChartRequester using the inversion of control.
@@ -31,7 +31,7 @@ angular.module('chuck-requester', ['chuck-chart'])
  * @param settings
  * @constructor
  */
-.factory('ChartRequester', ['ChartImpl','$rootScope', '$timeout', '$q', 'BarChartImpl', 'LineChartImpl', 'MapChartImpl', 'TableImpl', function (ChartImpl, $rootScope, $timeout, $q) {
+.factory('ChartRequester', ['ChartImpl', 'SocketIO', '$rootScope', '$timeout', '$q', 'BarChartImpl', 'LineChartImpl', 'MapChartImpl', 'TableImpl', function (ChartImpl, SocketIO, $rootScope, $timeout, $q) {
     return {
 		
 		/**
@@ -41,35 +41,40 @@ angular.module('chuck-requester', ['chuck-chart'])
 		 * @returns {ChartImpl} - The requested chart
 		 */
         bind: function (endpoint, id) {
+
             var deferred = $q.defer();
 
-            var hostRegExp = new RegExp(/(http(s)?:\/\/)?[\w.]*(:\w+)/i);
-            var host = (endpoint.match(hostRegExp) || [location.host])[0];
+            SocketIO.then(function () {
 
-            var pathRegExp = new RegExp(/\/.*/);
-            var path = (endpoint.match(pathRegExp) || ['/'])[0];
+                var hostRegExp = new RegExp(/(http(s)?:\/\/)?[\w.]*(:\w+)/i);
+                var host = (endpoint.match(hostRegExp) || [location.host])[0];
 
-            if(path.substr(-1) === '/') {
-                path = path.slice(0,-1);
-            }
+                var pathRegExp = new RegExp(/\/.*/);
+                var path = (endpoint.match(pathRegExp) || ['/'])[0];
 
-            var socket = io(host + '/' + id, {path: path + '/' + 'socket.io'});
+                if(path.substr(-1) === '/') {
+                    path = path.slice(0,-1);
+                }
 
-            socket.on('chart', function (type, settings, data) {
-                var chart = ChartImpl.createChart(type, id);
-                chart.setSettings(settings);
-                chart.setData(data);
-                socket.on('update', function (updateType, updateData) {
-                    $rootScope.$apply(function () {
-                        chart.update(updateType, updateData);
+                var socket = io(host + '/' + id, {path: path + '/' + 'socket.io'});
+
+                socket.on('chart', function (type, settings, data) {
+                    var chart = ChartImpl.createChart(type, id);
+                    chart.setSettings(settings);
+                    chart.setData(data);
+                    socket.on('update', function (updateType, updateData) {
+                        $rootScope.$apply(function () {
+                            chart.update(updateType, updateData);
+                        });
                     });
+                    deferred.resolve(chart);
                 });
-                deferred.resolve(chart);
-            });
 
-            $timeout(function () {
-                deferred.reject('timeout');
-            }, 3000);
+                $timeout(function () {
+                    deferred.reject('timeout');
+                }, 3000);
+
+            });
 
             return deferred.promise;
         }

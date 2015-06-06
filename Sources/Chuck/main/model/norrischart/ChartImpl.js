@@ -23,8 +23,7 @@
  * 0.01 2015-04-10 Carlon Chiara   Creation
  * ================================================================================
  */
-angular.module('norris-chartupdater', []);
-angular.module('chuck-chart', ['norris-chartupdater'])
+angular.module('chuck-chart')
 
 .factory('ChartImpl', [function () {
 
