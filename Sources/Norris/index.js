@@ -8,7 +8,7 @@ var app = express();
 var server = http.createServer(app);
 var nor = norris(server, '/');
 
-server.listen(9000);
+server.listen(process.env.PORT || 9000);
 
 var bc = nor.createChart('barchart', 'bc');
 var lc = nor.createChart('linechart', 'lc');

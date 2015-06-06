@@ -61,7 +61,7 @@
                                 source: new ol.source.OSM()
                             })
                         ],
-                        target: 'map',
+                        target: element.contents()[0],
                         view: new ol.View({
                             center: ol.proj.transform([lon, lat], 'EPSG:4326', 'EPSG:3857'),
                             zoom: zoom
