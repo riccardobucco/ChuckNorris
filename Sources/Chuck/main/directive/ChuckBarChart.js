@@ -130,6 +130,11 @@ angular.module('chuck')
                     barchart.draw(data, options);
                 };
 
+
+                $(window).resize(function(){
+	            render(scope.chart, scope.chart);
+	        });
+
             });
         }
     };

@@ -130,6 +130,12 @@ angular.module('chuck')
 
                     linechart.draw(data, options);
                 };
+
+
+                $(window).resize(function(){
+	            render(scope.chart, scope.chart);
+	        });
+
             });
 
         }
