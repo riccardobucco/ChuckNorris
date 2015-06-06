@@ -1,16 +1,16 @@
 /*
- * Name: {TUChartImpl.js}
- * Module: {}
- * Location: {Norris/test/unit}
- * Date: {2015-05-25}
- * Version: {v0.1}
+ * Name: TUChartImpl.js
+ * Module: 
+ * Location: Norris/test/unit
+ * Date: 2015-05-25
+ * Version: v0.01
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.01 2015-05-25 Riccardo Bucco {creation}
+ * v0.01 2015-05-25 Bucco Riccardo Creation
  * ================================================================================
  */
 var ChartImpl = require('../../main/DataModel/NorrisChart/ChartImpl.js');

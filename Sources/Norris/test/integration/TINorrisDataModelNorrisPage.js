@@ -1,16 +1,16 @@
 /*
- * Name: {TINorrisDataModelNorrisPage.js}
- * Module: {}
- * Location: {Norris/test/integration}
- * Date: {2015-05-25}
- * Version: {v0.01}
+ * Name: TINorrisDataModelNorrisPage.js
+ * Module: 
+ * Location: Norris/test/integration
+ * Date: 2015-05-25
+ * Version: v0.01
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.01 2015-05-25 Davide Dal Bianco {creation}
+ * v0.01 2015-05-25 Dal Bianco Davide Creation
  * ================================================================================
  */
 

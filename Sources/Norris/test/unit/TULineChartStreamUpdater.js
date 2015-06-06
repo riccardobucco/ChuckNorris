@@ -1,16 +1,16 @@
 /*
- * Name: {TULineChartStreamUpdater.js}
- * Module: {}
- * Location: {Norris/test/unit}
- * Date: {2015-05-26}
- * Version: {v0.1}
+ * Name: TULineChartStreamUpdater.js
+ * Module: 
+ * Location: Norris/test/unit
+ * Date: 2015-05-26
+ * Version: v0.01
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.01 2015-05-26 Riccardo Bucco {creation}
+ * v0.01 2015-05-26 Bucco Riccardo Creation
  * ================================================================================
  */
 

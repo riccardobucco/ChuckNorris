@@ -1,16 +1,16 @@
 /*
- * Name: {TUChartRef.js}
- * Module: {}
- * Location: {Norris/test/unit}
- * Date: {2015-05-26}
- * Version: {v0.1}
+ * Name: TUChartRef.js
+ * Module: 
+ * Location: Norris/test/unit
+ * Date: 2015-05-26
+ * Version: v0.01
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.01 2015-05-26 Bigarella Chiara {creation}
+ * v0.01 2015-05-26 Bigarella Chiara Creation
  * ================================================================================
  */
  

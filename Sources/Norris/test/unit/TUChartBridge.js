@@ -1,16 +1,16 @@
 /*
- * Name: {TUChartBridge.js}
- * Module: {}
- * Location: {Norris/test/unit}
- * Date: {2015-05-25}
- * Version: {v0.1}
+ * Name: TUChartBridge.js
+ * Module:
+ * Location: Norris/test/unit
+ * Date: 2015-05-25
+ * Version: v0.01
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.01 2015-05-25 kaizenteam {creation}
+ * v0.01 2015-05-25 Bigarella Chiara Creation
  * ================================================================================
  */
 var ChartBridge = require('../../main/InternalAPIManager/ChartBridge.js');
