@@ -66,8 +66,8 @@ angular.module('norris-chartupdater')
                 for(var i=0; i<update.length; i++) {
                     var series=update[i].position.series;
                     var index=update[i].position.index;
-                    data[series].values[index].x=update[i].data.x;
-                    data[series].values[index].y=update[i].data.y;
+                    data.datasets[series].values[index].x=update[i].data.x;
+                    data.datasets[series].values[index].y=update[i].data.y;
                 }
                 chart.setData(data);
             }

@@ -62,14 +62,14 @@ angular.module('norris-chartupdater')
 
         if (!isEmpty(updateData)) {
             var data=chart.getData();
-             var update=updateData['inplace'];
+            var update=updateData['inplace'];
             if (!isEmpty(data)) {
                 for(var i=0; i<update.length; i++) {
                     var x=update[i].position.x;
                     var y=update[i].position.y;
-                    data.datasets[x][y].color=update[i].data.color;
-                    data.datasets[x][y].background=update[i].data.background;
-                    data.datasets[x][y].value=update[i].data.value;
+                    data.datasets[x].row[y].color=update[i].data.color;
+                    data.datasets[x].row[y].background=update[i].data.background;
+                    data.datasets[x].row[y].value=update[i].data.value;
                 }
                 chart.setData(data);
             }

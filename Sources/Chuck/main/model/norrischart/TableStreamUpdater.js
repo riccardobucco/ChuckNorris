@@ -66,7 +66,7 @@ angular.module('norris-chartupdater')
             var newLinePosition=chart.getSettings().newLinePosition;
             if (!isEmpty(data)) {
                 for(var i=0; i<update.length; i++) {
-                    if (update[i].length==data.headers.length) {
+                    if (update[i].row.length==data.headers.length) {
                         if(newLinePosition=='bottom') {
                             data.datasets.push(update[i]);
                             if (data.datasets.length>chart.getSettings().maxRows) {
@@ -79,7 +79,6 @@ angular.module('norris-chartupdater')
                                 data.datasets.pop();
                             }
                         }
-
                     }
                     else {
                         throw ("wrongUpdateData");
@@ -88,8 +87,8 @@ angular.module('norris-chartupdater')
                 chart.setData(data);
             }
             else {
-                console.log("ERROR: the chart has no data to update.");
-                throw ("emptyChart");
+                 console.log("ERROR: the chart has no data to update.");
+                 throw ("emptyChart");
             }
         }
     };

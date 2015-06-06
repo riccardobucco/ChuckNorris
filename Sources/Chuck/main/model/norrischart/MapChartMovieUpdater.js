@@ -63,44 +63,79 @@ angular.module('norris-chartupdater')
         if (!isEmpty(updateData)) {
             var data=chart.getData();
             if (!isEmpty(data)) {
-            /* In place: */
-                for(var i=0; i<updateData.inplace.length; i++) {
-                    var series=updateData.inplace[i].position.series;
-                    var index=updateData.inplace[i].position.index;
-                    data[series].values[index].x=updateData.inplace[i].data.x;
-                    data[series].values[index].y=updateData.inplace[i].data.y;
-                }
-
-                /* Stream: */
-                for(var i=0; i<updateData.stream.length; i++) {
-                    var series=updateData.stream[i].series;
-                    var val=updateData.stream[i].data;
-                    data[series].values.push(val);
-                    if (data[series].values.length > chart.getSettings().maxValues) {
-                        data[series].values.shift();
+                /* In place: */
+                if (updateData.hasOwnProperty('inplace')) {
+                    for(var i=0; i<updateData.inplace.length; i++) {
+                        var series=updateData.inplace[i].position.series;
+                        var index=updateData.inplace[i].position.index;
+                        data.datasets[series].values[index].x=updateData.inplace[i].data.x;
+                        data.datasets[series].values[index].y=updateData.inplace[i].data.y;
                     }
                 }
 
-                /* Delete: */
-                for(var i=0; i<updateData.delete.length; i++) {
-                    var series=updateData.delete[i].series;
-                    var index=updateData.delete[i].index;
-                    for (var k=i; k<updateData.delete; k++) {
-                        if ( series== updateData.delete[k].series ){
-                            updateData.delete[k].index--;
+                 /* Stream: */
+                 if (updateData.hasOwnProperty('stream')) {
+                     for(var i=0; i<updateData.stream.length; i++) {
+                        var series=updateData.stream[i].series;
+                        var val=updateData.stream[i].data;
+                        data.datasets[series].values.push(val);
+                        if (data.datasets[series].values.length > chart.getSettings().maxValues) {
+                            data.datasets[series].values.shift();
                         }
                     }
-                    data[series].values[index]=null;
-                    data[series].values = data[series].values.filter(function (e) {return e!=null;});
-                }
+                 }
 
-                chart.setData(data);
+                /* Delete: */
+                if (updateData.hasOwnProperty('delete')) {
+                    var index={};
+                    var update=[];
+
+                    var k=0;
+                    for (var j=0; j<data.length; j++) {
+                        index[j]=[];
+                        for (var i=0; i<updateData.delete.length; i++) {
+                            if (j==updateData.delete[i].series) {
+                                update[k]=updateData.delete[i];
+                                k++;
+                                index[j].push(updateData.delete[i].index);
+                                console.log("update.length: "+ update.length + " --- "+JSON.stringify(update));
+                            }
+                        }
+                    } /*the update array contains the element sorted by the series*/
+
+                    for(var serie in index) {
+                        index[serie].sort(function(a,b){return a - b});
+                    }
+
+                    var offset=0;
+                    for(var serie in index) {
+                        for (var i=offset; i<index[serie].length; i++) {
+                            update[i].index=index[serie][i];
+                        }
+                        offset=offset+index[serie].length;
+                    }
+
+                    for(var i=update.length-1; i>=0; i--) {
+                        //console.log("update.length: "+ update.length + " --- "+JSON.stringify(update));
+                        var series=update[i].series;
+                        var index=update[i].index;
+                        /*for (var k=i; k<updateData.delete; k++) {
+                            if ( series== updateData.delete[k].series ){                                updateData.delete[k].index--;
+                            }
+                        }*/
+                        data.datasets[series].values[index]=null;
+                        data.datasets[series].values = data.datasets[series].values.filter(function (e) {return e!=null;});
+                    }
+                }
+                // validazione di data rispetto allo schema JSON
+
+               chart.setData(data);
             }
             else {
-                console.log("ERROR: the chart has no data to update.");
-                throw ("emptyChart");
+               console.log("ERROR: the chart has no data to update.");
+               throw ("MapChartMovieUpdater:emptyChart");
             }
-        }
+       }
     };
 
     return MapChartMovieUpdater;
