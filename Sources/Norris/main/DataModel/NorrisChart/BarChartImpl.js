@@ -35,6 +35,7 @@ var defaults = {
 	legendPosition : 'right',
 	orientation : 'vertical',
 	style: {
+		barArea: '60%',
 		animationDuration: 1000,
 		showGrid : false,
 	}

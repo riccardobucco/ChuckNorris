@@ -35,14 +35,10 @@
         "style": {
             "type": "object",
             "properties": {
-                /*"barValueSpacing": {
-                    "type": "integer",
-                    "minimum": 0
+                "barArea":  {
+                    "type": "string",
+                    "pattern" : "^[0-9]{1,3}%$"
                 },
-                "barDatasetSpacing":  {
-                    "type": "integer",
-                    "minimum": 0
-                },*/
                 "showGrid": {
                     "type": "boolean"
                 },
