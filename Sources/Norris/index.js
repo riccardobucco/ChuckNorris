@@ -29,7 +29,7 @@ bc.setData({
         {name: 'paperino', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]}
     ]
 });
-setInterval(barchart, 4000);
+setInterval(barchart, 2000);
 
 lc.setData({
     labels: ['1','2','3','4','5'],
@@ -40,28 +40,28 @@ lc.setData({
     ]
 });
 lc.setSettings({xLabel: 'xLabel', yLabel: 'yLabel', legendPosition: 'top'})
-setInterval(linechart, 4000);
+setInterval(linechart, 2000);
 
 mc.setData({ datasets: [
-    {name: 'pippo', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]},
-    {name: 'pluto', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
+    {name: 'pippo', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]}//,
+    //{name: 'pluto', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
 ]});
-setInterval(mapchart, 4000);
+setInterval(mapchart, 2000);
 
 t.setData({
     headers: ['pippo','pluto','paperino'],
     datasets: [
         { row: [
-            {color: '#000000', background: '#ffffff', value: 'foo'}, {color: '#ffffff', background: '#000000', value: 'bar'}, 
-            {color: '#000000', background: '#ffffff', value: 'baz'}
+            {color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value: 'foo'}, {color: '#ffffff', background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value: 'bar'}, 
+            {color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value: 'baz'}
         ]},
         { row: [
-            {color: '#000000', background: '#ffffff', value: 'foo'}, {color: '#ffffff', background: '#000000', value: 'bar'}, 
-            {color: '#000000', background: '#ffffff', value: 'baz'}
+            {color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value: 'foo'}, {color: '#ffffff', background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value: 'bar'}, 
+            {color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value: 'baz'}
         ]}
     ]
 });
-setInterval(table, 4000);
+setInterval(table, 2000);
 
 
 
@@ -103,15 +103,32 @@ function linechart() {
 };
 
 function mapchart() {
-    var update = {
-        inplace: [],
-        delete: [],
-        stream: [
-            {series: 0, data: {x: Math.floor(Math.random() * 180) - 90, y: Math.floor(Math.random() * 90) - 45}},
-            {series: 1, data: {x: Math.floor(Math.random() * 180) - 90, y: Math.floor(Math.random() * 90) - 45}}
-        ]
-    };
-    mc.update('movie', update);
+    if(Math.random() > 0.5) {
+        var update = {
+            inplace: [],
+            delete: [/*{series:0, index:Math.floor(Math.random()*4)}*/],
+            stream: [
+                {series: 0, data: {x: Math.floor(Math.random() * 180) - 90, y: Math.floor(Math.random() * 90) - 45}}//,
+                //{series: 1, data: {x: Math.floor(Math.random() * 180) - 90, y: Math.floor(Math.random() * 90) - 45}}
+            ]
+        };
+        mc.update('movie', update);
+    }
+    else{
+        var update = {
+            inplace: [{
+                position:{
+                    series:0,
+                    index: Math.floor(Math.random()*4)
+                },
+                data: {
+                    x: Math.floor(Math.random() * 180) - 90, 
+                    y: Math.floor(Math.random() * 90) - 45
+                }
+            }]
+        };
+        mc.update('inplace', update);
+    }
 };
 
 var it = 0;
@@ -119,16 +136,16 @@ function table() {
     if(Math.random() > 0.5) {
         var update = {stream: [
             { row: [
-                {color: '#000000', background: '#aaaaaa', value: 'foo' + it++}, 
-                {color: '#000000', background: '#aaaaaa', value: 'bar' + it++}, 
-                {color: '#000000', background: '#aaaaaa', value: 'baz' + it++}
+                {color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value: 'foo' + it++}, 
+                {color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value: 'bar' + it++}, 
+                {color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value: 'baz' + it++}
             ]}
         ]};
         t.update('stream', update);
     } else {
         var update = { inplace: [
-            { position: {x:0, y:0}, data: {color: '#000000', background: '#aaaaaa', value:'1'} },
-            { position: {x:0, y:1}, data: {color: '#aaaaaa', background: '#000000', value:'1'} }
+            { position: {x:0, y:0}, data: {color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value:'1'} },
+            { position: {x:0, y:1}, data: {color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), background: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), value:'1'} }
         ] };
         t.update('inplace', update);
     }
