@@ -37,7 +37,7 @@ module.exports=ExternalAPIController;
  */
 function ExternalAPIController(model, server, app) {
     if(!(this instanceof ExternalAPIController))
-        return new ExternalAPIController(model, server, endpoint, app);
+        return new ExternalAPIController(model, server, app);
     events.EventEmitter.call(this); //ExternalAPIController inherits from events.EventEmitter
     this.model=model;
     this.server=server;
@@ -46,6 +46,7 @@ function ExternalAPIController(model, server, app) {
         this.app=app;
     }
     else {
+        console.log("app==''");
         this.app=express();
     }
 };

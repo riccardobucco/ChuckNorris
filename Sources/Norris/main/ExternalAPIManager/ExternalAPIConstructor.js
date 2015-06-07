@@ -53,7 +53,7 @@ ExternalAPIConstructor.registerEndpoint = function(endpoint) {
 
 /**
  * Creates an ExternalAPIManager component using the indicated parameters
- * @param {NorrisImpl} model -
+ * @param {NorrisImpl} model - the Norris' instance;
  * @param {http} server -
  * @param {String} endpoint -
  */
