@@ -46,7 +46,7 @@ function ExternalAPIController(model, server, app) {
         this.app=app;
     }
     else {
-        this.app=express();
+        throw ("ExternalAPIController:undefinedApp");
     }
 };
 

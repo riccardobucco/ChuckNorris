@@ -189,7 +189,7 @@ ChartImpl.prototype.update = function(updateType, updateData) {
 		var dep=ChartImpl.prototype.updaters[type];
 		dep.update(this, updateData);
 		this.emit('update', updateType, updateData); // emits an 'update' signal
-		console.log("Chart updated: "+updateType+" "+JSON.stringify(this.data)); // TOGLIERE stampa dei dati (ultima parte)
+		console.log("Chart "+this.uid+" has been updated with the method: "+updateType);
 	}
 	else {
 		console.log("ERROR: wrong updating type." );
