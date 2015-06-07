@@ -35,7 +35,7 @@ function AuthenticationEndpoint(controller) {
     if (!(this instanceof AuthenticationEndpoint)) return new AuthenticationEndpoint(controller);
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
-        this.app=express();
+        this.app=controller.getApp();
         this.app.use(cookieParser());
         this.controller.getServer().on('request', this.app);
         this.app.post(this.controller.getEndpoint() + '/auth/login', this.handleLogin);
