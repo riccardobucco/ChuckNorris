@@ -3,7 +3,7 @@ var InternalAPIManager = require('./InternalAPIManager');
 var ExternalAPIManager = require('./ExternalAPIManager');
 
 module.exports = function (server, endpoint, app) {
-    if (endpoint == '') {
+    if (endpoint == undefined) {
        endpoint = '/';
     }
     var model = new DataModel(endpoint);

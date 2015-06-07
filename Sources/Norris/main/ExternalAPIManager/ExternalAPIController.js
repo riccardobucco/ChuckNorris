@@ -42,11 +42,10 @@ function ExternalAPIController(model, server, app) {
     this.model=model;
     this.server=server;
     this.endpoint=model.getEndpoint();
-    if (app != '' ){
+    if (app != undefined ){
         this.app=app;
     }
     else {
-        console.log("app==''");
         this.app=express();
     }
 };
