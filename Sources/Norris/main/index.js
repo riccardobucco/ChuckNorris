@@ -5,6 +5,8 @@ var ExternalAPIManager = require('./ExternalAPIManager');
 module.exports = function (server, endpoint, app) {
     if (endpoint == undefined) {
        endpoint = '/';
+    } else if (endpoint != '/') {
+        endpoint=endpoint + '/';
     }
     var model = new DataModel(endpoint);
     var internalAPI = new InternalAPIManager(model);

@@ -38,14 +38,9 @@ function AuthenticationEndpoint(controller) {
         this.app=controller.getApp();
         this.app.use(cookieParser());
         this.controller.getServer().on('request', this.app);
-        var endpoint=this.controller.getEndpoint();
-        if (endpoint=='/') {
-            endpoint = '';
-        }
-
-        this.app.post(endpoint + '/auth/login', this.handleLogin);
-        this.app.post(endpoint + '/auth/logout', this.handleLogout);
-        this.app.post(endpoint + '/auth/keepalive', this.handleKeepAlive);
+        this.app.post(this.controller.getEndpoint() + '/auth/login', this.handleLogin);
+        this.app.post(this.controller.getEndpoint() + '/auth/logout', this.handleLogout);
+        this.app.post(this.controller.getEndpoint() + '/auth/keepalive', this.handleKeepAlive);
     }else {
         console.log("ERROR: an ExternalAPIController is required.");
         throw("AuthenticationEndpoint:requiredExternalAPIController");

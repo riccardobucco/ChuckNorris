@@ -37,12 +37,12 @@ function ListEndpoint(controller) {
         this.controller=controller;
         this.app=controller.getApp();
         var endpoint=this.controller.getEndpoint();
-        if (endpoint=='/') {
+        /*if (endpoint=='/') {
             endpoint = endpoint + 'list';
         }
         else {
             endpoint = endpoint + '/list';
-        }
+        }*/
         var listEndpoint=this;
         this.app.get(endpoint, function(req, res) {listEndpoint.handleRequest(req, res)});
     } else {
