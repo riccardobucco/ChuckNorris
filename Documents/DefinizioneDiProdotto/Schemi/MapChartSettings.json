@@ -35,8 +35,7 @@
                 "zoom": {
                     "type": "number",
                     "minimum": 1
-                },
-                "required": ["x","y"]
+                }
             }
         }
     }
