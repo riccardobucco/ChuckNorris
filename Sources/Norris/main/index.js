@@ -10,4 +10,4 @@ module.exports = function (server, endpoint, app) {
     var internalAPI = new InternalAPIManager(model);
     var externalAPI = ExternalAPIManager.getInstance().construct(model, server, app);
     return internalAPI;
-}
+};
