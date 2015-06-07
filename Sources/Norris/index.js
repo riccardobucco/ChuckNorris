@@ -6,7 +6,7 @@ var norris = require('./main');
 
 var app = express();
 var server = http.createServer(app);
-var nor = norris(server, '/');
+var nor = norris(server, '/', app);
 
 server.listen(process.env.PORT || 9000);
 

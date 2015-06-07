@@ -36,6 +36,7 @@ function ListEndpoint(controller) {
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
         this.app=controller.getApp();
+        this.handleRequest();
     } else {
         console.log("ERROR: an ExternalAPIController is required.");
         throw("ListEndpoint:requiredExternalAPIController");
@@ -47,7 +48,34 @@ function ListEndpoint(controller) {
  * @param req
  * @param res
  */
-ListEndpoint.prototype.handleRequest = function(req, res) {};
+ListEndpoint.prototype.handleRequest = function() {
+    var endpoint=this.controller.getEndpoint();
+    if (endpoint=='/') {
+        endpoint = endpoint + 'list';
+    }
+    else {
+        endpoint = endpoint + '/list';
+    }
+    var charts = this.controller.getCharts();
+    var list=[];
+    var i=0;
+    for (chart in charts) {
+        var id=chart.getId();
+        var type=chart.getType();
+        var settings=chart.getSettings();
+        var title=settings.title;
+        var description= settings.description;
+        var object={id : '', type : '', title: '', description: ''};
+        object.id=id;
+        object.type=type;
+        object.title=title;
+        object.description=description;
+        list[i].push(object);
+    }
+    this.app.get(endpoint, function (req, res) {
+        res.json(list);
+    });
+};
 
 
 /* ListEndpointFactory ------------------------------------------------------- */
