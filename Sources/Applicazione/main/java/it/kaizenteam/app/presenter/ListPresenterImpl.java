@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.presenter
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/presenter
 * Date: 2015-05-22
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-23  Davide Dal Bianco  Creation
+* v0.01 2015-05-23  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
@@ -24,7 +24,8 @@ import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 import it.kaizenteam.app.view.ListView;
 
 /**
- * This class represents the specialization of PresenterImpl. It has the purpose to change the view of the list of graphics inside the instance of Norris and then request to HttpRequesterWithCookie the list of chart inside the instance. The class can finally permit logout of the active session.
+ * This class represents the specialization of PresenterImpl. It has the purpose to change the view of the list of graphics inside the instance of Norris and then
+request to HttpRequesterWithCookie the list of chart inside the instance. The class can finally permit logout of the active session.
  */
 public class ListPresenterImpl extends PresenterImpl implements ListPresenter{
     static {
@@ -52,7 +53,8 @@ public class ListPresenterImpl extends PresenterImpl implements ListPresenter{
     }
 
     /**
-     * This method is invoked in response to an event in the view, or the display of Activity with the list of chart. Its task is to get the list (through HttpRequesterWithCookie) and change the view with those values.
+     * This method is invoked in response to an event in the view, or the display of Activity with the list of chart. Its task is to get the list (through
+HttpRequesterWithCookie) and change the view with those values.
      */
     @Override
     public void onResume() {
@@ -69,6 +71,11 @@ public class ListPresenterImpl extends PresenterImpl implements ListPresenter{
      * This method is the constructor. It is private because it can not be created an instance except from a request of his inner class factory.
      */
     private ListPresenterImpl(){}
+
+    @Override
+    public void onPause() {
+
+    }
 
     /**
      *  This class deals with the creation of a ListPresenterImpl presenter.

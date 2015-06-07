@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.presenter
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/presenter
 * Date: 2015-05-22
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,16 +11,25 @@
 * =================================================================
 * v0.02 2015-05-26  Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-25  Moretto Alessandro  Creation
+* v0.01 2015-05-25  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
 
 package it.kaizenteam.app.presenter;
 
-import java.util.Observable;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import it.kaizenteam.app.Utils.Observable;
+import it.kaizenteam.app.model.NorrisChart.ChartData;
+import it.kaizenteam.app.model.NorrisChart.ChartImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
+import it.kaizenteam.app.model.NorrisChart.ChartUpdate;
+import it.kaizenteam.app.model.NorrisChart.MapChartSettingsImpl;
+import it.kaizenteam.app.model.Service.ChartReceiverImpl;
+import it.kaizenteam.app.view.MapChartActivity;
+import it.kaizenteam.app.view.MapChartView;
 
 /**
  * This class is the implementation of a presenter for map chart.
@@ -42,8 +51,56 @@ public class MapChartPresenterImpl extends ChartPresenterImpl implements MapChar
      * @param data
      */
     @Override
-    public void update(Observable observable, Object data) {
-        //TODO
+    public void update(Observable observable, Object... data) {
+        if(data[0].toString().equals("mapchart")) {
+            try {
+                ChartData mapChartData = JSONParser.getInstance().parseMapChart(new JSONObject(data[2].toString()));
+                ChartSettings mapChartSettings = JSONParser.getInstance().parseMapChartSettings(new JSONObject(data[1].toString()));
+                chart= ChartImpl.create("mapchart", id);
+                chart.setData(mapChartData);
+                chart.setSettings(mapChartSettings);
+                ((MapChartActivity)view).runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ((MapChartView) view).renderChart(chart.getData());
+                        applySettings(chart.getSettings());
+                    }
+                });
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            try {
+                if (data[0].toString().equals("inplace")) {
+                    ChartUpdate update = JSONParser.getInstance().parseMapChartInPlaceUpdate(new JSONObject(data[1].toString()));
+                    chart.update("mapchart:inplace", update);
+                    ((MapChartActivity) view).runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            ((MapChartView) view).renderChart(chart.getData());
+                        }
+                    });
+                } else if (data[0].toString().equals("movie")) {
+                    ChartUpdate update = JSONParser.getInstance().parseMapChartMovieUpdate(new JSONObject(data[1].toString()));
+                    chart.update("mapchart:movie", update);
+                    ((MapChartActivity) view).runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            ((MapChartView) view).renderChart(chart.getData());
+                        }
+                    });
+                }
+            } catch (JSONException e) {
+            }
+        }
+    }
+
+    @Override
+    public void setChart(String id) {
+            ((Observable) ChartReceiverImpl.getInstance()).attach(this);
+            this.id=id;
+            ChartReceiverImpl.getInstance().getChart(id);
     }
 
     /**
@@ -52,7 +109,10 @@ public class MapChartPresenterImpl extends ChartPresenterImpl implements MapChar
      */
     @Override
     protected void applySettings(ChartSettings settings) {
-        //TODO
+        ((MapChartActivity) view).setCameraCoordinate(((MapChartSettingsImpl) settings).getXCameraCoordinate(), ((MapChartSettingsImpl) settings).getYCameraCoordinate());
+        ((MapChartActivity) view).setCameraZoom((((MapChartSettingsImpl) settings).getCameraZoomHeight()));
+        ((MapChartActivity) view).setDescription(((MapChartSettingsImpl) settings).getDescription());
+        ((MapChartActivity) view).setTitle(((MapChartSettingsImpl) settings).getTitle());
     }
 
     /**

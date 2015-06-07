@@ -21,7 +21,7 @@ package it.kaizenteam.app.model.NorrisChart;
 /**
  * This class represents an element of the update package in place of a map chart.
  */
-public class MapChartElementInPlaceUpdate {
+public class MapChartElementStreamUpdate {
     /**
      * This attribute represents the values of the given date.
      */
@@ -32,31 +32,15 @@ public class MapChartElementInPlaceUpdate {
      */
     private int series;
 
-    /**
-     * This attribute is the index of the series in the map of the data to be replaced.
-     */
-    private int index;
-
-    /**
-     * This attribute is the id of the data to be replaced.
-     */
-    private String id;
-
-    /**
-     * 
-     */
-    private boolean useId;
 
     /**
      * This method is a constructor to create the update package.
      * @param value new data of update package
-     * @param series position of point
-     * @param index position of point
+     * @param series series of the chart to add the point
      */
-    public MapChartElementInPlaceUpdate(MapPoint value, int series, int index){
+    public MapChartElementStreamUpdate(int series, MapPoint value){
         this.value=value;
         this.series=series;
-        this.index=index;
     }
 
     /**
@@ -68,34 +52,11 @@ public class MapChartElementInPlaceUpdate {
     }
 
     /**
-     * This method is responsible for returning the position in mapchart of the point to edit.
-     * @return x-coordinate of point to edit
+     * This method is responsible for returning the series of the chart to add the point
+     * @return series of point to edit
+     * @throws Exception
      */
-    public int getSeries(){
+    public int getSeries() throws Exception {
         return series;
-    }
-
-    /**
-     * This method is responsible for returning the position in mapchart of the point to edit.
-     * @return y-coordinate of point to edit
-     */
-    public int getIndex() {
-        return index;
-    }
-
-    /**
-     * This method is responsible for returning the id of the point to edit.
-     * @return id of the point to be point to edit
-     */
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * This method is responsible for set the id of the point to edit.
-     * @return id of the point to be point to edit
-     */
-    public void setId(String id) {
-        this.id= id;
     }
 }

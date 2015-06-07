@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
 * Date: 2015-05-19
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-24  Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-18  Moretto Alessandro  Creation
+* v0.01 2015-05-18  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
@@ -27,13 +27,12 @@ public class MapChartStreamUpdate {
     /**
       * This attribute represents the values of the given date.
       */
-    private ArrayList<MapSet> values;
-
+    private ArrayList<MapChartElementStreamUpdate> values;
     /**
      * This method is the constructor to create the update package.
      * @param values of the update package
      */
-    public MapChartStreamUpdate(ArrayList<MapSet> values){
+    public MapChartStreamUpdate(ArrayList<MapChartElementStreamUpdate> values){
         this.values=values;
     }
 
@@ -41,7 +40,7 @@ public class MapChartStreamUpdate {
      * This method is responsible for returning the new data of the update package.
      * @return new data of the update package
      */
-    public ArrayList<MapSet> getData(){
+    public ArrayList<MapChartElementStreamUpdate> getData(){
         return values;
     }
 }

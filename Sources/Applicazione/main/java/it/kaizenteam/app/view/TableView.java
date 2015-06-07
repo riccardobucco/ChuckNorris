@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 2015-05-24
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-23  Davide Dal Bianco  Creation
+* v0.01 2015-05-23  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
@@ -31,30 +31,14 @@ public interface TableView extends View {
     void renderChart(ChartData data);
 
     /**
-     * This method provides the ability to change the text color of a particular cell of the table.
-     * @param riga row of the cell table to change
-     * @param colonna col of the cell table to change
-     * @param colorRGB color to set
-     */
-    void setCellTextColor(int riga, int colonna, String colorRGB);
-
-    /**
-     * This method provides the ability to change the background color of a particular cell of the table.
-     * @param riga row of the cell table to change
-     * @param colonna col of the cell table to change
-     * @param colorRGB color to set
-     */
-    void setCellBackgroundColor(int riga, int colonna, String colorRGB);
-
-    /**
-     * This method allows the display in the correct way the title of the chart.
-     * @param title title of the chart
-     */
-    void setTitle(String title);
-
-    /**
      * This method provides the ability to view or not border lines of the cells of the table.
      * @param border view / hide border lines of the cells of the table
      */
     void showCellBorderLine(boolean border);
+
+    /**
+     * This method will display properly the description of the chart.
+     * @param description description of the chart
+     */
+    public void setDescription(String description);
 }

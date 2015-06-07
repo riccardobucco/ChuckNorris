@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 2015-05-24
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-22  Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-19  Moretto Alessandro  Creation
+* v0.01 2015-05-19  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */

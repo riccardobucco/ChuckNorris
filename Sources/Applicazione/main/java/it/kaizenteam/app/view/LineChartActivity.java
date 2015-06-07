@@ -3,15 +3,15 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 2015-05-24
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
 * Version	Date	Programmer	Changes
 * =================================================================
-* v0.02	2015-05-19	Davide Dal Bianco   Verify
+* v0.01	2015-05-19	Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-19  Moretto Alessandro  Creation
+* v0.01 2015-05-19  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
@@ -19,18 +19,17 @@
 package it.kaizenteam.app.view;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.LineDataSet;
 
 import java.util.ArrayList;
 
 import it.kaizenteam.app.R;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
+import it.kaizenteam.app.model.NorrisChart.LineChartDataImpl;
 import it.kaizenteam.app.presenter.LineChartPresenter;
 import it.kaizenteam.app.presenter.PresenterImpl;
 
@@ -40,10 +39,6 @@ import it.kaizenteam.app.presenter.PresenterImpl;
 public class LineChartActivity extends ChartActivity implements LineChartView {
     //TODO Barchart dei dati
     private LineChart chart;
-    ArrayList<Entry> entries;
-    LineDataSet dataset;
-    ArrayList<String> labels;
-    LineData data;
 
     /**
      * This method is performed by android at the creation of the Activity. It will be tasked to initializing its presenter.
@@ -53,12 +48,25 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_line_chart);
+        chart=(LineChart)findViewById(R.id.chart);
         presenter= PresenterImpl.create(PresenterImpl.LINECHART_TYPE, this);
-
-        //TODO rimuovi
-        ((LineChartPresenter)presenter).update(null,null);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ((LineChartPresenter)presenter).setChart("lc");// TODO getIntent().getStringExtra("id"));
+        chart.setDescription("");
+        chart.invalidate();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        ((LineChartPresenter)presenter).onPause();
+        chart.setDescription("");
+        chart.invalidate();
+    }
 
     /**
      * This method will display correctly the chart passed as a parameter.
@@ -66,30 +74,21 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
      */
     @Override
     public void renderChart(ChartData data) {
-        //TODO use data
-        entries = new ArrayList<>();
-        entries.add(new Entry(4f, 0));
-        entries.add(new Entry(8f, 1));
-        entries.add(new Entry(6f, 2));
-        entries.add(new Entry(12f, 3));
-        entries.add(new Entry(18f, 4));
-        entries.add(new Entry(9f, 5));
+        chart.clear();
+        chart.getXAxis().setValues(((LineChartDataImpl) data).getData().getXVals());
+        chart.setData(((LineChartDataImpl) data).getData());
 
-        dataset = new LineDataSet(entries, "# of Calls");
+        float max=0;
+        for(int i =0;i<chart.getData().getDataSets().size();i++)
+            for(int j =0;j<chart.getData().getDataSets().get(i).getYVals().size();j++){
+                if(chart.getData().getDataSets().get(i).getYVals().get(j).getVal()>max)
+                    max=chart.getData().getDataSets().get(i).getYVals().get(j).getVal();
+            }
 
-        labels = new ArrayList<>();
-        labels.add("January");
-        labels.add("February");
-        labels.add("March");
-        labels.add("April");
-        labels.add("May");
-        labels.add("June");
-
-        chart = new LineChart(this.getBaseContext());
-        setContentView(chart);
-
-        this.data = new LineData(labels, dataset);
-        chart.setData(this.data);
+        chart.getAxisLeft().setAxisMaxValue(max + 1);
+        chart.getAxisRight().setAxisMaxValue(max + 1);
+        chart.invalidate();
+        //TODO: controllare se c'è qualcosa di piu efficiente senza farlo nel model
     }
 
     /**
@@ -99,7 +98,8 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
      */
     @Override
     public void setAxisName(String x, String y) {
-//TODO
+        ((TextView) findViewById(R.id.xlabelline)).setText(x);
+        ((TextView) findViewById(R.id.ylabelline)).setText(y.replace("", "\n"));
     }
 
     /**
@@ -108,7 +108,10 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
      */
     @Override
     public void showGrid(boolean show) {
-//TODO
+        chart.getXAxis().setDrawGridLines(show);
+        chart.getAxisRight().setDrawGridLines(show);
+        chart.getAxisLeft().setDrawGridLines(show);
+        chart.invalidate();
     }
 
     /**
@@ -117,25 +120,23 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
      */
     @Override
     public void setLegendPosition(int position) {
-//TODO
-    }
-
-    /**
-     * This method provides the ability to change the color of various series Data chart.
-     * @param colors color to change
-     */
-    @Override
-    public void setSeriesColor(String[] colors) {
-//TODO
-    }
-
-    /**
-     * This method allows the display in the correct way the title of the chart.
-     * @param title title of the chart
-     */
-    @Override
-    public void setTitle(String title) {
-//TODO
+        if(position==0){
+            chart.getLegend().setPosition(Legend.LegendPosition.BELOW_CHART_LEFT);
+            return;
+        }
+        if(position==1){
+            chart.getLegend().setPosition(Legend.LegendPosition.BELOW_CHART_RIGHT);
+            return;
+        }
+        if(position==2){
+            chart.getLegend().setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
+            return;
+        }
+        if(position==3){
+            chart.getLegend().setPosition(Legend.LegendPosition.RIGHT_OF_CHART_CENTER);
+            return;
+        }
+        chart.invalidate();
     }
 
     /**
@@ -144,6 +145,39 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
      */
     @Override
     public void setDottedLines(boolean dotted) {
-//TODO
+        ArrayList<LineDataSet> sets = chart.getData().getDataSets();
+        for (LineDataSet set : sets){
+            if (dotted)
+                set.enableDashedLine(5, 5, 5);
+            else
+                set.disableDashedLine();
+          }
+        chart.invalidate();
+    }
+
+    /**
+     * This method allows to display the lines of the line chart cubic or not (depending on the boolean parameter).
+     * @param dotted disply / not display the lines of the line chart cubic
+     */
+    //TODO @Override
+    public void setCubicLines(boolean dotted) {
+        ArrayList<LineDataSet> sets = chart.getData().getDataSets();
+        for (LineDataSet set : sets)
+            set.setDrawCubic(dotted);
+        chart.invalidate();
+    }
+
+    public void setDotRadius(int dotRadius) {
+        ArrayList<LineDataSet> sets = chart.getData().getDataSets();
+        for (LineDataSet set : sets) {
+            if(dotRadius==0)
+                set.setDrawCircles(false);
+            else {
+                set.setDrawCircles(true);
+                set.setCircleSize(dotRadius);
+            }
+
+        }
+        chart.invalidate();
     }
 }

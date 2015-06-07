@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
 * Date: 2015-05-16
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,13 +11,14 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-22  Davide Dal Bianco  Creation
+* v0.01 2015-05-22  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
 
 package it.kaizenteam.app.model.NorrisChart;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -38,38 +39,115 @@ public class LineChartSettingsImpl implements ChartSettings{
     }
 
     /**
+     *get the title of the chart
+     * @return the title
+     * @throws JSONException if there is an error in the JSONObject settings passed to the constructor
+     */
+    public String getTitle() {
+        try {
+            return settings.getString("title");
+        } catch (JSONException e) {
+            return"";
+        }
+    }
+
+    /**
+     *get the desctiption of the chart
+     * @return the desctiption
+     * @throws JSONException if there is an error in the JSONObject settings passed to the constructor
+     */
+    public String getDescription() {
+        try {
+            return settings.getString("description");
+        } catch (JSONException e) {
+            return"";
+        }
+    }
+
+    /**
+     *get the max value of the chart
+     * @return the max value
+     * @throws JSONException if there is an error in the JSONObject settings passed to the constructor
+     */
+    public int getMaxValue() {
+        try {
+            return settings.getInt("maxValues");
+        } catch (JSONException e) {
+            return 10;
+        }
+    }
+
+    /**
      * This method has the task of returning the name of the abscissa axis.
      * @return the name of the abscissa axis
      */
-    public String getXAxisName(){
-        //TODO
-        return "XAXIX";
+    public String getXAxisName() {
+        try {
+            return settings.getString("xLabel");
+        } catch (JSONException e) {
+            return"";
+        }
     }
 
     /**
      * This method has the task of returning the name of the ordinate axis.
      * @return the name of the ordinate axis
      */
-    public String getYAxisName(){
-        //TODO
-        return "YAXIX";
+    public String getYAxisName() {
+        try {
+            return settings.getString("yLabel");
+        } catch (JSONException e) {
+            return"";
+        }
     }
 
     /**
      * This method has the task to return a boolean that says if the grid is displayed or not.
      * @return display / hide grid
      */
-    public boolean getGridVisibility(){
-        //TODO
-        return true;
+    public boolean getGridVisibility() {
+        try {
+            return settings.getJSONObject("style").getBoolean("showGrid");
+        } catch (JSONException e) {
+            return true;
+        }
     }
 
     /**
      * This method has the task of returning the position of the legend.
      * @return the position of the legend
      */
-    public String getLegendPosition(){
-        //TODO
-        return "left";
+    public String getLegendPosition() {
+        try {
+            return settings.getString("legendPosition");
+        } catch (JSONException e) {
+            return "none";
+        }
+    }
+
+    /**
+     * get the radius of the dot
+     * @return radius of the dot
+     * @throws JSONException if there is an error in the JSONObject settings passed to the constructor
+     */
+    public int getDotRadius() {
+        try {
+            return settings.getJSONObject("style").getInt("pointDotSize");
+        } catch (JSONException e) {
+            return 1;
+        }
+    }
+
+    /**
+     * get the setting value on the line display cubic
+     * @return true if the lines will display cubic, false otherwise
+     * @throws JSONException if there is an error in the JSONObject settings passed to the constructor
+     */
+    public boolean getCubicCurves(){
+        try {
+            return settings.getJSONObject("style").getBoolean("bezierCurve");
+        } catch (JSONException e) {
+            return false;
+        }
     }
 }

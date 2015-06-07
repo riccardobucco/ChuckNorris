@@ -3,15 +3,15 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 2015-05-24
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
 * Version	Date	Programmer	Changes
 * =================================================================
-* v0.02	2015-05-19	Davide Dal Bianco   Verify
+* v0.01	2015-05-19	Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-19  Moretto Alessandro  Creation
+* v0.01 2015-05-19  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
@@ -37,7 +37,17 @@ public abstract class ChartActivity extends BaseActivity{
      * This method is abstract and all specializations of this class must implement it. It will display properly the title of the chart.
      * @param title title of the chart
      */
-    public abstract void setTitle(String title);
+    public void setChartTitle(String title){
+        getSupportActionBar().setTitle(title);
+    }
+
+    /**
+     * This method will display properly the description of the chart.
+     * @param description description of the chart
+     */
+    public void setDescription(String description) {
+        getSupportActionBar().setSubtitle(description);
+    }
 
     /**
      * This method returns the id of the graph shown.

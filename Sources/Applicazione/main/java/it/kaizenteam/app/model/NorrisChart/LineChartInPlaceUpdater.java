@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
 * Date: 2015-05-16
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,17 +11,21 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-22  Davide Dal Bianco  Creation
+* v0.01 2015-05-22  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
 
 package it.kaizenteam.app.model.NorrisChart;
 
+import com.github.mikephil.charting.data.LineData;
+
+import java.util.ArrayList;
+
 /**
  * This class is responsible for defining the in place update method for a line chart. It can access to the LineChartImpl private data fields because it is an inner class of LineChartImpl. In particular, it can access to DataObject contained in LineChartImpl and change its values.
  */
-public class LineChartInPlaceUpdater implements Updater {
+public class LineChartInPlaceUpdater implements ChartUpdater {
     /**
      * The static attribute is the unique instance of that class.
      */
@@ -32,13 +36,15 @@ public class LineChartInPlaceUpdater implements Updater {
      * @return the unique instance of the class
      */
     public static ChartUpdater getInstance(){
-        return instance;
+        if(instance!=null)
+            return instance;
+        return new LineChartInPlaceUpdater();
     }
 
     /**
      * Constructor
      */
-    private LineChartInPlaceUpdater(){}
+    private LineChartInPlaceUpdater(){instance=this;}
 
     /**
      * This method has the task of updating the chart as a parameter (chart) by using the update package (UpdateData).
@@ -47,6 +53,10 @@ public class LineChartInPlaceUpdater implements Updater {
      */
     @Override
     public void update(ChartImpl chart, ChartUpdate updateData) {
-//TODO
+        LineData data=((LineChartDataImpl)chart.getData()).getData();
+        ArrayList<LineChartElementInPlaceUpdate> elements=((LineChartInPlaceUpdate)updateData).getData();
+        for(int i =0;i<elements.size();i++){
+            data.getDataSetByIndex(elements.get(i).getX()).getEntryForXIndex(elements.get(i).getY()).setVal(elements.get(i).getData());
+        }
     }
 }

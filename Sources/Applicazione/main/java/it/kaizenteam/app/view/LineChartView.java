@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 23/05/2015
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-22  Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-19  Moretto Alessandro  Creation
+* v0.01 2015-05-19  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
@@ -21,7 +21,8 @@ package it.kaizenteam.app.view;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 
 /**
- * This interface has the task of allowing the use of methods to change the view to represent a line chart from the outside of the package View (indicated by a LineChartPresenterImpl).
+ * This interface has the task of allowing the use of methods to change the view to represent a line chart from the outside of the package View (indicated by a
+LineChartPresenterImpl).
  */
 public interface LineChartView extends View {
     /**
@@ -50,20 +51,14 @@ public interface LineChartView extends View {
     void setLegendPosition(int position);
 
     /**
-     * This method provides the ability to change the color of various series Data chart.
-     * @param colors color to change
-     */
-    void setSeriesColor(String[] colors);
-
-    /**
-     * This method allows the display in the correct way the title of the chart.
-     * @param title title of the chart
-     */
-    void setTitle(String title);
-
-    /**
      * This method allows to display the lines of the line chart with points or not (depending on the boolean parameter).
      * @param dotted disply / not display the lines of the line chart with points or not
      */
     void setDottedLines(boolean dotted);
+
+    /**
+     * This method will display properly the description of the chart.
+     * @param description description of the chart
+     */
+    public void setDescription(String description);
 }

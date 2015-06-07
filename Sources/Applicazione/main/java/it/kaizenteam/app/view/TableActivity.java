@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 2015-05-24
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-23  Davide Dal Bianco  Creation
+* v0.01 2015-05-23  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
@@ -20,20 +20,27 @@ package it.kaizenteam.app.view;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.Gravity;
 import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 import it.kaizenteam.app.R;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
+import it.kaizenteam.app.model.NorrisChart.TableCell;
+import it.kaizenteam.app.model.NorrisChart.TableDataImpl;
 import it.kaizenteam.app.presenter.PresenterImpl;
+import it.kaizenteam.app.presenter.TablePresenter;
 
 
 /**
  * TableActivity specializes ChartActivity and constitutes an Activity for table charts. It provides static constants that represent the possible values to be passed to methods to change the view.
  */
 public class TableActivity extends ChartActivity implements TableView{
+
+    TableRow.LayoutParams tableRowParams = new TableRow.LayoutParams();
 
     /**
      * This method is performed by android at the creation of the Activity. It will be tasked to initializing its presenter.
@@ -46,46 +53,70 @@ public class TableActivity extends ChartActivity implements TableView{
         presenter= PresenterImpl.create(PresenterImpl.TABLE_TYPE, this);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ((TablePresenter)presenter).setChart("t");// TODO getIntent().getStringExtra("id"));
+        tableRowParams.weight = 1;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        ((TablePresenter)presenter).onPause();
+    }
+
     /**
      * This method will display correctly the chart passed as a parameter.
      * @param data chart
      */
     @Override
     public void renderChart(ChartData data) {
-        TableLayout table = (TableLayout)findViewById(R.id.table);
-        table.removeAllViews();
-        //for ogni dato in data...
-    }
+        TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
+        tableLayout.removeAllViews();
+        ArrayList<String> labels = ((TableDataImpl) data).getLabels();
 
-    /**
-     * This method provides the ability to change the text color of a particular cell of the table.
-     * @param riga row of the cell table to change
-     * @param colonna col of the cell table to change
-     * @param colorRGB color to set
-     */
-    @Override
-    public void setCellTextColor(int riga, int colonna, String colorRGB) {
-        //TODO
-    }
+        TableLayout.LayoutParams tableLayoutParams = new TableLayout.LayoutParams();
 
-    /**
-     * This method provides the ability to change the background color of a particular cell of the table.
-     * @param riga row of the cell table to change
-     * @param colonna col of the cell table to change
-     * @param colorRGB color to set
-     */
-    @Override
-    public void setCellBackgroundColor(int riga, int colonna, String colorRGB) {
-        //TODO
-    }
+        TableRow headerRow = new TableRow(this);
+        for (int j = 0; j < labels.size(); j++) {
+            // 4) create textView
+            TextView textView = new TextView(this);
+            //  textView.setText(String.valueOf(j));
+            textView.setBackgroundColor(Color.LTGRAY);
+            textView.setGravity(Gravity.CENTER);
+            textView.setText(labels.get(j));
 
-    /**
-     * This method allows the display in the correct way the title of the chart.
-     * @param title title of the chart
-     */
-    @Override
-    public void setTitle(String title) {
-        ((TextView)findViewById(R.id.tableTitle)).setText(title);
+            // 5) add textView to tableRow
+            headerRow.addView(textView, tableRowParams);
+        }
+        tableLayout.addView(headerRow, tableLayoutParams);
+
+        ArrayList<it.kaizenteam.app.model.NorrisChart.TableRow> datas = ((TableDataImpl) data).getData();
+        for (int i = 0; i < datas.size(); i++) {//righe
+            ArrayList<TableCell> row = datas.get(i).getData();
+
+            // 3) create tableRow
+            TableRow tableRow = new TableRow(this);
+
+            for (int j = 0; j < row.size(); j++) {//colonne
+                // 4) create textView
+                TextView textView = new TextView(this);
+
+                textView.setBackgroundColor(Color.parseColor(row.get(j).getBackgroundColor()));
+
+                textView.setTextColor(Color.parseColor(row.get(j).getFontColor()));
+
+                textView.setGravity(Gravity.CENTER);
+                textView.setText(row.get(j).getData());
+
+                // 5) add textView to tableRow
+                tableRow.addView(textView, tableRowParams);
+            }
+
+            // 6) add tableRow to tableLayout
+            tableLayout.addView(tableRow, tableLayoutParams);
+        }
     }
 
     /**
@@ -94,5 +125,9 @@ public class TableActivity extends ChartActivity implements TableView{
      */
     @Override
     public void showCellBorderLine(boolean border) {
+        if(!border)
+            tableRowParams.setMargins(0, 0, 0, 0);
+        else
+            tableRowParams.setMargins(1, 1, 1, 1);
     }
 }

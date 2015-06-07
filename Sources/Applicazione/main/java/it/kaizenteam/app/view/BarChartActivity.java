@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 2015-05-24
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-22  Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-19  Moretto Alessandro  Creation
+* v0.01 2015-05-19  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
@@ -19,17 +19,19 @@
 package it.kaizenteam.app.view;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.HorizontalBarChart;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
-import com.github.mikephil.charting.data.BarEntry;
 
 import java.util.ArrayList;
 
 import it.kaizenteam.app.R;
+import it.kaizenteam.app.model.NorrisChart.BarChartDataImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.presenter.BarChartPresenter;
 import it.kaizenteam.app.presenter.PresenterImpl;
@@ -41,10 +43,6 @@ import it.kaizenteam.app.presenter.PresenterImpl;
 public class BarChartActivity extends ChartActivity implements BarChartView{
     //TODO Barchart dei dati
     private BarChart chart;
-    ArrayList<BarEntry> entries;
-    BarDataSet dataset;
-    ArrayList<String> labels;
-    BarData data;
 
     /**
      * This method is performed by android at the creation of the Activity. It will be tasked to initializing its presenter.
@@ -54,12 +52,25 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bar_chart);
+        chart=(BarChart)findViewById(R.id.chartv);
         presenter= PresenterImpl.create(PresenterImpl.BARCHART_TYPE,this);
-
-        //TODO rimuovi
-        ((BarChartPresenter)presenter).update(null,null);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ((BarChartPresenter)presenter).setChart("bc");// TODO getIntent().getStringExtra("id"));
+        chart.setDescription("");
+        chart.invalidate();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        ((BarChartPresenter)presenter).onPause();
+        chart.setDescription("");
+        chart.invalidate();
+    }
 
     /**
      * This method will display correctly the chart passed as a parameter.
@@ -67,30 +78,19 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
      */
     @Override
     public void renderChart(ChartData data) {
-        //TODO use data
-        entries = new ArrayList<>();
-        entries.add(new BarEntry(4f, 0));
-        entries.add(new BarEntry(8f, 1));
-        entries.add(new BarEntry(6f, 2));
-        entries.add(new BarEntry(12f, 3));
-        entries.add(new BarEntry(18f, 4));
-        entries.add(new BarEntry(9f, 5));
-
-        dataset = new BarDataSet(entries, "# of Calls");
-
-        labels = new ArrayList<>();
-        labels.add("January");
-        labels.add("February");
-        labels.add("March");
-        labels.add("April");
-        labels.add("May");
-        labels.add("June");
-
-        chart = new BarChart(this.getBaseContext());
-        setContentView(chart);
-
-        this.data = new BarData(labels, dataset);
-        chart.setData(this.data);
+        chart.clear();
+        BarData datanew =((BarChartDataImpl) data).getData();
+        float max=0;
+        for(int i =0;i<datanew.getDataSets().size();i++)
+            for(int j =0;j<datanew.getDataSets().get(i).getYVals().size();j++){
+                if(datanew.getDataSets().get(i).getYVals().get(j).getVal()>max)
+                    max=datanew.getDataSets().get(i).getYVals().get(j).getVal();
+            }
+        chart.getAxisLeft().setAxisMaxValue(max+1);
+        chart.getAxisRight().setAxisMaxValue(max + 1);
+        chart.setData(datanew);
+        chart.invalidate();
+        //TODO: controllare se c'è qualcosa di piu efficiente senza farlo nel model
     }
 
     /**
@@ -100,7 +100,14 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
      */
     @Override
     public void setAxisName(String x, String y) {
-//TODO
+        if (chart instanceof HorizontalBarChart) {
+            ((TextView) findViewById(R.id.xlabelbar)).setText(y);
+            ((TextView) findViewById(R.id.ylabelbar)).setText(x.replace("", "\n"));
+        }
+        else{
+            ((TextView) findViewById(R.id.xlabelbar)).setText(x);
+            ((TextView) findViewById(R.id.ylabelbar)).setText(y.replace("", "\n"));
+        }
     }
 
     /**
@@ -109,7 +116,10 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
      */
     @Override
     public void showGrid(boolean show) {
-//TODO
+        chart.getXAxis().setDrawGridLines(show);
+        chart.getAxisRight().setDrawGridLines(show);
+        chart.getAxisLeft().setDrawGridLines(show);
+        chart.invalidate();
     }
 
     /**
@@ -118,7 +128,23 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
      */
     @Override
     public void setLegendPosition(int position) {
-//TODO
+        if(position==0){
+            chart.getLegend().setPosition(Legend.LegendPosition.BELOW_CHART_LEFT);
+            return;
+        }
+        if(position==1){
+            chart.getLegend().setPosition(Legend.LegendPosition.BELOW_CHART_RIGHT);
+            return;
+        }
+        if(position==2){
+            chart.getLegend().setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
+            return;
+        }
+        if(position==3){
+            chart.getLegend().setPosition(Legend.LegendPosition.RIGHT_OF_CHART_CENTER);
+            return;
+        }
+        chart.invalidate();
     }
 
     /**
@@ -127,25 +153,33 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
      * @param orientation orientation of the chart
      */
     @Override
-    public void setOrientation(int orientation) {
-//TODO
+    public void setOrientation(String orientation) {
+        BarData data=chart.getBarData();
+        if(orientation.equals("horizontal")){
+            chart=(HorizontalBarChart)findViewById(R.id.charth);
+            (findViewById(R.id.chartv)).setVisibility(View.INVISIBLE);
+            (findViewById(R.id.charth)).setVisibility(View.VISIBLE);
+        }
+        else{
+            chart=(BarChart)findViewById(R.id.chartv);
+            (findViewById(R.id.charth)).setVisibility(View.INVISIBLE);
+            (findViewById(R.id.chartv)).setVisibility(View.VISIBLE);
+        }
+        chart.setDescription("");
+        renderChart(new BarChartDataImpl(data));
+        chart.invalidate();
     }
 
-    /**
-     * This method provides the ability to change the color of various series Data chart.
-     * @param colors color to change
-     */
-    @Override
-    public void setSeriesColor(String[] colors) {
-//TODO
+    public void setBarValueSpacing(int barValueSpacing) {
+        ArrayList<BarDataSet> set =chart.getBarData().getDataSets();
+        for(int i=0;i<set.size();i++)
+            set.get(i).setBarSpacePercent(barValueSpacing);
+        chart.invalidate();
     }
 
-    /**
-     * This method allows the display in the correct way the title of the chart.
-     * @param title title of the chart
-     */
-    @Override
-    public void setTitle(String title) {
-//TODO
+    public void setBarDataSetSpacing(int barDataSetSpacing) {
+        BarData data =chart.getBarData();
+        data.setGroupSpace(barDataSetSpacing);
+        chart.invalidate();
     }
 }

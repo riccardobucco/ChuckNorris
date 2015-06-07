@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model
 * Date: 2015-05-19
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-23  Davide Dal Bianco  Creation
+* v0.01 2015-05-23  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
@@ -53,7 +53,9 @@ public class NorrisSessionInfoImpl implements NorrisSessionInfo {
     /**
     * This method is the constructor of the class. It is private because only through getInstance() method it is allowed to create the instance.
     */
-    private NorrisSessionInfoImpl(){}
+    private NorrisSessionInfoImpl(){
+        instance=this;
+    }
 
     /**
     * This method has the task to return the address of the instance of Norris.

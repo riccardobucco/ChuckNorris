@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
 * Date: 2015-05-19
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,18 +11,20 @@
 * =================================================================
 * v0.02 2015-05-24  Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-18  Moretto Alessandro  Creation
+* v0.01 2015-05-18  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
 
 package it.kaizenteam.app.model.NorrisChart;
 
+import java.util.ArrayList;
+
 /**
  * This class is responsible for defining the stream update method of a table. It can access it has turned to the TableImpl private data fields because 
  * TableStreamUpdater is an inner class of TableImpl. In particular, it can access to DataObject container in TableImpl and change its values.
  */
-public class TableStreamUpdater implements Updater {
+public class TableStreamUpdater implements ChartUpdater {
     /**
      * The static attribute is the unique instance of that class.
      */
@@ -32,14 +34,17 @@ public class TableStreamUpdater implements Updater {
      * This method has the task of returning the unique instance of that class, and creating it if it not exists.
      * @return the unique instance of the class
      */
-    public static Updater getInstance(){
-        return instance;
+    public static ChartUpdater getInstance(){
+
+        if(instance!=null)
+            return instance;
+        return new TableStreamUpdater();
     }
 
     /**
      * Constructor
      */
-    private TableStreamUpdater(){}
+    private TableStreamUpdater(){instance=this;}
 
     /**
      * This method has the task of updating the chart as a parameter (chart) by using the update package (UpdateData).
@@ -48,6 +53,16 @@ public class TableStreamUpdater implements Updater {
      */
     @Override
     public void update(ChartImpl chart, ChartUpdate updateData) {
-//TODO
+        ArrayList<TableRow> chartdata=((TableDataImpl)chart.getData()).getData();
+        ArrayList<TableRow> updaterow=((TableStreamUpdate)updateData).getData();
+        for(int i =0;i<updaterow.size();i++){
+            if(((TableSettingsImpl)chart.getSettings()).getNewLinePosition().equals("top"))
+                chartdata.add(0,updaterow.get(i));
+            else
+                chartdata.add(chartdata.size(),updaterow.get(i));
+            if(chartdata.size()>((TableSettingsImpl)chart.getSettings()).getMaxValue())
+                chartdata.remove(0);
+
+        }
     }
 }

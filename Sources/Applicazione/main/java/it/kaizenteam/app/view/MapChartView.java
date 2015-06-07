@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 2015-05-24
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-23  Davide Dal Bianco  Creation
+* v0.01 2015-05-23  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
@@ -35,7 +35,7 @@ public interface MapChartView extends View {
      * @param latitude latitude coordinate of the central point
      * @param longitude longitude coordinate of the central point
      */
-    void setCameraCoordinate(int latitude, int longitude);
+    void setCameraCoordinate(double latitude, double longitude);
 
     /**
      * This method provides the ability to change the display height of the map chart. The permitted heights are available in static constants of class (X_ZOOM_LEVEL) or intermediate values to them.
@@ -44,20 +44,14 @@ public interface MapChartView extends View {
     void setCameraZoom(int zoomLevel);
 
     /**
-     * This method provides the ability to change the map markers chart. The markers permits are available in static constants of class (X_SHAPE).
-     * @param shape map marker to change
-     */
-    void setMarkerShape(String shape);
-
-    /**
-     * This method provides the ability to change the color of various series Data chart.
-     * @param colors colour to change
-     */
-    void setSeriesColor(String[] colors);
-
-    /**
      * This method allows the display in the correct way the title of the chart.
      * @param title title of the chart
      */
-    void setTitle(String title);
+    void setChartTitle(String title);
+
+    /**
+     * This method will display properly the description of the chart.
+     * @param description description of the chart
+     */
+    public void setDescription(String description);
 }

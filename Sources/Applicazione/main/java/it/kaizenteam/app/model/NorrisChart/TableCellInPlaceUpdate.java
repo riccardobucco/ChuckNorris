@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
 * Date: 2015-05-19
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-24  Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-18  Moretto Alessandro  Creation
+* v0.01 2015-05-18  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
@@ -25,17 +25,17 @@ public class TableCellInPlaceUpdate {
     /**
      * This attribute represents the abscissa of the data to replace.
      */
-    private double xpos;
+    private int xpos;
 
     /**
      * This attribute represents the ordinate of the data to replace.
      */
-    private double ypos;
+    private int ypos;
 
     /**
      * This attribute stores the new value to be included in the chart.
      */
-    private String value;
+    private TableCell value;
 
     /**
      * Constructor
@@ -43,7 +43,7 @@ public class TableCellInPlaceUpdate {
      * @param ypos
      * @param value
      */
-    public TableCellInPlaceUpdate(double xpos, double ypos, String value){
+    public TableCellInPlaceUpdate(int xpos, int ypos, TableCell value){
         this.xpos=xpos;
         this.ypos=ypos;
         this.value=value;
@@ -53,7 +53,7 @@ public class TableCellInPlaceUpdate {
      * This method has the task of returning the abscissa of the data to be modified.
      * @return the abscissa of the data to be modified
      */
-    public double getX(){
+    public int getX(){
         return xpos;
     }
 
@@ -61,7 +61,7 @@ public class TableCellInPlaceUpdate {
      * This method has the task of returning the ordinate of data to be modified.
      * @return the ordinate of data to be modified
      */
-    public double getY(){
+    public int getY(){
         return ypos;
     }
 
@@ -69,7 +69,7 @@ public class TableCellInPlaceUpdate {
      * This method is responsible for returning the new data of the update package.
      * @return the new data of the update package
      */
-    public String getData(){
+    public TableCell getData(){
         return value;
     }
 }

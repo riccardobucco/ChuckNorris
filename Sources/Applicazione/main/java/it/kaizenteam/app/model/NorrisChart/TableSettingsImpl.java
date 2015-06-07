@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
 * Date: 2015-05-19
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,13 +11,14 @@
 * =================================================================
 * v0.02 2015-05-24  Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-18  Moretto Alessandro  Creation
+* v0.01 2015-05-18  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
 
 package it.kaizenteam.app.model.NorrisChart;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -37,12 +38,47 @@ public class TableSettingsImpl implements ChartSettings {
         this.settings=settings;
     }
 
+    public String getTitle() {
+        try {
+            return settings.getString("title");
+        } catch (JSONException e) {
+            return "";
+        }
+    }
+
+    public String getDescription() {
+        try {
+            return settings.getString("description");
+        } catch (JSONException e) {
+            return "";
+        }
+    }
+
+    public int getMaxValue() {
+        try {
+            return settings.getInt("maxValues");
+        } catch (JSONException e) {
+            return 10;
+        }
+    }
+
     /**
      * This method has the task to returning a boolean that says if the border lines of the cells must be visible or not.
      * @return boolean that says if the border lines of the cells must be visible or not
      */
-    public boolean getBorderLineVisibility(){
-        //TODO
-        return true;
+    public boolean getBorderLineVisibility() {
+        try {
+            return settings.getBoolean("showGrid");
+        } catch (JSONException e) {
+            return true;
+        }
+    }
+
+    public String getNewLinePosition() {
+        try {
+            return settings.getString("newLinePosition");
+        } catch (JSONException e) {
+            return "bottom";
+        }
     }
 }

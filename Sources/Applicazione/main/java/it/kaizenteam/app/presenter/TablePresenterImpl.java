@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.presenter
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/presenter
 * Date: 2015-05-22
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,16 +11,25 @@
 * =================================================================
 * v0.02 2015-05-26  Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-25  Moretto Alessandro  Creation
+* v0.01 2015-05-25  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
 
 package it.kaizenteam.app.presenter;
 
-import java.util.Observable;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import it.kaizenteam.app.Utils.Observable;
+import it.kaizenteam.app.model.NorrisChart.ChartData;
+import it.kaizenteam.app.model.NorrisChart.ChartImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
+import it.kaizenteam.app.model.NorrisChart.ChartUpdate;
+import it.kaizenteam.app.model.NorrisChart.TableSettingsImpl;
+import it.kaizenteam.app.model.Service.ChartReceiverImpl;
+import it.kaizenteam.app.view.TableActivity;
+import it.kaizenteam.app.view.TableView;
 
 /**
  * This class is the implementation of a presenter for table.
@@ -37,8 +46,55 @@ public class TablePresenterImpl extends ChartPresenterImpl implements TablePrese
      * @param data
      */
     @Override
-    public void update(Observable observable, Object data) {
-        //TODO
+    public void update(Observable observable, Object... data) {
+        if(data[0].toString().equals("table")) {
+            try {
+                ChartData tableData = JSONParser.getInstance().parseTable(new JSONObject(data[2].toString()));
+                ChartSettings tableSettings = JSONParser.getInstance().parseTableSettings(new JSONObject(data[1].toString()));
+                chart= ChartImpl.create("table", id);
+                chart.setData(tableData);
+                chart.setSettings(tableSettings);
+                ((TableActivity)view).runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ((TableView) view).renderChart(chart.getData());
+                        applySettings(chart.getSettings());
+                    }
+                });
+            } catch (JSONException e) {}
+        }
+        else{
+            try {
+                if(data[0].toString().equals("inplace")) {
+                    ChartUpdate update = JSONParser.getInstance().parseTableInPlaceUpdate(new JSONObject(data[1].toString()));
+                    chart.update("table:inplace", update);
+                    ((TableActivity)view).runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            ((TableView) view).renderChart(chart.getData());
+                        }
+                    });
+                }
+                else
+                    if(data[0].toString().equals("stream")) {
+                        ChartUpdate update = JSONParser.getInstance().parseTableStreamUpdate(new JSONObject(data[1].toString()));
+                        chart.update("table:stream", update);
+                        ((TableActivity)view).runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ((TableView) view).renderChart(chart.getData());
+                            }
+                        });
+                    }
+            } catch (JSONException e) {}
+        }
+    }
+
+    @Override
+    public void setChart(String id) {
+        ((Observable) ChartReceiverImpl.getInstance()).attach(this);
+        this.id=id;
+        ChartReceiverImpl.getInstance().getChart(id);
     }
 
     /**
@@ -47,7 +103,9 @@ public class TablePresenterImpl extends ChartPresenterImpl implements TablePrese
      */
     @Override
     protected void applySettings(ChartSettings settings) {
-        //TODO
+        ((TableActivity) view).showCellBorderLine(((TableSettingsImpl) settings).getBorderLineVisibility());
+        ((TableActivity) view).setDescription(((TableSettingsImpl) settings).getDescription());
+        ((TableActivity) view).setTitle(((TableSettingsImpl) settings).getTitle());
     }
 
     /**

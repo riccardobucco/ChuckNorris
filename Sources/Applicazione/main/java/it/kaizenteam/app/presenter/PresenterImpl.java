@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.presenter
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/presenter
 * Date: 2015-05-22
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-26  Davide Dal Bianco   Verify
 * =================================================================
-* v0.01 2015-05-25  Moretto Alessandro  Creation
+* v0.01 2015-05-25  Moretto Alessandro  Creazione file
 * =================================================================
 *
 */
@@ -117,6 +117,11 @@ public class PresenterImpl implements Presenter{
      * This method is the constructor of the class. It is protected to disallow direct creation of an instance of that class by classes not authorized.
      */
     protected PresenterImpl(){}
+
+    @Override
+    public void onPause() {
+
+    }
 
     /**
      * PresenterFactory is the interface of the factory classes that deal creation of various types of presenter. It is internal to the class PresenterImpl.

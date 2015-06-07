@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
 * Date: 2015-05-16
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-22  Davide Dal Bianco  Creation
+* v0.01 2015-05-22  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
@@ -27,7 +27,7 @@ import java.util.Observable;
  */
 public abstract class ChartImpl extends Observable implements ChartModel{
     private static Map<String,ChartFactory> factories = new HashMap<>();
-    private static HashMap<String,Updater> updaters = new HashMap<>();
+    private static HashMap<String,ChartUpdater> updaters = new HashMap<>();
     final String id;
     final String type;
     ChartData data;
@@ -64,8 +64,7 @@ public abstract class ChartImpl extends Observable implements ChartModel{
 
         if(factory != null)
             return factory.createChart(id);
-        else
-            return null; //TODO throw new Exception();
+        return null; //TODO throw new Exception();
     }
 
     /**
@@ -82,7 +81,7 @@ public abstract class ChartImpl extends Observable implements ChartModel{
      * @param updatetype type of update
      * @param updater hashmap of the class
      */
-    protected void registerUpdater(String updatetype, Updater updater) {
+    protected static void registerUpdater(String updatetype, ChartUpdater updater) {
         updaters.put(updatetype, updater);
     }
 
@@ -151,13 +150,11 @@ public abstract class ChartImpl extends Observable implements ChartModel{
      * @param updateData update package
      */
     public void update(String updateType, ChartUpdate updateData) {
-        Updater updater = updaters.get(type);
+        ChartUpdater updater = updaters.get(updateType);
 
         if (updater != null)
             updater.update(this,updateData);
-        /*TODO else
-            throw new Exception();
-        */
+
     }
 
     /**

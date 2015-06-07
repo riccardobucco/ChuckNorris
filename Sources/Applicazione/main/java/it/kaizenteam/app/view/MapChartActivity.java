@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 2015-05-24
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,31 +11,38 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-23  Davide Dal Bianco  Creation
+* v0.01 2015-05-23  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
 
 package it.kaizenteam.app.view;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.ArrayList;
 
 import it.kaizenteam.app.R;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
+import it.kaizenteam.app.model.NorrisChart.MapChartDataImpl;
+import it.kaizenteam.app.model.NorrisChart.MapPoint;
+import it.kaizenteam.app.model.NorrisChart.MapSet;
+import it.kaizenteam.app.presenter.MapChartPresenter;
 import it.kaizenteam.app.presenter.PresenterImpl;
-import it.kaizenteam.app.view.ChartActivity;
 
 /**
  * MapChartActivity specializes ChartActivity and constitutes an Activity for map charts. It provides static constants that represent the possible values to be passed to methods to change the view.
  */
 public class MapChartActivity extends ChartActivity implements MapChartView {
-
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
     /**
@@ -50,14 +57,20 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
         presenter= PresenterImpl.create(PresenterImpl.MAPCHART_TYPE,this);
     }
 
-    /**
-     *
-     */
+
     @Override
     protected void onResume() {
         super.onResume();
         setUpMapIfNeeded();
+        ((MapChartPresenter)presenter).setChart("mc");// TODO getIntent().getStringExtra("id"));
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        presenter.onPause();
+    }
+
 
     /**
      * Sets up the map if it is possible to do so (i.e., the Google Play services APK is correctly
@@ -94,16 +107,48 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+
     }
 
+    ArrayList<Marker>markers=new ArrayList<>();
     /**
      * This method will display correctly the chart passed as a parameter.
      * @param data chart
      */
     @Override
     public void renderChart(ChartData data) {
-    //TODO
+        markers.clear();
+        mMap.clear();
+        ArrayList<MapSet> sets= ((MapChartDataImpl)data).getData();
+        for(int i=0;i<sets.size();i++){
+            BitmapDescriptor setmarkerico=null;
+            ArrayList<MapPoint> set=sets.get(i).getData();
+            if(sets.get(i).getMarker().equals(""))
+                setmarkerico=null;
+            else if(sets.get(i).getMarker().equals("bus"))
+                setmarkerico=BitmapDescriptorFactory.fromResource(R.drawable.bus);
+            //TODO more...
+            for(int j = 0;j<set.size();j++){
+                LatLng coord = new LatLng(set.get(j).getLatitude(),set.get(j).getLongitude());
+
+                MarkerOptions mo=new MarkerOptions()
+                        .position(coord)
+                        .snippet("" + coord.toString())
+                        .icon(setmarkerico);
+                if(set.get(j).getId()!=null)
+                    mo.title("" + j + "/" + sets.get(i).getName()+ " (id: "+ set.get(j).getId()+")");
+                else
+                    mo.title("" + j + "/" + sets.get(i).getName());
+
+                markers.add(mMap.addMarker(mo));
+
+                /*if(j!=0)
+                    mMap.addPolyline(new PolylineOptions()
+                            .color(Color.parseColor(sets.get(i).getColor()))
+                            .add(new LatLng(set.get(j - 1).getLatitude(), set.get(j - 1).getLongitude()))
+                            .add(coord));*/
+            }
+        }
     }
 
     /**
@@ -112,8 +157,8 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
      * @param longitude longitude coordinate of the central point
      */
     @Override
-    public void setCameraCoordinate(int latitude, int longitude) {
-//TODO
+    public void setCameraCoordinate(double latitude, double longitude) {
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(latitude, longitude)));
     }
 
     /**
@@ -122,33 +167,6 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
      */
     @Override
     public void setCameraZoom(int zoomLevel) {
-//TODO
-    }
-
-    /**
-     * This method provides the ability to change the map markers chart. The markers permits are available in static constants of class (X_SHAPE).
-     * @param shape map marker to change
-     */
-    @Override
-    public void setMarkerShape(String shape) {
-//TODO
-    }
-
-    /**
-     * This method provides the ability to change the color of various series Data chart.
-     * @param colors colour to change
-     */
-    @Override
-    public void setSeriesColor(String[] colors) {
-//TODO
-    }
-
-    /**
-     * This method allows the display in the correct way the title of the chart.
-     * @param title title of the chart
-     */
-    @Override
-    public void setTitle(String title) {
-//TODO
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(zoomLevel));
     }
 }

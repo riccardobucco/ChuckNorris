@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
 * Date: 2015-05-24
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-23  Davide Dal Bianco  Creation
+* v0.01 2015-05-23  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
@@ -27,7 +27,6 @@ import android.widget.TextView;
 
 import it.kaizenteam.app.R;
 import it.kaizenteam.app.presenter.LoginPresenter;
-import it.kaizenteam.app.presenter.Presenter;
 import it.kaizenteam.app.presenter.PresenterImpl;
 
 
@@ -61,7 +60,7 @@ public class LoginActivity extends BaseActivity implements LoginView{
     @Override
     public void showListView() {
         Intent i = new Intent(this,ListActivity.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY); //TODO BUG torna nella home
+        //TODO evita che ritorni al login
         startActivity(i);
     }
 

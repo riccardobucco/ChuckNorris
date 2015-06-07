@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.presenter
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/presenter
 * Date: 2015-05-22
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,16 +11,24 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-23  Davide Dal Bianco  Creation
+* v0.01 2015-05-23  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
 
 package it.kaizenteam.app.presenter;
 
-import java.util.Observable;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import it.kaizenteam.app.Utils.Observable;
+import it.kaizenteam.app.model.NorrisChart.ChartData;
+import it.kaizenteam.app.model.NorrisChart.ChartImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
+import it.kaizenteam.app.model.NorrisChart.ChartUpdate;
+import it.kaizenteam.app.model.NorrisChart.LineChartSettingsImpl;
+import it.kaizenteam.app.model.Service.ChartReceiverImpl;
+import it.kaizenteam.app.view.LineChartActivity;
 import it.kaizenteam.app.view.LineChartView;
 
 /**
@@ -37,7 +45,6 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
      * This method is the constructor. It is private because it can not be created an instance except from a request of his inner class factory.
      */
     private LineChartPresenterImpl() {
-    //TODO richiesta socket e add observer e update start
     }
 
     /**
@@ -46,11 +53,57 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
      * @param data
      */
     @Override
-    public void update(Observable observable, Object data) {
-        //TODO jsonparser mod model e renderchart e settings
+    public void update(Observable observable, Object... data) {
+        if(data[0].toString().equals("linechart")) {
+            try {
+                ChartData lineChartData = JSONParser.getInstance().parseLineChart(new JSONObject(data[2].toString()));
+                ChartSettings lineChartSettings = JSONParser.getInstance().parseLineChartSettings(new JSONObject(data[1].toString()));
+                chart= ChartImpl.create("linechart", id);
+                chart.setData(lineChartData);
+                chart.setSettings(lineChartSettings);
+                ((LineChartActivity)view).runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ((LineChartView) view).renderChart(chart.getData());
+                        applySettings(chart.getSettings());
+                    }
+                });
+            } catch (JSONException e) {}
+        }
+        else{
+            try {
+                if(data[0].toString().equals("inplace")) {
+                    ChartUpdate update;
+                    update = JSONParser.getInstance().parseLineChartInPlaceUpdate(new JSONObject(data[1].toString()));
+                    chart.update("linechart:inplace", update);
+                    ((LineChartActivity)view).runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            ((LineChartView) view).renderChart(chart.getData());
+                        }
+                    });
+                }
+                else
+                    if(data[0].toString().equals("stream")) {
+                        ChartUpdate update;
+                        update = JSONParser.getInstance().parseLineChartStreamUpdate(new JSONObject(data[1].toString()));
+                        chart.update("linechart:stream", update);
+                        ((LineChartActivity)view).runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ((LineChartView) view).renderChart(chart.getData());
+                            }
+                        });
+                    }
+            } catch (JSONException e) {}
+        }
+    }
 
-
-        ((LineChartView)view).renderChart(null);
+    @Override
+    public void setChart(String id) {
+        ((Observable) ChartReceiverImpl.getInstance()).attach(this);
+        this.id=id;
+        ChartReceiverImpl.getInstance().getChart(id);
     }
 
     /**
@@ -59,7 +112,17 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
      */
     @Override
     protected void applySettings(ChartSettings settings) {
-        //TODO
+        if(((LineChartSettingsImpl) settings).getLegendPosition().equals("right"))
+            ((LineChartActivity) view).setLegendPosition(2);
+        //TODO more
+        ((LineChartActivity) view).setCubicLines(((LineChartSettingsImpl) settings).getCubicCurves());
+        //TODO ((LineChartActivity) view).setDottedLines(((LineChartSettingsImpl) settings).getDotted());
+        ((LineChartActivity) view).setDotRadius(((LineChartSettingsImpl) settings).getDotRadius());
+        ((LineChartActivity) view).showGrid(((LineChartSettingsImpl) settings).getGridVisibility());
+        ((LineChartActivity) view).setAxisName(((LineChartSettingsImpl) settings).getXAxisName(), ((LineChartSettingsImpl) settings).getYAxisName());
+        ((LineChartActivity) view).showGrid(((LineChartSettingsImpl) settings).getGridVisibility());
+        ((LineChartActivity) view).setDescription(((LineChartSettingsImpl) settings).getDescription());
+        ((LineChartActivity) view).setTitle(((LineChartSettingsImpl) settings).getTitle());
     }
 
     /**

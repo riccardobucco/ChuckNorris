@@ -21,16 +21,16 @@ package it.kaizenteam.app.model.NorrisChart;
 /**
  * This class represents the data of a point of a map chart.
  */
-public class MapPoint {
+public class MapChartElementDeleteUpdate {
     /**
      * This attribute is the latitude of a point on the map chart.
      */
-    private double latitude;
+    private int series;
 
     /**
      * This attribute represents the longitude of a point on the map chart.
      */
-    private double longitude;
+    private int index;
 
     /**
      * This attribute represent the id of a point on the map chart.
@@ -38,20 +38,20 @@ public class MapPoint {
     private String id;
 
     /**
-     * This method is the constructor of MapPoint. It has as parameters the values of a geographical coordinate, and the id of this one.
-     * @param latitude of point
-     * @param longitude of point
+     * This method is the constructor of MapPoint. It has as parameters the values of index and series, and the id of this one.
+     * @param series of point
+     * @param index of point
      */
-    public MapPoint(double latitude, double longitude){
-        this.latitude=latitude;
-        this.longitude=longitude;
+    public MapChartElementDeleteUpdate(int series, int index){
+        this.series=series;
+        this.index=index;
     }
 
     /**
-     * This method assign an id to the point.
-     * @param id it's the id to assign to the object
+     * This method is the constructor of MapPoint. It has as parameters the values of a geographical coordinate, and the id of this one.
+     * @param id of point
      */
-    public void setId(String id){
+    public MapChartElementDeleteUpdate(String id){
         this.id=id;
     }
 
@@ -64,34 +64,34 @@ public class MapPoint {
     }
 
     /**
-     * This method has the task of returning the latitude of the point.
-     * @return the latitude of the point
+     * This method has the task of returning the series of the point.
+     * @return the series of the point
      */
-    public double getLatitude(){
-        return latitude;
+    public int getSeries(){
+        return series;
     }
 
     /**
-     * This method has the task of returning the longitude of the point.
-     * @return the longitude of the point
+     * This method has the task of returning the index of the point.
+     * @return the Index of the point
      */
-    public double getLongitude(){
-        return longitude;
+    public int getIndex(){
+        return index;
     }
 
     /**
-     * This method has the task to set the latitude of the point.
-     * @param latitude
+     * This method has the task to set the series of the point.
+     * @param series
      */
-    public void setLatitude(double latitude){
-        this.latitude= latitude;
+    public void setSeries(int series){
+        this.series= series;
     }
 
     /**
-     * This method has the task to set the longitude of the point.
-     * @param longitude
+     * This method has the task to set the index of the point.
+     * @param index
      */
-    public void setLongitude(double longitude){
-        this.longitude= longitude;
+    public void setIndex(int index){
+        this.index= index;
     }
 }

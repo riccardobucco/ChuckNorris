@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
 * Date: 2015-05-16
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,26 +11,26 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-22  Davide Dal Bianco  Creation
+* v0.01 2015-05-22  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
 
 package it.kaizenteam.app.model.NorrisChart;
 
-import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.LineData;
 
 /**
  * This class represents the data in a line chart.
  */
 public class LineChartDataImpl implements ChartData{
-    private LineChart values;
+    private LineData values;
 
     /**
      * This method is the constructor of LineChartDataImpl. It has as a parameter data values in the chart.
      * @param values data values of the chart
      */
-    public LineChartDataImpl(LineChart values){
+    public LineChartDataImpl(LineData values){
         this.values=values;
     }
 
@@ -38,7 +38,7 @@ public class LineChartDataImpl implements ChartData{
      * This method has the task of returning the data of the chart.
      * @return the data of the chart
      */
-    public LineChart getData(){
+    public LineData getData(){
         return values;
     }
 
@@ -46,7 +46,7 @@ public class LineChartDataImpl implements ChartData{
      * This method has the task to set the data of the chart.
      * @param data data of the chart
      */
-    public void setData(LineChart data){
+    public void setData(LineData data){
         this.values=data;
     }
 }

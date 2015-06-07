@@ -3,7 +3,7 @@
 * Package: it.kaizenteam.app.model.service
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/Service
 * Date: 2015-05-19
-* Version: v0.02
+* Version: 0.01
 *
 * History:
 * =================================================================
@@ -11,26 +11,23 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-22  Davide Dal Bianco  Creation
+* v0.01 2015-05-22  Davide Dal Bianco  Creazione file
 * =================================================================
 *
 */
 
 package it.kaizenteam.app.model.Service;
 
-import android.util.Log;
-
-import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.emitter.Emitter;
+import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
 
-import java.util.Observable;
-
+import it.kaizenteam.app.Utils.Observable;
 import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 
 /**
  * 
- *This class has a responsibility to communicate and receive events through the socket channel between app and server. Updates can be started or stopped out or it can be made the request for a full chart by external api of Norris.
+This class has a responsibility to communicate and receive events through the socket channel between app and server. Updates can be started or stopped out or it can be made the request for a full chart by external api of Norris.
  */
 public class ChartReceiverImpl extends Observable implements ChartReceiver {
     private static ChartReceiverImpl instance;
@@ -54,29 +51,11 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
     }
 
     /**
-     * This method has the task to enable updates through the socket channel for the chart with id idchart.
-     * @param chartId id of the chart
+     * This method has the task of finishing the receipt of the updates through the socket channel
      */
     @Override
-    public void startUpdateEvent(String chartId) {
-        //TODO controlla eventi
-        socket.on("update:" + chartId, new Emitter.Listener() {
-            @Override
-            public void call(Object... args) {
-
-            }
-        });
-        socket.connect();
-    }
-
-    /**
-     * This method has the task of finishing the receipt of the updates through the socket channel for the chart with id idchart.
-     * @param chartId id of the chart
-     */
-    @Override
-    public void stopUpdateEvent(String chartId) {
-        //TODO controlla eventi
-        socket.off("update:" + chartId);
+    public void stopUpdateEvent() {
+        socket.off("update");
         socket.disconnect();
     }
 
@@ -89,19 +68,27 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
         //inizializzo il socket con l'indirizzo di norris
         try {
             //TODO salvare address per non instanziarlo ad ogni chart per es.
-            socket = IO.socket(NorrisSessionInfoImpl.getInstance().getAddress());
+            IO.Options opt=new IO.Options();
+            opt.path="/socket.io";
+            socket = IO.socket(NorrisSessionInfoImpl.getInstance().getAddress()+"/"+chartId,opt);
         }
         catch (Exception e){
         }
-        //TODO controlla eventi
-        socket.on("getChart:" + chartId, new Emitter.Listener() {
+
+        socket.on("chart" , new Emitter.Listener() {
             @Override
             public void call(Object... args) {
-                //TODO controllare args
-                ChartReceiverImpl.this.notifyObservers(args[0]);
-                socket.disconnect();
+                ChartReceiverImpl.this.notifyObservers(args);
+                socket.off("chart");
             }
         });
+        socket.on("update" , new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                ChartReceiverImpl.this.notifyObservers(args);
+            }
+        });
+
         socket.connect();
     }
 }
