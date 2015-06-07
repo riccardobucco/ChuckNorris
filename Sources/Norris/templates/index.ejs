@@ -3,10 +3,10 @@ var charts = page.getCharts();
 var settings = page.getSettings();
 var maxChartsRow = settings.maxChartsRow;
 var maxChartsCol = settings.maxChartsCol;
-var endpoint = endpoint;
+var path = endpoint;
 
 function printTag(chart) {
-    return '<chuck-' + chart.getType() + ' chart-endpoint="' + endpoint + '" chart-id="' + chart.getId() + '"></chuck-' + chart.getType() + '>';
+    return '<chuck-' + chart.getType() + ' chart-endpoint="' + path + '" chart-id="' + chart.getId() + '"></chuck-' + chart.getType() + '>';
 }
 %>
 
