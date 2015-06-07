@@ -37,14 +37,8 @@ function ListEndpoint(controller) {
         this.controller=controller;
         this.app=controller.getApp();
         var endpoint=this.controller.getEndpoint();
-        /*if (endpoint=='/') {
-            endpoint = endpoint + 'list';
-        }
-        else {
-            endpoint = endpoint + '/list';
-        }*/
         var listEndpoint=this;
-        this.app.get(endpoint, function(req, res) {listEndpoint.handleRequest(req, res)});
+        this.app.get(endpoint + 'list', function(req, res) {listEndpoint.handleRequest(req, res)});
     } else {
         console.log("ERROR: an ExternalAPIController is required.");
         throw("ListEndpoint:requiredExternalAPIController");

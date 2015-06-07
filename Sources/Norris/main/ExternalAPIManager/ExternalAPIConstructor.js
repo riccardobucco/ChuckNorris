@@ -67,5 +67,5 @@ ExternalAPIConstructor.prototype.construct = function (model, server, app) {
 
 //Dependency injection:
 var ChartEndpoint=require('./ChartEndpoint.js');
-//var AuthenticationEndpoint=require('./AuthenticationEndpoint.js');
+var AuthenticationEndpoint=require('./AuthenticationEndpoint.js');
 var ListEndpoint=require('./ListEndpoint.js');

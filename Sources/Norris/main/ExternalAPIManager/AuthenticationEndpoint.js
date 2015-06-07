@@ -36,8 +36,7 @@ function AuthenticationEndpoint(controller) {
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
         this.app=controller.getApp();
-        this.app.use(cookieParser());
-        this.controller.getServer().on('request', this.app);
+        this.app.use(this.controller.getEndpoint() + '/auth', cookieParser());
         this.app.post(this.controller.getEndpoint() + '/auth/login', this.handleLogin);
         this.app.post(this.controller.getEndpoint() + '/auth/logout', this.handleLogout);
         this.app.post(this.controller.getEndpoint() + '/auth/keepalive', this.handleKeepAlive);
