@@ -16,17 +16,23 @@
 
 var assert = require("assert");
 var ExternalAPIController = require('../../main/ExternalAPIManager/ExternalAPIController.js');
+//var NorrisImpl = require('../../main/DataModel/NorrisImpl.js');
 
 describe('ExternalAPIController',function(){
 	describe('ExternalAPIController(model: NorrisImpl, server: http, endpoint: String)',function(){
 		it('should properly construct an ExternalAPIController object',function(){
-			model = {
+			var endpoint = 'randomString';
+			var model = {
 				randomKey1: 'randomValue1'
 			};
-			server = {
+			model.endpoint = endpoint;
+			model.getEndpoint = function(){
+			    return this.endpoint;
+			}
+			var server = {
 				randomKey2: 'randomValue2'
 			};
-			endpoint = 'randomString';
+			
 
 			var extAPIContr = new ExternalAPIController(model, server, endpoint);
 
@@ -37,6 +43,7 @@ describe('ExternalAPIController',function(){
 	});
 	describe('performLogin(cookies: express::cookie, username: String, password: String): boolean',function(){
 		it('should start a new session for the user',function(){
+			var endpoint = 'randomString';
 			var model = {
 				settings: {
 					cookies: {randomKey: 'randomValue'},
@@ -44,6 +51,8 @@ describe('ExternalAPIController',function(){
 					password: 'randomPassword'
 				}
 			};
+			model.endpoint = endpoint;
+			model.getEndpoint = function(){ return this.endpoint; }
 			model.getSettings = function() {return this.settings;};
 			model.settings.login = function(cookies, username, password) {return (this.username==username)&&(this.password==password);}
 			var extAPIContr = new ExternalAPIController(model, {}, '');
@@ -52,6 +61,7 @@ describe('ExternalAPIController',function(){
 	});
 	describe('performLogout(cookies: express::cookie): boolean',function(){
 		it('should stop the session for the user',function(){
+			var endpoint =  'randomString';
 			var model = {
 				settings: {
 					cookies: {randomKey: 'randomValue'},
@@ -59,6 +69,8 @@ describe('ExternalAPIController',function(){
 					password: 'randomPassword'
 				}
 			};
+			model.endpoint = endpoint;
+			model.getEndpoint = function(){ return this.endpoint; }
 			model.getSettings = function() {return this.settings;};
 			model.settings.logout = function(cookies) {return true;};
 			var extAPIContr = new ExternalAPIController(model, {}, '');
@@ -67,6 +79,7 @@ describe('ExternalAPIController',function(){
 	});
 	describe('isLogged(cookies: express::cookies): boolean',function(){
 		it('should verify if a user is authenticated',function(){
+			var endpoint = 'randomString';
 			var model = {
 				settings: {
 					cookies: {randomKey: 'randomValue'},
@@ -74,6 +87,8 @@ describe('ExternalAPIController',function(){
 					password: 'randomPassword'
 				}
 			};
+			model.endpoint = endpoint;
+			model.getEndpoint = function(){ return this.endpoint; }
 			model.getSettings = function() {return this.settings;};
 			model.settings.isLogged = function(cookies) {return true;};
 			var extAPIContr = new ExternalAPIController(model, {}, '');
@@ -82,14 +97,36 @@ describe('ExternalAPIController',function(){
 	});
 	describe('getServer: http',function(){
 		it('should get the server',function(){
-			var extAPIContr = new ExternalAPIController({}, {randomKey: 'randomValue'}, '');
-			assert.deepEqual(extAPIContr.server,extAPIContr.getServer());
+		    var endpoint = 'randomString';
+		    var model = {
+				randomKey1: 'randomValue1'
+			};
+			model.endpoint = endpoint;
+			model.getEndpoint = function(){
+			    return this.endpoint;
+			}
+		    var server = {
+				randomKey2: 'randomValue2'
+			};
+		    var extAPIContr = new ExternalAPIController(model, server, endpoint);
+		    assert.deepEqual(extAPIContr.server,extAPIContr.getServer());
 		});
 	});
 	describe('getEndpoint: String',function(){
 		it('should get the endpoint',function(){
-			var extAPIContr = new ExternalAPIController({}, {}, 'randomString');
-			assert.deepEqual(extAPIContr.endpoint,extAPIContr.getEndpoint());
+		    var endpoint = 'randomString';
+		    var model = {
+			randomKey1: 'randomValue1'
+		    };
+		    model.endpoint = endpoint;
+		    model.getEndpoint = function(){
+			return this.endpoint;
+		    }
+		    var server = {
+			randomKey2: 'randomValue2'
+		    };
+		    var extAPIContr = new ExternalAPIController(model, server, endpoint);
+		    assert.deepEqual(extAPIContr.endpoint,extAPIContr.getEndpoint());
 		});
 	});
 });
