@@ -30,15 +30,15 @@ describe('MapChartImpl', function(){
 		it('should memorize some default values for the keys of the settings',function(){
 			var mapchart = new MapChartImpl('randomID');
 			var defaults = {
-				area : 1,
-				centerCoordinates : {
-					x : 0,
-					y : 0,
-				},				
+				area : {
+				    x : 0,
+				    y : 0,
+				    zoom : 0
+				},
 				title : '',
 				description : 'This is a map chart',
 				legendPosition : 'top-right',
-				maxPoints : 5
+				maxValues : 5
 			};
 			assert.deepEqual(defaults,mapchart.settings);
 		});

@@ -81,14 +81,14 @@ describe('NorrisBridge', function(){
 				data: {},
 				domain: null,
 				settings: {
-					'area': 1,
-					'centerCoordinates' : {
-						'x': 0,
-						'y':0,
+					area : {
+					    x: 0,
+					    y:0,
+					    zoom : 0
 					},
 					description: 'This is a map chart',
 					legendPosition: 'top-right',
-					maxPoints: 5,
+					maxValues: 5,
 					title: ''
 				  },
 				type: 'mapchart',

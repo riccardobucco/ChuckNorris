@@ -32,14 +32,15 @@ describe('LineChartImpl', function(){
 			var defaults = {
 				title: '',
 				description : 'This is a line chart.',
-				xlabel : '',
-				ylabel : '',
-				showGrid : false,
-				legendPosition : 'top-right',
-				maxPoints : 10,
-				format : {
-					pointDotRadius : 1 ,
-					bezierCurve : true
+				xLabel : '',
+				yLabel : '',
+				legendPosition : 'right',
+				maxValues : 10,
+				style : {
+				    animationDuration : 1000,
+				    bezierCurve : true,
+				    pointDotSize : 0,
+				    showGrid : false,
 				}
 			};
 			assert.deepEqual(defaults,linechart.settings);

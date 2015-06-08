@@ -30,17 +30,16 @@ describe('BarChartImpl', function(){
 		it('should memorize some default values for the keys of the settings',function(){
 			var barchart = new BarChartImpl('randomID');
 			var defaults = {
-				title : '',
 				description : 'This is a bar chart.',
-				xlabel : '',
-				ylabel : '',
-				showGrid : false,
-				legendPosition : 'top-right',
+				title : '',
+				xLabel : '',
+				yLabel : '',
+				legendPosition : 'right',
 				orientation : 'vertical',
-				maxBars: 10,
-				format : {
-					barValueSpacing : 1,
-					barDatasetSpacing : 5
+				style: {
+					barArea: '60%',
+					animationDuration: 1000,
+					showGrid : false,
 				}
 			};
 			assert.deepEqual(defaults,barchart.settings);

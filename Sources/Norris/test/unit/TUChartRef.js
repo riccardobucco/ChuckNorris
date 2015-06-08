@@ -49,19 +49,20 @@ describe('ChartRef(chart: ChartImpl)', function(){
          it('should get the right settings of the chart', function(){
             var barchart = new BarChartImpl('randomID');
             var chart = new ChartRef(barchart);
-		    assert.deepEqual({
-		        title : '',
+	    var defaults = {
+		    title : '',
 	            description : 'This is a bar chart.',
-	            xlabel : '',
-	            ylabel : '',
-	            showGrid : false,
-	            legendPosition : 'top-right',
-	            orientation : 'vertical',
-	            maxBars: 10,
-	            format : {
-		            barValueSpacing : 1 , 
-		            barDatasetSpacing : 5
-		        } }, chart.getSettings() );
+	            xLabel : '',
+	            yLabel : '',
+		    style : {
+			animationDuration : 1000,
+			barArea : "60%", 
+			showGrid : false,
+		    },
+	            legendPosition : 'right',
+	            orientation : 'vertical'
+	    };
+	    assert.deepEqual(defaults, chart.getSettings() );
         });
     
     });
