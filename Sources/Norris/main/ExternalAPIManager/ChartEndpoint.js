@@ -34,7 +34,7 @@ function ChartEndpoint(controller) {
     if (!(this instanceof ChartEndpoint)) return new ChartEndpoint(controller);
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
-        var socketio = sio(controller.getServer()); // the server is listening for socket.io connections
+        var socketio = sio(controller.getServer(), {path: this.controller.getEndpoint() + 'chart'}); // the server is listening for socket.io connections
         this.controller.model.on('create', function (chart) {
             var nsp = socketio.of('/' + chart.getId());
 
