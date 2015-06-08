@@ -35,6 +35,11 @@ function ChartEndpoint(controller) {
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
         var socketio = sio(controller.getServer(), {path: this.controller.getEndpoint() + 'chart'}); // the server is listening for socket.io connections
+        /*this.controller.getApp().use(function (req, res, next) {
+            res.setHeader('Access-Control-Allow-Origin', 'granted hosts');
+            res.setHeader('Access-Control-Allow-Credentials', 'true');
+            next();
+        });*/
         this.controller.model.on('create', function (chart) {
             var nsp = socketio.of('/' + chart.getId());
 
