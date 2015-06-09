@@ -51,23 +51,36 @@ function ListEndpoint(controller) {
  * @param res
  */
 ListEndpoint.prototype.handleRequest = function(req, res) {
-    var charts = this.controller.getCharts();
-    var list=[];
-    for (var key in charts) {
-        var id=charts[key].getId();
-        var type=charts[key].getType();
-        var settings=charts[key].getSettings();
-        var title=settings.title;
-        var description= settings.description;
-        var object={id : '', type : '', title: '', description: ''};
-        object.id=id;
-        object.type=type;
-        object.title=title;
-        object.description=description;
-        list.push(object);
-    }
+    var cookies = {
+        getCookies: req.cookies,
+        getSigned: req.signedCookies,
+        setCookie: function () {
+            res.cookie.apply(res, arguments);
+        },
+        clear: res.clearCookie
+    };
 
-    res.json(list);
+    if(this.controller.isLogged(cookies)) {
+        var charts = this.controller.getCharts();
+        var list=[];
+        for (var key in charts) {
+            var id=charts[key].getId();
+            var type=charts[key].getType();
+            var settings=charts[key].getSettings();
+            var title=settings.title;
+            var description= settings.description;
+            var object={id : '', type : '', title: '', description: ''};
+            object.id=id;
+            object.type=type;
+            object.title=title;
+            object.description=description;
+            list.push(object);
+        }
+
+        res.json(list);
+    } else {
+        res.sendStatus(401);
+    }
 };
 
 

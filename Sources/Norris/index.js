@@ -21,6 +21,28 @@ page.add(bc).add(lc).add(mc).add(t);
 
 app.use('/', nor.getMiddleware());
 
+nor.setSettings({
+    login: function (cookies, username, password) {
+        if(username === 'Kaizen' && password === 'Team') {
+            cookies.setCookie('ssid', 'true');
+            console.log(username)
+            console.log(password)
+            return true;
+        } else {
+            return false;
+        }
+    },
+    isLogged: function (cookies) {
+        if(cookies.getCookies.ssid && cookies.getCookie.ssid === 'true')
+            return true;
+        else
+            return false;
+    },
+    logout: function (cookies) {
+        cookies.clearCookie('ssid');
+    }
+});
+
 bc.setData({
     labels: ['1','2','3','4','5'],
     datasets: [
@@ -29,7 +51,7 @@ bc.setData({
         {name: 'paperino', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]}
     ]
 });
-setInterval(barchart, 2000);
+//setInterval(barchart, 2000);
 
 lc.setData({
     labels: ['1','2','3','4','5'],
@@ -40,13 +62,13 @@ lc.setData({
     ]
 });
 lc.setSettings({xLabel: 'xLabel', yLabel: 'yLabel', legendPosition: 'top'})
-setInterval(linechart, 2000);
+//setInterval(linechart, 2000);
 
 mc.setData({ datasets: [
     {name: 'pippo', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]}//,
     //{name: 'pluto', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
 ]});
-setInterval(mapchart, 2000);
+//setInterval(mapchart, 2000);
 
 t.setData({
     headers: ['pippo','pluto','paperino'],
@@ -61,7 +83,7 @@ t.setData({
         ]}
     ]
 });
-setInterval(table, 2000);
+//setInterval(table, 2000);
 
 
 

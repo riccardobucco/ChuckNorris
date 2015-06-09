@@ -24,6 +24,7 @@ var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
 
 var express = require('express');
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 
 /**
  * Creates an AuthenticationEndpoint.
@@ -34,12 +35,14 @@ var cookieParser = require('cookie-parser');
 function AuthenticationEndpoint(controller) {
     if (!(this instanceof AuthenticationEndpoint)) return new AuthenticationEndpoint(controller);
     if (controller instanceof ExternalAPIController) {
+        var authenticationEndpoint = this;
         this.controller=controller;
         this.app=controller.getApp();
-        this.app.use(this.controller.getEndpoint() + '/auth', cookieParser());
-        this.app.post(this.controller.getEndpoint() + '/auth/login', this.handleLogin);
-        this.app.post(this.controller.getEndpoint() + '/auth/logout', this.handleLogout);
-        this.app.post(this.controller.getEndpoint() + '/auth/keepalive', this.handleKeepAlive);
+        this.app.use(this.controller.getEndpoint(), cookieParser());
+        this.app.use(this.controller.getEndpoint() + 'auth', bodyParser.urlencoded({extended: true}));
+        this.app.post(this.controller.getEndpoint() + 'auth/login', function (req, res) {authenticationEndpoint.handleLogin(req, res);});
+        this.app.post(this.controller.getEndpoint() + 'auth/logout', this.handleLogout);
+        this.app.post(this.controller.getEndpoint() + 'auth/keepalive', this.handleKeepAlive);
     }else {
         console.log("ERROR: an ExternalAPIController is required.");
         throw("AuthenticationEndpoint:requiredExternalAPIController");
@@ -53,17 +56,19 @@ function AuthenticationEndpoint(controller) {
  */
 AuthenticationEndpoint.prototype.handleLogin = function(req, res) {
     var cookies = {
-        get: req.cookies,
+        getCookies: req.cookies,
         getSigned: req.signedCookies,
-        set: res.cookie,
+        setCookie: function () {
+            res.cookie.apply(res, arguments);
+        },
         clear: res.clearCookie
     };
-    var query = querystring.parse();
-    if(!query.username || !query.password)
+
+    if(!req.body.username || !req.body.password) {
         res.sendStatus(400);
-    else if(!this.controller.handleLogin(cookies, query.username, query.password))
+    } else if(!this.controller.performLogin(cookies, req.body.username, req.body.password)) {
         res.sendStatus(401);
-    else
+    } else
         res.sendStatus(200);
 };
 
@@ -74,12 +79,14 @@ AuthenticationEndpoint.prototype.handleLogin = function(req, res) {
  */
 AuthenticationEndpoint.prototype.handleLogout = function(req, res) {
     var cookies = {
-        get: req.cookies,
+        getCookies: req.cookies,
         getSigned: req.signedCookies,
-        set: res.cookie,
+        setCookie: function () {
+            res.cookie.apply(res, arguments);
+        },
         clear: res.clearCookie
     };
-   if(!this.controller.handleLogout(cookies))
+    if(!this.controller.handleLogout(cookies))
         res.sendStatus(401);
     else
         res.sendStatus(200);
@@ -92,9 +99,11 @@ AuthenticationEndpoint.prototype.handleLogout = function(req, res) {
  */
 AuthenticationEndpoint.prototype.handleKeepAlive = function(req, res) {
     var cookies = {
-        get: req.cookies,
+        getCookies: req.cookies,
         getSigned: req.signedCookies,
-        set: res.cookie,
+        setCookie: function () {
+            res.cookie.apply(res, arguments);
+        },
         clear: res.clearCookie
     };
     if(!this.controller.handleKeepAlive(cookies))
