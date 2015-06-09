@@ -53,10 +53,10 @@ describe('LineChartStreamUpdater', function(){
 			chart.getData = function() {return this.data;};
 			chart.setData = function(par) {this.data = par;};
 			chart.getSettings = function() {return this.settings;};
-			var newData = [
+			var newData = { stream:[
 			    {label: 'foo', data: [1,2,3,4,5]},
-    			{label: 'bar', data: [1,2,3,4,5]}
-			];
+			    {label: 'bar', data: [1,2,3,4,5]}
+			]};
 			assert.throws(function () {(new LineChartStreamUpdater()).update(chart, newData)});
 		});
 		it('should update a given chart with the stream method', function(){
@@ -76,10 +76,10 @@ describe('LineChartStreamUpdater', function(){
 			chart.getData = function() {return this.data;};
 			chart.setData = function(par) {this.data = par;};
 			chart.getSettings = function() {return this.settings;};
-			var newData = [
+			var newData = { stream: [
 			    {label: 'foo', data: [777,888,999]},
-    			{label: 'bar', data: [111,222,333]}
-			];
+			    {label: 'bar', data: [111,222,333]}
+			]};
 			var updatedData = {
 				labels: ['2010','2011','2012','2013', 'foo', 'bar'],
 				datasets: [

@@ -42,13 +42,13 @@ describe('LineChartInPlaceUpdater', function(){
 			};
 			chart.getData = function() {return this.data;};
 			chart.setData = function(par) {this.data = par;};
-			var newData = [
-			    { position: {x:0, y:0}, value: 'foo' },
-			    { position: {x:0, y:1}, value: 'foo' }
-			];
+			var newData = { inplace : [
+			    { position: {x:0, y:0}, data: 'randomValue' },
+			    { position: {x:0, y:1}, data: 'randomValue' }
+			]};
 			var updatedData = {
 				datasets: [
-			        {values: ['foo','foo',3,4]},
+			        {values: ['randomValue','randomValue',3,4]},
 			        {values: [1,2,3,4]},
 			        {values: [1,2,3,4]}
 				]

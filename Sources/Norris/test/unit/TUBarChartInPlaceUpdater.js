@@ -42,19 +42,19 @@ describe('BarChartInPlaceUpdater', function(){
 			};
 			chart.getData = function() {return this.data;};
 			chart.setData = function(par) {this.data = par;};
-			var newData = [
-			    { position: {x:0, y:0}, value: 'foo' },
-			    { position: {x:0, y:1}, value: 'foo' }
-			];
+			var newData = { inplace : [
+			    { position: {x:0, y:0}, data: 10 },
+			    { position: {x:0, y:1}, data: 30 }
+			]};
 			var updatedData = {
 				datasets: [
-			        {values: ['foo','foo',3,4]},
+			        {values: [10,30,3,4]},
 			        {values: [1,2,3,4]},
 			        {values: [1,2,3,4]}
 				]
 			};
 			(new BarChartInPlaceUpdater()).update(chart, newData);
-			assert.deepEqual(updatedData, chart.data);
+			assert.deepEqual(chart.data, updatedData);
 		});
 	});
 });
