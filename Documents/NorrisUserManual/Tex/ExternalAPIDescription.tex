@@ -1,9 +1,9 @@
-\level{1}{Description of Norris' External API} \label{sec:ExternalAPI}
-    This section describes the functionality provided by the External API of Norris. Through those API it's possible to request a chart to an instance of Norris. It will be automatically updated. You can render the chart with a library of your choice.\\
-    In this section we refer \texttt{[endpoint]} as the Internal API given endpoint.
+\level{1}{Description of Norris' External APIs} \label{sec:ExternalAPI}
+    This section describes the functionality provided by the External APIs of Norris. Through these APIs it's possible to request a chart to an instance of Norris, that will be automatically updated. You can render the chart with a library of your choice.\\
+    In this section we refer to \texttt{[endpoint]} as the Internal API given endpoint.
 
-    \level{2}{Chart request API}
-        The Chart request API provides the functionalities to get a chart. The API is available over WebSocket. Once opened a WebSocket, you will get both the chart and its own updates until you close the connection. \\
+    \level{2}{Chart Request API}
+        The Chart Request API provides the functionalities to get a chart. The API is available over WebSocket. Once opened a WebSocket, you will get both the chart and its own updates until you close the connection. \\
         Request details:
         \begin{enumerate}
             \item Open the WebSocket at \texttt{[endpoint]/chart} using \texttt{/[chartid]} as namespace;
@@ -11,8 +11,8 @@
             \item For each update you will get an \texttt{update} event with update type and update data as parameters.
         \end{enumerate}
 
-    \level{2}{List request API}
-        The List request API provides the list of all charts contained in a Norris instance. The API is available over HTTP and you will get the list of the charts with the following details:
+    \level{2}{List Request API}
+        The List Request API provides the list of all charts contained in a Norris instance. The API is available over HTTP and you will get the list of the charts with the following details:
         \begin{itemize}
             \item Chart id;
             \item Chart type;
@@ -32,8 +32,8 @@
         \end{table}
 
     \level{2}{Authentication API}
-        The Authentication APIs provides the functionalities to perform authentication to a Norris instance. The APIs is available over HTTP requests and may sets some cookies.
-        \level{4}{Login}
+        The Authentication API provides the functionalities to perform authentication to a Norris instance. The API is available over HTTP request and may sets some cookies.
+        \level{3}{Login}
             The login starts a new session for the given user. \\
             \begin{table}[H]
                 \centering

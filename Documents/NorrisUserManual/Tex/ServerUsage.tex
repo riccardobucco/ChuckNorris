@@ -42,6 +42,10 @@
 				\begin{lstlisting}
 					var nrr = (*\ignoreglo{norris}*)((*\ignoreglo{server}*), endpoint);
 				\end{lstlisting}
+				or:
+				\begin{lstlisting}
+					var nrr = (*\ignoreglo{norris}*)((*\ignoreglo{server}*), endpoint, app);
+				\end{lstlisting}
 				\item (optional) You can choose some settings (properties) that affect how \insglo{Norris} behaves:
 				\begin{lstlisting}
 					nrr.settings(opts);
@@ -50,20 +54,26 @@
 			\end{enumerate}
 		\end{itemize}
 	\level{2}{Example usage}
-		This section contains some code that show you a common scenario. It is explained how it works and what it does. For more detailed information about the internal \insglo{API}, you can check out \nameref{sec:InternalAPI}.\\
+		This section contains some code that shows you a common scenario. It is explained how it works and what it does. For more detailed information about the internal \insglo{API}, you can check out \nameref{sec:InternalAPI}.\\
 		You can create one of the charts \insglo{Norris} has available. In the example below, we will build a \insglo{Bar Chart} based on some data and settings. Then we will add it to a page, and we keep it updated.
 		\begin{lstlisting}
 			// create a new empty (*\ignoreglo{Bar Chart}*) whose id is 'cp3'
 			var myChart = new nrr.Chart('(*\ignoreglo{barchart}*)', 'cp3');
 			// enter data for the chart
-			myChart.data({...});
+			myChart.setData({...});
 			// choose options for the chart [optional]
-			myChart.settings({...});
+			myChart.setSettings({...});
 			// create a new page
-			var page = new nrr.Page('myFirstPage');
+			var myPage = new nrr.Page('myFirstPage');
 			// add the myChart to the new page
-			page.add(myChart);
-			// myPage will be available at '/(*\ignoreglo{norris}*)' path
+			myPage.add(myChart);
+			// myPage will be available at '/endpoint/(*\ignoreglo{norris}*)/pages/page_ID' path:
+			// endpoint is the endpoint value passed during norris' instance creation,
+			// 'norris' is the path where the middleware is mounted, 
+			// 'pages' and 'page_ID' specify that a page with page_ID ID 
+			// is going to be visualized. 
+			// Note that a route will match any path which follows 
+			// its path immediately with a '/'.
 			app.use('/(*\ignoreglo{norris}*)', nrr.getMiddleware());
 			// keep myChart updated using (*\ignoreglo{inplace}*) method (some values will be replaced)
 			myChart.update('(*\ignoreglo{inplace}*)', {...});
@@ -77,5 +87,5 @@
 			It is possible to set some options for the chart. For example, you can choose the bars orientation, legend position, distance between two bars... However, this step isn't mandatory, you can avoid it: in this case some default options will be set.\\
 			More details about options object of a Bar Chart (and other types of charts) can be found at \nameref{sec:ObjectsDescriptionCharts}.
 		\level{3}{Update object structure}
-			When you want to update with the inplace method a Bar Chart you have to choose which bars (of which series) you desire to modify. To modify a bar means that its height (or length) will change. In the update object you can insert more then one single value: in this way you are able to modify multiple bars at the same time.\\
-			More details about tha update object of a Bar Chart (and other types of charts) can be found at \nameref{sec:ObjectsDescriptionCharts}.
+			When you want to update with the inplace method a Bar Chart you have to choose which bars (of which series) you desire to modify. To modify a bar means that its height (or length) will change. In the update object you can insert more than one single value: in this way you are able to modify multiple bars at the same time.\\
+			More details about the update object of a Bar Chart (and other types of charts) can be found at \nameref{sec:ObjectsDescriptionCharts}.
