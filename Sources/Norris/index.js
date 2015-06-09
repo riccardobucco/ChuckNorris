@@ -1,5 +1,3 @@
-// norris test file
-
 var http = require('http');
 var express = require('express');
 var norris = require('./main');
@@ -33,13 +31,14 @@ nor.setSettings({
         }
     },
     isLogged: function (cookies) {
-        if(cookies.getCookies.ssid && cookies.getCookie.ssid === 'true')
+        if(cookies.getCookies.ssid && cookies.getCookies.ssid === 'true')
             return true;
         else
             return false;
     },
     logout: function (cookies) {
         cookies.clearCookie('ssid');
+        return true;
     }
 });
 
@@ -51,7 +50,7 @@ bc.setData({
         {name: 'paperino', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]}
     ]
 });
-//setInterval(barchart, 2000);
+setInterval(barchart, 2000);
 
 lc.setData({
     labels: ['1','2','3','4','5'],
@@ -62,13 +61,13 @@ lc.setData({
     ]
 });
 lc.setSettings({xLabel: 'xLabel', yLabel: 'yLabel', legendPosition: 'top'})
-//setInterval(linechart, 2000);
+setInterval(linechart, 2000);
 
 mc.setData({ datasets: [
-    {name: 'pippo', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]}//,
-    //{name: 'pluto', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
+    {name: 'pippo', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]},
+    {name: 'pluto', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
 ]});
-//setInterval(mapchart, 2000);
+setInterval(mapchart, 2000);
 
 t.setData({
     headers: ['pippo','pluto','paperino'],
@@ -83,7 +82,7 @@ t.setData({
         ]}
     ]
 });
-//setInterval(table, 2000);
+setInterval(table, 2000);
 
 
 
@@ -130,8 +129,8 @@ function mapchart() {
             inplace: [],
             delete: [/*{series:0, index:Math.floor(Math.random()*4)}*/],
             stream: [
-                {series: 0, data: {x: Math.floor(Math.random() * 180) - 90, y: Math.floor(Math.random() * 90) - 45}}//,
-                //{series: 1, data: {x: Math.floor(Math.random() * 180) - 90, y: Math.floor(Math.random() * 90) - 45}}
+                {series: 0, data: {x: Math.floor(Math.random() * 180) - 90, y: Math.floor(Math.random() * 90) - 45}},
+                {series: 1, data: {x: Math.floor(Math.random() * 180) - 90, y: Math.floor(Math.random() * 90) - 45}}
             ]
         };
         mc.update('movie', update);

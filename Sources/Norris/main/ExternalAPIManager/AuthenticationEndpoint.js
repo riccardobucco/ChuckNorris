@@ -41,8 +41,8 @@ function AuthenticationEndpoint(controller) {
         this.app.use(this.controller.getEndpoint(), cookieParser());
         this.app.use(this.controller.getEndpoint() + 'auth', bodyParser.urlencoded({extended: true}));
         this.app.post(this.controller.getEndpoint() + 'auth/login', function (req, res) {authenticationEndpoint.handleLogin(req, res);});
-        this.app.post(this.controller.getEndpoint() + 'auth/logout', this.handleLogout);
-        this.app.post(this.controller.getEndpoint() + 'auth/keepalive', this.handleKeepAlive);
+        this.app.post(this.controller.getEndpoint() + 'auth/logout', function (req, res) {authenticationEndpoint.handleLogout(req, res);});
+        this.app.post(this.controller.getEndpoint() + 'auth/keepalive', function (req, res) {authenticationEndpoint.handleKeepAlive(req, res);});
     }else {
         console.log("ERROR: an ExternalAPIController is required.");
         throw("AuthenticationEndpoint:requiredExternalAPIController");
@@ -57,11 +57,13 @@ function AuthenticationEndpoint(controller) {
 AuthenticationEndpoint.prototype.handleLogin = function(req, res) {
     var cookies = {
         getCookies: req.cookies,
-        getSigned: req.signedCookies,
+        getSignedCookies: req.signedCookies,
         setCookie: function () {
             res.cookie.apply(res, arguments);
         },
-        clear: res.clearCookie
+        clearCookie: function () {
+            res.clearCookie.apply(res, arguments);
+        }
     };
 
     if(!req.body.username || !req.body.password) {
@@ -80,13 +82,15 @@ AuthenticationEndpoint.prototype.handleLogin = function(req, res) {
 AuthenticationEndpoint.prototype.handleLogout = function(req, res) {
     var cookies = {
         getCookies: req.cookies,
-        getSigned: req.signedCookies,
+        getSignedCookies: req.signedCookies,
         setCookie: function () {
             res.cookie.apply(res, arguments);
         },
-        clear: res.clearCookie
+        clearCookie: function () {
+            res.clearCookie.apply(res, arguments);
+        }
     };
-    if(!this.controller.handleLogout(cookies))
+    if(!this.controller.performLogout(cookies))
         res.sendStatus(401);
     else
         res.sendStatus(200);
@@ -100,13 +104,15 @@ AuthenticationEndpoint.prototype.handleLogout = function(req, res) {
 AuthenticationEndpoint.prototype.handleKeepAlive = function(req, res) {
     var cookies = {
         getCookies: req.cookies,
-        getSigned: req.signedCookies,
+        getSignedCookies: req.signedCookies,
         setCookie: function () {
             res.cookie.apply(res, arguments);
         },
-        clear: res.clearCookie
+        clearCookie: function () {
+            res.clearCookie.apply(res, arguments);
+        }
     };
-    if(!this.controller.handleKeepAlive(cookies))
+    if(!this.controller.performKeepAlive(cookies))
         res.sendStatus(401);
     else
         res.sendStatus(200);

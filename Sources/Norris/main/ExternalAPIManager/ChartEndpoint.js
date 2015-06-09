@@ -21,6 +21,7 @@
 
 var ExternalAPIController = require('./ExternalAPIController.js');
 var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
+var SocketIOCookieParser = require('socket.io-cookie-parser');
 
 var sio = require('socket.io');
 
@@ -35,6 +36,19 @@ function ChartEndpoint(controller) {
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
         var socketio = sio(controller.getServer(), {path: this.controller.getEndpoint() + 'chart'}); // the server is listening for socket.io connections
+        var chartEndpoint = this;
+        socketio.use(SocketIOCookieParser());
+        socketio.use(function (socket, next) {
+            var cookies = {
+                getCookies: socket.request.cookies,
+                getSignedCookies: socket.request.signedCookies
+            };
+            if(chartEndpoint.controller.isLogged(cookies)) {
+                next();
+            } else {
+                next(new Error('unauthorized'));
+            }
+        })
         /*this.controller.getApp().use(function (req, res, next) {
             res.setHeader('Access-Control-Allow-Origin', 'granted hosts');
             res.setHeader('Access-Control-Allow-Credentials', 'true');

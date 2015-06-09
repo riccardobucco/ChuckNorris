@@ -53,11 +53,7 @@ function ListEndpoint(controller) {
 ListEndpoint.prototype.handleRequest = function(req, res) {
     var cookies = {
         getCookies: req.cookies,
-        getSigned: req.signedCookies,
-        setCookie: function () {
-            res.cookie.apply(res, arguments);
-        },
-        clear: res.clearCookie
+        getSignedCookies: req.signedCookies
     };
 
     if(this.controller.isLogged(cookies)) {
