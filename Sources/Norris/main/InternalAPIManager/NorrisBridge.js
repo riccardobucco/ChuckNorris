@@ -150,7 +150,7 @@ NorrisBridge.prototype.getPages = function () {
     return pages;
 };
 
-NorrisBridge.prototype.getMiddleware = function (page) {
+NorrisBridge.prototype.getMiddleware = function () {
     var instance = this;
     var app = express();
     app.set('views', __dirname + '/../../templates');
