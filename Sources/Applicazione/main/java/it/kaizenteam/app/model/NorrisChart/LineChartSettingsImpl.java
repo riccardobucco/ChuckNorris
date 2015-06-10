@@ -71,7 +71,7 @@ public class LineChartSettingsImpl implements ChartSettings{
      */
     public int getMaxValue() {
         try {
-            return settings.getInt("maxValues");
+            return settings.getInt("maxItems");
         } catch (JSONException e) {
             return 10;
         }

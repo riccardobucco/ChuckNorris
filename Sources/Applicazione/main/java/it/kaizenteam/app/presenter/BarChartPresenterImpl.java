@@ -104,9 +104,20 @@ public class BarChartPresenterImpl extends ChartPresenterImpl implements BarChar
         ((BarChartActivity) view).setBarDataSetSpacing(((BarChartSettingsImpl) settings).getBarDataSetSpacing());
         ((BarChartActivity) view).setBarValueSpacing(((BarChartSettingsImpl) settings).getBarValueSpacing());
         ((BarChartActivity) view).showGrid(((BarChartSettingsImpl) settings).getGridVisibility());
+
         if(((BarChartSettingsImpl) settings).getLegendPosition().equals("left"))
             ((BarChartActivity) view).setLegendPosition(0);
-        //TODO more ...
+        if(((BarChartSettingsImpl) settings).getLegendPosition().equals("right"))
+            ((BarChartActivity) view).setLegendPosition(2);
+        if(((BarChartSettingsImpl) settings).getLegendPosition().equals("top"))
+            ((BarChartActivity) view).setLegendPosition(3);
+        if(((BarChartSettingsImpl) settings).getLegendPosition().equals("bottom"))
+            ((BarChartActivity) view).setLegendPosition(1);
+        if(((BarChartSettingsImpl) settings).getLegendPosition().equals("in"))
+            ((BarChartActivity) view).setLegendPosition(4);
+        if(((BarChartSettingsImpl) settings).getLegendPosition().equals("none"))
+            ((BarChartActivity) view).setLegendPosition(5);
+
         ((BarChartActivity) view).setOrientation(((BarChartSettingsImpl) settings).getOrientation());
         ((BarChartActivity) view).setTitle(((BarChartSettingsImpl) settings).getTitle());
     }
