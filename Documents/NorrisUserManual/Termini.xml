@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<terms>
+
+	<entry name="Bar Chart">
+		A bar chart is a chart formed by rectangular bars with lenghts proportional to the values that they represent. The bars can be plotted vertically or horizontally. It's used to show comparisons among categories. One axis of the chart shows the categories that are being compared, the other shows a discrete value.
+	</entry>
+
+	<entry name="Dpendent value">
+		In a mathematic function, each element of the codomain is called dependente value.
+	</entry>
+
+	<entry name="Indipendent value"> 
+		In a mathematic function, each element of the domain is called independente value.
+	</entry>
+
+	<entry name="In place"> 
+		The in place update method replaces values, already existing in the chart, with new values.
+	</entry>
+
+	<entry name="Line Chart"> 
+		A line chart is a type of chart which displays information as a series of data points called marker, connected by straight lines. It's often used to visualize a trend in data over intervals of time, thus the line is often draw n chronologically.
+	</entry>
+
+	<entry name="Map Chart"> 
+		A map chart is a geographical map with data displayed as markers on it. Data can be represented as geometric colored shapes, icons, or text. Generally geometric shapes and icons can be selectable and the map can be enlarged or made smaller.
+	</entry>
+
+	<entry name="Movie"> 
+		The movie update method combines the in place and the stream update methods. It allows to manage the transition of the reppresentation of the chart in two times. This type of update permits to:
+		\begin{itemize}
+			\item substitute the vales already represented;
+			\item add new values to the chart;
+			\item delete values from the chart.
+		\end{itemize}
+	</entry>
+
+	<entry name="Norris"> 
+		Norris is a framework which allows to collect data coming from arbitrary source and render them as charts. The APIs, supplied by Norris, permit to configure the layout of data and to indicate different methods for updating the data.
+	</entry>
+
+	<entry name="Stream"> 
+		The stream update method adds new values to the chart, which still keeps the visualisation of the old data, adding new graphic representations of the last data added.
+	</entry>
+
+	<entry name="Table"> 
+		Table is a type of chart, which looks like a grid. The first row contains the headers, which are labels representing the type of data in each column. The other rows contains the data itself. 
+	</entry>
+
+</terms>
