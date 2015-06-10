@@ -35,6 +35,12 @@
         "style": {
             "type": "object",
             "properties": {
+                "maxValue" : {
+                    "type": "number"
+                },
+                "minValue" : {
+                    "type": "number"
+                },
                 "barArea":  {
                     "type": "string",
                     "pattern" : "^[0-9]{1,3}%$"

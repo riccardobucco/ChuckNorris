@@ -33,7 +33,7 @@ var defaults = {
         xLabel : '',
         yLabel : '',
         legendPosition : 'right',
-        maxValues : 10,
+        maxItems : 10,
         style : {
             pointDotSize : 0 , // Number - Size of each point dot in pixels
             bezierCurve : true, // Boolean - Whether the line is curved between points

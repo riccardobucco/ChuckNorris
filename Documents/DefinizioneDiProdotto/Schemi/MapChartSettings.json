@@ -19,7 +19,7 @@
                 "none"
             ]
         },
-        "maxValues": {
+        "maxItems": {
             "type": "integer",
             "minimum": 1
         },

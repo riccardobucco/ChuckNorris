@@ -33,7 +33,7 @@ module.exports = MapChartImpl;
 var defaults = {
 	description: 'This is a map chart',
 	legendPosition : 'top-right', // values: top-right, top-left, bottom-right, bottom-left, none (the legend will not be shown)
-	maxValues : 5,
+	maxItems : 5,
 	area: {
         x: 0,
         y: 0,

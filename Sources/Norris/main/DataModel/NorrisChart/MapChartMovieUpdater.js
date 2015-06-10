@@ -76,7 +76,7 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
                     var series=updateData.stream[i].series;
                     var val=updateData.stream[i].data;
                     data.datasets[series].values.push(val);
-                    if (data.datasets[series].values.length > chart.getSettings().maxValues) {
+                    if (data.datasets[series].values.length > chart.getSettings().maxItems) {
                         data.datasets[series].values.shift();
                     }
                 }

@@ -66,13 +66,13 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
                 if (update[i].row.length==data.headers.length) {
                     if(newLinePosition=='bottom') {
                         data.datasets.push(update[i]);
-                        if (data.datasets.length>chart.getSettings().maxRows) {
+                        if (data.datasets.length>chart.getSettings().maxItems) {
                             data.datasets.shift();
                         }
                     }
                     else {
                         data.datasets.unshift(update[i]); /* inserts in top */
-                        if (data.datasets.length>chart.getSettings().maxRows) {
+                        if (data.datasets.length>chart.getSettings().maxItems) {
                             data.datasets.pop();
                         }
                     }
