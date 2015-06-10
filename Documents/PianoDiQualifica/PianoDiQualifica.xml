@@ -12,14 +12,13 @@
 		<name>Tex/Introduzione.tex</name>
 		<name>Tex/Qualita.tex</name>
 		<name>Tex/Strategia.tex</name>
-        <name>Tex/Gestione.tex</name>
-		<name>Tex/Test.tex</name>
 	</sections>
     
     <appendix>
         <name>Tex/CMM.tex</name>
         <name>Tex/ISO9126.tex</name>
         <name>Tex/PDCA.tex</name>
+	<name>Tex/Test.tex</name>
         <name>Tex/EsitiDB.tex</name>
         <name>Tex/EsitiSD.tex</name>
 		<name>Tex/EsitiP.tex</name>
