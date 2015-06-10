@@ -15,15 +15,18 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
+
+import it.kaizenteam.app.model.NorrisChart.BarChartInPlaceUpdater;
+import it.kaizenteam.app.model.NorrisChart.ChartUpdater;
 
 public class TUApplicazioneBarChartInPlaceUpdater extends TestCase {
 
     public void testGetInstance() throws Exception {
-        Updater a = BarChartInPlaceUpdater.getInstance();
-        Updater b = BarChartInPlaceUpdater.getInstance();
+        ChartUpdater a = BarChartInPlaceUpdater.getInstance();
+        ChartUpdater b = BarChartInPlaceUpdater.getInstance();
         assertEquals(a,b);
     }
 }

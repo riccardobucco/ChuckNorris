@@ -15,9 +15,12 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model;
+package test.unit;
 
 import junit.framework.TestCase;
+
+import it.kaizenteam.app.model.NorrisSessionInfo;
+import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 
 public class TUApplicazioneNorrisSessionInfoImpl extends TestCase {
 

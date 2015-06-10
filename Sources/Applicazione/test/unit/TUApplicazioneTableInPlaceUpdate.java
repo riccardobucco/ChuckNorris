@@ -15,11 +15,14 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
 
 import java.util.ArrayList;
+
+import it.kaizenteam.app.model.NorrisChart.TableCellInPlaceUpdate;
+import it.kaizenteam.app.model.NorrisChart.TableInPlaceUpdate;
 
 public class TUApplicazioneTableInPlaceUpdate extends TestCase {
 

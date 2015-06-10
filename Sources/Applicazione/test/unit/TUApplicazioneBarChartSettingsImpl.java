@@ -15,31 +15,33 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
 
 import org.json.JSONObject;
 
+import it.kaizenteam.app.model.NorrisChart.BarChartSettingsImpl;
+
 public class TUApplicazioneBarChartSettingsImpl extends TestCase {
 
     public void testGetXAxisName() throws Exception {
-        BarChartSettingsImpl a = new BarChartSettingsImpl(new JSONObject("{settings: set}"));
-        assertEquals("set", a.getXAxisName());
+        BarChartSettingsImpl a = new BarChartSettingsImpl(new JSONObject("{xLabel: 'xxx'}"));
+        assertEquals("xxx", a.getXAxisName());
     }
 
     public void testGetYAxisName() throws Exception {
-        BarChartSettingsImpl a = new BarChartSettingsImpl(new JSONObject("{x: xx}"));
-        assertEquals("xx", a.getYAxisName());
+        BarChartSettingsImpl a = new BarChartSettingsImpl(new JSONObject("{yLabel: 'yyy'}"));
+        assertEquals("yyy", a.getYAxisName());
     }
 
     public void testGetGridVisibility() throws Exception {
-        BarChartSettingsImpl a = new BarChartSettingsImpl(new JSONObject("{visibility: vis}"));
-        assertEquals("vis", a.getGridVisibility());
+        BarChartSettingsImpl a = new BarChartSettingsImpl(new JSONObject("{style: {showGrid:true}}"));
+        assertEquals(true, a.getGridVisibility());
     }
 
     public void testGetLegendPosition() throws Exception {
-        BarChartSettingsImpl a = new BarChartSettingsImpl(new JSONObject("{legendposition: left}"));
+        BarChartSettingsImpl a = new BarChartSettingsImpl(new JSONObject("{legendPosition: left}"));
         assertEquals("left", a.getLegendPosition());
     }
 

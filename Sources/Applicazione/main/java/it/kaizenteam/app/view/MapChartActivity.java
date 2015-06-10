@@ -62,13 +62,13 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
     protected void onResume() {
         super.onResume();
         setUpMapIfNeeded();
-        ((MapChartPresenter)presenter).setChart("mc");// TODO getIntent().getStringExtra("id"));
+        ((MapChartPresenter)presenter).setChart(getIntent().getStringExtra("id"));
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        presenter.onPause();
+        ((MapChartPresenter)presenter).onPause();
     }
 
 

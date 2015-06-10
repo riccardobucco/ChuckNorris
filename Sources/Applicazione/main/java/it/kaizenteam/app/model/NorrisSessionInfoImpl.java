@@ -18,6 +18,10 @@
 
 package it.kaizenteam.app.model;
 
+import org.apache.http.cookie.Cookie;
+
+import java.util.ArrayList;
+
 /** This class stores the various data necessary for the session. In fact it contains the various authentication cookie and the address to which the session belongs. */
 public class NorrisSessionInfoImpl implements NorrisSessionInfo {
     /**
@@ -26,9 +30,14 @@ public class NorrisSessionInfoImpl implements NorrisSessionInfo {
     private static NorrisSessionInfoImpl instance;
 
     /**
-    * This attribute is the address belonging to Norris active session.
-    */
+     * This attribute is the address belonging to Norris active session.
+     */
     private String address="";
+
+    /**
+     * This attribute is the endpoint belonging to Norris active session.
+     */
+    private String endpoint="";
 
     /**
     * This attribute represents the state of the session.
@@ -38,7 +47,7 @@ public class NorrisSessionInfoImpl implements NorrisSessionInfo {
     /**
     * This attribute represents the cookie authentication session to be sent to make requests.
     */
-    //TODO private Cookie[] authCookie;
+    private ArrayList<Cookie> authCookie;
 
     /**
     * This method is responsible for returning the unique instance of this class and creating it if it not exists.
@@ -73,6 +82,16 @@ public class NorrisSessionInfoImpl implements NorrisSessionInfo {
         this.address=address;
     }
 
+    @Override
+    public String getEndpoint() {
+        return endpoint;
+    }
+
+    @Override
+    public void setEndpoint(String endpoint) {
+        this.endpoint=endpoint;
+    }
+
     /**
     * This method has the task of storing that login happened in instance of Norris.
     */
@@ -96,11 +115,18 @@ public class NorrisSessionInfoImpl implements NorrisSessionInfo {
     }
 
     /**
-    * This method is responsible for returning the list of authentication cookies for the instance of Norris.
-    * @return Cookie[] list of authentication cookies
-    */
-    /**TODO
-    public Cookie[] getAuthCookie(){
+     * This method is responsible for returning the list of authentication cookies for the instance of Norris.
+     * @return Cookie[] list of authentication cookies
+     */
+    public ArrayList<Cookie> getAuthCookie(){
         return authCookie;
-    }*/
+    }
+
+    /**
+     * This method is responsible for returning the list of authentication cookies for the instance of Norris.
+     * @return Cookie[] list of authentication cookies
+     */
+    public void setAuthCookie(ArrayList<Cookie> cookies){
+        this.authCookie=cookies;
+    }
 }

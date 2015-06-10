@@ -15,19 +15,27 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
+
+import java.util.ArrayList;
+
+import it.kaizenteam.app.model.NorrisChart.LineChartElementStreamUpdate;
 
 public class TUApplicazioneLineChartElementStreamUpdate extends TestCase {
 
     public void testGetData() throws Exception {
-        LineChartElementStreamUpdate a = new LineChartElementStreamUpdate("lab",23);
-        assertEquals(23,a.getData());
+        ArrayList<Integer> r= new ArrayList<>();
+        r.add(23);
+        LineChartElementStreamUpdate a = new LineChartElementStreamUpdate("lab", r);
+        assertEquals(23,a.getData().get(0).intValue());
     }
 
     public void testGetLabel() throws Exception {
-        LineChartElementStreamUpdate a = new LineChartElementStreamUpdate("lab",23);
-        assertEquals(23,a.getLabel());
+        ArrayList<Integer> r= new ArrayList<>();
+        r.add(23);
+        LineChartElementStreamUpdate a = new LineChartElementStreamUpdate("lab",r);
+        assertEquals(23,a.getData().get(0).intValue());
     }
 }

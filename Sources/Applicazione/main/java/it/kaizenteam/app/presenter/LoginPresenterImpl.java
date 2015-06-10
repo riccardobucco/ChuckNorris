@@ -19,9 +19,6 @@
 package it.kaizenteam.app.presenter;
 
 
-import org.json.JSONObject;
-
-import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 import it.kaizenteam.app.view.LoginView;
 
 /**
@@ -42,27 +39,28 @@ success shows the view with the list of chart otherwise appears on view an error
      * @param password
      */
     @Override
-    public void onLoginClick(String addressNorris, String login, String password) {
-        boolean accesso=HttpRequesterWithCookie.getInstance().Login(addressNorris,login,password);
-        JSONObject list=HttpRequesterWithCookie.getInstance().getlist();
-        if(accesso) {
-            NorrisSessionInfoImpl.getInstance().setAddress(addressNorris);
-            NorrisSessionInfoImpl.getInstance().login();
-            ((LoginView) view).showListView();
-        }
-        else
-            ((LoginView) view).showAuthenticationError();
+    public void onLoginClick(final String addressNorris, final String login, final String password) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                ((LoginView)view).showProgress(true);
+                try {
+                    HttpRequesterWithCookie.getInstance().Login(addressNorris,login,password);
+                } catch (Exception e) {
+                    ((LoginView) view).showAuthenticationError(e.getMessage());
+                    ((LoginView) view).showProgress(false);
+                    return;
+                }
+                ((LoginView) view).showProgress(false);
+                ((LoginView) view).showListView();
+            }
+        }).start();
     }
 
     /**
      * This method is the constructor. It is private because it can not be created an instance except from a request of his inner class factory.
      */
     private LoginPresenterImpl(){}
-
-    @Override
-    public void onPause() {
-
-    }
 
     /**
      *  This class deals with the creation of a LoginPresenterImpl presenter.

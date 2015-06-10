@@ -15,31 +15,29 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
 
 import org.json.JSONObject;
 
+import it.kaizenteam.app.model.NorrisChart.MapChartSettingsImpl;
+
 public class TUApplicazioneMapChartSettingsImpl extends TestCase {
 
-    public void testGetMarkerType() throws Exception {
-        MapChartSettingsImpl a = new MapChartSettingsImpl(new JSONObject("marker:bus"));
-        assertEquals("bus",a.getMarkerType());
-    }
 
     public void testGetXCameraCoordinate() throws Exception {
-        MapChartSettingsImpl a = new MapChartSettingsImpl(new JSONObject("xcamera:xcamera"));
-        assertEquals("xcamera",a.getXCameraCoordinate());
+        MapChartSettingsImpl a = new MapChartSettingsImpl(new JSONObject("{centerCoordinates:{x:23.5}}"));
+        assertEquals(23.5,a.getXCameraCoordinate());
     }
 
     public void testGetYCameraCoordinate() throws Exception {
-        MapChartSettingsImpl a = new MapChartSettingsImpl(new JSONObject("ycamera:ycamera"));
-        assertEquals("ycamera",a.getYCameraCoordinate());
+        MapChartSettingsImpl a = new MapChartSettingsImpl(new JSONObject("{centerCoordinates:{y:23.5}}"));
+        assertEquals(23.5,a.getYCameraCoordinate());
     }
 
     public void testGetCameraZoomHeight() throws Exception {
-        MapChartSettingsImpl a = new MapChartSettingsImpl(new JSONObject("camerazoom:camerazoom"));
-        assertEquals("camerazoom",a.getCameraZoomHeight());
+        MapChartSettingsImpl a = new MapChartSettingsImpl(new JSONObject("{area:3}"));
+        assertEquals(3,a.getCameraZoomHeight());
     }
 }

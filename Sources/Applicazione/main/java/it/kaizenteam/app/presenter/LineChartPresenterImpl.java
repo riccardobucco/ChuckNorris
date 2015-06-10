@@ -21,7 +21,7 @@ package it.kaizenteam.app.presenter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import it.kaizenteam.app.Utils.Observable;
+import java.util.Observable;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.model.NorrisChart.ChartImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
@@ -53,11 +53,11 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
      * @param data
      */
     @Override
-    public void update(Observable observable, Object... data) {
-        if(data[0].toString().equals("linechart")) {
+    public void update(Observable observable, Object data) {
+        if(((String[])data)[0].toString().equals("linechart")) {
             try {
-                ChartData lineChartData = JSONParser.getInstance().parseLineChart(new JSONObject(data[2].toString()));
-                ChartSettings lineChartSettings = JSONParser.getInstance().parseLineChartSettings(new JSONObject(data[1].toString()));
+                ChartData lineChartData = JSONParser.getInstance().parseLineChart(new JSONObject(((String[])data)[2].toString()));
+                ChartSettings lineChartSettings = JSONParser.getInstance().parseLineChartSettings(new JSONObject(((String[])data)[1].toString()));
                 chart= ChartImpl.create("linechart", id);
                 chart.setData(lineChartData);
                 chart.setSettings(lineChartSettings);
@@ -72,9 +72,9 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
         }
         else{
             try {
-                if(data[0].toString().equals("inplace")) {
+                if(((String[])data)[0].toString().equals("inplace")) {
                     ChartUpdate update;
-                    update = JSONParser.getInstance().parseLineChartInPlaceUpdate(new JSONObject(data[1].toString()));
+                    update = JSONParser.getInstance().parseLineChartInPlaceUpdate(new JSONObject(((String[])data)[1].toString()));
                     chart.update("linechart:inplace", update);
                     ((LineChartActivity)view).runOnUiThread(new Runnable() {
                         @Override
@@ -84,9 +84,9 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
                     });
                 }
                 else
-                    if(data[0].toString().equals("stream")) {
+                    if(((String[])data)[0].toString().equals("stream")) {
                         ChartUpdate update;
-                        update = JSONParser.getInstance().parseLineChartStreamUpdate(new JSONObject(data[1].toString()));
+                        update = JSONParser.getInstance().parseLineChartStreamUpdate(new JSONObject(((String[])data)[1].toString()));
                         chart.update("linechart:stream", update);
                         ((LineChartActivity)view).runOnUiThread(new Runnable() {
                             @Override
@@ -101,7 +101,7 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
 
     @Override
     public void setChart(String id) {
-        ((Observable) ChartReceiverImpl.getInstance()).attach(this);
+        ((Observable) ChartReceiverImpl.getInstance()).addObserver(this);
         this.id=id;
         ChartReceiverImpl.getInstance().getChart(id);
     }

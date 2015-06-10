@@ -20,12 +20,31 @@ package it.kaizenteam.app.presenter;
 
 import android.util.Log;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONObject;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 
 /**
  * This class extends httpclient implementing the ability to add any requests also http cookies. It has the aim to use the api external Norris such as authentication and request the list of graphics. It saves the information in the model of the session.
@@ -43,70 +62,172 @@ public class HttpRequesterWithCookie {
         return new HttpRequesterWithCookie();
     }
 
-    public JSONObject getlist(){
-
-        // Create http cliient object to send request to server
-
-        HttpClient Client = new DefaultHttpClient();
-
-        // Create URL string
-
-        String URL = "http://95.239.241.28:9000/list";
-
-        //Log.i("httpget", URL);
-
-        try
-        {
-            String SetServerString = "";
-
-            // Create Request to server and get response
-
-            HttpGet httpget = new HttpGet(URL);
-            ResponseHandler<String> responseHandler = new BasicResponseHandler();
-            SetServerString = Client.execute(httpget, responseHandler);
-
-            // Show response on activity
-
-            Log.d("", SetServerString);
+    public JSONArray getlist(){
+        try {
+            return new JSONArray(makeGetRequest(NorrisSessionInfoImpl.getInstance().getAddress()+NorrisSessionInfoImpl.getInstance().getEndpoint()+"/list"));
+        } catch (JSONException e) {
+            return null;
         }
-        catch(Exception ex)
-        {
-            Log.d("", "Fail!");
-        }
-
-        return null;
     }
 
-    public boolean Login(String addressNorris, String username, String password){
-        /*try {
-            DefaultHttpClient httpclient = new DefaultHttpClient();
+    private String makeGetRequest(String url) {
+        HttpClient client = new DefaultHttpClient();
+        HttpGet request = new HttpGet(url);
 
-            //url with the post data
-            HttpPost httpost = new HttpPost(addressNorris+"/auth/login");
+        ArrayList<Cookie> cookies= NorrisSessionInfoImpl.getInstance().getAuthCookie();
+        if (cookies != null && cookies.size() > 0) {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < cookies.size(); i++) {
+                sb.append(cookies.get(i).getName()).append('=').append(cookies.get(i).getValue()).append(";");
+            }
+            String sck = sb.toString();
+            if (sck.length() > 0) {
+                request.setHeader("Cookie", sck);
+            }
+        }
+        // making request
+        try {
+            HttpResponse response;
+            response = client.execute(request);
+            HttpEntity entity = response.getEntity();
+            // to worry about connection release
+            if (entity != null) {
+                // A Simple JSON Response Read
+                InputStream instream = entity.getContent();
+                String result= convertStreamToString(instream);
+                // now you have the string representation of the HTML request
+                instream.close();
+                return result;
+            }
+        }catch (IOException e) {Log.e("ERRORRRRRR","");}
+        return "";
+    }
 
-            //passes the results to a string builder/entity
-            StringEntity se = new StringEntity("username=" + username +"&password=" + password);
+    private static String convertStreamToString(InputStream is) {
+    /*
+     * To convert the InputStream to String we use the BufferedReader.readLine()
+     * method. We iterate until the BufferedReader return null which means
+     * there's no more data to read. Each line will appended to a StringBuilder
+     * and returned as String.
+     */
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        StringBuilder sb = new StringBuilder();
 
-            //sets the post request as the resulting string
-            httpost.setEntity(se);
-            //sets a request header so the page receving the request
-            //will know what to do with it
-            httpost.setHeader("Accept", "application/json");
+        String line = null;
+        try {
+            while ((line = reader.readLine()) != null) {
+                sb.append(line + "\n");
+            }
+        } catch (IOException e) {
+            //e.printStackTrace();
+        } finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                //e.printStackTrace();
+            }
+        }
+        return sb.toString();
+    }
 
-            //Handles what is returned from the page
-            ResponseHandler responseHandler = new BasicResponseHandler();
-            Object res=httpclient.execute(httpost, responseHandler);
+    private void makePostRequestLogin(String url,Map<String,String> params, List<Cookie> cookieListRef) throws Exception {
+        HttpClient httpClient = new DefaultHttpClient();
+        // replace with your url
+        HttpPost httpPost = new HttpPost(url);
+        //set the Post Data
+        List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>();
+        Set<String> paramskey=params.keySet();
+        if(params.size()!=0){
+            for (String s : paramskey)
+                nameValuePair.add(new BasicNameValuePair(s, params.get(s)));
+            //Encoding POST data
+            try {
+                httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
+            } catch (UnsupportedEncodingException e) {}
+        }
 
+        //making POST request.
+        try {
+            HttpResponse response = httpClient.execute(httpPost);
+            HttpEntity entity = response.getEntity();
+            // to worry about connection release
+            if (entity != null) {
+                // A Simple JSON Response Read
+                InputStream instream = entity.getContent();
+                String result= convertStreamToString(instream);
+                // now you have the string representation of the HTML request
+                instream.close();
+                //check if the login to norris has effect
+                Log.e("RESULTTTT",result);
+                if(result.equals("OK\n")){
+                    List<Cookie> postCookies = ((DefaultHttpClient)httpClient).getCookieStore().getCookies();
+                    for(int i =0; i< postCookies.size();i++){
+                        cookieListRef.add(postCookies.get(i));
+                    }
+                }
+                else{
+                    //if(result.equals("Unauthorized\n")){
+                    throw new Exception("Wrong username or password");
+                }
+            }
+        }  catch (IOException e) {throw new Exception("Wrong address");}
+    }
+
+    private boolean makePostRequestLogout(String url) {
+        DefaultHttpClient httpClient = new DefaultHttpClient();
+        // replace with your url
+        HttpPost httpPost = new HttpPost(url);
+
+        //making POST request.
+        try {
+            HttpResponse response = httpClient.execute(httpPost);
+            return true;
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
-        return true;
+        }
+        return false;
+    }
+
+    public void Login(String addressNorris, String username, String password) throws Exception {
+        String address,endpoint;
+        //get the address and the endpoint
+        if(addressNorris.substring(0,7).equals("http://")) {
+            address = "http://" + addressNorris.substring(7).split("/")[0];
+            endpoint = addressNorris.substring(address.length());
+        }
+        else{
+            address = addressNorris.split("/")[0];
+            endpoint = addressNorris.substring(address.length());
+        }
+
+        Map<String,String> params=new HashMap<>();
+        if(username.equals("")||password.equals("")){
+            params.put("username", "Moretto");
+            params.put("password", "Alessandro");
+        }
+        else{
+            params.put("username", username);
+            params.put("password", password);
+        }
+        ArrayList<Cookie> cookies=new ArrayList<>();
+        makePostRequestLogin(addressNorris + "/auth/login", params, cookies);
+        if(cookies.size()!=0)
+            NorrisSessionInfoImpl.getInstance().setAuthCookie(cookies);
+        NorrisSessionInfoImpl.getInstance().setAddress(address);
+        NorrisSessionInfoImpl.getInstance().setEndpoint(endpoint);
+        NorrisSessionInfoImpl.getInstance().login();
     }
 
 
     public boolean Logout(){
-        //TODO
-        return true;
+        if(makePostRequestLogout(NorrisSessionInfoImpl.getInstance().getAddress() + "/auth/logout")){
+            NorrisSessionInfoImpl.getInstance().setAuthCookie(null);
+            NorrisSessionInfoImpl.getInstance().setAddress("");
+            NorrisSessionInfoImpl.getInstance().setEndpoint("");
+            NorrisSessionInfoImpl.getInstance().logout();
+            return true;
+        }
+        return false;
     }
 
     public boolean KeepAlive(){

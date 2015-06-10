@@ -59,12 +59,12 @@ public abstract class ChartImpl extends Observable implements ChartModel{
      * @param id id of the chart
      * @return return the interface of ChartModel created instance
      */
-    public static ChartModel create(String type, String id) {//todo throws Exception {
+    public static ChartModel create(String type, String id) {
         ChartFactory factory = factories.get(type);
 
         if(factory != null)
             return factory.createChart(id);
-        return null; //TODO throw new Exception();
+        return null;
     }
 
     /**

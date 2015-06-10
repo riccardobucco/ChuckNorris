@@ -15,9 +15,11 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import android.test.InstrumentationTestCase;
+
+import it.kaizenteam.app.model.NorrisChart.BarChartDataImpl;
 
 public class TUApplicazioneBarChartDataImpl extends InstrumentationTestCase {
 

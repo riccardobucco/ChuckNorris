@@ -21,7 +21,7 @@ package it.kaizenteam.app.presenter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import it.kaizenteam.app.Utils.Observable;
+import java.util.Observable;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.model.NorrisChart.ChartImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
@@ -51,14 +51,17 @@ public class MapChartPresenterImpl extends ChartPresenterImpl implements MapChar
      * @param data
      */
     @Override
-    public void update(Observable observable, Object... data) {
-        if(data[0].toString().equals("mapchart")) {
+    public void update(Observable observable, Object data) {
+        //if the update is a chart
+        if(((String[])data)[0].toString().equals("mapchart")) {
             try {
-                ChartData mapChartData = JSONParser.getInstance().parseMapChart(new JSONObject(data[2].toString()));
-                ChartSettings mapChartSettings = JSONParser.getInstance().parseMapChartSettings(new JSONObject(data[1].toString()));
+                ChartData mapChartData = JSONParser.getInstance().parseMapChart(new JSONObject(((String[])data)[2].toString()));
+                ChartSettings mapChartSettings = JSONParser.getInstance().parseMapChartSettings(new JSONObject(((String[])data)[1].toString()));
+                //create the chart model and set its data and settings
                 chart= ChartImpl.create("mapchart", id);
                 chart.setData(mapChartData);
                 chart.setSettings(mapChartSettings);
+                //show the chart in the view with its settings
                 ((MapChartActivity)view).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -66,24 +69,26 @@ public class MapChartPresenterImpl extends ChartPresenterImpl implements MapChar
                         applySettings(chart.getSettings());
                     }
                 });
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+            } catch (JSONException e) {}
         }
         else {
             try {
-                if (data[0].toString().equals("inplace")) {
-                    ChartUpdate update = JSONParser.getInstance().parseMapChartInPlaceUpdate(new JSONObject(data[1].toString()));
+                //if the data it's an update in place updates the chart
+                if (((String[])data)[0].toString().equals("inplace")) {
+                    ChartUpdate update = JSONParser.getInstance().parseMapChartInPlaceUpdate(new JSONObject(((String[])data)[1].toString()));
                     chart.update("mapchart:inplace", update);
+                    //asks to the view the new renderize of the chart
                     ((MapChartActivity) view).runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             ((MapChartView) view).renderChart(chart.getData());
                         }
                     });
-                } else if (data[0].toString().equals("movie")) {
-                    ChartUpdate update = JSONParser.getInstance().parseMapChartMovieUpdate(new JSONObject(data[1].toString()));
+                } else if (((String[])data)[0].toString().equals("movie")) {
+                    //if the data it's an update movie updates the chart
+                    ChartUpdate update = JSONParser.getInstance().parseMapChartMovieUpdate(new JSONObject(((String[])data)[1].toString()));
                     chart.update("mapchart:movie", update);
+                    //asks to the view the new renderize of the chart
                     ((MapChartActivity) view).runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -96,9 +101,13 @@ public class MapChartPresenterImpl extends ChartPresenterImpl implements MapChar
         }
     }
 
+    /**
+     * This methods get the chart from Norris instance, set the updates and ask renderization at the view
+     * @param id the id of the chart
+     */
     @Override
     public void setChart(String id) {
-            ((Observable) ChartReceiverImpl.getInstance()).attach(this);
+            ((Observable) ChartReceiverImpl.getInstance()).addObserver(this);
             this.id=id;
             ChartReceiverImpl.getInstance().getChart(id);
     }

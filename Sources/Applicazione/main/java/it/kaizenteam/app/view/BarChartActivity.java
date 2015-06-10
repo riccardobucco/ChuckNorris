@@ -41,7 +41,6 @@ import it.kaizenteam.app.presenter.PresenterImpl;
  * BarChartActivity specializes ChartActivity and constitutes an Activity for bar charts. It provides static constants that represent the possible values to be passed to methods to change the view.
  */
 public class BarChartActivity extends ChartActivity implements BarChartView{
-    //TODO Barchart dei dati
     private BarChart chart;
 
     /**
@@ -59,7 +58,7 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     @Override
     protected void onResume() {
         super.onResume();
-        ((BarChartPresenter)presenter).setChart("bc");// TODO getIntent().getStringExtra("id"));
+        ((BarChartPresenter)presenter).setChart(getIntent().getStringExtra("id"));
         chart.setDescription("");
         chart.invalidate();
     }

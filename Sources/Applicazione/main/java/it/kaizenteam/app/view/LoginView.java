@@ -23,9 +23,9 @@ package it.kaizenteam.app.view;
  */
 public interface LoginView extends View {
     /**
-     * This method shows the view of the message authentication failure.
+     * This method shows the view of the message of an error.
      */
-    void showAuthenticationError();
+    void showAuthenticationError(String err);
 
     /**
      * This method starts the activity in which it will present the list of the instance of the Norris chart.

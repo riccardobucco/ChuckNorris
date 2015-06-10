@@ -69,9 +69,7 @@ public class MapChartMovieUpdater implements ChartUpdater {
                     chartdata.get(streamUpdates.get(i).getSeries()).getData().add(chartdata.get(streamUpdates.get(i).getSeries()).getData().size(),streamUpdates.get(i).getData());
                     if(chartdata.get(streamUpdates.get(i).getSeries()).getData().size()>((MapChartSettingsImpl)chart.getSettings()).getMaxValue())
                         chartdata.get(streamUpdates.get(i).getSeries()).getData().remove(0);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                } catch (Exception e) {}
             }
         }
 

@@ -18,9 +18,11 @@
 
 package it.kaizenteam.app.presenter;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 import java.util.ArrayList;
 
-import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 import it.kaizenteam.app.view.ListView;
 
 /**
@@ -48,8 +50,8 @@ public class ListPresenterImpl extends PresenterImpl implements ListPresenter{
      */
     @Override
     public void onLogoutClick() {
-        NorrisSessionInfoImpl.getInstance().logout();
-        ((ListView)view).navigateToLoginView();
+        HttpRequesterWithCookie.getInstance().Logout();
+        ((ListView) view).navigateToLoginView();
     }
 
     /**
@@ -58,24 +60,42 @@ HttpRequesterWithCookie) and change the view with those values.
      */
     @Override
     public void onResume() {
-        //TODO
-        ArrayList<String[]> a= new ArrayList<>();
-        a.add(new String[]{"id1","barchart"});
-        a.add(new String[]{"id2","linechart"});
-        a.add(new String[]{"id3","mapchart"});
-        a.add(new String[]{"id4", "table"});
-        ((ListView)view).renderList(a);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                ((ListView)view).showWaitMessage(true);
+                ArrayList<String[]> a= new ArrayList<>();
+
+                JSONArray list= HttpRequesterWithCookie.getInstance().getlist();
+                if(list!=null)
+                    for(int i =0;i<list.length();i++){
+                        String title="";
+                        try {
+                            title = list.getJSONObject(i).getString("title");
+                        } catch (JSONException e) {}
+                        String description = "";
+                        try {
+                            description = list.getJSONObject(i).getString("description");
+                        } catch (JSONException e) {}
+                        try {
+                            String id=list.getJSONObject(i).getString("id");
+                            String type=list.getJSONObject(i).getString("type");
+                            a.add(new String[]{id,type,title,description});
+                            ((ListView)view).showWaitMessage(false);
+                            ((ListView)view).renderList(a);
+                        } catch (JSONException e) {
+                        }
+                    }
+                else
+                    ((ListView)view).showWaitMessage(false);
+            }
+        }).start();
     }
 
     /**
      * This method is the constructor. It is private because it can not be created an instance except from a request of his inner class factory.
      */
     private ListPresenterImpl(){}
-
-    @Override
-    public void onPause() {
-
-    }
 
     /**
      *  This class deals with the creation of a ListPresenterImpl presenter.

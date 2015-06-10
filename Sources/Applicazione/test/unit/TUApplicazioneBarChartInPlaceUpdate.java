@@ -15,9 +15,11 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
+
+import it.kaizenteam.app.model.NorrisChart.BarChartInPlaceUpdate;
 
 public class TUApplicazioneBarChartInPlaceUpdate extends TestCase {
 

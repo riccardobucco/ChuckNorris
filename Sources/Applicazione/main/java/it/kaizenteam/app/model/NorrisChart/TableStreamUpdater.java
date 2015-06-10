@@ -55,11 +55,13 @@ public class TableStreamUpdater implements ChartUpdater {
     public void update(ChartImpl chart, ChartUpdate updateData) {
         ArrayList<TableRow> chartdata=((TableDataImpl)chart.getData()).getData();
         ArrayList<TableRow> updaterow=((TableStreamUpdate)updateData).getData();
+        //add new row to chart data
         for(int i =0;i<updaterow.size();i++){
             if(((TableSettingsImpl)chart.getSettings()).getNewLinePosition().equals("top"))
                 chartdata.add(0,updaterow.get(i));
             else
                 chartdata.add(chartdata.size(),updaterow.get(i));
+            //if the new data size is over chart max value, remove the older item
             if(chartdata.size()>((TableSettingsImpl)chart.getSettings()).getMaxValue())
                 chartdata.remove(0);
 

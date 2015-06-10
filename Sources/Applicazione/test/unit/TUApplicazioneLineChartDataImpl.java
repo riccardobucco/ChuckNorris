@@ -15,9 +15,11 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
+
+import it.kaizenteam.app.model.NorrisChart.LineChartDataImpl;
 
 public class TUApplicazioneLineChartDataImpl extends TestCase {
 

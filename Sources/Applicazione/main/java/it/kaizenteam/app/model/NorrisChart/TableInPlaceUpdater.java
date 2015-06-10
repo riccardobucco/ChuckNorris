@@ -56,6 +56,7 @@ public class TableInPlaceUpdater implements ChartUpdater {
     public void update(ChartImpl chart, ChartUpdate updateData) {
         ArrayList<TableRow> chartdata=((TableDataImpl)chart.getData()).getData();
         ArrayList<TableCellInPlaceUpdate> updatecell=((TableInPlaceUpdate)updateData).getData();
+        //for each update data in updatedata, substiture the object in that place
         for(int i =0;i<updatecell.size();i++){
             chartdata.get(updatecell.get(i).getX()).getData().set(updatecell.get(i).getY(),updatecell.get(i).getData());
         }

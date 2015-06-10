@@ -15,9 +15,13 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import android.test.InstrumentationTestCase;
+
+import it.kaizenteam.app.model.NorrisChart.ChartImpl;
+import it.kaizenteam.app.model.NorrisChart.ChartModel;
+
 public class TUApplicazioneChartImpl extends InstrumentationTestCase {
 
     public void testRegisterFactory() throws Exception {

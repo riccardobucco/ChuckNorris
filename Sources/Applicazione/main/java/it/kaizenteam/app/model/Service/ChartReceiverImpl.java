@@ -18,11 +18,14 @@
 
 package it.kaizenteam.app.model.Service;
 
+import android.util.Log;
+
 import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
 
-import it.kaizenteam.app.Utils.Observable;
+import java.util.Observable;
+
 import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 
 /**
@@ -57,6 +60,7 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
     public void stopUpdateEvent() {
         socket.off("update");
         socket.disconnect();
+        socket.close();
     }
 
     /**
@@ -67,9 +71,8 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
     public void getChart(String chartId) {
         //inizializzo il socket con l'indirizzo di norris
         try {
-            //TODO salvare address per non instanziarlo ad ogni chart per es.
             IO.Options opt=new IO.Options();
-            opt.path="/socket.io";
+            opt.path=NorrisSessionInfoImpl.getInstance().getEndpoint()+"/chart";
             socket = IO.socket(NorrisSessionInfoImpl.getInstance().getAddress()+"/"+chartId,opt);
         }
         catch (Exception e){
@@ -78,14 +81,20 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
         socket.on("chart" , new Emitter.Listener() {
             @Override
             public void call(Object... args) {
-                ChartReceiverImpl.this.notifyObservers(args);
+                setChanged();
+                String[]arg={args[0].toString(),args[1].toString(),args[2].toString()};
+                ChartReceiverImpl.this.notifyObservers(arg);
+                Log.d("Chart arrived", args[0].toString());
                 socket.off("chart");
             }
         });
         socket.on("update" , new Emitter.Listener() {
             @Override
             public void call(Object... args) {
-                ChartReceiverImpl.this.notifyObservers(args);
+                setChanged();
+                String[] arg={args[0].toString(),args[1].toString()};
+                ChartReceiverImpl.this.notifyObservers(arg);
+                Log.d("Chart update",args[0].toString());
             }
         });
 

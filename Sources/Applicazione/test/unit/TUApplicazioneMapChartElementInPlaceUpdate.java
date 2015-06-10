@@ -15,33 +15,37 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
+
+import it.kaizenteam.app.model.NorrisChart.MapChartElementInPlaceUpdate;
+import it.kaizenteam.app.model.NorrisChart.MapPoint;
 
 public class TUApplicazioneMapChartElementInPlaceUpdate extends TestCase {
 
     public void testGetData() throws Exception {
-        MapPoint p = new MapPoint(23,23,233030);
-        MapChartElementInPlaceUpdate a = new MapChartElementInPlaceUpdate(p,"id");
+        MapPoint p = new MapPoint(23,23);
+        MapChartElementInPlaceUpdate a = new MapChartElementInPlaceUpdate(p,0,0);
         assertEquals(p,a.getData());
     }
 
     public void testGetX() throws Exception {
-        MapPoint p = new MapPoint(23,23,233030);
-        MapChartElementInPlaceUpdate a = new MapChartElementInPlaceUpdate(p,"id");
-        assertEquals(23,a.getY());
+        MapPoint p = new MapPoint(23,23);
+        MapChartElementInPlaceUpdate a = new MapChartElementInPlaceUpdate(p,0,0);
+        assertEquals(0,a.getIndex());
     }
 
     public void testGetY() throws Exception {
-        MapPoint p = new MapPoint(23,23,233030);
-        MapChartElementInPlaceUpdate a = new MapChartElementInPlaceUpdate(p,"id");
-        assertEquals(23,a.getY());
+        MapPoint p = new MapPoint(23,23);
+        MapChartElementInPlaceUpdate a = new MapChartElementInPlaceUpdate(p,0,0);
+        assertEquals(0,a.getSeries());
     }
 
     public void testGetId() throws Exception {
-        MapPoint p = new MapPoint(23,23,233030);
-        MapChartElementInPlaceUpdate a = new MapChartElementInPlaceUpdate(p,"id");
-        assertEquals(233030,a.getId());
+        MapPoint p = new MapPoint(23,23);
+        MapChartElementInPlaceUpdate a = new MapChartElementInPlaceUpdate(p,0,0);
+        a.setId("233030");
+        assertEquals("233030",a.getId());
     }
 }

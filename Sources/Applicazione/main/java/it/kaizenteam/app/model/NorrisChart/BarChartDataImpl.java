@@ -42,7 +42,7 @@ public class BarChartDataImpl implements ChartData {
         return values;
     }
 
-    /** TODO rimuovere...viene modificato per riferimento
+    /**
     * This method has the task to set the data of the chart.
     * @param values data of the chart
     */

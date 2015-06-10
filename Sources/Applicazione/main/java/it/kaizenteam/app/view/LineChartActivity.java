@@ -37,7 +37,6 @@ import it.kaizenteam.app.presenter.PresenterImpl;
  * LineChartActivity specializes ChartActivity and constitutes an Activity for line charts. It provides static constants that represent the possible values to pass to methods to change the view.
  */
 public class LineChartActivity extends ChartActivity implements LineChartView {
-    //TODO Barchart dei dati
     private LineChart chart;
 
     /**
@@ -55,7 +54,7 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     @Override
     protected void onResume() {
         super.onResume();
-        ((LineChartPresenter)presenter).setChart("lc");// TODO getIntent().getStringExtra("id"));
+        ((LineChartPresenter)presenter).setChart(getIntent().getStringExtra("id"));
         chart.setDescription("");
         chart.invalidate();
     }

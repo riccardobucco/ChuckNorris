@@ -118,11 +118,6 @@ public class PresenterImpl implements Presenter{
      */
     protected PresenterImpl(){}
 
-    @Override
-    public void onPause() {
-
-    }
-
     /**
      * PresenterFactory is the interface of the factory classes that deal creation of various types of presenter. It is internal to the class PresenterImpl.
      */

@@ -15,24 +15,30 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
+
+import it.kaizenteam.app.model.NorrisChart.TableCell;
+import it.kaizenteam.app.model.NorrisChart.TableCellInPlaceUpdate;
 
 public class TUApplicazioneTableCellInPlaceUpdate extends TestCase {
 
     public void testGetX() throws Exception {
-        TableCellInPlaceUpdate a = new TableCellInPlaceUpdate(23,23,"val");
+        TableCell tc=new TableCell("val","#000000","#000000");
+        TableCellInPlaceUpdate a = new TableCellInPlaceUpdate(23,23,tc);
         assertEquals(23,a.getX());
     }
 
     public void testGetY() throws Exception {
-        TableCellInPlaceUpdate a = new TableCellInPlaceUpdate(23,23,"val");
+        TableCell tc=new TableCell("val","#000000","#000000");
+        TableCellInPlaceUpdate a = new TableCellInPlaceUpdate(23,23,tc);
         assertEquals(23,a.getY());
     }
 
     public void testGetData() throws Exception {
-        TableCellInPlaceUpdate a = new TableCellInPlaceUpdate(23,23,"val");
-        assertEquals("val",a.getData());
+        TableCell tc=new TableCell("val","#000000","#000000");
+        TableCellInPlaceUpdate a = new TableCellInPlaceUpdate(23,23,tc);
+        assertEquals(tc,a.getData());
     }
 }

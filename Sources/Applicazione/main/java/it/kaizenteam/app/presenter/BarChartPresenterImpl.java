@@ -21,7 +21,7 @@ package it.kaizenteam.app.presenter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import it.kaizenteam.app.Utils.Observable;
+import java.util.Observable;
 import it.kaizenteam.app.model.NorrisChart.BarChartSettingsImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.model.NorrisChart.ChartImpl;
@@ -52,11 +52,11 @@ public class BarChartPresenterImpl extends ChartPresenterImpl implements BarChar
      * @param data
      */
     @Override
-    public void update(Observable observable, Object... data) {
-        if(data[0].toString().equals("barchart")) {
+    public void update(Observable observable, Object data) {
+        if(((String[])data)[0].toString().equals("barchart")) {
             try {
-                ChartData barChartData = JSONParser.getInstance().parseBarChart(new JSONObject(data[2].toString()));
-                ChartSettings barChartSettings = JSONParser.getInstance().parseBarChartSettings(new JSONObject(data[1].toString()));
+                ChartData barChartData = JSONParser.getInstance().parseBarChart(new JSONObject(((String[])data)[2].toString()));
+                ChartSettings barChartSettings = JSONParser.getInstance().parseBarChartSettings(new JSONObject(((String[])data)[1].toString()));
                 chart= ChartImpl.create("barchart", id);
                 chart.setData(barChartData);
                 chart.setSettings(barChartSettings);
@@ -71,9 +71,9 @@ public class BarChartPresenterImpl extends ChartPresenterImpl implements BarChar
         }
         else{
             try {
-                if(data[0].toString().equals("inplace")) {
+                if(((String[])data)[0].toString().equals("inplace")) {
                     ChartUpdate update;
-                    update = JSONParser.getInstance().parseBarChartInPlaceUpdate(new JSONObject(data[1].toString()));
+                    update = JSONParser.getInstance().parseBarChartInPlaceUpdate(new JSONObject(((String[])data)[1].toString()));
                     chart.update("barchart:inplace", update);
                     ((BarChartActivity)view).runOnUiThread(new Runnable() {
                         @Override
@@ -88,7 +88,7 @@ public class BarChartPresenterImpl extends ChartPresenterImpl implements BarChar
 
     @Override
     public void setChart(String id) {
-        ((Observable)ChartReceiverImpl.getInstance()).attach(this);
+        ((Observable)ChartReceiverImpl.getInstance()).addObserver(this);
         this.id=id;
         ChartReceiverImpl.getInstance().getChart(id);
     }

@@ -15,9 +15,14 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
+
+import it.kaizenteam.app.model.NorrisChart.MapChartDeleteUpdate;
+import it.kaizenteam.app.model.NorrisChart.MapChartInPlaceUpdate;
+import it.kaizenteam.app.model.NorrisChart.MapChartMovieUpdate;
+import it.kaizenteam.app.model.NorrisChart.MapChartStreamUpdate;
 
 public class TUApplicazioneMapChartMovieUpdate extends TestCase {
 

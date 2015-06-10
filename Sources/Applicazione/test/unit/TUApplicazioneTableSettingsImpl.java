@@ -15,11 +15,14 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
 
 import org.json.JSONObject;
+
+import it.kaizenteam.app.model.NorrisChart.TableSettingsImpl;
+
 public class TUApplicazioneTableSettingsImpl extends TestCase {
 
     public void testGetBorderLineVisibility() throws Exception {

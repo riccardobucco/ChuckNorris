@@ -20,9 +20,9 @@ package it.kaizenteam.app.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import it.kaizenteam.app.R;
@@ -43,6 +43,11 @@ public class LoginActivity extends BaseActivity implements LoginView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        //I do that to permit the post reqest to sdk up the 9
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
         presenter= PresenterImpl.create(PresenterImpl.LOGIN_TYPE,this);
     }
 
@@ -50,8 +55,14 @@ public class LoginActivity extends BaseActivity implements LoginView{
      * This method shows the view of the message authentication failure.
      */
     @Override
-    public void showAuthenticationError() {
-        ((TextView)findViewById(R.id.errorloginlbl)).setVisibility(View.VISIBLE);
+    public void showAuthenticationError(final String err) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ((TextView) findViewById(R.id.errorloginlbl)).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(R.id.errorloginlbl)).setText(err);
+            }
+        });
     }
 
     /**
@@ -60,7 +71,7 @@ public class LoginActivity extends BaseActivity implements LoginView{
     @Override
     public void showListView() {
         Intent i = new Intent(this,ListActivity.class);
-        //TODO evita che ritorni al login
+        //TODO evitare che premendo back e quindi abbassandola poi ritorni la home
         startActivity(i);
     }
 
@@ -69,11 +80,20 @@ public class LoginActivity extends BaseActivity implements LoginView{
      * @param show display / hide the view of a waiting signal
      */
     @Override
-    public void showProgress(boolean show) {
-        if(show)
-            ((ImageView)findViewById(R.id.progressimage)).setVisibility(View.VISIBLE);
-        else
-            ((ImageView)findViewById(R.id.progressimage)).setVisibility(View.INVISIBLE);
+    public void showProgress(final boolean show) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if(show) {
+                    (findViewById(R.id.progressimage)).setVisibility(View.VISIBLE);
+                    (findViewById(R.id.loglayout)).setVisibility(View.INVISIBLE);
+                }
+                else{
+                    (findViewById(R.id.progressimage)).setVisibility(View.INVISIBLE);
+                    (findViewById(R.id.loglayout)).setVisibility(View.VISIBLE);
+                }
+            }
+        });
     }
 
     /**
@@ -87,6 +107,5 @@ public class LoginActivity extends BaseActivity implements LoginView{
                 ((EditText)findViewById(R.id.usernametbx)).getText().toString(),
                 ((EditText)findViewById(R.id.passwordtbx)).getText().toString()
         );
-        //TODO
     }
 }

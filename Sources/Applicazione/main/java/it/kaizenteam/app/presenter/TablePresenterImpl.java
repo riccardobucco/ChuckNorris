@@ -21,7 +21,7 @@ package it.kaizenteam.app.presenter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import it.kaizenteam.app.Utils.Observable;
+import java.util.Observable;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.model.NorrisChart.ChartImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
@@ -36,7 +36,7 @@ import it.kaizenteam.app.view.TableView;
  */
 public class TablePresenterImpl extends ChartPresenterImpl implements TablePresenter{
     static {
-        //registro il tipo di grafico (DI)
+        //register the chart type and the updater in the super class (dependency injection)
         registerFactory(TABLE_TYPE, TablePresenterFactory.getInstance());
     }
 
@@ -46,14 +46,18 @@ public class TablePresenterImpl extends ChartPresenterImpl implements TablePrese
      * @param data
      */
     @Override
-    public void update(Observable observable, Object... data) {
-        if(data[0].toString().equals("table")) {
+    public void update(Observable observable, Object data) {
+        //this observer will notify when a chart data arrives or the update data
+        //if it's a chart type
+        if(((String[])data)[0].toString().equals("table")) {
             try {
-                ChartData tableData = JSONParser.getInstance().parseTable(new JSONObject(data[2].toString()));
-                ChartSettings tableSettings = JSONParser.getInstance().parseTableSettings(new JSONObject(data[1].toString()));
+                //create the data model with data and settings
+                ChartData tableData = JSONParser.getInstance().parseTable(new JSONObject(((String[])data)[2].toString()));
+                ChartSettings tableSettings = JSONParser.getInstance().parseTableSettings(new JSONObject(((String[])data)[1].toString()));
                 chart= ChartImpl.create("table", id);
                 chart.setData(tableData);
                 chart.setSettings(tableSettings);
+                //tell to the view to render the chart and apply his settings (it must do in the ui thread in android)
                 ((TableActivity)view).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -64,10 +68,13 @@ public class TablePresenterImpl extends ChartPresenterImpl implements TablePrese
             } catch (JSONException e) {}
         }
         else{
+            //if it's an update type
             try {
-                if(data[0].toString().equals("inplace")) {
-                    ChartUpdate update = JSONParser.getInstance().parseTableInPlaceUpdate(new JSONObject(data[1].toString()));
+                if(((String[])data)[0].toString().equals("inplace")) {
+                    //update in place the chart
+                    ChartUpdate update = JSONParser.getInstance().parseTableInPlaceUpdate(new JSONObject(((String[])data)[1].toString()));
                     chart.update("table:inplace", update);
+                    //ask to renderize the new data
                     ((TableActivity)view).runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -76,9 +83,11 @@ public class TablePresenterImpl extends ChartPresenterImpl implements TablePrese
                     });
                 }
                 else
-                    if(data[0].toString().equals("stream")) {
-                        ChartUpdate update = JSONParser.getInstance().parseTableStreamUpdate(new JSONObject(data[1].toString()));
+                    if(((String[])data)[0].toString().equals("stream")) {
+                        //update stream the chart
+                        ChartUpdate update = JSONParser.getInstance().parseTableStreamUpdate(new JSONObject(((String[])data)[1].toString()));
                         chart.update("table:stream", update);
+                        //ask to renderize the new data
                         ((TableActivity)view).runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -90,9 +99,13 @@ public class TablePresenterImpl extends ChartPresenterImpl implements TablePrese
         }
     }
 
+    /**
+     * This method asks tha chart and wait the data
+     * @param id
+     */
     @Override
     public void setChart(String id) {
-        ((Observable) ChartReceiverImpl.getInstance()).attach(this);
+        ((Observable) ChartReceiverImpl.getInstance()).addObserver(this);
         this.id=id;
         ChartReceiverImpl.getInstance().getChart(id);
     }

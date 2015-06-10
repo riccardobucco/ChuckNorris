@@ -38,6 +38,10 @@ public class TableSettingsImpl implements ChartSettings {
         this.settings=settings;
     }
 
+    /**
+     * this metods get the title of the chart
+     * @return the title of the chart
+     */
     public String getTitle() {
         try {
             return settings.getString("title");
@@ -46,6 +50,10 @@ public class TableSettingsImpl implements ChartSettings {
         }
     }
 
+    /**
+     * This method get the description of the chart
+     * @return the description of the chart
+     */
     public String getDescription() {
         try {
             return settings.getString("description");
@@ -54,6 +62,10 @@ public class TableSettingsImpl implements ChartSettings {
         }
     }
 
+    /**
+     * this method get the max value of the chart
+     * @return the max value setting
+     */
     public int getMaxValue() {
         try {
             return settings.getInt("maxValues");
@@ -74,6 +86,10 @@ public class TableSettingsImpl implements ChartSettings {
         }
     }
 
+    /**
+     * return where a new line must be insert
+     * @return
+     */
     public String getNewLinePosition() {
         try {
             return settings.getString("newLinePosition");

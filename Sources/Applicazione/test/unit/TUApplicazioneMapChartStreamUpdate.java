@@ -15,16 +15,19 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
 
 import java.util.ArrayList;
 
+import it.kaizenteam.app.model.NorrisChart.MapChartElementStreamUpdate;
+import it.kaizenteam.app.model.NorrisChart.MapChartStreamUpdate;
+
 public class TUApplicazioneMapChartStreamUpdate extends TestCase {
 
     public void testGetData() throws Exception {
-        ArrayList<MapSet> data=new ArrayList<MapSet>();
+        ArrayList<MapChartElementStreamUpdate> data=new ArrayList<>();
         MapChartStreamUpdate a = new MapChartStreamUpdate(data);
         assertEquals(data, a.getData());
     }

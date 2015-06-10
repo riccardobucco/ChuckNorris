@@ -27,7 +27,7 @@ package it.kaizenteam.app.model.NorrisChart;
 class TableImpl extends ChartImpl{
 
     static {
-        //registro il tipo di grafico (DI)
+        //register the table and the updater in the super class (dependency injection)
         registerFactory("table", TableFactory.getInstance());
         registerUpdater("table:inplace", TableInPlaceUpdater.getInstance());
         registerUpdater("table:stream", TableStreamUpdater.getInstance());

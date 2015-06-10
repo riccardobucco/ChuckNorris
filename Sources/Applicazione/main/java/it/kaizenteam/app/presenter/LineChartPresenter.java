@@ -19,7 +19,7 @@
 package it.kaizenteam.app.presenter;
 
 
-import it.kaizenteam.app.Utils.Observable;
+import java.util.Observable;
 
 /**
  * LineChartPresenter is the interface LineChartPresenterImpl
@@ -30,6 +30,11 @@ public interface LineChartPresenter extends Presenter {
      * @param observable
      * @param data
      */
-    void update(Observable observable, Object... data);
+    void update(Observable observable, Object data);
     void setChart(String id);
+
+    /**
+     * execute the code when the activity go to pause state
+     */
+    void onPause();
 }

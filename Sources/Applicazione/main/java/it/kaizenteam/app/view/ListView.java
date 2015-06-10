@@ -18,8 +18,6 @@
 
 package it.kaizenteam.app.view;
 
-import android.widget.AdapterView;
-
 import java.util.ArrayList;
 
 /**
@@ -49,4 +47,6 @@ public interface ListView extends View {
      * @param id id of chart
      */
     void showChartDetailView(String type, String id);
+
+    void showWaitMessage(boolean show);
 }

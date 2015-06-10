@@ -15,15 +15,18 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.unit;
 
 import junit.framework.TestCase;
+
+import it.kaizenteam.app.model.NorrisChart.ChartUpdater;
+import it.kaizenteam.app.model.NorrisChart.TableStreamUpdater;
 
 
 public class TUApplicazioneTableStreamUpdater extends TestCase {
 
     public void testGetInstance() throws Exception {
-        Updater a = TableStreamUpdater.getInstance();
-        Updater b = TableStreamUpdater.getInstance();
+        ChartUpdater a = TableStreamUpdater.getInstance();
+        ChartUpdater b = TableStreamUpdater.getInstance();
     }
 }

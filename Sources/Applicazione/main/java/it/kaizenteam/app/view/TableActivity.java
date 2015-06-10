@@ -56,7 +56,7 @@ public class TableActivity extends ChartActivity implements TableView{
     @Override
     protected void onResume() {
         super.onResume();
-        ((TablePresenter)presenter).setChart("t");// TODO getIntent().getStringExtra("id"));
+        ((TablePresenter)presenter).setChart(getIntent().getStringExtra("id"));
         tableRowParams.weight = 1;
     }
 

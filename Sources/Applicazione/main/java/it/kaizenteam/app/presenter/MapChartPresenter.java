@@ -19,7 +19,7 @@
 package it.kaizenteam.app.presenter;
 
 
-import it.kaizenteam.app.Utils.Observable;
+import java.util.Observable;
 
 /**
  * This class create a LoginPresenterImpl presenter.
@@ -30,6 +30,16 @@ public interface MapChartPresenter extends Presenter{
      * @param observable
      * @param data
      */
-    void update(Observable observable, Object... data);
+    void update(Observable observable, Object data);
+
+    /**
+     * This methods ask to Norris the chart data, start the updates events and ask the renderization to the view
+     * @param id id of the chart
+     */
     void setChart(String id);
+
+    /**
+     * execute the code when the activity go to pause state
+     */
+    void onPause();
 }

@@ -22,5 +22,4 @@ package it.kaizenteam.app.presenter;
  * LoginPresenter is the interface that represents any presenter.
  */
 public interface Presenter {
-    void onPause();
 }

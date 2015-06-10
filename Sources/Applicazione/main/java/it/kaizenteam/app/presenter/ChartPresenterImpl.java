@@ -19,8 +19,8 @@
 package it.kaizenteam.app.presenter;
 
 
-import it.kaizenteam.app.Utils.Observable;
-import it.kaizenteam.app.Utils.Observer;
+import java.util.Observable;
+import java.util.Observer;
 import it.kaizenteam.app.model.NorrisChart.ChartModel;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
 import it.kaizenteam.app.model.Service.ChartReceiverImpl;
@@ -44,7 +44,7 @@ public abstract class ChartPresenterImpl extends PresenterImpl implements Observ
      * @param data
      */
     @Override
-    public abstract void update(Observable observable, Object... data);
+    public abstract void update(Observable observable, Object data);
 
     /**
      * This method is abstract and has the task to change the view by using the settings the chart.
@@ -53,7 +53,6 @@ public abstract class ChartPresenterImpl extends PresenterImpl implements Observ
     protected abstract void applySettings(ChartSettings settings);
 
 
-    @Override
     public void onPause() {
         ChartReceiverImpl.getInstance().stopUpdateEvent();
     }
