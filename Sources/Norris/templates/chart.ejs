@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="chuck">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="/bower_components/angular/angular.min.js"></script>
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/chuck-rtc/chuck.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/bower_components/datatables/media/css/jquery.dataTables.min.css"/>
+        <link href="/css/custom.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <header class="jumbotron text-center">
+      <div class="container">
+        <img src="/images/norris-hor.png" height="100px" title="Norris" alt="Norris Logo" />
+          <h1>Title</h1>
+      </div>
+    </header>
+    <div class="container content">
+        <chuck-<%= chart.getType() %> chart-endpoint="<%= endpoint %>" chart-id="<%= chart.getId() %>"></chuck-<%= chart.getType() %>>
+    </div>
+    <footer class="text-center">
+          <img src="/images/kt-trademark.png" alt="Kaizen Team Trademark" title="Kaizen Team" height="100px" />
+    </footer>
+    </body>
+</html>

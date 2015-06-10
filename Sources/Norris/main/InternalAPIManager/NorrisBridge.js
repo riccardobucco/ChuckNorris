@@ -158,7 +158,15 @@ NorrisBridge.prototype.getMiddleware = function () {
     app.get('/pages/:pageId', function (req, res) {
         var page = instance.getPage(req.params.pageId);
         if(page)
-            res.render('index.ejs', {page: page, endpoint: instance.getEndpoint()});
+            res.render('page.ejs', {page: page, endpoint: instance.getEndpoint()});
+        else
+            res.sendStatus(404);
+    });
+
+    app.get('/charts/:chartId', function (req, res) {
+        var chart = instance.getChart(req.params.chartId);
+        if(chart)
+            res.render('chart.ejs', {chart: chart, endpoint: instance.getEndpoint()});
         else
             res.sendStatus(404);
     });
