@@ -201,21 +201,21 @@ Infine, il gruppo si impegna ad utilizzare strumenti che consentano di automatiz
 					\end{itemize}
 					La scelta del \insglo{team} è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del \insglo{team} di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in quanto, nella sua versione pura, non prevede il consolidamento delle \insglo{best practice}.
 				\level{4}{Schedule Variance}
-La schedule variance indica se le attività di progetto sono in anticipo o in ritardo rispetto a quelle pianificate nel \insdoc{Piano di Progetto}. Costituisce un indicatore di efficacia dei processi e viene calcolata come la differenza fra la data pianificata di fine di un'attività e la data di fine reale dell'attività stessa. Se la schedule variance è maggiore di 0 significa che il progetto sta producendo con maggior velocità rispetto a quanto pianificato, viceversa se negativo. Se è pari a 0 significa che si è perfettamente in linea con la pianificazione.\\
-I range di accettazione per questa metrica sono:
-\begin{itemize}
-\item un deficit maggiore del 5\% del tempo pianificato per il processo è considerato negativo;
-\item un deficit minore del 5\% del tempo pianificato per il processo è considerato accettabile;
-\item valori maggiori o uguali a 0 sono considerati ottimali.
-\end{itemize}
-\level{4}{Budget Variance}
-La budget variance indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto. Costituisce un indice di efficienza e si calcola confrontando il preventivo con il consuntivo.\\
-I range di accettazione per questa metrica sono:
-\begin{itemize}
-\item un deficit maggiore del 10\% delle risorse preventivate per il processo è considerato negativo;
-\item un deficit minore del 10\% delle risorse preventivate per il processo è accettabile;
-\item un valore maggiore o uguale a 0 è considerato ottimale.
-\end{itemize}
+					La schedule variance indica se le attività di progetto sono in anticipo o in ritardo rispetto a quelle pianificate nel \insdoc{Piano di Progetto}. Costituisce un indicatore di efficacia dei processi e viene calcolata come la differenza fra la data pianificata di fine di un'attività e la data di fine reale dell'attività stessa. Se la schedule variance è maggiore di 0 significa che il progetto sta producendo con maggior velocità rispetto a quanto pianificato, viceversa se negativo. Se è pari a 0 significa che si è perfettamente in linea con la pianificazione.\\
+					I range di accettazione per questa metrica sono:
+					\begin{itemize}
+					\item un deficit maggiore del 5\% del tempo pianificato per il processo è considerato negativo;
+					\item un deficit minore del 5\% del tempo pianificato per il processo è considerato accettabile;
+					\item valori maggiori o uguali a 0 sono considerati ottimali.
+					\end{itemize}
+					\level{4}{Budget Variance}
+					La budget variance indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto. Costituisce un indice di efficienza e si calcola confrontando il preventivo con il consuntivo.\\
+					I range di accettazione per questa metrica sono:
+					\begin{itemize}
+					\item un deficit maggiore del 10\% delle risorse preventivate per il processo è considerato negativo;
+					\item un deficit minore del 10\% delle risorse preventivate per il processo è accettabile;
+					\item un valore maggiore o uguale a 0 è considerato ottimale.
+					\end{itemize}
 				\level{4}{Produttività}
 					Si vuole cercare di calcolare la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del 
 					progetto. In generale, in una prima approssimazione, la si misura tramite la seguente formula:
@@ -227,7 +227,8 @@ I range di accettazione per questa metrica sono:
 					\begin{description}
 						\item[Documentazione] Il parametro “input” assume il significato di “ore necessarie alla scrittura della documentazione”, il parametro “output” assume il significato di “numero di parole scritte”.
 						\item[Codifica] Il parametro “input” assume il significato di “ore necessarie alla scrittura del codice”, il parametro “output” assume il significato di “numero di linee di codice scritte”.
-						\item[Verifica] Il parametro “input” assume il significato di “ore necessarie alle attività di verifica”, il parametro “output” assume il significato di “numero di anomalie rilevate”.
+						\item[Verifica] Il parametro “input” assume il significato di “ore necessarie alle attività di verifica”, il parametro “output” assume il significato di “numero di anomalie rilevate”;
+						\item[Validazione] Il parametro "input" assume il significato di "numero di test di accettazione", il parametro di "output" assume il significato di "numero di test di accettazione superati".
 					\end{description}
 					I valori che si ottengono in tale modo sono difficilmente valutabili in modo assoluto. Piuttosto, essi assumono importanza nel 
 					momento in cui vengono confrontati fra loro in momenti diversi del progetto: in questo modo il \insrole{Responsabile di Progetto} può valutare 
