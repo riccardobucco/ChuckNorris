@@ -48,7 +48,7 @@ public class LoginActivity extends BaseActivity implements LoginView{
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-        presenter= PresenterImpl.create(PresenterImpl.LOGIN_TYPE,this);
+        presenter= PresenterImpl.create(PresenterImpl.ChartType.LOGIN_TYPE,this);
     }
 
     /**

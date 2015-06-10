@@ -48,7 +48,7 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_line_chart);
         chart=(LineChart)findViewById(R.id.chart);
-        presenter= PresenterImpl.create(PresenterImpl.LINECHART_TYPE, this);
+        presenter= PresenterImpl.create(PresenterImpl.ChartType.LINECHART_TYPE, this);
     }
 
     @Override
@@ -148,33 +148,22 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     }
 
     /**
-     * This method allows to display the lines of the line chart with points or not (depending on the boolean parameter).
-     * @param dotted disply / not display the lines of the line chart with points or not
+     * This method allows to display the lines of the line chart cubic or not (depending on the boolean parameter).
+     * @param cubics disply / not display the lines of the line chart cubic
      */
     @Override
-    public void setDottedLines(boolean dotted) {
+    public void setCubicLines(boolean cubics) {
         ArrayList<LineDataSet> sets = chart.getData().getDataSets();
-        for (LineDataSet set : sets){
-            if (dotted)
-                set.enableDashedLine(5, 5, 5);
-            else
-                set.disableDashedLine();
-          }
+        for (LineDataSet set : sets)
+            set.setDrawCubic(cubics);
         chart.invalidate();
     }
 
     /**
-     * This method allows to display the lines of the line chart cubic or not (depending on the boolean parameter).
-     * @param dotted disply / not display the lines of the line chart cubic
+     * this methods set the radius of the dot of the chart
+     * @param dotRadius dot radius value
      */
-    //TODO @Override
-    public void setCubicLines(boolean dotted) {
-        ArrayList<LineDataSet> sets = chart.getData().getDataSets();
-        for (LineDataSet set : sets)
-            set.setDrawCubic(dotted);
-        chart.invalidate();
-    }
-
+    @Override
     public void setDotRadius(int dotRadius) {
         ArrayList<LineDataSet> sets = chart.getData().getDataSets();
         for (LineDataSet set : sets) {

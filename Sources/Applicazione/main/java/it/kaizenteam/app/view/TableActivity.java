@@ -50,7 +50,7 @@ public class TableActivity extends ChartActivity implements TableView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
-        presenter= PresenterImpl.create(PresenterImpl.TABLE_TYPE, this);
+        presenter= PresenterImpl.create(PresenterImpl.ChartType.TABLE_TYPE, this);
     }
 
     @Override

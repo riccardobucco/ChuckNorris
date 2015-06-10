@@ -22,4 +22,5 @@ package it.kaizenteam.app.view;
  * This interface has the task of allowing the use of methods to change the view to represent a map chart from outside of the package View (therefore from a particular presenter).
  */
 public interface View {
+
 }

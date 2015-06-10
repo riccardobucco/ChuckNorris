@@ -22,12 +22,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Observable;
+
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.model.NorrisChart.ChartImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
 import it.kaizenteam.app.model.NorrisChart.ChartUpdate;
 import it.kaizenteam.app.model.NorrisChart.LineChartSettingsImpl;
-import it.kaizenteam.app.model.Service.ChartReceiverImpl;
 import it.kaizenteam.app.view.LineChartActivity;
 import it.kaizenteam.app.view.LineChartView;
 
@@ -38,7 +38,7 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
 
     static {
         //registro il tipo di grafico (DI)
-        registerFactory(LINECHART_TYPE, LineChartPresenterFactory.getInstance());
+        registerFactory(ChartType.LINECHART_TYPE, LineChartPresenterFactory.getInstance());
     }
 
     /**
@@ -99,13 +99,6 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
         }
     }
 
-    @Override
-    public void setChart(String id) {
-        ((Observable) ChartReceiverImpl.getInstance()).addObserver(this);
-        this.id=id;
-        ChartReceiverImpl.getInstance().getChart(id);
-    }
-
     /**
      * This method has the task to change the view according to the settings of the chart.
      * @param settings
@@ -113,25 +106,24 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
     @Override
     protected void applySettings(ChartSettings settings) {
         if(((LineChartSettingsImpl) settings).getLegendPosition().equals("left"))
-            ((LineChartActivity) view).setLegendPosition(0);
+            ((LineChartView) view).setLegendPosition(0);
         if(((LineChartSettingsImpl) settings).getLegendPosition().equals("right"))
-            ((LineChartActivity) view).setLegendPosition(2);
+            ((LineChartView) view).setLegendPosition(2);
         if(((LineChartSettingsImpl) settings).getLegendPosition().equals("top"))
-            ((LineChartActivity) view).setLegendPosition(3);
+            ((LineChartView) view).setLegendPosition(3);
         if(((LineChartSettingsImpl) settings).getLegendPosition().equals("bottom"))
-            ((LineChartActivity) view).setLegendPosition(1);
+            ((LineChartView) view).setLegendPosition(1);
         if(((LineChartSettingsImpl) settings).getLegendPosition().equals("in"))
-            ((LineChartActivity) view).setLegendPosition(4);
+            ((LineChartView) view).setLegendPosition(4);
         if(((LineChartSettingsImpl) settings).getLegendPosition().equals("none"))
-            ((LineChartActivity) view).setLegendPosition(5);
-        ((LineChartActivity) view).setCubicLines(((LineChartSettingsImpl) settings).getCubicCurves());
-        //TODO ((LineChartActivity) view).setDottedLines(((LineChartSettingsImpl) settings).getDotted());
-        ((LineChartActivity) view).setDotRadius(((LineChartSettingsImpl) settings).getDotRadius());
-        ((LineChartActivity) view).showGrid(((LineChartSettingsImpl) settings).getGridVisibility());
-        ((LineChartActivity) view).setAxisName(((LineChartSettingsImpl) settings).getXAxisName(), ((LineChartSettingsImpl) settings).getYAxisName());
-        ((LineChartActivity) view).showGrid(((LineChartSettingsImpl) settings).getGridVisibility());
-        ((LineChartActivity) view).setDescription(((LineChartSettingsImpl) settings).getDescription());
-        ((LineChartActivity) view).setTitle(((LineChartSettingsImpl) settings).getTitle());
+            ((LineChartView) view).setLegendPosition(5);
+        ((LineChartView) view).setCubicLines(((LineChartSettingsImpl) settings).getCubicCurves());
+        ((LineChartView) view).setDotRadius(((LineChartSettingsImpl) settings).getDotRadius());
+        ((LineChartView) view).showGrid(((LineChartSettingsImpl) settings).getGridVisibility());
+        ((LineChartView) view).setAxisName(((LineChartSettingsImpl) settings).getXAxisName(), ((LineChartSettingsImpl) settings).getYAxisName());
+        ((LineChartView) view).showGrid(((LineChartSettingsImpl) settings).getGridVisibility());
+        ((LineChartView) view).setDescription(((LineChartSettingsImpl) settings).getDescription());
+        ((LineChartView) view).setTitle(((LineChartSettingsImpl) settings).getTitle());
     }
 
     /**

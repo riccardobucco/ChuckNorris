@@ -22,12 +22,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Observable;
+
 import it.kaizenteam.app.model.NorrisChart.BarChartSettingsImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.model.NorrisChart.ChartImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
 import it.kaizenteam.app.model.NorrisChart.ChartUpdate;
-import it.kaizenteam.app.model.Service.ChartReceiverImpl;
 import it.kaizenteam.app.view.BarChartActivity;
 import it.kaizenteam.app.view.BarChartView;
 
@@ -37,7 +37,7 @@ import it.kaizenteam.app.view.BarChartView;
 public class BarChartPresenterImpl extends ChartPresenterImpl implements BarChartPresenter{
     static {
         // register the type of graph (DI)
-        registerFactory(BARCHART_TYPE, BarChartPresenterFactory.getInstance());
+        registerFactory(ChartType.BARCHART_TYPE, BarChartPresenterFactory.getInstance());
     }
     /**
      * This method is the constructor. It is private because it can not be created an instance except from a request of his inner class factory.
@@ -86,12 +86,6 @@ public class BarChartPresenterImpl extends ChartPresenterImpl implements BarChar
         }
     }
 
-    @Override
-    public void setChart(String id) {
-        ((Observable)ChartReceiverImpl.getInstance()).addObserver(this);
-        this.id=id;
-        ChartReceiverImpl.getInstance().getChart(id);
-    }
 
     /**
      * This method has the task to change the view according to the settings of the chart.
@@ -99,27 +93,27 @@ public class BarChartPresenterImpl extends ChartPresenterImpl implements BarChar
      */
     @Override
     protected void applySettings(ChartSettings settings) {
-        ((BarChartActivity) view).setDescription(((BarChartSettingsImpl) settings).getDescription());
-        ((BarChartActivity) view).setAxisName(((BarChartSettingsImpl) settings).getXAxisName(), ((BarChartSettingsImpl) settings).getYAxisName());
-        ((BarChartActivity) view).setBarDataSetSpacing(((BarChartSettingsImpl) settings).getBarDataSetSpacing());
-        ((BarChartActivity) view).setBarValueSpacing(((BarChartSettingsImpl) settings).getBarValueSpacing());
-        ((BarChartActivity) view).showGrid(((BarChartSettingsImpl) settings).getGridVisibility());
+        ((BarChartView) view).setTitle(((BarChartSettingsImpl) settings).getTitle());
+        ((BarChartView) view).setDescription(((BarChartSettingsImpl) settings).getDescription());
+        ((BarChartView) view).setOrientation(((BarChartSettingsImpl) settings).getOrientation());
+        ((BarChartView) view).setAxisName(((BarChartSettingsImpl) settings).getXAxisName(), ((BarChartSettingsImpl) settings).getYAxisName());
+        ((BarChartView) view).setBarDataSetSpacing(((BarChartSettingsImpl) settings).getBarDataSetSpacing());
+        ((BarChartView) view).setBarValueSpacing(((BarChartSettingsImpl) settings).getBarValueSpacing());
+        ((BarChartView) view).showGrid(((BarChartSettingsImpl) settings).getGridVisibility());
 
         if(((BarChartSettingsImpl) settings).getLegendPosition().equals("left"))
-            ((BarChartActivity) view).setLegendPosition(0);
+            ((BarChartView) view).setLegendPosition(0);
         if(((BarChartSettingsImpl) settings).getLegendPosition().equals("right"))
-            ((BarChartActivity) view).setLegendPosition(2);
+            ((BarChartView) view).setLegendPosition(2);
         if(((BarChartSettingsImpl) settings).getLegendPosition().equals("top"))
-            ((BarChartActivity) view).setLegendPosition(3);
+            ((BarChartView) view).setLegendPosition(3);
         if(((BarChartSettingsImpl) settings).getLegendPosition().equals("bottom"))
-            ((BarChartActivity) view).setLegendPosition(1);
+            ((BarChartView) view).setLegendPosition(1);
         if(((BarChartSettingsImpl) settings).getLegendPosition().equals("in"))
-            ((BarChartActivity) view).setLegendPosition(4);
+            ((BarChartView) view).setLegendPosition(4);
         if(((BarChartSettingsImpl) settings).getLegendPosition().equals("none"))
-            ((BarChartActivity) view).setLegendPosition(5);
+            ((BarChartView) view).setLegendPosition(5);
 
-        ((BarChartActivity) view).setOrientation(((BarChartSettingsImpl) settings).getOrientation());
-        ((BarChartActivity) view).setTitle(((BarChartSettingsImpl) settings).getTitle());
     }
 
     /**

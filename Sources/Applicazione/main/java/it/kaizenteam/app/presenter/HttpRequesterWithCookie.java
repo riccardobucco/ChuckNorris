@@ -49,14 +49,14 @@ import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 /**
  * This class extends httpclient implementing the ability to add any requests also http cookies. It has the aim to use the api external Norris such as authentication and request the list of graphics. It saves the information in the model of the session.
  */
-public class HttpRequesterWithCookie {
+class HttpRequesterWithCookie {
     private static HttpRequesterWithCookie instance;
 
     private HttpRequesterWithCookie(){
         instance=this;
     }
 
-    static HttpRequesterWithCookie getInstance(){
+    public static HttpRequesterWithCookie getInstance(){
         if(instance!=null)
             return instance;
         return new HttpRequesterWithCookie();
@@ -103,7 +103,7 @@ public class HttpRequesterWithCookie {
         return "";
     }
 
-    private static String convertStreamToString(InputStream is) {
+    private String convertStreamToString(InputStream is) {
     /*
      * To convert the InputStream to String we use the BufferedReader.readLine()
      * method. We iterate until the BufferedReader return null which means
@@ -217,7 +217,6 @@ public class HttpRequesterWithCookie {
         NorrisSessionInfoImpl.getInstance().setEndpoint(endpoint);
         NorrisSessionInfoImpl.getInstance().login();
     }
-
 
     public boolean Logout(){
         if(makePostRequestLogout(NorrisSessionInfoImpl.getInstance().getAddress() + "/auth/logout")){

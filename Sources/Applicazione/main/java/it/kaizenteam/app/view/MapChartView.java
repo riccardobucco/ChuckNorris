@@ -44,14 +44,14 @@ public interface MapChartView extends View {
     void setCameraZoom(int zoomLevel);
 
     /**
-     * This method allows the display in the correct way the title of the chart.
-     * @param title title of the chart
-     */
-    void setChartTitle(String title);
-
-    /**
      * This method will display properly the description of the chart.
      * @param description description of the chart
      */
     public void setDescription(String description);
+
+    /**
+     * Stets the title of the chart
+     * @param title title of the chart
+     */
+    void setTitle(String title);
 }

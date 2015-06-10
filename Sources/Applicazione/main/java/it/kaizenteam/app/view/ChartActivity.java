@@ -37,7 +37,7 @@ public abstract class ChartActivity extends BaseActivity{
      * This method is abstract and all specializations of this class must implement it. It will display properly the title of the chart.
      * @param title title of the chart
      */
-    public void setChartTitle(String title){
+    public void setTitle(String title){
         getSupportActionBar().setTitle(title);
     }
 

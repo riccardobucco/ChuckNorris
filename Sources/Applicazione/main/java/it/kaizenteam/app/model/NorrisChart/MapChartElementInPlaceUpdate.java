@@ -43,11 +43,6 @@ public class MapChartElementInPlaceUpdate {
     private String id;
 
     /**
-     * 
-     */
-    private boolean useId;
-
-    /**
      * This method is a constructor to create the update package.
      * @param value new data of update package
      * @param series position of point

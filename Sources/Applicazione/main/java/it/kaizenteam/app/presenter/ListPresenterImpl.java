@@ -32,7 +32,7 @@ request to HttpRequesterWithCookie the list of chart inside the instance. The cl
 public class ListPresenterImpl extends PresenterImpl implements ListPresenter{
     static {
         //registro il tipo di grafico (DI)
-        registerFactory(LIST_TYPE, ListPresenterFactory.getInstance());
+        registerFactory(ChartType.LIST_TYPE, ListPresenterFactory.getInstance());
     }
 
     /**

@@ -28,7 +28,7 @@ import it.kaizenteam.app.view.LoginView;
 public class LoginPresenterImpl extends PresenterImpl implements LoginPresenter{
     static {
         //registro il tipo di grafico (DI)
-        registerFactory(LOGIN_TYPE, LoginPresenterFactory.getInstance());
+        registerFactory(ChartType.LOGIN_TYPE, LoginPresenterFactory.getInstance());
     }
 
     /**

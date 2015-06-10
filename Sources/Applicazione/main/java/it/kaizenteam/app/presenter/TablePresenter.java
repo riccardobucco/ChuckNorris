@@ -19,18 +19,11 @@
 package it.kaizenteam.app.presenter;
 
 
-import java.util.Observable;
-
 /**
  * TablePresenter is the interface TablePresenterImpl.
  */
 public interface TablePresenter extends Presenter {
-    /**
-     * This method has the task of updating the data model if it receives an update of these ones and finally show in view these updated data.
-     * @param observable
-     * @param data
-     */
-    void update(Observable observable, Object data);
+
     void setChart(String id);
 
     /**

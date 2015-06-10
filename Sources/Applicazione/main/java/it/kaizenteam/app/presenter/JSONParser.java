@@ -179,6 +179,8 @@ public class JSONParser {
                 color=data.getString("color");
             }catch (Exception e){}
             set.setColor(Color.parseColor(color));
+            //set the width of the line
+            set.setLineWidth(2.5f);
             //add the set to the array of the sets
             chartdataSets.add(set);
         }

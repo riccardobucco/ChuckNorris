@@ -51,14 +51,27 @@ public interface LineChartView extends View {
     void setLegendPosition(int position);
 
     /**
-     * This method allows to display the lines of the line chart with points or not (depending on the boolean parameter).
-     * @param dotted disply / not display the lines of the line chart with points or not
-     */
-    void setDottedLines(boolean dotted);
-
-    /**
      * This method will display properly the description of the chart.
      * @param description description of the chart
      */
-    public void setDescription(String description);
+    void setDescription(String description);
+
+    /**
+     * This method allows to display the lines of the line chart cubic or not (depending on the boolean parameter).
+     * @param cubics disply / not display the lines of the line chart cubic
+     */
+    void setCubicLines(boolean cubics);
+
+    /**
+     * this methods set the radius of the dot of the chart
+     * @param dotRadius dot radius value
+     */
+    void setDotRadius(int dotRadius);
+
+    /**
+     * Stets the title of the chart
+     * @param title title of the chart
+     */
+    void setTitle(String title);
+
 }

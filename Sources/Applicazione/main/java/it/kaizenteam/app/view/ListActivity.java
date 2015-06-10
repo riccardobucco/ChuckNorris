@@ -55,7 +55,7 @@ public class ListActivity extends BaseActivity implements ListView,AdapterView.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
         ((android.widget.ListView) findViewById(R.id.chartslist)).setOnItemClickListener(this);
-        presenter = PresenterImpl.create(PresenterImpl.LIST_TYPE, this);
+        presenter = PresenterImpl.create(PresenterImpl.ChartType.LIST_TYPE, this);
         //I do that to permit the get reqest to sdk up the 9
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();

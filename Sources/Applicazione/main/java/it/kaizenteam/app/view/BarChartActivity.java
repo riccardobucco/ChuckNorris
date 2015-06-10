@@ -52,7 +52,7 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bar_chart);
         chart=(BarChart)findViewById(R.id.chartv);
-        presenter= PresenterImpl.create(PresenterImpl.BARCHART_TYPE,this);
+        presenter= PresenterImpl.create(PresenterImpl.ChartType.BARCHART_TYPE,this);
     }
 
     @Override
@@ -178,6 +178,10 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
         chart.invalidate();
     }
 
+    /**
+     * Sets the stace between two bar
+     * @param barValueSpacing space between two bar
+     */
     public void setBarValueSpacing(int barValueSpacing) {
         ArrayList<BarDataSet> set =chart.getBarData().getDataSets();
         for(int i=0;i<set.size();i++)
@@ -185,6 +189,10 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
         chart.invalidate();
     }
 
+    /**
+     * Sets the stace between two sets
+     * @param barDataSetSpacing space between two sets
+     */
     public void setBarDataSetSpacing(int barDataSetSpacing) {
         BarData data =chart.getBarData();
         data.setGroupSpace(barDataSetSpacing);

@@ -19,18 +19,10 @@
 package it.kaizenteam.app.presenter;
 
 
-import java.util.Observable;
-
 /**
  * This class create a LoginPresenterImpl presenter.
  */
 public interface MapChartPresenter extends Presenter{
-    /**
-     * This method has the task of updating the data model in case of update and finally show in view these updated data.
-     * @param observable
-     * @param data
-     */
-    void update(Observable observable, Object data);
 
     /**
      * This methods ask to Norris the chart data, start the updates events and ask the renderization to the view

@@ -32,37 +32,9 @@ public class PresenterImpl implements Presenter{
     /**
      * Hashmap that deals with the correspondence between the types of presenters and their factory classes
      */
-    private static Map<Integer,PresenterFactory> factories=new HashMap<>();
+    private static Map<ChartType,PresenterFactory> factories=new HashMap<>();
 
-    /**
-     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
-     */
-    public static Integer LOGIN_TYPE=0;
-
-    /**
-     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
-     */
-    public static Integer LIST_TYPE=1;
-
-    /**
-     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
-     */
-    public static Integer BARCHART_TYPE=2;
-
-    /**
-     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
-     */
-    public static Integer MAPCHART_TYPE=3;
-
-    /**
-     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
-     */
-    public static Integer LINECHART_TYPE=4;
-
-    /**
-     * This static constant represents a type of presenter to be used for the construction of the presenter (required by the create method).
-     */
-    public static Integer TABLE_TYPE=5;
+    public enum ChartType {LOGIN_TYPE,LIST_TYPE,BARCHART_TYPE,MAPCHART_TYPE,LINECHART_TYPE,TABLE_TYPE}
 
     /**
      * This attribute is a reference to the view on the presenter.
@@ -97,7 +69,7 @@ public class PresenterImpl implements Presenter{
      * @param presenterType
      * @param factory
      */
-    protected static void registerFactory(Integer presenterType, PresenterFactory factory){
+    protected static void registerFactory(ChartType presenterType, PresenterFactory factory){
         factories.put(presenterType,factory);
     }
 
@@ -107,7 +79,7 @@ public class PresenterImpl implements Presenter{
      * @param view
      * @return the interface Presenter of the instance created
      */
-    public static Presenter create(Integer presenterType, View view){
+    public static Presenter create(ChartType presenterType, View view){
         PresenterImpl ret = factories.get(presenterType).createPresenter();
         ret.view=view;
         return ret;

@@ -19,18 +19,11 @@
 package it.kaizenteam.app.presenter;
 
 
-import java.util.Observable;
-
 /**
  * BarChartPresenter is the interface of BarChartPresenterImpl.
  */
 public interface BarChartPresenter extends Presenter {
-    /**
-     * This method has the task of updating the data model if it receive a update of these ones and finally show in view these updated data.
-     * @param observable
-     * @param data
-     */
-    void update(Observable observable, Object data);
+
     void setChart(String id);
 
     /**

@@ -54,7 +54,7 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_chart);
         setUpMapIfNeeded();
-        presenter= PresenterImpl.create(PresenterImpl.MAPCHART_TYPE,this);
+        presenter= PresenterImpl.create(PresenterImpl.ChartType.MAPCHART_TYPE,this);
     }
 
 

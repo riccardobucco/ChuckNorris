@@ -22,12 +22,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Observable;
+
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.model.NorrisChart.ChartImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
 import it.kaizenteam.app.model.NorrisChart.ChartUpdate;
 import it.kaizenteam.app.model.NorrisChart.TableSettingsImpl;
-import it.kaizenteam.app.model.Service.ChartReceiverImpl;
 import it.kaizenteam.app.view.TableActivity;
 import it.kaizenteam.app.view.TableView;
 
@@ -37,7 +37,7 @@ import it.kaizenteam.app.view.TableView;
 public class TablePresenterImpl extends ChartPresenterImpl implements TablePresenter{
     static {
         //register the chart type and the updater in the super class (dependency injection)
-        registerFactory(TABLE_TYPE, TablePresenterFactory.getInstance());
+        registerFactory(ChartType.TABLE_TYPE, TablePresenterFactory.getInstance());
     }
 
     /**
@@ -99,16 +99,6 @@ public class TablePresenterImpl extends ChartPresenterImpl implements TablePrese
         }
     }
 
-    /**
-     * This method asks tha chart and wait the data
-     * @param id
-     */
-    @Override
-    public void setChart(String id) {
-        ((Observable) ChartReceiverImpl.getInstance()).addObserver(this);
-        this.id=id;
-        ChartReceiverImpl.getInstance().getChart(id);
-    }
 
     /**
      * This method has the task to change the view according to the settings of the chart.
@@ -116,9 +106,9 @@ public class TablePresenterImpl extends ChartPresenterImpl implements TablePrese
      */
     @Override
     protected void applySettings(ChartSettings settings) {
-        ((TableActivity) view).showCellBorderLine(((TableSettingsImpl) settings).getBorderLineVisibility());
-        ((TableActivity) view).setDescription(((TableSettingsImpl) settings).getDescription());
-        ((TableActivity) view).setTitle(((TableSettingsImpl) settings).getTitle());
+        ((TableView) view).showCellBorderLine(((TableSettingsImpl) settings).getBorderLineVisibility());
+        ((TableView) view).setDescription(((TableSettingsImpl) settings).getDescription());
+        ((TableView) view).setTitle(((TableSettingsImpl) settings).getTitle());
     }
 
     /**

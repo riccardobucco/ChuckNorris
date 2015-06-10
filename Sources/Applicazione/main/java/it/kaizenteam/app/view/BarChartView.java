@@ -62,4 +62,22 @@ public interface BarChartView extends View {
      * @param description description of the chart
      */
     public void setDescription(String description);
+
+    /**
+     * Sets the stace between two sets
+     * @param barDataSetSpacing space between two sets
+     */
+    public void setBarDataSetSpacing(int barDataSetSpacing);
+
+    /**
+     * Sets the stace between two bar
+     * @param barValueSpacing space between two bar
+     */
+    public void setBarValueSpacing(int barValueSpacing);
+
+    /**
+     * Stets the title of the chart
+     * @param title title of the chart
+     */
+    void setTitle(String title);
 }

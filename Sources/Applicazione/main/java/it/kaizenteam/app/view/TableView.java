@@ -41,4 +41,11 @@ public interface TableView extends View {
      * @param description description of the chart
      */
     public void setDescription(String description);
+
+    /**
+     * Stets the title of the chart
+     * @param title title of the chart
+     */
+    void setTitle(String title);
+
 }

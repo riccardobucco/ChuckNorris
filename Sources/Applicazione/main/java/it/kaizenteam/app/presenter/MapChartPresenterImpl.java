@@ -22,12 +22,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Observable;
+
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 import it.kaizenteam.app.model.NorrisChart.ChartImpl;
 import it.kaizenteam.app.model.NorrisChart.ChartSettings;
 import it.kaizenteam.app.model.NorrisChart.ChartUpdate;
 import it.kaizenteam.app.model.NorrisChart.MapChartSettingsImpl;
-import it.kaizenteam.app.model.Service.ChartReceiverImpl;
 import it.kaizenteam.app.view.MapChartActivity;
 import it.kaizenteam.app.view.MapChartView;
 
@@ -37,7 +37,7 @@ import it.kaizenteam.app.view.MapChartView;
 public class MapChartPresenterImpl extends ChartPresenterImpl implements MapChartPresenter{
     static {
         //registro il tipo di grafico (DI)
-        registerFactory(MAPCHART_TYPE, MapChartPresenterFactory.getInstance());
+        registerFactory(ChartType.MAPCHART_TYPE, MapChartPresenterFactory.getInstance());
     }
 
     /**
@@ -102,26 +102,15 @@ public class MapChartPresenterImpl extends ChartPresenterImpl implements MapChar
     }
 
     /**
-     * This methods get the chart from Norris instance, set the updates and ask renderization at the view
-     * @param id the id of the chart
-     */
-    @Override
-    public void setChart(String id) {
-            ((Observable) ChartReceiverImpl.getInstance()).addObserver(this);
-            this.id=id;
-            ChartReceiverImpl.getInstance().getChart(id);
-    }
-
-    /**
      * This method has the task to change the view according to the settings of the chart.
      * @param settings
      */
     @Override
     protected void applySettings(ChartSettings settings) {
-        ((MapChartActivity) view).setCameraCoordinate(((MapChartSettingsImpl) settings).getXCameraCoordinate(), ((MapChartSettingsImpl) settings).getYCameraCoordinate());
-        ((MapChartActivity) view).setCameraZoom((((MapChartSettingsImpl) settings).getCameraZoomHeight()));
-        ((MapChartActivity) view).setDescription(((MapChartSettingsImpl) settings).getDescription());
-        ((MapChartActivity) view).setTitle(((MapChartSettingsImpl) settings).getTitle());
+        ((MapChartView) view).setCameraCoordinate(((MapChartSettingsImpl) settings).getXCameraCoordinate(), ((MapChartSettingsImpl) settings).getYCameraCoordinate());
+        ((MapChartView) view).setCameraZoom((((MapChartSettingsImpl) settings).getCameraZoomHeight()));
+        ((MapChartView) view).setDescription(((MapChartSettingsImpl) settings).getDescription());
+        ((MapChartView) view).setTitle(((MapChartSettingsImpl) settings).getTitle());
     }
 
     /**

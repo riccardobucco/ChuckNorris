@@ -57,4 +57,13 @@ public abstract class ChartPresenterImpl extends PresenterImpl implements Observ
         ChartReceiverImpl.getInstance().stopUpdateEvent();
     }
 
+    /**
+     * This method asks tha chart and wait the data
+     * @param id
+     */
+    public void setChart(String id) {
+        ((Observable) ChartReceiverImpl.getInstance()).addObserver(this);
+        this.id=id;
+        ChartReceiverImpl.getInstance().getChart(id);
+    }
 }
