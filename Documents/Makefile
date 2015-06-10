@@ -2,18 +2,28 @@ DOCUMENTI =	AnalisiDeiRequisiti \
 		DefinizioneDiProdotto \
 		Glossario \
 		NormeDiProgetto \
-		NorrisUserManual \
 		PianoDiProgetto \
 		PianoDiQualifica \
 		SpecificaTecnica \
 		StudioDiFattibilita
 
 
-all: $(DOCUMENTI) LetteraDiPresentazione
+all: $(DOCUMENTI) LetteraDiPresentazione NorrisUserManual
 
 LetteraDiPresentazione: _force
 	@ make $@/$@.pdf
 
+NorrisUserManual: _force
+	@ #creazione file latex
+	@ xmllint --noout --schema Commons/Document.xsd NorrisUserManual/NorrisUserManual.xml
+	@ xsltproc -o NorrisUserManual/NorrisUserManual.tex NorrisUserManual/NorrisUserManual.xsl NorrisUserManual/NorrisUserManual.xml
+
+	@ #creazione file latex termini
+	@ xmllint --noout --schema NorrisUserManual/Termini.xsd NorrisUserManual/Termini.xml
+	@ xsltproc -o NorrisUserManual/Termini.tex NorrisUserManual/Termini.xsl NorrisUserManual/Termini.xml
+
+	@ #compilazione file latex
+	@ make $@/$@.pdf
 
 $(DOCUMENTI): _force
 	@ #creazione file latex
