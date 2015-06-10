@@ -37,13 +37,36 @@ describe('ChartImpl', function(){
 	});
 
 	describe('createChart(chartType: String, chartId: String): ChartImpl',function(){
-		it('should allow you to create a chart only if its type is registered in the "factories" attribute', function(){
+		// in this test the createChart method of factory class is indirectly tested too
+		it('should allow you to create a  bar chart only if its type is registered in the "factories" attribute', function(){
 			var factory = {};
 			factory.createChart = function(id) {return 'factoryReturn';}; 
 			ChartImpl.registerFactory('barchart',factory);
 			assert.equal('factoryReturn', ChartImpl.createChart('barchart','randomID'));
 			assert.deepEqual(null,ChartImpl.createChart('randomType','randomID'));
 		});
+		it('should allow you to create a  line chart only if its type is registered in the "factories" attribute', function(){
+			var factory = {};
+			factory.createChart = function(id) {return 'factoryReturn';}; 
+			ChartImpl.registerFactory('linechart',factory);
+			assert.equal('factoryReturn', ChartImpl.createChart('linechart','randomID'));
+			assert.deepEqual(null,ChartImpl.createChart('randomType','randomID'));
+		});
+		it('should allow you to create a  map chart only if its type is registered in the "factories" attribute', function(){
+			var factory = {};
+			factory.createChart = function(id) {return 'factoryReturn';}; 
+			ChartImpl.registerFactory('mapchart',factory);
+			assert.equal('factoryReturn', ChartImpl.createChart('mapchart','randomID'));
+			assert.deepEqual(null,ChartImpl.createChart('randomType','randomID'));
+		});
+		it('should allow you to create a  table only if its type is registered in the "factories" attribute', function(){
+			var factory = {};
+			factory.createChart = function(id) {return 'factoryReturn';}; 
+			ChartImpl.registerFactory('table',factory);
+			assert.equal('factoryReturn', ChartImpl.createChart('table','randomID'));
+			assert.deepEqual(null,ChartImpl.createChart('randomType','randomID'));
+		});
+		
 	});
 
 	describe('ChartImpl(chartType: String, chartId: String)', function(){

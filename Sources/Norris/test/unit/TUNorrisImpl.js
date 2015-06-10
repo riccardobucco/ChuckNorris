@@ -80,7 +80,7 @@ describe('NorrisImpl', function(){
 			},
 			description: 'This is a map chart',
 			legendPosition: 'top-right',
-			maxValues: 5,
+			maxItems: 5,
 			title: ''
 			},
 			type: 'mapchart',
