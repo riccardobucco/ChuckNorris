@@ -3,22 +3,22 @@
 <document>
 	<title>Norris User Manual</title>
 	<type>Esterno</type>
-	<redactedby></redactedby>
-	<verifiedby></verifiedby>
-	<approvedby></approvedby>
+	<redactedby>Bucco Riccardo, Rubin Marco</redactedby>
+	<verifiedby>Bigarella Chiara, Dal Bianco Davide</verifiedby>
+	<approvedby>Carlon Chiara</approvedby>
 	<distribution></distribution>
 
 	<sections>
-        <name>Tex/ServerInstallationDetails.tex</name>
+		<name>Tex/ServerInstallationDetails.tex</name>
 		<name>Tex/ServerUsage.tex</name>
-        <name>Tex/InternalAPIDescription.tex</name>
-        <name>Tex/ExternalAPIDescription.tex</name>
-        <name>Tex/ObjectsDescription.tex</name>     
-    </sections>
+		<name>Tex/InternalAPIDescription.tex</name>
+		<name>Tex/ExternalAPIDescription.tex</name>
+		<name>Tex/ObjectsDescription.tex</name>     
+    	</sections>
 
-    <appendix>
-        <name>Termini.tex</name>
-    </appendix>
+    	<appendix>
+        	<name>Termini.tex</name>
+    	</appendix>
 	   
 	<changes>
 	    <version>
