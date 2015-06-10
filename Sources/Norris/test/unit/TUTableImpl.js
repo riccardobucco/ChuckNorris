@@ -32,7 +32,7 @@ describe('TableImpl', function(){
 			var defaults = {
 				title: '',
 				description : 'This is a table.',
-				maxRows : 10 ,
+				maxItems : 10 ,
 				showTableGrid : true ,
 				newLinePosition : 'bottom',
 				allowFilter: false,

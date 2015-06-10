@@ -35,7 +35,7 @@ describe('LineChartImpl', function(){
 				xLabel : '',
 				yLabel : '',
 				legendPosition : 'right',
-				maxValues : 10,
+				maxItems : 10,
 				style : {
 				    animationDuration : 1000,
 				    bezierCurve : true,

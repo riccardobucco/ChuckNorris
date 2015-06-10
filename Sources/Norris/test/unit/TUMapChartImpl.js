@@ -38,7 +38,7 @@ describe('MapChartImpl', function(){
 				title : '',
 				description : 'This is a map chart',
 				legendPosition : 'top-right',
-				maxValues : 5
+				maxItems : 5
 			};
 			assert.deepEqual(defaults,mapchart.settings);
 		});
