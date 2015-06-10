@@ -119,20 +119,29 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
      */
     @Override
     public void setLegendPosition(int position) {
+        chart.getLegend().setEnabled(true);
         if(position==0){
             chart.getLegend().setPosition(Legend.LegendPosition.BELOW_CHART_LEFT);
             return;
         }
         if(position==1){
-            chart.getLegend().setPosition(Legend.LegendPosition.BELOW_CHART_RIGHT);
+            chart.getLegend().setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
             return;
         }
         if(position==2){
-            chart.getLegend().setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
+            chart.getLegend().setPosition(Legend.LegendPosition.BELOW_CHART_RIGHT);
             return;
         }
         if(position==3){
-            chart.getLegend().setPosition(Legend.LegendPosition.RIGHT_OF_CHART_CENTER);
+            chart.getLegend().setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
+            return;
+        }
+        if(position==4){
+            chart.getLegend().setPosition(Legend.LegendPosition.RIGHT_OF_CHART_INSIDE);
+            return;
+        }
+        if(position==5){
+            chart.getLegend().setEnabled(false);
             return;
         }
         chart.invalidate();

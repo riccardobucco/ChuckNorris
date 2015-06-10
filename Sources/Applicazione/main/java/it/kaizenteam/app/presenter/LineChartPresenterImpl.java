@@ -112,9 +112,18 @@ public class LineChartPresenterImpl extends ChartPresenterImpl implements LineCh
      */
     @Override
     protected void applySettings(ChartSettings settings) {
+        if(((LineChartSettingsImpl) settings).getLegendPosition().equals("left"))
+            ((LineChartActivity) view).setLegendPosition(0);
         if(((LineChartSettingsImpl) settings).getLegendPosition().equals("right"))
             ((LineChartActivity) view).setLegendPosition(2);
-        //TODO more
+        if(((LineChartSettingsImpl) settings).getLegendPosition().equals("top"))
+            ((LineChartActivity) view).setLegendPosition(3);
+        if(((LineChartSettingsImpl) settings).getLegendPosition().equals("bottom"))
+            ((LineChartActivity) view).setLegendPosition(1);
+        if(((LineChartSettingsImpl) settings).getLegendPosition().equals("in"))
+            ((LineChartActivity) view).setLegendPosition(4);
+        if(((LineChartSettingsImpl) settings).getLegendPosition().equals("none"))
+            ((LineChartActivity) view).setLegendPosition(5);
         ((LineChartActivity) view).setCubicLines(((LineChartSettingsImpl) settings).getCubicCurves());
         //TODO ((LineChartActivity) view).setDottedLines(((LineChartSettingsImpl) settings).getDotted());
         ((LineChartActivity) view).setDotRadius(((LineChartSettingsImpl) settings).getDotRadius());

@@ -13,8 +13,8 @@ server.listen(process.env.PORT || 9000);
 
 
 
-var acc = nor.createChart('barchart', 'acc');
-var gyro = nor.createChart('barchart', 'gyro');
+var acc = nor.createChart('linechart', 'acc');
+var gyro = nor.createChart('linechart', 'gyro');
 
 var page = nor.createPage('sensor').add(acc).add(gyro);
 
@@ -22,26 +22,30 @@ app.use(nor.getMiddleware());
 
 
 acc.setData({
-    labels: ['x','y','z'],
+    labels: ["0"],
     datasets: [
-        {name: 'accelerometer', values: [0,0,0]}
+        {name: 'x', values: [0], color:"#ff0000"},
+        {name: 'y', values: [0], color:"#00ff00"},
+        {name: 'z', values: [0], color:"#0000ff"}
     ]
 })
 acc.setSettings({
-    legendPosition: 'none',
+    legendPosition: 'left',
     style: {
         animationDuration: 0
     }
 })
 
 gyro.setData({
-    labels: ['x','y','z'],
+    labels: ["0"],
     datasets: [
-        {name: 'gyro', values: [0,0,0]}
+        {name: 'x', values: [0], color:"#ff0000"},
+        {name: 'y', values: [0], color:"#00ff00"},
+        {name: 'z', values: [0], color:"#0000ff"}
     ]
 })
-acc.setSettings({
-    legendPosition: 'none',
+gyro.setSettings({
+    legendPosition: 'left',
     style: {
         animationDuration: 0
     }
@@ -50,20 +54,16 @@ acc.setSettings({
 sio.on('connection', function (socket) {
 	socket.on('acc', function (data) {
 		var values = JSON.parse(data);
-		var updateData = {inplace: [
-			{position: {x: 0, y: 0}, data: Math.round(values.x)},
-			{position: {x: 0, y: 1}, data: Math.round(values.y)},
-			{position: {x: 0, y: 2}, data: Math.round(values.z)}
+		var updateData = {stream: [
+			{label:"", data: [Math.round(values.x),Math.round(values.y),Math.round(values.z)]}
 		]};
-		acc.update('inplace', updateData);
+		acc.update('stream', updateData);
 	})
-    socket.on('acc', function (data) {
+    socket.on('gyro', function (data) {
         var values = JSON.parse(data);
-        var updateData = {inplace: [
-            {position: {x: 0, y: 0}, data: Math.round(values.x)},
-            {position: {x: 0, y: 1}, data: Math.round(values.y)},
-            {position: {x: 0, y: 2}, data: Math.round(values.z)}
+        var updateData = {stream: [
+            {label:"", data: [Math.round(values.x),Math.round(values.y),Math.round(values.z)]}
         ]};
-        gyro.update('inplace', updateData);
+        gyro.update('stream', updateData);
     })
 })

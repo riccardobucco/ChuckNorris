@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".view.LoginActivity"
-            android:label="@string/title_activity_login"
+            android:label="Applicazione"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,23 +26,19 @@
         </activity>
         <activity
             android:name=".view.ListActivity"
-            android:label="@string/title_activity_list" >
+            android:label="List" >
         </activity>
         <activity
             android:name=".view.BarChartActivity"
-            android:label="@string/title_activity_bar_chart" >
-        </activity>
-        <activity
-            android:name=".view.MapChartActivity"
-            android:label="@string/title_activity_map_chart" >
+            android:label="BarChart" >
         </activity>
         <activity
             android:name=".view.TableActivity"
-            android:label="@string/title_activity_table" >
+            android:label="Table" >
         </activity>
         <activity
             android:name=".view.LineChartActivity"
-            android:label="@string/title_activity_line_chart" >
+            android:label="LineChart" >
         </activity>
 
         <meta-data
@@ -54,7 +50,7 @@
 
         <activity
             android:name=".view.MapChartActivity"
-            android:label="@string/title_activity_map_chart" >
+            android:label="MapChart" >
         </activity>
     </application>
 

@@ -71,7 +71,7 @@ public class BarChartSettingsImpl implements ChartSettings {
      * @throws JSONException if there is an error in the JSONObject settings passed to the constructor
      */
     public int getMaxValue() throws JSONException {
-        return settings.getInt("maxValues");
+        return settings.getInt("maxItems");
     }
 
     /**
