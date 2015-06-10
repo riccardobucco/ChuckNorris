@@ -1,11 +1,10 @@
 % !TEX encoding = UTF-8 Unicode 
 
-%MODIFICARE VERSIONI DEI FILE!
 \level{1}{Resoconto delle varie attività di
 verifica - Fase PD} 
 Sono riportati in questa appendice tutti i risultati
 ottenuti nei momenti di verifica, stabiliti nel \insdoc{Piano di Progetto
-v6.00} secondo la strategia di misurazione per il perseguimento della qualità
+v7.00} secondo la strategia di misurazione per il perseguimento della qualità
 individuata nel presente documento.
 
 	\level{2}{Verifica dei prodotti}
@@ -16,7 +15,7 @@ individuata nel presente documento.
 			\item verifiche automatizzate.
 		\end{itemize}
 			\level{4}{Verifiche manuali}
-			Le attività di verifica manuale della documentazione prodotta sono state svolte in base alla procedura riguardante la verifica dei documenti, descritta nel documento \insdoc{Norme di Progetto v6.00}.
+			Le attività di verifica manuale della documentazione prodotta sono state svolte in base alla procedura riguardante la verifica dei documenti, descritta nel documento \insdoc{Norme di Progettov7.00}.
 			La verifica manuale, durante questa fase, ha permesso di individuare soprattutto:
 			\begin{itemize}
 			\item errori nell'utilizzo della lingua inglese;
@@ -31,11 +30,11 @@ individuata nel presente documento.
 					\end{tabu}
 					\caption{Errori trovati tramite verifica manuale dei documenti durante la Fase PD}
 			\end{table}
-			Si può notare che gli errori concettuali trovati sono un numero inferiore rispetto alla fase precedente, questo è dovuto sia alla minore quantità di modifiche apportate ai documenti durante la \insphase{Fase PD}, sia ad un miglioramento da parte dei membri del team nella stesura della documentazione, grazie all'esperienza acquisita durante tutto l'arco del progetto.
-			Si noti invece come vi sia, ancora, una notevole quantità di errori nell'uso della lingua inglese dovuti alla stesura dei commenti del codice ed alla stesura del documento \insdoc{Manuale utente v3.00}.
+			Si può notare che gli errori concettuali trovati sono un numero inferiore rispetto alla fase precedente, questo è dovuto sia alla minore quantità di modifiche apportate ai documenti durante la \insphase{Fase PD}, sia ad un miglioramento da parte dei membri del team nella stesura della documentazione, grazie all'esperienza acquisita durante tutto l'arco del progetto.\\
+			Anche la quantità di errori nell'uso della lingua inglese dovuti alla stesura dei commenti del codice e nella stesura del documento \insdoc{Manuale utente v4.00} sono notevolmente diminuiti.
 
 			\level{4}{Verifiche automatizzate}
-			Le attività di verifica automatizzate sono state effettuate secondo le procedure e attraverso gli strumenti descritti nel documento \insdoc{Norme di Progetto v6.00}. Esse hanno permesso di rilevare diversi errori, che sono stati poi corretti, riguardanti le seguenti tipologie:
+			Le attività di verifica automatizzate sono state effettuate secondo le procedure e attraverso gli strumenti descritti nel documento \insdoc{Norme di Progettov7.00}. Esse hanno permesso di rilevare diversi errori, che sono stati poi corretti, riguardanti le seguenti tipologie:
 			\begin{itemize}
 				\item ortografia errata;
 				\item norme tipografiche non rispettate.
@@ -45,8 +44,8 @@ individuata nel presente documento.
 				\centering
 					\begin{tabu}{| l | c |}
 						\hline
-						Errori ortografici	& 82	\\ \hline
-						Errori riguardanti norme tipografiche	& 5	\\ \hline
+						Errori ortografici	& 49	\\ \hline
+						Errori riguardanti norme tipografiche	& 3	\\ \hline
 					\end{tabu}
 				\caption{Errori trovati tramite verifica automatica dei documenti durante la Fase PD}
 			\end{table}
@@ -134,72 +133,84 @@ individuata nel presente documento.
 
 				\level{5}{Numero di requisiti opzionali funzionali realizzati}
 				Si riportano di seguito le percentuali di requisiti opzionali funzionali realizzati dalle componenti di Norris.
-				% \begin{table}[H]
-				% 	\centering
-				% 		\begin{tabu}{| l | c | c |}
-				% 			\hline
-				% 			Componente	& Percentuale requisiti opzionali funzionali soddisfatti	& Esito		\\ \hline \hline
-				% 			DataModel  			& 	0\%	& 	Non accettabile  \\ \hline
-				% 		\end{tabu}
-				% 	\caption{Esiti del calcolo delle percentuali di requisiti opzionali funzionali realizzati da Norris durante la Fase PD}
-				% \end{table}
-				\\ \\ 
-
+				\begin{table}[H]
+					\centering
+						\begin{tabu}{| l | c | c |}
+							\hline
+							Componente	& Percentuale requisiti opzionali funzionali soddisfatti	& Esito		\\ \hline \hline
+							InternalAPIManager	& 95\% 	& Accettabile  \\ \hline
+							ExternalAPIManager  & 	96\%	& Accettabile  \\ \hline
+							DataModel  & 	100\%	& Ottimale  \\ \hline
+						\end{tabu}
+					\caption{Esiti del calcolo delle percentuali di requisiti opzionali funzionali realizzati da Norris durante la Fase PD}
+				\end{table}
+				
 				Si riportano di seguito le percentuali di requisiti opzionali funzionali realizzati dalle componenti di Chuck.
-				% \begin{table}[H]
-				% 	\centering
-				% 		\begin{tabu}{| l | c | c |}
-				% 			\hline
-				% 			Componente	& Numero requisiti opzionali funzionali soddisfatti	& Esito		\\ \hline \hline
-				% 			ViewModel  	& 	0\%	& Non accettabile  \\ \hline
-				% 			DataModel  	& 	0\%	& Non accettabile  \\ \hline
-				% 		\end{tabu}
-				% 	\caption{Esiti del calcolo delle percentuali di requisiti opzionali funzionali realizzati da Chuck durante la Fase PD}
-				% \end{table}
+				\begin{table}[H]
+					\centering
+						\begin{tabu}{| l | c | c |}
+							\hline
+							Componente	& Numero requisiti opzionali funzionali soddisfatti	& Esito		\\ \hline \hline
+							ViewModel  	& 90\%	& Accettabile  \\ \hline
+							DataModel  	& 	97\%	& Accettabile  \\ \hline
+						\end{tabu}
+					\caption{Esiti del calcolo delle percentuali di requisiti opzionali funzionali realizzati da Chuck durante la Fase PD}
+				\end{table}
 
 			\level{4}{Percentuale di test di robustezza effettuati}
 			Nella tabella seguente, vengono riportate le percentuali dei test effettuati sui tre prodotti: Norris, Chuck e applicazione Android.
-%CALCOLARE
 			\begin{table}[H]
 					\centering
 						\begin{tabu}{| l | c | c |}
 							\hline
-							Prodotto	& Percentuale test effettuati	& Esito		\\ \hline \hline
+							Prodotto	& Percentuale test superati	& Esito		\\ \hline \hline
 							Norris	&	100\% 	& Ottimale  \\ \hline
 							Chuck	& 	100\%	& Ottimale  \\ \hline
 							Applicazione Android	& 	100\%	& Ottimale  \\ \hline
 						\end{tabu}
-					\caption{Esiti del calcolo delle percentuali di requisiti desiderabili funzionali realizzati da Chuck durante la Fase PD}
+					\caption{Esiti del calcolo delle percentuali dei test di robustezza superati durante la Fase PD}
 				\end{table}
+				
 			\level{4}{Copertura del codice}
-%CALCOLARE
+			Nella tabella seguente, vengono riportate le percentuali relative alla copertura del codice per le tre componenti del prodotto coi relativi esiti.
+			\begin{table}[H]
+					\centering
+						\begin{tabu}{| l | c | c |}
+							\hline
+							Prodotto	& Percentuale codice testato	& Esito		\\ \hline \hline
+							Norris	&	95\% 	& Ottimale  \\ \hline
+							Chuck	& 	65\%	& Accettabile  \\ \hline
+							Applicazione Android	& 	62\%	& Accettabile  \\ \hline
+						\end{tabu}
+					\caption{Esiti del calcolo delle percentuali della copertura del codice delle componenti durante la Fase PD}
+				\end{table}
 			\level{4}{Complessità ciclomatica, numero di statement per metodo e livello di annidamento}
-			Per ogni classe (in particolare ogni metodo di ciascuna classe) di Chuck e Norris, sono indicati, nella seguente tabella, i valori calcolati per le tre metriche: complessità ciclomatica (indicata con C.C.), numero di statement per metodo (indicato con N.S.) e livello di annidamento (indicato con L.A.).
+			Per ogni metodo di ciascuna classe di Chuck e Norris, sono indicati, nella seguente tabella, i valori calcolati per le tre metriche: complessità ciclomatica (indicata con C.C.), numero di statement per metodo (indicato con N.S.) e livello di annidamento (indicato con L.A.).
 				\input{PianoDiQualifica/TrackerMetricheCN.tex}
-			Per ogni classe (in particolare ogni metodo di ciascuna classe) diell'applicazione Android, sono indicati, nella seguente tabella, i valori calcolati per le tre metriche: complessità ciclomatica (indicata con C.C.), numero di statement per metodo (indicato con N.S.) e livello di annidamento (indicato con L.A.).
+			Per ogni metodo di ciascuna classe dell'applicazione Android, sono indicati, nella seguente tabella, i valori calcolati per le tre metriche: complessità ciclomatica (indicata con C.C.), numero di statement per metodo (indicato con N.S.) e livello di annidamento (indicato con L.A.).
 				\input{PianoDiQualifica/TrackerMetricheA.tex}
-			% \level{4}{Grado di accoppiamento dei componenti}
-			% Si riporta di seguito, per ogni componente, la percentuale del grado di accoppiamento afferente ed efferente.
-%CALCOLARE se cambia la progettazione, altrimenti eliminare il paragrafo
-			% \begin{table}[H]
-			% 	\centering
-			% 		\begin{tabu}{| l | c | c | c | c | c | c | }
-			% 			\hline
-			% 			Componente					& Afferente & Esiti Afferente & Efferente & Esiti Efferente 	\\ \hline \hline
-			% 			Norris::InternalAPIManager	& 1 & Ottimale & 3 & Ottimale  \\ \hline
-			% 			Norris::ExternalAPIManager  & 0 & Ottimale & 9 & Non Accettabile   \\ \hline
-			% 			Norris::DataModel  			& 4 & Ottimale & 3 & Ottimale   \\ \hline
-			% 			Chuck::Model 				& 2 & Ottimale & 4 & Ottimale   \\ \hline
-			% 			Chuck::ViewModel 			& 8 & Non Accettabile & 6 & Accettabile   \\ \hline
-			% 			Chuck::Directive 			& 0 & Ottimale & 12 & Non Accettabile   \\ \hline
-			% 			Chuck::View 				& 4 & Ottimale & 4 & Ottimale   \\ \hline
-			% 			App::Model 					& 3 & Ottimale & 2 & Ottimale   \\ \hline
-			% 			App::Presenter 				& 3 & Ottimale & 6 & Accettabile   \\ \hline
-			% 			App::View 					& 1 & Ottimale & 6 & Accettabile   \\ \hline
-			% 		\end{tabu}
-			% 	\caption{Esiti del calcolo del grado di accoppiamento per le componenti durante la Fase PD}
-			% \end{table}
-			% Come è possibile notare dalla tabella, abbiamo ottenuto buoni risultati sia per Norris sia per l'applicazione Android, mentre i valori del grado di accoppiamento afferente della componente ViewModel di Chuck sono risultati molto alti, in quanto rappresenta la componente principale di Chuck.
+				
+			\level{4}{Grado di accoppiamento dei componenti}
+			Si riporta di seguito, per ogni componente,il grado di accoppiamento afferente ed efferente.
+			\begin{table}[H]
+				\centering
+					\begin{tabu}{| l | c | c | c | c | c | c | }
+						\hline
+						Componente					& Afferente & Esiti Afferente & Efferente & Esiti Efferente 	\\ \hline \hline
+						Norris::InternalAPIManager	& 1 & Ottimale & 3 & Ottimale  \\ \hline
+						Norris::ExternalAPIManager  & 0 & Ottimale & 9 & Non Accettabile   \\ \hline
+						Norris::DataModel  			& 4 & Ottimale & 3 & Ottimale   \\ \hline
+						Chuck::Model 				& 2 & Ottimale & 4 & Ottimale   \\ \hline
+						Chuck::ViewModel 			& 8 & Non Accettabile & 6 & Accettabile   \\ \hline
+						Chuck::Directive 			& 0 & Ottimale & 12 & Non Accettabile   \\ \hline
+						Chuck::View 				& 4 & Ottimale & 4 & Ottimale   \\ \hline
+						App::Model 					& 4 & Ottimale & 2 & Ottimale   \\ \hline
+						App::Presenter 				& 2 & Ottimale & 6 & Accettabile   \\ \hline
+						App::View 					& 1 & Ottimale & 6 & Accettabile   \\ \hline
+					\end{tabu}
+				\caption{Esiti del calcolo del grado di accoppiamento per le componenti durante la Fase PD}
+			\end{table}
+			Come è possibile notare dalla tabella, abbiamo ottenuto buoni risultati sia per Norris sia per l'applicazione Android, mentre i valori del grado di accoppiamento afferente della componente ViewModel di Chuck sono risultati molto alti, in quanto rappresenta la componente principale di Chuck.
 			 
 	\level{2}{Verifica dei processi}
 		\level{3}{Processo di documentazione}
@@ -207,62 +218,63 @@ individuata nel presente documento.
 			In questa fase, il livello CMM del processo di documentazione si assesta al terzo gradino della scala CMM.
 
 			\level{4}{Schedule Variance}
-			La maggior parte delle attività pianificate nel \insdoc{Piano di Progetto v6.00}, relative alla documentazione, sono state svolte nei tempi previsti. \\
+			La maggior parte delle attività pianificate nel \insdoc{Piano di Progettov7.00}, relative alla documentazione, sono state svolte nei tempi previsti. \\
 			Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sui tempi di stesura di ogni documento:
 			\begin{table}[H]
 					\centering
 					\begin{tabu}{| l | c | c |}
 							\hline
 							Documenti 							& Schedule Variance	& Esito		\\ \hline \hline						
-							Piano di progetto v6.00				& 4\% 		& Accettabile  \\ \hline
-							Norme di Progetto v6.00 			& 0\%		& Ottimale  \\ \hline
-							Piano di Qualifica v6.00 			& -1\%		& Accettabile  \\ \hline
-							Manuale Utente v3.00 				& -2\%		& Accettabile  \\ \hline
-							Definizione di Prodotto v3.00 		& -1\%		& Accettabile  \\ \hline
-							Glossario v6.00					 	& 3\% 		& Accettabile \\ \hline
-							Totale processo di documentazione 	& 3\% 		& Accettabile \\ \hline
+							Piano di progettov7.00				& 2\% 		& Ottimale  \\ \hline
+							Norme di Progettov7.00 			& 0\%		& Ottimale  \\ \hline
+							Piano di Qualificav7.00 			& -1\%		& Accettabile  \\ \hline
+							Manuale Utente v4.00 				& 0\%		& Ottimale  \\ \hline
+							Definizione di Prodotto v4.00 		& 1\%		& Ottimale  \\ \hline
+							Glossariov7.00					 	& 0\% 		& Ottimale \\ \hline
+							Totale processo di documentazione 	& 2\% 		& Ottimale \\ \hline
 					\end{tabu}
 				\caption{Esiti del calcolo della Schedule Variance durante la Fase PD}
 			\end{table}
 							
 			\level{4}{Budget Variance}
-%modificare, se pdp cambia, confrontare preventivo con consuntivo
-			Le risorse impiegate per la correzione degli errori e per l'avanzamento delle attività pianificate non hanno subito grosse modifiche rispetto a quanto pianificato. Questo deriva dal fatto che le modifiche apportate alla documentazione, in questa fase, sono state minime, mentre ci si è dedicati, in maggior misura, all'attività di codifica, del codice sorgente e dei test, e alla loro esecuzione.
+			Le risorse impiegate per la correzione degli errori e per l'avanzamento delle attività pianificate sono risultate notevoli. Questo deriva dal fatto che le modifiche apportate alla documentazione, in questa fase, sono state significative, nell'intento di portare finalmente i documenti al loro stato ottimale.
 			Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sulle risorse utilizzate per la stesura di ogni documento:
 			\begin{table}[H]
 					\centering
 					\begin{tabu}{| l | c | c |}
 							\hline
 							Documenti 							& Budget Variance	& Esito		\\ \hline \hline							
-							Piano di progetto v6.00				& 0\% 		& Ottimale  \\ \hline
-							Norme di Progetto v6.00 			& 0\%		& Ottimale  \\ \hline
-							Piano di Qualifica v6.00 			& 2\%		& Accettabile  \\ \hline
+							Piano di progettov7.00				& 0\% 		& Ottimale  \\ \hline
+							Norme di Progettov7.00 			& -1\%		& Accettabile  \\ \hline
+							Piano di Qualificav7.00 			& -2\%		& Accettabile  \\ \hline
 							Specifica Tecnica v4.00 			& 0\%		& Ottimale  \\ \hline
-							Manuale Utente v3.00 				& -3\%		& Accettabile  \\ \hline
-							Definizione di Prodotto v3.00 		& -2\%		& Accettabile  \\ \hline
-							Glossario v6.00					 	& 3\% 		& Accettabile  \\ \hline
-							Totale processo di documentazione 	& 2\% 		& Accettabile \\ \hline
+							Manuale Utente v4.00 				& 2\%		& Ottimale  \\ \hline
+							Definizione di Prodotto v4.00 		& 1\%		& Ottimale  \\ \hline
+							Glossariov7.00					 	& 3\% 		& Ottimale  \\ \hline
+							Totale processo di documentazione 	& 3\% 		& Ottimale \\ \hline
 					\end{tabu}
 				\caption{Esiti del calcolo della Budget Variance durante la Fase PD}
 			\end{table}
 							
 			\level{4}{Produttività}
-			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di documentazione. Questo indice è stato calcolato durante tutti i momenti di verifica previsti dal \insdoc{Piano di Progetto v6.00} per la \insphase{Fase PD}, per ogni documento redatto nel periodo antecedente la verifica. Il calcolo fatto di volta in volta sullo stesso documento tiene conto solo delle nuove sezioni introdotte in esso.\\
+			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di documentazione. Questo indice è stato calcolato durante tutti i momenti di verifica previsti dal \insdoc{Piano di Progettov7.00} per la \insphase{Fase PD}, per ogni documento redatto nel periodo antecedente la verifica. Il calcolo fatto di volta in volta sullo stesso documento tiene conto solo delle nuove sezioni introdotte in esso.\\
 			Segue un riassunto di quanto è stato fatto.
 			\begin{table}[H]
 			      \centering
 					\begin{tabu}{| l | c |}
 					\hline
 					Documento & Produttività	\\ \hline
-					Norme di Progetto	& 20 \\ \hline
-					Piano di Progetto	& 70 \\ \hline
-					Piano di Qualifica	& 148 \\ \hline
-					Definizione di Prodotto & 50 \\ \hline
-					Manuale Utente & 150 \\ \hline
-					Glossario & 80 \\ \hline
+					Norme di Progetto	& 42 \\ \hline
+					Piano di Progetto	& 35 \\ \hline
+					Piano di Qualifica	& 136 \\ \hline
+					Definizione di Prodotto & 56 \\ \hline
+					Manuale Utente & 163 \\ \hline
+					Glossario & 50 \\ \hline
 					\end{tabu}
 					\caption{Produttività delle varie attività del processo di documentazione durante la fase PD}
 			\end{table}
+			
+			
 			Di seguito vengono riportati in un grafico i valori della produttività del processo di documentazione rilevati nei vari periodi della \insphase{Fase PD} nei quali è stato applicato il processo di verifica. Il grafico fa riferimento alla tabella precedente.\\
 
 			\begin{figure}[H]
@@ -271,14 +283,13 @@ individuata nel presente documento.
 				\caption{Produttività del processo di documentazione durante la Fase PD}
 			\end{figure}
 
-			Si può notare come la produttività del processo di documentazione sia calato, rispetto alle fasi precedenti. Questo è dovuto al fatto che i docmenti hanno, ormai, raggiunto un buon livello di completezza dei contenuti. Sono, quindi, necessarie meno modifiche che abbassano il livello di produttività. \\
-			Alcuni documenti presentano un indice di produttività più alto perchè hanno subito più modifiche ed incrementi.
+			La produttività media del processo di documentazione è ulteriormente in diminuzione in quanto le nuove sezioni introdotte nei documenti ed eventuali ampliamenti in questa fase sono ridotti al minimo. Ciò contrasta coi livelli di Schedule e Budget Variance a causa del fatto che è stata rivista l'organizzazione dei contenuti dei documenti, non senza sforzo da parte dei membri del Team.
 
 		\level{3}{Processo di verifica}
 			\level{4}{Livello CMM}
-			In questa fase, il livello del processo di verifica si assesta al terzo gradino della scala CMM, già raggunto nella \insphase{Fase SD}.
+			In questa fase, il livello del processo di verifica si assesta al terzo gradino della scala CMM, già raggunto nella \insphase{Fase CP}.
 			\level{4}{Schedule Variance}
-			Il processo di verifica è stato sempre svolto rispettando le scadenze temporali previste nel \insdoc{Piano di Progetto v6.00}. I valori della Schedule Variance, calcolati per questo processo, risultano, quindi, ottimi.\\
+			Il processo di verifica è stato sempre svolto rispettando le scadenze temporali previste nel \insdoc{Piano di Progettov7.00}. I valori della Schedule Variance, calcolati per questo processo, risultano, quindi, ottimi.\\
 			Riportiamo di seguito i valori ottenuti:
 			\begin{table}[H]
 				\centering
@@ -291,7 +302,7 @@ individuata nel presente documento.
 			\end{table}	
 
 			\level{4}{Budget Variance}
-			Le risorse utilizzate nel processo di verifica sono di poco maggiori rispetto a qelle preventivate, a causa della necessità di correggere gli errori rilevati nella Revisione di Qualifica. Ciò ha causato un valore accettabile della Budget Variance.
+			Le risorse utilizzate nel processo di verifica sono di poco maggiori rispetto a quelle preventivate, a causa della necessità di correggere gli errori rilevati nella Revisione di Qualifica. Ciò ha causato un valore accettabile della Budget Variance.
 			Riportiamo di seguito il valore ottenuto:
 			\begin{table}[H]
 				\centering
@@ -304,7 +315,7 @@ individuata nel presente documento.
 			\end{table}	
 
 			\level{4}{Produttività}
-			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di verifica. Tale indice è stato calcolato in seguito a tutti i momenti di verifica previsti dal \insdoc{Piano di Progetto v6.00} per la \insphase{Fase PD}. Di seguito vengono riportati i valori calcolati e una loro rappresentazione grafica.
+			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di verifica. Tale indice è stato calcolato in seguito a tutti i momenti di verifica previsti dal \insdoc{Piano di Progettov7.00} per la \insphase{Fase PD}. Di seguito vengono riportati i valori calcolati e una loro rappresentazione grafica.
 			\begin{table}[H]
 				\centering
 				\begin{tabu}{| c | c |}
@@ -312,9 +323,9 @@ individuata nel presente documento.
 					Data verifica & Produttività\\ \hline \hline
 					01-02/06 & 3 \\ \hline
 					03-05/06 & 10 \\ \hline
-					06-11/06 & 16 \\ \hline		
-					11-16/06 & 5 \\ \hline	
-				\end{tabu}
+					06-11/06 & 16\\ \hline
+					11-16/06 & 5\\ \hline
+					\end{tabu}
 				\caption{Produttività del processo di verifica durante la fase PD}
 			\end{table}
 
@@ -336,8 +347,8 @@ individuata nel presente documento.
 						Data verifica & Efficacia\\ \hline \hline
 						01-02/06 & 6 \\ \hline
 						03-05/06 & 10 \\ \hline
-						06-11/06 & 18 \\ \hline		
-						12-16/06 & 8 \\ \hline		
+						06-11/06 & 18 \\ \hline
+						12-16/06 & 8 \\ \hline
 					\end{tabu}
 				\caption{Efficacia delle revisioni durante la fase PD}
 			\end{table}
@@ -351,35 +362,33 @@ individuata nel presente documento.
 			I livelli di efficacia di revisione, nel complesso, rispecchiano l'andamento della produttività. In generale, si ha una bassa efficacia, dovuta ad un basso numero di errori rilevati nei documenti ai quali sono state apportate modifiche. Vi è un picco nel momento in cui sono state apportate modifiche in seguito alle valutazioni ricevute dopo la Revisione di Qualifica.
 
 		\level{3}{Processo di sviluppo}
-		Si riportano, in questa sezione, gli esiti delle misurazioni effettuate rispetto all'attività di codifica.
+		Si riportano, in questa sezione, gli esiti delle misurazioni effettuate rispetto all'attività di codifica. In questa fase l'attività di codifica ha avuto un ruolo secondario, in quanto effettuata solo a scopo correttivo.
 			\level{4}{Livello CMM}
-			Il gruppo \groupname{} conferma di aver raggiunto il terzo livello \insglo{CMM} anche per la parte del processo di sviluppo, relativa alla codifica. Il breve periodo, intercorso tra la fine della fase precedente e la fine della fase corrente, non ha permesso di ricercare i miglioramenti necessari a far aumentare la qualità del processo; il gruppo di lavoro si ritiene tuttavia soddisfatto del livello raggiunto nel processo.
-				
+			Poichè l'attività di codifica è stata attuata solo marginalmente, il livello \insglo{CMM} si attesta sul terzo gradino, raggiunto precedentemente.
+			
 			\level{4}{Schedule Variance}
-			In questa fase la codifica è stata una delle attività principali a cui il gruppo si è dedicato. Nel complesso, il team, è riuscito a rispettare la pianificazione indicata nel \insdoc{Piano di Progetto v6.00}. Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sui tempi di stesura del codice sorgente.
+			 Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sui tempi di correzione del codice sorgente.
 			\begin{table}[H]
 				\centering
 				\begin{tabu}{| l | c | c |}
 					\hline
 						Processi 						& Schedule Variance	& Esito		\\ \hline \hline
-						Processo di sviluppo (codifica) & -2\% & Accettabile \\ \hline
+						Processo di sviluppo (codifica) & 0\% & Ottimale \\ \hline
 				\end{tabu}
 				\caption{Esiti del calcolo della Schedule Variance durante la Fase PD}
 			\end{table}	
 						
 			\level{4}{Budget Variance}
-			% Conseguentemente ai ritardi conseguiti nella fase precedente, le risorse impiegate sono state maggiori del previsto, al punto da richiedere la redistribuzione del monte ore totale fra i ruoli, come indicato nel \insdoc{Piano di Progetto v6.00}, e da sforare i range di accettazione della metrica.
-%CALCOLARE, dopo pdp
-			% \\
-			% \begin{table}[H]
-			% 	\centering
-			% 	\begin{tabu}{| l | c | c |}
-			% 		\hline
-			% 			Processi 						& Budget Variance	& Esito		\\ \hline \hline
-			% 			Processo di sviluppo (codifica) & -7\% & Accettabile \\ \hline
-			% 	\end{tabu}
-			% 	\caption{Esiti del calcolo della Budget Variance dell'attività di codifica durante la Fase PD}
-			% \end{table}	
+			La correzione degli errori sul codice non ha richiesto un particolare dispendio di risorse. Si riporta di seguito il valore della Budget Variance determinato.		\\
+			\begin{table}[H]
+			\centering
+				\begin{tabu}{| l | c | c |}
+					\hline
+						Processi 						& Budget Variance	& Esito		\\ \hline \hline
+						Processo di sviluppo (codifica) & 2\% & Ottimale \\ \hline
+				\end{tabu}
+				\caption{Esiti del calcolo della Budget Variance dell'attività di codifica durante la Fase PD}
+			\end{table}	
 							
 			\level{4}{Produttività}
 			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di sviluppo, limitatamente all'attività di codifica. \\
@@ -390,10 +399,53 @@ individuata nel presente documento.
 				\begin{tabu}{| l | c | c |}
 					\hline
 						Processi 						& Produttività		\\ \hline \hline
-						Processo di sviluppo (codifica) & 60   \\ \hline
+						Processo di sviluppo (codifica) & 46   \\ \hline
 				\end{tabu}
 				\caption{Esiti del calcolo della produttività della codifica durante la Fase PD}
 			\end{table}	
+			
+		\level{3}{Processo di validazione}
+		Si riportano, in questa sezione, gli esiti delle misurazioni effettuate sul processo di Validazione, implementato per ultimo, prima della consegna del prodotto.
+			\level{4}{Livello CMM}
+			Poichè questo processo è stato attuato per ultimo e per un brevissimo periodo, il team di sviluppo ritiene di aver raggiunto il secondo livello CMM, visto che il processo è stato documentato, ma non sente di aver ancora acquisito una sufficiente padronanza del processo stesso.
+			
+			\level{4}{Schedule Variance}
+			 Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sulle attività di validazione.
+			\begin{table}[H]
+				\centering
+				\begin{tabu}{| l | c | c |}
+					\hline
+						Processi 						& Schedule Variance	& Esito		\\ \hline \hline
+						Processo di validazione & 0\% & Ottimale \\ \hline
+				\end{tabu}
+				\caption{Esiti del calcolo della Schedule Variance durante la Fase PD}
+			\end{table}	
+						
+			\level{4}{Budget Variance}
+			Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sulle attività di validazione.		\\
+			\begin{table}[H]
+			\centering
+				\begin{tabu}{| l | c | c |}
+					\hline
+						Processi 						& Budget Variance	& Esito		\\ \hline \hline
+						Processo di validazione & 1\% & Ottimale \\ \hline
+				\end{tabu}
+				\caption{Esiti del calcolo della Budget Variance durante la Fase PD}
+			\end{table}	
+							
+			\level{4}{Produttività}
+			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di validazione. \\
+			Seguono i risultati delle misurazioni.
+			\\ 
+			\begin{table}[H]
+				\centering
+				\begin{tabu}{| l | c | c |}
+					\hline
+						Processi 						& Produttività		\\ \hline \hline
+						Processo di validazione & 56   \\ \hline
+				\end{tabu}
+				\caption{Esiti del calcolo della produttività della codifica durante la Fase PD}
+			\end{table}		
 					
 		\level{3}{PDCA}
 		In questa sezione viene riportato il grafico PDCA della \insphase{Fase PD}. In ascissa è rappresentato il tempo, in ordinata le attività.
