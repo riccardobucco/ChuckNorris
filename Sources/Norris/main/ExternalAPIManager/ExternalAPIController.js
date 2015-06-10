@@ -44,6 +44,13 @@ function ExternalAPIController(model, server, app) {
     this.endpoint=model.getEndpoint();
     if (app != undefined ){
         this.app=app;
+        /*app.use(function (req, res, next) {
+            var hosts = model.getSettings().origins;
+            hosts = hosts.join(', ');
+            res.setHeader('Access-Control-Allow-Origin', hosts);
+            res.setHeader('Access-Control-Allow-Credentials', 'true');
+            next();
+        });*/
     }
     else {
         throw ("ExternalAPIController:undefinedApp");

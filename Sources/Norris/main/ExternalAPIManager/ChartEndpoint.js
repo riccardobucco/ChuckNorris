@@ -48,12 +48,7 @@ function ChartEndpoint(controller) {
             } else {
                 next(new Error('unauthorized'));
             }
-        })
-        /*this.controller.getApp().use(function (req, res, next) {
-            res.setHeader('Access-Control-Allow-Origin', 'granted hosts');
-            res.setHeader('Access-Control-Allow-Credentials', 'true');
-            next();
-        });*/
+        });
         this.controller.model.on('create', function (chart) {
             var nsp = socketio.of('/' + chart.getId());
 
