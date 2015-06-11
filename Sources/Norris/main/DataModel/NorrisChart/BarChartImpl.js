@@ -29,16 +29,18 @@ var BarChartInPlaceUpdater = require('./BarChartInPlaceUpdater.js');
 module.exports = BarChartImpl;
 
 var defaults = {
-	description : 'This is a bar chart.',
-	xLabel : '',
-	yLabel : '',
-	legendPosition : 'right',
-	orientation : 'vertical',
-	style: {
-		barArea: '60%',
-		animationDuration: 1000,
-		showGrid : false,
-	}
+    description : 'This is a bar chart.',
+    xLabel : '',
+    yLabel : '',
+    legendPosition : 'right',
+    orientation : 'vertical',
+    style: {
+        barArea: '60%',
+        showGrid : false,
+        animationDuration: 1000,
+        maxValue: null,
+        minValue: null
+    }
 };
 
 /**
@@ -48,11 +50,11 @@ var defaults = {
  */
 
 function BarChartImpl (uid) {
-	if (!(this instanceof BarChartImpl)) return new BarChartImpl(uid);
-	ChartImpl.call(this, 'barchart', uid);
-	for(var key in defaults) {
-		this.settings[key] = defaults[key];
-	}
+    if (!(this instanceof BarChartImpl)) return new BarChartImpl(uid);
+    ChartImpl.call(this, 'barchart', uid);
+    for(var key in defaults) {
+        this.settings[key] = defaults[key];
+    }
 }
 
 BarChartImpl.prototype.__proto__ = ChartImpl.prototype;
@@ -64,9 +66,9 @@ BarChartImpl.prototype.__proto__ = ChartImpl.prototype;
  * @constructor
  */
 function BarChartFactory() {
-	if(!(this instanceof BarChartFactory)) {
-		return new BarChartFactory();
-	}
+    if(!(this instanceof BarChartFactory)) {
+        return new BarChartFactory();
+    }
 }
 
 BarChartFactory.prototype.instance=new BarChartFactory(); // static
@@ -76,7 +78,7 @@ BarChartFactory.prototype.instance=new BarChartFactory(); // static
  * @returns {BarChartFactory} the factory's instance.
  */
 BarChartFactory.getInstance = function() { // static
-	return BarChartFactory.prototype.instance;
+    return BarChartFactory.prototype.instance;
 };
 
 /**
@@ -85,7 +87,7 @@ BarChartFactory.getInstance = function() { // static
  * @returns {BarChartImpl} - the created bar chart.
  */
 BarChartFactory.prototype.createChart = function (id) {
-	return new BarChartImpl(id);
+    return new BarChartImpl(id);
 };
 
 // Dependency injection:
