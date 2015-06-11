@@ -444,5 +444,18 @@
 					\caption{Procedura di formalizzazione dei documenti}
 				\end{figure}
 	\level{3}{Strumenti}
-		Per la stesura dei documenti si è scelto di utilizzare il \insglo{linguaggio di markup} \LaTeX{}, mentre per la rilevazione e la correzione degli errori ortografici vengono utilizzati appositi \insglo{script} realizzati dagli \insrole{Amministratori}. \\
-		La descrizione dell'applicazione del linguaggio \LaTeX{} e degli \insglo{script} di verifica viene data nell'appendice \nameref{app:strumenti}.
+		\level{4}{Latex}
+		Per la stesura dei documenti si è scelto di utilizzare il linguaggio di markup \LaTeX{}, il quale permette di separare, in modo semplice, il contenuto di un documento dalla sua formattazione. \\
+		Ogni documento prodotto dovrà essere realizzato a partire da un \textbf{template} \LaTeX{} appropriato reperibile al percorso \texttt{Commons/Template}.\\
+		Grazie ai template di \LaTeX{}, non ci si deve preoccupare della formattazione del testo durante la sua stesura, infatti, basta impostare le regole all’interno di un unico file e queste verranno adottate in automatico da tutti i documenti che fanno uso del template. Inoltre, se le regole dovessero cambiare in corso d’opera (cambiamenti alle \insdoc{Norme di Progetto}), basta modificare il singolo file contenente le regole invece che tutti i documenti scritti fino a quel determinato momento. \\
+		\\
+		Inoltre, per permettere un’adeguazione automatica alle regole imposte all’interno delle norme tipografiche si è deciso di creare dei \textbf{comandi personalizzati} utilizzabili in \LaTeX{}. Ogni membro del gruppo dovrà saperli usare in modo appropriato ogniqualvolta ve ne sia il bisogno. L’elenco completo di tutti i comandi lo si può trovare alla sezione \nameref{sec:formatiricorrenti}.
+		\level{4}{Script per la rilevazione di errori ortografici}
+		Per la rilevazione e la correzione degli errori ortografici viene utilizzato un apposito script realizzato dagli \insrole{Amministratori} del \groupname{}, che si appoggia al software Aspell, il quale è stato opportnamente configrato con il dizionario di lingua italiana.
+		\level{4}{Script di verifica}
+		I \insrole{Verificatori} hanno a disposizione gli strumenti descritti di seguito, per svolgere la parte automatizzata dell'attività di verifica.
+		\begin{description}
+			\item[OrtographicCheck] Script che sfrutta il software GNU Aspell per eseguire il controllo ortografico di un documento.
+			\item[Gulpease] Script che estrae il testo da un documento e ne calcola l'indice di leggibilità Gulpease.
+			\item[NonBreakingSpaceCheck] Script che controlla che un numero formattato secondo lo standard [SI/ISO 31-0] utilizzi lo spazio unificatore e non quello normale (errore in cui è facile incorrere).
+		\end{description}

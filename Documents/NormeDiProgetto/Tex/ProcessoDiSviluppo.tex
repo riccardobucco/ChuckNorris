@@ -1,85 +1,87 @@
-\level{2}{Processo di sviluppo}
+	\level{2}{Processo di sviluppo}
 		\level{3}{Studio di Fattibilità}
-			Lo \insdoc{Studio di Fattibilità} deve essere rapido e accurato.\\
-			Il documento di \insdoc{Studio di Fattibilità} viene redatto dagli analisti, sulla base di ciò che emerge dalle prime due riunioni. Qui i membri del gruppo si confrontano su tematiche riguardanti i capitolati quali:
+		Lo \insdoc{Studio di Fattibilità} deve essere rapido e accurato.\\
+		Il documento di \insdoc{Studio di Fattibilità} viene redatto dagli analisti, sulla base di ciò che emerge dalle prime due riunioni. Qui i membri del gruppo si confrontano su tematiche riguardanti i capitolati quali:
+		\begin{itemize}
+			\item il dominio applicativo e tecnologico;
+			\item il rapporto costi/benefici:
 			\begin{itemize}
-				\item il dominio applicativo e tecnologico;
-				\item il rapporto costi/benefici:
-				\begin{itemize}
-					\item confronto tra mercato attuale e futuro;
-					\item costo di produzione e redditività dell'investimento;
-				\end{itemize}
-				\item i rischi ai quali essi sono soggetti.
+				\item confronto tra mercato attuale e futuro;
+				\item costo di produzione e redditività dell'investimento;
 			\end{itemize}
+			\item i rischi ai quali essi sono soggetti.
+		\end{itemize}
 
 		\level{3}{Analisi dei Requisiti}
-			Durante l'\insdoc{Analisi dei Requisiti} vengono catalogati e descritti tutti i requisiti che il \insglo{prodotto} dovrà possedere. Tali requisiti sono ottenuti da una delle seguenti fonti (presentate in ordine decrescente di importanza):
-			\begin{enumerate}
-				\item \insglo{capitolato} d’appalto;
-				\item incontri con il proponente;
-				\item incontri con il committente;
-				\item valutazioni interne al gruppo di lavoro.
-			\end{enumerate}
-			Tali requisiti sono raccolti all'interno del documento \insdoc{Analisi dei Requisiti}. All'interno di tale documento è anche indicato un modo per verificare i requisiti in esso raccolti.
+		Durante l'\insdoc{Analisi dei Requisiti} vengono catalogati e descritti tutti i requisiti che il \insglo{prodotto} dovrà possedere. Tali requisiti sono ottenuti da una delle seguenti fonti (presentate in ordine decrescente di importanza):
+		\begin{enumerate}
+			\item \insglo{capitolato} d’appalto;
+			\item incontri con il proponente;
+			\item incontri con il committente;
+			\item valutazioni interne al gruppo di lavoro.
+		\end{enumerate}
+		Tali requisiti sono raccolti all'interno del documento \insdoc{Analisi dei Requisiti}. All'interno di tale documento è anche indicato un modo per verificare i requisiti in esso raccolti.
 			\level{4}{Norme}
 				\level{5}{Classificazione dei casi d'uso} \label{sec:classificazioneUC}
-					I casi d'uso vengono identificati univocamente da una sigla nella forma UCYX.
+				I casi d'uso vengono identificati univocamente da una sigla nella forma UCYX.
+				\begin{itemize}
+					\item Y può assumere tre valori: N, A o D. N rappresenta tutti i casi d'uso inerenti a \insglo{Norris}, A rappresenta quelli inerenti l'applicazione \insglo{Android} e D rappresenta quelli che riguardano la \insglo{Dashboard}.
+					\item X è un codice gerarchico numerico.
+				\end{itemize}
+				Sarà compito degli \insrole{analisti} identificare i casi d'uso e essi dovranno preoccuparsi di fornire un diagramma conforme allo standard \insglo{UML} per ogni caso d'uso non foglia. Qui di seguito sono riportate le informazioni da inserire nella parte testuale:
+				\begin{itemize}
+					\item titolo;
+					\item attori (principali e secondari);
+					\item precondizione;
+					\item postcondizione;
+					\item flusso principale degli eventi, dove si descrive il flusso dei casi d'uso figli; per ogni evento va specificato quanto segue:
 					\begin{itemize}
-						\item Y può assumere tre valori: N, A o D. N rappresenta tutti i casi d'uso inerenti a \insglo{Norris}, A rappresenta quelli inerenti l'applicazione \insglo{Android} e D rappresenta quelli che riguardano la \insglo{Dashboard}.
-						\item X è un codice gerarchico numerico.
+						\item descrizione testuale;
+						\item attori coinvolti;
+						\item se l’evento è descritto nel dettaglio da un altro caso d’uso;
 					\end{itemize}
-					Sarà compito degli \insrole{analisti} identificare i casi d'uso e essi dovranno preoccuparsi di fornire un diagramma conforme allo standard \insglo{UML} per ogni caso d'uso non foglia. Qui di seguito sono riportate le informazioni da inserire nella parte testuale:
+					\item scenari alternativi; per ognuno di essi va specificato quanto segue:
 					\begin{itemize}
-						\item titolo;
-						\item attori (principali e secondari);
-						\item precondizione;
-						\item postcondizione;
-						\item flusso principale degli eventi, dove si descrive il flusso dei casi d'uso figli; per ogni evento va specificato quanto segue:
-						\begin{itemize}
-							\item descrizione testuale;
-							\item attori coinvolti;
-							\item se l’evento è descritto nel dettaglio da un altro caso d’uso;
-						\end{itemize}
-						\item scenari alternativi; per ognuno di essi va specificato quanto segue:
-						\begin{itemize}
-							\item descrizione testuale;
-							\item attori coinvolti;
-							\item se lo scenario è descritto nel dettaglio da un altro caso d’uso.
-						\end{itemize}
+						\item descrizione testuale;
+						\item attori coinvolti;
+						\item se lo scenario è descritto nel dettaglio da un altro caso d’uso.
 					\end{itemize}
+				\end{itemize}
 				\level{5}{Classificazione dei requisiti}
-					I requisiti dovranno essere classificati per tipo e importanza, utilizzando la seguente codifica: R[X][Y][Z].\\
-					La codifica appena presentata deve essere interpretata nel modo seguente:
-					\begin{enumerate}
-						\item X indica l'importanza strategica del requisito e può assumere uno dei seguenti valori:
-						\begin{itemize}
-							\item R: requisiti obbligatori (required);
-							\item D: requisiti desiderabili (desiderable);
-							\item O: requisiti opzionali (optional).
-						\end{itemize}
-						\item Y indica la tipologia del requisito e può assumere i seguenti valori:
-						\begin{itemize}
-							\item F: indica che si tratta di un requisito funzionale (functional);
-							\item P: indica che si tratta di un requisito prestazionale (performance);
-							\item Q: indica che si tratta di un requisito di qualità (quality);
-							\item C: indica che si tratta di un requisito di vincolo (constraint).
-						\end{itemize}
-						\item Z indica il codice gerarchico che identifica un requisito e dev'essere univoco.
-					\end{enumerate}
-	\level{4}{Strumenti}
-		\level{5}{Software per la creazione di diagrammi UML}
-			Per l'attività di Analisi dei Requisiti sono stati utilizzati i seguenti strumenti:
-			\begin{itemize}
-				\item per la creazione dei diagrammi \insglo{UML} è stato utilizzato il \insglo{software} \insglo{Astah};
-				\item per la classificazione dei requisiti è stata utilizzata un'applicazione web creata dagli \insrole{Amministratori}.
-			\end{itemize}
-			Il \insglo{software} \insglo{Astah} è descritto nell'appendice \nameref{app:strumenti}, mentre l'applicazione per la classificazione dei requisiti è descritta nell'appendice \nameref{sec:tracker}.
-			
-	\level{3}{Progettazione}
+				I requisiti dovranno essere classificati per tipo e importanza, utilizzando la seguente codifica: R[X][Y][Z].\\
+				La codifica appena presentata deve essere interpretata nel modo seguente:
+				\begin{enumerate}
+					\item X indica l'importanza strategica del requisito e può assumere uno dei seguenti valori:
+					\begin{itemize}
+						\item R: requisiti obbligatori (required);
+						\item D: requisiti desiderabili (desiderable);
+						\item O: requisiti opzionali (optional).
+					\end{itemize}
+					\item Y indica la tipologia del requisito e può assumere i seguenti valori:
+					\begin{itemize}
+						\item F: indica che si tratta di un requisito funzionale (functional);
+						\item P: indica che si tratta di un requisito prestazionale (performance);
+						\item Q: indica che si tratta di un requisito di qualità (quality);
+						\item C: indica che si tratta di un requisito di vincolo (constraint).
+					\end{itemize}
+					\item Z indica il codice gerarchico che identifica un requisito e dev'essere univoco.
+				\end{enumerate}
+			\level{4}{Strumenti}
+			Per l'attività di Analisi dei Requisiti si devono utilizzare i seguenti strumenti:
+			\begin{description}
+				\item[Astah] Viene utilizzato per la creazione dei diagrammi UML dei casi d'uso, i quali vengono inseriti nel documento \insdoc{Analisi dei Requisiti} per descrivere i casi d'uso ricavati dall'analisi del capitolato.
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{NormeDiProgetto/Pics/CasoDusoAstah.png}
+					\caption{Esempio di diagramma di caso d'uso creato con Astah}
+				\end{figure}
+				\item[Tracker] È un'applicazione web, appositamente creata dagli \insrole{Amministratori}, la quale deve essere utilizzata, per questa attività, per il tracciamento e la classificazione dei requisiti. Si può trovare una descrizione dettagliata nell'appendice \nameref{sec:tracker}.
+			\end{description}
+		\level{3}{Progettazione}
 		Scopo dell'attività di progettazione è produrre una soluzione soddisfacente per tutti i soggetti coinvolti nel progetto, una volta compreso esattamente quali sono i requisiti del problema. \\
 		Approfondendo la progettazione del \insglo{prodotto} fino ad arrivare a moduli abbastanza semplici da essere capiti da una sola persona, si otterranno le istruzioni necessarie ai \insrole{Programmatori} per ottenere il \insglo{prodotto} finito.
 			
-		\level{4}{Progettazione architetturale}
+			\level{4}{Progettazione architetturale}
 			Prima di procedere alla definizione vera e propria dell'architettura dei vari prodotti \insglo{software}, devono essere eseguiti e successivamente documentati i seguenti task:
 			\begin{enumerate}
 				\item si individuano i prodotti che si intendono realizzare;
@@ -101,15 +103,15 @@
 			Durante la suddivisione del \insglo{prodotto} in componenti è auspicabile che i \insrole{Progettisti} utilizzino in modo appropriato i \insglo{design pattern}. Qualora ciò dovesse avvenire, si documenta la cosa procedendo con una loro descrizione e contestualizzazione (per maggiori informazioni si consulti la sezione \nameref{sec:ProgArcDesingPattern}).\\
 			Un utile supporto alla documentazione di tutti i task precedentemente descritti sono i diagrammi \insglo{UML}. Per maggiori informazioni si consulti la sezione \nameref{sec:ProgArcUML}.\\
 			Il modo in cui viene effettuato il tracciamento dei requisiti viene descritto in modo più approfondito nella sezione \nameref{sec:ProgTracCompReq}.
-			\level{5}{Norme}
-				\level{6}{Design Pattern} \label{sec:ProgArcDesingPattern}
+				\level{5}{Norme}
+					\level{6}{Design Pattern} \label{sec:ProgArcDesingPattern}
 					Al fine di consentire una migliore comprensibilità delle scelte progettuali e della progettazione stessa, i \insrole{Progettisti} dovranno indicare i \insglo{pattern} architetturali impiegati, fornendo per ciascuno di essi:
 					\begin{itemize}
 						\item una descrizione testuale e grafica;
 						\item la motivazione che ha portato alla sua scelta;
 						\item una breve descrizione dell'applicazione del \insglo{pattern} al progetto.
 					\end{itemize}
-				\level{6}{Diagrammi UML} \label{sec:ProgArcUML}
+					\level{6}{Diagrammi UML} \label{sec:ProgArcUML}
 					La documentazione riguardante i prodotti e i componenti individuati deve sempre fare uso di diagrammi \insglo{UML}. Essi sono necessari per esplicitare e formalizzare in modo migliore i vari aspetti che sono stati descritti testualmente.\\
 					In particolare, durante la progettazione architetturale è necessario fare uso dei seguenti diagrammi:
 					\begin{description}
@@ -118,25 +120,35 @@
 					\end{description}
 					Tali diagrammi dovranno seguire le indicazioni fornite nella sezione \nameref{sec:UML}.
 
-				\level{6}{Classificazione dei componenti} \label{sec:ClassificareComponenti}
+					\level{6}{Classificazione dei componenti} \label{sec:ClassificareComponenti}
 					I componenti vengono identificati univocamente da una descrizione nella forma NomeProdotto::NomeComponente.
 					\begin{itemize}
 						\item NomeProdotto rappresenta il nome del \insglo{prodotto} \insglo{software} che i \insrole{Progettisti} hanno deciso di realizzare.
 						\item NomeComponente rappresenta il nome che è stato dato dai \insrole{Progettisti} al componente individuato.
 					\end{itemize}
 					A ogni componente è inoltre associato un codice univoco nella forma XY, dove X è l'iniziale del del nome del \insglo{prodotto} e Y un numero intero crescente (che parte da 0).
-				\level{6}{Test di integrazione} \label{sec:TestIntegrazione}
+					\level{6}{Test di integrazione} \label{sec:TestIntegrazione}
 					Per ottenere maggior efficienza ed efficacia durante l'attività di test, è auspicabile che i \insrole{Progettisti} si preoccupino di definire delle classi di verifica per appurare che il funzionamento dei componenti sia quello previsto. Sarebbe infatti ideale poter fornire degli strumenti completamente automatici ai \insrole{Verificatori}.\\
 					La progettazione delle classi per la verifica deve essere fatta da persone diverse da coloro che hanno progettato la classe da verificare, quando ciò fosse possibile.
-			\level{5}{Strumenti}
-				Per la progettazione architetturale sono stati utilizzati i seguenti strumenti:
-				\begin{itemize}
-					\item per la creazione dei diagrammi \insglo{UML} è stato utilizzato \insglo{Astah};
-					\item per il tracciamento delle componenti è stata utilizzata l'applicazione web sviluppata dagli \insrole{Amministratori}.
-				\end{itemize}
-				Il \insglo{software} \insglo{Astah} è descritto in modo dettagliato nell'appendice \nameref{app:strumenti}, mentre l'applicazione web per il tracciamento viene descritta nell'appendice \nameref{sec:tracker}.
-			\level{5}{Procedure}
-				\level{6}{Tracciamento componenti-requisiti} \label{sec:ProgTracCompReq}
+				\level{5}{Strumenti}
+				Per la progettazione architetturale si devono utilizzare i seguenti strumenti:
+				\begin{description}
+					\item[Astah] Durante tale attività, si utilizza Astah per la creazione dei diagrammi UML di attività e dei package, i quali vengono inseriti nel documento \insdoc{Specifica Tecnica} per una descrizione grafica, delle attività da svolgere per realizzare certe funzionalità e delle componenti e delle loro interazioni. 
+					\begin{figure}[H]
+						\centering
+						\includegraphics[width=0.8\textwidth]{NormeDiProgetto/Pics/AstahAttivita.png}
+						\caption{Esempio di diagramma di attività creato con Astah}
+					\end{figure}
+
+					\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{NormeDiProgetto/Pics/ComponentiAstah.png}
+					\caption{Esempio di diagramma di sequenza creato con Astah}
+				\end{figure}
+					\item[Tracker] Durante la progettazione architetturale, il Tracker, si deve utilizzare per il tracciamento delle componenti. Una descrizione più approfondita di questo strumento la si trova nell'appendice \nameref{sec:tracker}. Mentre una descrizione più approfondita delle procedure attuate tramite questa applicazione, la si può trovare nelle sezioni successive.
+				\end{description}
+				\level{5}{Procedure}
+					\level{6}{Tracciamento componenti-requisiti} \label{sec:ProgTracCompReq}
 					È fondamentale che ogni requisito sia soddisfatto da almeno un componente. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente \insglo{procedura}. Si noti che qui si da per scontato che i componenti e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento dei componenti fare riferimento alla \insglo{procedura} descritta nella sezione \nameref{sec:InsComponente}).
 					\begin{enumerate}
 						\item Accedere al Kaizen \insglo{Team} Tracker (\insuri{http://kaizenteam.it/tracker/}).
@@ -157,7 +169,7 @@
 						\end{figure}
 						\item Eseguire il passo precedente per tutti i requisiti.
 					\end{enumerate}
-				\level{6}{Inserimento di un componente sul Tracker} \label{sec:InsComponente}
+					\level{6}{Inserimento di un componente sul Tracker} \label{sec:InsComponente}
 					Per poter effettuare correttamente i vari tracciamenti necessari si deve inserire all'interno del tracker del gruppo tutti i componenti che sono stati individuati dai \insrole{Progettisti} durante la progettazione architetturale. Per fare ciò si segua la seguente \insglo{procedura}.
 					\begin{enumerate}
 						\item Accedere al Kaizen \insglo{Team} Tracker (\insuri{http://kaizenteam.it/tracker/}).
@@ -176,7 +188,7 @@
 						\item Eseguire nuovamente i passi precedenti per inserire un nuovo componente all'interno del Tracker.
 					\end{enumerate}
 
-		\level{4}{Progettazione di dettaglio}
+			\level{4}{Progettazione di dettaglio}
 			Dopo che l'architettura del sistema è stata definita completamente, si può procedere alla progettazione di dettaglio. Essa prevede che vengano eseguiti e successivamente documentati i seguenti task:
 			\begin{enumerate}
 				\item si individuano le classi che implementano ciascuno dei componenti trovati durante la progettazione architetturale;
@@ -191,15 +203,15 @@
 			Un utile supporto alla documentazione di tutti i task precedentemente descritti sono i diagrammi \insglo{UML}. Per maggiori informazioni si consulti la sezione \nameref{sec:ProgDetUML}.\\
 			Il modo in cui viene effettuato il tracciamento dei requisiti viene descritto in modo più approfondito nella sezione \nameref{sec:ProgTracClasReq}.
 
-			\level{5}{Norme}
-				\level{6}{Design Pattern} \label{sec:ProgDetDesingPattern}
+				\level{5}{Norme}
+					\level{6}{Design Pattern} \label{sec:ProgDetDesingPattern}
 					Al fine di consentire una migliore comprensibilità  delle scelte progettuali e della progettazione di stessa, i \insrole{Progettisti} dovranno indicare i \insglo{pattern} impiegati, fornendo per ciascuno di essi:
 					\begin{itemize}
 						\item una descrizione testuale e grafica;
 						\item la motivazione che ha portato alla sua scelta;
 						\item una breve descrizione dell'applicazione del \insglo{pattern} al progetto.
 					\end{itemize}
-				\level{6}{Diagrammi UML} \label{sec:ProgDetUML}
+					\level{6}{Diagrammi UML} \label{sec:ProgDetUML}
 					La documentazione riguardante le classi individuate deve sempre fare uso di diagrammi \insglo{UML}. Essi sono necessari per esplicitare e formalizzare in modo migliore i vari aspetti che sono stati descritti testualmente.\\
 					In particolare, durante la progettazione di dettaglio è necessario fare uso dei seguenti diagrammi:
 					\begin{description}
@@ -208,7 +220,7 @@
 						\item[diagrammi di sequenza] Essi hanno lo scopo di descrivere scenari (determinate sequenze di azioni in cui tutte le scelte sono già state effettuate). Vengono usati per descrivere le relazioni che intercorrono, in termini di messaggi, tra attori, oggetti ed entità del sistema che si sta rappresentando.
 					\end{description}
 					Tali diagrammi dovranno seguire le indicazioni fornite nella sezione \nameref{sec:UML}.
-				\level{6}{Classificazione delle classi} \label{sec:ClassificareClassi}
+					\level{6}{Classificazione delle classi} \label{sec:ClassificareClassi}
 					Le classi vengono identificate univocamente da una descrizione nella forma\\ NomeProdotto::NomeComponente::NomeClasse.
 					\begin{itemize}
 						\item NomeProdotto rappresenta il nome del \insglo{prodotto} \insglo{software} che i \insrole{Progettisti} hanno deciso di realizzare.
@@ -216,7 +228,7 @@
 						\item NomeClasse rappresenta il nome che è stato dato dai \insrole{Progettisti} alla classe individuata.
 					\end{itemize}
 					A ogni classe è inoltre associato un codice univoco nella forma XY, dove X è l'iniziale del del nome del \insglo{prodotto} e Y un numero intero crescente (che parte da 0).\\
-				\level{6}{Descrivere le classi} \label{sec:DescrizioneClasse}
+					\level{6}{Descrivere le classi} \label{sec:DescrizioneClasse}
 					Per descrivere in modo completo una classe, i \insrole{Progettisti} devono preoccuparsi di individuare e descrivere:
 					\begin{itemize}
 						\item il nome;
@@ -225,14 +237,26 @@
 						\item i metodi.
 					\end{itemize}
 					È inoltre necessaria una descrizione generica che indichi lo scopo e le responsabilità della classe in questione. Infine, devono essere descritte dettagliatamente (anche mediante l'uso di appropriati diagrammi) le relazioni con altre classi e le interfacce che mette a disposizione.
-				\level{6}{Test di unità} \label{sec:TestUnita}
+					\level{6}{Test di unità} \label{sec:TestUnita}
 					Durante la definizione dei test di unità necessari per verificare che il funzionamento delle classi sia quello previsto, i \insrole{Progettisti} devono preoccuparsi di rispettare la seguente regola: colui o colei che progetta il test deve necessariamente essere una persona diversa da quella che ha progettato e descritto nel dettaglio la classe in questione.
 
-			\level{5}{Strumenti}
-				Per la progettazione di dettaglio è stato utilizzato il \insglo{software} \insglo{Astah}, descritto nell'appendice \nameref{app:strumenti}, per la creazione dei diagrammi \insglo{UML}.
+				\level{5}{Strumenti}
+				Durante la progettazione di dettaglio, si deve utilizzare Astah per la creazione di diagrammi delle classi, di attività e di sequenza, i quali vengono aggiunti al documento \insdoc{Definizione di Prodotto}.
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8\textwidth]{NormeDiProgetto/Pics/ClassiAstah.png}
+					\caption{Esempio di diagramma delle componenti creato con Astah}
+				\end{figure}
 
-			\level{5}{Procedure}
-				\level{6}{Tracciamento classi-requisiti} \label{sec:ProgTracClasReq}
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=0.8
+					\textwidth]{NormeDiProgetto/Pics/SequenzaAstah.png}
+					\caption{Esempio di diagramma delle componenti creato con Astah}
+				\end{figure}
+
+				\level{5}{Procedure}
+					\level{6}{Tracciamento classi-requisiti} \label{sec:ProgTracClasReq}
 					È fondamentale che ogni requisito sia soddisfatto da almeno una classe. Per controllare che ciò sia vero è necessario prima di tutto effettuare il tracciamento. Si seguano i passi descritti nella seguente \insglo{procedura}. Si noti che qui si da per scontato che le classi e i requisiti siano già stati inseriti precedentemente sul Tracker del gruppo (per l'inserimento delle classi fare riferimento alla \insglo{procedura} descritta nella sezione \nameref{sec:InsClasse}).
 					\begin{enumerate}
 						\item Accedere al Kaizen \insglo{Team} Tracker (\insuri{http://kaizenteam.it/tracker/}).
@@ -253,7 +277,7 @@
 						\end{figure}
 						\item Eseguire il passo precedente per tutti i requisiti.
 					\end{enumerate}
-				\level{6}{Inserimento di una classe sul Tracker} \label{sec:InsClasse}
+					\level{6}{Inserimento di una classe sul Tracker} \label{sec:InsClasse}
 					Per poter effettuare correttamente i vari tracciamenti necessari si deve inserire all'interno del tracker del gruppo tutti le classi che sono state individuate dai \insrole{Progettisti} durante la progettazione di dettaglio. Per fare ciò si segua la seguente \insglo{procedura}.
 					\begin{enumerate}
 						\item Accedere al Kaizen \insglo{Team} Tracker (\insuri{http://kaizenteam.it/tracker/}).
@@ -387,4 +411,4 @@
 			\end{itemize}
 		\level{4}{Strumenti}
 			Per la scrittura di codice \insglo{JavaScript} non è richiesto l'utilizzo di un particolare \insglo{IDE}; la scelta dell'editor di testo è affidata alla discrezione dello sviluppatore.\\
-			Per lo sviluppo dell'applicazione \insglo{Android} si utilizza l'\insglo{IDE} \ignoreglo{Android} Studio, descritto nell'appendice \nameref{app:strumenti} del presente documento.
+			Per lo sviluppo dell'applicazione \insglo{Android}, invece, si utilizza l'\insglo{IDE} \ignoreglo{Android} Studio.
