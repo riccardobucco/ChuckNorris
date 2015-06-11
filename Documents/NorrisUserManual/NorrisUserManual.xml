@@ -13,12 +13,13 @@
 		<name>Tex/ServerUsage.tex</name>
 		<name>Tex/InternalAPIDescription.tex</name>
 		<name>Tex/ExternalAPIDescription.tex</name>
-		<name>Tex/ObjectsDescription.tex</name>     
+		<name>Tex/ObjectsDescription.tex</name>  
+        <name>Tex/IssueReport.tex</name>   
     	</sections>
 
-    	<appendix>
+    	<!-- <appendix>
         	<name>Termini.tex</name>
-    	</appendix>
+    	</appendix> -->
 	   
 	<changes>
 	    <version>
