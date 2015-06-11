@@ -48,38 +48,41 @@ lines.forEach(function (line) {
 function updateLine(line) {
     getLineFromAPS(line)
         .then(function (result) {
-            var updateData = {};
-            updateData.delete = [];
-            updateData.stream = [];
+            if(result.length > 0) {
+                var updateData = {};
+                updateData.delete = [];
+                updateData.stream = [];
 
-            var chartData = map.getData().datasets;
-            var series;
-            for (var i in chartData) {
-                if (chartData[i].name === line) {
-                    series = i;
-                }
-            }
-
-            // elimina tutti i punti
-            for(var i in chartData[series].values) {
-                updateData.delete.push({
-                    series: series,
-                    index: i
-                })
-            }
-
-            // riaggiunge tutti i punti
-            for(var i in result) {
-                updateData.stream.push({
-                    series: series,
-                    data: {
-                        x: result[i].WGS84La,
-                        y: result[i].WGS84Fi
+                var chartData = map.getData().datasets;
+                var series;
+                for (var i in chartData) {
+                    if (chartData[i].name === line) {
+                        series = i;
                     }
-                })
-            }
+                }
 
-            map.update('movie',updateData);
+                // elimina tutti i punti
+                for(var i in chartData[series].values) {
+                    updateData.delete.push({
+                        series: series,
+                        index: i
+                    })
+                }
+
+                // riaggiunge tutti i punti
+                for(var i in result) {
+                    updateData.stream.push({
+                        series: series,
+                        data: {
+                            x: result[i].WGS84La,
+                            y: result[i].WGS84Fi
+                        }
+                    })
+                }
+                console.log(chartData)
+
+                map.update('movie',updateData);
+            }
         }, function () {
             console.error('Error during the request');
         })
