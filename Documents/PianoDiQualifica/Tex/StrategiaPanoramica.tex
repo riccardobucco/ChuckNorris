@@ -33,13 +33,31 @@
 		\level{3}{Qualità di prodotto}  \label{subsec:obiettiviprodotto}
 			I prodotti che vengono realizzati durante l'intero progetto sono sostanzialmente di due tipi: documenti e software. Nelle prossime sezioni, per tipologia di prodotto si enunciano gli obiettivi che si intendono raggiungere. Per ogni obiettivo, poi, vengono specificati i criteri con i quali si effettuano le misurazioni sulla qualità (per capire quanto si è vicini all'obiettivo). Infine, per ogni criterio scelto vengono dichiarati i valori minimi che si intendono raggiungere, oltre a quelli ottimali.
 			\level{4}{Qualità dei documenti}
-
+				Gli obiettivi di qualità riguardanti i documenti ai quali il gruppo \groupname{} desidera arrivare nell'arco dell'intero progetto sono i seguenti:
+				\begin{itemize}
+					\item i documenti devono essere comprensibili da individui dotati di un'istruzione media;
+					%\item i documenti devono essere corretti a livello ortografico;
+					%\item i documenti devono rispettare le norme tipografiche individuate;
+					%\item i documenti non devono contenere concetti errati.
+				\end{itemize}
+				Descriviamo ora quali sono le metriche o i criteri che si intendono utilizzare per quantificare la vicinanza a ognuno degli obiettivi sopra descritti. Individuiamo inoltre le soglie di accettabilità e ottimalità, per fissare quantitativemente i punti ai quali desideriamo arrivare.
+				\level{5}{Leggibilità e comprensibilità}
+					Per cercare di capire quanto i documenti siano effettivamente leggibili e comprensibili da persone dotate di un'istruzione media viene utilizzato l'indice Gulpease. Si desidera che i documenti posseggano costantemente un indice maggiore a 35 (soglia di accettabilità). Si dovrebbe tuttavia cercare di raggiungere un valore più alto, considerato ottimale, ovvero 50. Riassumendo:
+					\begin{description}
+						\item[Metrica utilizzata per quantificare l'obiettivo]: indice Gulpease;
+						\item[Soglia di accettabilità]: valori almeno minori a 35;
+						\item[Soglia di ottimalità]: valori almeno minori a 50.
+					\end{description}
+				%\level{5}{Correttezza ortografica}
+					%Per cercare di capire quanto i documenti siano effettivamente corretti a livello ortografico si utilizza la seguente metrica: numero di errori ortografici rinvenuti da un correttore
 			\level{4}{Qualità del software}
 				Gli obiettivi di qualità del software ai quali il gruppo \groupname{} desidera arrivare nell'arco del progetto sono alcuni di quelli che sono enunciati all'interno delle norme [ISO/IEC 9126]. Vengono riassunti in seguito:
 				\begin{itemize}
 					\item il \insglo{prodotto} dispone di tutte le funzioni di cui gli utenti hanno bisogno;
 					\item il \insglo{prodotto} permette agli utenti di utilizzare le funzioni in maniera semplice ed efficace;
-					\item il \insglo{prodotto} fornisce prestazioni accettabili;
+					\item il codice risulta manutenibile e facilmente comprensibile;
+					\item il \insglo{prodotto} è robusto e non collassa in seguito a situazioni anomale;
+					\item il \insglo{prodotto} è testato in ogni sua parte e in ogni situazione nella quale si può trovare;
 					\item il \insglo{prodotto} garantisce un funzionamento senza interruzioni;
 					\item il \insglo{prodotto} è facilmente installabile.
 				\end{itemize}
@@ -60,5 +78,97 @@
 						\item[Soglia di accettabilità]: solo metodi con al più 4 parametri;
 						\item[Soglia di ottimalità]: solo metodi con al più 2 parametri.
 					\end{description}
-				\level{5}{Buone prestazioni}
-					
+				\level{5}{Manutenibilità e comprensibilità del codice}
+					Per avere un'idea di quanto il codice scritto sia comprensibile e manutenibile si utilizzano le metriche riportate in seguito. Si noti che per ognuna di esse sono riportati i valori accettabili e ottimali, ovvero vengono fissati gli obiettivi che si intendono raggiungere nell'arco del progetto.
+					\begin{itemize}
+						\item numero di statement di un metodo:
+						\begin{description}
+							\item[Soglia di accettabilità]: solo metodi con al più 60 statement;
+							\item[Soglia di ottimalità]: solo metodi con al più 30 statement.
+						\end{description}
+						\item numero di campi dati di una classe:
+						\begin{description}
+							\item[Soglia di accettabilità]: solo classi con al più 10 campi dati;
+							\item[Soglia di ottimalità]: solo classi con al più 6 campi dati.
+						\end{description}
+						\item grado di accoppiamento:
+						\begin{description}
+							\item[Soglia di accettabilità]: massimo 7 classi dipendenti per ogni package;
+							\item[Soglia di ottimalità]: massimo 5 classi dipendenti per ogni package.
+						\end{description}
+					\end{itemize}					
+				\level{5}{Robustezza}
+					Per misurare quanto il prodotto è robusto e per capire quanto bene si comporti nel caso in cui avvengano delle anomali si utilizza la seguente metrica: percentuale di test di robustezza superati. L'obiettivo minimo che si intende raggiungere è quello di superare almeno il 90\% dei test di robustezza (nei quali si passano input diversi da quelli attesi). Tuttavia l'obiettivo reale dovrebbe essere quello di superarli tutti. Riassumendo:
+					\begin{description}
+						\item[Metrica utilizzata per quantificare l'obiettivo]: percentuale di test di robustezza superati;
+						\item[Soglia di accettabilità]: superato almeno il 90\% dei test di robustezza;
+						\item[Soglia di ottimalità]: superato il 100\% dei test di robustezza.
+					\end{description}
+				\level{5}{Testabilità}
+					Per far si che il prodotto sia facilmente testabile e per capire allo stesso tempo in che percentuale il prodotto è stato testato si fa uso delle metriche riportate in seguito. Si noti che per ognuna di esse sono riportati i valori accettabili e ottimali, ovvero vengono fissati gli obiettivi che si intendono raggiungere nell'arco del progetto.
+					\begin{itemize}
+						\item complessità ciclomatica:
+						\begin{description}
+							\item[Soglia di accettabilità]: solo valori inferiori a 10;
+							\item[Soglia di ottimalità]: solo valori inferiori a 5.
+						\end{description}
+						\item livello di annidamento:
+						\begin{description}
+							\item[Soglia di accettabilità]: valori minori di 5;
+							\item[Soglia di ottimalità]: valori minori di 3.
+						\end{description}
+						\item grado di accoppiamento:
+						\begin{description}
+							\item[Soglia di accettabilità]: valori minori di 7;
+							\item[Soglia di ottimalità]: valori minori di 5.
+						\end{description}
+					\end{itemize}
+	\level{2}{Scadenze temporali}
+		L'organizzazione e la pianificazione delle attività di controllo della qualità che vengono presentate in seguito si basano sulle scadenze temporali che sono state fissate e descritte all'interno del documento \insdoc{Piano di Progetto v6.00}. Vengono qui riassunte:
+		\begin{itemize}
+			\item \insrev{Revisione dei Requisiti}: \insdate{16}{02}{2015} (revisione formale);
+			\item \insrev{Revisione di Progettazione}: \insdate{24}{04}{2015} (revisione di progresso);
+			\item \insrev{Revisione di Qualifica}: \insdate{29}{05}{2015} (revisione di progresso);
+			\item \insrev{Revisione di Accettazione}: \insdate{18}{06}{2015} (revisione formale).
+		\end{itemize}
+	\level{2}{Responsabilità} \label{subsec:responsabilita}
+		La qualità è responsabilità di tutti, nessuno escluso. Tutti i membri del \insglo{team} contribuiscono con il loro lavoro a costruire (o a non costruire) la qualità del \insglo{prodotto} finale e dei processi attraverso i quali ci si arriva. La qualità, infatti, viene costruita nel tempo, anche grazie alla cura e all'attenzione che viene posta nello svolgere i vari compiti. \\
+		Di seguito vengono riportate le responsabilità riguardanti la qualità, catalogate in base al ruolo.
+		\begin{itemize}
+			\item Responsabile di Progetto:
+			\begin{itemize}
+				\item deve assicurarsi che i processi siano attentamente controllati e valutati in modo oggettivo (in modo tale che essi siano 
+				migliorabili);
+				\item deve assegnare i compiti relativi alla verifica di prodotti a persone per quanto possibile indipendenti dallo sviluppo di essi 
+				(e secondo quanto descritto nel \insdoc{Piano di Progetto v6.00});
+				\item deve pianificare attentamente controlli sul processo di qualità stesso.
+			\end{itemize}
+			\item Amministratore di Progetto:
+			\begin{itemize}
+				\item deve assicurarsi che siano sempre disponibili le risorse necessarie, sia realizzative che di verifica e validazione;
+				\item deve fare in modo che il processo di verifica sia quanto più automatizzabile possibile (e quindi efficiente).
+			\end{itemize}
+			\item Analista:
+			\begin{itemize}
+				\item deve assicurarsi di documentare i requisiti qualitativi oltre a quelli funzionali;
+				\item deve assicurarsi di aderire agli standard e alle norme riguardanti la documentazione da lui stesso prodotta.
+			\end{itemize}
+			\item Progettista:
+			\begin{itemize}
+				\item deve indirizzare nelle specifica tecnica i requisiti di qualità;
+				\item deve realizzare la progettazione in modo da indirizzare completamente, correttamente ed efficacemente i requisiti di qualità;
+				\item deve assicurarsi di aderire agli standard applicabili nella progettazione.
+			\end{itemize}
+			\item Programmatore:
+			\begin{itemize}
+				\item deve codificare secondo le norme imposte all'interno del progetto;
+				\item deve codificare utilizzando gli standard applicabili;
+				\item deve fornire i test necessari per effettuare parte delle verifiche sulle unità \insglo{software} prodotte.
+			\end{itemize}
+			\item Verificatore:
+			\begin{itemize}
+				\item deve eseguire le procedure di verifica previste dal presente documento e descritte nelle \insdoc{Norme di Progetto v6.00};
+				\item deve tracciare gli errori rilevati durante ciascuna \insglo{fase} del progetto affinché possano essere risolti.
+			\end{itemize}
+		\end{itemize}
+		Per maggiori dettagli circa i compiti assegnati a ciascun ruolo si vedano le \insdoc{Norme di Progetto v6.00}.

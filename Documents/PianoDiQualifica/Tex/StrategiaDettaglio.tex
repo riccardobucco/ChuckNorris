@@ -1,0 +1,380 @@
+\level{1}{La strategia di gestione della qualità nel dettaglio}
+	\level{2}{Risorse}
+		\level{3}{Risorse necessarie}
+			Le risorse che allo stato attuale si ritiene essere necessarie per lo svolgimento di tutte le attività di verifica 
+			sono di tre tipi:
+			\begin{itemize}
+				\item risorse umane;
+				\item risorse \insglo{software};
+				\item risorse \insglo{hardware}.
+			\end{itemize}
+			\level{4}{Risorse umane}
+				Le risorse umane (intese come figure professionali) che sono necessarie per svolgere il progetto in modo corretto e completo 
+				rispetto agli obiettivi di qualità sono le seguenti:
+				\begin{itemize}
+					\item Responsabile di Progetto;
+					\item Amministratore di Progetto;
+					\item Analista;
+					\item Progettista;
+					\item Verificatori;
+					\item Programmatori.
+				\end{itemize}
+				Una descrizione delle responsabilità di ciascun ruolo qui presentato è presente nella sezione \nameref{subsec:responsabilita} del presente documento.\\
+				Una descrizione dettagliata di ciascun ruolo è presente all'interno delle \insdoc{Norme di Progetto v6.00}.
+			\level{4}{Risorse software}
+				Per risorse \insglo{software} si intendono tutti gli strumenti \insglo{software} che il \insglo{team} intende utilizzare per attuare le attività di verifica sui 
+				prodotti e sui processi.\\
+				Allo stato attuale sono necessari \insglo{software} che siano in grado di verificare in modo automatico il maggior numero di norme riguardanti 
+				i documenti. Servono, per esempio, strumenti che eseguano i seguenti compiti:
+				\begin{itemize}
+					\item correggere eventuali errori ortografici;
+					\item capire se un documento possiede la struttura adatta oppure no;
+					\item trovare parti di testo che non rispettino alcune delle norme tipografiche.
+				\end{itemize}
+				Inoltre, per quanto possibile, servono \insglo{software} che aiutino a non commettere errori: infatti la correzione, in generale, costa 
+				molto di più della prevenzione. Quindi, ad esempio, servono \insglo{software} con i seguenti compiti:
+				\begin{itemize}
+					\item rilevare (durante la scrittura) eventuali errori ortografici;
+					\item costruire e visualizzare in real-time il documento scritto in \LaTeX{} (in modo che sia facile accorgersi di errori 
+					nell'utilizzo dei comandi);
+					\item raccogliere tutti gli errori comuni, in modo da formare in automatico una lista alla quale possono guardare coloro che 
+					devono redigere un documento. 
+				\end{itemize}
+			\level{4}{Risorse hardware}
+				Sono necessarie macchine (computer) sufficientementi potenti da far girare tutto il \insglo{software} necessario durante le attività da
+				svolgere nell'arco del progetto.
+		\level{3}{Risorse disponibili}
+			\level{4}{Risorse umane}
+				Le risorse umane disponibili per mettere in pratica le attività di verifica sono date dai componenti del \insglo{team}. Essi svolgono le 
+				mansioni dei vari ruoli necessari (indicati nel paragrafo riguardante le risorse umane necessarie) in accordo con quanto descritto 
+				nel \insdoc{Piano di Progetto v3.00} e in generale in base alle decisioni del \insrole{Responsabile di Progetto}.
+			\level{4}{Risorse software}
+				Il \insglo{team} si è dotato di alcuni \insglo{script} che eseguono controlli automatici di diverso tipo. Alcuni di questi programmi (come il 
+				correttore ortografico automatico) sono stati rinvenuti sulla rete. Quando ciò non è stato possibile, il \insglo{team} ha provveduto esso 
+				stesso alla creazione di programmi di utilità.\\
+				Una descrizione dettagliata di programmi e \insglo{script} a supporto delle attività di verifica può essere trovata nelle \insdoc{Norme di Progetto v3.00}.
+			\level{4}{Risorse hardware}
+				Sono disponibili (e per ora sufficienti) le seguenti risorse \insglo{hardware}:
+				\begin{itemize}
+					\item un computer portatile per ogni membro del \insglo{team} (dotato del sistema operativo comune indicato nelle \insdoc{Norme di Progetto v6.00}).
+				\end{itemize}
+				Sono inoltre disponibili le risorse \insglo{hardware} messe a disposizione dal Servizio Calcolo dell'Università degli Studi di Padova.
+	\level{2}{Standard, tecniche e principi utilizzati}
+		\level{3}{Principio del “Rasoio di Occam”}
+			Per assicurare la qualità dei processi e del \insglo{prodotto}, il gruppo \groupname{} si prefigge di attenersi al principio del “Rasoio di Occam”. Secondo questo principio, tra due soluzioni equivalenti è da preferire la soluzione più semplice. La produzione di documenti e \insglo{software} più semplici, porta ad una maggiore comprensibilità del \insglo{prodotto}, il quale risulta più facilmente manutenibile.\\
+		\level{3}{Teoria delle finestre rotte}
+			Ogni membro del \insglo{team} è inoltre tenuto a seguire la “Teoria delle finestre rotte”. Secondo questa teoria, se si lavora in un ambiente in cui qualche membro del gruppo non rispetta le norme o in cui i problemi rilevati non vengono risolti in tempo utile, potrebbero generarsi fenomeni di emulazione da parte di altri componenti del gruppo. Viceversa, se si lavora in un ambiente in cui tutti rispettano le norme e i problemi non vengono tralasciati, i componenti del gruppo sono stimolati a mantenere questo comportamento. E' dunque essenziale, per assicurare la qualità, che i membri del \insglo{team} rispettino le norme fissate nel documento \insdoc{Norme di Progetto v6.00}. Inoltre, i problemi rilevati devono essere risolti in tempo utile dai membri a cui verranno assegnati.\\
+		\level{3}{Tecniche di controllo della qualità di processo}
+			Per poter controllare un processo, e di conseguenza migliorarlo, è necessario saper misurare in modo più preciso possibile alcune sue caratteristiche di interesse e soprattutto i miglioramenti stessi.\\
+			Il \insglo{team}, dunque, intende misurare con continuità le caratteristiche d'interesse dei vari processi, ai fini di poterli migliorare. Per mettere in atto ciò ci si basa su quanto descritto in seguito.
+			\begin{itemize}
+				\item Ci si basa innanzitutto sul modello \insglo{CMM}, quindi sui concetti di “\textit{capability}” e “\textit{maturity}” (vedi appendice \nameref{app:CMM}).
+				\item In secondo luogo, possono essere calcolati alcuni valori utili per confrontare le performance dello stesso processo in momenti differenti: in questo modo si possono evidenziare eventuali miglioramenti raggiunti (vedi sezione \nameref{sec:metriche} del presente documento).
+				\item Infine, per misurare la qualità di un processo può essere utile verificare quella del suo \insglo{prodotto}: se essa è scarsa, ciò implica che probabilmente anche il processo dal quale deriva non è per nulla di qualità.
+			\end{itemize}
+			Una volta che le misure sono state effettuate, esse devono essere utilizzate per cercare di migliorare il processo. Per provare ad apportare miglioramenti in modo sistematico viene utilizzato il modello del miglioramento continuo (\insglo{PDCA}), che prevede una costante iterazione tra pianificazione, esecuzione del programma, controllo dei risultati e azioni correttive.\\
+		\level{3}{Tecniche di controllo della qualità di prodotto}
+			Il controllo della qualità del \insglo{prodotto} è assicurato da due tipi di processi, quello di verifica e quello di validazione.
+			\begin{description}
+				\item[Verifica] Tale processo viene applicato su qualsiasi attività o risultato che fa avanzare il progetto da una baseline all'altra: esso 
+				ci permette cioè di capire se la nuova baseline è buona. In altre parole, la verifica si occupa di accertare che l'esecuzione delle attività 
+				di processi svolti nella \insglo{fase} in esame non abbia introdotto errori nel \insglo{prodotto}.
+				\item[Validazione] Tale processo è conclusivo. Esso viene messo in atto alla fine, quando il \insglo{prodotto} è pronto: ci permette di capire se tale \insglo{prodotto} è conforme oppure no alle aspettative (ovvero ai requisiti).
+			\end{description}
+			La verifica viene messa in atto di continuo, la validazione solo alla fine.\\
+			Le tecniche utilizzate all'interno di tali processi sono molteplici: si usano tanto tecniche di analisi statica quanto di analisi dinamica (per una descrizione dettagliata di tali tecniche si consulti il documento \insdoc{Norme di Progetto v6.00}). Molto spesso si fa anche uso di test (a patto che abbiano grande valore dimostrativo).\\
+			In aggiunta a tali tecniche, possono essere effettuate delle misure (sulla base delle relative metriche): per maggiori dettagli si consulti la sezione \nameref{sec:metriche} contenuta nel presente documento.
+	\level{2}{Organizzazione}
+		Come indicato nel \insdoc{Piano di Progetto v6.00}, all'interno del ciclo di vita possono essere individuate varie fasi. All'interno di ciascuna di esse sono pianificati più momenti di verifica, riguardanti le attività (e dunque i processi) che sono state svolte. Tuttavia, in generale, attività e processi diversi fanno ottenere prodotti differenti. Dunque, è necessario prevedere procedure di verifica differenti a seconda del processo e del \insglo{prodotto} ottenuto.\\
+		Fatta questa premessa, l'organizzazione della strategia di verifica viene suddivisa in base alle attività svolte durante specifiche fasi: per ognuna di esse viene attuata un'attività di verifica (e le relative procedure) differente. Le attività di verifica riguardano tanto i processi tanto gli eventuali prodotti ottenuti tramite essi.\\
+		Il compito di effettuare le verifiche (utilizzando gli strumenti indicati nelle Norme di Progetto) spetta ai Verificatori in carica nei momenti definiti dal \insrole{Responsabile di Progetto}. Le verifiche da essi svolte hanno il compito di consolidare i miglioramenti raggiunti.\\
+		Di seguito viene riportato come è organizzata l'attività di verifica.
+		\begin{description}
+			\item[\insglo{Fase} Documentation Beginning] In questa \insglo{fase} viene prodotta molta documentazione, inoltre, vengono definiti i requisiti che il \insglo{prodotto} finale deve rispettare e i relativi casi d'uso. \\
+			I documenti, che si iniziano a produrre in questa \insglo{fase} e che verranno terminati alla fine del progetto, vengono verificati prima attraverso la tecnica di \insglo{Walkthrough} e poi di \insglo{Inspection}, descritte nelle \insdoc{Norme di Progetto}, sia in un'ottica puramente correttiva che di qualità, utilizzando le metriche indicate nella sezione \nameref{sec:metriche} del presente documento. \\
+			I \insrole{Verificatori}, inoltre, devono prestare particolare attenzione al controllo e al tracciamento dei requisiti individuati, da cui potrebbe dipendere l'esito del progetto.\\
+			A partire da questa \insglo{fase} e fino alla fine del progetto, parallelamente al controllo dei prodotti, i \insrole{verificatori} si impegnano nell'attuazione della \insglo{fase} Check del \insglo{PDCA} per migliorare la qualità dei processi attuati. \\
+			I risultati dell'attività di verifica sono descritti nell'appendice \nameref{app:esitiDB}.
+			\item[\insglo{Fase} Documentation Improvement] In questa \insglo{fase} vengono applicati miglioramenti alla documentazione. Si prevede che anche i requisiti e i casi d'uso 
+			possano subire una variazione in seguito alla revisione col committente. Dunque, quando è prevista l'attività di verifica riguardante tale \insglo{fase} (vedi \insdoc{Piano di Progetto v6.00}), i \insrole{Verificatori } devono fare i controlli descritti al punto precedente, ponendo però particolare attenzione alle correzioni, alle segnalazioni e ai suggerimenti dati dal committente durante la \insrev{Revisione dei Requisiti}.\\
+			\item[\insglo{Fase} \insglo{Software} Design] In questa \insglo{fase} si progetta l'architettura del sistema; l'attività di verifica è chiamata quindi ad assicurare che ogni requisito individuato durante l'attività di Analisi trovi una corrispondenza nei moduli progettati, e viceversa. \\
+			I risultati dell'attività di verifica sono descritti nell'appendice \nameref{app:esitiSD}.\\
+			\item[\insglo{Fase} Prototyping - Increase of Prototype - Completion of the Product] Durante tali fasi si progettano nel dettaglio e si codificano tutti i requisiti obbligatori, e quanti più requisiti desiderabili e opzionali possibili.
+			I \insrole{Verificatori} devono continuare a vigilare sul corretto tracciamento dei requisiti: l'intera progettazione deve riguardare tutti e soli i requisiti individuati nella \insglo{fase} di Analisi (in modo tale che non manchi nulla e non ci sia nulla in più). Inoltre, devono effettuare misurazioni, con le metriche specificate nella sezione \nameref{sec:metriche}, per assicurare che il \insglo{prodotto} finale abbia le qualità indicate nel paragrafo \nameref{subsec:obiettiviprodotto}.
+			Per quanto riguarda l'attività di codifica, è compito del \insrole{Verificatore} (in collaborazione con il \insrole{Programmatore}) eseguire i test di unità e di integrazione.\\
+		\end{description}
+	\level{2}{Misure e metriche} \label{sec:metriche}
+		L'obiettivo è quello di misurare la qualità di “cosa” si realizza (il \insglo{prodotto}) e “come” lo si realizza (il processo). Il problema è 
+		riuscire a stimare in modo preciso quanto si sta misurando. Per questo motivo sono necessarie delle metriche, dei criteri stabiliti a 
+		priori su cui basare la misurazione della qualità.
+		\level{3}{Misure}
+			Le misure che vengono fatte durante tutto l'arco del progetto possono essere molto varie. Di conseguenza, non si può far altro che 
+			stabilire dei range di accettazione indipendenti dal tipo di stima che si sta effettuando. In particolare, una valore misurato può 
+			essere:
+			\begin{description}
+				\item[negativo] Un valore appartenente a questo range non può essere accettato, qualunque sia l'ambito dal quale provenga.
+				\item[accettabile] Un valore appartenente a questo range è un valore che ha raggiunto la soglia minima dell'accettazione. Può 
+				quindi ovviamente essere accettato.
+				\item[ottimale] Un valore appartenente a questo range ha raggiunto le massime aspettative del \insglo{team}. L'obiettivo dovrebbe essere 
+				quello di avere tutti i valori all'interno di tale range.
+			\end{description}
+		\level{3}{Metriche per i processi}
+			\level{4}{Capability Maturity Model}
+				Per valutare i processi si è deciso di fare riferimento al modello \insglo{CMM}. Se correttamente applicato esso ci fornisce una base 
+				concettuale molto generale su cui appoggiarsi per valutare il livello dei processi.\\
+				\insglo{CMM} ci consente di individuare la maturità di un processo: essa può assumere un valore da 1 (il peggiore) a 5 (il migliore). Mettendo ora in relazione i risultati di tale modello con i range da noi stabiliti otteniamo quanto segue:
+				\begin{itemize}
+					\item il valore 1 è considerato negativo;
+					\item i valori 2 e 3 sono considerati accettabili;
+					\item i valori 4 e 5 sono considerati ottimali.
+				\end{itemize}
+				La scelta del \insglo{team} è ricaduta su questo modello in quanto ritenuto più adatto alla modesta entità del progetto e alla scarsa esperienza del \insglo{team} di sviluppo. Altri modelli valutati sono stati CMMI, ritenuto inadatto per la sua complessità, e il modello SPY, ritenuto inadatto in quanto, nella sua versione pura, non prevede il consolidamento delle \insglo{best practice}.
+			\level{4}{Schedule Variance}
+				La schedule variance indica se le attività di progetto sono in anticipo o in ritardo rispetto a quelle pianificate nel \insdoc{Piano di Progetto}. Costituisce un indicatore di efficacia dei processi e viene calcolata come la differenza fra la data pianificata di fine di un'attività e la data di fine reale dell'attività stessa. Se la schedule variance è maggiore di 0 significa che il progetto sta producendo con maggior velocità rispetto a quanto pianificato, viceversa se negativo. Se è pari a 0 significa che si è perfettamente in linea con la pianificazione.\\
+				I range di accettazione per questa metrica sono:
+				\begin{itemize}
+				\item un deficit maggiore del 5\% del tempo pianificato per il processo è considerato negativo;
+				\item un deficit minore del 5\% del tempo pianificato per il processo è considerato accettabile;
+				\item valori maggiori o uguali a 0 sono considerati ottimali.
+				\end{itemize}
+				\level{4}{Budget Variance}
+				La budget variance indica se alla data corrente si è speso di più o di meno rispetto a quanto previsto. Costituisce un indice di efficienza e si calcola confrontando il preventivo con il consuntivo.\\
+				I range di accettazione per questa metrica sono:
+				\begin{itemize}
+				\item un deficit maggiore del 10\% delle risorse preventivate per il processo è considerato negativo;
+				\item un deficit minore del 10\% delle risorse preventivate per il processo è accettabile;
+				\item un valore maggiore o uguale a 0 è considerato ottimale.
+				\end{itemize}
+			\level{4}{Produttività}
+				Si vuole cercare di calcolare la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del 
+				progetto. In generale, in una prima approssimazione, la si misura tramite la seguente formula:
+				\begin{equation} \label{eq:produttivita}						
+					Produttivit\grave{a} = \frac{Quantit\grave{a}\ di\ output\ ottenuto}{Quantit\grave{a}\ di\ input\ utilizzato}
+				\end{equation}
+				Tale parametro genera metriche differenti in base a cosa si riferiscono i termini “input” e “output”. Dunque, tale formula assume 
+				aspetti diversi in base ai processi (e relative attività) ai quali viene applicata.
+				\begin{description}
+					\item[Documentazione] Il parametro “input” assume il significato di “ore necessarie alla scrittura della documentazione”, il parametro “output” assume il significato di “numero di parole scritte”.
+					\item[Codifica] Il parametro “input” assume il significato di “ore necessarie alla scrittura del codice”, il parametro “output” assume il significato di “numero di linee di codice scritte”.
+					\item[Verifica] Il parametro “input” assume il significato di “ore necessarie alle attività di verifica”, il parametro “output” assume il significato di “numero di anomalie rilevate”;
+					\item[Validazione] Il parametro "input" assume il significato di "numero di test di accettazione", il parametro di "output" assume il significato di "numero di test di accettazione superati".
+				\end{description}
+				I valori che si ottengono in tale modo sono difficilmente valutabili in modo assoluto. Piuttosto, essi assumono importanza nel 
+				momento in cui vengono confrontati fra loro in momenti diversi del progetto: in questo modo il \insrole{Responsabile di Progetto} può valutare 
+				più facilmente i tempi e dunque i costi delle attività che devono essere svolte.
+			\level{4}{Efficacia di una revisione}
+				Si vuole cercare di calcolare quanto è efficace una revisione. Possiamo pensare, in modo approssimativo, che tale valore sia dato 
+				dalla seguente formula generale:
+				\begin{equation} \label{eq:efficaciarevisione}
+					Efficacia\ Revisione = \frac{Numero\ di\ errori\ rilevati}{Numero\ di\ elementi\ ispezionati}
+				\end{equation}
+				A parità di elementi ispezionati si vuole che il numero di errori rilevati sia maggiore possibile.\\
+				Tale indice è valido per il processo di verifica. Tuttavia, a seconda dell'ambito a cui viene applicata la verifica, il termine 
+				“elementi” assume una connotazione diversa. Alcuni esempi sono riportati di seguito.
+				\begin{description}
+					\item[Documentazione] Il termine “elementi” assume il significato di “pagine”.
+					\item[Codifica] Il termine “elementi” assume il significato di “righe di codice”.
+				\end{description}
+				Anche in questo caso vale un discorso simile a quello fatto per la produttività: non siamo in grado di individuare con 
+				precisione dei valori accettabili di riferimento. Di conseguenza tali misure avranno valore relativo, in quanto usate per essere 
+				confrontate tra di loro in momenti diversi del progetto.\\
+				Notare che una verifica effettuata tramite la presente metrica permette al \insrole{Responsabile di Progetto} di capire quando lo sforzo per 
+				trovare gli errori diventa troppo grande (e quindi costoso). Si ricordi, infatti, che vale la legge del rendimento decrescente.
+		\level{3}{Metriche per i prodotti}		
+			\level{4}{Metriche per i documenti}
+				La qualità di un documento dipende prima di tutto dai suoi contenuti. La loro qualità, tuttavia, è difficilmente quantificabile allo 
+				stato attuale del progetto a causa dell'esperienza pressoché nulla del \insglo{team} in quest'ambito. Si è deciso dunque di limitarsi a valutare 
+				parametri maggiormente oggettivi e soprattutto misurabili automaticamente attraverso strumenti \insglo{software}.
+				\level{5}{Indice di leggibilità}
+					Una metrica che si è deciso di utilizzare per poter stimare la qualità di un documento è l'indice di leggibilità. In particolare, è 
+					stato considerato l'\insglo{indice Gulpease}, studiato appositamente per la lingua italiana.\\
+					Questo particolare indice si basa sulla lunghezza della parola e sulla lunghezza della frase rispetto al numero di lettere.\\
+					La formula per il suo calcolo è la seguente:
+					\begin{equation}
+						\label{eq:gulpease}
+						Indice\ Gulpease = 89 + \frac{300*numero\ frasi-10*numero\ lettere}{numero\ parole}
+					\end{equation}
+					Il risultato di tale equazione tipicamente è compreso tra 0 e 100, dove valori alti indicano leggibilità elevata e viceversa.\\
+					In generale, risulta che testi con un indice:
+					\begin{itemize}
+						\item inferiore a 80 risultano difficili da leggere per chi ha la licenza elementare;
+						\item inferiore a 60 risultano difficili da leggere per chi ha la licenza media;
+						\item inferiore a 40 risultano difficili da leggere per chi ha la licenza superiore;
+					\end{itemize}
+					Vengono di seguito riportati i range stabiliti per la metrica appena introdotta. Si noti che viene tenuto in considerazione il fatto 
+					che la documentazione è destinata a persone sufficientemente preparate, competenti ed istruite.
+					\begin{itemize}
+						\item Valori minori di 35 sono considerati negativi.
+						\item Valori compresi tra 35 e 50 sono considerati accettabili.
+						\item Valori maggiori di 50 sono considerati ottimali.
+					\end{itemize}
+			\level{4}{Metriche per il prodotto software}
+			Sono riportate di seguito le metriche utilizzate per determinare le diverse qualità del \insglo{prodotto} individuate nel paragrafo \nameref{subsec:obiettiviprodotto} del presente documento.
+			\\La corrispondenza fra le qualità ricercate e le metriche individuate viene evidenziata nella seguente tabella:\\
+			\begin{table}[H]
+			\begin{center}
+			\begin{tabular}{ | m{4cm} | m{8cm} | } 
+			\hline
+			\textbf{Qualità} & \textbf{Metriche} \\ \hline
+
+                        Funzionalità & \begin{itemize} \item Numero di requisiti funzionali realizzati \end{itemize} \\ \hline
+                        Affidabilità & \begin{itemize}
+                                 \item Percentuale test di robustezza superati
+                                 \item Copertura del codice
+                                \end{itemize} \\ \hline
+                        Manutenibilità     & \begin{itemize}
+                                    \item Complessità ciclomatica
+                                    \item Numero parametri per metodo
+                                    \item Numero statement per metodo
+                                    \item Numero campi dati per classe
+                                    \item Livello di annidamento
+                                    \item Grado Accoppiamento
+                                  \end{itemize}\\ \hline 
+			\end{tabular}
+			\end{center}
+			\caption{Tracciamento fra le qualità del software ricercate e le metriche utilizzate}
+			\end{table}
+				\level{5}{Numero di requisiti funzionali realizzati}
+					Questa metrica serve a misurare la funzionalità del \insglo{prodotto}. \\
+					I range di accettazione per questa metrica variano a seconda del periodo della pianificazione in cui ci si trova.
+					\begin{description}
+					    \item[\insphase{Fase P}] \hfill \\
+							In tale \insglo{fase} si andranno a misurare i requisiti funzionali obbligatori. I range di accettazione per questa metrica sono riassunti nella seguente tabella:
+
+							\begin{table}[H]
+								\centering
+									\begin{tabu}{| l | c | c | c |}\hline
+										Tipologia requisito funzionale	&	range non accettabile & range desiderabile & range ottimale \\ \hline	\hline
+
+										Obbligatorio   &	(0,80]& (80,90] & (90,100] \\ \hline
+									\end{tabu}
+									\caption{Range di accettazione per le percentuali di requisiti funzionali obbligatori, nella fase P}
+							\end{table}
+
+
+
+						\item[\insphase{Fase IP}] \hfill \\
+							In tale \insglo{fase} si andranno a misurare i requisiti funzionali obbligatori e desiderabili. I range di accettazione per questa metrica sono:
+							
+							\begin{table}[H]
+								\centering
+									\begin{tabu}{| l | c | c | c |}\hline
+										Tipologia requisito funzionale	&	range non accettabile & range desiderabile & range ottimale \\ \hline	\hline
+
+										Obbligatorio	&	(0,95]& (95,100) & 100 \\ \hline
+										Desiderabile	&  (0,80]& (80,90] & (90,100] \\ \hline
+									\end{tabu}
+									\caption{Range di accettazione per le percentuali di requisiti funzionali obbligatori e desiderabili, nella fase IP}
+							\end{table}
+						
+						\item[\insphase{Fase CP}] \hfill \\
+							In tale \insglo{fase} si andranno a misurare i requisiti funzionali obbligatori, desiderabili e opzionali. I range di accettazione per questa metrica sono:
+
+							\begin{table}[H]
+								\centering
+									\begin{tabu}{| l | c | c | c |}\hline
+										Tipologia requisito funzionale	&	range non accettabile & range desiderabile & range ottimale \\ \hline	\hline
+
+										Obbligatorio	&	(0,100) &  &  100 \\ \hline
+										Desiderabile	&  (0,95]& (95,100) & 100 \\ \hline
+										Opzionale		&  (0,80]& (80,90] & (90,100] \\ \hline
+									\end{tabu}
+									\caption{Range di accettazione per le percentuali di requisiti funzionali obbligatori, desiderabili ed opzionali, nella fase CP}
+							\end{table}
+
+						\item[\insphase{Fase PD}] \hfill \\
+						In quest'ultima fase si andranno a misurare i requisiti funzionali obbligatori, desiderabili e opzionali. I range di accettazione per questa metrica sono:
+
+						\begin{table}[H]
+							\centering
+								\begin{tabu}{| l | c | c | c |}\hline
+									Tipologia requisito funzionale	&	range non accettabile & range desiderabile & range ottimale \\ \hline	\hline
+
+									Obbligatorio	&	(0,100) &  &  100 \\ \hline
+									Desiderabile	&  (0,97]& [98,100) & 100 \\ \hline
+									Opzionale		&  (0,90]& [91,95] & [96,100] \\ \hline
+								\end{tabu}
+								\caption{Range di accettazione per le percentuali di requisiti funzionali obbligatori, desiderabili ed opzionali, nella fase PD}
+						\end{table}
+					\end{description}
+
+				\level{5}{Percentuale di test di robustezza superati}
+					Questa metrica serve a misurare l'affidabilità del \insglo{prodotto}.
+					\\I test di robustezza hanno lo scopo di verificare che il sistema non collasi nel momento in cui vengono passati input diversi da quelli attesi, piuttosto che vengano invocati metodi su istanze di oggetti di altre classi. In diversi casi è stata prevista la gestione di situazioni anomale attraverso procedure alternative o la loro segnalazione tramite la visualizzazione di messaggi di errore sul terminale. I test di robustezza vanno a verificare che tali situazioni vengano gestite come previsto.
+					\\I range di accettazione per questa metrica sono:
+					\begin{itemize}
+					\item valori minori di 90\% sono considerati negativi;
+					\item valori compresi tra 90\% e 100\% sono considerati accettabili;
+					\item valori uguali di 100\% sono considerati ottimali.
+					\end{itemize}
+			\level{5}{Complessità ciclomatica}
+				La complessità ciclomatica permette di misurare la complessità del flusso di controllo di una componente \insglo{software}. Questa metrica può essere applicata a singole procedure, a metodi, a classi o a moduli del programma e consiste nel calcolare tutti i possibili cammini indipendenti del grafo del flusso di controllo, il quale è composto nel seguente modo:
+				\begin{itemize}
+					\item i nodi del grafo corrispondono a gruppi indivisibili di comandi;
+					\item gli archi del grafo collegano due nodi solo se è possibile che i comandi del secondo nodo vengano eseguiti subito dopo i comandi del primo nodo.
+				\end{itemize}
+				La misura ottenuta corrisponde quindi al numero di casi di prova necessari per verificare ogni possibile esito di ogni ramo di decisione della componente alla quale viene applicata. La complessità ciclomatica è dunque molto importante in quanto, oltre a dare una misura della complessità del codice, permette di dare un limite superiore al numero di test necessari al raggiungimento della massima copertura del codice.\\
+				Per quanto riguarda metodi e procedure, si ha una complessità ciclomatica accettabile per valori inferiori a 10, ottimale per valori inferiori a 5. Nel valutare i valori bisogna tenere conto che il costrutto switch viene visto come una sequenza di if annidati, e quindi la sua presenza nel programma porta ad un innalzamento della complessità ciclomatica superiore rispetto alla reale complessità. Viceversa, in caso di oscuramento del codice, il valore della complessità ciclomatica sarà minore rispetto alla complessità reale.
+			\level{5}{Numero di parametri di un metodo}
+			Un metodo con un numero troppo elevato di parametri formali in input risulta essere complesso e poco manutenibile rispetto ad un metodo con un basso numero di parametri formali. È dunque necessario, per garantire un discreto livello di manutenibilità, che il numero di parametri di ogni metodo sia inferiore a 10. Il numero di parametri di un metodo può considerarsi ottimale quando assume valori inferiori a 5.
+			\level{5}{Numero di statement di un metodo}
+			Un metodo con un numero di statement eccessivi risulta essere complesso e meno manutenibile rispetto a metodi più brevi. Se un metodo deve svolgere diverse azioni complesse, è buona norma che queste azioni vengano incapsulate all'interno di altri metodi. In questo modo si evita di appesantire il codice di un singolo metodo, favorendone la comprensibilità e la manutenibilità.\\
+			I range di accettazione per questa metrica sono:
+				\begin{itemize}
+					\item valori maggiori di 60 sono considerati negativi;
+					\item valori compresi tra 30 e 60 sono considerati accettabili;
+					\item valori minori di 30 sono considerati ottimali.
+				\end{itemize}
+			\level{5}{Numero di campi dati di una classe}
+			Una classe con un numero elevato di campi dati risulta essere complessa, difficilmente riutilizzabile e poco manutenibile. Nel caso di classi che necessitano di molti campi dati, sarebbe opportuno incapsulare una parte di essi all'interno di una nuova classe.\\
+			I range di accettazione per questa metrica sono:
+				\begin{itemize}
+					\item valori maggiori di 10 sono considerati negativi;
+					\item valori compresi tra 6 e 10 sono considerati accettabili;
+					\item valori minori di 6 sono considerati ottimali.
+				\end{itemize}
+			\level{5}{Livello di annidamento}
+			Il livello di annidamento del codice indica quante volte le strutture di controllo sono state innestate una dentro l'altra. Per calcolare il livello di annidamento di un metodo o di una \insglo{procedura} si prende il massimo livello di annidamento delle strutture di controllo al suo interno. Un metodo con un alto livello di annidamento risulta avere un flusso interno complesso. La verifica di un tale metodo è molto onerosa, in quanto per garantire la massima copertura del codice sarà necessario eseguire un elevato numero di test.\\
+			I range di accettazione per questa metrica sono:
+			\begin{itemize}
+				\item valori maggiori di 5 sono considerati negativi;
+				\item valori compresi tra 5 e 3 sono considerati accettabili;
+				\item valori minori o uguali a 3 sono considerati ottimali.
+			\end{itemize}
+		\level{5}{Grado di accoppiamento}
+		Il grado di accoppiamento di un programma è il grado con cui ciascuna componente di un programma fa affidamento su ciascuna delle altre componenti, dipendendo da esse. In presenza di un basso grado di accoppiamento, eventuali modifiche apportate ad una classe hanno poche ripercussioni (o nessuna) sulle altre classi del sistema. Il codice risulta quindi facilmente manutenibile. Un basso accoppiamento è anche indice di maggiore comprensibilità del codice e di alta coesione all'interno delle componenti. Viceversa, un alto grado di accoppiamento comporta una difficile manutenibilità del codice, il quale risulta più complesso e poco coeso.\\
+		Per valutare il grado di accoppiamento del codice, si devono calcolare i seguenti indici:
+		\begin{itemize}
+			\item Accoppiamento Afferente (CA): indica il numero di classi esterne ad un \insglo{package} che dipendono da classi interne ad esso. Un alto valore di CA è indice di un alto grado di dipendenza del resto del \insglo{software} dal \insglo{package}.
+			\item Accoppiamento Efferente (CE): indica il numero di classi interne al \insglo{package} che dipendono da classi esterne ad esso. Un basso valore di CE indica che la maggior parte delle funzionalità fornite dal \insglo{package} sono indipendenti dal resto del sistema.
+		\end{itemize}
+		I range di accettazione per questa metrica sono:
+		\begin{itemize}
+			\item valori maggiori di 10 sono considerati negativi;
+			\item valori compresi tra 5 e 7 sono considerati accettabili;
+			\item valori minori o uguali a 5 sono considerati ottimali.
+		\end{itemize}
+			
+		\level{5}{Copertura del codice}
+		La copertura del codice è la percentuale degli statement eseguiti, e quindi verificati, durante lo svolgimento dei test. Un'alta copertura del codice garantisce un'alta affidabilità del \insglo{software}, in quanto la probabilità che siano presenti errori in codice che sia stato sottoposto a test è molto bassa.\\
+		I range di accettazione per questa metrica sono:
+		\begin{itemize}
+			\item valori minori di 60\% sono considerati negativi;
+			\item valori compresi tra 60\% e 80\% sono considerati accettabili;
+			\item valori maggiori di 80\% sono considerati ottimali.
+		\end{itemize}
+		
+		\level{2}{Strategie di applicazione delle metriche}
+		Al fine di perseguire le qualità del \insglo{prodotto} identificate nel paragrafo \nameref{subsec:obiettiviprodotto}, e nel complesso una buona qualità del \insglo{prodotto} finale, si è deciso di attuare durante le diverse fasi di progetto l'attività di misurazione, applicando le metriche individuate nella sezione \nameref{sec:metriche}, nel seguente modo:
+		\begin{description}
+		\item[\insglo{Fase} Documentation Beginning] In questa \insglo{fase} viene prodotta tutta la documentazione iniziale relativa al progetto, pertanto si è concordato di misurare l'indice di leggibilità Gulpease dei diversi documenti in corrispondenza della terminazione della stesura di ogni sezione per assicurarne una buona leggibilità dei contenuti. Per quanto riguarda le metriche di processo, il \insglo{team} ha deciso di calcolare la produttività dei processi di documentazione e verifica, e l'efficacia di revisione del processo di verifica in corrispondenza dei momenti di verifica indicati nel \insdoc{Piano di Progetto v6.00} per la \insphase{Fase DB}.
+		\item[\insglo{Fase} Documentation Improvement] In questa \insglo{fase} si procede alla sola correzione dei documenti rispetto alle segnalazioni fatte dal Proponente in seguito alla Revisione dei Requisiti. L'unica misurazione effettuata è quella dell'\insglo{indice Gulpease} per verificare che i documenti risultino leggibili anche dopo le correzioni apportate. Gli esiti di tale misurazione non vengono riportati in questo documento in quanto non si riferiscono a versioni di documenti che vengono presentate durante una revisione. 
+		\item[\insglo{Fase} \insglo{Software} Design] In questa \insglo{fase} gli incrementi apportati alla maggior parte dei documenti è minimale pertanto si è deciso di calcolare l'indice di leggibilità e la produttività del processo di documentazione relativa ad essi solo alla fine della \insglo{fase}. Questo non vale per la Specifica Tecnica, la cui redazione inizia in questa \insglo{fase}, e per la quale l'\insglo{indice Gulpease} e la produttività  del processo di documentazione vengono calcolati alla fine di ogni attività di verifica individuata nel \insdoc{Piano di Progetto v6.00} per un totale di cinque volte.
+		Per quanto riguarda i processi, vengono applicate nuove metriche per il monitoraggio dell'andamento del progetto, Schedule Variance e Budget Variance, in considerazione del fatto che la notevole quantità di tempo che intercorre tra la Revisione dei Requisiti e la Revisione di Progettazione può condurre ad errori di pianificazione, che possono essere invece corretti avendo una visione oggettiva della situazione.
+		\item[\insglo{Fase} Prototyping] In questa \insglo{fase} i documenti precedentemente redatti restano per lo più invariati, mentre si inizia la stesura della Definizione di \insglo{Prodotto} e del Manuale Utente. Essendo tali documenti alla prima versione, il calcolo dell'indice di leggibilità e la produttività del processo di documentazione avviene ad ogni verifica prevista dal \insdoc{Piano di Progetto v 6.00}. Una volta conclusa la progettazione di dettaglio, ha inizio l'attività di codifica del prototipo del \insglo{prodotto}. A questo punto vengono applicate le metriche individuate per perseguire gli obiettivi di qualità indicati in \nameref{subsec:obiettiviprodotto} con la stessa cadenza delle attività di verifica. Si continuano a monitorare le metriche di processo.
+		\item[\insglo{Fase} Increase of the Prototype] Durante questa \insglo{fase} vengono implementati i requisiti desiderabili e riportati nei documenti \insdoc{Definizione di Prodotto} e \insdoc{Manuale Utente}. Si continua quindi ad applicare le metriche del codice; l'indice  Gulpease a questo punto viene calcolato solo al termine della \insglo{fase} per avere un'indicazione del livello di leggibilità dei documenti. Vista la brevità della \insglo{fase}, le metriche per la qualità di processo vengono applicate solo al termine della \insglo{fase}, per poter agire tempestivamente con azioni correttive nel caso di risultati negativi in vista dell'ultima \insglo{fase} a ridosso dell'ultima revisione.
+		\item[\insglo{Fase} Completion of Product] L'applicazione delle metriche di qualità di questa \insglo{fase} segue lo stesso principio della precedente. I risultati delle metriche di processo verranno monitorati con maggiore frequenza per arrivare alla revisione di Qualifica con un buon livello di qualità.
+		\item[\insglo{Fase} Product Delivery] In quest'ultima \insglo{fase} del progetto vengono eseguiti i test di sistema e di validazione per verificare che il \insglo{prodotto} risponda alle richieste del committente, e viene eseguito un ultimo monitoraggio delle metriche stabilite per presentare i risultati finali della qualità del progetto.
+		\end{description}
+		Tutte le misurazioni delle metriche vengono fatte in modo automatizzato per ridurre la possibilità di errore, aumentare l'efficienza dell'attività di misurazione e poter agire prontamente in caso di risultati negativi.\\
+		Durante tutte le fasi del progetto viene applicato il ciclo di Deming allo scopo di garantire un miglior controllo delle diverse attività svolte; la proporzione delle fasi del \insglo{PDCA} viene riportata in modo aggregato negli esiti della \insglo{fase}.

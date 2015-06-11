@@ -10,8 +10,9 @@
 
 	<sections>
 		<name>Tex/Introduzione.tex</name>
-		<name>Tex/Qualita.tex</name>
-		<name>Tex/Strategia.tex</name>
+		<name>Tex/StrategiaPanoramica.tex</name>
+        <name>Tex/StrategiaDettaglio.tex</name>
+		<!--<name>Tex/Strategia.tex</name>-->
 	</sections>
     
     <appendix>
