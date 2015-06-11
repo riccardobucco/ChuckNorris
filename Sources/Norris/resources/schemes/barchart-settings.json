@@ -36,10 +36,16 @@
             "type": "object",
             "properties": {
                 "maxValue" : {
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "minValue" : {
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "barArea":  {
                     "type": "string",
