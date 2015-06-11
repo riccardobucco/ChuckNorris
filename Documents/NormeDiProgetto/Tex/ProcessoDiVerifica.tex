@@ -163,13 +163,13 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 					\end{itemize}
 					
 				\level{5}{Applicazione Android}
-				Per eseguire i test di unità e di integrazione sull'applicazione Android, si esegua la \insglo{procedura} descritta di seguito
+				Per eseguire i test di unità e di integrazione sull'applicazione Android, si esegua la \insglo{procedura} descritta di seguito.
 				\begin{itemize}
 					\item Scaricare dal sito \insuri{https://github.com/junit-team/junit/wiki/Download-and-Install} i pacchetti \texttt{junit.jar} e \texttt{hamcrest-core.jar} e inserirli nella cartella contenente la classe di test. Tale cartella dovrà essere quella contenente tutte le classi di test.
 					\item Aggiungere la dipendenza a \texttt{junit:junit} nello \textit{scope} della classe di test.
-					\item Da terminale, compilare la classe da testare attraverso il comando \texttt{javac nomeCasse.java}, dove \testtt{nomeClasse} è il nome della classe da testare.
-					\item Da terminale , compilare la classe test da eseguire attraverso il comando \texttt{javac -cp .:junit-4.XX.jar nomeTest.java}, dove \testtt{XX} è il numero della versione di jUnit scaricata e \testtt{nomeTest} è il nome della classe test.
-					\item Da terminale , eseguire il test attraverso il comando \texttt{java -cp .:junit-4.XX.jar:hamcrest-core-1.3.jar org.junit.runner.JUnit nomeTest}, dove \testtt{XX} è il numero della versione di jUnit scaricata e \testtt{nomeTest} è il nome dell'eseguibile del test.
+					\item Da terminale, compilare la classe da testare attraverso il comando \texttt{javac nomeCasse.java}, dove \texttt{nomeClasse} è il nome della classe da testare.
+					\item Da terminale , compilare la classe test da eseguire attraverso il comando \texttt{javac -cp .:junit-4.XX.jar nomeTest.java}, dove \texttt{XX} è il numero della versione di jUnit scaricata e \texttt{nomeTest} è il nome della classe test.
+					\item Da terminale , eseguire il test attraverso il comando \texttt{java -cp .:junit-4.XX.jar:hamcrest-core-1.3.jar org.junit.runner.JUnit nomeTest}, dove \texttt{XX} è il numero della versione di jUnit scaricata e \texttt{nomeTest} è il nome dell'eseguibile del test.
 				\end{itemize}
 				Nel caso in cui si verifichi un errore, comparirà l'indicazione del tracciamento del punto in cui esso è avvenuto, come mostrato nella seguente immagine.
 					\begin{figure}[H]
