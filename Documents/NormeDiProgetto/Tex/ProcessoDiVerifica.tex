@@ -13,15 +13,15 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 					\end{enumerate}
 					Durante l'esecuzione dell'intera \insglo{procedura} di verifica dei documenti è importante che i \insrole{Verificatori} tengano traccia di tutti gli errori più comuni.\\ Questo può essere fatto seguendo la \insglo{procedura} descritta nella sezione \nameref{sec:tracciamento}.
 					\level{6}{Sintassi}
-						I \insrole{Verificatori} devono preoccuparsi di individuare gli errori sintattici all'interno dei testi del documento. Tale compito può essere in parte attuato tramite strumenti automatici, indicati nell'appendice \nameref{app:strumenti}. È tuttavia necessario che un documento sia sempre sottoposto a \textit{\insglo{walkthrough}}, in quanto gli strumenti automatici non sono in grado di individuare parole corrette che sono utilizzate al di fuori del loro contesto.\\ Inoltre, i \insrole{Verificatori} devono cercare tutte quelle parole che sono poco frequenti o comunque complesse (possono generare fraintendimenti o incomprensioni): va applicata la tecnica del \textit{\insglo{walkthrough}}.
+						I \insrole{Verificatori} devono preoccuparsi di individuare gli errori sintattici all'interno dei testi del documento. Tale compito può essere in parte attuato tramite strumenti automatici. È tuttavia necessario che un documento sia sempre sottoposto a \textit{\insglo{walkthrough}}, in quanto gli strumenti automatici non sono in grado di individuare parole corrette che sono utilizzate al di fuori del loro contesto.\\ Inoltre, i \insrole{Verificatori} devono cercare tutte quelle parole che sono poco frequenti o comunque complesse (possono generare fraintendimenti o incomprensioni): va applicata la tecnica del \textit{\insglo{walkthrough}}.
 					\level{6}{Periodi lunghi}
-						I \insrole{Verificatori} devono calcolare l'\insglo{indice Gulpease} del documento (utilizzando l'apposito strumento automatico, vedi appendice \nameref{app:strumenti} del presente documento). Qualora si ottenga un risultato inferiore alle aspettative si deve applicare il \textit{\insglo{walkthrough}} all'interno del documento: l'obiettivo deve essere quello di individuare frasi troppo lunghe (e che dunque possono essere di difficile comprensione e/o scarsa leggibilità).
+						I \insrole{Verificatori} devono calcolare l'\insglo{indice Gulpease} del documento. Qualora si ottenga un risultato inferiore alle aspettative si deve applicare il \textit{\insglo{walkthrough}} all'interno del documento: l'obiettivo deve essere quello di individuare frasi troppo lunghe (e che dunque possono essere di difficile comprensione e/o scarsa leggibilità).
 					\level{6}{Struttura del documento}
-						I \insrole{Verificatori} controllano con l'ausilio di strumenti automatici (vedi sezione \nameref{app:strumenti} del presente documento) che la struttura del documento rispetti quanto descritto in questo documento.
+						I \insrole{Verificatori} controllano con l'ausilio di strumenti automatici che la struttura del documento rispetti quanto descritto in questo documento.
 					\level{6}{Norme tipografiche}
-						Nel presente documento sono state definite delle norme tipografiche di carattere generale. Molte di esse sono verificabili tramite strumenti automatici (vedi sezione \nameref{app:strumenti} del presente documento). Per le restanti è necessario che i \insrole{Verificatori} applichino una fra le tecniche di \insglo{inspection} e \textit{\insglo{walkthrough}}	(si preferisce la prima nel momento in cui tramite la lista di controllo si riesce a trovare la grande maggioranza degli errori).
+						Nel presente documento sono state definite delle norme tipografiche di carattere generale. Molte di esse sono verificabili tramite strumenti automatici. Per le restanti è necessario che i \insrole{Verificatori} applichino una fra le tecniche di \insglo{inspection} e \textit{\insglo{walkthrough}}	(si preferisce la prima nel momento in cui tramite la lista di controllo si riesce a trovare la grande maggioranza degli errori).
 					\level{6}{Proprietà di glossario}
-						È necessario che tutte le parole presenti all'interno del \insdoc{Glossario} siano marcate appropriatamente (come descritto nel presente documento). Ciò viene fatto con l'ausilio di strumenti automatici (vedi sezione \nameref{app:strumenti} del presente documento). Inoltre, è compito dei \insrole{Verificatori} trovare tutti quei termini che dovrebbero essere inclusi nel \insdoc{Glossario} ma che ancora non lo sono. Per tale compito si deve utilizzare \textit{walthrough} delle sezioni che sono state soggette a modifica prima dell'ultima verifica.
+						È necessario che tutte le parole presenti all'interno del \insdoc{Glossario} siano marcate appropriatamente (come descritto nel presente documento). Ciò viene fatto con l'ausilio di strumenti automatici. Inoltre, è compito dei \insrole{Verificatori} trovare tutti quei termini che dovrebbero essere inclusi nel \insdoc{Glossario} ma che ancora non lo sono. Per tale compito si deve utilizzare \textit{walthrough} delle sezioni che sono state soggette a modifica prima dell'ultima verifica.
 
 \level{4}{Procedure}
 		\level{5}{Verifica dei diagrammi UML}
@@ -55,7 +55,7 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 		
 	
 	\level{4}{Strumenti}
-	Per l'attività di verifica dei documenti sono stati utilizzati degli appositi \insglo{script} sviluppati dagli amministratori e descritti nell'appendice \nameref{app:strumenti}.
+	Per l'attività di verifica dei documenti sono stati utilizzati degli appositi \insglo{script} sviluppati dagli amministratori.
 \level{3}{Verifica del software}
 \level{4}{Tecniche di analisi}
 			Per poter determinare il livello di qualità del \insglo{prodotto} il \insglo{team} di sviluppo utilizza diversi tipi di tecniche di analisi dei dati.\\
@@ -100,12 +100,13 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				I test di accettazione sono identificati dalla sintassi TA[Codice del requisito], dove il Codice del requisito si riferisce al requisito che sarà testato.
 			\level{4}{Procedure} \label{sec:procedure}
 			Di seguito vengono descritte le procedure da seguire per effettuare due diverse tipologie di test (test di unità e test di integrazione) sui prodotti \textit{\insglo{Norris}} e \textit{\insglo{Chuck}}.
+			
 				\level{5}{Norris}
 					\level{6}{Test di unità}
 					Per eseguire i test di unità su \insglo{Norris}, si procede nel modo di seguito esposto, dando per scontato che sia già installato il \textit{\insglo{package} manager} \texttt{npm} di \insglo{node.js}.
 					\begin{itemize}
 						\item Da terminale ci si sposti nella cartella \inspath{Sources/Norris}.
-						\item In caso non sia presente, si installi il test \insglo{framework} “mocha”, tramite il comando \texttt{npm install -g mocha}. Per ulteriori informazioni e approfondimenti si visiti il sito \insuri{http://mochajs.org/}.
+						\item In caso non sia presente, si installi il test \insglo{framework} “mocha”, tramite il comando \texttt{npm install -g mocha}. 
 						\item Una volta installato “mocha”, ci si sposti nella cartella \inspath{Sources/Norris/test/unit} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire. 
 						\item In caso il test dia risultato positivo, comparirà l'elenco dei metodi testati con il segno di spunta, come nella figura seguente.
 						\begin{figure}[H]
@@ -124,7 +125,7 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 					Per eseguire i test di integrazione su \insglo{Norris}, si procede nel modo di seguito esposto, dando per scontato che sia già installato il \textit{\insglo{package} manager} \texttt{npm} di \insglo{node.js}.
 					\begin{itemize}
 						\item Da terminale ci si sposti nella cartella \inspath{Sources/Norris}.
-						\item In caso non sia presente, si installi il test \insglo{framework} “mocha”, tramite il comando \texttt{npm install -g mocha}. Per ulteriori informazioni e approfondimenti si visiti il sito \insuri{http://mochajs.org/}.
+						\item In caso non sia presente, si installi il test \insglo{framework} “mocha”, tramite il comando \texttt{npm install -g mocha}. 
 						\item Una volta installato “mocha”, ci si sposti nella cartella \inspath{Sources/Norris/test/integration} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire.
 						\item In caso il test dia risultato positivo, comparirà l'elenco delle funzionalità testate con il segno di spunta, come nella figura seguente.
 						\begin{figure}[H]
@@ -139,33 +140,57 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 							\caption{Esempio di test di integrazione fallito}
 						\end{figure}
 					\end{itemize}
+					
 				\level{5}{Chuck}
 				Per eseguire i test di unità e di integrazione su \insglo{Chuck}, si segua la \insglo{procedura} descritta di seguito.
 					\begin{itemize}
-					\item Da terminale ci si sposti nella cartella \inspath{Sources/Chuck}.
-					\item Si digiti il comando \texttt{npm test}. La prima volta, verrà eseguito, in modo automatico, il comando \texttt{npm install} il quale installa le dipendenze in una cartella locale “node\_modules”, verrà installato, anche, il \insglo{framework} “jasmine” e saranno effettuati tutti i test in modo automatico. (Per maggiori informazioni e approfondimenti su “jasmine” si visiti il sito \insuri{http://jasmine.github.io/}.) \\
-					Durante l'esecuzione del comando si aprirà una finestra del \insglo{browser} (la si può ignorare) e alla fine della \insglo{procedura} compariranno i risultati dei test. \\
-					Le volte successive, questo comando, eseguirà solo i test poichè i pacchetti risulteranno già installati. \\
-					\item In caso i test vengano eseguiti con successo, l'ultima riga riporterà il loro esito positivo.
+						\item Da terminale ci si sposti nella cartella \inspath{Sources/Chuck}.
+						\item Si digiti il comando \texttt{npm test}. La prima volta, verrà eseguito, in modo automatico, il comando \texttt{npm install} il quale installa le dipendenze in una cartella locale “node\_modules”, verrà installato, anche, il \insglo{framework} “jasmine” e saranno effettuati tutti i test in modo automatico. (Per maggiori informazioni e approfondimenti su “jasmine” si visiti il sito \insuri{http://jasmine.github.io/}.) \\
+						Durante l'esecuzione del comando si aprirà una finestra del \insglo{browser} (la si può ignorare) e alla fine della \insglo{procedura} compariranno i risultati dei test. \\
+						Le volte successive, questo comando, eseguirà solo i test poichè i pacchetti risulteranno già installati. \\
+						\item In caso i test vengano eseguiti con successo, l'ultima riga riporterà il loro esito positivo.
+							\begin{figure}[H]
+								\centering
+								\includegraphics[scale=0.5]{Pics/testPassed.png}
+								\caption{Esito dei test su Chuck positivo}
+							\end{figure}
+							\item Nel caso in cui i test diano esito negativo, sarà segnalato il numero di test falliti.
+							\begin{figure}[H]
+								\centering
+								\includegraphics[scale=0.5]{Pics/testNotPassed.png}
+								\caption{Esito dei test su Chuck negativo}
+							\end{figure}
+					\end{itemize}
+					
+				\level{5}{Applicazione Android}
+				Per eseguire i test di unità e di integrazione sull'applicazione Android, si esegua la \insglo{procedura} descritta di seguito
+				\begin{itemize}
+					\item Scaricare dal sito \insuri{https://github.com/junit-team/junit/wiki/Download-and-Install} i pacchetti \texttt{junit.jar} e \texttt{hamcrest-core.jar} e inserirli nella cartella contenente la classe di test. Tale cartella dovrà essere quella contenente tutte le classi di test.
+					\item Aggiungere la dipendenza a \texttt{junit:junit} nello \textit{scope} della classe di test.
+					\item Da terminale, compilare la classe da testare attraverso il comando \texttt{javac nomeCasse.java}, dove \testtt{nomeClasse} è il nome della classe da testare.
+					\item Da terminale , compilare la classe test da eseguire attraverso il comando \texttt{javac -cp .:junit-4.XX.jar nomeTest.java}, dove \testtt{XX} è il numero della versione di jUnit scaricata e \testtt{nomeTest} è il nome della classe test.
+					\item Da terminale , eseguire il test attraverso il comando \texttt{java -cp .:junit-4.XX.jar:hamcrest-core-1.3.jar org.junit.runner.JUnit nomeTest}, dove \testtt{XX} è il numero della versione di jUnit scaricata e \testtt{nomeTest} è il nome dell'eseguibile del test.
+				\end{itemize}
+				Nel caso in cui si verifichi un errore, comparirà l'indicazione del tracciamento del punto in cui esso è avvenuto, come mostrato nella seguente immagine.
 					\begin{figure}[H]
 						\centering
-						\includegraphics[scale=0.5]{Pics/testPassed.png}
+							\includegraphics[scale=0.5]{Pics/JUnitTestFail.png}
 						\caption{Esito dei test su Chuck positivo}
 					\end{figure}
-					\item Nel caso in cui i test diano esito negativo, sarà segnalato il numero di test falliti.
-					\begin{figure}[H]
-						\centering
-						\includegraphics[scale=0.5]{Pics/testNotPassed.png}
-						\caption{Esito dei test su Chuck negativo}
-					\end{figure}
-				\end{itemize}
+				
 			\level{4}{Strumenti}
-			Si rimanda all'appendice \nameref{app:strumenti} per una descrizione più completa degli strumenti utilizzati per eseguire i test sopra descritti.
+			Gli strumenti da utilizzare nell'esecuzione dei test sono:
+			\begin{description}
+				\item[jasmine] Un framework JavaScript per l'esecuzione di test su codice che utilizza AngularJS.  Per maggiori informazioni e approfondimenti su “jasmine” si visiti il sito \insuri{http://jasmine.github.io/}.
+				\item[mocha] Un framework Javascript per l'esecuzione di test su applicazioni basate su Node.js. Per ulteriori informazioni e approfondimenti si visiti il sito \insuri{http://mochajs.org/}.
+				\item[JUnit] Un framework per l'esecuzione di test su applicazioni Java. Per ulteriori informazioni e approfondimenti si visiti il sito \insuri{http://junit.org/}.
+			\end{description}
+			
 		\level{3}{Issue tracking}
 		L'\insglo{issue} tracking è un attività di supporto dei \insrole{Verificatori}. Essa permettere non solo di tracciare tutti i potenziali difetti dalla comparsa fino alla risoluzione, ma consente al \insrole{Responsabile di Progetto} di assegnare i compiti di correzione ai singoli membri del \insglo{team}.
 			\level{4}{Norme}
 				\level{5}{Sintassi delle label} \label{sec:SintassiLabel}
-				Una label è una etichetta che viene applicata ad una \insglo{issue} utilizzando il servizio fornito da \insglo{GitHub} (consultare la sezione \nameref{app:strumenti} del presente documento) permettendo così di categorizzare e filtrare le varie issues.\\
+				Una label è una etichetta che viene applicata ad una \insglo{issue} utilizzando il servizio fornito da \insglo{GitHub} permettendo così di categorizzare e filtrare le varie issues.\\
 				Esistono 3 tipologie di etichetta:
 				\begin{itemize}
 				    \item Di \textbf{attività}: ovvero quale attività l'ha generata. Le etichette permesse sono quindi: \inslabel{Verifica}
@@ -182,7 +207,7 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				\end{itemize}
 			\level{4}{Procedure}
 				\level{5}{Gestione di un'anomalia}
-				Ogni qualvolta un \insrole{Verificatore} trova un anomalia deve segnalarla tramite il meccanismo di sollevamento \insglo{issue} fornito da \insglo{Github} (consultare la sezione \nameref{app:strumenti} del presente documento). L'intera \insglo{procedura} da attivare nel momento in cui viene individuata un'anomalia prevede i seguenti passi:
+				Ogni qualvolta un \insrole{Verificatore} trova un anomalia deve segnalarla tramite il meccanismo di sollevamento \insglo{issue} fornito da \insglo{Github}. L'intera \insglo{procedura} da attivare nel momento in cui viene individuata un'anomalia prevede i seguenti passi:
 				\begin{enumerate}
 				    \item il \insrole{Verificatore} crea una nuova \insglo{issue} su \insglo{Github} riguardante l'anomalia rinvenuta (seguendo la sintassi indicata nella sezione \nameref{sec:StrutturaIssue}) ed aggiunge come etichette \inslabel{Verifica}, quella relativa al documento/i interessato/i ed infine etichetta di stato \inslabel{Request} (si consulti la sezione \nameref{sec:SintassiLabel}).
 				    \item il \insrole{Project Manager} valuterà la richiesta e se decide che la modifica è inutile o dannosa procederà cambiando etichetta da \inslabel{Request} a \inslabel{Rejected} e chiuderà la \insglo{issue} terminando così la \insglo{procedura}, in caso contrario cambierà l'etichetta da \inslabel{Request} a \inslabel{Questioned}, in modo che un qualsiasi componente del gruppo possa commentare, ribattere l'idea o proporne una nuova;
@@ -204,5 +229,10 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 							\caption{Procedura per tracciamento errori comuni}
 					\end{figure}
 		\level{4}{Strumenti}
-			Per la gestione delle \insglo{issue} è stato deciso di appoggiarsi al servizio di \insglo{issue} tracking offerto da \insglo{GitHub}, come suggerito nel \insglo{capitolato}, in modo da unificare gestione delle \insglo{issue} e versionamento. \\
-			Viene poi utilizzato un servizio fornito da \textit{Tracker}, ovvero un'applicazione web creata dal \groupname, per permettere al \insrole{Project Manager} di avere una visione statistica degli errori effettuati dal \insglo{team}.
+			Gli strumenti daa utilizzare nel processo di gestione sono:
+			\begin{description}
+				\item[GitHub] è stato scelto il servizio di \insglo{issue} tracking offerto da \insglo{GitHub}, come suggerito nel \insglo{capitolato}, in modo da unificare gestione delle \insglo{issue} e versionamento.
+				\item[Tracker] viene utilizzato un servizio fornito da \textit{Tracker}, un'applicazione web creata dal \groupname, per permettere al \insrole{Project Manager} di avere una visione statistica degli errori effettuati dal \insglo{team}. Per una descrizione dettagliata dell'applicazione, e in particolare della gestione della lista degli errori frequenti si rimanda all'appendice \nameref{sec:tracker}.
+			\end{description}
+			
+			
