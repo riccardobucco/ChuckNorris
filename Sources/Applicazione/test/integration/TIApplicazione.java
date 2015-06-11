@@ -1,3 +1,18 @@
+/*
+* Name: TIApplicazione.java
+* Package: test.integration
+* Location: Sources/Applicazione/test/integration
+* Date: 2015-05-25
+* Version: v0.01
+*
+* History:
+* =================================================================
+* Version   Date    Programmer  Changes
+* =================================================================
+* v0.01 2015-05-25  Moretto Alessandro  Creation
+* =================================================================
+*
+*/
 package test.integration;
 
 import android.app.Application;
@@ -12,9 +27,6 @@ import it.kaizenteam.app.view.LoginActivity;
 import it.kaizenteam.app.view.MapChartActivity;
 import it.kaizenteam.app.view.TableActivity;
 
-/**
- * Created by Moro on 11/06/15.
- */
 public class TIApplicazione extends TestCase {
 
     public void setUp() throws Exception {

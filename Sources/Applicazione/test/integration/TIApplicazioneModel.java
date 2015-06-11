@@ -1,12 +1,24 @@
+/*
+* Name: TIApplicazioneModel.java
+* Package: test.integration
+* Location: Sources/Applicazione/test/integration
+* Date: 2015-05-25
+* Version: v0.01
+*
+* History:
+* =================================================================
+* Version   Date    Programmer  Changes
+* =================================================================
+* v0.01 2015-05-25  Moretto Alessandro  Creation
+* =================================================================
+*
+*/
 package test.integration;
 
 import junit.framework.TestCase;
 
 import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 
-/**
- * Created by Moro on 11/06/15.
- */
 public class TIApplicazioneModel extends TestCase {
 
     public void setUp() throws Exception {
