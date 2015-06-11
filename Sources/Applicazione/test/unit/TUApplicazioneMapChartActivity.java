@@ -1,3 +1,18 @@
+/*
+* Name: TUApplicazioneMapChartActivity.java
+* Package: test.unit
+* Location: Sources/Applicazione/test/unit
+* Date: 2015-05-23
+* Version: v0.01
+*
+* History:
+* =================================================================
+* Version   Date    Programmer  Changes
+* =================================================================
+* v0.01 2015-05-23  Moretto Alessandro Creation
+* =================================================================
+*
+*/
 package test.unit;
 
 import android.app.Activity;
@@ -8,9 +23,7 @@ import junit.framework.TestCase;
 import it.kaizenteam.app.model.NorrisChart.MapChartDataImpl;
 import it.kaizenteam.app.view.MapChartActivity;
 
-/**
- * Created by Moro on 11/06/15.
- */
+
 public class TUApplicazioneMapChartActivity extends TestCase {
     Activity a=null;
     public void setUp() throws Exception {
