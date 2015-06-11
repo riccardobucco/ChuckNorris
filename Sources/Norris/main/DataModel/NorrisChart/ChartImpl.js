@@ -25,6 +25,8 @@
  */
 
 var events=require('events');
+var _ = require('lodash');
+var validate = require('jsonschema').validate;
 
 module.exports = ChartImpl;
 
@@ -35,12 +37,12 @@ module.exports = ChartImpl;
  * @param {String} id - the chart's id.
  */
 function ChartImpl (chartType, id) {
-	if (!(this instanceof ChartImpl)) return new ChartImpl(chartType,id);
-	events.EventEmitter.call(this); //ChartImpl inherits from events.EventEmitter
-	this.uid = id;
-	this.type=chartType;
-	this.settings = {title : '' , description : 'This is a chart.'};
-	this.data = {};
+    if (!(this instanceof ChartImpl)) return new ChartImpl(chartType,id);
+    events.EventEmitter.call(this); //ChartImpl inherits from events.EventEmitter
+    this.uid = id;
+    this.type=chartType;
+    this.settings = {title : '' , description : 'This is a chart.'};
+    this.data = {};
 }
 
 ChartImpl.prototype.__proto__=events.EventEmitter.prototype;
@@ -56,8 +58,8 @@ ChartImpl.prototype.updaters = {}; // updaters is a static variable
  * @param {ChartFactory} factory - the factory instance which corresponds to the type in chartType.
  */
 ChartImpl.registerFactory = function(chartType, factory) {
-	ChartImpl.prototype.factories[chartType] = factory; /* EXPLICITLY assign to prototype property,
-	otherwise it won't act as a static variable */
+    ChartImpl.prototype.factories[chartType] = factory; /* EXPLICITLY assign to prototype property,
+    otherwise it won't act as a static variable */
 };
 
 /**
@@ -68,12 +70,12 @@ ChartImpl.registerFactory = function(chartType, factory) {
  * @return {ChartImpl} the created chart.
 */
 ChartImpl.createChart = function(chartType, chartId) {
-	if (ChartImpl.prototype.factories.hasOwnProperty(chartType)) {
-		var dep = ChartImpl.prototype.factories[chartType];
-		return dep.createChart(chartId);
-	}
-	else
-	return null;
+    if (ChartImpl.prototype.factories.hasOwnProperty(chartType)) {
+        var dep = ChartImpl.prototype.factories[chartType];
+        return dep.createChart(chartId);
+    }
+    else
+    return null;
 };
 
 /**
@@ -84,8 +86,8 @@ ChartImpl.createChart = function(chartType, chartId) {
  * @param {ChartUpdater} updater - the updater instance which corresponds to the updating type in updateType.
  */
 ChartImpl.registerUpdater = function(updateType, updater) {
-	ChartImpl.prototype.updaters[updateType] = updater; /* EXPLICITLY assign to prototype property,
-	 otherwise it won't act as a static variable */
+    ChartImpl.prototype.updaters[updateType] = updater; /* EXPLICITLY assign to prototype property,
+     otherwise it won't act as a static variable */
 };
 
 /**
@@ -94,7 +96,7 @@ ChartImpl.registerUpdater = function(updateType, updater) {
  * @return {String} the chart's ID.
  */
 ChartImpl.prototype.getId = function() {
-	return this.uid;
+    return this.uid;
 };
 
 /**
@@ -103,7 +105,7 @@ ChartImpl.prototype.getId = function() {
  * @return {String} the chart's type.
  */
 ChartImpl.prototype.getType = function() {
-	return this.type;
+    return this.type;
 };
 
 /**
@@ -112,16 +114,21 @@ ChartImpl.prototype.getType = function() {
  * @param {ChartData} data - a JSON object containing the chart's data.
  */
 ChartImpl.prototype.setData = function(data) {
-	this.data=data;
+    var schema = require(__dirname + '/../../../resources/schemes/' + this.getType() + '-data');
+    if(validate(data, schema).errors.length > 0) {
+        throw new Error('wrong data');
+    }
+
+    this.data=data;
 };
 
 /**
  * Gets the chart's data.
  *
- * @return 	{ChartData} the chart's data.
+ * @return  {ChartData} the chart's data.
  */
 ChartImpl.prototype.getData = function() {
-	return this.data;
+    return this.data;
 };
 
 /**
@@ -132,49 +139,38 @@ ChartImpl.prototype.getData = function() {
  */
 ChartImpl.prototype.setSettings = function(settings) {
 
-	function set(mySettings, settings) {
-		if(typeof settings == 'object') {
-			for(var key in settings) {
-				if(mySettings.hasOwnProperty(key)) {
-					if ( typeof settings[key] == 'object') {
-						set(mySettings[key], settings[key])
-					}
-					else {
-						mySettings[key] = settings[key];
-					}
-				}
-			}
-		}
-	}
+    function set(mySettings, settings) {
+        if(typeof settings == 'object') {
+            for(var key in settings) {
+                if ( typeof settings[key] == 'object') {
+                    set(mySettings[key], settings[key])
+                }
+                else {
+                    mySettings[key] = settings[key];
+                }
+            }
+        }
+    }
 
-    var mySettings=this.settings;
-	set(mySettings, settings);
+    var newSettings=_.cloneDeep(this.settings);
+    set(newSettings, settings);
 
-	/*if(typeof settings == 'object') {
-	 	for(var key in settings) {
-	 		if(this.settings.hasOwnProperty(key)) {
-	 			if ( typeof settings[key] == 'object') {
-	 				for(var key2 in settings[key]) {
-	 					if(this.settings.hasOwnProperty(key)) {
-	 						this.settings[key][key2] = settings[key][key2];
-	 					}
-	 				}
-	 			}
-		 		else {
-					this.settings[key] = settings[key];
-	 			}
-			}
-		}
-	}*/
+    var schema = require(__dirname + '/../../../resources/schemes/' + this.getType() + '-settings');
+    if(validate(newSettings, schema).errors.length > 0) {
+        throw new Error('wrong settings');
+    }
+
+    this.settings = newSettings;
+
 };
 
 /**
  * Gets the chart's settings.
  *
- * @return 	{ChartSettings} the chart's settings.
+ * @return  {ChartSettings} the chart's settings.
  */
 ChartImpl.prototype.getSettings = function() {
-	return this.settings;
+    return this.settings;
 };
 
 /**
@@ -184,18 +180,24 @@ ChartImpl.prototype.getSettings = function() {
  * @param {ChartUpdate} updateData - contains the new data and the information needed to update the chart.
  */
 ChartImpl.prototype.update = function(updateType, updateData) {
-	var type=this.getType()+":"+updateType;
-	if (ChartImpl.prototype.updaters.hasOwnProperty(type)) {
-		var dep=ChartImpl.prototype.updaters[type];
-		dep.update(this, updateData);
-		this.emit('update', updateType, updateData); // emits an 'update' signal
-		console.log("Chart "+this.uid+" has been updated with the method: "+updateType);
-	}
-	else {
-		console.log("ERROR: wrong updating type." );
-		throw("ChartImpl:wrongUpdatingType");
 
-	}
+    var type=this.getType()+":"+updateType;
+    if (ChartImpl.prototype.updaters.hasOwnProperty(type)) {
+        var schema = require(__dirname + '/../../../resources/schemes/' + this.getType() + '-update-' + updateType);
+        if(validate(updateData, schema).errors.length > 0) {
+            throw new Error('wrong update data');
+        }
+
+        var dep=ChartImpl.prototype.updaters[type];
+        dep.update(this, updateData);
+        this.emit('update', updateType, updateData); // emits an 'update' signal
+        console.log("Chart "+this.uid+" has been updated with the method: "+updateType);
+    }
+    else {
+        console.log("ERROR: wrong updating type." );
+        throw("ChartImpl:wrongUpdatingType");
+
+    }
 };
 
 // For dependency injection:

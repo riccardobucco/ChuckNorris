@@ -25,6 +25,8 @@
  */
 
 var NorrisChart = require('../NorrisChart');
+var _ = require('lodash');
+var validate = require('jsonschema').validate;
 
 module.exports = PageImpl;
 
@@ -87,13 +89,28 @@ PageImpl.prototype.getId = function() {
  * @param {PageSettings} settings - a JSON object containing the page's settings you wish to add.
  */
 PageImpl.prototype.setSettings = function(settings) {
-	if(typeof settings == 'object') {
-		for(var key in settings) {
-			if(settings.hasOwnProperty(key)) {
-				this.settings[key] = settings[key];
-			}
-		}
-	}
+	function set(mySettings, settings) {
+        if(typeof settings == 'object') {
+            for(var key in settings) {
+                if ( typeof settings[key] == 'object') {
+                    set(mySettings[key], settings[key])
+                }
+                else {
+                    mySettings[key] = settings[key];
+                }
+            }
+        }
+    }
+
+    var newSettings=_.cloneDeep(this.settings);
+    set(newSettings, settings);
+
+    var schema = require(__dirname + '/../../../resources/schemes/page-settings');
+    if(validate(newSettings, schema).errors.length > 0) {
+        throw new Error('wrong settings');
+    }
+
+    this.settings = newSettings;
 };
 
 /**
