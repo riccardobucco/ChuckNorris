@@ -1,17 +1,15 @@
 /*
 * Name: TIApplicazioneModelService.java
-* Package: it.kaizenteam.app.model
-* Location: Sources/Applicazione/test/unit
-* Date: 2015-05-19
-* Version: v0.02
+* Package: test.integration
+* Location: Sources/Applicazione/test/integration
+* Date: 2015-05-25
+* Version: v0.01
 *
 * History:
 * =================================================================
-* Version	Date	Programmer	Changes
+* Version   Date    Programmer  Changes
 * =================================================================
-* v0.02 2015-05-26  Moretto Alessandro   Verify
-* =================================================================
-* v0.01 2015-05-23  Davide Dal Bianco  Creation
+* v0.01 2015-05-25  Dal Bianco Davide  Creation
 * =================================================================
 *
 */

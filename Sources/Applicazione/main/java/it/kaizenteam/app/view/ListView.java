@@ -2,16 +2,16 @@
 * Name: ListView.java
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
-* Date: 2015-05-24
-* Version: 0.01
+* Date: 2015-05-19
+* Version: v0.02
 *
 * History:
 * =================================================================
 * Version	Date	Programmer	Changes
 * ================================================================
-* v0.02 2015-05-22  Davide Dal Bianco   Verify
+* v0.02 2015-05-22  Dal Bianco Davide   Verify
 * =================================================================
-* v0.01 2015-05-19  Moretto Alessandro  Creazione file
+* v0.01 2015-05-19  Moretto Alessandro  Creation
 * =================================================================
 *
 */

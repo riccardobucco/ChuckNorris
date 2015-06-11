@@ -2,8 +2,8 @@
 * Name: ChartReceiverImpl.java
 * Package: it.kaizenteam.app.model.service
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/Service
-* Date: 2015-05-19
-* Version: 0.01
+* Date: 2015-05-22
+* Version: v0.02
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-22  Davide Dal Bianco  Creazione file
+* v0.01 2015-05-22  Dal Bianco Davide  Creation
 * =================================================================
 *
 */
@@ -35,8 +35,8 @@ import java.util.Observable;
 import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 
 /**
- * 
-This class has a responsibility to communicate and receive events through the socket channel between app and server. Updates can be started or stopped out or it can be made the request for a full chart by external api of Norris.
+ * This class has a responsibility to communicate and receive events through the socket channel between app and server. 
+ * Updates can be started or stopped out or it can be made the request for a full chart by external api of Norris.
  */
 public class ChartReceiverImpl extends Observable implements ChartReceiver {
     private static ChartReceiverImpl instance;

@@ -1,3 +1,18 @@
+/*
+* Name: TUApplicazioneJSONParser.java
+* Package: test.unit
+* Location: Sources/Applicazione/test/unit
+* Date: 2015-05-23
+* Version: v0.01
+*
+* History:
+* =================================================================
+* Version   Date    Programmer  Changes
+* =================================================================
+* v0.01 2015-05-23  Moretto Alessandro  Creation
+* =================================================================
+*
+*/
 package test.unit;
 
 import junit.framework.TestCase;
@@ -9,9 +24,7 @@ import it.kaizenteam.app.model.NorrisChart.ChartSettings;
 import it.kaizenteam.app.model.NorrisChart.ChartUpdate;
 import it.kaizenteam.app.presenter.JSONParser;
 
-/**
- * Created by Moro on 11/06/15.
- */
+
 public class TUApplicazioneJSONParser extends TestCase {
     JSONParser j=null;
     public void testGetInstance() throws Exception {

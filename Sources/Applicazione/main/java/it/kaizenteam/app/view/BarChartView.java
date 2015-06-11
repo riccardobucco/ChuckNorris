@@ -2,16 +2,16 @@
 * Name: BarChartView.java
 * Package: it.kaizenteam.app.view
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/view
-* Date: 2015-05-24
-* Version: 0.01
+* Date: 2015-05-19
+* Version: v0.02
 *
 * History:
 * =================================================================
 * Version	Date	Programmer	Changes
 * =================================================================
-* v0.02 2015-05-22  Davide Dal Bianco   Verify
+* v0.02 2015-05-22  Dal Bianco Davide   Verify
 * =================================================================
-* v0.01 2015-05-19  Moretto Alessandro  Creazione file
+* v0.01 2015-05-19  Moretto Alessandro  Creation
 * =================================================================
 *
 */
@@ -21,8 +21,7 @@ package it.kaizenteam.app.view;
 import it.kaizenteam.app.model.NorrisChart.ChartData;
 
 /**
- * This interface has the task of allowing the use of methods to change the view to represent a bar chart from the outside of the package View (indicated by a
-BarChartPresenterImpl).
+ * This interface has the task of allowing the use of methods to change the view to represent a bar chart from the outside of the package View (indicated by a BarChartPresenterImpl).
  */
 public interface BarChartView extends View {
     /**

@@ -2,7 +2,7 @@
  * Name: BarChartInPlaceUpdate
  * Package: it.kaizenteam.app.model.NorrisChart
  * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
- * Date: 2015-05-26
+ * Date: 2015-05-22
  * Version: v0.02
  *
  * History:
