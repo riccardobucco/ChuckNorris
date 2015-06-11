@@ -55,7 +55,13 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 		
 	
 	\level{4}{Strumenti}
-	Per l'attività di verifica dei documenti sono stati utilizzati degli appositi \insglo{script} sviluppati dagli amministratori.
+	Per l'attività di verifica dei documenti devono essere utilizzati i seguenti appositi \insglo{script} sviluppati dagli amministratori:
+	\begin{description}
+			\item[OrtographicCheck] Questo \insglo{script} sfrutta il \insglo{software} GNU \insglo{Aspell} per eseguire il controllo ortografico di un documento.
+			\item[Gulpease] Questo \insglo{script} estrae il testo da un documento e ne calcola l'indice di leggibilità Gulpease.
+			\item[NonBreakingSpaceCheck] Questo \insglo{script} controlla che un numero formattato secondo lo standard [SI/ISO 31-0] utilizzi lo spazio unificatore e non quello normale (errore in cui è facile incorrere).
+		\end{description}
+		
 \level{3}{Verifica del software}
 \level{4}{Tecniche di analisi}
 			Per poter determinare il livello di qualità del \insglo{prodotto} il \insglo{team} di sviluppo utilizza diversi tipi di tecniche di analisi dei dati.\\
