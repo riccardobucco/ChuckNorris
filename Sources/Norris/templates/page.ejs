@@ -56,9 +56,10 @@ function printTag(chart) {
             %>
                 <h3>
                     <% if(charts[i].getSettings().title){ %>
-                        &nbsp;
-                    <% } else { %>
+
                         <%= charts[i].getSettings().title %>
+                    <% } else { %>
+                        &nbsp;
                     <% } %>
                 </h3>
                 <%- printTag(charts[i]) %>
