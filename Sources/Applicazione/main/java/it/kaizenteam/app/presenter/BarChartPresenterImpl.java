@@ -67,6 +67,7 @@ public class BarChartPresenterImpl extends ChartPresenterImpl implements BarChar
                         applySettings(chart.getSettings());
                     }
                 });
+
             } catch (JSONException e) {}
         }
         else{
@@ -97,7 +98,7 @@ public class BarChartPresenterImpl extends ChartPresenterImpl implements BarChar
         ((BarChartView) view).setDescription(((BarChartSettingsImpl) settings).getDescription());
         ((BarChartView) view).setOrientation(((BarChartSettingsImpl) settings).getOrientation());
         ((BarChartView) view).setAxisName(((BarChartSettingsImpl) settings).getXAxisName(), ((BarChartSettingsImpl) settings).getYAxisName());
-        ((BarChartView) view).setBarDataSetSpacing(((BarChartSettingsImpl) settings).getBarDataSetSpacing());
+        //((BarChartView) view).setBarDataSetSpacing(((BarChartSettingsImpl) settings).getBarDataSetSpacing());
         ((BarChartView) view).setBarValueSpacing(((BarChartSettingsImpl) settings).getBarValueSpacing());
         ((BarChartView) view).showGrid(((BarChartSettingsImpl) settings).getGridVisibility());
 
@@ -113,7 +114,6 @@ public class BarChartPresenterImpl extends ChartPresenterImpl implements BarChar
             ((BarChartView) view).setLegendPosition(4);
         if(((BarChartSettingsImpl) settings).getLegendPosition().equals("none"))
             ((BarChartView) view).setLegendPosition(5);
-
     }
 
     /**

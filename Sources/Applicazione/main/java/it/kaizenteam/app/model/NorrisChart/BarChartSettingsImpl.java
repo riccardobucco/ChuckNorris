@@ -143,7 +143,7 @@ public class BarChartSettingsImpl implements ChartSettings {
         try {
             return settings.getJSONObject("style").getInt("barValueSpacing");
         } catch (JSONException e) {
-            return 3;
+            return 5;
         }
     }
 
@@ -156,7 +156,7 @@ public class BarChartSettingsImpl implements ChartSettings {
         try {
             return settings.getJSONObject("style").getInt("barDatasetSpacing");
         } catch (JSONException e) {
-            return 20;
+            return 10;
         }
     }
 }

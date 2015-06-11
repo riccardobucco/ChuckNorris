@@ -74,8 +74,8 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
     @Override
     public void renderChart(ChartData data) {
         chart.clear();
-        chart.getXAxis().setValues(((LineChartDataImpl) data).getData().getXVals());
         chart.setData(((LineChartDataImpl) data).getData());
+        chart.getXAxis().setValues(((LineChartDataImpl) data).getData().getXVals());
 
         float max=0;
         for(int i =0;i<chart.getData().getDataSets().size();i++)
@@ -87,7 +87,6 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
         chart.getAxisLeft().setAxisMaxValue(max + 1);
         chart.getAxisRight().setAxisMaxValue(max + 1);
         chart.invalidate();
-        //TODO: controllare se c'è qualcosa di piu efficiente senza farlo nel model
     }
 
     /**

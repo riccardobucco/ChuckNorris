@@ -129,7 +129,7 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
                 setmarkerico=BitmapDescriptorFactory.fromResource(R.drawable.bus);
             //TODO more...
             for(int j = 0;j<set.size();j++){
-                LatLng coord = new LatLng(set.get(j).getLongitude(),set.get(j).getLatitude());
+                LatLng coord = new LatLng(set.get(j).getLatitude(),set.get(j).getLongitude());
 
                 MarkerOptions mo=new MarkerOptions()
                         .position(coord)
