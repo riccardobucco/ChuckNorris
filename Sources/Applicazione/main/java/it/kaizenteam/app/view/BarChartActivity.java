@@ -19,6 +19,7 @@
 package it.kaizenteam.app.view;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -80,14 +81,15 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
         chart.clear();
         BarData datanew =((BarChartDataImpl) data).getData();
         float max=0;
-        for(int i =0;i<datanew.getDataSets().size();i++)
+        for(int i =0;i<datanew.getDataSets().size();i++){
             for(int j =0;j<datanew.getDataSets().get(i).getYVals().size();j++){
                 if(datanew.getDataSets().get(i).getYVals().get(j).getVal()>max)
                     max=datanew.getDataSets().get(i).getYVals().get(j).getVal();
             }
-        chart.getAxisLeft().setAxisMaxValue(max+1);
-        chart.getAxisRight().setAxisMaxValue(max + 1);
+        }
         chart.setData(datanew);
+        chart.getAxisLeft().setAxisMaxValue(max + 1);
+        chart.getAxisRight().setAxisMaxValue(max + 1);
         chart.invalidate();
         //TODO: controllare se c'è qualcosa di piu efficiente senza farlo nel model
     }
@@ -194,6 +196,7 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
      * @param barDataSetSpacing space between two sets
      */
     public void setBarDataSetSpacing(int barDataSetSpacing) {
+        Log.e("ERRRRRR", ""+barDataSetSpacing);
         BarData data =chart.getBarData();
         data.setGroupSpace(barDataSetSpacing);
         chart.invalidate();

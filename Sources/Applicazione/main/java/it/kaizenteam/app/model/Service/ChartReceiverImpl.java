@@ -21,9 +21,15 @@ package it.kaizenteam.app.model.Service;
 import android.util.Log;
 
 import com.github.nkzawa.emitter.Emitter;
+import com.github.nkzawa.engineio.client.Transport;
 import com.github.nkzawa.socketio.client.IO;
+import com.github.nkzawa.socketio.client.Manager;
 import com.github.nkzawa.socketio.client.Socket;
 
+import org.apache.http.cookie.Cookie;
+
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.Observable;
 
 import it.kaizenteam.app.model.NorrisSessionInfoImpl;
@@ -58,6 +64,7 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
      */
     @Override
     public void stopUpdateEvent() {
+        socket.io().off();
         socket.off("update");
         socket.disconnect();
         socket.close();
@@ -78,25 +85,50 @@ public class ChartReceiverImpl extends Observable implements ChartReceiver {
         catch (Exception e){
         }
 
+        socket.io().on(Manager.EVENT_TRANSPORT, new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                Transport transport = (Transport) args[0];
+                transport.on(Transport.EVENT_REQUEST_HEADERS, new Emitter.Listener() {
+                    @Override
+                    public void call(Object... args) {
+                        @SuppressWarnings("unchecked")
+                        Map<String, String> headers = (Map<String, String>) args[0];
+
+                        ArrayList<Cookie> cookies = NorrisSessionInfoImpl.getInstance().getAuthCookie();
+                        if(cookies!=null){
+                            StringBuilder sb = new StringBuilder();
+                            for (int i = 0; i < cookies.size(); i++) {
+                                sb.append(cookies.get(i).getName()).append('=').append(cookies.get(i).getValue()).append(";");
+                            }
+                            String sck = sb.toString();
+                            headers.put("Cookie", sck);
+                        }
+                    }
+                });
+            }
+        });
+
         socket.on("chart" , new Emitter.Listener() {
             @Override
             public void call(Object... args) {
                 setChanged();
                 String[]arg={args[0].toString(),args[1].toString(),args[2].toString()};
                 ChartReceiverImpl.this.notifyObservers(arg);
-                Log.d("Chart arrived", args[0].toString());
                 socket.off("chart");
+
+                socket.on("update" , new Emitter.Listener() {
+                    @Override
+                    public void call(Object... args) {
+                        setChanged();
+                        String[] arg={args[0].toString(),args[1].toString()};
+                        ChartReceiverImpl.this.notifyObservers(arg);
+                        Log.d("Chart update", args[0].toString());
+                    }
+                });
             }
         });
-        socket.on("update" , new Emitter.Listener() {
-            @Override
-            public void call(Object... args) {
-                setChanged();
-                String[] arg={args[0].toString(),args[1].toString()};
-                ChartReceiverImpl.this.notifyObservers(arg);
-                Log.d("Chart update",args[0].toString());
-            }
-        });
+
 
         socket.connect();
     }

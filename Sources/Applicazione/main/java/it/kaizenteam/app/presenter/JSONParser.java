@@ -103,7 +103,7 @@ public class JSONParser {
         //create the arry of labels for the chart
         ArrayList<String> chartlabels = new ArrayList<>();
         for(int i = 0; i<labels.length();i++) {
-            chartlabels.add(labels.getString(i));
+            chartlabels.add(i,labels.getString(i));
         }
         //create che array of the sets of barchart
         ArrayList<BarDataSet> chartdataSets = new ArrayList<>();
@@ -203,8 +203,8 @@ public class JSONParser {
             JSONArray valori= item.getJSONArray("values");
             for(int j = 0; j<valori.length();j++) {
                 JSONObject valore=valori.getJSONObject(j);
-                double lat= valore.getDouble("x");
-                double lng= valore.getDouble("y");
+                double lat= valore.getDouble("y");
+                double lng= valore.getDouble("x");
                 MapPoint mp=new MapPoint(lat,lng);
                 try{
                     String id=valore.getString("id");
@@ -400,7 +400,7 @@ public class JSONParser {
             JSONObject updatevaluedata=updatevalue.getJSONObject("data");
             double x=updatevaluedata.getDouble("x");
             double y=updatevaluedata.getDouble("y");
-            MapPoint point=new MapPoint(x,y);
+            MapPoint point=new MapPoint(y,x);
             try {
                 String id = updatevaluedata.getString("id");
                 point.setId(id);
@@ -475,7 +475,7 @@ public class JSONParser {
             //get and parse the element of a stream update
             JSONObject point = updateData.getJSONObject(i);
             int series=point.getInt("series");
-            MapPoint mp =new MapPoint(point.getJSONObject("data").getDouble("x"), point.getJSONObject("data").getDouble("y"));
+            MapPoint mp =new MapPoint( point.getJSONObject("data").getDouble("y"),point.getJSONObject("data").getDouble("x"));
             try{
                 String id=point.getJSONObject("data").getString("id");
                 mp.setId(id);
