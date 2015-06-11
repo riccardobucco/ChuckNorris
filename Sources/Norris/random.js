@@ -50,7 +50,7 @@ bc.setData({
         {name: 'paperino', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]}
     ]
 });
-bc.setSettings({title:'Titolo', style: {barArea: '80%', showGrid: true}})
+bc.setSettings({title:'Titolo', style: {barArea: '80%', showGrid: true, maxValue: 10, minValue: 0}})
 setInterval(barchart, 2000);
 
 lc.setData({
@@ -61,7 +61,7 @@ lc.setData({
         {name: 'paperino', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]}
     ]
 });
-lc.setSettings({title:'Titolo',xLabel: 'xLabel', yLabel: 'yLabel', legendPosition: 'top', style: {showGrid: true}})
+lc.setSettings({title:'Titolo',xLabel: 'xLabel', yLabel: 'yLabel', legendPosition: 'top', style: {showGrid: true, maxValue: 10, minValue: 0}})
 setInterval(linechart, 2000);
 
 mc.setData({ datasets: [
