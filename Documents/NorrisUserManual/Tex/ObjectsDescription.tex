@@ -82,6 +82,8 @@
 					\item[orientation] It'a String which specifies the orientation of the chart. It can assume one of the following values: “vertical” or “horizontal”.
 					\item[style] It's an object with the following properties:
 					\begin{description}
+						\item[maxValue] It's a number indicating the maximum value that the bar chart assumes.
+						\item[minValue] It's a number indicating the minimum value that the bar chart assumes.
 						\item[barArea] This property sets the area occupied by the bar of the chart. It's a String which accept a percentage.
 						\item[showGrid] This property sets whether the grid has to be shown or not.
 						\item[animationDuration] It's an integer which specify the duration time of an animation.
@@ -94,20 +96,28 @@
 					\item[yLabel] It's a String used to set the name of the “y” axis.
 					\item[showGrid] This is a boolean value which specifies if the grid of the chart has to be shown or not.
 					\item[legendPosition] It's a String, chosen from a set of values, which sets where the legend has to be positioned. This property can assume the following values: “top-left”, “bottom-left”, “top-right” or “bottom-right”.
-					\item[maxValues] It's an integer describing the maximum number of dependent values of the chart, that is to say tha maximum number of points for every line (the minimum is 1).
-					\item[style] It's an object with four properties. The first (“pointDotSize”) is a number indicating the size of each point in pixels. The second one (“bezierCurve”) is a boolean value which indicates whether the line is curved between the points. The third (“showGrid”) is a boolean value which specifies if the grid of the chart has to be shown or not. The last one (“animationDuation”) is an integer which specify the duration time of an animation.
+					\item[maxItems] It's an integer value describing the maximum number of dependent values of the chart, that is, the maximum number of points for every line (the minimum is 1).
+					\item[style] It's an object with six properties:
+						\begin{description}
+							\item[maxValue] It's a number indicating the maximum value that the line chart assumes.
+							\item[minValue] It's a number indicating the minimum value that the line chart assumes.
+							\item[pointDotSize] It is a number indicating the size of each point in pixels.
+							\item[bezierCurve] It's a boolean value which indicates whether the line is curved between the points.
+							\item[showGrid] It is a boolean value which specifies if the grid of the chart has to be shown or not.
+							\item[animationDuration] IT's an integer value which specify the duration time of an animation.
+						\end{description}
 				\end{description}
 			\level{4}{Map chart}
 				In a \insglo{Map Chart} you can set the following settings:
 				\begin{description}
 					\item[legendPosition] It's a String, chosen from a set of values, which sets where the legend has to be positioned. This property can assume the following values: “top-left”, “bottom-left”, “top-right” or “bottom-right”.
-					\item[maxValues] It's an integer describing the maximum number of dependent values of the chart, that is the maximum number of points for every line (the minimum is 1).
+					\item[maxItems] It's an integer describing the maximum number of dependent values of the chart, that is the maximum number of points for every line (the minimum is 1).
 					\item[area] It's an object with the properties “x” and “y” (which are two numbers, indcating the dimensions of the chart), and “zoom” (which is a number).
 				\end{description}
 			\level{4}{Table}
 				In a \insglo{Table} you can set the following settings:
 				\begin{description}
-					\item[maxRows] It's an integer value which indicates the maximum number of rows of the \insglo{Table}. The minimum value is 1.
+					\item[maxValues] It's an integer value which indicates the maximum number of rows of the \insglo{Table}. The minimum value is 1.
 					\item[showTableGrid] This is a boolean value which specifies if the grid of the \insglo{Table} has to be shown or not.
 					\item[newLinePosition] It's a String, chosen from a set of values, which sets where the new line has to be positioned. This property can assume one of the following values: “top” or “bottom”.
 					\item[allowFilter] It's a boolean indicating whether the filtering options are allowed or not.
