@@ -69,7 +69,6 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
                     data.datasets[series].values[index].y=updateData.inplace[i].data.y;
                 }
             }
-
             /* Stream: */
             if (updateData.hasOwnProperty('stream')) {
                 for(var i=0; i<updateData.stream.length; i++) {
@@ -81,21 +80,19 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
                     }
                 }
             }
-
             /* Delete: */
             if (updateData.hasOwnProperty('delete')) {
                 var index={};
                 var update=[];
-
                 var k=0;
-                for (var j=0; j<data.length; j++) {
+                for (var j=0; j<data.datasets.length; j++) {
                     index[j]=[];
                     for (var i=0; i<updateData.delete.length; i++) {
                         if (j==updateData.delete[i].series) {
                             update[k]=updateData.delete[i];
                             k++;
                             index[j].push(updateData.delete[i].index);
-                            console.log("update.length: "+ update.length + " --- "+JSON.stringify(update));
+                            //console.log("update.length: "+ update.length + " --- "+JSON.stringify(update));
 
                         }
                     }
@@ -114,7 +111,7 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
                 }
 
                 for(var i=update.length-1; i>=0; i--) {
-                    //console.log("update.length: "+ update.length + " --- "+JSON.stringify(update));
+                    console.log("update.length: "+ update.length + " --- "+JSON.stringify(update));
                     var series=update[i].series;
                     var index=update[i].index;
                     /*for (var k=i; k<updateData.delete; k++) {
@@ -128,7 +125,6 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
 
             }
             // validazione di data rispetto allo schema JSON
-
             chart.setData(data);
         }
         else {
