@@ -15,18 +15,33 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.integration;
 
 import junit.framework.TestCase;
 
-import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
+
+import it.kaizenteam.app.model.Service.ChartReceiver;
+import it.kaizenteam.app.model.Service.ChartReceiverImpl;
 
 
-public class TIApplicazioneModelService extends TestCase {
+public class TIApplicazioneModelService extends TestCase implements Observer {
+    boolean done=false;
     public void testCreation(){
         ChartReceiver receiver = ChartReceiverImpl.getInstance();
         ((ChartReceiverImpl)receiver).addObserver(this);
         receiver.getChart("idchart");
-        receiver.startUpdateEvent("idchart");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        assertEquals(true,done);
+    }
+
+    @Override
+    public void update(Observable observable, Object data) {
+        done=true;
     }
 }

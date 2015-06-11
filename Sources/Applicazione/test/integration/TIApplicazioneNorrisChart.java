@@ -15,17 +15,27 @@
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.integration;
 
 import junit.framework.TestCase;
 
-import java.util.ArrayList;
+import it.kaizenteam.app.model.NorrisSessionInfo;
+import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 
 public class TIApplicazioneNorrisChart extends TestCase {
     public void testCreation(){
-        ChartModel chart= ChartImpl.create("barchart","idchart");
-        chart.setData(null);
-        chart.update("inplace",new BarChartInPlaceUpdate(new ArrayList<BarChartElementInPlaceUpdate>()));
-        assertEquals(null,chart.getData());
+        NorrisSessionInfo a = NorrisSessionInfoImpl.getInstance();
+        NorrisSessionInfo b = NorrisSessionInfoImpl.getInstance();
+        assertEquals(a,b);
+        a.setAddress("add1");
+        assertEquals("add1",a.getAddress());
+        a.login();
+        assertEquals(true,a.isLogged());
+        a.logout();
+        assertEquals(false,a.isLogged());
+        a.logout();
+        assertEquals(false,a.isLogged());
+        a.login();
+        assertEquals(true,a.isLogged());
     }
 }
