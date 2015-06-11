@@ -111,7 +111,7 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
                 }
 
                 for(var i=update.length-1; i>=0; i--) {
-                    console.log("update.length: "+ update.length + " --- "+JSON.stringify(update));
+                    //console.log("update.length: "+ update.length + " --- "+JSON.stringify(update));
                     var series=update[i].series;
                     var index=update[i].index;
                     /*for (var k=i; k<updateData.delete; k++) {

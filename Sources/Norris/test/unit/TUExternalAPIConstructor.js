@@ -20,12 +20,27 @@ var ExternalAPIConstructor = require('../../main/ExternalAPIManager/ExternalAPIC
 describe('ExternalAPIConstructor',function(){
 	describe('registerEndpoint(endpoint: EndpointFactory): void',function(){
 		it('should register endpoints factories',function(){
-			endpointfactory = {
-				randomKey: 'randomValue'
-			}
+			function EndpointFactory() {
+                if(!(this instanceof EndpointFactory)) {
+                return new EndpointFactory();
+                }
+            }
+
+            EndpointFactory.prototype.instance=new EndpointFactory(); // static
+
+            EndpointFactory.getInstance = function() { // static
+                return EndpointFactory.prototype.instance;
+            };
+
+            EndpointFactory.prototype.createEndpoint = function (controller) {
+                return new Endpoint (controller);
+            };
+            
 			var extAPiConstr = new ExternalAPIConstructor();
-			ExternalAPIConstructor.registerEndpoint(endpointfactory);
-			assert.deepEqual(endpointfactory, extAPiConstr.endpoints[1]);
+            ExternalAPIConstructor.registerEndpoint(EndpointFactory.getInstance());
+            var index=ExternalAPIConstructor.prototype.endpoints.length - 1;
+
+			assert.deepEqual(EndpointFactory.getInstance(), ExternalAPIConstructor.prototype.endpoints[index]);
 		});
 	});
 	describe('getInstance(): ExternalAPIConstructor',function(){
