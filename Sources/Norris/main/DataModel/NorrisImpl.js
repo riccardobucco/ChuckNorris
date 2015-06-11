@@ -121,7 +121,11 @@ NorrisImpl.prototype.getChart = function(chartId) {
  * @return 	a list of the Norris' charts.
  */
 NorrisImpl.prototype.getCharts = function() {
-    return this.charts;
+    var charts = [];
+    for (var id in this.charts) {
+        charts.push(this.charts[id]);
+    }
+    return charts;
 };
 
 /**
@@ -161,7 +165,11 @@ NorrisImpl.prototype.getPage = function(pageId){
  * @return 	a list of the Norris' pages.
  */
 NorrisImpl.prototype.getPages = function(){
-    return this.pages;
+    var pages = [];
+    for (var id in this.pages) {
+        pages.push(this.pages[id]);
+    }
+    return pages;
 };
 
 /**

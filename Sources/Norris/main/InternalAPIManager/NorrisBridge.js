@@ -155,6 +155,12 @@ NorrisBridge.prototype.getMiddleware = function () {
     var app = express();
     app.set('views', __dirname + '/../../templates');
 
+    app.get('/', function (req, res) {
+        var pages = instance.getPages();
+        var charts = instance.getCharts();
+        res.render('index.ejs', {pages: pages, charts: charts});
+    });
+
     app.get('/pages/:pageId', function (req, res) {
         var page = instance.getPage(req.params.pageId);
         if(page)

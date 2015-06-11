@@ -53,8 +53,14 @@ function printTag(chart) {
             } else {
                 %><div class="col-md-<%=12 / lastRow %>"><%
             }
- %>
-                <h3><% if(charts[i].getSettings().title==""){ %>&nbsp;<% } else { %><%= charts[i].getSettings().title %><% } %></h3>
+            %>
+                <h3>
+                    <% if(charts[i].getSettings().title){ %>
+                        &nbsp;
+                    <% } else { %>
+                        <%= charts[i].getSettings().title %>
+                    <% } %>
+                </h3>
                 <%- printTag(charts[i]) %>
             </div>
             <% if(i % maxChartsCol == maxChartsCol - 1) { %></div><% }
