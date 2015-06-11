@@ -2,8 +2,8 @@
 * Name: BarChartImpl.java
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
-* Date: 2015-05-16
-* Version: 0.01
+* Date: 2015-05-26
+* Version: v0.02
 *
 * History:
 * =================================================================
@@ -11,7 +11,7 @@
 * =================================================================
 * v0.02 2015-05-26  Moretto Alessandro   Verify
 * =================================================================
-* v0.01 2015-05-22  Davide Dal Bianco  Creazione file
+* v0.01 2015-05-22  Dal Bianco Davide  Creation
 * =================================================================
 *
 */
@@ -19,8 +19,10 @@
 package it.kaizenteam.app.model.NorrisChart;
 
 /**
-This class is a bar chart. It contains within it the data (BarChartDataObject) and settings (BarChartSettingsObject) relative to the chart. It also contains BarChartInPlaceUpdater class, which implements the update type in place for the plot. BarChartImpl instance of the class is created by the class factory BarChartFactory.
- */
+* This class is a bar chart. It contains within it the data (BarChartDataObject) and settings (BarChartSettingsObject) relative to the chart. 
+* It also contains BarChartInPlaceUpdater class, which implements the update type in place for the plot. BarChartImpl instance of the class is created by the
+* class factory BarChartFactory.
+*/
 class BarChartImpl extends ChartImpl{
     static {
         //registro il tipo di grafico (DI)
