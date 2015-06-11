@@ -16,27 +16,72 @@ var dashboard = rtc.createPage('dashboard').add(map);
 
 app.use(rtc.getMiddleware());
 
+// settings
+map.setSettings({
+    area: {
+        y: 45.4043344,
+        x: 11.8830057,
+        zoom: 13
+    }
+});
+
 
 var lines = ['01','03','05','06','07','09','10','11','12','13','15','16','18','22','24','41','42','43','CC','DC','SIR1'];
 
-/*lines.forEach(function (line) {
-    setTimeout(function () {updateLine(line)});
-});*/
+var mapData = {
+    datasets: []
+}
+lines.forEach(function (line) {
+    mapData.datasets.push({
+        name: line,
+        color: '#ff0000',
+        values: []
+    });
+});
+map.setData(mapData);
 
-map.setData({
-    datasets: [
-        {name: 'pippo', values: []}
-    ]
-})
-updateLine('22');
+lines.forEach(function (line) {
+    setTimeout(function () {updateLine(line)});
+});
 
 
 function updateLine(line) {
     getLineFromAPS(line)
         .then(function (result) {
-            console.log('do something')
+            var updateData = {};
+            updateData.delete = [];
+            updateData.stream = [];
+
+            var chartData = map.getData().datasets;
+            var series;
+            for (var i in chartData) {
+                if (chartData[i].name === line) {
+                    series = i;
+                }
+            }
+
+            // elimina tutti i punti
+            for(var i in chartData[series].values) {
+                updateData.delete.push({
+                    series: series,
+                    index: i
+                })
+            }
+
+            // riaggiunge tutti i punti
+            for(var i in result) {
+                updateData.stream.push({
+                    series: series,
+                    data: {
+                        x: result[i].WGS84La,
+                        y: result[i].WGS84Fi
+                    }
+                })
+            }
+
+            map.update('movie',updateData);
         }, function () {
-            console.log('error')
+            console.error('Error during the request');
         })
         .finally(function () {
             setTimeout(function () {updateLine(line)});
