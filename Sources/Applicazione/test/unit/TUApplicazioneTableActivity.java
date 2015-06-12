@@ -1,3 +1,18 @@
+/*
+* Name: TUApplicazioneTableActivity.java
+* Package: test.unit
+* Location: Sources/Applicazione/test/unit
+* Date: 2015-05-24
+* Version: v0.01
+*
+* History:
+* =================================================================
+* Version   Date    Programmer  Changes
+* =================================================================
+* v0.01 2015-05-24  Moretto Alessandro  Creation
+* =================================================================
+*
+*/
 package test.unit;
 
 import android.app.Activity;
@@ -7,9 +22,7 @@ import junit.framework.TestCase;
 
 import it.kaizenteam.app.view.TableActivity;
 
-/**
- * Created by Moro on 11/06/15.
- */
+
 public class TUApplicazioneTableActivity extends TestCase {
     Activity a=null;
     public void setUp() throws Exception {
