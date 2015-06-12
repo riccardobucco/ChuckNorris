@@ -58,8 +58,11 @@ ChartImpl.prototype.updaters = {}; // updaters is a static variable
  * @param {ChartFactory} factory - the factory instance which corresponds to the type in chartType.
  */
 ChartImpl.registerFactory = function(chartType, factory) {
-    ChartImpl.prototype.factories[chartType] = factory; /* EXPLICITLY assign to prototype property,
-    otherwise it won't act as a static variable */
+    if (! ChartImpl.prototype.factories.hasOwnProperty(chartType)) {
+        ChartImpl.prototype.factories[chartType] = factory; /* EXPLICITLY assign to prototype property,
+         otherwise it won't act as a static variable */
+    }
+
 };
 
 /**
