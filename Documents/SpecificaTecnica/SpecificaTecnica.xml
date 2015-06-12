@@ -3,9 +3,9 @@
 <document>
 	<title>Specifica Tecnica</title>
 	<type>Esterno</type>
-	<redactedby>Bigarella Chiara \\ Bucco Riccardo \\ Carlon Chiara</redactedby>
-	<verifiedby> Dal Bianco Davide \\ Moretto Alessandro \\ Pavanello Fabio Matteo</verifiedby>
-	<approvedby>Pavanello Fabio Matteo</approvedby>
+	<redactedby>Pavanello Fabio Matteo</redactedby>
+	<verifiedby> Moretto Alessandro \\ Bigarella Chiara</verifiedby>
+	<approvedby>Carlon Chiara</approvedby>
 	<distribution>\groupname{} \\ Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<sections>
@@ -25,6 +25,42 @@
 	</appendix>
 
 	<changes>
+<!-- Fine fase 7-->
+        <version>
+            <id>5.00</id>
+            <date>2015-06-13</date>
+            <author>Carlon Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>     
+        <version>
+            <id>4.04</id>
+            <date>2015-06-12</date>
+            <author>Bigarella Chiara</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+        <version>
+            <id>4.03</id>
+            <date>2015-06-12</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Progettista</role>
+            <description>Fornito maggior dettaglio sulle relazioni individuate tra le componenti</description>
+        </version>
+        <version>
+            <id>4.02</id>
+            <date>2015-06-11</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica incrementi</description>
+        </version>
+        <version>
+            <id>4.01</id>
+            <date>2015-06-10</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Progettista</role>
+            <description>Correzione piccoli errori segnalati in RQ</description>
+        </version>
 <!-- Fine fase 6-->
         <version>
             <id>4.00</id>
@@ -33,112 +69,112 @@
             <role>Project Manager</role>
             <description>Approvazione del documento</description>
         </version>
-		<version>
+        <version>
             <id>3.16</id>
             <date>2015-03-29</date>
             <author>Rubin Marco</author>
             <role>Verificatore</role>
             <description>Verifica incrementi</description>
         </version>
-		<version>
+        <version>
             <id>3.15</id>
             <date>2015-05-10</date>
             <author>Davide Dal Bianco</author>
             <role>Verificatore</role>
             <description>Verifica incrementi</description>
         </version>
-		<version>
+        <version>
             <id>3.14</id>
             <date>2015-05-10</date>
             <author>Bigarella Chiara</author>
             <role>Progettista</role>
             <description>Aggiunto paragrafo per spiegare l'utilizzo delle classi factory</description>
         </version>
-		<version>
+        <version>
             <id>3.13</id>
             <date>2015-05-10</date>
             <author>Moretto Alessandro</author>
             <role>Verificatore</role>
             <description>Verifica incrementi architettura di Norris e Chuck</description>
         </version>
-		<version>
+        <version>
             <id>3.12</id>
             <date>2015-05-10</date>
             <author>Bucco Riccardo</author>
             <role>Progettista</role>
             <description>Lieve modifica architettura Norris e Chuck</description>
         </version>
-		<version>
+        <version>
             <id>3.11</id>
             <date>2015-05-09</date>
             <author>Bucco Riccardo</author>
             <role>Progettista</role>
             <description>Spostamento pattern dopo la definizione dell'architettura</description>
         </version>
-		<version>
+        <version>
             <id>3.10</id>
             <date>2015-05-09</date>
             <author>Moretto Alessandro</author>
             <role>Verificatore</role>
             <description>Verifica incrementi architettura</description>
         </version>
-		<version>
+        <version>
             <id>3.09</id>
             <date>2015-05-08</date>
             <author>Bigarella Chiara</author>
             <role>Progettista</role>
             <description>Correzioni errori rilevati dalla verifica dell'architettura dell'applicazione android</description>
         </version>
-		<version>
+        <version>
             <id>3.08</id>
             <date>2015-05-08</date>
             <author>Moretto Alessandro</author>
             <role>Verificatore</role>
             <description>Verifica architettura</description>
         </version>
-		<version>
+        <version>
             <id>3.07</id>
             <date>2015-05-08</date>
             <author>Bigarella Chiara</author>
             <role>Progettista</role>
             <description>Modifica architettura dell'applicazione android, da MVC a MVP</description>
         </version>
-		<version>
+        <version>
             <id>3.06</id>
             <date>2015-05-08</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Verificatore</role>
             <description>Verifica incrementi</description>
         </version>        
-		<version>
+        <version>
             <id>3.05</id>
             <date>2015-05-08</date>
             <author>Carlon Chiara</author>
             <role>Progettista</role>
             <description>Approfondita descrizione pattern Bridge</description>
         </version>
-		<version>
+        <version>
             <id>3.04</id>
             <date>2015-05-08</date>
             <author>Bigarella Chiara</author>
             <role>Progettista</role>
             <description>Correzione piccoli errori segnalati in RP</description>
         </version>
-		<version>
+        <version>
             <id>3.03</id>
             <date>2015-05-07</date>
             <author>Dal Bianco Davide</author>
             <role>Verificatore</role>
             <description>Verifica incrementi</description>
         </version>
-		<version>
+        <version>
             <id>3.02</id>
             <date>2015-05-07</date>
             <author>Carlon Chiara</author>
             <role>Amministratore</role>
             <description>Aggiunti svantaggi tecnologie</description>
         </version>
-		<version>
+        <version>
             <id>3.01</id>
             <date>2015-05-07</date>
             <author>Bucco Riccardo</author>

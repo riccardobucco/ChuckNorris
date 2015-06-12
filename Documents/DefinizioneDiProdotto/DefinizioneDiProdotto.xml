@@ -3,9 +3,9 @@
 <document>
 	<title>Definizione di Prodotto</title>
 	<type>Esterno</type>
-	<redactedby>Bigarella Chiara</redactedby>
-	<verifiedby>Moretto Alessandro</verifiedby>
-	<approvedby>Pavanello Fabio Matteo</approvedby>
+	<redactedby>Pavanello Fabio Matteo</redactedby>
+	<verifiedby>Dal Bianco Davide \\ Bucco Riccardo \\ Moretto Alessandro</verifiedby>
+	<approvedby>Carlon Chiara</approvedby>
 	<distribution>\groupname{} \\ Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<sections>
@@ -24,6 +24,56 @@
     </appendix>
 	   
 	<changes>
+        <!-- Fine fase 7-->
+        <version>
+            <id>4.00</id>
+            <date>2015-06-16</date>
+            <author>Carlon Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>3.02</id>
+            <date>2015-06-14</date>
+            <author>Dal Bianco Davide</author>
+            <role>Verificatore</role>
+            <description>Verifica descrizioni </description>
+        </version>
+        <version>
+            <id>3.01</id>
+            <date>2015-06-13</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Progettista</role>
+            <description>Aggiunta descrizione diagrammi di sequenza</description>
+        </version>
+        <version>
+            <id>3.02</id>
+            <date>2015-06-12</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica incremento</description>
+        </version>
+        <version>
+            <id>3.01</id>
+            <date>2015-06-12</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Progettista</role>
+            <description>Unione sezione classi aggiuntive con classi</description>
+        </version>
+        <version>
+            <id>3.02</id>
+            <date>2015-06-11</date>
+            <author>Moretto Alessandro</author>
+            <role>Verificatore</role>
+            <description>Verifica contenuto diagrammi </description>
+        </version>
+        <version>
+            <id>3.01</id>
+            <date>2015-06-10</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Progettista</role>
+            <description>Modifica descrizioni diagrammi con Astah ed l'importazione automatica</description>
+        </version>
         <!-- Fine fase 6-->
         <version>
             <id>3.00</id>
@@ -32,7 +82,7 @@
             <role>Project Manager</role>
             <description>Approvazione del documento</description>
         </version>
-		<version>
+        <version>
             <id>2.02</id>
             <date>2015-05-12</date>
             <author>Moretto Alessandro</author>
