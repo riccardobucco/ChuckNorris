@@ -38,10 +38,18 @@ describe('ChartRef(chart: ChartImpl)', function(){
     
     describe('getData() : ChartData', function(){
         it('should get the right data of the chart', function(){
+			var data = {
+                labels: ['1','2','3','4','5'],
+                datasets: [
+                    {name: 'pippo', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]},
+                    {name: 'pluto', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,0,4,5]},
+                    {name: 'paperino', color: "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [1,2,3,4,5]}
+                ]
+            };
             var barchart = new BarChartImpl('randomID');
-            barchart.setData({labels: ['2010','2011','2012','2013']});
+            barchart.setData(data);
             var chart = new ChartRef(barchart);
-		    assert.deepEqual({labels: ['2010','2011','2012','2013']}, chart.getData());
+		    assert.deepEqual(data, chart.getData());
         });
     });
     
@@ -56,7 +64,9 @@ describe('ChartRef(chart: ChartImpl)', function(){
 	            yLabel : '',
 		    style : {
 			animationDuration : 1000,
-			barArea : "60%", 
+			barArea : "60%",
+			maxValue: null,
+			minValue: null, 
 			showGrid : false,
 		    },
 	            legendPosition : 'right',

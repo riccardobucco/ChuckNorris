@@ -24,9 +24,9 @@ describe('NorrisBridge', function(){
 	describe('createPage(pageId: String): void',function(){
 		it('should create a page with the indicated id',function(){
 		  	var page = {'page':{'charts': [],'settings': {'maxChartsCol': 3,'maxChartsRow': 2,'title': "Norris's page"},'uid': '00'}};
-;
+			var endpoint = 'endpoint';
 			
-			var norrisImpl = new NorrisImpl();
+			var norrisImpl = new NorrisImpl(endpoint);
 			var norrisBridge = new NorrisBridge(norrisImpl);
 			
 			assert.deepEqual(page,norrisBridge.createPage('00'));
@@ -41,8 +41,9 @@ describe('NorrisBridge', function(){
 			  'login': function(){ console.log('login function');},
 			  'logout': function(){ console.log('logout function');}
 			};
+			var endpoint = 'endpoint';
 			
-			var norris = new NorrisImpl();
+			var norris = new NorrisImpl(endpoint);
 			var norrisBridge = new NorrisBridge(norris);
 			norrisBridge.setSettings(settings);
 			
@@ -59,8 +60,9 @@ describe('NorrisBridge', function(){
 			  'login': function(){ console.log('login function');},
 			  'logout': function(){ console.log('logout function');}
 			};
+			var endpoint = 'endpoint';
 			
-			var norris = new NorrisImpl();
+			var norris = new NorrisImpl(endpoint);
 			var norrisBridge = new NorrisBridge(norris);
 			norrisBridge.setSettings(settings);
 			
@@ -71,7 +73,8 @@ describe('NorrisBridge', function(){
 	
 	describe('getChart(Id: String): ChartBridge',function(){
 		it('should return a chart in the instance', function(){
-		    var norris = new NorrisImpl();
+		    var endpoint = 'endpoint';
+		    var norris = new NorrisImpl(endpoint);
 			var norrisBridge = new NorrisBridge(norris);
 			norrisBridge.createChart('mapchart','01');
 			

@@ -25,7 +25,8 @@ describe('NorrisImpl', function(){
     describe('createPage(pageId: String): void',function(){
         it('should create a page with the indicated id',function(){
             var page = {'charts': [],'settings': {'maxChartsCol': 3,'maxChartsRow': 2,'title': "Norris's page"},'uid': '00'};
-            var norrisImpl = new NorrisImpl();
+            var endpoint = 'endpoint';
+            var norrisImpl = new NorrisImpl(endpoint);
             assert.deepEqual(page,norrisImpl.createPage('00'));
         });
     });
@@ -38,8 +39,8 @@ describe('NorrisImpl', function(){
               'login': function(){ console.log('login function');},
               'logout': function(){ console.log('logout function');}
             };
-            
-            var norrisImpl = new NorrisImpl();
+            var endpoint = 'endpoint';
+            var norrisImpl = new NorrisImpl(endpoint);
             norrisImpl.setSettings(settings);
             
             assert.deepEqual(settings, norrisImpl.settings);
@@ -55,8 +56,9 @@ describe('NorrisImpl', function(){
               'login': function(){ console.log('login function');},
               'logout': function(){ console.log('logout function');}
             };
+            var endpoint = 'endpoint';
             
-            var norrisImpl = new NorrisImpl();
+            var norrisImpl = new NorrisImpl(endpoint);
             norrisImpl.setSettings(settings);
             
             assert.deepEqual(settings,norrisImpl.getSettings());
@@ -66,7 +68,8 @@ describe('NorrisImpl', function(){
     
     describe('getChart(Id: String): ChartImpl',function(){
         it('should return a chart in the page', function(){
-            var norrisImpl = new NorrisImpl();
+            var endpoint = 'endpoint';
+            var norrisImpl = new NorrisImpl(endpoint);
 
             norrisImpl.createChart('mapchart','01');
             var chart = {

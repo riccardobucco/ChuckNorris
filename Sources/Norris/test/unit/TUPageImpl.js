@@ -21,8 +21,8 @@ describe('PageImpl', function(){
 
     describe('add(chart : ChartImpl): PageImpl',function(){
         it('should add a chart to page',function(){
-            
-            var norris = new NorrisImpl();
+            var endpoint = 'endpoint';
+            var norris = new NorrisImpl(endpoint);
             var chart = norris.createChart('barchart','randomid');
             var page = new PageImpl('randomid');
             
@@ -58,7 +58,8 @@ describe('PageImpl', function(){
     
     describe('getCharts(): ChartImpl[]',function(){
         it('should return an array of charts in the page', function(){
-            var norris = new NorrisImpl();
+            var endpoint = 'endpoint';
+            var norris = new NorrisImpl(endpoint);
             var chart1 = norris.createChart('barchart','01');
             var chart2 = norris.createChart('linechart','02')
             var page = new PageImpl('randomid');
@@ -71,7 +72,8 @@ describe('PageImpl', function(){
     
     describe('clearCharts(): void',function(){
         it('should return an array of charts in the page', function(){
-            var norris = new NorrisImpl();
+            var endpoint = 'endpoint';
+            var norris = new NorrisImpl(endpoint);
             var chart1 = norris.createChart('barchart','01');
             var chart2 = norris.createChart('linechart','02')
             var page = new PageImpl('randomid');

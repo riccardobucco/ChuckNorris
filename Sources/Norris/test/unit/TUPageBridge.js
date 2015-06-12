@@ -23,8 +23,8 @@ describe('PageBridge', function(){
 
     describe('add(chart : ChartImpl): PageBridge',function(){
 		it('should add a chart to this page',function(){
-			
-		    var norris = new NorrisImpl();
+			var endpoint = 'endpoint';
+		    var norris = new NorrisImpl(endpoint);
 			var chart = norris.createChart('barchart','randomid');
 			var chartBridge = new ChartBridge(chart);
 			var pageNorris = new PageImpl('randomid');
@@ -68,7 +68,8 @@ describe('PageBridge', function(){
 	
 	describe('getCharts(): ChartImpl[]',function(){
 		it('should return an array of charts in the page', function(){
-			var norris = new NorrisImpl();
+			var endpoint = 'endpoint';
+			var norris = new NorrisImpl(endpoint);
 			var chart1 = norris.createChart('barchart','01');
 			var chart2 = norris.createChart('linechart','02')
 			var page = new PageImpl('randomid');

@@ -40,7 +40,7 @@ var defaults = {
 function NorrisImpl (endpoint) {
       if (!(this instanceof NorrisImpl)) return new NorrisImpl();
       events.EventEmitter.call(this); //NorrisImpl inherits from events.EventEmitter
-      if (endpoint != undefined) {
+      if (endpoint) {
             this.endpoint=endpoint;
             this.settings = {};
             this.charts = {};
