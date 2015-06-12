@@ -76,10 +76,13 @@ describe('NorrisImpl', function(){
             area : {
                 x: 0,
                 y:0,
-                zoom : 0
+                zoom : 1
             },
             description: 'This is a map chart',
-            legendPosition: 'top-right',
+            legendPosition: 'topright',
+            zoomPosition: 'topleft',
+            scalePosition: 'bottomleft',
+            allowFilter: false,
             maxItems: 5,
             title: ''
             },
