@@ -14,20 +14,30 @@
     <xsl:template match="*[local-name()='Package']">
         <xsl:if test="@name!='java' and @name!='Hidden'">
 
-            <xsl:if test="$system = 'Norris' and @name = 'DataModel'">
-                %\input{SpecificaTecnica/esempio.tex}
-            </xsl:if>
-
             <xsl:variable name="name">
                 <xsl:call-template name="namespace"><xsl:with-param name="id" select="@xmi.id"/></xsl:call-template>
             </xsl:variable>
             \level{5}[<xsl:value-of select="@name"/>]{<xsl:value-of select="$name"/>}
+          
             <xsl:call-template name="image"><xsl:with-param name="name" select="translate($name,':','-')"/></xsl:call-template>
 
             \begin{itemize}
             \item \textbf{Nome:} <xsl:value-of select="@name"/>
             \item \textbf{Tipo:} package
             \end{itemize}
+            
+            <xsl:if test="$system = 'Norris' and @name = 'DataModel'">
+                \input{SpecificaTecnica/Tex/relazioniDataModel.tex}
+            </xsl:if>
+            <xsl:if test="$system = 'Norris' and @name = 'InternalAPIManager'">
+                \input{SpecificaTecnica/Tex/relazioniInternalAPIManager.tex}
+            </xsl:if>
+            <xsl:if test="$system = 'Norris' and @name = 'ExternalAPIManager'">
+                \input{SpecificaTecnica/Tex/relazioniExternalAPIManager.tex}
+            </xsl:if>
+            <xsl:if test="$system = 'Chuck' and @name = 'ExternalAPIManager'">
+                %\input{SpecificaTecnica/Tex/relazioniExternalAPIManager.tex}
+            </xsl:if>
 
             <xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"><xsl:sort select="@name"/></xsl:apply-templates>
         </xsl:if>
