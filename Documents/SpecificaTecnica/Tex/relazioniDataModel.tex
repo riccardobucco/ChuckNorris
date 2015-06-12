@@ -7,7 +7,7 @@ La componente DataModel è a sua volta suddivisa nelle seguenti sottocomponenti:
 \level{6}{Relazioni tra le classi di Norris::DataModel}
 La classe NorrisImpl può contenere uno o più grafici di tipo ChartModel. Inoltre può contenere una o più pagine di tipo PageModel, all'interno delle quali può inserire alcuni dei propri grafici. Ogniqualvolta NorrisImpl aggiunge un nuovo grafico, viene emesso un evento apposito per segnalarlo.
 
-\level{6}{Relazioni tra le classi di Norris::DataModel::NorrisCharts}
+\level{6}{Relazioni tra le classi di Norris::DataModel::NorrisChart}
 Ogni classe che rappresenta un grafico (nel diagramma le classi in rosa) contiene al proprio interno la rispettiva classe factory (le classi in arancione). Nel momento in cui viene caricata, la classe rappresentante un grafico registra in ChartImpl la propria classe factory. Analogamente, vengono registrate anche le dipendenze della classe rappresentante un grafico rispetto ai vari tipi di aggiornamenti previsti per il grafico in questione (classi in verde). Memorizzando in ChartImpl tutte le dipendenze necessarie alla creazione e all'aggiornamento di un qualsiasi grafico, si ha la possibilità di fornire all'esterno un'unica interfaccia tramite la quale interagire con la sottocomponente NorrisChart.\\
 Nel momento in cui un grafico viene aggiornato, ChartImpl si occupa di segnalarlo tramite l'emissione di un evento apposito.
 

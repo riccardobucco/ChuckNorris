@@ -35,8 +35,20 @@
             <xsl:if test="$system = 'Norris' and @name = 'ExternalAPIManager'">
                 \input{SpecificaTecnica/Tex/relazioniExternalAPIManager.tex}
             </xsl:if>
-            <xsl:if test="$system = 'Chuck' and @name = 'ExternalAPIManager'">
-                %\input{SpecificaTecnica/Tex/relazioniExternalAPIManager.tex}
+            <xsl:if test="$system = 'Chuck' and @name = 'Model'">
+                \input{SpecificaTecnica/Tex/relazioniModel.tex}
+            </xsl:if>
+            <xsl:if test="$system = 'Chuck' and @name = 'ViewModel'">
+                %\input{SpecificaTecnica/Tex/relazioniViewModel.tex}
+            </xsl:if>
+            <xsl:if test="$system = 'Applicazione' and @name = 'Model'">
+                \input{SpecificaTecnica/Tex/relazioniAppModel.tex}
+            </xsl:if>
+             <xsl:if test="$system = 'Applicazione' and @name = 'View'">
+                %\input{SpecificaTecnica/Tex/relazioniView.tex}
+            </xsl:if>
+             <xsl:if test="$system = 'Applicazione' and @name = 'Presenter'">
+                %\input{SpecificaTecnica/Tex/relazioniPresenter.tex}
             </xsl:if>
 
             <xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"><xsl:sort select="@name"/></xsl:apply-templates>

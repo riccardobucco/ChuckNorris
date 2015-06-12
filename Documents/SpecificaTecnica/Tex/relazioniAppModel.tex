@@ -1,0 +1,12 @@
+La componente Model è a sua volta suddivisa nelle seguenti sottocomponenti:
+\begin{itemize}
+\item \textbf{NorrisChart} nel quale sono contenute tutte le classi che rappresentano i tipi di grafico, assieme alle rispettive classi factory, ai rispettivi tipi di aggiornamento e alle classi che rappresentano i tipi di dati, impostazioni e pacchetti di aggiornamento; 
+\item \textbf{Services} nel quale sono contenute le classi che si occupano di richiedere i grafici a Norris, di ricevere gli aggiornamenti dei grafici esistenti.
+\end{itemize}
+
+\level{6}{Relazioni tra le classi di Chuck::Model}
+L'interfaccia ChartReceiver si occupa di ricevere da Norris nuovi grafici e gli aggioramenti dei grafici già presenti. Per fare ciò deve reperire da NorrisSessionInfo l'indirizzo, l'endpoint e i cookie del server relativo alla sessione attiva.
+
+\level{6}{Relazioni tra le classi di Chuck::Model::NorrisChart}
+Ogni classe che rappresenta un grafico (nel diagramma le classi in rosa) contiene al proprio interno la rispettiva classe factory (le classi in arancione). Nel momento in cui viene caricata, la classe rappresentante un grafico registra in ChartImpl la propria classe factory. Analogamente, vengono registrate anche le dipendenze della classe rappresentante un grafico rispetto ai vari tipi di aggiornamenti previsti per il grafico in questione (classi in verde). Memorizzando in ChartImpl tutte le dipendenze necessarie alla creazione e all'aggiornamento di un qualsiasi grafico, si ha la possibilità di fornire all'esterno un'unica interfaccia tramite la quale interagire con la sottocomponente NorrisChart.
+
