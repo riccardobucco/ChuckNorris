@@ -10,14 +10,35 @@
         "description": {
             "type": "string"
         },
-        "legendPosition": {
+        "zoomPosition": {
             "enum": [
-                "top-right",
-                "top-left",
-                "bottom-left",
-                "bottom-right",
+                "topright",
+                "topleft",
+                "bottomleft",
+                "bottomright",
                 "none"
             ]
+        },
+        "legendPosition": {
+            "enum": [
+                "topright",
+                "topleft",
+                "bottomleft",
+                "bottomright",
+                "none"
+            ]
+        },
+        "scalePosition": {
+            "enum": [
+                "topright",
+                "topleft",
+                "bottomleft",
+                "bottomright",
+                "none"
+            ]
+        },
+        "allowFilter": {
+            "type": "boolean"
         },
         "maxItems": {
             "type": "integer",

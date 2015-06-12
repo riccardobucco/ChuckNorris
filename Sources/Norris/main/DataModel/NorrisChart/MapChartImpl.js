@@ -31,13 +31,16 @@ var MapChartMovieUpdater = require('./MapChartMovieUpdater.js');
 module.exports = MapChartImpl;
 
 var defaults = {
-	description: 'This is a map chart',
-	legendPosition : 'top-right', // values: top-right, top-left, bottom-right, bottom-left, none (the legend will not be shown)
-	maxItems : 5,
-	area: {
+    description: 'This is a map chart',
+    zoomPosition: 'topleft',
+    legendPosition: 'topright',
+    scalePosition: 'bottomleft',
+    allowFilter: false,
+    maxItems : 5,
+    area: {
         x: 0,
         y: 0,
-        zoom: 0
+        zoom: 1
     }
 };
 
@@ -47,11 +50,11 @@ var defaults = {
  * @param {String} id - the map chart's id.
  */
 function MapChartImpl (id) {
-	if (!(this instanceof MapChartImpl)) return new MapChartImpl(id);
-	ChartImpl.call(this, 'mapchart', id);
-	for(var key in defaults) {
-		this.settings[key] = defaults[key];
-	}
+    if (!(this instanceof MapChartImpl)) return new MapChartImpl(id);
+    ChartImpl.call(this, 'mapchart', id);
+    for(var key in defaults) {
+        this.settings[key] = defaults[key];
+    }
 }
 
 MapChartImpl.prototype.__proto__ = ChartImpl.prototype;
@@ -63,7 +66,7 @@ MapChartImpl.prototype.__proto__ = ChartImpl.prototype;
  * @constructor
  */
 function MapChartFactory() {
-	if(!(this instanceof MapChartFactory)) return new MapChartFactory();
+    if(!(this instanceof MapChartFactory)) return new MapChartFactory();
 }
 
 MapChartFactory.prototype.instance=new MapChartFactory(); // static
@@ -73,7 +76,7 @@ MapChartFactory.prototype.instance=new MapChartFactory(); // static
  * @returns {MapChartFactory} the factory's instance.
  */
 MapChartFactory.getInstance = function() { // static
-	return MapChartFactory.prototype.instance;
+    return MapChartFactory.prototype.instance;
 };
 
 /**
@@ -82,7 +85,7 @@ MapChartFactory.getInstance = function() { // static
  * @returns {MapChartImpl} - the created map chart.
  */
 MapChartFactory.prototype.createChart = function (id) {
-	return new MapChartImpl(id);
+    return new MapChartImpl(id);
 };
 
 // Dependency injection:

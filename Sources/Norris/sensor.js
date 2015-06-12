@@ -32,7 +32,9 @@ acc.setData({
 acc.setSettings({
     legendPosition: 'left',
     style: {
-        animationDuration: 0
+        animationDuration: 0,
+        maxValue: 100,
+        minValue: -100
     }
 })
 
@@ -47,18 +49,20 @@ gyro.setData({
 gyro.setSettings({
     legendPosition: 'left',
     style: {
-        animationDuration: 0
+        animationDuration: 0,
+        maxValue: 100,
+        minValue: -100
     }
 })
 
 sio.on('connection', function (socket) {
-	socket.on('acc', function (data) {
-		var values = JSON.parse(data);
-		var updateData = {stream: [
-			{label:"", data: [Math.round(values.x),Math.round(values.y),Math.round(values.z)]}
-		]};
-		acc.update('stream', updateData);
-	})
+    socket.on('acc', function (data) {
+        var values = JSON.parse(data);
+        var updateData = {stream: [
+            {label:"", data: [Math.round(values.x),Math.round(values.y),Math.round(values.z)]}
+        ]};
+        acc.update('stream', updateData);
+    })
     socket.on('gyro', function (data) {
         var values = JSON.parse(data);
         var updateData = {stream: [
