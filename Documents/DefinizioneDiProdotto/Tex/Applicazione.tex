@@ -22,7 +22,13 @@
                 \includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/ApplicazioneLogin}
                 \caption{Diagramma di sequenza - Applicazione, login iniziale}
             \end{figure}
-
+            \begin{enumerate}
+                \item il messaggio iniziale rappresenta l'invocazione del metodo onLoginClick(View view) nella LoginActivity v da parte del gestore eventi di Android a seguito della pressione del bottone di login da parte dell'utente;
+                \item viene avvertito il presenter p di tale evento;
+                \item esso fa visualizzare nella view un messaggio di attesa;
+                \item nel frattempo ottiene l'istanza di di HttpRequesterWithCookie ed effettua il login su di essa;
+                \item nel caso in cui il login abbia successo viene chiesto alla view di visualizzare la ListActivity.
+            \end{enumerate}
 
         \level{3}{Visualizzazione di un chart}
             Tale diagramma descrive come avviene la visualizzazione di un chart appartenente a una certa istanza di \insglo{Norris}.
@@ -31,7 +37,12 @@
                 \includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/ApplicazioneVisualizzazioneChart}
                 \caption{Diagramma di sequenza - Applicazione, visualizzazione chart}
             \end{figure}
-
+            \begin{enumerate}
+                \item alla creazione dell'activity viene creato il relativo presenter attraverso il metodo create della classe PresenterImpl;
+                \item tale presenter ottiene l'istanza unica di ChartReceiver e richiede il Chart;
+                \item ChartReciever notifica il presenter alla ricezione dei dati ed attiva gli aggiornamenti.
+                \item il presenter infine crea il modello dei dati e dice alla view iniziale di renderizzare il chart.
+            \end{enumerate}
             
         \level{3}{Aggiornamento di un chart}
             Tale diagramma descrive come avviene l'aggiornamento di un chart nel momento in cui arrivano i nuovi dati da una certa istanza di \insglo{Norris} alla quale si è collegati.
@@ -40,3 +51,10 @@
                 \includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/ApplicazioneAggiornamentoChart}
                 \caption{Diagramma di sequenza - Applicazione, aggiornamento chart}
             \end{figure}
+            \begin{enumerate}
+                \item il messaggio iniziale rappresenta l'arrivo di un aggiornamento attraverso il canale socket;
+                \item ChartReceiver avverte tutti i suoi osservatori chiamando i loro metodi update e passandogli il dato ricevuto;
+                \item il presenter p a questo punto trasforma il facchetto dal formato json al formato appropriato;
+                \item aggiorna successivamente il modello dei dati;
+                \item infine chiede alla view (LineChartActivity) la renderizzazione dei nuovi dati.
+            \end{enumerate}
