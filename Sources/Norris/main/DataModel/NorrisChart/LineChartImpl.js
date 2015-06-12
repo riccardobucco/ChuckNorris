@@ -29,18 +29,20 @@ var LineChartStreamUpdater = require('./LineChartStreamUpdater.js');
 module.exports = LineChartImpl;
 
 var defaults = {
-        description : 'This is a line chart.',
-        xLabel : '',
-        yLabel : '',
-        legendPosition : 'right',
-        maxItems : 10,
-        style : {
-            pointDotSize : 0 , // Number - Size of each point dot in pixels
-            bezierCurve : true, // Boolean - Whether the line is curved between points
-            showGrid : false,
-            animationDuration : 1000
-        }
-    };
+    description : 'This is a line chart.',
+    xLabel : '',
+    yLabel : '',
+    legendPosition : 'right',
+    maxItems : 10,
+    style : {
+        pointDotSize : 0 , // Number - Size of each point dot in pixels
+        bezierCurve : true, // Boolean - Whether the line is curved between points
+        showGrid : false,
+        animationDuration : 1000,
+        maxValue: null,
+        minValue: null
+    }
+};
 
 /**
  * Creates a new line chart.

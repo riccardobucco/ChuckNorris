@@ -10,16 +10,16 @@
 
     <sections>
         <name>Tex/Introduzione.tex</name>
-        <name>Tex/CicloDiVita.tex</name>
         <name>Tex/Scadenze.tex</name>
         <name>Tex/AnalisiDeiRischi.tex</name>
-        <name>Tex/Pianificazione.tex</name>
+        <name>Tex/Strategia.tex</name>
         <name>Tex/Preventivo.tex</name>
         <name>Tex/Consuntivo.tex</name>
     </sections>
 
     <appendix>
         <name>Tex/AppendiceInvestimento.tex</name>
+        <name>Tex/AppendiceRiscontroRischi.tex</name>
         <name>Tex/Organigramma.tex</name>
     </appendix>
 

@@ -1,18 +1,17 @@
-<%
-var charts = page.getCharts();
-var settings = page.getSettings();
-var maxChartsRow = settings.maxChartsRow;
-var maxChartsCol = settings.maxChartsCol;
-var path = endpoint;
-
-function printTag(chart) {
-    return '<chuck-' + chart.getType() + ' chart-endpoint="' + path + '" chart-id="' + chart.getId() + '"></chuck-' + chart.getType() + '>';
-}
-%>
-
 <!DOCTYPE html>
 <html ng-app="chuck">
     <head>
+        <%
+        var charts = page.getCharts();
+        var settings = page.getSettings();
+        var maxChartsRow = settings.maxChartsRow;
+        var maxChartsCol = settings.maxChartsCol;
+        var path = endpoint;
+
+        function printTag(chart) {
+            return '<chuck-' + chart.getType() + ' chart-endpoint="' + path + '" chart-id="' + chart.getId() + '"></chuck-' + chart.getType() + '>';
+        }
+        %>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,13 +31,13 @@ function printTag(chart) {
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <header class="jumbotron text-center">
       <div class="container">
-        <img src="/images/norris-hor.png" height="100px" title="Norris" alt="Norris Logo" />
+        <img src="/images/norris-hor.png" class="logo-norris" title="Norris" alt="Norris Logo" />
           <h1><%= settings.title %></h1>
       </div>
     </header>
     <div class="container content">
         <%
-        var nTot = charts.length < maxChartsRow * maxChartsRow ? charts.length : maxChartsRow * maxChartsRow;
+        var nTot = charts.length < maxChartsRow * maxChartsCol ? charts.length : maxChartsRow * maxChartsCol;
         var nRows = Math.floor(nTot / maxChartsCol);
         var lastRow = nTot % maxChartsCol;
         var currentRow = 0;
@@ -56,9 +55,10 @@ function printTag(chart) {
             %>
                 <h3>
                     <% if(charts[i].getSettings().title){ %>
-                        &nbsp;
-                    <% } else { %>
+
                         <%= charts[i].getSettings().title %>
+                    <% } else { %>
+                        &nbsp;
                     <% } %>
                 </h3>
                 <%- printTag(charts[i]) %>

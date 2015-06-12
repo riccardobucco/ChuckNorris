@@ -22,6 +22,12 @@
                 \includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/ChuckInserimentoChart}
                 \caption{Diagramma di sequenza - Chuck, creazione chart}
             \end{figure}
+            \begin{enumerate}
+                \item ChartViewModel richiede l'ottenimento di un chart specifico presente in una istanza di Norris a ChartRequester;
+                \item questo apre il canale socket ed imposta delle callback per gli eventi chart e update;
+                \item ricevuto il grafico crea il modello dei dati;
+                \item infine ChartViewModel esegue il metodo init che permette di inizializzare la view e visualizzare il Chart secondo i dati memorizzati.
+            \end{enumerate}
 
         \level{3}{Aggiornamento di un chart}
             Tale diagramma descrive come viene aggiornato un chart nel momento in cui arrivano nuovi dati dall'istanza di \insglo{Norris} alla quale il grafico appartiene.
@@ -30,3 +36,11 @@
                 \includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/ChuckAggiornamentoChart}
                 \caption{Diagramma di sequenza - Chuck, aggiornamento chart}
             \end{figure}
+            \begin{enumerate}
+                \item il messaggio iniziale rappresenta la notifica inviata da ChartRequester da parte di Norris attraverso il canale socket per avvertirlo dell'avvenuto aggiornamento;
+                \item ChartRequester aggiorna il modello dei dati;
+                \item avverte infine il ChartViewModel di un'avvenuta modifica nel modello richiedendo dunque la renderizzazione dei nuovi dati.
+                \item
+                \item
+                \item
+            \end{enumerate}

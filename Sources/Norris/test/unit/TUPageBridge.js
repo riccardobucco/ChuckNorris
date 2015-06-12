@@ -36,12 +36,12 @@ describe('PageBridge', function(){
 	});
 
 	describe('setSettings(settings: PageSettings): void',function(){
-		it('should set the page settings',function(){
-			var settings = {'title':'my page','maxChartsRow':'7','maxChartsCol':'4'};
+		it('should set the page settings', function(){
+			var settings = {title:'my page', maxChartsRow:2 , maxChartsCol: 4};
 			var page = new PageImpl('randomid');
 			var pageBridge = new PageBridge(page);
 			pageBridge.setSettings(settings);
-			assert.deepEqual(settings,pageBridge.page.settings);
+			assert.deepEqual(settings,pageBridge.getSettings());
 		});
 	});
 	
@@ -55,11 +55,14 @@ describe('PageBridge', function(){
 	
 	describe('getSettings(): PageSettings',function(){
 		it('should return the settings of the page', function(){
-			var settings = {'title':'my page','maxChartsRow':'7','maxChartsCol':'4'};
+			var settings = { 
+			    title: 'Norris\'s page',
+                maxChartsRow: 2, // maximum number of charts per row
+                maxChartsCol: 3 // maximum number of charts per column
+            };
 			var page = new PageImpl('randomid');
-			page.setSettings(settings);
 			var pageBridge = new PageBridge(page);
-			assert.deepEqual(settings,pageBridge.page.getSettings());
+			assert.deepEqual(settings,pageBridge.getSettings());
 		});
 	});
 	

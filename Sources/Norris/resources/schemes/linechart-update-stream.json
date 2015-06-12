@@ -10,7 +10,7 @@
                 "type": "object",
                 "properties": {
                     "label": {
-                        "type": "string",
+                        "type": "string"
                     },
                     "data": {
                         "type": "array",

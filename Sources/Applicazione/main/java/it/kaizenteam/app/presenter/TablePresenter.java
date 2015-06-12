@@ -2,16 +2,16 @@
 * Name: TablePresenter.java
 * Package: it.kaizenteam.app.presenter
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/presenter
-* Date: 2015-05-22
-* Version: 0.01
+* Date: 2015-05-25
+* Version: v0.02
 *
 * History:
 * =================================================================
 * Version	Date	Programmer	Changes
 * =================================================================
-* v0.02 2015-05-26  Davide Dal Bianco   Verify
+* v0.02 2015-05-26  Dal Bianco Davide   Verify
 * =================================================================
-* v0.01 2015-05-25  Moretto Alessandro  Creazione file
+* v0.01 2015-05-25  Moretto Alessandro  Creation
 * =================================================================
 *
 */

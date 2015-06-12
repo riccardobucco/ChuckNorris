@@ -1,20 +1,25 @@
 % !TEX encoding = UTF-8 Unicode
-\level{1}{Ciclo di vita}
-		Il modello di ciclo di vita scelto per il \insglo{prodotto} è il \underline{\insglo{modello incrementale}}.\\
-		I motivi di tale scelta sono legati alle sue proprietà:
+\level{2}{Ciclo di vita}
+		Nella scelta del ciclo di vita hanno rivestito particolare importanza le seguenti necessità:
+		\begin{itemize}
+			\item produrre "valore" ad ogni incremento, per avere in un tempo minore dei risultati che confermano il lavoro svolto oppure richiedono una revisione senza che questa causi eccessivi ritardi e dispendio di tempo e risorse;
+			\item verificare in modo continuo le funzionalità implementate per rendere  sempre più stabile e di qualità;
+			\item distribuire le risorse in un numero limitato di attività, per semplificare la valutazione e pianificazione di risorse e tempi;
+			\item incrementare gradualmente le funzionalità messe a disposizione dal \insglo{prodotto}, con la possibilità di soddisfare in primis i requisiti con maggiore criticità.\\
+		\end{itemize}
+		
+		La scelta è ricaduta sul \underline{\insglo{modello incrementale}}, ritenuto il più adatto alle esigenze del gruppo in questo progetto:
 		\begin{itemize}
 			\item È richiesto che il sistema sia scomposto in sottosistemi. Ciò porta a due caratteristiche positive:
 			\begin{itemize}
-				\item in un breve lasso di tempo le risorse sono utilizzate in un numero limitato di attività rendendo più controllabile la gestione di esse e dei tempi;
+				\item la gestione di risorse e tempi è più controllabile;
 				\item i test possono esser fatti con un dettaglio maggiore e quindi saranno più esaustivi.
 			\end{itemize}
 			\item Prevede rilasci multipli e successivi portando quindi i seguenti vantaggi:
 			\begin{itemize}
 				\item possibilità di rilasciare prototipi;
-				\item incrementare di volta in volta le funzionalità messe a disposizione dal \insglo{prodotto};
-				\item i primi rilasci riguarderanno il soddisfacimento dei requisiti di maggiore importanza facendo in modo che essi attraversino più cicli di verifica rendendoli sempre più raffinati e migliorati.
+				\item incremento di volta in volta delle funzionalità messe a disposizione dal \insglo{prodotto};
+				\item soddisfacimento dei requisiti di maggiore importanza e attraversamento di più cicli di verifica da parte di quest'ultimi con il risultato di un maggiore miglioramento.
 			\end{itemize}
-			\item Ogni incremento fissa una baseline consolidando di conseguenza la sezione coinvolta. Tale cosa riduce il rischio di fallimento;
-			\item Grazie alla pianificazione di tali cicli incrementali si riesce ad avere un maggior controllo dei tempi e dei costi;
-			\item Essendo i requisiti utente catalogati in base alla loro importanza, vengono soddisfatti in primis quelli con maggiore criticità.
+			\item Ogni incremento fissa una baseline consolidando di conseguenza la sezione coinvolta. Tale cosa riduce il rischio di fallimento.
 		\end{itemize}

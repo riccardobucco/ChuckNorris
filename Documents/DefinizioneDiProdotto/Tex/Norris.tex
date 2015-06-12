@@ -23,15 +23,13 @@
                 \includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/NorrisCreazioneChart}
                 \caption{Diagramma di sequenza - Norris, creazione chart}
             \end{figure}
+            \begin{enumerate}
+                \item NorrisBridge invoca il metodo createChart di NorrisImpl in seguito all'utilizzo dell'API interna di norris per la creazione di un chart;
+                \item NorrisImpl chiede la creazione del chart alla classe ChartImpl nel modello dei dati;
+                \item questa crea il chart vero e proprio sfruttando la classe factory, presente all'interno dell'HashMap factories, per la creazione del chart richiesto;
+                \item infine viene eseguito il metodo emit per avvertire che è avvenuta la creazione.
+            \end{enumerate}
 
-
-        \level{3}{Aggiornamento di un chart}
-        	Tale diagramma descrive come viene aggiornato un chart di un certo tipo (sulla base delle modalità di aggiornamento definite per quel tipo di grafico).
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/NorrisAggiornamentoChart}
-                \caption{Diagramma di sequenza - Norris, aggiornamento chart}
-            \end{figure}
 
             
         \level{3}{Invio lista dei grafici}
@@ -41,6 +39,12 @@
                 \includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/NorrisInvioLista}
                 \caption{Diagramma di sequenza - Norris, invio lista}
             \end{figure}
+            \begin{enumerate}
+                \item alla richiesta http di tipo GET per la lista express gestisce tale richiesta dando al compito al ListEndpoint;
+                \item questo controlla se la richiesta può esser soddisfatta controllando lo stato della sessione del client;
+                \item ottiene la lista dei chart;
+                \item infine invia la risposta con formato JSON sfruttando express.
+            \end{enumerate}
 
             
         \level{3}{Invio di un chart}
@@ -50,3 +54,25 @@
                 \includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/NorrisInvioChart}
                 \caption{Diagramma di sequenza - Norris, invio chart}
             \end{figure}
+            \begin{enumerate}
+                \item la richiesta di un chart viene effettuata sfruttando il canale socket e quindi alla ricezione dell'evento di richiesta socket.io controlla se il cookie è ancora valido;
+                \item viene poi dato il compito al ChartEndpoint di generare la risposta;
+                \item questo ottiene il tipo del grafico;
+                \item in seguito ottiene le impostazioni del grafico;
+                \item l'ultima richiesta a ChartRef sono quindi i dati del grafico;
+                \item infine può emettere il segnale di risposta verso il client.
+            \end{enumerate}
+
+
+        \level{3}{Aggiornamento di un chart}
+            Tale diagramma descrive come viene aggiornato un chart di un certo tipo (sulla base delle modalità di aggiornamento definite per quel tipo di grafico).
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.3]{DefinizioneDiProdotto/Pics/NorrisAggiornamentoChart}
+                \caption{Diagramma di sequenza - Norris, aggiornamento chart}
+            \end{figure}
+            \begin{enumerate}
+                \item all'utilizzo dell'API interna di Norris per la richiesta di aggiornamento di un chart il ChartBridge invoca il metodo di aggiorneamento nel modello dei dati (ChartImpl);
+                \item questo richiederà l'aggiornamento alla classe opportuna sfruttando l'HashMap updaters;
+                \item infine attraverso il canale socket vengono avvisati i vari client.
+            \end{enumerate}

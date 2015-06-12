@@ -1,31 +1,39 @@
 /*
 * Name: TIApplicazioneNorrisChart.java
-* Package: it.kaizenteam.app.model
-* Location: Sources/Applicazione/test/unit
-* Date: 2015-05-19
-* Version: v0.02
+* Package: test.integration
+* Location: Sources/Applicazione/test/integration
+* Date: 2015-05-25
+* Version: v0.01
 *
 * History:
 * =================================================================
-* Version	Date	Programmer	Changes
+* Version   Date    Programmer  Changes
 * =================================================================
-* v0.02 2015-05-26  Moretto Alessandro   Verify
-* =================================================================
-* v0.01 2015-05-23  Davide Dal Bianco  Creation
+* v0.01 2015-05-25  Dal Bianco Davide  Creation
 * =================================================================
 *
 */
-package it.kaizenteam.app.model.NorrisChart;
+package test.integration;
 
 import junit.framework.TestCase;
 
-import java.util.ArrayList;
+import it.kaizenteam.app.model.NorrisSessionInfo;
+import it.kaizenteam.app.model.NorrisSessionInfoImpl;
 
 public class TIApplicazioneNorrisChart extends TestCase {
     public void testCreation(){
-        ChartModel chart= ChartImpl.create("barchart","idchart");
-        chart.setData(null);
-        chart.update("inplace",new BarChartInPlaceUpdate(new ArrayList<BarChartElementInPlaceUpdate>()));
-        assertEquals(null,chart.getData());
+        NorrisSessionInfo a = NorrisSessionInfoImpl.getInstance();
+        NorrisSessionInfo b = NorrisSessionInfoImpl.getInstance();
+        assertEquals(a,b);
+        a.setAddress("add1");
+        assertEquals("add1",a.getAddress());
+        a.login();
+        assertEquals(true,a.isLogged());
+        a.logout();
+        assertEquals(false,a.isLogged());
+        a.logout();
+        assertEquals(false,a.isLogged());
+        a.login();
+        assertEquals(true,a.isLogged());
     }
 }

@@ -2,16 +2,16 @@
 * Name: MapChartInPlaceUpdate.java
 * Package: it.kaizenteam.app.model.NorrisChart
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/NorrisChart
-* Date: 2015-05-19
-* Version: 0.01
+* Date: 2015-05-18
+* Version: v0.02
 *
 * History:
 * =================================================================
 * Version	Date	Programmer	Changes
 * =================================================================
-* v0.02 2015-05-24  Davide Dal Bianco   Verify
+* v0.02 2015-05-24  Dal Bianco Davide   Verify
 * =================================================================
-* v0.01 2015-05-18  Moretto Alessandro  Creazione file
+* v0.01 2015-05-18  Moretto Alessandro  Creation
 * =================================================================
 *
 */
