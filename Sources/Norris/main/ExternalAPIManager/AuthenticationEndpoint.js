@@ -26,6 +26,8 @@ var express = require('express');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+module.exports=AuthenticationEndpoint;
+
 /**
  * Creates an AuthenticationEndpoint.
  * @param {ExternalAPIController} controller

@@ -27,10 +27,10 @@ var NorrisPage = require('./NorrisPage');
 module.exports = NorrisImpl;
 
 var defaults = {
-    login : function() {return true;},
-    logout: function() {return true;},
-    isLogged: function() {return true;},
-    keepAlive: function() {return true;}
+      login : function() {return true;},
+      logout: function() {return true;},
+      isLogged: function() {return true;},
+      keepAlive: function() {return true;}
 };
 
 /**
@@ -38,18 +38,18 @@ var defaults = {
  * @constructor
  */
 function NorrisImpl (endpoint) {
-    if (!(this instanceof NorrisImpl)) return new NorrisImpl();
-    events.EventEmitter.call(this); //NorrisImpl inherits from events.EventEmitter
-    if (endpoint != '') {
-        this.endpoint=endpoint;
-        this.settings = {};
-        this.charts = {};
-        this.pages = {};
-        this.setSettings(defaults);
-    }
-    else {
+      if (!(this instanceof NorrisImpl)) return new NorrisImpl();
+      events.EventEmitter.call(this); //NorrisImpl inherits from events.EventEmitter
+      if (endpoint != undefined) {
+            this.endpoint=endpoint;
+            this.settings = {};
+            this.charts = {};
+            this.pages = {};
+            this.setSettings(defaults);
+      }
+      else {
         throw ("missingEndpoint");
-    }
+      }
 }
 
 NorrisImpl.prototype.__proto__=events.EventEmitter.prototype;
@@ -61,13 +61,13 @@ NorrisImpl.prototype.__proto__=events.EventEmitter.prototype;
  * @param settings - a JSON object containing the Norris' settings you wish to add.
  */
 NorrisImpl.prototype.setSettings = function(settings) {
-    if(typeof settings == 'object') {
-        for(var key in settings) {
-            if(settings.hasOwnProperty(key)) {
-                this.settings[key] = settings[key];
+      if(typeof settings == 'object') {
+            for(var key in settings) {
+                  if(settings.hasOwnProperty(key)) {
+                        this.settings[key] = settings[key];
+                  }
             }
-        }
-    }
+      }
 };
 
 /**
@@ -76,7 +76,7 @@ NorrisImpl.prototype.setSettings = function(settings) {
  * @return the Norris' settings.
  */
 NorrisImpl.prototype.getSettings = function() {
-    return this.settings;
+      return this.settings;
 };
 
 /**
@@ -89,20 +89,20 @@ NorrisImpl.prototype.getSettings = function() {
  * @return {ChartImpl} the created chart.
  */
 NorrisImpl.prototype.createChart = function(chartType, chartId) {
-    
-    if (!this.charts.hasOwnProperty(chartId)) {     //the chart's ID should be unique
-        var chart = NorrisChart.createChart(chartType, chartId);
-        if (chart != null) {
-            this.charts[chartId] = chart;
-            this.emit('create', chart); // emits a 'creat' signal
-            console.log("New chart added: "+chartId); // TOGLIERE
-        }
-        return chart;
-    }
-    else {
-        console.log("ERROR: this ID is already used.");
-        throw("NorrisImpl:IDAlreadyUsed");
-    }
+      
+      if (!this.charts.hasOwnProperty(chartId)) {       //the chart's ID should be unique
+            var chart = NorrisChart.createChart(chartType, chartId);
+            if (chart != null) {
+                  this.charts[chartId] = chart;
+                  this.emit('create', chart); // emits a 'create' signal
+                  console.log("New chart added: " + chartId); // TOGLIERE
+            }
+            return chart;
+      }
+      else {
+            console.log("ERROR: this ID is already used.");
+            throw("NorrisImpl:IDAlreadyUsed");
+      }
 };
 
 /**
@@ -121,11 +121,11 @@ NorrisImpl.prototype.getChart = function(chartId) {
  * @return 	a list of the Norris' charts.
  */
 NorrisImpl.prototype.getCharts = function() {
-    var charts = [];
-    for (var id in this.charts) {
-        charts.push(this.charts[id]);
-    }
-    return charts;
+      var charts = [];
+      for (var id in this.charts) {
+            charts.push(this.charts[id]);
+      }
+      return charts;
 };
 
 /**
@@ -137,16 +137,16 @@ NorrisImpl.prototype.getCharts = function() {
  * @return  {PageImpl} the created page.
  */
 NorrisImpl.prototype.createPage = function(pageId) {
-    if (!this.pages.hasOwnProperty(pageId)) {     //the page's ID should be unique
-        var page = new NorrisPage(pageId);
-        this.pages[pageId] = page;
-        console.log("New page added: "+pageId); // TOGLIERE
-        return page;
-    }
-    else {
-        console.log("ERROR: this ID is already used.");
-        throw("NorrisImpl:IDAlreadyUsed");
-    }
+      if (!this.pages.hasOwnProperty(pageId)) {       //the page's ID should be unique
+            var page = new NorrisPage(pageId);
+            this.pages[pageId] = page;
+            console.log("New page added: "+pageId); // TOGLIERE
+            return page;
+      }
+      else {
+            console.log("ERROR: this ID is already used.");
+            throw("NorrisImpl:IDAlreadyUsed");
+      }
 };
 
 /**
@@ -156,7 +156,7 @@ NorrisImpl.prototype.createPage = function(pageId) {
  * @return 	{PageImpl} the Norris' page with the ID==chartId.
  */
 NorrisImpl.prototype.getPage = function(pageId){
-    return this.pages[pageId];
+      return this.pages[pageId];
 };
 
 /**
@@ -165,11 +165,11 @@ NorrisImpl.prototype.getPage = function(pageId){
  * @return 	a list of the Norris' pages.
  */
 NorrisImpl.prototype.getPages = function(){
-    var pages = [];
-    for (var id in this.pages) {
-        pages.push(this.pages[id]);
-    }
-    return pages;
+      var pages = [];
+      for (var id in this.pages) {
+            pages.push(this.pages[id]);
+      }
+      return pages;
 };
 
 /**
@@ -178,5 +178,5 @@ NorrisImpl.prototype.getPages = function(){
  * @return {String} the endpoint.
  */
 NorrisImpl.prototype.getEndpoint = function(){
-    return this.endpoint;
+      return this.endpoint;
 };

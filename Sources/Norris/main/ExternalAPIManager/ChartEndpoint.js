@@ -25,6 +25,8 @@ var SocketIOCookieParser = require('socket.io-cookie-parser');
 
 var sio = require('socket.io');
 
+module.exports=ChartEndpoint;
+
 /**
  * Creates a ChartEndpoint.
  * @param {ExternalAPIController} controller
