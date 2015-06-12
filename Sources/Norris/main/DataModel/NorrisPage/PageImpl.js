@@ -31,9 +31,9 @@ var validate = require('jsonschema').validate;
 module.exports = PageImpl;
 
 var defaults = {
-	title: 'Norris\'s page',
-	maxChartsRow: 2, // maximum number of charts per row
-	maxChartsCol: 3 // maximum number of charts per column
+    title: 'Norris\'s page',
+    maxChartsRow: 2, // maximum number of charts per row
+    maxChartsCol: 3 // maximum number of charts per column
 };
 
 /**
@@ -42,11 +42,11 @@ var defaults = {
  * @param {String} PageId - the page's id.
  */
 function PageImpl (PageId) {
-	if (!(this instanceof PageImpl)) return new PageImpl(PageId);
-	this.uid = PageId;
-	this.settings = {};
-	this.charts = [];
-	this.setSettings(defaults);
+    if (!(this instanceof PageImpl)) return new PageImpl(PageId);
+    this.uid = PageId;
+    this.settings = {};
+    this.charts = [];
+    this.setSettings(defaults);
 }
 
 /**
@@ -56,20 +56,20 @@ function PageImpl (PageId) {
  * @return {PageImpl} the page to which you've added the chart.
  */
 PageImpl.prototype.add = function (chart) {
-	if (this.charts.length < (this.settings['maxChartsCol']*this.settings['maxChartsRow']) ) {
-		if ((chart instanceof NorrisChart)) {
-			this.charts.push(chart);
-			return this;
-		}
-		else {
-			console.log("ERROR: wrong type. A NorrisChart widget is required.");
+    if (this.charts.length < (this.settings['maxChartsCol']*this.settings['maxChartsRow']) ) {
+        if ((chart instanceof NorrisChart)) {
+            this.charts.push(chart);
+            return this;
+        }
+        else {
+            console.log("ERROR: wrong type. A NorrisChart widget is required.");
             throw("PageImpl:requiredNorrisChart");
-		}
-	}
-	else {
-		console.log("ERROR: maximum number of charts is reached. You cannot add other charts to the page.");
+        }
+    }
+    else {
+        console.log("ERROR: maximum number of charts is reached. You cannot add other charts to the page.");
         throw("PageImpl:reachedMaximunNumberOfCharts");
-	}
+    }
 
 };
 
@@ -79,7 +79,7 @@ PageImpl.prototype.add = function (chart) {
  * @return {String} the page's ID.
  */
 PageImpl.prototype.getId = function() {
-	return this.uid;
+    return this.uid;
 };
 
 /**
@@ -89,10 +89,10 @@ PageImpl.prototype.getId = function() {
  * @param {PageSettings} settings - a JSON object containing the page's settings you wish to add.
  */
 PageImpl.prototype.setSettings = function(settings) {
-	function set(mySettings, settings) {
+    function set(mySettings, settings) {
         if(typeof settings == 'object') {
             for(var key in settings) {
-                if ( typeof settings[key] == 'object') {
+                if (typeof settings[key] == 'object') {
                     set(mySettings[key], settings[key])
                 }
                 else {
@@ -119,7 +119,7 @@ PageImpl.prototype.setSettings = function(settings) {
  * @return {PageSettings} the page's settings.
  */
 PageImpl.prototype.getSettings = function() {
-	return this.settings;
+    return this.settings;
 };
 
 /**
@@ -128,27 +128,27 @@ PageImpl.prototype.getSettings = function() {
  * @return {ChartImpl[]} the page's charts.
  */
 PageImpl.prototype.getCharts = function() {
-	return this.charts;
+    return this.charts;
 };
 
 /**
  * Removes all the charts in the page.
  */
 PageImpl.prototype.clearCharts = function() {
-	this.charts=[];
+    this.charts=[];
 };
 /*
 /* Modifica le impostazioni * /
 PageImpl.prototype.set = function (param, info) {
-	if(typeof param == 'object') {
-		for(var key in param) {
-			if(param.hasOwnProperty(key)) {
-				this.settings[key] = param[key];
-			}
-		}
-	} else {
-		this.settings[param] = info;
-	}
+    if(typeof param == 'object') {
+        for(var key in param) {
+            if(param.hasOwnProperty(key)) {
+                this.settings[key] = param[key];
+            }
+        }
+    } else {
+        this.settings[param] = info;
+    }
 }
 
 */
