@@ -45,7 +45,7 @@
                 \input{SpecificaTecnica/Tex/relazioniAppModel.tex}
             </xsl:if>
              <xsl:if test="$system = 'Applicazione' and @name = 'View'">
-                %\input{SpecificaTecnica/Tex/relazioniView.tex}
+                \input{SpecificaTecnica/Tex/relazioniView.tex}
             </xsl:if>
              <xsl:if test="$system = 'Applicazione' and @name = 'Presenter'">
                 %\input{SpecificaTecnica/Tex/relazioniPresenter.tex}
