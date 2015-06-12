@@ -23,6 +23,41 @@
     </appendix>
 
     <changes>
+        <version>
+            <id>7.00</id>
+            <date>2015-06-13</date>
+            <author>Carlon Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+        <version>
+            <id>6.04</id>
+            <date>2015-06-12</date>
+            <author>Bigarella Chiara</author>
+            <role>Verifica incrementi</role>
+            <description>Verifica incrementi</description>
+        </version>
+        <version>
+            <id>6.03</id>
+            <date>2015-06-11</date>
+            <author>Moretto Alessandro</author>
+            <role>Amministratore</role>
+            <description>Processi di validazione e fornitura</description>
+        </version>
+        <version>
+            <id>6.02</id>
+            <date>2015-06-09</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica spostamento</description>
+        </version>
+        <version>
+            <id>6.01</id>
+            <date>2015-05-09</date>
+            <author>Moretto Alessandro</author>
+            <role>Amministratore</role>
+            <description>Spostamento contenuto appendici</description>
+        </version>
 	  <!-- Fine fase 6-->
         <version>
             <id>6.00</id>

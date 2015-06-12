@@ -30,9 +30,64 @@
     </appendix>
 
     <changes>
-	  
+	<version>
+            <id>7.00</id>
+            <date>2015-06-15</date>
+            <author>Carlon Chiara</author>
+            <role>Project Manager</role>
+            <description>Approvazione del documento</description>
+        </version>
+	<version>
+            <id>6.07</id>
+            <date>2015-06-15</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica nuove sezioni e correzione</description>
+        </version>
+	<version>
+            <id>6.06</id>
+            <date>2015-06-14</date>
+            <author>Bigarella Chiara</author>
+            <role>Verificatore</role>
+            <description>Redazione esiti Fase PD</description>
+        </version>
+	<version>
+            <id>6.05</id>
+            <date>2015-06-11</date>
+            <author>Rubin Marco</author>
+            <role>Verificatore</role>
+            <description>Verifica spostamento test e rimozione sezione</description>
+        </version>
+	<version>
+            <id>6.04</id>
+            <date>2015-06-11</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Progettista</role>
+            <description>Rimozione sezioni gestione anomalie</description>
+        </version>
+	<version>
+            <id>6.03</id>
+            <date>2015-06-10</date>
+            <author>Pavanello Fabio Matteo</author>
+            <role>Progettista</role>
+            <description>Spostamento sezione test in appendice</description>
+        </version>
+	<version>
+            <id>6.02</id>
+            <date>2015-06-09</date>
+            <author>Dal Bianco Davide</author>
+            <role>Verificatore</role>
+            <description>Verifica PDCA e obiettivi di qualità</description>
+        </version>
+	<version>
+            <id>6.01</id>
+            <date>2015-06-09</date>
+            <author>Moretto Alessandro</author>
+            <role>Amministratore</role>
+            <description>Correzione PDCA e obiettivi di qualità</description>
+        </version>
 <!-- fine versione 6 -->
-		<version>
+	<version>
             <id>6.00</id>
             <date>2015-05-27</date>
             <author>Pavanello Fabio Matteo</author>

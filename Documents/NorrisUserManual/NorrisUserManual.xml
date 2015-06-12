@@ -22,14 +22,49 @@
     	</appendix> -->
 	   
 	<changes>
-	    <version>
+	<version>
+            <id>4.00</id>
+            <date>2015-06-13</date>
+            <author>Carlon Chiara</author>
+            <role>Project Manager</role>
+            <description>Document's approval</description>
+        </version>
+	<version>
+            <id>3.04</id>
+            <date>2015-06-12</date>
+            <author>Dal Bianco Davide</author>
+            <role>Verifier</role>
+            <description>Document's checking</description>
+        </version>
+	<version>
+            <id>3.03</id>
+            <date>2015-06-12</date>
+            <author>Bucco Riccardo</author>
+            <role>Programmer</role>
+            <description>Writing Glossary</description>
+        </version>
+	<version>
+            <id>3.02</id>
+            <date>2015-06-11</date>
+            <author>Dal Bianco Davide</author>
+            <role>Verifier</role>
+            <description>Document's checking</description>
+        </version>
+	<version>
+            <id>3.01</id>
+            <date>2015-06-10</date>
+            <author>Bigarella Chiara</author>
+            <role>Programmer</role>
+            <description>Writing API description</description>
+        </version>
+	<version>
             <id>3.00</id>
             <date>2015-05-25</date>
             <author>Pavanello Fabio Matteo</author>
             <role>Project Manager</role>
             <description>Document's approval</description>
         </version>
-	    <version>
+	<version>
             <id>2.05</id>
             <date>2015-05-24</date>
             <author>Bigarella Chiara</author>
