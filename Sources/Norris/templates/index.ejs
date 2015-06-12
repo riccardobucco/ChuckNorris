@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html ng-app="chuck">
+<html>
     <head>
 
         <meta charset="utf-8">
@@ -8,10 +7,7 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="/bower_components/angular/angular.min.js"></script>
-        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="/bower_components/chuck-rtc/chuck.js"></script>
 
         <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="/css/custom.css" rel="stylesheet">
@@ -22,46 +18,48 @@
     <header class="jumbotron text-center">
       <div class="container">
         <img src="/images/norris-hor.png" class="logo-norris" title="Norris" alt="Norris Logo" />
-          <h1><%= settings.title %></h1>
+          <h3>Real time charts</h3>
       </div>
     </header>
     <div class="container content">
+
+<h2>Pages</h2>
+<div class="list-group">
+<% var wt = 0;
+   for(var i=0; i<pages.length; i++) { %>
+    <a href="/pages/<%=pages[i].getId() %>" class="list-group-item">
+        <h4 class="list-group-item-heading"><%
+        if(pages[i].getSettings().title!="") {
+        %><%= pages[i].getSettings().title %><%
+        } else {
+            %>Untitled page <%=++wt %><%
+    }
+    %></h4>
+        <p class="list-group-item-text"><%=pages[i].getSettings().description %></p>
+      </a>
+<% } %>
+</div>
 
 <h2>Charts</h2>
 
 <div class="list-group">
 <% var wt = 0;
    for(var i=0; i<charts.length; i++) {%>
-	 <a href="/charts/<%=charts[i].getId() %>" class="list-group-item">
-	    <h4 class="list-group-item-heading"><%
+     <a href="/charts/<%=charts[i].getId() %>" class="list-group-item">
+        <h4 class="list-group-item-heading"><%
         if(charts[i].getSettings().title!="") {
-	    %><%= charts[i].getSettings().title %><%
+        %><%= charts[i].getSettings().title %><%
         } else {
             %>Untitled chart <%=++wt %><%
-	}
+    }
     %></h4>
-	    <p class="list-group-item-text"><%=charts[i].getSettings().description %><br/>
-	<span class="chart-type">Chart type: <%=charts[i].getType() %></span></p>
-	  </a>
+        <p class="list-group-item-text"><%=charts[i].getSettings().description %><br/>
+    <span class="chart-type">Chart type: <%=charts[i].getType() %></span></p>
+      </a>
 <% } %>
 </div>
 
-<h2>Pages</h2>
-<div class="list-group">
-<% var wt = 0;
-   for(var i=0; i<pages.length; i++) { %>
-	<a href="/pages/<%=pages[i].getId() %>" class="list-group-item">
-	    <h4 class="list-group-item-heading"><%
-        if(pages[i].getSettings().title!="") {
-	    %><%= pages[i].getSettings().title %><%
-        } else {
-            %>Untitled page <%=++wt %><%
-	}
-    %></h4>
-	    <p class="list-group-item-text"><%=pages[i].getSettings().description %></p>
-	  </a>
-<% } %>
-</div>
+
 
  </div>
     <footer class="text-center">

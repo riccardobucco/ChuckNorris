@@ -1,15 +1,3 @@
-<%
-var charts = page.getCharts();
-var settings = page.getSettings();
-var maxChartsRow = settings.maxChartsRow;
-var maxChartsCol = settings.maxChartsCol;
-var path = endpoint;
-
-function printTag(chart) {
-    return '<chuck-' + chart.getType() + ' chart-endpoint="' + path + '" chart-id="' + chart.getId() + '"></chuck-' + chart.getType() + '>';
-}
-%>
-
 <!DOCTYPE html>
 <html ng-app="chuck">
     <head>
@@ -38,6 +26,16 @@ function printTag(chart) {
     </header>
     <div class="container content">
         <%
+        var charts = page.getCharts();
+        var settings = page.getSettings();
+        var maxChartsRow = settings.maxChartsRow;
+        var maxChartsCol = settings.maxChartsCol;
+        var path = endpoint;
+
+        function printTag(chart) {
+            return '<chuck-' + chart.getType() + ' chart-endpoint="' + path + '" chart-id="' + chart.getId() + '"></chuck-' + chart.getType() + '>';
+        }
+
         var nTot = charts.length < maxChartsRow * maxChartsRow ? charts.length : maxChartsRow * maxChartsRow;
         var nRows = Math.floor(nTot / maxChartsCol);
         var lastRow = nTot % maxChartsCol;
