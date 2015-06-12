@@ -38,19 +38,21 @@ function ChartEndpoint(controller) {
         var socketio = sio(controller.getServer(), {path: this.controller.getEndpoint() + 'chart'}); // the server is listening for socket.io connections
         var chartEndpoint = this;
         socketio.use(SocketIOCookieParser());
-        socketio.use(function (socket, next) {
-            var cookies = {
-                getCookies: socket.request.cookies,
-                getSignedCookies: socket.request.signedCookies
-            };
-            if(chartEndpoint.controller.isLogged(cookies)) {
-                next();
-            } else {
-                next(new Error('unauthorized'));
-            }
-        });
+
         this.controller.model.on('create', function (chart) {
             var nsp = socketio.of('/' + chart.getId());
+
+            nsp.use(function (socket, next) {
+                var cookies = {
+                    getCookies: socket.request.cookies,
+                    getSignedCookies: socket.request.signedCookies
+                };
+                if(chartEndpoint.controller.isLogged(cookies)) {
+                    next();
+                } else {
+                    next(new Error('unauthorized'));
+                }
+            });
 
             nsp.on('connection', function (socket) {
                 socket.emit('chart', chart.getType(), chart.getSettings(), chart.getData());
