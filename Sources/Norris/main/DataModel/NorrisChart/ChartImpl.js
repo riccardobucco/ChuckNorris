@@ -89,8 +89,11 @@ ChartImpl.createChart = function(chartType, chartId) {
  * @param {ChartUpdater} updater - the updater instance which corresponds to the updating type in updateType.
  */
 ChartImpl.registerUpdater = function(updateType, updater) {
-    ChartImpl.prototype.updaters[updateType] = updater; /* EXPLICITLY assign to prototype property,
-     otherwise it won't act as a static variable */
+    if (! ChartImpl.prototype.updaters.hasOwnProperty(updateType)) {
+        ChartImpl.prototype.updaters[updateType] = updater;
+        /* EXPLICITLY assign to prototype property,
+         otherwise it won't act as a static variable */
+    }
 };
 
 /**

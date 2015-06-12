@@ -70,7 +70,7 @@ describe('NorrisBridge', function(){
 
 	
 	describe('getChart(Id: String): ChartBridge',function(){
-		it('should return a chart in the page', function(){
+		it('should return a chart in the instance', function(){
 		    var norris = new NorrisImpl();
 			var norrisBridge = new NorrisBridge(norris);
 			norrisBridge.createChart('mapchart','01');
@@ -81,15 +81,18 @@ describe('NorrisBridge', function(){
 				data: {},
 				domain: null,
 				settings: {
-					area : {
-					    x: 0,
-					    y:0,
-					    zoom : 0
-					},
+					zoomPosition: 'topleft',
+                    legendPosition: 'topright',
+                    scalePosition: 'bottomleft',
+                    allowFilter: false,
+                    maxItems : 5,
+                    area: {
+                        x: 0,
+                        y: 0,
+                        zoom: 1
+                    },
 					description: 'This is a map chart',
-					legendPosition: 'top-right',
-					maxItems: 5,
-					title: ''
+              	    title: ''
 				  },
 				type: 'mapchart',
 				uid: '01',

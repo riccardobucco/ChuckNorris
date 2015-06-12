@@ -20,50 +20,39 @@ describe('ChartImpl', function(){
 
     describe('registerFactory(chartType: String, factory: ChartFactory): void',function(){
         it('should register the correspondence between a type of chart and its factory',function(){
-            var chart = new ChartImpl('table','RandomID');
             var factory = {'method1':'RandomMethod1', 'method2':'RandomMethod2', 'attribute':'RandomAttribute'};
-            ChartImpl.registerFactory('mapchart',factory);
-            assert.deepEqual(factory,chart.factories['mapchart']);
+            ChartImpl.registerFactory('newFactory',factory);
+            assert.deepEqual(factory,ChartImpl.prototype.factories['newFactory']);
         });
     });
 
     describe('registerUpdater(updateType: String, updater: ChartUpdater): void',function(){
         it('should register the correspondence between a type of chart and its updater',function(){
-            var chart = new ChartImpl('table','RandomID');
             var updater = {'method1':'RandomMethod1', 'method2':'RandomMethod2', 'attribute':'RandomAttribute'};
-            ChartImpl.registerUpdater('inplace',updater);
-            assert.deepEqual(updater,chart.updaters['inplace']);
+            ChartImpl.registerUpdater('newUpdater',updater);
+            assert.deepEqual(updater,ChartImpl.prototype.updaters['newUpdater']);
         });
     });
 
     describe('createChart(chartType: String, chartId: String): ChartImpl',function(){
         // in this test the createChart method of factory class is indirectly tested too
-        it('should allow you to create a  bar chart only if its type is registered in the "factories" attribute', function(){
-            var factory = {};
-            factory.createChart = function(id) {return 'factoryReturn';}; 
-            ChartImpl.registerFactory('barchart',factory);
-            assert.equal('factoryReturn', ChartImpl.createChart('barchart','randomID'));
-            assert.deepEqual(null,ChartImpl.createChart('randomType','randomID'));
+        it('should allow you to create a bar chart', function(){
+            var bc = ChartImpl.createChart('barchart','randomID');        
+            assert.deepEqual('barchart', bc.getType());
         });
-        it('should allow you to create a  line chart only if its type is registered in the "factories" attribute', function(){
-            var factory = {};
-            factory.createChart = function(id) {return 'factoryReturn';}; 
-            ChartImpl.registerFactory('linechart',factory);
-            assert.equal('factoryReturn', ChartImpl.createChart('linechart','randomID'));
-            assert.deepEqual(null,ChartImpl.createChart('randomType','randomID'));
+        it('should allow you to create a line chart', function(){
+            var lc = ChartImpl.createChart('linechart','randomID');        
+            assert.deepEqual('linechart', lc.getType());
         });
-        it('should allow you to create a  map chart only if its type is registered in the "factories" attribute', function(){
-            var factory = {};
-            factory.createChart = function(id) {return 'factoryReturn';}; 
-            ChartImpl.registerFactory('mapchart',factory);
-            assert.equal('factoryReturn', ChartImpl.createChart('mapchart','randomID'));
-            assert.deepEqual(null,ChartImpl.createChart('randomType','randomID'));
+        it('should allow you to create a map chart', function(){
+            var mc = ChartImpl.createChart('mapchart','randomID');        
+            assert.deepEqual('mapchart', mc.getType());
         });
-        it('should allow you to create a  table only if its type is registered in the "factories" attribute', function(){
-            var factory = {};
-            factory.createChart = function(id) {return 'factoryReturn';}; 
-            ChartImpl.registerFactory('table',factory);
-            assert.equal('factoryReturn', ChartImpl.createChart('table','randomID'));
+        it('should allow you to create a table', function(){
+            var tb = ChartImpl.createChart('table','randomID');        
+            assert.deepEqual('table', tb.getType());
+        });
+        it('should not allow you to create a chart if its type is not registered in the "factories" attribute', function(){
             assert.deepEqual(null,ChartImpl.createChart('randomType','randomID'));
         });
         
