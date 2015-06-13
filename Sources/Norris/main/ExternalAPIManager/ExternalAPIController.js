@@ -52,9 +52,10 @@ function ExternalAPIController(model, server, app) {
 
     var endpoint = this.getEndpoint();
 
-    this.app.use(endpoint, function (req, res, next) {
+    this.app.use(function (req, res, next) {
         var hosts = model.getSettings().origins;
         hosts = hosts.join(', ');
+        console.log('beeeeeeep');
         res.setHeader('Access-Control-Allow-Origin', hosts);
         res.setHeader('Access-Control-Allow-Credentials', 'true');
         next();
