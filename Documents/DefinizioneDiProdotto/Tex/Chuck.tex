@@ -6,6 +6,58 @@
             \item in secondo luogo vengono presentati i diagrammi di sequenza, che hanno lo scopo di descrivere scenari (determinate sequenze di azioni in cui tutte le scelte sono già state effettuate). Essi vengono usati per descrivere le relazioni che intercorrono, in termini di messaggi, tra attori, oggetti ed entità del sistema \insglo{Chuck}.
         \end{enumerate}
         Le regole che sono state rispettate, gli strumenti che sono stati usati e le procedure che sono state effettuate possono essere trovate all'interno del documento \insdoc{Norme di Progetto v6.00}.
+        \level{3}{Gerarchie presenti in Norris}
+            Di seguito vengono elencate tutte le gerarchie presenti in Chuck per fornire in forma visiva tutti i tipi implementati/estesi dalle singole componenti.
+            \begin{itemize}
+                \item Gerarchie in Model::NorrisChart \\
+                    La seguente gerarchia rappresenta tutte le tipologie di chart utilizzate in Chuck.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics{DefinizioneDiProdotto/Pics/Gerarchie/ModelChartImpl.pdf}
+                        \caption{Diagramma gerarchia ChartImpl in Chuck Model::NorrisChart }
+                    \end{figure}
+                    La seguente gerarchia rappresenta tutte le tipologie di chart factory che permettono la creazione dei vari chart.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics{DefinizioneDiProdotto/Pics/Gerarchie/ModelFactory.pdf}
+                        \caption{Diagramma gerarchia ChartFactory in Chuck Model::NorrisChart}
+                    \end{figure}
+                    La seguente gerarchia rappresenta tutte le tipologie di updater che possono esser utilizzate per aggiornare un chart.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics{DefinizioneDiProdotto/Pics/Gerarchie/ModelUpdater.pdf}
+                        \caption{Diagramma gerarchia Updater in Chuck Model::NorrisChart }
+                    \end{figure}
+                \item Gerarchie in Model::Services \\
+                    La seguente gerarchia rappresenta i servizi utilizzati in Chuck.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics{DefinizioneDiProdotto/Pics/Gerarchie/ChuckService.pdf}
+                        \caption{Diagramma gerarchia dei services in Chuck Model::Services}
+                    \end{figure}
+                \item Gerarchie in ViewModel \\
+                    La seguente gerarchia rappresenta tutte le view-model utilizzate in Chuck.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics{DefinizioneDiProdotto/Pics/Gerarchie/ChuckViewModel.pdf}
+                        \caption{Diagramma gerarchia dei view-model in Chuck ViewModel}
+                    \end{figure}
+                \item Gerarchie in Directive \\
+                    La seguente gerarchia rappresenta le varie directive utilizzate in Chuck.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics{DefinizioneDiProdotto/Pics/Gerarchie/ChuckDirective.pdf}
+                        \caption{Diagramma gerarchia delle directive in Chuck Directive}
+                    \end{figure}
+                \item Gerarchie in View \\
+                    La seguente gerarchia rappresenta le varie view utilizzate in Chuck.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics{DefinizioneDiProdotto/Pics/Gerarchie/ChuckView.pdf}
+                        \caption{Diagramma gerarchia delle view in Chuck View}
+                    \end{figure}
+            \end{itemize}
+
         \level{3}{Classi}
             In tale sezione sono riportate delle descrizioni dettagliate delle classi individuate all'interno del documento \insdoc{Specifica Tecnica v4.00}. Tali classi sono presentate e organizzate in modo gerarchico, mantenendo una suddivisione per \insglo{package} di appartenenza.
             \input{Classi/Chuck.tex}
