@@ -5,7 +5,7 @@ var norris = require('norris-rtc');
 
 var app = express();
 var server = http.createServer(app);
-var rtc = norris(server, '/', app);
+var rtc = norris(server, app);
 
 server.listen(9000);
 
@@ -13,11 +13,13 @@ server.listen(9000);
 // norris init
 var map = rtc.createChart('mapchart', 'map');
 var dashboard = rtc.createPage('dashboard').add(map);
+dashboard.setSettings({title: 'Dashboard APS'});
 
 app.use(rtc.getMiddleware());
 
 // settings
 map.setSettings({
+    legendPosition: 'none',
     area: {
         y: 45.4043344,
         x: 11.8830057,
@@ -79,7 +81,6 @@ function updateLine(line) {
                         }
                     })
                 }
-                console.log(chartData)
 
                 map.update('movie',updateData);
             }
