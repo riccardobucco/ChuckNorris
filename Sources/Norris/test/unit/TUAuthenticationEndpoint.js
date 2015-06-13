@@ -15,8 +15,6 @@
  */
 
 var AuthenticationEndpoint = require('../../main/ExternalAPIManager/AuthenticationEndpoint.js');
-var ExternalAPIController = require('../../main/ExternalAPIManager/ExternalAPIController.js');
-var ExternalAPIConstructor = require('../../main/ExternalAPIManager/ExternalAPIConstructor.js');
 var express=require('express');
 var http = require('http');
 
@@ -24,252 +22,131 @@ var http = require('http');
 var assert = require("assert");
 
 describe('AuthenticationEndpoint', function(){
-	
-	describe('AuthenticationEndpoint(controller: ExternalAPIController)', function(){
-		it('should create a new AuthenticationEndpoint object',function(){
-			var app = express();
-			var endpoint = 'randomString';
-			var model = {
-				randomKey1: 'randomValue1'
-			};
-			model.endpoint = endpoint;
-			model.getEndpoint = function(){
-			    return this.endpoint;
-			};
-						
-			var server = {
-				randomKey2: 'randomValue2'
-			};
-			
-			var controller = new ExternalAPIController(model, server, app);
-			
-						
-			function AuthenticationEndpointFactory() {
-                if(!(this instanceof AuthenticationEndpointFactory)) {
-                return new AuthenticationEndpointFactory();
+    
+    describe('AuthenticationEndpoint(controller: ExternalAPIController)', function(){
+        it('should create a new AuthenticationEndpoint object',function(){
+            var controller = {
+                randomKey1: 'randomValue1',
+                getApp: function () {
+                    return {
+                        post: function () {}
+                    };
+                },
+                getEndpoint: function () {return 'endpoint';}
+            };
+
+            var endpoint = new AuthenticationEndpoint(controller);
+            var expected_endpoint = {
+                controller: controller,
+                app: controller.getApp()
+            };
+
+            assert.equal(JSON.stringify(expected_endpoint), JSON.stringify(endpoint));
+        });
+        
+    });
+    
+    describe('handleLogin(req: express, res: express)', function(){
+        it('should manage a login request',function(){
+            var called = false
+
+            var controller = {
+                getApp: function () {
+                    return {
+                        post: function () {}
+                    }
+                },
+                getEndpoint: function () {
+                    return 'endpoint';
+                },
+                performLogin: function () {
+                    called = true;
+                    return true;
+                }
+            };
+
+            var req = {
+                body: {
+                    username: 'user',
+                    password: 'pass'
                 }
             }
-            AuthenticationEndpointFactory.prototype.instance=new AuthenticationEndpointFactory(); // static
-            AuthenticationEndpointFactory.getInstance = function() { // static
-                return AuthenticationEndpointFactory.prototype.instance;
-            };
-            AuthenticationEndpointFactory.prototype.createEndpoint = function (controller) {
-                return new AuthenticationEndpoint (controller);
-            };
-			ExternalAPIConstructor.registerEndpoint(AuthenticationEndpointFactory.getInstance());
 
-			var authEndFac = new AuthenticationEndpointFactory();
-
-			var authEnd = AuthenticationEndpointFactory.getInstance().createEndpoint(controller);
-			assert.deepEqual(controller, authEnd.controller);
-		});
-		
-	});
-	
-	describe('handleLogin(req: express, res: express)', function(){
-		it('should manage an authentication request',function(){
-			var app = express();
-			var endpoint = 'randomString';
-			var model = { 
-				randomKey1: 'randomValue1', 
-				settings: {
-					login: function(cookies, username, password){
-						return true;
-					}
-				}
-			};
-			model.endpoint = endpoint;
-			model.getEndpoint = function(){
-			    return this.endpoint;
-			};
-			model.getSettings = function(){
-				return this.settings;
-			}
-						
-			var server = {	randomKey2: 'randomValue2' };
-			
-			var controller = new ExternalAPIController(model, server, app);
-			
-						
-			function AuthenticationEndpointFactory() {
-                if(!(this instanceof AuthenticationEndpointFactory)) {
-                return new AuthenticationEndpointFactory();
-                }
+            var res = {
+                sendStatus: function () {}
             }
-            AuthenticationEndpointFactory.prototype.instance=new AuthenticationEndpointFactory(); // static
-            AuthenticationEndpointFactory.getInstance = function() { // static
-                return AuthenticationEndpointFactory.prototype.instance;
-            };
-            AuthenticationEndpointFactory.prototype.createEndpoint = function (controller) {
-                return new AuthenticationEndpoint (controller);
-            };
-			ExternalAPIConstructor.registerEndpoint(AuthenticationEndpointFactory.getInstance());
-			var authEndFac = new AuthenticationEndpointFactory();
 
-			var req = {
-				cookies: 'cookiesValue',
-	            signedCookies: 'signedCookiesValue',
-				body: {
-					 username: 'usr' ,
-	                 password: 'pwd' 
-				}
-			};
-			
-			var res = {
-				statusNumber: {},
-				cookie: {
-					apply: function(res, argumentss){}
-				},
-				clearCookie: {
-					apply: function(res, arguments){}
-				},
-				sendStatus: function(statusNumber){ 
-					this.statusNumber = statusNumber;
-				}
-			}
-			
-			var authEnd = AuthenticationEndpointFactory.getInstance().createEndpoint(controller);
-			authEnd.handleLogin(req, res);
-			assert.equal(200, res.statusNumber);
-		});
-		
-	});
-	
-	describe('handleLogout(req: express, res: express)', function(){
-		it('should manage an end-session request',function(){
-			var app = express();
-			var endpoint = 'randomString';
-			var model = { 
-				randomKey1: 'randomValue1', 
-				settings: {
-					logout: function(cookies, username, password){
-						return false;
-					}
-				}
-			};
-			model.endpoint = endpoint;
-			model.getEndpoint = function(){
-			    return this.endpoint;
-			};
-			model.getSettings = function(){
-				return this.settings;
-			}
-						
-			var server = {	randomKey2: 'randomValue2' };
-			
-			var controller = new ExternalAPIController(model, server, app);
-			
-						
-			function AuthenticationEndpointFactory() {
-                if(!(this instanceof AuthenticationEndpointFactory)) {
-                return new AuthenticationEndpointFactory();
+            var endpoint = new AuthenticationEndpoint(controller);
+            endpoint.handleLogin(req, res);
+
+            assert(called);
+        });
+        
+    });
+    
+    describe('handleLogout(req: express, res: express)', function(){
+        it('should manage a logout request',function(){
+            var called = false
+
+            var controller = {
+                getApp: function () {
+                    return {
+                        post: function () {}
+                    }
+                },
+                getEndpoint: function () {
+                    return 'endpoint';
+                },
+                performLogout: function () {
+                    called = true;
+                    return true;
                 }
-            }
-            AuthenticationEndpointFactory.prototype.instance=new AuthenticationEndpointFactory(); // static
-            AuthenticationEndpointFactory.getInstance = function() { // static
-                return AuthenticationEndpointFactory.prototype.instance;
             };
-            AuthenticationEndpointFactory.prototype.createEndpoint = function (controller) {
-                return new AuthenticationEndpoint (controller);
-            };
-			ExternalAPIConstructor.registerEndpoint(AuthenticationEndpointFactory.getInstance());
-			var authEndFac = new AuthenticationEndpointFactory();
 
-			var req = {
-				cookies: 'cookiesValue',
-	            signedCookies: 'signedCookiesValue',
-				body: {
-					 username: 'usr' ,
-	                 password: 'pwd' 
-				}
-			};
-			
-			var res = {
-				statusNumber: {},
-				cookie: {
-					apply: function(res, argumentss){}
-				},
-				clearCookie: {
-					apply: function(res, arguments){}
-				},
-				sendStatus: function(statusNumber){ 
-					this.statusNumber = statusNumber;
-				}
-			}
-			
-			var authEnd = AuthenticationEndpointFactory.getInstance().createEndpoint(controller);
-			authEnd.handleLogout(req, res);
-			assert.equal(401, res.statusNumber);
-		});
-		
-		describe('handleKeepAlive(req: express, res: express)', function(){
-		it('should manage an authentication request',function(){
-			var app = express();
-			var endpoint = 'randomString';
-			var model = { 
-				randomKey1: 'randomValue1', 
-				settings: {
-					keepAlive: function(cookies){
-						return true;
-					}
-				}
-			};
-			model.endpoint = endpoint;
-			model.getEndpoint = function(){
-			    return this.endpoint;
-			};
-			model.getSettings = function(){
-				return this.settings;
-			}
-						
-			var server = {	randomKey2: 'randomValue2' };
-			
-			var controller = new ExternalAPIController(model, server, app);
-			
-						
-			function AuthenticationEndpointFactory() {
-                if(!(this instanceof AuthenticationEndpointFactory)) {
-                return new AuthenticationEndpointFactory();
+            var req = {}
+
+            var res = {
+                sendStatus: function () {}
+            }
+
+            var endpoint = new AuthenticationEndpoint(controller);
+            endpoint.handleLogout(req, res);
+
+            assert(called);
+        });
+        
+        describe('handleKeepAlive(req: express, res: express)', function(){
+        it('should manage a keepalive request',function(){
+            var called = false
+
+            var controller = {
+                getApp: function () {
+                    return {
+                        post: function () {}
+                    }
+                },
+                getEndpoint: function () {
+                    return 'endpoint';
+                },
+                performKeepAlive: function () {
+                    called = true;
+                    return true;
                 }
-            }
-            AuthenticationEndpointFactory.prototype.instance=new AuthenticationEndpointFactory(); // static
-            AuthenticationEndpointFactory.getInstance = function() { // static
-                return AuthenticationEndpointFactory.prototype.instance;
             };
-            AuthenticationEndpointFactory.prototype.createEndpoint = function (controller) {
-                return new AuthenticationEndpoint (controller);
-            };
-			ExternalAPIConstructor.registerEndpoint(AuthenticationEndpointFactory.getInstance());
-			var authEndFac = new AuthenticationEndpointFactory();
 
-			var req = {
-				cookies: 'cookiesValue',
-	            signedCookies: 'signedCookiesValue',
-				body: {
-					 username: 'usr' ,
-	                 password: 'pwd' 
-				}
-			};
-			
-			var res = {
-				statusNumber: {},
-				cookie: {
-					apply: function(res, argumentss){}
-				},
-				clearCookie: {
-					apply: function(res, arguments){}
-				},
-				sendStatus: function(statusNumber){ 
-					this.statusNumber = statusNumber;
-				}
-			}
-			
-			var authEnd = AuthenticationEndpointFactory.getInstance().createEndpoint(controller);
-			authEnd.handleKeepAlive(req, res);
-			assert.equal(200, res.statusNumber);
-		});
-		
-	})
-		
-	});
+            var req = {}
+
+            var res = {
+                sendStatus: function () {}
+            }
+
+            var endpoint = new AuthenticationEndpoint(controller);
+            endpoint.handleKeepAlive(req, res);
+
+            assert(called);
+        });
+        
+    })
+        
+    });
 });

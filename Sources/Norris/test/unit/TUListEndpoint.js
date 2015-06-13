@@ -15,8 +15,6 @@
  */
 
 var ListEndpoint = require('../../main/ExternalAPIManager/ListEndpoint.js');
-var ExternalAPIController = require('../../main/ExternalAPIManager/ExternalAPIController.js');
-var ExternalAPIConstructor = require('../../main/ExternalAPIManager/ExternalAPIConstructor.js');
 var express=require('express');
 var http = require('http');
 
@@ -24,117 +22,78 @@ var http = require('http');
 var assert = require("assert");
 
 describe('ListEndpoint', function(){
-	
-	describe('ListEndpoint(controller: ExternalAPIController)', function(){
-		it('should create a new ListEndpoint object',function(){
-			var app = express();
-			var endpoint = 'randomString';
-			var model = {
-				randomKey1: 'randomValue1'
-			};
-			model.endpoint = endpoint;
-			model.getEndpoint = function(){
-			    return this.endpoint;
-			};
-						
-			var server = {
-				randomKey2: 'randomValue2'
-			};
-			
-			
-			function ListEndpointFactory() {
-				if(!(this instanceof ListEndpointFactory)) {
-					return new ListEndpointFactory();
-				}
-			}
-			ListEndpointFactory.prototype.instance=new ListEndpointFactory(); // static
-			ListEndpointFactory.getInstance = function() { // static
-				return ListEndpointFactory.prototype.instance;
-			};
-			ListEndpointFactory.prototype.createEndpoint = function (controller) {
-				return new ListEndpoint(controller);
-			};
-			ExternalAPIConstructor.registerEndpoint(ListEndpointFactory.getInstance());
+    
+    describe('ListEndpoint(controller: ExternalAPIController)', function(){
+        it('should create a new ListEndpoint object',function(){
+            var controller = {
+                randomKey1: 'randomValue1',
+                getApp: function () {
+                    return {
+                        get: function () {}
+                    };
+                },
+                getEndpoint: function () {return 'endpoint';}
+            };
 
-			var listEndFac = new ListEndpointFactory();
-			
-			var controller = new ExternalAPIController(model, server, app);
-			
-			var listEnd = ListEndpointFactory.getInstance().createEndpoint(controller);
-			assert.deepEqual(controller, listEnd.controller);
-		});
-		
-	});
-	
-	describe('handleRequest(req: express, res: express)', function(){
-		it('should manage a request to get a chart list',function(){
-			var app = express();
-			var endpoint = 'randomString';
-			var model = { 
-				randomKey1: 'randomValue1', 
-				settings: {
-					isLogged: function(cookies){
-						return true;
-					}
-				}
-			};
-			model.endpoint = endpoint;
-			model.getEndpoint = function(){
-			    return this.endpoint;
-			};
-			model.getSettings = function(){
-				return this.settings;
-			}
-			model.getCharts = function(){
-				return null;
-			}
-						
-			var server = {	randomKey2: 'randomValue2' };
-			
-			var controller = new ExternalAPIController(model, server, app);
-			
-			function ListEndpointFactory() {
-				if(!(this instanceof ListEndpointFactory)) {
-					return new ListEndpointFactory();
-				}
-			}
-			ListEndpointFactory.prototype.instance=new ListEndpointFactory(); // static
-			ListEndpointFactory.getInstance = function() { // static
-				return ListEndpointFactory.prototype.instance;
-			};
-			ListEndpointFactory.prototype.createEndpoint = function (controller) {
-				return new ListEndpoint(controller);
-			};
-			ExternalAPIConstructor.registerEndpoint(ListEndpointFactory.getInstance());
-			
-			var req = {
-				cookies: 'cookiesValue',
-	            signedCookies: 'signedCookiesValue',
-				body: {
-					 username: 'usr' ,
-	                 password: 'pwd' 
-				}
-			};
-			
-			var res = {
-				statusNumber: {},
-				list: {},
-				cookie: {
-					apply: function(res, argumentss){}
-				},
-				clearCookie: {
-					apply: function(res, arguments){}
-				},
-				sendStatus: function(statusNumber){ 
-					this.statusNumber = statusNumber;
-				},
-				json: function(list){ this.list = list}
-			}
-			
-			var listEnd = ListEndpointFactory.getInstance().createEndpoint(controller);
-			listEnd.handleRequest(req, res);
-			assert.deepEqual([], res.list);
-		});
-		
-	});
+            var endpoint = new ListEndpoint(controller);
+            var expected_endpoint = {
+                controller: controller,
+                app: controller.getApp()
+            };
+
+            assert.equal(JSON.stringify(expected_endpoint), JSON.stringify(endpoint));
+        });
+        
+    });
+    
+    describe('handleRequest(req: express, res: express)', function() {
+        it('should manage a request to get a chart list',function() {
+            var controller = {
+                getApp: function () {
+                    return {
+                        get: function () {}
+                    };
+                },
+                getEndpoint: function () {
+                    return 'endpoint';
+                },
+                isLogged: function () {
+                    return true;
+                },
+                getCharts: function () {
+                    return [
+                        {
+                            getId: function () {
+                                return 'id1';
+                            },
+                            getType: function () {
+                                return 'type1';
+                            },
+                            getSettings: function () {
+                                return {};
+                            }
+                        }
+                    ];
+                },
+                model: {
+
+                }
+            };
+
+            var called = false;
+
+            var req = {};
+            var res = {
+                json: function (obj) {
+                    called = true;
+                }
+            };
+            
+            var endpoint = new ListEndpoint(controller);
+            endpoint.handleRequest(req, res);
+
+            assert(called);
+        });
+        
+    });
 });

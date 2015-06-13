@@ -32,14 +32,14 @@ module.exports = AuthenticationEndpoint;
  */
 function AuthenticationEndpoint(controller) {
     if (!(this instanceof AuthenticationEndpoint)) return new AuthenticationEndpoint(controller);
-    if (controller instanceof ExternalAPIController) {
+    if (controller) {
         var authenticationEndpoint = this;
-        this.controller=controller;
+        this.controller = controller;
         this.app = controller.getApp();
         this.app.post(this.controller.getEndpoint() + 'auth/login', function (req, res) {authenticationEndpoint.handleLogin(req, res);});
         this.app.post(this.controller.getEndpoint() + 'auth/logout', function (req, res) {authenticationEndpoint.handleLogout(req, res);});
         this.app.post(this.controller.getEndpoint() + 'auth/keepalive', function (req, res) {authenticationEndpoint.handleKeepAlive(req, res);});
-    }else {
+    } else {
         console.log("ERROR: an ExternalAPIController is required.");
         throw("AuthenticationEndpoint:requiredExternalAPIController");
     }

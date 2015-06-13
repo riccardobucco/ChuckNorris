@@ -53,14 +53,13 @@ function ExternalAPIController(model, server, app) {
     var endpoint = this.getEndpoint();
 
     this.app.use(endpoint, function (req, res, next) {
-        console.log('beep');
         var hosts = model.getSettings().origins;
         hosts = hosts.join(', ');
         res.setHeader('Access-Control-Allow-Origin', hosts);
         res.setHeader('Access-Control-Allow-Credentials', 'true');
         next();
     });
-    this.app.use(endpoint, cookieParser());
+    this.app.use(endpoint, cookieParser(this.getSecret()));
     this.app.use(endpoint, bodyParser.urlencoded({extended: true}));
 };
 
@@ -152,6 +151,14 @@ ExternalAPIController.prototype.getServer = function() {
  */
 ExternalAPIController.prototype.getEndpoint = function() {
     return this.model.getSettings().endpoint;
+};
+
+/**
+ * Gets the endpoint.
+ * @returns {String}
+ */
+ExternalAPIController.prototype.getSecret = function() {
+    return this.model.getSettings().secret;
 };
 
 /**

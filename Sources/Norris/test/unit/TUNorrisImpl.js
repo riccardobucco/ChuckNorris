@@ -31,35 +31,18 @@ describe('NorrisImpl', function(){
         });
     });
     
-    describe('setSettings(settings NorrisImplSettings): void',function(){
-        it('should set the charts of the page',function(){
-            var settings = {
-              'isLogged': function(){ console.log('isLogged function'); },
-              'keepAlive': function(){ console.log('keepAlive function'); },
-              'login': function(){ console.log('login function');},
-              'logout': function(){ console.log('logout function');}
-            };
-            var endpoint = 'endpoint';
-            var norrisImpl = new NorrisImpl(endpoint);
-            norrisImpl.setSettings(settings);
-            
-            assert.deepEqual(settings, norrisImpl.settings);
-        });
-    });
-
-    
     describe('getSettings(): NorrisSettings',function(){
         it('should return the settings of a NorrisBridge object', function(){
             var settings = {
-              'isLogged': function(){ console.log('isLogged function'); },
-              'keepAlive': function(){ console.log('keepAlive function'); },
-              'login': function(){ console.log('login function');},
-              'logout': function(){ console.log('logout function');}
+                randomkey: 'random value',
+                examplefunc: function () {},
+                circular: settings,
+                numeric: 5,
+                boolean: true
             };
-            var endpoint = 'endpoint';
             
-            var norrisImpl = new NorrisImpl(endpoint);
-            norrisImpl.setSettings(settings);
+            var norrisImpl = new NorrisImpl();
+            norrisImpl.settings = settings
             
             assert.deepEqual(settings,norrisImpl.getSettings());
         });
@@ -95,7 +78,6 @@ describe('NorrisImpl', function(){
                 uid: '01'
             };
 
-            console.log(norrisImpl);
             assert.deepEqual(chart,norrisImpl.getChart('01'));
         });
     });

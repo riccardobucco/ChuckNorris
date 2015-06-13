@@ -23,6 +23,8 @@
 var ExternalAPIController = require('./ExternalAPIController.js');
 var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
 
+module.exports = ListEndpoint;
+
 /**
  * Creates a ListEndpoint.
  * @param {ExternalAPIController} controller
@@ -31,7 +33,7 @@ var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
  */
 function ListEndpoint(controller) {
     if (!(this instanceof ListEndpoint)) return new ListEndpoint(controller);
-    if (controller instanceof ExternalAPIController) {
+    if (controller) {
         this.controller=controller;
         this.app=controller.getApp();
         var endpoint=this.controller.getEndpoint();

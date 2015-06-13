@@ -35,11 +35,11 @@ module.exports = ChartEndpoint;
  */
 function ChartEndpoint(controller) {
     if (!(this instanceof ChartEndpoint)) return new ChartEndpoint(controller);
-    if (controller instanceof ExternalAPIController) {
+    if (controller) {
         this.controller=controller;
         var sio = socketio(controller.getServer(), {path: this.controller.getEndpoint() + 'chart'}); // the server is listening for socket.io connections
         var chartEndpoint = this;
-        sio.use(SocketIOCookieParser());
+        sio.use(SocketIOCookieParser(controller.getSecret()));
 
         this.controller.model.on('create', function (chart) {
             var nsp = sio.of('/' + chart.getId());
@@ -64,7 +64,7 @@ function ChartEndpoint(controller) {
                 nsp.emit('update', updateType, updateData);
             });
         });
-    }else {
+    } else {
         console.log("ERROR: an ExternalAPIController is required.");
         throw("ChartEndpoint:requiredExternalAPIController");
     }
