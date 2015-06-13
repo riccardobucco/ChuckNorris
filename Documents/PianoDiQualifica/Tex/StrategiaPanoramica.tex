@@ -1,5 +1,5 @@
 \level{1}{Visione generale della strategia di gestione della qualità}
-	\level{2}{Obiettivi di qualità}
+	\level{2}{Obiettivi di qualità} \label{sec:obiettivi}
 		In questa sezione vengono riportati gli obiettivi di qualità che il gruppo \groupname{} si impegna a perseguire durante lo svolgimento dell'intero progetto.\\
 		Per capire se un certo obiettivo è stato raggiunto oppure no, il \groupname{} fa uso di standard, modelli e metriche. Ognuno di questi fa uso di scale differenti e fissate a priori: qualunque sia il criterio utilizzato per misurare e dunque quantificare la vicinanza a un certo obiettivo, abbiamo fissato dei valori minimi che intendiamo raggiungere nell'arco dell'intero progetto. Oltre a ciò abbiamo anche fissato dei valori che riteniamo ottimali e che devono essere sperabilmente (ma non obbligatoriamente) raggiunti.\\
 		Riassumendo:
@@ -79,9 +79,8 @@
 				Gli obiettivi di qualità riguardanti i documenti ai quali il gruppo \groupname{} desidera arrivare nell'arco dell'intero progetto sono i seguenti:
 				\begin{itemize}
 					\item i documenti devono essere comprensibili da individui dotati di un'istruzione media;
-					%\item i documenti devono essere corretti a livello ortografico;
-					%\item i documenti devono rispettare le norme tipografiche individuate;
-					%\item i documenti non devono contenere concetti errati.
+					\item i documenti devono essere corretti a livello ortografico;
+					\item i documenti non devono contenere concetti errati.
 				\end{itemize}
 				Descriviamo ora quali sono le metriche o i criteri che si intendono utilizzare per quantificare la vicinanza a ognuno degli obiettivi sopra descritti. Individuiamo inoltre le soglie di accettabilità e ottimalità, per fissare quantitativemente i punti ai quali desideriamo arrivare.
 				\level{5}{Leggibilità e comprensibilità}
@@ -92,8 +91,22 @@
 						\item[Soglia di ottimalità]: valori almeno maggiori di 50.
 					\end{description}
 					Per una descrizione dettagliata della metrica qui utilizzata e per una maggiore comprensione degli indici di ottimalità e accettabilità presentati si faccia riferimento alla sezione \nameref{subsec:gulpease}.
-				%\level{5}{Correttezza ortografica}
-					%Per cercare di capire quanto i documenti siano effettivamente corretti a livello ortografico si utilizza la seguente metrica: numero di errori ortografici rinvenuti da un correttore
+				\level{5}{Correttezza ortografica}
+					Per cercare di capire quanto i documenti siano effettivamente corretti a livello ortografico si utilizza la seguente metrica: percentuale di errori ortografici rinvenuti in modo automatico e non corretti. Si desidera che tutti gli errori ortografici che sono stati trovati siano corretti manualmente (se fosse fatto in modo automatico non sarebbe molto sicuro). In questo caso, dunque, si l'obiettivo minimo coincide con l'obiettivo ottimale. Riassumendo:
+					\begin{description}
+						\item[Metrica utilizzata per quantificare l'obiettivo]: percentuale di errori ortografici rinvenuti in modo automatico e non corretti;
+						\item[Soglia di accettabilità]: tutti gli errori trovati sono corretti manualmente;
+						\item[Soglia di ottimalità]: tutti gli errori trovati sono corretti manualmente.
+					\end{description}
+					Per una descrizione dettagliata della metrica qui utilizzata e per una maggiore comprensione degli indici di ottimalità e accettabilità presentati si faccia riferimento alla sezione \nameref{subsec:erroriOrtografici}.
+				\level{5}{Correttezza concettuale}
+					Per cercare di capire quanto i documenti siano effettivamente corretti a livello concettuale si utilizza la seguente metrica: percentuale di errori concettuali rinvenuti e non corretti. Si desidera che al massimo il 5\% degli errori concettuali rinvenuti non siano corretti. L'obiettivo ottimale sarebbe quello di avere documenti senza alcun errore di questo tipo. Riassumendo:
+					\begin{description}
+						\item[Metrica utilizzata per quantificare l'obiettivo]: percentuale di errori concettuali rinvenuti e non corretti;
+						\item[Soglia di accettabilità]: almeno il 95\% degli errori trovati è stato corretto;
+						\item[Soglia di ottimalità]: tutti gli errori trovati sono stati corretti.
+					\end{description}
+					Per una descrizione dettagliata della metrica qui utilizzata e per una maggiore comprensione degli indici di ottimalità e accettabilità presentati si faccia riferimento alla sezione \nameref{subsec:erroriConcettuali}.
 			\level{4}{Qualità del software}
 				Gli obiettivi di qualità del software ai quali il gruppo \groupname{} desidera arrivare nell'arco del progetto sono alcuni di quelli che sono enunciati all'interno delle norme [ISO/IEC 9126]. Vengono riassunti in seguito:
 				\begin{itemize}

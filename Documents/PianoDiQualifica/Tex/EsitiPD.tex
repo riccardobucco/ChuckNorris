@@ -1,135 +1,167 @@
 % !TEX encoding = UTF-8 Unicode 
 
-\level{1}{Resoconto delle varie attività di
-verifica - Fase PD} 
-Sono riportati in questa appendice tutti i risultati
-ottenuti nei momenti di verifica, stabiliti nel \insdoc{Piano di Progetto
-v7.00} secondo la strategia di misurazione per il perseguimento della qualità
-individuata nel presente documento.
+\level{1}{Resoconto delle varie attività di verifica - Fase PD} 
+	Sono riportati in questa appendice tutti i risultati ottenuti nei momenti di verifica, stabiliti nel \insdoc{Piano di Progetto v7.00} secondo la strategia di misurazione per il perseguimento della qualità individuata nel presente documento.\\
+	Gli esiti sono presentati seguendo una precisa struttura. In particolare, essi sono suddivisi in base all'obiettivo e alla metrica che riguardano. Infatti, grazie ad essi il \insrole{Project Manager} deve essere in grado di capire quanto si è vicini al raggiungimento di un certo obiettivo prefissato.\\
+	Per una descrizione dettagliata degli obiettivi si faccia riferimento alla sezione \nameref{sec:obiettivi}.
 
 	\level{2}{Verifica dei prodotti}
+		In questa sezione vengono riportati gli esiti delle attività di verifica svolte sui prodotti. Tale sezione è suddivisa ulteriormente in due, sulla base delle due tipologie di prodotti revisionati (documenti e software).
 		\level{3}{Documenti}
-		In questa sezione vengono riportati gli esiti delle attività di verifica svolte sui documenti. Esse sono di due tipi:
-		\begin{itemize}
-			\item verifiche manuali;
-			\item verifiche automatizzate.
-		\end{itemize}
-			\level{4}{Verifiche manuali}
-			Le attività di verifica manuale della documentazione prodotta sono state svolte in base alla procedura riguardante la verifica dei documenti, descritta nel documento \insdoc{Norme di Progettov7.00}.
-			La verifica manuale, durante questa fase, ha permesso di individuare soprattutto:
-			\begin{itemize}
-			\item errori nell'utilizzo della lingua inglese;
-			\item errori concettuali.
-			\end{itemize}
-			Si riporta di seguito la quantità degli errori rilevati e risolti, per ciascuna tipologia, durante l'intera fase.
-			\begin{table}[H]
-				\centering
-					\begin{tabu}{| l | c |} \hline
-						Errori di inglese & 28\\ \hline
-						Errori concettuali & 5 \\ \hline
-					\end{tabu}
-					\caption{Errori trovati tramite verifica manuale dei documenti durante la Fase PD}
-			\end{table}
-			Si può notare che gli errori concettuali trovati sono un numero inferiore rispetto alla fase precedente, questo è dovuto sia alla minore quantità di modifiche apportate ai documenti durante la \insphase{Fase PD}, sia ad un miglioramento da parte dei membri del team nella stesura della documentazione, grazie all'esperienza acquisita durante tutto l'arco del progetto.\\
-			Anche la quantità di errori nell'uso della lingua inglese dovuti alla stesura dei commenti del codice e nella stesura del documento \insdoc{Manuale utente v4.00} sono notevolmente diminuiti.
-
-			\level{4}{Verifiche automatizzate}
-			Le attività di verifica automatizzate sono state effettuate secondo le procedure e attraverso gli strumenti descritti nel documento \insdoc{Norme di Progettov7.00}. Esse hanno permesso di rilevare diversi errori, che sono stati poi corretti, riguardanti le seguenti tipologie:
-			\begin{itemize}
-				\item ortografia errata;
-				\item norme tipografiche non rispettate.
-			\end{itemize}
-			Di seguito è presentato un riassunto della quantità di errori trovati (e successivamente risolti) utilizzando la verifica automatica.	
-			\begin{table}[H]
-				\centering
-					\begin{tabu}{| l | c |}
+			In questa sezione vengono riportati gli esiti delle attività di verifica svolte sui documenti. Tali esiti sono strettamente correlati con gli obiettivi di qualità dei documenti enunciati nel presente documento. Gli esiti sono utili al \insrole{Responsabile di Progetto} per modificare la strategia adottata e la pianificazione futura.
+			\level{4}{Leggibilità e comprensibilità}
+				Ci siamo imposti come obiettivo il fatto che i documenti siano leggibili e comprensibili da persone con un'educazione media. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso dell'indice Gulpease.\\
+				Durante questa fase si è preferito non perdere tempo nel calcolo di tale indice. Infatti, già da varie fasi i risultati si sono stabilizzati. È già stato raggiunto e largamente superato l'obiettivo \textbf{ottimale} che ci eravamo posti (valori maggiori di 50 per tutti i documenti).\\
+			\level{4}{Correttezza ortografica}
+				Ci siamo imposti come obiettivo il fatto che i documenti siano corretti dal punto di vista ortografico. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: percentuale di errori ortografici rinvenuti in modo automatico e non corretti.\\
+				Durante questa fase sono stati utilizzati strumenti automatici per la rilevazione di errori ortografici all'interno dei vari documenti. Si è inoltre tenuto conto di alcuni errori segnalati durante la Revisione di Qualifica.\\
+				Si riporta di seguito la quantità degli errori rilevati per ciascuna tipologia durante l'intera fase:
+				\begin{table}[H]
+					\centering
+						\begin{tabu}{| l | c |} \hline
+							Ortografia errata (inglese) & 28\\ \hline
+							Ortografia errata (italiano) & 5 \\ \hline
+						\end{tabu}
+					\caption{Errori ortografici trovati tramite verifica automatica dei documenti durante la Fase PD}
+				\end{table}
+				I pochi errori rinvenuti sono sintomo sia di una maggiore attenzione da parte dei membri del gruppo sia del fatto che durante questa fase la scrittura della documentazione non era preponderante.\\
+				Tutti gli errori rinvenuti sono stati corretti manualmente. Dunque si ha raggiunto l'obiettivo considerato \textbf{ottimale} (nessun errore ortografico non corretto).
+			\level{4}{Correttezza concettuale}
+				Ci siamo imposti come obiettivo il fatto che i documenti siano corretti dal punto di vista concettuale. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: percentuale di errori concettuali rinvenuti e non corretti.\\
+				Per rilevare gli errori ci si è basati sulle osservazioni che ci sono state fatte in sede di Revisione di Qualifica. Inoltre, i \insrole{Verificatori} hanno provveduto a revisionare in modo approfondito i documenti, rilevando inesattezze, che poi sono state discusse e confermate dal gruppo.\\
+				Si riporta in seguito la quantità di errori rilevati durante l'intera fase:
+				\begin{table}[H]
+					\centering
+						\begin{tabu}{| l | c |} \hline
+							Errori concettuali & 11\\ \hline
+						\end{tabu}
+					\caption{Errori concettuali trovati tramite verifica dei documenti durante la Fase PD}
+				\end{table}
+				Tutti gli errori rinvenuti sono stati discussi internamente al gruppo e tramite un incontro al quale ha partecipato il committente. La discussione ha sempre portato a una soluzione. La soluzione trovata è stata applicata ove fosse necessario. Dunque tutti gli errori rinvenuti sono stati sistemati e corretti. È stato dunque raggiunto l'obiettivo \textbf{ottimale} (nessun errore concettuale rinvenuto ma non sistemato).
+		\level{3}{Codice e software}
+			In questa sezione vengono riportati gli esiti delle attività di verifica svolte sul codice e sui prodotti software che si stanno implementando durante il progetto (Norris, Chuck e applicazione Android). Tali esiti sono strettamente correlati con gli obiettivi di qualità del software enunciati nel presente documento. Gli esiti sono utili al \insrole{Responsabile di Progetto} per modificare la strategia adottata e la pianificazione futura.
+			\level{4}{Funzionalità}
+				Il \groupname si è posto l'obiettivo di sviluppare software che disponga di tutte le funzionalità richieste dall'utente. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: numero di requisiti funzionali realizzati.\\
+				I requisiti funzionali sono di tre tipi:
+				\begin{itemize}
+					\item obbligatori;
+					\item desiderabili;
+					\item opzionali.
+				\end{itemize}
+				Viene qui presentato un riassunto dei dati riguardanti il numero di requisiti funzionali realizzati. Sulla base di questo si possono trarre conclusioni riguardanti l'obiettivo che ci siamo posti.
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
 						\hline
-						Errori ortografici	& 49	\\ \hline
-						Errori riguardanti norme tipografiche	& 3	\\ \hline
+						Tipologia requisito   & Percentuale requisiti soddisfatti \\ \hline \hline
+						Obbligatori           & 100\% \\ \hline
+						Desiderabili          & 100\% \\ \hline
+						Opzionali             & 98\% \\ \hline
 					\end{tabu}
-				\caption{Errori trovati tramite verifica automatica dei documenti durante la Fase PD}
-			\end{table}
-			Da questi risultati si può notare il continuo miglioramento della documentazione prodotta, rispetto alle fasi precedenti. Si nota, anche, che non sono più stati rilevati errori nell'uso di \LaTeX{}.
+					\caption{Percentuali di requisiti funzionali realizzati in seguito alla fase PD}
+				\end{table}
+				Si può notare come sia stato raggiunto l'obiettivo \textbf{ottimale}. Infatti ci si augurava inizialmente di realizzare tutti i requisiti obbligatori e desiderabili e almeno il 95\% di quelli opzionali.
+			\level{4}{Semplicità d'uso}
+				Il \groupname si è posto l'obiettivo di sviluppare software che sia facilmente utilizzabile, in modo tale da favorirne l'apprendimento e la diffusione. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: numero di parametri necessari in un metodo a disposizione dell'utente finale.\\
+				Nell'applicazione Android l'utente non ha accesso a metodi, in quanto comunica con essa tramite interfaccia grafica. Neanche in Chuck possiamo affermare che l'utente ha accesso a metodi: egli deve solo utilizzare un singolo comando per creare un widget. Ha senso calcolare questa metrica solo in Norris, dove l'utente deve effettivamente invocare dei metodi per poter sfruttare le potenzialità del prodotto.\\
+				Di seguito vengono presentati i risultati ottenuti durante le misurazioni. Si noti come non si tenga conto di tutti i metodi di tutte le classi di Norris, ma solo di quei metodi ai quali l'utente può accedere (i metodi che costituiscono le API del prodotto).\\
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+						\hline
+						Percentuale di metodi con più di 4 parametri   & 0\% \\ \hline
+						Percentuale di metodi con 3 o 4 parametri      & 0\% \\ \hline
+						Percentuale di metodi con 0, 1 o 2 parametri   & 100\% \\ \hline
+					\end{tabu}
+					\caption{Numero di parametri nei metodi a disposizione dell'utente in seguito alla fase PD}
+				\end{table}
+				Come si può notare tutte le API a disposizione dell'utente necessitano di un numero minore o uguale a due di parametri. Poichè ci eravamo posti come obiettivo minimo di avere solo metodi con 3-4 parametri e come obiettivo ottimale quello di avere solo metodi con un numero di parametri minore o uguale a due possiamo dire di aver raggiunto un esito \textbf{ottimale}.
+			\level{4}{Manutenibilità e comprensibilità del codice}
+				Il \groupname si è posto l'obiettivo di sviluppare software che sia facilmente manutenibile e comprensibile. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso delle seguenti metriche:
+				\begin{itemize}
+					\item numero di statement di un metodo;
+					\item numero di campi dati di una classe;
+					\item grado di accoppiamento.
+				\end{itemize}
+				
 
-		\level{3}{Codice}
-		In questa sezione sono riportati i risultati delle metriche, calcolati nei momenti di verifica, per i tre prodotti: Norris, Chuck e applicazione Android.
 
-			\level{4}{Numero di requisiti funzionali realizzati}
+
+				Nelle seguenti sezioni vengono riportate le percentuali precise di requisiti che sono stati soddisfatti (in base al prodotto e alle componenti che riguardano). In particolare per ogni prodotto e per ogni sua componente viene detto quanti requisiti funzionali obbligatori, desiderabili e opzionali sono stati realizzati. I dati sono stati ottenuti facilmente a partire dal tracciamento (componenti-requisiti) presente nel nostro tracker.
+
 				\level{5}{Numero di requisiti funzionali obbligatori realizzati}
-				Si riportano di seguito le percentuali di requisiti funzionali obbligatori realizzati dalle componenti di Norris.
-				\begin{table}[H]
-					\centering
-						\begin{tabu}{| l | c | c |}
-							\hline
-							Componente	& Percentuale requisiti funzionali obbligatori soddisfatti	& Esito		\\ \hline \hline
-							InternalAPIManager	& 100\% 	& Ottimale  \\ \hline
-							ExternalAPIManager  & 	100\%	& Ottimale  \\ \hline
-							DataModel  & 	100\%	& Ottimale  \\ \hline
-						\end{tabu}
-					\caption{Esiti del calcolo delle percentuali di requisiti funzionali obbligatori realizzati da Norris durante la Fase PD}
-				\end{table}
-				Come è possibile notare dalla tabella, la percentuale dei requisiti funzionali obbligatori soddisfatti da Norris ha raggiunto un esito complessivamente ottimale. 
-				\\ \\
-				Si riportano di seguito le percentuali di requisiti funzionali obbligatori realizzati dalle componenti di Chuck.
-				\begin{table}[H]
-					\centering
-						\begin{tabu}{| l | c | c |}
-							\hline
-							Componente	& Numero requisiti funzionali obbligatori soddisfatti	& Esito		\\ \hline \hline
-							Directive  &	100\% 	& Ottimale  \\ \hline
-							ChartView  & 	100\%	& Ottimale  \\ \hline
-							ViewModel  & 	100\%	& Ottimale  \\ \hline
-							DataModel  & 	100\%	& Ottimale  \\ \hline
-						\end{tabu}
-					\caption{Esiti del calcolo delle percentuali di requisiti funzionali obbligatori realizzati da Chuck durante la Fase PD}
-				\end{table}
-				Come è possibile notare dalla tabella, la percentuale dei requisiti funzionali obbligatori soddisfatti da Chuck ha raggiunto un esito complessivamente ottimale.
-				\\ \\
-				Si riportano di seguito le percentuali di requisiti funzionali obbligatori realizzati dalle componenti dell'Applicazione.
-				\begin{table}[H]
-					\centering
-						\begin{tabu}{| l | c | c |}
-							\hline
-							Componente	& Numero requisiti funzionali soddisfatti	& Esito		\\ \hline \hline
-							Model				&   100\% 	& Ottimale \\ \hline
-							Model:NorrisChart	&   100\% 	& Ottimale  \\ \hline
-							Model:Service 		& 	100\%	& Ottimale   \\ \hline
-							Presenter  			& 	100\%	& Ottimale  \\ \hline
-							View  				& 	100\%	& Ottimale  \\ \hline
-						\end{tabu}
-					\caption{Esiti del calcolo delle percentuali di requisiti funzionali obbligatori realizzati dell'Applicazione durante la Fase PD}
-				\end{table}
-				Come è possibile notare dalla tabella la percentuale dei requisiti funzionali obbligatori soddisfatti dell'Applicazione ha raggiunto un esito ottimale.
+					Si riportano di seguito le percentuali di requisiti funzionali obbligatori realizzati dalle componenti di Norris.
+					\begin{table}[H]
+						\centering
+							\begin{tabu}{| l | c | c |}
+								\hline
+								Componente	& Percentuale requisiti funzionali obbligatori soddisfatti	& Esito		\\ \hline \hline
+								InternalAPIManager	& 100\% 	& Ottimale  \\ \hline
+								ExternalAPIManager  & 	100\%	& Ottimale  \\ \hline
+								DataModel  & 	100\%	& Ottimale  \\ \hline
+							\end{tabu}
+						\caption{Esiti del calcolo delle percentuali di requisiti funzionali obbligatori realizzati da Norris durante la Fase PD}
+					\end{table}
+					Come è possibile notare dalla tabella, la percentuale dei requisiti funzionali obbligatori soddisfatti da Norris ha raggiunto un esito complessivamente \textbf{ottimale}.\\
+					Si riportano di seguito le percentuali di requisiti funzionali obbligatori realizzati dalle componenti di Chuck.
+					\begin{table}[H]
+						\centering
+							\begin{tabu}{| l | c | c |}
+								\hline
+								Componente	& Percentuale requisiti funzionali obbligatori soddisfatti	& Esito		\\ \hline \hline
+								Directive  &	100\% 	& Ottimale  \\ \hline
+								ChartView  & 	100\%	& Ottimale  \\ \hline
+								ViewModel  & 	100\%	& Ottimale  \\ \hline
+								DataModel  & 	100\%	& Ottimale  \\ \hline
+							\end{tabu}
+						\caption{Esiti del calcolo delle percentuali di requisiti funzionali obbligatori realizzati da Chuck durante la Fase PD}
+					\end{table}
+					Come è possibile notare dalla tabella, la percentuale dei requisiti funzionali obbligatori soddisfatti da Chuck ha raggiunto un esito complessivamente \textbf{ottimale}.\\
+					Si riportano di seguito le percentuali di requisiti funzionali obbligatori realizzati dalle componenti dell'Applicazione.
+					\begin{table}[H]
+						\centering
+							\begin{tabu}{| l | c | c |}
+								\hline
+								Componente	& Percentuale requisiti funzionali obbligatori soddisfatti	& Esito		\\ \hline \hline
+								Model				&   100\% 	& Ottimale \\ \hline
+								Model:NorrisChart	&   100\% 	& Ottimale  \\ \hline
+								Model:Service 		& 	100\%	& Ottimale   \\ \hline
+								Presenter  			& 	100\%	& Ottimale  \\ \hline
+								View  				& 	100\%	& Ottimale  \\ \hline
+							\end{tabu}
+						\caption{Esiti del calcolo delle percentuali di requisiti funzionali obbligatori realizzati dell'Applicazione durante la Fase PD}
+					\end{table}
+					Come è possibile notare dalla tabella la percentuale dei requisiti funzionali obbligatori soddisfatti dell'Applicazione ha raggiunto un esito \textbf{ottimale}.
 
 				\level{5}{Numero di requisiti desiderabili funzionali realizzati}
-				Si riportano di seguito le percentuali di requisiti desiderabili funzionali realizzati dalle componenti di Norris.
-				\begin{table}[H]
-					\centering
-						\begin{tabu}{| l | c | c |}
-							\hline
-							Componente			& 	Percentuale requisiti desiderabili funzionali soddisfatti	& Esito		\\ \hline \hline
-							InternalAPIManager	& 	100\% 	& Ottimale  \\ \hline
-							ExternalAPIManager  & 	100\%	& Ottimale  \\ \hline
-							DataModel  			& 	100\%	& Ottimale  \\ \hline
-						\end{tabu}
-					\caption{Esiti del calcolo delle percentuali di requisiti desiderabili funzionali realizzati da Norris durante la Fase PD}
-				\end{table}
-				Come è possibile notare dalla tabella la percentuale dei requisiti desiderabili funzionali soddisfatti da Norris ha raggiunto un esito ottimale. 
-				\\ \\
-				Si riportano di seguito le percentuali di requisiti desiderabili funzionali realizzati dalle componenti di Chuck.
-				\begin{table}[H]
-					\centering
-						\begin{tabu}{| l | c | c |}
-							\hline
-							Componente	& Numero requisiti desiderabili funzionali soddisfatti	& Esito		\\ \hline \hline
-							Directive	&	100\% 	& Ottimale  \\ \hline
-							ChartView	& 	100\%	& Ottimale  \\ \hline
-							ViewModel	& 	100\%	& Ottimale  \\ \hline
-							DataModel	& 	100\%	& Ottimale  	\\ \hline
-						\end{tabu}
-					\caption{Esiti del calcolo delle percentuali di requisiti desiderabili funzionali realizzati da Chuck durante la Fase PD}
-				\end{table}
-				Come è possibile notare dalla tabella la percentuale dei requisiti desiderabili funzionali soddisfatti da Chuck ha raggiunto un esito, nel complesso, ottimale.
+					Si riportano di seguito le percentuali di requisiti desiderabili funzionali realizzati dalle componenti di Norris.
+					\begin{table}[H]
+						\centering
+							\begin{tabu}{| l | c | c |}
+								\hline
+								Componente			& 	Percentuale requisiti funzionali desiderabili soddisfatti	& Esito		\\ \hline \hline
+								InternalAPIManager	& 	100\% 	& Ottimale  \\ \hline
+								ExternalAPIManager  & 	100\%	& Ottimale  \\ \hline
+								DataModel  			& 	100\%	& Ottimale  \\ \hline
+							\end{tabu}
+						\caption{Esiti del calcolo delle percentuali di requisiti desiderabili funzionali realizzati da Norris durante la Fase PD}
+					\end{table}
+					Come è possibile notare dalla tabella la percentuale dei requisiti desiderabili funzionali soddisfatti da Norris ha raggiunto un esito \textbf{ottimale}. 
+					\\ \\
+					Si riportano di seguito le percentuali di requisiti desiderabili funzionali realizzati dalle componenti di Chuck.
+					\begin{table}[H]
+						\centering
+							\begin{tabu}{| l | c | c |}
+								\hline
+								Componente	& Percentuale requisiti funzionali desiderabili soddisfatti	& Esito		\\ \hline \hline
+								Directive	&	100\% 	& Ottimale  \\ \hline
+								ChartView	& 	100\%	& Ottimale  \\ \hline
+								ViewModel	& 	100\%	& Ottimale  \\ \hline
+								DataModel	& 	100\%	& Ottimale  	\\ \hline
+							\end{tabu}
+						\caption{Esiti del calcolo delle percentuali di requisiti desiderabili funzionali realizzati da Chuck durante la Fase PD}
+					\end{table}
+					Come è possibile notare dalla tabella la percentuale dei requisiti desiderabili funzionali soddisfatti da Chuck ha raggiunto un esito, nel complesso, \textbf{ottimale}.
 
 				\level{5}{Numero di requisiti opzionali funzionali realizzati}
 				Si riportano di seguito le percentuali di requisiti opzionali funzionali realizzati dalle componenti di Norris.
@@ -144,7 +176,7 @@ individuata nel presente documento.
 						\end{tabu}
 					\caption{Esiti del calcolo delle percentuali di requisiti opzionali funzionali realizzati da Norris durante la Fase PD}
 				\end{table}
-				
+				Complessivamente la percentuale dei requisiti funzionali opzionali realizzati in Norris è \textbf{ottimale}.\\				
 				Si riportano di seguito le percentuali di requisiti opzionali funzionali realizzati dalle componenti di Chuck.
 				\begin{table}[H]
 					\centering
