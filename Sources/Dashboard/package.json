@@ -5,6 +5,7 @@
   "main": "dashboard.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "mkdir node_modules; cp -r ../Chuck node_modules/",
     "postinstall": "npm install ../Norris",
     "prestart": "npm install",
     "start": "node index.js"

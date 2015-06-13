@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Norris template",
   "scripts": {
-    "postinstall": "npm install ../../Chuck; ./node_modules/.bin/bower install"
+    "postinstall": "npm install ../../Chuck && ./node_modules/.bin/bower install"
   },
   "author": "Kaizen Team",
   "license": "ISC",
