@@ -48,7 +48,7 @@
                 \input{SpecificaTecnica/Tex/relazioniView.tex}
             </xsl:if>
              <xsl:if test="$system = 'Applicazione' and @name = 'Presenter'">
-                %\input{SpecificaTecnica/Tex/relazioniPresenter.tex}
+                \input{SpecificaTecnica/Tex/relazioniPresenter.tex}
             </xsl:if>
 
             <xsl:apply-templates select="*[local-name()='Namespace.ownedElement']/*[local-name()='Class' or local-name()='Interface' or local-name()='Package']"><xsl:sort select="@name"/></xsl:apply-templates>
