@@ -1,14 +1,20 @@
 /*
- * Name: {ChartImpl.js}
- * Module: {DataModel/NorrisChart}
- * Location: {Norris/Main/DataModel/NorrisChart}
- * Date: {2015-04-10}
- * Version: {v0.06}
+ * Name: ChartImpl.js
+ * Module: DataModel/NorrisChart
+ * Location: Norris/Main/DataModel/NorrisChart
+ * Date: 2015-04-10
+ * Version: v1.00
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
+ * ================================================================================
+ * v1.00 2015-06-15 Carlon Chiara  Approved
+ * ================================================================================
+ * v0.08 2015-06-02 Bigarella Chiara   Verify
+ * ================================================================================
+ * v0.07 2015-05-30 Bucco Riccardo   Edit 
  * ================================================================================
  * v0.06 2015-05-21 Bigarella Chiara   Verify
  * ================================================================================
