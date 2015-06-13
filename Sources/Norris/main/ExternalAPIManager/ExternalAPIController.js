@@ -61,7 +61,6 @@ function ExternalAPIController(model, server, app) {
     this.app.use(function (req, res, next) {
         var hosts = model.getSettings().origins;
         hosts = hosts.join(', ');
-        console.log('beeeeeeep');
         res.setHeader('Access-Control-Allow-Origin', hosts);
         res.setHeader('Access-Control-Allow-Credentials', 'true');
         next();
