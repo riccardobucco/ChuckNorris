@@ -10,7 +10,7 @@
     "prestart": "npm install",
     "pretest": "npm install",
     "postinstall": "sh -c 'cd static; npm install'",
-    "start": "node index.js",
+    "start": "node random.js",
     "test": "./node_modules/.bin/mocha test/*/*.js"
   },
   "author": "Kaizen Team",

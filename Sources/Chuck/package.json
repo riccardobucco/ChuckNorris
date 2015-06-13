@@ -1,0 +1,22 @@
+{
+  "name": "chuck-rtc",
+  "version": "0.0.0",
+  "description": "Chuck real time charts",
+  "scripts": {
+    "pretest": "npm install",
+    "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+    "test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js --single-run",
+    "postinstall": "./node_modules/.bin/bower install"
+  },
+  "author": "Kaizen Team",
+  "license": "ISC",
+  "devDependencies": {
+    "karma": "^0.12.16",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.1.5"
+  },
+  "dependencies": {
+    "bower": "^1.4.1"
+  }
+}
