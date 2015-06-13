@@ -3,9 +3,9 @@
 <document>
 	<title>Piano di Qualifica</title>
 	<type>Esterno</type>
-	<redactedby>Bigarella Chiara \\ Carlon Chiara \\ Rubin Marco</redactedby>
-	<verifiedby>Davide Dal Bianco \\ Moretto Alessandro</verifiedby>
-	<approvedby>Pavanello Fabio Matteo</approvedby>
+	<redactedby>Bigarella Chiara \\ Moretto Alessandro</redactedby>
+	<verifiedby>Bucco Riccardo \\ Davide Dal Bianco \\ Rubin Marco</verifiedby>
+	<approvedby>Carlon Chiara</approvedby>
 	<distribution>Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap</distribution>
 
 	<sections>
@@ -38,18 +38,32 @@
             <description>Approvazione del documento</description>
         </version>
 	<version>
-            <id>6.07</id>
+            <id>6.09</id>
             <date>2015-06-15</date>
             <author>Bucco Riccardo</author>
             <role>Verificatore</role>
-            <description>Verifica nuove sezioni e correzione</description>
+            <description>Verifica nuove sezioni</description>
         </version>
 	<version>
-            <id>6.06</id>
+            <id>6.08</id>
             <date>2015-06-14</date>
             <author>Bigarella Chiara</author>
             <role>Verificatore</role>
             <description>Redazione esiti Fase PD</description>
+        </version>
+        <version>
+            <id>6.07</id>
+            <date>2015-06-14</date>
+            <author>Bucco Riccardo</author>
+            <role>Verificatore</role>
+            <description>Verifica esiti test</description>
+        </version>
+    <version>
+            <id>6.06</id>
+            <date>2015-06-13</date>
+            <author>Bigarella Chiara</author>
+            <role>Verificatore</role>
+            <description>Trascrizione esiti test</description>
         </version>
 	<version>
             <id>6.05</id>
@@ -61,15 +75,15 @@
 	<version>
             <id>6.04</id>
             <date>2015-06-11</date>
-            <author>Pavanello Fabio Matteo</author>
-            <role>Progettista</role>
+            <author>Moretto Alessandro</author>
+            <role>Amministratore</role>
             <description>Rimozione sezioni gestione anomalie</description>
         </version>
 	<version>
             <id>6.03</id>
             <date>2015-06-10</date>
-            <author>Pavanello Fabio Matteo</author>
-            <role>Progettista</role>
+            <author>Moretto Alessandro</author>
+            <role>Amministratore</role>
             <description>Spostamento sezione test in appendice</description>
         </version>
 	<version>
