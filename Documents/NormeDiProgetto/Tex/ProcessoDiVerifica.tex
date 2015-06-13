@@ -104,6 +104,11 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				\level{5}{Test di accettazione}
 				I test di accettazione avvengono al momento del collaudo del \insglo{software} col proponente.
 				I test di accettazione sono identificati dalla sintassi TA[Codice del requisito], dove il Codice del requisito si riferisce al requisito che sarà testato.
+				\level{5}{Test di robustezza}
+				I test di robustezza servono a prevenire il collasso del sistema in situazioni limite. In particolare, poichè nel progetto viene usato principalmente un linguaggio non tipato quale il JavaScript, sono stati previsti dei casi in cui vengono effettuati dei controlli di tipo sui parametri passati a metodi e costruttori. Qualora tali controlli non venissero superati, il programma deve sollevare delle eccezioni indicando con messaggi significativi il tipo di errore commesso.\\
+				I test di robustezza definiti verificano quindi il corretto sollevamento delle eccezioni nelle situazioni individuate.\\
+				I test di robustezza sono identificati dal nome \texttt{TSNomeClasse.js}, dove \texttt{NomeClasse} indica il nome della classe testata.
+				
 			\level{4}{Procedure} \label{sec:procedure}
 			Di seguito vengono descritte le procedure da seguire per effettuare due diverse tipologie di test (test di unità e test di integrazione) sui prodotti \textit{\insglo{Norris}} e \textit{\insglo{Chuck}}.
 			
@@ -127,6 +132,7 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 							\caption{Esempio di test di unità fallito}
 						\end{figure}
 					\end{itemize}
+					
 					\level{6}{Test di integrazione}
 					Per eseguire i test di integrazione su \insglo{Norris}, si procede nel modo di seguito esposto, dando per scontato che sia già installato il \textit{\insglo{package} manager} \texttt{npm} di \insglo{node.js}.
 					\begin{itemize}
@@ -139,11 +145,31 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 							\includegraphics[scale=0.5]{Pics/TIPassing.png}
 							\caption{Esempio di test di integrazione passato}
 						\end{figure}
-						\item In caso l'esito sia negativo, comparirà la lista degli errori individuati, come nell'imagine seguente.
+						\item In caso l'esito sia negativo, comparirà la lista degli errori individuati, come nell'immagine seguente.
 						\begin{figure}[H]
 							\centering
 							\includegraphics[scale=0.5]{Pics/TINotPassing.png}
 							\caption{Esempio di test di integrazione fallito}
+						\end{figure}
+					\end{itemize}
+					
+					\level{6}{Test di robustezza}
+					Per eseguire i test di robustezza su \insglo{Norris}, si procede nel modo di seguito esposto, dando per scontato che sia già installato il \textit{\insglo{package} manager} \texttt{npm} di \insglo{node.js}.
+					\begin{itemize}
+						\item Da terminale ci si sposti nella cartella \inspath{Sources/Norris}.
+						\item In caso non sia presente, si installi il test \insglo{framework} “mocha”, tramite il comando \texttt{npm install -g mocha}. 
+						\item Una volta installato “mocha”, ci si sposti nella cartella \inspath{Sources/Norris/test/strength} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire.
+						\item In caso il test dia risultato positivo, comparirà l'elenco delle funzionalità testate con il segno di spunta, come nella figura seguente.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[scale=0.5]{Pics/TSPassing.png}
+							\caption{Esempio di test di robustezza passato}
+						\end{figure}
+						\item In caso l'esito sia negativo, comparirà la lista degli errori individuati, come nell'immagine seguente.
+						\begin{figure}[H]
+							\centering
+							\includegraphics[scale=0.5]{Pics/TSNotPassing.png}
+							\caption{Esempio di test di robustezza fallito}
 						\end{figure}
 					\end{itemize}
 					
