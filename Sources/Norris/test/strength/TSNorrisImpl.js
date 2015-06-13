@@ -19,14 +19,6 @@ var assert = require("assert");
 
 describe('NorrisImpl', function() {
 
-    describe('NorrisImpl(endpoint)',function() {
-        it('should throw an error if endpoint is not valid',function() {
-        	var endpoint;
-
-        	assert.throws(function () {(NorrisImpl(endpoint))});
-        });
-    });
-
     describe('createChart(chartType: String, chartId: String)', function() {
     	it('should throw an error if the chart has no id)', function() {
     		var endpoint = '';
