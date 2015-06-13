@@ -3,11 +3,17 @@
 * Package: it.kaizenteam.app.model.service
 * Location: Sources/Applicazione/main/java/it/kaizenteam/app/model/Service
 * Date: 2015-05-18
-* Version: v0.02
+* Version: v1.00
 *
 * History:
 * =================================================================
 * Version	Date	Programmer	Changes
+* =================================================================
+* v1.00 2015-06-15  Carlon Chiara  Approved
+* =================================================================
+* v0.04 2015-06-02  Rubin Marco  Verify
+* =================================================================
+* v0.03 2015-05-30  Bigarella Chiara Edit
 * =================================================================
 * v0.02 2015-05-24  Dal Bianco Davide   Verify
 * =================================================================
