@@ -76,156 +76,57 @@
 					\caption{Numero di parametri nei metodi a disposizione dell'utente in seguito alla fase PD}
 				\end{table}
 				Come si può notare tutte le API a disposizione dell'utente necessitano di un numero minore o uguale a due di parametri. Poichè ci eravamo posti come obiettivo minimo di avere solo metodi con 3-4 parametri e come obiettivo ottimale quello di avere solo metodi con un numero di parametri minore o uguale a due possiamo dire di aver raggiunto un esito \textbf{ottimale}.
-			\level{4}{Manutenibilità e comprensibilità del codice}
+			\level{4}{Robustezza}
+				Il \groupname si è posto l'obiettivo di sviluppare software che sia robusto e si comporti bene nel caso in cui avvengano delle anomalie. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: percentuale di test di robustezza superati.\\
+				Notare che non ci sono test di robustezza per l'applicazione Android, in quanto si interagisce con essa tramite interfaccia grafica e non c'è modo di passare input non desiderati.\\
+				I risultati che sono stati ottenuti durante l'effettuazione di tali test sono riassunti di seguito:
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+						\hline
+						Prodotto      & Percentuale test superati   & Esito     \\ \hline \hline
+						Norris	      & 100\%                       & Ottimale  \\ \hline
+						Chuck	      & 100\%                       & Ottimale  \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo delle percentuali dei test di robustezza superati durante la Fase PD}
+				\end{table}
+				Come può essere notato dalla tabella, tutti i test di robustezza che sono stati eseguiti sono stati superati con successo. L'obiettivo minimo era quello di superarne almeno il 90\%, mentre quello ottimale era di superarli tutti. Possiamo dunque concludere che l'obiettivo che ci siamo prefissati di raggiungere ha avuto esito \textbf{ottimale}.
+			\level{4}{Manutenibilità e comprensibilità del codice} \label{sec:manutebilitaEsitiPD}
 				Il \groupname si è posto l'obiettivo di sviluppare software che sia facilmente manutenibile e comprensibile. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso delle seguenti metriche:
 				\begin{itemize}
 					\item numero di statement di un metodo;
 					\item numero di campi dati di una classe;
 					\item grado di accoppiamento.
 				\end{itemize}
-				
-
-
-
-				Nelle seguenti sezioni vengono riportate le percentuali precise di requisiti che sono stati soddisfatti (in base al prodotto e alle componenti che riguardano). In particolare per ogni prodotto e per ogni sua componente viene detto quanti requisiti funzionali obbligatori, desiderabili e opzionali sono stati realizzati. I dati sono stati ottenuti facilmente a partire dal tracciamento (componenti-requisiti) presente nel nostro tracker.
-
-				\level{5}{Numero di requisiti funzionali obbligatori realizzati}
-					Si riportano di seguito le percentuali di requisiti funzionali obbligatori realizzati dalle componenti di Norris.
-					\begin{table}[H]
-						\centering
-							\begin{tabu}{| l | c | c |}
-								\hline
-								Componente	& Percentuale requisiti funzionali obbligatori soddisfatti	& Esito		\\ \hline \hline
-								InternalAPIManager	& 100\% 	& Ottimale  \\ \hline
-								ExternalAPIManager  & 	100\%	& Ottimale  \\ \hline
-								DataModel  & 	100\%	& Ottimale  \\ \hline
-							\end{tabu}
-						\caption{Esiti del calcolo delle percentuali di requisiti funzionali obbligatori realizzati da Norris durante la Fase PD}
-					\end{table}
-					Come è possibile notare dalla tabella, la percentuale dei requisiti funzionali obbligatori soddisfatti da Norris ha raggiunto un esito complessivamente \textbf{ottimale}.\\
-					Si riportano di seguito le percentuali di requisiti funzionali obbligatori realizzati dalle componenti di Chuck.
-					\begin{table}[H]
-						\centering
-							\begin{tabu}{| l | c | c |}
-								\hline
-								Componente	& Percentuale requisiti funzionali obbligatori soddisfatti	& Esito		\\ \hline \hline
-								Directive  &	100\% 	& Ottimale  \\ \hline
-								ChartView  & 	100\%	& Ottimale  \\ \hline
-								ViewModel  & 	100\%	& Ottimale  \\ \hline
-								DataModel  & 	100\%	& Ottimale  \\ \hline
-							\end{tabu}
-						\caption{Esiti del calcolo delle percentuali di requisiti funzionali obbligatori realizzati da Chuck durante la Fase PD}
-					\end{table}
-					Come è possibile notare dalla tabella, la percentuale dei requisiti funzionali obbligatori soddisfatti da Chuck ha raggiunto un esito complessivamente \textbf{ottimale}.\\
-					Si riportano di seguito le percentuali di requisiti funzionali obbligatori realizzati dalle componenti dell'Applicazione.
-					\begin{table}[H]
-						\centering
-							\begin{tabu}{| l | c | c |}
-								\hline
-								Componente	& Percentuale requisiti funzionali obbligatori soddisfatti	& Esito		\\ \hline \hline
-								Model				&   100\% 	& Ottimale \\ \hline
-								Model:NorrisChart	&   100\% 	& Ottimale  \\ \hline
-								Model:Service 		& 	100\%	& Ottimale   \\ \hline
-								Presenter  			& 	100\%	& Ottimale  \\ \hline
-								View  				& 	100\%	& Ottimale  \\ \hline
-							\end{tabu}
-						\caption{Esiti del calcolo delle percentuali di requisiti funzionali obbligatori realizzati dell'Applicazione durante la Fase PD}
-					\end{table}
-					Come è possibile notare dalla tabella la percentuale dei requisiti funzionali obbligatori soddisfatti dell'Applicazione ha raggiunto un esito \textbf{ottimale}.
-
-				\level{5}{Numero di requisiti desiderabili funzionali realizzati}
-					Si riportano di seguito le percentuali di requisiti desiderabili funzionali realizzati dalle componenti di Norris.
-					\begin{table}[H]
-						\centering
-							\begin{tabu}{| l | c | c |}
-								\hline
-								Componente			& 	Percentuale requisiti funzionali desiderabili soddisfatti	& Esito		\\ \hline \hline
-								InternalAPIManager	& 	100\% 	& Ottimale  \\ \hline
-								ExternalAPIManager  & 	100\%	& Ottimale  \\ \hline
-								DataModel  			& 	100\%	& Ottimale  \\ \hline
-							\end{tabu}
-						\caption{Esiti del calcolo delle percentuali di requisiti desiderabili funzionali realizzati da Norris durante la Fase PD}
-					\end{table}
-					Come è possibile notare dalla tabella la percentuale dei requisiti desiderabili funzionali soddisfatti da Norris ha raggiunto un esito \textbf{ottimale}. 
-					\\ \\
-					Si riportano di seguito le percentuali di requisiti desiderabili funzionali realizzati dalle componenti di Chuck.
-					\begin{table}[H]
-						\centering
-							\begin{tabu}{| l | c | c |}
-								\hline
-								Componente	& Percentuale requisiti funzionali desiderabili soddisfatti	& Esito		\\ \hline \hline
-								Directive	&	100\% 	& Ottimale  \\ \hline
-								ChartView	& 	100\%	& Ottimale  \\ \hline
-								ViewModel	& 	100\%	& Ottimale  \\ \hline
-								DataModel	& 	100\%	& Ottimale  	\\ \hline
-							\end{tabu}
-						\caption{Esiti del calcolo delle percentuali di requisiti desiderabili funzionali realizzati da Chuck durante la Fase PD}
-					\end{table}
-					Come è possibile notare dalla tabella la percentuale dei requisiti desiderabili funzionali soddisfatti da Chuck ha raggiunto un esito, nel complesso, \textbf{ottimale}.
-
-				\level{5}{Numero di requisiti opzionali funzionali realizzati}
-				Si riportano di seguito le percentuali di requisiti opzionali funzionali realizzati dalle componenti di Norris.
+				Riportiamo in seguito un riassunto dei risultati ottenuti durante la misurazione del numero di statement per ogni metodo presente nelle classi dei vari prodotti:
 				\begin{table}[H]
 					\centering
-						\begin{tabu}{| l | c | c |}
-							\hline
-							Componente	& Percentuale requisiti opzionali funzionali soddisfatti	& Esito		\\ \hline \hline
-							InternalAPIManager	& 95\% 	& Accettabile  \\ \hline
-							ExternalAPIManager  & 	96\%	& Accettabile  \\ \hline
-							DataModel  & 	100\%	& Ottimale  \\ \hline
-						\end{tabu}
-					\caption{Esiti del calcolo delle percentuali di requisiti opzionali funzionali realizzati da Norris durante la Fase PD}
+					\begin{tabu}{| l | c | c | c |}
+						\hline
+						                                  & Norris   & Chuck   & App     \\ \hline \hline
+						Metodi con più di 60 statement    & 0\%      & 0\%     & 0\%     \\ \hline
+						Metodi con 30-60 statement        & 2\%      & 4\%     & 0\%     \\ \hline
+						Metodi con meno di 30 statement   & 0\%      & 95\%    & 100\%   \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo del numero di statement per metodo durante la Fase PD}
 				\end{table}
-				Complessivamente la percentuale dei requisiti funzionali opzionali realizzati in Norris è \textbf{ottimale}.\\				
-				Si riportano di seguito le percentuali di requisiti opzionali funzionali realizzati dalle componenti di Chuck.
+				L'obiettivo ottimale che ci eravamo posti era di avere solo metodi con meno di 30 statement, mentre l'obiettivo minimo era quello di avere solo metodi con meno di 60 statement. Abbiamo dunque ottenuto un risultato \textbf{accettabile} (seppure siamo molto vicini all'ottimalità).\\
+				Riportiamo in seguito un riassunto dei risultati ottenuti durante la misurazione del numero di campi dati presenti in ciascuna classe dei vari prodotti:
 				\begin{table}[H]
 					\centering
-						\begin{tabu}{| l | c | c |}
-							\hline
-							Componente	& Numero requisiti opzionali funzionali soddisfatti	& Esito		\\ \hline \hline
-							ViewModel  	& 90\%	& Accettabile  \\ \hline
-							DataModel  	& 	97\%	& Accettabile  \\ \hline
-						\end{tabu}
-					\caption{Esiti del calcolo delle percentuali di requisiti opzionali funzionali realizzati da Chuck durante la Fase PD}
+					\begin{tabu}{| l | c | c | c |}
+						\hline
+						                                  & Norris   & Chuck   & App     \\ \hline \hline
+						Classi con più di 10 campi dati   & 0\%      & 0\%     & 0\%     \\ \hline
+						Classi con 6-10 campi dati        & 4\%      & 0\%     & 0\%     \\ \hline
+						Classi con meno di 6 campi dati   & 96\%     & 100\%   & 100\%   \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo del numero di campi dati per classe durante la Fase PD}
 				\end{table}
-
-			\level{4}{Percentuale di test di robustezza effettuati}
-			Nella tabella seguente, vengono riportate le percentuali dei test effettuati sui tre prodotti: Norris, Chuck e applicazione Android.
-			\begin{table}[H]
+				L'obiettivo ottimale che ci eravamo posti era di avere solo classi con meno di 6 campi dati, mentre l'obiettivo minimo era quello di avere solo classi con meno di 10 campi dati. Abbiamo dunque ottenuto un risultato \textbf{accettabile} (seppure siamo molto vicini all'ottimalità).\\
+				Riportiamo in seguito un riassunto dei risultati ottenuti durante la misurazione del grado di accoppiamento (afferente ed efferente) dei vari componenti di ciascun prodotto:
+				\begin{table}[H]
 					\centering
-						\begin{tabu}{| l | c | c |}
-							\hline
-							Prodotto	& Percentuale test superati	& Esito		\\ \hline \hline
-							Norris	&	100\% 	& Ottimale  \\ \hline
-							Chuck	& 	100\%	& Ottimale  \\ \hline
-							Applicazione Android	& 	100\%	& Ottimale  \\ \hline
-						\end{tabu}
-					\caption{Esiti del calcolo delle percentuali dei test di robustezza superati durante la Fase PD}
-				\end{table}
-				
-			\level{4}{Copertura del codice}
-			Nella tabella seguente, vengono riportate le percentuali relative alla copertura del codice per le tre componenti del prodotto coi relativi esiti.
-			\begin{table}[H]
-					\centering
-						\begin{tabu}{| l | c | c |}
-							\hline
-							Prodotto	& Percentuale codice testato	& Esito		\\ \hline \hline
-							Norris	&	95\% 	& Ottimale  \\ \hline
-							Chuck	& 	65\%	& Accettabile  \\ \hline
-							Applicazione Android	& 	62\%	& Accettabile  \\ \hline
-						\end{tabu}
-					\caption{Esiti del calcolo delle percentuali della copertura del codice delle componenti durante la Fase PD}
-				\end{table}
-			\level{4}{Complessità ciclomatica, numero di statement per metodo e livello di annidamento}
-			Per ogni metodo di ciascuna classe di Chuck e Norris, sono indicati, nella seguente tabella, i valori calcolati per le tre metriche: complessità ciclomatica (indicata con C.C.), numero di statement per metodo (indicato con N.S.) e livello di annidamento (indicato con L.A.).
-				\input{PianoDiQualifica/TrackerMetricheCN.tex}
-			Per ogni metodo di ciascuna classe dell'applicazione Android, sono indicati, nella seguente tabella, i valori calcolati per le tre metriche: complessità ciclomatica (indicata con C.C.), numero di statement per metodo (indicato con N.S.) e livello di annidamento (indicato con L.A.).
-				\input{PianoDiQualifica/TrackerMetricheA.tex}
-				
-			\level{4}{Grado di accoppiamento dei componenti}
-			Si riporta di seguito, per ogni componente,il grado di accoppiamento afferente ed efferente.
-			\begin{table}[H]
-				\centering
 					\begin{tabu}{| l | c | c | c | c | c | c | }
 						\hline
 						Componente					& Afferente & Esiti Afferente & Efferente & Esiti Efferente 	\\ \hline \hline
@@ -240,9 +141,54 @@
 						App::Presenter 				& 2 & Ottimale & 6 & Accettabile   \\ \hline
 						App::View 					& 1 & Ottimale & 6 & Accettabile   \\ \hline
 					\end{tabu}
-				\caption{Esiti del calcolo del grado di accoppiamento per le componenti durante la Fase PD}
-			\end{table}
-			Come è possibile notare dalla tabella, abbiamo ottenuto buoni risultati sia per Norris sia per l'applicazione Android, mentre i valori del grado di accoppiamento afferente della componente ViewModel di Chuck sono risultati molto alti, in quanto rappresenta la componente principale di Chuck.
+					\caption{Esiti del calcolo del grado di accoppiamento per le componenti durante la Fase PD}
+				\end{table}
+				L'obiettivo minimo che il gruppo si era prefissato era di avere ovunque un grado minore o uguale a 7, mentre l'obiettivo ottimale era di avere un grado minore o uguale di 5. Come si può notare dai risultati l'esito \textbf{non è accettabile}. Tutavia si può notare che sono davvero pochi i componenti che fanno si che l'esito non possa essere accettato, quindi si è vicini all'ottenimento di un risultato accettabile.
+			\level{4}{Testabilità}
+				Il \groupname si è posto l'obiettivo di sviluppare software che sia facilmente testabile. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso delle seguenti metriche:
+				\begin{itemize}
+					\item complessità ciclomatica;
+					\item livello di annidamento;
+					\item grado di accoppiamento.
+				\end{itemize}
+				Riportiamo in seguito un riassunto dei risultati ottenuti durante la misurazione della complessità ciclomatica (indicata con C.C.) per ogni metodo presente nelle classi dei vari prodotti:
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c | c |}
+						\hline
+						                                 & Norris   & Chuck   & App     \\ \hline \hline
+						Metodi con C.C. maggiore di 10   & 0\%      & 0\%     & 0\%     \\ \hline
+						Metodi con C.C. pari a 5-10      & 5\%      & 0\%     & 0\%     \\ \hline
+						Metodi con C.C. minore di 5      & 95\%     & 100\%   & 100\%   \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo della complessità ciclomatica per metodo durante la Fase PD}
+				\end{table}
+				L'obiettivo minimo che il gruppo si era posto era quello di avere solo metodi con complessità ciclomatica minore di 10. L'obiettivo ottimale consisteva nell'avere solo metodi con complessità ciclomatica minore di 5. Possiamo dunque concludere che l'esito dei risultati è \textbf{accettabile} (nonostante si sia molto vicini all'ottimalità che si cercava).\\
+				Riportiamo in seguito un riassunto dei risultati ottenuti durante la misurazione del livello di annidamento (indicato con L.A.) per ogni metodo presente nelle classi dei vari prodotti:
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c | c |}
+						\hline
+						                                & Norris   & Chuck   & App     \\ \hline \hline
+						Metodi con L.A. maggiore di 5   & 2\%      & 3\%     & 0\%     \\ \hline
+						Metodi con L.A. pari a 3-5      & 7\%     & 21\%    & 6\%     \\ \hline
+						Metodi con L.A. minore di 3     & 91\%     & 76\%    & 94\%   \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo del livello di annidamento per metodo durante la Fase PD}
+				\end{table}
+				L'obiettivo minimo che il gruppo si era posto era quello di avere solo metodi con livello di annidamento minore di 5. L'obiettivo ottimale consisteva nell'avere solo metodi con livello di annidamento minore di 3. Possiamo dunque concludere che l'esito dei risultati \textbf{non è accettabile}, anche se ci si avvicina molto all'accettabilità, in quanto i metodi che posseggono livello di annidamento leggermente alto sono molto pochi.\\
+				Per quanto riguarda il grado di accoppiamento, gli esiti sono giàstati presentati all'interno della sezione \nameref{sec:manutebilitaEsitiPD}. Anche qui, seppur di poco, si è visto che i risultati \textbf{non sono accettabili}.
+			\level{4}{Risultati dettagliati del calcolo di alcune metriche}
+				Nella presente sezione sono riportati i risultati completi (non soggetti ad aggregazione) che riguardano le tre seguenti metriche:
+				\begin{itemize}
+					\item complessità ciclomatica di un metodo (indicata con C.C);
+					\item numero di statement di un metodo (indicata con N.S.);
+					\item livello di annidamento di un metodo (indicata con L.A.).
+				\end{itemize}
+				Per ogni metodo viene riportato il valore che è stato calcolato per ciascuna delle metriche. Si presentano dapprima i risultati riguardanti Chuck e Norris, in seguito si mostrano anche quelli relativi all'applicazione Android.\\
+				\input{PianoDiQualifica/TrackerMetricheCN.tex}
+				\input{PianoDiQualifica/TrackerMetricheA.tex}
+
 			 
 	\level{2}{Verifica dei processi}
 		\level{3}{Processo di documentazione}
