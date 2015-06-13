@@ -20,25 +20,6 @@ var assert = require("assert");
 describe('MapChartMovieUpdater', function(){
 
     describe('update(chart: ChartImpl, updateData: ChartUpdate): void', function(){
-        it('should reject chart without data',function(){
-            var chart = {data: {}};
-            chart.getData = function() {return this.data;};
-            chart.setData = function(data) {this.data = data;};
-            var newData = {
-                inplace : [
-                    { position: {series:0, index:0}, data: {x:1, y:1} },
-                    { position: {series:0, index:1}, data: {x:1, y:1} }
-                ],
-                stream: [
-                    { values: [{x:11, y:11}, {x:22, y:22}, {x:33, y:33}, {x:44, y:44}] },
-                ],
-                delete: [
-                    {series:0, index:0},
-                    {series:0, index:1}
-                ]
-            };
-            assert.throws(function () {(new MapChartMovieUpdater()).update(chart, newData)});
-        });
         it('should update a given mapchart with the movie method',function(){
             var chart = {
                 data: {datasets: [
