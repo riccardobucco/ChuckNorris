@@ -52,6 +52,9 @@ function NorrisImpl (settings) {
     for(var key in defaults) {
         this.settings[key] = settings[key] || defaults[key];
     }
+    if(this.settings.endpoint.slice(-1) !== '/') {
+        this.settings.endpoint += '/';
+    }
 }
 
 NorrisImpl.prototype.__proto__=events.EventEmitter.prototype;

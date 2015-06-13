@@ -4,7 +4,27 @@ var norris = require('./main');
 
 var app = express();
 var server = http.createServer(app);
-var nor = norris(server, app);
+
+var settings = {
+    endpoint: '/norris',
+    login: function (cookie, username, password) {
+        if (username === 'Kaizen' && password === 'Team') {
+            cookie.setCookie('ssid', 'true');
+            return true;
+        }
+        cookie.clearCookie('ssid');
+        return false;
+    },
+    isLogged: function (cookie) {
+        return cookie.getCookies.ssid === 'true';
+    },
+    logout: function (cookie) {
+        cookie.clearCookie('ssid');
+        return true;
+    }
+}
+
+var nor = norris(server, app, settings);
 
 server.listen(process.env.PORT || 9000);
 
