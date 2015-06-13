@@ -49,27 +49,9 @@ function NorrisBridge(model) {
  * @return {String} the endpoint.
  */
 NorrisBridge.prototype.getEndpoint = function(){
-    return this.model.getEndpoint();
+    return this.model.getSettings().endpoint;
 };
 
-
-/**
- * Sets the settings for the Norris instance.
- *
- * @param {NorrisSettings} settings - The settings to set to the Norris instance.
- */
-NorrisBridge.prototype.setSettings = function (settings) {
-    this.model.setSettings(settings);
-};
-
-/**
- * Gets the settings for the Norris instance.
- *
- * @return {NorrisSettings} The settings of the Norris instance.
- */
-NorrisBridge.prototype.getSettings = function () {
-    return this.model.getSettings();
-};
 
 /**
  * Creates a new chart.

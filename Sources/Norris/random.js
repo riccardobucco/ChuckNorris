@@ -4,7 +4,7 @@ var norris = require('./main');
 
 var app = express();
 var server = http.createServer(app);
-var nor = norris(server, '/', app);
+var nor = norris(server, app);
 
 server.listen(process.env.PORT || 9000);
 
@@ -18,29 +18,6 @@ var page = nor.createPage('page');
 page.add(bc).add(lc).add(mc).add(t);
 
 app.use('/', nor.getMiddleware());
-
-nor.setSettings({
-    login: function (cookies, username, password) {
-        if(username === 'Kaizen' && password === 'Team') {
-            cookies.setCookie('ssid', 'true');
-            console.log(username)
-            console.log(password)
-            return true;
-        } else {
-            return false;
-        }
-    },
-    isLogged: function (cookies) {
-        if(cookies.getCookies.ssid && cookies.getCookies.ssid === 'true')
-            return true;
-        else
-            return false;
-    },
-    logout: function (cookies) {
-        cookies.clearCookie('ssid');
-        return true;
-    }
-});
 
 bc.setData({
     labels: ['1','2','3','4','5'],

@@ -23,8 +23,6 @@
 var ExternalAPIController = require('./ExternalAPIController.js');
 var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
 
-var express = require('express');
-
 /**
  * Creates a ListEndpoint.
  * @param {ExternalAPIController} controller

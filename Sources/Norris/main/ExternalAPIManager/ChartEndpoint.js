@@ -23,9 +23,9 @@ var ExternalAPIController = require('./ExternalAPIController.js');
 var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
 var SocketIOCookieParser = require('socket.io-cookie-parser');
 
-var sio = require('socket.io');
+var socketio = require('socket.io');
 
-module.exports=ChartEndpoint;
+module.exports = ChartEndpoint;
 
 /**
  * Creates a ChartEndpoint.
@@ -37,12 +37,12 @@ function ChartEndpoint(controller) {
     if (!(this instanceof ChartEndpoint)) return new ChartEndpoint(controller);
     if (controller instanceof ExternalAPIController) {
         this.controller=controller;
-        var socketio = sio(controller.getServer(), {path: this.controller.getEndpoint() + 'chart'}); // the server is listening for socket.io connections
+        var sio = socketio(controller.getServer(), {path: this.controller.getEndpoint() + 'chart'}); // the server is listening for socket.io connections
         var chartEndpoint = this;
-        socketio.use(SocketIOCookieParser());
+        sio.use(SocketIOCookieParser());
 
         this.controller.model.on('create', function (chart) {
-            var nsp = socketio.of('/' + chart.getId());
+            var nsp = sio.of('/' + chart.getId());
 
             nsp.use(function (socket, next) {
                 var cookies = {

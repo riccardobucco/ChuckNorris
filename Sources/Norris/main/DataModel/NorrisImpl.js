@@ -27,48 +27,35 @@ var NorrisPage = require('./NorrisPage');
 module.exports = NorrisImpl;
 
 var defaults = {
-      login : function() {return true;},
-      logout: function() {return true;},
-      isLogged: function() {return true;},
-      keepAlive: function() {return true;}
+    endpoint: '/',
+    secret: 'r7k;._$e*"°à#',
+    origins: [],
+    login: function () {return true;},
+    keepalive: function () {return true;},
+    logout: function () {return true;},
+    isLogged: function () {return true;}
 };
 
 /**
  * Creates a Norris instance.
  * @constructor
  */
-function NorrisImpl (endpoint) {
-      if (!(this instanceof NorrisImpl)) return new NorrisImpl();
-      events.EventEmitter.call(this); //NorrisImpl inherits from events.EventEmitter
-      if (endpoint) {
-            this.endpoint=endpoint;
-            this.settings = {};
-            this.charts = {};
-            this.pages = {};
-            this.setSettings(defaults);
-      }
-      else {
-        throw ("missingEndpoint");
-      }
+function NorrisImpl (settings) {
+    if (!(this instanceof NorrisImpl)) return new NorrisImpl();
+    events.EventEmitter.call(this); //NorrisImpl inherits from events.EventEmitter
+
+    this.settings = {};
+    this.charts = {};
+    this.pages = {};
+
+    settings = settings || {};
+    for(var key in defaults) {
+        this.settings[key] = settings[key] || defaults[key];
+    }
 }
 
 NorrisImpl.prototype.__proto__=events.EventEmitter.prototype;
 
-/**
- * Sets the Norris' settings. You're allowed to change value to the default properties, but you cannot add
- * new properties to Norris' settings.
- *
- * @param settings - a JSON object containing the Norris' settings you wish to add.
- */
-NorrisImpl.prototype.setSettings = function(settings) {
-      if(typeof settings == 'object') {
-            for(var key in settings) {
-                  if(settings.hasOwnProperty(key)) {
-                        this.settings[key] = settings[key];
-                  }
-            }
-      }
-};
 
 /**
  * NorrisImpl.prototype.getSettings allows you to get the Norris' settings.
@@ -109,7 +96,7 @@ NorrisImpl.prototype.createChart = function(chartType, chartId) {
  * Gets a Norris' chart.
  *
  * @param {String} chartId - the value of a chart's ID;
- * @return 	{ChartImpl} the Norris' chart with the ID==chartId.
+ * @return  {ChartImpl} the Norris' chart with the ID==chartId.
  */
 NorrisImpl.prototype.getChart = function(chartId) {
    return this.charts[chartId];
@@ -118,7 +105,7 @@ NorrisImpl.prototype.getChart = function(chartId) {
 /**
  * Gets all Norris' charts.
  *
- * @return 	a list of the Norris' charts.
+ * @return  a list of the Norris' charts.
  */
 NorrisImpl.prototype.getCharts = function() {
       var charts = [];
@@ -153,7 +140,7 @@ NorrisImpl.prototype.createPage = function(pageId) {
  * Gets a Norris' page.
  *
  * @param {String} pageId - contains the value of a page's ID;
- * @return 	{PageImpl} the Norris' page with the ID==chartId.
+ * @return  {PageImpl} the Norris' page with the ID==chartId.
  */
 NorrisImpl.prototype.getPage = function(pageId){
       return this.pages[pageId];
@@ -162,7 +149,7 @@ NorrisImpl.prototype.getPage = function(pageId){
 /**
  *Gets all Norris' pages.
  *
- * @return 	a list of the Norris' pages.
+ * @return  a list of the Norris' pages.
  */
 NorrisImpl.prototype.getPages = function(){
       var pages = [];
@@ -170,13 +157,4 @@ NorrisImpl.prototype.getPages = function(){
             pages.push(this.pages[id]);
       }
       return pages;
-};
-
-/**
- * Gets all Norris' endpoint.
- *
- * @return {String} the endpoint.
- */
-NorrisImpl.prototype.getEndpoint = function(){
-      return this.endpoint;
 };

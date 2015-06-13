@@ -22,11 +22,7 @@
 var ExternalAPIController = require('./ExternalAPIController.js');
 var ExternalAPIConstructor = require('./ExternalAPIConstructor.js');
 
-var express = require('express');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-
-module.exports=AuthenticationEndpoint;
+module.exports = AuthenticationEndpoint;
 
 /**
  * Creates an AuthenticationEndpoint.
@@ -39,9 +35,7 @@ function AuthenticationEndpoint(controller) {
     if (controller instanceof ExternalAPIController) {
         var authenticationEndpoint = this;
         this.controller=controller;
-        this.app=controller.getApp();
-        this.app.use(this.controller.getEndpoint(), cookieParser());
-        this.app.use(this.controller.getEndpoint() + 'auth', bodyParser.urlencoded({extended: true}));
+        this.app = controller.getApp();
         this.app.post(this.controller.getEndpoint() + 'auth/login', function (req, res) {authenticationEndpoint.handleLogin(req, res);});
         this.app.post(this.controller.getEndpoint() + 'auth/logout', function (req, res) {authenticationEndpoint.handleLogout(req, res);});
         this.app.post(this.controller.getEndpoint() + 'auth/keepalive', function (req, res) {authenticationEndpoint.handleKeepAlive(req, res);});

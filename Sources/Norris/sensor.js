@@ -4,7 +4,7 @@ var norris = require('./main');
 
 var app = express();
 var server = http.createServer(app);
-var nor = norris(server, '/endpoint', app);
+var nor = norris(server, app);
 
 var socketio = require('socket.io');
 var sio = socketio(server);

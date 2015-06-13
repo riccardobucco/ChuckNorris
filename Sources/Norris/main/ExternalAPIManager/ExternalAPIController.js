@@ -22,6 +22,8 @@
 var NorrisImpl=require('../DataModel/NorrisImpl.js');
 var ChartRef=require('./ChartRef.js');
 var http=require('http');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 var events=require('events');
 var express=require('express');
 
@@ -39,22 +41,27 @@ function ExternalAPIController(model, server, app) {
     if(!(this instanceof ExternalAPIController))
         return new ExternalAPIController(model, server, app);
     events.EventEmitter.call(this); //ExternalAPIController inherits from events.EventEmitter
-    this.model=model;
-    this.server=server;
-    this.endpoint=model.getEndpoint();
-    if (app != undefined ){
-        this.app=app;
-        /*app.use(function (req, res, next) {
-            var hosts = model.getSettings().origins;
-            hosts = hosts.join(', ');
-            res.setHeader('Access-Control-Allow-Origin', hosts);
-            res.setHeader('Access-Control-Allow-Credentials', 'true');
-            next();
-        });*/
+
+    if(!model || !server || !app) {
+        throw ('missing parameters')
     }
-    else {
-        throw ("ExternalAPIController:undefinedApp");
-    }
+
+    this.model = model;
+    this.server = server;
+    this.app = app;
+
+    var endpoint = this.getEndpoint();
+
+    this.app.use(endpoint, function (req, res, next) {
+        console.log('beep');
+        var hosts = model.getSettings().origins;
+        hosts = hosts.join(', ');
+        res.setHeader('Access-Control-Allow-Origin', hosts);
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
+        next();
+    });
+    this.app.use(endpoint, cookieParser());
+    this.app.use(endpoint, bodyParser.urlencoded({extended: true}));
 };
 
 ExternalAPIController.prototype.__proto__=events.EventEmitter.prototype;
@@ -144,7 +151,7 @@ ExternalAPIController.prototype.getServer = function() {
  * @returns {String}
  */
 ExternalAPIController.prototype.getEndpoint = function() {
-    return this.endpoint;
+    return this.model.getSettings().endpoint;
 };
 
 /**

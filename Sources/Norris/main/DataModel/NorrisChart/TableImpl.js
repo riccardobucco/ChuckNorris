@@ -31,13 +31,13 @@ var TableStreamUpdater = require('./TableStreamUpdater.js');
 module.exports = TableImpl;
 
 var defaults = {
-	description : 'This is a table.',
-	maxItems : 10 ,
-	showTableGrid : true ,
-	newLinePosition : 'bottom',
-	allowFilter: false,
-	allowSort: false,
-	allowPaginate: false
+    description : 'This is a table.',
+    maxItems : 10 ,
+    showTableGrid : true ,
+    newLinePosition : 'bottom',
+    allowFilter: false,
+    allowSort: false,
+    allowPaginate: false
 };
 
 /**
@@ -46,11 +46,11 @@ var defaults = {
  * @param {String} id - the table's id.
  */
 function TableImpl (id) {
-	if (!(this instanceof TableImpl)) return new TableImpl(uid);
-	ChartImpl.call(this, 'table',id);
-	for(var key in defaults) {
-		this.settings[key] = defaults[key];
-	}
+    if (!(this instanceof TableImpl)) return new TableImpl(uid);
+    ChartImpl.call(this, 'table',id);
+    for(var key in defaults) {
+        this.settings[key] = defaults[key];
+    }
 }
 
 TableImpl.prototype.__proto__ = ChartImpl.prototype;
@@ -62,7 +62,7 @@ TableImpl.prototype.__proto__ = ChartImpl.prototype;
  * @constructor
  */
 function TableFactory() {
-	if(!(this instanceof TableFactory)) return new TableFactory();
+    if(!(this instanceof TableFactory)) return new TableFactory();
 }
 
 TableFactory.prototype.instance=new TableFactory(); // static
@@ -72,7 +72,7 @@ TableFactory.prototype.instance=new TableFactory(); // static
  * @returns {TableFactory} the factory's instance.
  */
 TableFactory.getInstance = function() { // static
-	return TableFactory.prototype.instance;
+    return TableFactory.prototype.instance;
 };
 
 /**
@@ -81,7 +81,7 @@ TableFactory.getInstance = function() { // static
  * @returns {BarChartImpl} - the created table.
  */
 TableFactory.prototype.createChart = function (id) {
-	return new TableImpl(id);
+    return new TableImpl(id);
 };
 
 //Dependency injection:
