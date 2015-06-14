@@ -153,7 +153,7 @@
                                 });
 
                                 dataset.values.forEach(function (value) {
-                                    var marker = L.marker([value.y, value.x], {icon: icon});
+                                    var marker = L.marker([value.y, value.x], {icon: icon, clickable: false});
                                     layers.push(marker);
                                     map.addLayer(marker);
                                 });
