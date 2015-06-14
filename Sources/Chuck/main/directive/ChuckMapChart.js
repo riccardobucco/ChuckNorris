@@ -141,14 +141,14 @@
                     layers = [];
 
                     newData.datasets.forEach(function (dataset) {
-                        if(dataset.visible) {
+                        if(dataset.visible !== false) {
                             var markerName = dataset.marker || 'default';
 
                             var setMarkers = function () {
                                 var marker = markers[markerName].replace('%COLOR%', dataset.color);
                                 var icon = L.icon({
                                     iconUrl: "data:image/svg+xml;base64," + btoa(marker),
-                                    iconSize: [20, 60],
+                                    iconSize: [30, 30],
                                     iconAnchor: [15, 30]
                                 });
 

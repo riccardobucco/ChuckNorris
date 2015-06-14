@@ -28,7 +28,8 @@ map.setSettings({
 });
 
 
-var lines = ['01','03','05','06','07','09','10','11','12','13','15','16','18','22','24','41','42','43','CC','DC','SIR1'];
+//var lines = ['01','03','05','06','07','09','10','11','12','13','15','16','18','22','24','41','42','43','CC','DC','SIR1'];
+var lines = ['22'];
 
 var mapData = {
     datasets: []
@@ -66,23 +67,25 @@ function updateLine(line) {
                 // elimina tutti i punti
                 for(var i in chartData[series].values) {
                     updateData.delete.push({
-                        series: series,
-                        index: i
-                    })
+                        series: parseInt(series),
+                        index: parseInt(i)
+                    });
                 }
 
                 // riaggiunge tutti i punti
                 for(var i in result) {
                     updateData.stream.push({
-                        series: series,
+                        series: parseInt(series),
                         data: {
                             x: result[i].WGS84La,
                             y: result[i].WGS84Fi
                         }
-                    })
+                    });
                 }
 
-                map.update('movie',updateData);
+
+                map.update('movie', updateData);
+
             }
         }, function () {
             console.error('Error during the request');
