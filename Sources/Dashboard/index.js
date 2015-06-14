@@ -25,10 +25,11 @@ app.use(rtc.getMiddleware());
 map.setSettings({
     title: 'Mappa autobus',
     legendPosition: 'none',
+    maxItems: 40,
     area: {
         y: 45.4043344,
         x: 11.8830057,
-        zoom: 13
+        zoom: 12
     }
 });
 
