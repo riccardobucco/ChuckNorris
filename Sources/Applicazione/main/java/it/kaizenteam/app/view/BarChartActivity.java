@@ -86,18 +86,27 @@ public class BarChartActivity extends ChartActivity implements BarChartView{
     public void renderChart(ChartData data) {
         chart.clear();
         BarData datanew =((BarChartDataImpl) data).getData();
-        float max=0;
+        float max=-1212121;
+        float min=+1212121;
         for(int i =0;i<datanew.getDataSets().size();i++){
             for(int j =0;j<datanew.getDataSets().get(i).getYVals().size();j++){
                 if(datanew.getDataSets().get(i).getYVals().get(j).getVal()>max)
                     max=datanew.getDataSets().get(i).getYVals().get(j).getVal();
+                else
+                    if(datanew.getDataSets().get(i).getYVals().get(j).getVal()<min)
+                        min=datanew.getDataSets().get(i).getYVals().get(j).getVal();
             }
         }
         chart.setData(datanew);
         chart.getAxisLeft().setAxisMaxValue(max + 1);
         chart.getAxisRight().setAxisMaxValue(max + 1);
+        if(min<0) {
+            chart.getAxisLeft().setStartAtZero(false);
+            chart.getAxisRight().setStartAtZero(false);
+        }
+        chart.getAxisLeft().setAxisMinValue(min - 1);
+        chart.getAxisRight().setAxisMinValue(min - 1);
         chart.invalidate();
-        //TODO: controllare se c'è qualcosa di piu efficiente senza farlo nel model
     }
 
     /**

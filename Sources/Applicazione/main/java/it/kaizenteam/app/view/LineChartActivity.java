@@ -83,15 +83,21 @@ public class LineChartActivity extends ChartActivity implements LineChartView {
         chart.setData(((LineChartDataImpl) data).getData());
         chart.getXAxis().setValues(((LineChartDataImpl) data).getData().getXVals());
 
-        float max=0;
+        float max=-324234234;
+        float min=434243424;
         for(int i =0;i<chart.getData().getDataSets().size();i++)
-            for(int j =0;j<chart.getData().getDataSets().get(i).getYVals().size();j++){
-                if(chart.getData().getDataSets().get(i).getYVals().get(j).getVal()>max)
-                    max=chart.getData().getDataSets().get(i).getYVals().get(j).getVal();
+            for(int j =0;j<chart.getData().getDataSets().get(i).getYVals().size();j++) {
+                if (chart.getData().getDataSets().get(i).getYVals().get(j).getVal() > max)
+                    max = chart.getData().getDataSets().get(i).getYVals().get(j).getVal();
+                else if (chart.getData().getDataSets().get(i).getYVals().get(j).getVal() < min)
+                    min = chart.getData().getDataSets().get(i).getYVals().get(j).getVal();
             }
-
         chart.getAxisLeft().setAxisMaxValue(max + 1);
         chart.getAxisRight().setAxisMaxValue(max + 1);
+        if(min<0) {
+            chart.getAxisLeft().setStartAtZero(false);
+            chart.getAxisRight().setStartAtZero(false);
+        }
         chart.invalidate();
     }
 
