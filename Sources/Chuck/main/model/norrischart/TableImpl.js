@@ -41,7 +41,7 @@ angular.module('chuck-chart')
         newLinePosition : 'bottom',
         allowFilter: false,
         allowSort: false,
-        allowPaginate: false
+        pageSize: -1
     };
 
     /**

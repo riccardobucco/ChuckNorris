@@ -29,8 +29,9 @@
         "allowSort": {
             "type": "boolean"
         },
-        "allowPaginate": {
-            "type": "boolean"
+        "pageSize": {
+            "type": "integer",
+            "minimum": -1
         }
     }
 }

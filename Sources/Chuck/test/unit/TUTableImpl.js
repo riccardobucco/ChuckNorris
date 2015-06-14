@@ -48,7 +48,7 @@ describe('TableImpl', function() {
                 newLinePosition : 'bottom',
                 allowFilter: false,
                 allowSort: false,
-                allowPaginate: false
+                pageSize: -1
             };
             expect(defaults).toDeepEqual(table.settings);
         });

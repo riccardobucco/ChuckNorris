@@ -342,7 +342,7 @@ it('should set and update a mapchart properly', function () {
             settings: {
                     "description": "This is a table.",
                     "allowFilter": false,
-                    "allowPaginate": false,
+                    "pageSize": -1,
                     "allowSort": false,
                     "showTableGrid": true,
                     "newLinePosition": "bottom",

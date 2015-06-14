@@ -71,7 +71,9 @@ angular.module('chuck')
                     info.data = [];
                     info.bFilter = settings.allowFilter;
                     info.bSort = settings.allowSort;
-                    info.bPaginate = settings.allowPaginate;
+                    info.bPaginate = (settings.pageSize >= 0);
+                    info.lengthChange = false;
+                    info.iDisplayLength = settings.pageSize;
 
                     var tableElement = jQuery(element.contents()[0]);
                     if(settings.showTableGrid) {
@@ -88,6 +90,8 @@ angular.module('chuck')
 
                 function render(newValue, oldValue) {
                     var newData = newValue.getData();
+
+                    var page = table.page();
 
                     table.rows().remove();
 
@@ -113,6 +117,8 @@ angular.module('chuck')
                     });
 
                     table.draw();
+                    table.page(page).draw(false);
+
                 };
             });
         }

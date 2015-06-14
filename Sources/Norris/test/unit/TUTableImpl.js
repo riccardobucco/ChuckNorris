@@ -41,7 +41,7 @@ describe('TableImpl', function(){
                 newLinePosition : 'bottom',
                 allowFilter: false,
                 allowSort: false,
-                allowPaginate: false
+                pageSize: -1
             };
             assert.deepEqual(defaults,table.settings);
         });

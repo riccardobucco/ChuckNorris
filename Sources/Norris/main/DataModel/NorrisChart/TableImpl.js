@@ -42,7 +42,7 @@ var defaults = {
     newLinePosition : 'bottom',
     allowFilter: false,
     allowSort: false,
-    allowPaginate: false
+    pageSize: -1
 };
 
 /**
