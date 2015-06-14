@@ -125,11 +125,11 @@
 					\item[newLinePosition] It's a String, chosen from a set of values, which sets where the new line has to be positioned. This property can assume one of the following values: “top” or “bottom”.
 					\item[allowFilter] It's a boolean indicating whether the filtering options are allowed or not.
 					\item[allowSort] It's a boolean indicating whether the sorting option is allowed or not.
-					\item[allowPaginate] It's a boolean indicating whether the paginate option is allowed or not.
+					\item[pageSize] It's an integer representing the paginate option of a table. If its value is “-1”, the rows of the table are drawn in one single page, if it's greater than “0” it indicates the number of rows of each page of the table.
 				\end{description}
 
 		\level{3}{Updates}
-			In this section there is a description of the format of update \insglo{packages}, depending on charts type. 
+			In this section it's described the format of the update \insglo{packages}, depending on charts type. 
 			\level{4}{Bar chart}
 				The \insglo{Bar Chart} can be updated with the “\insglo{in place}” method. The parameter of such method must be an object with the “inplace” property, which is an array of objects with the properties described below.
 				\begin{description}
