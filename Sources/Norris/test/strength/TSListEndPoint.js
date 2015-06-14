@@ -35,7 +35,7 @@ describe('ListEndpoint',function(){
 				 otherwise it won't act as a static variable */
 			};
 			
-			var controller = { description: 'this object would be a controller'	};
+			var controller;
 			
 			
 			function ListEndpointFactory() {

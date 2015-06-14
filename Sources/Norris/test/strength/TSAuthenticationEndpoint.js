@@ -35,7 +35,7 @@ describe('AuthenticationEndpoint',function(){
 			};
 			
 			
-			var controller = { description: 'this object would be a controller'	};
+			var controller;
 			
 			function AuthenticationEndpointFactory() {
 				if(!(this instanceof AuthenticationEndpointFactory)) {

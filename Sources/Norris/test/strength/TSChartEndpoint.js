@@ -35,7 +35,7 @@ describe('ChartEndpoint',function(){
 			};
 			
 			
-			var controller = { description: 'this object would be a controller'	};
+			var controller;
 			
 			
 			function ChartEndpointFactory() {
