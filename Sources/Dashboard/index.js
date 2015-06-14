@@ -138,9 +138,7 @@ function updateLine(line) {
             console.error('Error during the request');
         })
         .finally(function () {
-            line_index++;
-            line_index %= lines.length;
-            setTimeout(function () {updateLine(lines[line_index])});
+            setTimeout(function () {updateLine(line)});
         });
 }
 
