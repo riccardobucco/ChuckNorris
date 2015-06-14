@@ -9,10 +9,14 @@ var rtc = norris(server, app);
 
 server.listen(9000);
 
+var lines = ['01','03','05','06','07','09','10','11','12','13','15','16','18','22','24','41','42','43','CC','DC','SIR1'];
+//var lines = ['22'];
+
 
 // norris init
 var map = rtc.createChart('mapchart', 'map');
-var dashboard = rtc.createPage('dashboard').add(map);
+var table = rtc.createChart('table', 'table');
+var dashboard = rtc.createPage('dashboard').add(map).add(table);
 dashboard.setSettings({title: 'Dashboard APS'});
 
 app.use(rtc.getMiddleware());
@@ -27,11 +31,18 @@ map.setSettings({
     }
 });
 
+table.setSettings({
+    allowPaginate: true,
+    allowFilter: true,
+    allowSort: true
+});
 
-//var lines = ['01','03','05','06','07','09','10','11','12','13','15','16','18','22','24','41','42','43','CC','DC','SIR1'];
-var lines = ['22'];
-
+// data
 var mapData = {
+    datasets: []
+}
+var tableData = {
+    headers: ['Linea', 'Autobus'],
     datasets: []
 }
 lines.forEach(function (line) {
@@ -40,8 +51,15 @@ lines.forEach(function (line) {
         color: '#ff0000',
         values: []
     });
+    tableData.datasets.push({
+        row: [
+            {value: line},
+            {value: '0'}
+        ]
+    });
 });
 map.setData(mapData);
+table.setData(tableData);
 
 lines.forEach(function (line) {
     setTimeout(function () {updateLine(line)});
@@ -52,6 +70,9 @@ function updateLine(line) {
     getLineFromAPS(line)
         .then(function (result) {
             if(result.length > 0) {
+
+                //map
+
                 var updateData = {};
                 updateData.delete = [];
                 updateData.stream = [];
@@ -83,8 +104,34 @@ function updateLine(line) {
                     });
                 }
 
-
                 map.update('movie', updateData);
+
+
+                // table
+
+                var updateData = {};
+                updateData.inplace = [];
+
+                var chartData = table.getData().datasets;
+                var series;
+                for (var i in chartData) {
+                    if (chartData[i].row[0].value === line) {
+                        series = i;
+                    }
+                }
+
+                updateData.inplace.push({
+                    position: {
+                        x: 0,
+                        y: 1
+                    },
+                    data: {
+                        value: result.length.toString()
+                    }
+                });
+
+                table.update('inplace', updateData);
+
 
             }
         }, function () {
