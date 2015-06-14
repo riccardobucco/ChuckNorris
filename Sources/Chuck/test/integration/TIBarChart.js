@@ -1,16 +1,20 @@
 /*
- * Name: {TIBarChart.js}
- * Module: {}
- * Location: {Norris/test/integration}
- * Date: {2015-05-25}
- * Version: {v1.00}
+ * Name: TIBarChart.js
+ * Module: 
+ * Location: Norris/test/integration
+ * Date: 2015-05-30
+ * Version: v1.00
  *
  * History:
  *
  * ================================================================================
  * Version Date Programmer Changes
  * ================================================================================
- * 0.01 2015-05-25 Kaizen Team {creation}
+ * v1.00 2015-06-15 Carlon Chiara Approved
+ * ================================================================================
+ * v0.02 2015-06-03 Dal Bianco Davide Verify
+ * ================================================================================
+ * v0.01 2015-05-30 Bigarella Chiara Creation
  * ================================================================================
  */
 
