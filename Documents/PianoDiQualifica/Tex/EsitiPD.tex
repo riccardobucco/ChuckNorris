@@ -189,6 +189,32 @@
 				\input{PianoDiQualifica/TrackerMetricheCN.tex}
 				\input{PianoDiQualifica/TrackerMetricheA.tex}
 
+		\level{3}{Panoramica degli esiti ottenuti}
+			Riportiamo in seguito una tabella che riassume gli esiti della verifica fatta su software e documentazione. Tale riassunto è di aiuto al \insrole{Responsabile di Progetto} nel momento in cui egli deve prendere decisioni e imporre obiettivi quantitativi di miglioramento.
+			\begin{table}[H]
+				\centering
+				\begin{tabu}{| l | l | l | c |}
+					\hline
+					Prodotto & Obiettivo & Metrica & Esito \\ \hline \hline
+					\multirow{3}{*}{Documenti} 
+					& Leggibilità e comprensibilità & Gulpease                        & Ottimale \\ \cline{2-4}
+					& Correttezza ortografica       & Errori ortografici non corretti & Ottimale \\ \cline{2-4}
+					& Correttezza concettuale       & Errori concettuali non corretti & Ottimale \\ \hline
+					\multirow{9}{*}{Codice e software}
+					& Funzionalità                  & Requisiti funzionali realizzati & Ottimale \\ \cline{2-4}
+					& Semplicità d'uso              & Numero parametri delle API      & Ottimale \\ \cline{2-4}
+					& Robustezza                    & Test di robustezza superati     & Ottimale \\ \cline{2-4}
+					& \multirow{3}{*}{Manutenibilità/comprensibilità}
+					                         & Numero statement per metodo     & Accettabile     \\ \cline{3-4}
+					                       & & Numero campi dati per classe    & Accettabile     \\ \cline{3-4}
+					                       & & Grado di accoppiamento          & Non accettabile \\ \cline{2-4}
+					& \multirow{3}{*}{Testabilità}
+					                         & Complessità ciclomatica         & Accettabile     \\ \cline{3-4}
+					                       & & Livello di annidamento          & Non accettabile \\ \cline{3-4}
+					                       & & Grado di accoppiamento          & Non accettabile \\ \hline
+				\end{tabu}
+				\caption{Panoramica degli esiti ottenuti nella verifica dei prodotti durante la fase PD}
+			\end{table}
 			 
 	\level{2}{Verifica dei processi}
 		\level{3}{Processo di documentazione}
@@ -450,3 +476,35 @@
 				\end{table}
 				La produttività del processo di validazione non può essere confrontata con alcun valore, in quanto è la prima volta che essa viene calcolata. Non è dunque possibile affermare se i risultati siano accettabili oppure no seguendo le metriche che sono state adottate.\\
 				Tuttavia possiamo comunque affermare che questo risultato è \textbf{ottimale}, in quanto utilizzando la formula che è stata precedentemente introdotta non si possono ottenere risultati maggiori di questo.
+		\level{3}{Panoramica degli esiti ottenuti}
+			Riportiamo in seguito una tabella che riassume gli esiti della verifica fatta sui vari processi. Tale riassunto è di aiuto al \insrole{Responsabile di Progetto} nel momento in cui egli deve prendere decisioni e imporre obiettivi quantitativi di miglioramento.
+			\begin{table}[H]
+				\centering
+				\begin{tabu}{| l | l | l | c |}
+					\hline
+					Processo & Obiettivo & Metrica & Esito \\ \hline \hline
+					\multirow{4}{*}{Documentazione} 
+					& Miglioramento costante        & CMM                       & Accettabile    \\ \cline{2-4}
+					& Rispettare la pianificazione  & Schedule Variance         & Ottimale       \\ \cline{2-4}
+					& Rispettare il budget          & Budget Variance           & Ottimale       \\ \cline{2-4}
+					& Efficacia ed efficienza       & Produttività              & Non accetabile \\ \hline
+					\multirow{5}{*}{Verifica}
+					& Miglioramento costante        & CMM                       & Accettabile    \\ \cline{2-4}
+					& Rispettare la pianificazione  & Schedule Variance         & Accettabile    \\ \cline{2-4}
+					& Rispettare il budget          & Budget Variance           & Accettabile    \\ \cline{2-4}
+					& \multirow{2}{*}{Efficacia ed efficienza}
+													& Produttività              & Accettabile    \\ \cline{3-4}
+												  & & Efficacia revisione       & Ottimale       \\ \hline
+					\multirow{4}{*}{Sviluppo}
+					& Miglioramento costante        & CMM                       & Ottimale       \\ \cline{2-4}
+					& Rispettare la pianificazione  & Schedule Variance         & Ottimale       \\ \cline{2-4}
+					& Rispettare il budget          & Budget Variance           & Ottimale       \\ \cline{2-4}
+					& Efficacia ed efficienza       & Produttività              & Ottimale       \\ \hline
+					\multirow{4}{*}{Validazione}
+					& Miglioramento costante        & CMM                       & Accettabile    \\ \cline{2-4}
+					& Rispettare la pianificazione  & Schedule Variance         & Ottimale       \\ \cline{2-4}
+					& Rispettare il budget          & Budget Variance           & Ottimale       \\ \cline{2-4}
+					& Efficacia ed efficienza       & Produttività              & Ottimale       \\ \hline
+				\end{tabu}
+				\caption{Panoramica degli esiti ottenuti nella verifica dei processi durante la fase PD}
+			\end{table}

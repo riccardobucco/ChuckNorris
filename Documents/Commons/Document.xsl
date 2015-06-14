@@ -27,6 +27,7 @@
 		\usepackage{amsmath}
 		\usepackage{subfigure}
 		\usepackage{pifont}
+		\usepackage{multirow}
 
 		\colorlet{punct}{red!60!black}
 		\definecolor{background}{HTML}{EEEEEE}
