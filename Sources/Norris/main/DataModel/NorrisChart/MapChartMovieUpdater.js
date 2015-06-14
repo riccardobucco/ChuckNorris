@@ -75,17 +75,6 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
                     data.datasets[series].values[index].y=updateData.inplace[i].data.y;
                 }
             }
-            /* Stream: */
-            if (updateData.hasOwnProperty('stream')) {
-                for(var i=0; i<updateData.stream.length; i++) {
-                    var series=updateData.stream[i].series;
-                    var val=updateData.stream[i].data;
-                    data.datasets[series].values.push(val);
-                    if (data.datasets[series].values.length > chart.getSettings().maxItems) {
-                        data.datasets[series].values.shift();
-                    }
-                }
-            }
             /* Delete: */
             if (updateData.hasOwnProperty('delete')) {
                 var index={};
@@ -129,6 +118,17 @@ MapChartMovieUpdater.prototype.update = function (chart, updateData) {
                     data.datasets[series].values = data.datasets[series].values.filter(function (e) {return e!=null;});
                 }
 
+            }
+            /* Stream: */
+            if (updateData.hasOwnProperty('stream')) {
+                for(var i=0; i<updateData.stream.length; i++) {
+                    var series=updateData.stream[i].series;
+                    var val=updateData.stream[i].data;
+                    data.datasets[series].values.push(val);
+                    if (data.datasets[series].values.length > chart.getSettings().maxItems) {
+                        data.datasets[series].values.shift();
+                    }
+                }
             }
             // validazione di data rispetto allo schema JSON
             chart.setData(data);
