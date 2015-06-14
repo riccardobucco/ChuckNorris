@@ -6,7 +6,6 @@ var app = express();
 var server = http.createServer(app);
 
 var settings = {
-    endpoint: '/norris',
     login: function (cookie, username, password) {
         if (username === 'Kaizen' && password === 'Team') {
             cookie.setCookie('ssid', 'true');

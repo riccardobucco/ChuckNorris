@@ -23,6 +23,7 @@ app.use(rtc.getMiddleware());
 
 // settings
 map.setSettings({
+    title: 'Mappa autobus',
     legendPosition: 'none',
     area: {
         y: 45.4043344,
@@ -32,7 +33,8 @@ map.setSettings({
 });
 
 table.setSettings({
-    allowPaginate: true,
+    title: 'Autobus attivi',
+    pageSize: 8,
     allowFilter: true,
     allowSort: true
 });
@@ -62,16 +64,15 @@ map.setData(mapData);
 table.setData(tableData);
 
 lines.forEach(function (line) {
-    setTimeout(function () {updateLine(line)});
+    updateLine(line);
 });
-
 
 function updateLine(line) {
     getLineFromAPS(line)
         .then(function (result) {
             if(result.length > 0) {
 
-                //map
+                // map
 
                 var updateData = {};
                 updateData.delete = [];
@@ -122,23 +123,24 @@ function updateLine(line) {
 
                 updateData.inplace.push({
                     position: {
-                        x: 0,
+                        x: parseInt(series),
                         y: 1
                     },
                     data: {
                         value: result.length.toString()
                     }
                 });
-
+                
                 table.update('inplace', updateData);
-
 
             }
         }, function () {
             console.error('Error during the request');
         })
         .finally(function () {
-            setTimeout(function () {updateLine(line)});
+            line_index++;
+            line_index %= lines.length;
+            setTimeout(function () {updateLine(lines[line_index])});
         });
 }
 
