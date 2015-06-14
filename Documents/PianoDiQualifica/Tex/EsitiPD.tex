@@ -192,47 +192,51 @@
 			 
 	\level{2}{Verifica dei processi}
 		\level{3}{Processo di documentazione}
-			\level{4}{Livello CMM}
-			In questa fase, il livello CMM del processo di documentazione si assesta al terzo gradino della scala CMM.
+			\level{4}{Miglioramento costante}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di far si che il processo fosse in grado di migliorare continuamente (misurando di volta in volta le sue performance e ponendo obiettivi quantitativi). Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della scala CMM.\\
+				Dopo un'approfondita analisi del processo di documentazione da parte del gruppo, possiamo affermare che esso ha raggiunto il terzo livello della scala prevista da CMM.\\
+				Tale risultato è \textbf{accettabile} rispetto agli obiettivi posti inizialmente (si voleva arrivare come minimo al livello 2, con il risultato ottimale che sarebbe stato il livello 4).
+			
+			\level{4}{Rispetto della pianificazione}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di non avere attività e task di processo in ritardo rispetto a quanto è stato pianificato all'interno del \insdoc{Piano di Progetto}. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: Schedule Variance.\\
+				Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sui tempi di stesura di ogni documento:			
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+						\hline
+						Documenti 							& Schedule Variance   \\ \hline \hline
+						Piano di progetto v7.00				& 3\%                 \\ \hline
+						Norme di Progetto v7.00 			& 2\%                 \\ \hline
+						Piano di Qualifica v7.00 			& 5\%                 \\ \hline
+						Manuale Utente v4.00 				& -10\%               \\ \hline
+						Definizione di Prodotto v4.00 		& -3\%                \\ \hline
+						Totale processo di documentazione 	& -5\%                \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo della Schedule Variance sul processo di documentazione durante la Fase PD}
+				\end{table}
+				Possiamo concludere che la maggior parte delle attività pianificate nel \insdoc{Piano di Progettov7.00}, relative alla documentazione, sono state svolte nei tempi previsti.\\ Nella stesura di alcuni documenti vi è stato talvolta un ritardo, ma in generale le attività di documentazione sono state completate in anticipo rispetto a quanto previsto.\\
+				L'esito del risultato è dunque \textbf{ottimale}. Ci si prefiggeva infatti di avere una Schedule Variance che valesse al massimo 5\% (obiettivo minimo), e idealmente al massimo 0\% (obiettivo ottimale).
 
-			\level{4}{Schedule Variance}
-			La maggior parte delle attività pianificate nel \insdoc{Piano di Progettov7.00}, relative alla documentazione, sono state svolte nei tempi previsti. \\
-			Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sui tempi di stesura di ogni documento:
-			\begin{table}[H]
-					\centering
-					\begin{tabu}{| l | c | c |}
-							\hline
-							Documenti 							& Schedule Variance	& Esito		\\ \hline \hline						
-							Piano di progettov7.00				& 2\% 		& Ottimale  \\ \hline
-							Norme di Progettov7.00 			& 0\%		& Ottimale  \\ \hline
-							Piano di Qualificav7.00 			& -1\%		& Accettabile  \\ \hline
-							Manuale Utente v4.00 				& 0\%		& Ottimale  \\ \hline
-							Definizione di Prodotto v4.00 		& 1\%		& Ottimale  \\ \hline
-							Glossariov7.00					 	& 0\% 		& Ottimale \\ \hline
-							Totale processo di documentazione 	& 2\% 		& Ottimale \\ \hline
-					\end{tabu}
-				\caption{Esiti del calcolo della Schedule Variance durante la Fase PD}
-			\end{table}
 							
-			\level{4}{Budget Variance}
-			Le risorse impiegate per la correzione degli errori e per l'avanzamento delle attività pianificate sono risultate notevoli. Questo deriva dal fatto che le modifiche apportate alla documentazione, in questa fase, sono state significative, nell'intento di portare finalmente i documenti al loro stato ottimale.
-			Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sulle risorse utilizzate per la stesura di ogni documento:
-			\begin{table}[H]
+			\level{4}{Rispetto del budget}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di avere un processo che rientrasse nel budget assegnato dal \insdoc{Piano di Progetto}. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: Budget Variance.\\
+				Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sulle risorse utilizzate per la stesura di ogni documento:
+				\begin{table}[H]
 					\centering
 					\begin{tabu}{| l | c | c |}
-							\hline
-							Documenti 							& Budget Variance	& Esito		\\ \hline \hline							
-							Piano di progettov7.00				& 0\% 		& Ottimale  \\ \hline
-							Norme di Progettov7.00 			& -1\%		& Accettabile  \\ \hline
-							Piano di Qualificav7.00 			& -2\%		& Accettabile  \\ \hline
-							Specifica Tecnica v4.00 			& 0\%		& Ottimale  \\ \hline
-							Manuale Utente v4.00 				& 2\%		& Ottimale  \\ \hline
-							Definizione di Prodotto v4.00 		& 1\%		& Ottimale  \\ \hline
-							Glossariov7.00					 	& 3\% 		& Ottimale  \\ \hline
-							Totale processo di documentazione 	& 3\% 		& Ottimale \\ \hline
+						\hline
+						Documenti 							& Budget Variance   \\ \hline \hline
+						Piano di progetto v7.00				& 5\%               \\ \hline
+						Norme di Progetto v7.00 			& 2\%               \\ \hline
+						Piano di Qualifica v7.00 			& 5\%               \\ \hline
+						Manuale Utente v4.00 				& -11\%             \\ \hline
+						Definizione di Prodotto v4.00 		& -6\%              \\ \hline
+						Totale processo di documentazione 	& -2\%              \\ \hline
 					\end{tabu}
-				\caption{Esiti del calcolo della Budget Variance durante la Fase PD}
-			\end{table}
+					\caption{Esiti del calcolo della Budget Variance sul processo di documentazione durante la Fase PD}
+				\end{table}
+				Possiamo concludere che alcune attività non hanno rispettato il budget assegnato (seppur di poco). Altre, invece, sono state svolte ottenendo anche un risparmio. Se si guarda il processo di documentazione nel suo insieme possiamo vedere come ci sia stato un piccolo risparmio rispetto a quanto preventivato.\\
+				L'esito del risultato è dunque \textbf{ottimale}. Ci si prefiggeva infatti di avere una Budget Variance che valesse al massimo 10\% (obiettivo minimo), e idealmente al massimo 0\% (obiettivo ottimale).
 							
 			\level{4}{Produttività}
 			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di documentazione. Questo indice è stato calcolato durante tutti i momenti di verifica previsti dal \insdoc{Piano di Progettov7.00} per la \insphase{Fase PD}, per ogni documento redatto nel periodo antecedente la verifica. Il calcolo fatto di volta in volta sullo stesso documento tiene conto solo delle nuove sezioni introdotte in esso.\\
@@ -264,33 +268,39 @@
 			La produttività media del processo di documentazione è ulteriormente in diminuzione in quanto le nuove sezioni introdotte nei documenti ed eventuali ampliamenti in questa fase sono ridotti al minimo. Ciò contrasta coi livelli di Schedule e Budget Variance a causa del fatto che è stata rivista l'organizzazione dei contenuti dei documenti, non senza sforzo da parte dei membri del Team.
 
 		\level{3}{Processo di verifica}
-			\level{4}{Livello CMM}
-			In questa fase, il livello del processo di verifica si assesta al terzo gradino della scala CMM, già raggunto nella \insphase{Fase CP}.
-			\level{4}{Schedule Variance}
-			Il processo di verifica è stato sempre svolto rispettando le scadenze temporali previste nel \insdoc{Piano di Progettov7.00}. I valori della Schedule Variance, calcolati per questo processo, risultano, quindi, ottimi.\\
-			Riportiamo di seguito i valori ottenuti:
-			\begin{table}[H]
-				\centering
-				\begin{tabu}{| l | c | c |}
-					\hline
-						Processi 			& Schedule Variance	& Esito		\\ \hline \hline
-						Processo di verifica & 0\% & Ottimale \\ \hline
-				\end{tabu}
-				\caption{Esiti del calcolo della Schedule Variance durante la Fase PD}
-			\end{table}	
+			\level{4}{Miglioramento costante}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di far si che il processo fosse in grado di migliorare continuamente (misurando di volta in volta le sue performance e ponendo obiettivi quantitativi). Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della scala CMM.\\
+				Dopo un'approfondita analisi del processo di verifica da parte del gruppo, possiamo affermare che esso ha raggiunto il terzo livello della scala prevista da CMM.\\
+				Tale risultato è \textbf{accettabile} rispetto agli obiettivi posti inizialmente (si voleva arrivare come minimo al livello 2, con il risultato ottimale che sarebbe stato il livello 4).
+			\level{4}{Rispetto della pianificazione}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di non avere attività e task di processo in ritardo rispetto a quanto è stato pianificato all'interno del \insdoc{Piano di Progetto}. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: Schedule Variance.\\
+				Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sul processo di verifica:
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+						\hline
+						Processo 			   & Schedule Variance   \\ \hline \hline
+						Processo di verifica   & 3\%                 \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo della Schedule Variance sul processo di verifica durante la Fase PD}
+				\end{table}
+				Possiamo concludere che le attività pianificate nel \insdoc{Piano di Progettov7.00}, relative alla verifica, sono state svolte con un ritardo minimo rispetto ai tempi previsti.\\
+				L'esito del risultato è dunque \textbf{accettabile}. Ci si prefiggeva infatti di avere una Schedule variance che valesse al massimo 5\% (obiettivo minimo), e idealmente al massimo 0\% (obiettivo ottimale).	
 
-			\level{4}{Budget Variance}
-			Le risorse utilizzate nel processo di verifica sono di poco maggiori rispetto a quelle preventivate, a causa della necessità di correggere gli errori rilevati nella Revisione di Qualifica. Ciò ha causato un valore accettabile della Budget Variance.
-			Riportiamo di seguito il valore ottenuto:
-			\begin{table}[H]
-				\centering
-				\begin{tabu}{| l | c | c |}
-				\hline
-				Processi 			& Budget Variance	& Esito		\\ \hline \hline
-				Processo di verifica & -2\% & Accettabile \\ \hline
-				\end{tabu}
-				\caption{Esiti del calcolo della Budget Variance durante la Fase PD}
-			\end{table}	
+			\level{4}{Rispetto del budget}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di avere un processo che rientrasse nel budget assegnato dal \insdoc{Piano di Progetto}. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: Budget Variance.\\
+				Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sul processo di verifica:
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+						\hline
+						Processo 			   & Budget Variance     \\ \hline \hline
+						Processo di verifica   & 6\%                 \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo della Budget Variance sul processo di verifica durante la Fase PD}
+				\end{table}
+				Possiamo concludere il processo di verifica non ha rispettato il budget assegnato (seppur di poco). Non c'è stato dunque alcun risparmio, ma solo una piccola perdita. Questo è stato causato dalla necessità di correggere gli errori rilevati durante la Revisione di Qualifica.\\
+				L'esito del risultato è dunque \textbf{accettabile}. Ci si prefiggeva infatti di avere una Budget Variance che valesse al massimo 10\% (obiettivo minimo), e idealmente al massimo 0\% (obiettivo ottimale).
 
 			\level{4}{Produttività}
 			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di verifica. Tale indice è stato calcolato in seguito a tutti i momenti di verifica previsti dal \insdoc{Piano di Progettov7.00} per la \insphase{Fase PD}. Di seguito vengono riportati i valori calcolati e una loro rappresentazione grafica.
@@ -341,32 +351,40 @@
 
 		\level{3}{Processo di sviluppo}
 		Si riportano, in questa sezione, gli esiti delle misurazioni effettuate rispetto all'attività di codifica. In questa fase l'attività di codifica ha avuto un ruolo secondario, in quanto effettuata solo a scopo correttivo.
-			\level{4}{Livello CMM}
-			Poichè l'attività di codifica è stata attuata solo marginalmente, il livello \insglo{CMM} si attesta sul terzo gradino, raggiunto precedentemente.
+			\level{4}{Miglioramento costante}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di far si che il processo fosse in grado di migliorare continuamente (misurando di volta in volta le sue performance e ponendo obiettivi quantitativi). Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della scala CMM.\\
+				Dopo un'approfondita analisi del processo di sviluppo da parte del gruppo, possiamo affermare che esso ha raggiunto il quarto livello della scala prevista da CMM.\\
+				Tale risultato è \textbf{ottimale} rispetto agli obiettivi posti inizialmente (si voleva arrivare come minimo al livello 2, con il risultato ottimale che sarebbe stato il livello 4).
 			
-			\level{4}{Schedule Variance}
-			 Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sui tempi di correzione del codice sorgente.
-			\begin{table}[H]
-				\centering
-				\begin{tabu}{| l | c | c |}
-					\hline
-						Processi 						& Schedule Variance	& Esito		\\ \hline \hline
-						Processo di sviluppo (codifica) & 0\% & Ottimale \\ \hline
-				\end{tabu}
-				\caption{Esiti del calcolo della Schedule Variance durante la Fase PD}
-			\end{table}	
+			\level{4}{Rispetto della pianificazione}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di non avere attività e task di processo in ritardo rispetto a quanto è stato pianificato all'interno del \insdoc{Piano di Progetto}. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: Schedule Variance.\\
+				Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sul processo di sviluppo:
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+						\hline
+						Processo 			   & Schedule Variance   \\ \hline \hline
+						Processo di sviluppo   & -7\%                \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo della Schedule Variance sul processo di sviluppo durante la Fase PD}
+				\end{table}
+				Possiamo concludere che le attività pianificate nel \insdoc{Piano di Progettov7.00}, relative allo sviluppo, sono state svolte in minor tempo rispetto a quanto pianificato (la codifica ha impiegato molto meno tempo del previsto, avendo a disposizione una buona progettazione di dettaglio).\\
+				L'esito del risultato è dunque \textbf{ottimale}. Ci si prefiggeva infatti di avere una Schedule variance che valesse al massimo 5\% (obiettivo minimo), e idealmente al massimo 0\% (obiettivo ottimale).
 						
-			\level{4}{Budget Variance}
-			La correzione degli errori sul codice non ha richiesto un particolare dispendio di risorse. Si riporta di seguito il valore della Budget Variance determinato.		\\
-			\begin{table}[H]
-			\centering
-				\begin{tabu}{| l | c | c |}
-					\hline
-						Processi 						& Budget Variance	& Esito		\\ \hline \hline
-						Processo di sviluppo (codifica) & 2\% & Ottimale \\ \hline
-				\end{tabu}
-				\caption{Esiti del calcolo della Budget Variance dell'attività di codifica durante la Fase PD}
-			\end{table}	
+			\level{4}{Rispetto del budget}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di avere un processo che rientrasse nel budget assegnato dal \insdoc{Piano di Progetto}. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: Budget Variance.\\
+				Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sul processo di sviluppo:
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+						\hline
+						Processo 			   & Budget Variance     \\ \hline \hline
+						Processo di sviluppo   & -4\%                 \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo della Budget Variance sul processo di sviluppo durante la Fase PD}
+				\end{table}
+				Possiamo concludere il processo di sviluppo ha fatto si che si risparmiasse una piccola somma rispetto al budget assegnato. La codifica infatti ha impiegato molto meno tempo del previsto (e di conseguenza anche i costi si sono abbassati), avendo a disposizione una buona progettazione di dettaglio\\
+				L'esito del risultato è dunque \textbf{ottimale}. Ci si prefiggeva infatti di avere una Budget Variance che valesse al massimo 10\% (obiettivo minimo), e idealmente al massimo 0\% (obiettivo ottimale).
 							
 			\level{4}{Produttività}
 			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di sviluppo, limitatamente all'attività di codifica. \\
@@ -384,32 +402,41 @@
 			
 		\level{3}{Processo di validazione}
 		Si riportano, in questa sezione, gli esiti delle misurazioni effettuate sul processo di Validazione, implementato per ultimo, prima della consegna del prodotto.
-			\level{4}{Livello CMM}
-			Poichè questo processo è stato attuato per ultimo e per un brevissimo periodo, il team di sviluppo ritiene di aver raggiunto il secondo livello CMM, visto che il processo è stato documentato, ma non sente di aver ancora acquisito una sufficiente padronanza del processo stesso.
+			\level{4}{Miglioramento costante}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di far si che il processo fosse in grado di migliorare continuamente (misurando di volta in volta le sue performance e ponendo obiettivi quantitativi). Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della scala CMM.\\
+				Dopo un'approfondita analisi del processo di validazione da parte del gruppo, possiamo affermare che esso ha raggiunto il secondo livello della scala prevista da CMM.\\
+				Tale risultato è \textbf{accettabile} rispetto agli obiettivi posti inizialmente (si voleva arrivare come minimo al livello 2, con il risultato ottimale che sarebbe stato il livello 4).\\
+				Questo processo è stato attuato solo per un breve periodo, ed è per questo motivo che il suo livello CMM è così basso rispetto agli altri processi: il gruppo è consapevole di non aver ancora acquisito sufficiente padronanza del processo stesso.
 			
-			\level{4}{Schedule Variance}
-			 Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sulle attività di validazione.
-			\begin{table}[H]
-				\centering
-				\begin{tabu}{| l | c | c |}
-					\hline
-						Processi 						& Schedule Variance	& Esito		\\ \hline \hline
-						Processo di validazione & 0\% & Ottimale \\ \hline
-				\end{tabu}
-				\caption{Esiti del calcolo della Schedule Variance durante la Fase PD}
-			\end{table}	
+			\level{4}{Rispetto della pianificazione}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di non avere attività e task di processo in ritardo rispetto a quanto è stato pianificato all'interno del \insdoc{Piano di Progetto}. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: Schedule Variance.\\
+				Riportiamo di seguito i valori ottenuti calcolando la Schedule Variance sul processo di validazione:
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+						\hline
+						Processo 			      & Schedule Variance   \\ \hline \hline
+						Processo di validazione   & 0\%                 \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo della Schedule Variance sul processo di validazione durante la Fase PD}
+				\end{table}
+				Possiamo concludere che le attività pianificate nel \insdoc{Piano di Progettov7.00}, relative alla validazione, sono state svolte in linea con i tempi previsti.\\
+				L'esito del risultato è dunque \textbf{ottimale}. Ci si prefiggeva infatti di avere una Schedule variance che valesse al massimo 5\% (obiettivo minimo), e idealmente al massimo 0\% (obiettivo ottimale).
 						
-			\level{4}{Budget Variance}
-			Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sulle attività di validazione.		\\
-			\begin{table}[H]
-			\centering
-				\begin{tabu}{| l | c | c |}
-					\hline
-						Processi 						& Budget Variance	& Esito		\\ \hline \hline
-						Processo di validazione & 1\% & Ottimale \\ \hline
-				\end{tabu}
-				\caption{Esiti del calcolo della Budget Variance durante la Fase PD}
-			\end{table}	
+			\level{4}{Rispetto del budget}
+				L'obiettivo che il gruppo si era posto inizialmente era quello di avere un processo che rientrasse nel budget assegnato dal \insdoc{Piano di Progetto}. Per calcolare quanto si è vicini a tale obiettivo è stato scelto di fare uso della seguente metrica: Budget Variance.\\
+				Riportiamo di seguito i valori ottenuti calcolando la Budget Variance sul processo di validazione:
+				\begin{table}[H]
+					\centering
+					\begin{tabu}{| l | c | c |}
+						\hline
+						Processo 			      & Budget Variance     \\ \hline \hline
+						Processo di validazione   & 0\%                 \\ \hline
+					\end{tabu}
+					\caption{Esiti del calcolo della Budget Variance sul processo di validazione durante la Fase PD}
+				\end{table}
+				Possiamo concludere il processo di verifica ha rispettato perfettamente il budget assegnato. Non c'è stato dunque alcun risparmio, ma nemmeno perdite. Questo è sintomo di una buona pianificazione.\\
+				L'esito del risultato è dunque \textbf{ottimale}. Ci si prefiggeva infatti di avere una Budget Variance che valesse al massimo 10\% (obiettivo minimo), e idealmente al massimo 0\% (obiettivo ottimale).
 							
 			\level{4}{Produttività}
 			Utilizzando la formula descritta all'interno del presente documento (sezione \nameref{sec:metriche}) è stata calcolata la produttività del processo di validazione, espressa in percentuale. \\
