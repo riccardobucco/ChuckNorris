@@ -9,8 +9,11 @@ var rtc = norris(server, app);
 
 server.listen(9000);
 
+process.on('uncaughtException', function (e) {
+    console.error(e);
+});
+
 var lines = ['01','03','05','06','07','09','10','11','12','13','15','16','18','22','24','41','42','43','CC','DC','SIR1'];
-//var lines = ['22'];
 
 
 // norris init
@@ -22,9 +25,13 @@ dashboard.setSettings({title: 'Dashboard APS'});
 app.use(rtc.getMiddleware());
 
 // settings
+dashboard.setSettings({
+    maxChartsCol: 1
+});
 map.setSettings({
     title: 'Mappa autobus',
-    legendPosition: 'none',
+    description: 'Posizione degli autobus dell\'APS',
+    allowFilter: true,
     maxItems: 40,
     area: {
         y: 45.4043344,
@@ -35,6 +42,7 @@ map.setSettings({
 
 table.setSettings({
     title: 'Autobus attivi',
+    description: 'Numero di autobus dell\'APS attivi per linea',
     pageSize: 8,
     allowFilter: true,
     allowSort: true
