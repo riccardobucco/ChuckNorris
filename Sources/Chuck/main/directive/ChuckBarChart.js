@@ -40,6 +40,10 @@ angular.module('chuck')
         templateUrl: CHUCK_DIR + 'main/view/BarChartView.html',
         link: function(scope, element, attrs) {
 
+            if(!attrs.chartEndpoint || !attrs.chartId) {
+                throw new Error('chart-endpoint and chart-id are mandatory');
+            }
+
             GoogleCharts.then(function () {
 
                 var barchart = null;
@@ -49,6 +53,23 @@ angular.module('chuck')
                     .then(function (chart) {
                         if(chart.getType() === 'barchart') {
                             scope.chart = chart;
+
+                            //overriding impostazioni
+                            if(attrs.datasetsColor) {
+                                var colors = eval(attrs.datasetsColor);
+                                for (var i in colors) {
+                                    if(colors[i] && scope.chart.data.datasets.length > i) {
+                                        scope.chart.data.datasets[i].color = colors[i];
+                                    }
+                                }
+                            }
+                            if(attrs.legendPosition) {
+                                scope.chart.settings.legendPosition = attrs.legendPosition;
+                            }
+                            if(attrs.showGrid) {
+                                scope.chart.settings.style.showGrid = attrs.showGrid === 'true';
+                            }
+
                             init();
                             scope.$watch('chart', render, true);
                         } else {

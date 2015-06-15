@@ -39,6 +39,10 @@ angular.module('chuck')
         templateUrl: CHUCK_DIR + 'main/view/TableView.html',
         link: function(scope, element, attrs) {
 
+            if(!attrs.chartEndpoint || !attrs.chartId) {
+                throw new Error('chart-endpoint and chart-id are mandatory');
+            }
+
             DataTables.then(function () {
                 var table = null;
 
@@ -46,6 +50,30 @@ angular.module('chuck')
                     .then(function (chart) {
                         if(chart.getType() === 'table') {
                             scope.chart = chart;
+
+                            // overriding impostazioni
+                            if(attrs.textColor) {
+                                var colors = eval(attrs.textColor);
+                                for (var i in colors) {
+                                    for (var j in colors[i]) {
+                                        if(colors[i][j] && scope.chart.data.datasets.length > i && scope.chart.data.datasets[i].row.length > j) {
+                                            scope.chart.data.datasets[i].row[j].color = colors[i][j];
+                                        }
+                                    }
+                                }
+                            }
+
+                            if(attrs.bgColor) {
+                                var colors = eval(attrs.bgColor);
+                                for (var i in colors) {
+                                    for (var j in colors[i]) {
+                                        if(colors[i][j] && scope.chart.data.datasets.length > i && scope.chart.data.datasets[i].row.length > j) {
+                                            scope.chart.data.datasets[i].row[j].background = colors[i][j];
+                                        }
+                                    }
+                                }
+                            }
+
                             init();
                             scope.$watch('chart', render, true);
                         } else {

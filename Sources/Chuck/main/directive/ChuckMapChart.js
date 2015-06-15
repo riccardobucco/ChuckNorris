@@ -39,6 +39,10 @@
         templateUrl: CHUCK_DIR + 'main/view/MapChartView.html',
         link: function(scope, element, attrs) {
 
+            if(!attrs.chartEndpoint || !attrs.chartId) {
+                throw new Error('chart-endpoint and chart-id are mandatory');
+            }
+
             Leaflet.then(function () {
 
                 var map = null;
@@ -50,6 +54,20 @@
                     .then(function (chart) {
                         if(chart.getType() === 'mapchart') {
                             scope.chart = chart;
+
+                            //overriding impostazioni
+                            if(attrs.datasetsColor) {
+                                var colors = eval(attrs.datasetsColor);
+                                for (var i in colors) {
+                                    if(colors[i] && scope.chart.data.datasets.length > i) {
+                                        scope.chart.data.datasets[i].color = colors[i];
+                                    }
+                                }
+                            }
+                            if(attrs.legendPosition) {
+                                scope.chart.settings.legendPosition = attrs.legendPosition;
+                            }
+
                             init();
                             scope.$watch('chart', render, true);
                         } else {
