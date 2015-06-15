@@ -45,12 +45,12 @@
         for (var i = 0; i < charts.length && i < nTot; i++) {
             if( i % maxChartsCol == 0) {
                 currentRow++;
-                %><div class="row"><%
+                %><div class="row" style="height:400px"><%
             }
             if(currentRow <= nRows) {
-                %><div class="col-md-<%=12 / maxChartsCol %>"><%
+                %><div class="col-md-<%=12 / maxChartsCol %>"  style="height:100%"><%
             } else {
-                %><div class="col-md-<%=12 / lastRow %>"><%
+                %><div class="col-md-<%=12 / lastRow %>"  style="height:100%"><%
             }
             %>
                 <h3>
