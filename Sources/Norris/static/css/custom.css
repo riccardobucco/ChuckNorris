@@ -7,3 +7,14 @@ footer {padding:20px 0px; background-color:#DDD; margin:50px auto 0px auto; }
 .toolbar ul { margin:0px; list-style-type: none; text-align:left; padding-left:5px; }
 .logo-norris { max-height:100px; max-width:90%; }
 .chart-type { font-style:italic; color:#aaa; }
+
+.col-width-fixed { 
+	min-height:300px;
+}
+
+@media (min-width: 970px) {
+.col-width-fixed { 
+	height:400px;
+	margin-bottom:70px;
+}
+}

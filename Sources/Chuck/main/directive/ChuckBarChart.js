@@ -47,7 +47,7 @@ angular.module('chuck')
             GoogleCharts.then(function () {
 
                 var barchart = null;
-                var options = { height:'100%' };
+                var options = { };
 
                 ChartRequester.bind(attrs.chartEndpoint,attrs.chartId)
                     .then(function (chart) {

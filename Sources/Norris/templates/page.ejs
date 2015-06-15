@@ -45,7 +45,7 @@
         for (var i = 0; i < charts.length && i < nTot; i++) {
             if( i % maxChartsCol == 0) {
                 currentRow++;
-                %><div class="row" style="height:400px"><%
+                %><div class="row col-width-fixed"><%
             }
             if(currentRow <= nRows) {
                 %><div class="col-md-<%=12 / maxChartsCol %>"  style="height:100%"><%
