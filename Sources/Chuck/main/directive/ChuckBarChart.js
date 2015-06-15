@@ -128,14 +128,28 @@ angular.module('chuck')
                         groupWidth: chartSettings.style.barArea
                     }
 
-                    options.vAxis.viewWindow = {};
-                    if(chartSettings.style.maxValue) {
-                        options.vAxis.viewWindow.max = chartSettings.style.maxValue;
+                    if(chartSettings.orientation === 'horizontal') {
+                        options.orientation = 'vertical';
+                        options.hAxis.viewWindow = {};
+                        if(chartSettings.style.maxValue) {
+                            options.hAxis.viewWindow.max = chartSettings.style.maxValue;
+                        }
+
+                        if(chartSettings.style.minValue) {
+                            options.hAxis.viewWindow.min = chartSettings.style.minValue;
+                        }
+                    } else {
+                        options.orientation = 'horizontal';
+                        options.vAxis.viewWindow = {};
+                        if(chartSettings.style.maxValue) {
+                            options.vAxis.viewWindow.max = chartSettings.style.maxValue;
+                        }
+
+                        if(chartSettings.style.minValue) {
+                            options.vAxis.viewWindow.min = chartSettings.style.minValue;
+                        }
                     }
 
-                    if(chartSettings.style.minValue) {
-                        options.vAxis.viewWindow.min = chartSettings.style.minValue;
-                    }
 
 
                     options.series = {};
@@ -165,10 +179,7 @@ angular.module('chuck')
                         }
                     }
 
-                    if(chartSettings.orientation === 'horizontal')
-                        barchart = new google.visualization.BarChart(element.contents()[0]);
-                    else
-                        barchart = new google.visualization.ColumnChart(element.contents()[0]);
+                    barchart = new google.visualization.BarChart(element.contents()[0]);
                 };
 
                 function render(newValue, oldValue) {
