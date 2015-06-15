@@ -140,10 +140,12 @@ angular.module('chuck')
 
                     options.series = {};
                     for (var i = 0; i < chartData.datasets.length; i++) {
+                        options.series[i] = {};
                         if(chartData.datasets[i].color) {
-                            options.series[i.toString()] = {
-                                color: chartData.datasets[i].color
-                            }
+                            options.series[i].color = chartData.datasets[i].color;
+                        }
+                        if(chartSettings.legendPosition === 'left') {
+                            options.series[i].targetAxisIndex = 1;
                         }
                     }
 
