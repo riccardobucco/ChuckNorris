@@ -36,7 +36,7 @@ var defaults = {
     secret: 'r7k;._$e*"°à#',
     origins: [],
     login: function () {return true;},
-    keepalive: function () {return true;},
+    keepAlive: function () {return true;},
     logout: function () {return true;},
     isLogged: function () {return true;}
 };

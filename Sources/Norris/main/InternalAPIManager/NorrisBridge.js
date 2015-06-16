@@ -147,7 +147,7 @@ NorrisBridge.prototype.getMiddleware = function () {
     app.get('/', function (req, res) {
         var pages = instance.getPages();
         var charts = instance.getCharts();
-        res.render('index.ejs', {pages: pages, charts: charts});
+        res.render('index.ejs', {pages: pages, charts: charts, endpoint: instance.getEndpoint()});
     });
 
     app.get('/pages/:pageId', function (req, res) {

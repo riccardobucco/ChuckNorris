@@ -17,6 +17,9 @@ var settings = {
     isLogged: function (cookie) {
         return cookie.getCookies.ssid === 'true';
     },
+    keepAlive: function (cookie) {
+        return cookie.getCookies.ssid === 'true';
+    },
     logout: function (cookie) {
         cookie.clearCookie('ssid');
         return true;
