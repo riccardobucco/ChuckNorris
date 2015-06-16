@@ -35,6 +35,7 @@ var t = nor.createChart('table', 't');
 
 var page = nor.createPage('page');
 page.add(bc).add(lc).add(mc).add(t);
+page.getSettings().maxChartsCol = 4;
 
 app.use('/', nor.getMiddleware());
 
