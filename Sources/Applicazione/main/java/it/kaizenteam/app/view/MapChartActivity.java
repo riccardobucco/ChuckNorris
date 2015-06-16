@@ -129,8 +129,14 @@ public class MapChartActivity extends ChartActivity implements MapChartView {
         for(int i=0;i<sets.size();i++){
             BitmapDescriptor setmarkerico=null;
             ArrayList<MapPoint> set=sets.get(i).getData();
-            if(sets.get(i).getMarker().equals(""))
-                setmarkerico=null;
+            if(sets.get(i).getMarker().equals("")||sets.get(i).getMarker().equals("standard"))
+                setmarkerico=BitmapDescriptorFactory.fromResource(R.drawable.standard);
+            else if(sets.get(i).getMarker().equals("custom"))
+                setmarkerico=BitmapDescriptorFactory.fromResource(R.drawable.custom);
+            else if(sets.get(i).getMarker().equals("plane"))
+                setmarkerico=BitmapDescriptorFactory.fromResource(R.drawable.plane);
+            else if(sets.get(i).getMarker().equals("flag"))
+                setmarkerico=BitmapDescriptorFactory.fromResource(R.drawable.flag);
             else if(sets.get(i).getMarker().equals("bus"))
                 setmarkerico=BitmapDescriptorFactory.fromResource(R.drawable.bus);
             //TODO more...
