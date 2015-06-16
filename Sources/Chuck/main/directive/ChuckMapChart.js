@@ -160,7 +160,7 @@
 
                     newData.datasets.forEach(function (dataset) {
                         if(dataset.visible !== false) {
-                            var markerName = dataset.marker || 'marker1';
+                            var markerName = dataset.marker || 'standard';
 
                             var setMarkers = function () {
                                 var marker = markers[markerName].replace(/%COLOR%/g, dataset.color);
