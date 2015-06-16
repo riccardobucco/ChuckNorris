@@ -60,6 +60,7 @@ lines.forEach(function (line) {
     mapData.datasets.push({
         name: line,
         color: '#ff0000',
+        marker: 'bus',
         values: []
     });
     tableData.datasets.push({

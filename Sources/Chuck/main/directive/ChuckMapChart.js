@@ -163,7 +163,7 @@
                             var markerName = dataset.marker || 'default';
 
                             var setMarkers = function () {
-                                var marker = markers[markerName].replace('%COLOR%', dataset.color);
+                                var marker = markers[markerName].replace(/%COLOR%/g, dataset.color);
                                 var icon = L.icon({
                                     iconUrl: "data:image/svg+xml;base64," + btoa(marker),
                                     iconSize: [30, 30],
