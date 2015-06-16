@@ -52,7 +52,7 @@
                 \caption{Diagramma di sequenza - Norris, creazione chart}
             \end{figure}
             \begin{enumerate}
-                \item NorrisBridge invoca il metodo createChart di NorrisImpl in seguito all'utilizzo dell'\insglo{API} interna di \insglo{norris} per la creazione di un chart;
+                \item NorrisBridge invoca il metodo createChart di NorrisImpl in seguito all'utilizzo della \insglo{API} interna di \insglo{norris} per la creazione di un chart;
                 \item NorrisImpl chiede la creazione del chart alla classe ChartImpl nel modello dei dati;
                 \item questa crea il chart vero e proprio sfruttando la classe factory, presente all'interno dell'HashMap factories, per la creazione del chart richiesto;
                 \item infine viene eseguito il metodo emit per avvertire che è avvenuta la creazione.
@@ -100,7 +100,7 @@
                 \caption{Diagramma di sequenza - Norris, aggiornamento chart}
             \end{figure}
             \begin{enumerate}
-                \item all'utilizzo dell'\insglo{API} interna di \insglo{Norris} per la richiesta di aggiornamento di un chart il ChartBridge invoca il metodo di aggiornamento nel modello dei dati (ChartImpl);
+                \item all'utilizzo della \insglo{API} interna di \insglo{Norris} per la richiesta di aggiornamento di un chart il ChartBridge invoca il metodo di aggiornamento nel modello dei dati (ChartImpl);
                 \item questo richiederà l'aggiornamento alla classe opportuna sfruttando l'HashMap updaters;
                 \item infine attraverso il canale socket vengono avvisati i vari \insglo{client}.
             \end{enumerate}
