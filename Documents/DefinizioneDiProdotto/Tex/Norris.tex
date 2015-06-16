@@ -7,10 +7,10 @@
 	\end{enumerate}
 	Le regole che sono state rispettate, gli strumenti che sono stati usati e le procedure che sono state effettuate possono essere trovate all'interno del documento \insdoc{Norme di Progetto v7.00}.
 	\level{3}{Gerarchie presenti in Norris}
-		Di seguito vengono elencate tutte le gerarchie presenti in Norris per fornire in forma visiva tutti i tipi implementati/estesi dalle singole componenti.
+		Di seguito vengono elencate tutte le gerarchie presenti in \insglo{Norris} per fornire in forma visiva tutti i tipi implementati/estesi dalle singole componenti.
 		\begin{itemize}
 			\item Gerarchie in DataModel::NorrisChart \\
-				La seguente gerarchia rappresenta tutte le tipologie di chart utilizzate in Norris.
+				La seguente gerarchia rappresenta tutte le tipologie di chart utilizzate in \insglo{Norris}.
 				\begin{figure}[H]
 	                \centering
 	                \includegraphics[width=1\textwidth]{DefinizioneDiProdotto/Pics/Gerarchie/ModelChartImpl.pdf}
@@ -29,7 +29,7 @@
 	                \caption{Diagramma gerarchia Updater in DataModel::NorrisChart }
 	            \end{figure}
 			\item Gerarchie in ExternalAPIManager \\
-				La seguente gerarchia rappresenta tutte le tipologie di endpoint factory utilizzate in Norris.
+				La seguente gerarchia rappresenta tutte le tipologie di endpoint factory utilizzate in \insglo{Norris}.
 				\begin{figure}[H]
 	                \centering
 	                \includegraphics[width=1\textwidth]{DefinizioneDiProdotto/Pics/Gerarchie/NorrisEndpointFactory.pdf}
@@ -52,7 +52,7 @@
                 \caption{Diagramma di sequenza - Norris, creazione chart}
             \end{figure}
             \begin{enumerate}
-                \item NorrisBridge invoca il metodo createChart di NorrisImpl in seguito all'utilizzo dell'API interna di norris per la creazione di un chart;
+                \item NorrisBridge invoca il metodo createChart di NorrisImpl in seguito all'utilizzo dell'\insglo{API} interna di \insglo{norris} per la creazione di un chart;
                 \item NorrisImpl chiede la creazione del chart alla classe ChartImpl nel modello dei dati;
                 \item questa crea il chart vero e proprio sfruttando la classe factory, presente all'interno dell'HashMap factories, per la creazione del chart richiesto;
                 \item infine viene eseguito il metodo emit per avvertire che è avvenuta la creazione.
@@ -68,10 +68,10 @@
                 \caption{Diagramma di sequenza - Norris, invio lista}
             \end{figure}
             \begin{enumerate}
-                \item alla richiesta http di tipo GET per la lista express gestisce tale richiesta dando al compito al ListEndpoint;
-                \item questo controlla se la richiesta può esser soddisfatta controllando lo stato della sessione del client;
+                \item alla richiesta \insglo{http} di tipo GET per la lista express gestisce tale richiesta dando al compito al ListEndpoint;
+                \item questo controlla se la richiesta può esser soddisfatta controllando lo stato della sessione del \insglo{client};
                 \item ottiene la lista dei chart;
-                \item infine invia la risposta con formato JSON sfruttando express.
+                \item infine invia la risposta con formato \insglo{JSON} sfruttando express.
             \end{enumerate}
 
             
@@ -83,12 +83,12 @@
                 \caption{Diagramma di sequenza - Norris, invio chart}
             \end{figure}
             \begin{enumerate}
-                \item la richiesta di un chart viene effettuata sfruttando il canale socket e quindi alla ricezione dell'evento di richiesta socket.io controlla se il cookie è ancora valido;
+                \item la richiesta di un chart viene effettuata sfruttando il canale socket e quindi alla ricezione dell'evento di richiesta \insglo{socket.io} controlla se il cookie è ancora valido;
                 \item viene poi dato il compito al ChartEndpoint di generare la risposta;
                 \item questo ottiene il tipo del grafico;
                 \item in seguito ottiene le impostazioni del grafico;
                 \item l'ultima richiesta a ChartRef sono quindi i dati del grafico;
-                \item infine può emettere il segnale di risposta verso il client.
+                \item infine può emettere il segnale di risposta verso il \insglo{client}.
             \end{enumerate}
 
 
@@ -100,7 +100,7 @@
                 \caption{Diagramma di sequenza - Norris, aggiornamento chart}
             \end{figure}
             \begin{enumerate}
-                \item all'utilizzo dell'API interna di Norris per la richiesta di aggiornamento di un chart il ChartBridge invoca il metodo di aggiorneamento nel modello dei dati (ChartImpl);
+                \item all'utilizzo dell'\insglo{API} interna di \insglo{Norris} per la richiesta di aggiornamento di un chart il ChartBridge invoca il metodo di aggiornamento nel modello dei dati (ChartImpl);
                 \item questo richiederà l'aggiornamento alla classe opportuna sfruttando l'HashMap updaters;
-                \item infine attraverso il canale socket vengono avvisati i vari client.
+                \item infine attraverso il canale socket vengono avvisati i vari \insglo{client}.
             \end{enumerate}

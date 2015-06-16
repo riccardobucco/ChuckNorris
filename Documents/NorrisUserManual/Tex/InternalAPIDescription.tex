@@ -1,7 +1,7 @@
 \level{1}{Description of Norris' Internal API} \label{sec:InternalAPI}
-	This section describes the functionality provided by the Internal API of Norris. Through those API it's possible to create four types of chart, i.e. bar chart, line chart, map chart and table. It's also possible to set their settings and the type of updating.\\ The methods of the different classes are explained in the following paragraph.
+	This section describes the functionality provided by the Internal API of \insglo{Norris}. Through those API it's possible to create four types of chart, i.e. \insglo{bar chart}, \insglo{line chart}, \insglo{map chart} and \insglo{table}. It's also possible to set their settings and the type of updating.\\ The methods of the different classes are explained in the following paragraph.
 	\begin{description}
-		\item[Norris] is an interface which represents a Norris' instance. It allows you to create new charts and pages and to set the authentication settings. The following table describes its methods.
+		\item[\insglo{Norris}] is an interface which represents a \insglo{Norris}' instance. It allows you to create new charts and pages and to set the authentication settings. The following \insglo{table} describes its methods.
 		\begin{longtabu}{| X | X |}
 
 			\hline
@@ -9,22 +9,22 @@
 			Method &
 			Description \\
 			\hline \endhead
-			setSettings(settings): void & This method sets the Norris' settings. In particular it allows you to set the authentication settings.
+			setSettings(settings): void & This method sets the \insglo{Norris}' settings. In particular it allows you to set the authentication settings.
 			\\ \hline
-			getSettings(): NorrisSettings & This method gets the Norris' settings. It returns a JSON object containing all settings. 
+			getSettings(): NorrisSettings & This method gets the \insglo{Norris}' settings. It returns a JSON object containing all settings. 
 			\\ \hline
-			createChart(chartType, chartId): Chart & This method creates a chart and adds it to the Norris' instance. It takes two \texttt{String} objects as parameter, \texttt{chartType} and \texttt{chartId}, and returns a chart of the indicated type, with the indicated id in its settings.
+			createChart(chartType, chartId): Chart & This method creates a chart and adds it to the \insglo{Norris}' instance. It takes two \texttt{String} objects as parameter, \texttt{chartType} and \texttt{chartId}, and returns a chart of the indicated type, with the indicated id in its settings.
 			\\ \hline
 			getChart(chartId): Chart & This method gets the instance of a \texttt{Chart} contained in the invocation object. The chart's id is given as parameter of the method.
 			\\ \hline
 			getCharts(): Chart[] & This method returns an array which contains all the charts which are inside of the invocation object.
 			\\ \hline
-			createPage(pageId): Page & This method creates an instance of \texttt{Page} and adds it to the Norris' instance. It sets the id of the created object with the id received as parameter.\\ \hline
+			createPage(pageId): Page & This method creates an instance of \texttt{Page} and adds it to the \insglo{Norris}' instance. It sets the id of the created object with the id received as parameter.\\ \hline
 			getPage(pageId): Page & This method gets the instance of a \texttt{Page} contained in the invocation object. The page's id is given as parameter of the method.
 			\\ \hline
 			getPages(): Page[] & This method returns an array with all instances of \texttt{Page} which are inside of the invocation object.
 			\\ \hline
-			getMiddleware(): Function & This method permits to obtain a middleware for Express, that allows to mount the pages of a Norris' instance on a webserver.
+			getMiddleware(): Function & This method permits to obtain a middleware for Express, that allows to mount the pages of a \insglo{Norris}' instance on a webserver.
 			\\ \hline
 			getEndpoint(): String & This method permits to obtain the endpoint on which the APIs are provided.
 			\\ \hline

@@ -151,6 +151,22 @@ glossary: _force
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/(\\($(skip))\{[^}]*)\\insglo\{([^}]*)\}/\1\3/gi' {} \;
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/(\\($(skip))\{[^}]*)\\insglo\{([^}]*)\}/\1\3/gi' {} \;
 	@ find $(DOCUMENTI) Commons -name '*.tex' -exec sed -ri 's/(\\($(skip))\{[^}]*)\\insglo\{([^}]*)\}/\1\3/gi' {} \;
+
+glossary-manual: terms = $(shell xmllint --xpath '//entry/@name' NorrisUserManual/Termini.xml | grep -o '"[[:alpha:]|\.| ]*"' | grep -o '[[:alpha:]|\.| ]*' | tr "\n" "|" | head -c -1 | sed 's/\./\\./g')
+glossary-manual: skip = ignoreglo|newcommand\{[^}]*\}|input|begin|end|level\{[^}]*\}|section|subsection|subsubsection|paragraph|subparagraph|insuri|inspath|insrole|insdoc|insfile|insrev|insphase|includegraphics|includegraphics[^{]*|caption|label|ref|nameref|pageref|hyperref|addtocounter|texttt
+glossary-manual: _force
+	@ #eliminazione tag
+	@ find NorrisUserManual -name '*.tex' -exec sed -ri 's/\\insglo\{([^\}]*)\}/\1/gi' {} \;
+	@ #aggiunta tag
+	@ find NorrisUserManual -name '*.tex' -exec sed -ri 's/\b($(terms))\b/\\insglo\{\1\}/gi' {} \;
+	@ #eliminazione tag su parole comandi
+	@ find NorrisUserManual -name '*.tex' -exec sed -ri 's/\\\\insglo\{($(terms))\}/\\\1/gi' {} \;
+	@ #eliminazione tag su comandi skip
+	@ find NorrisUserManual -name '*.tex' -exec sed -ri 's/(\\($(skip))\{[^}]*)\\insglo\{([^}]*)\}/\1\3/gi' {} \;
+	@ find NorrisUserManual -name '*.tex' -exec sed -ri 's/(\\($(skip))\{[^}]*)\\insglo\{([^}]*)\}/\1\3/gi' {} \;
+	@ find NorrisUserManual -name '*.tex' -exec sed -ri 's/(\\($(skip))\{[^}]*)\\insglo\{([^}]*)\}/\1\3/gi' {} \;
+	@ find NorrisUserManual -name '*.tex' -exec sed -ri 's/(\\($(skip))\{[^}]*)\\insglo\{([^}]*)\}/\1\3/gi' {} \;
+	@ find NorrisUserManual -name '*.tex' -exec sed -ri 's/(\\($(skip))\{[^}]*)\\insglo\{([^}]*)\}/\1\3/gi' {} \;
 	
 clean: _force
 	@ rm -f AnalisiDeiRequisiti/UseCase/*.tex

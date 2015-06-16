@@ -1,7 +1,7 @@
 \level{1}{Usage}
 	\level{2}{Initialization}
 		\begin{itemize}
-			\item You have to create a \insglo{HTTP} \insglo{server}.
+			\item You have to create a HTTP server.
 			\begin{enumerate}
 				\item Include the library:
 				\begin{lstlisting}
@@ -12,12 +12,12 @@
 					var (*\ignoreglo{server}*) = (*\ignoreglo{http}*).createServer();
 				\end{lstlisting}
 				\texttt{server} will emit events you can listen. For example the event \texttt{'request'} is emitted each time there is a request.
-				\item Make the \insglo{HTTP} \insglo{server} accept connections on the specified \texttt{port}:
+				\item Make the HTTP server accept connections on the specified \texttt{port}:
 				\begin{lstlisting}
 					(*\ignoreglo{server}*).listen(port);
 				\end{lstlisting}
 			\end{enumerate}
-			\item You have to create an Express web \insglo{server}.
+			\item You have to create an Express web server.
 			\begin{enumerate}
 				\item Include the library:
 				\begin{lstlisting}
@@ -38,7 +38,7 @@
 				\begin{lstlisting}
 					var (*\ignoreglo{norris}*) = require('(*\ignoreglo{norris}*)');
 				\end{lstlisting}
-				\item Create a new instance of \insglo{Norris}, and make it accessible by a \insglo{client} application at the given endpoint (e.g. \texttt{'/norris'}):
+				\item Create a new instance of \insglo{Norris}, and make it accessible by a client application at the given endpoint (e.g. \texttt{'/norris'}):
 				\begin{lstlisting}
 					var nrr = (*\ignoreglo{norris}*)((*\ignoreglo{server}*), endpoint);
 				\end{lstlisting}
@@ -54,7 +54,7 @@
 			\end{enumerate}
 		\end{itemize}
 	\level{2}{Example usage}
-		This section contains some code that shows you a common scenario. It is explained how it works and what it does. For more detailed information about the internal \insglo{API}, you can check out \nameref{sec:InternalAPI}.\\
+		This section contains some code that shows you a common scenario. It is explained how it works and what it does. For more detailed information about the internal API, you can check out \nameref{sec:InternalAPI}.\\
 		You can create one of the charts \insglo{Norris} has available. In the example below, we will build a \insglo{Bar Chart} based on some data and settings. Then we will add it to a page, and we keep it updated.
 		\begin{lstlisting}
 			// create a new empty (*\ignoreglo{Bar Chart}*) whose id is 'cp3'
@@ -68,8 +68,8 @@
 			// add the myChart to the new page
 			myPage.add(myChart);
 			// myPage will be available at '/endpoint/(*\ignoreglo{norris}*)/pages/page_ID' path:
-			// endpoint is the endpoint value passed during norris' instance creation,
-			// 'norris' is the path where the middleware is mounted, 
+			// endpoint is the endpoint value passed during \insglo{norris}' instance creation,
+			// '\insglo{norris}' is the path where the middleware is mounted, 
 			// 'pages' and 'page_ID' specify that a page with page_ID ID 
 			// is going to be visualized. 
 			// Note that a route will match any path which follows 
@@ -79,13 +79,13 @@
 			myChart.update('(*\ignoreglo{inplace}*)', {...});
 		\end{lstlisting}
 		It's now possible for a user to request and visualize the page containing the chart.\\
-		If you are a developer and you would like to insert a chart of an instance of Norris in your own product, just have a look at our \nameref{sec:ExternalAPI}.
+		If you are a developer and you would like to insert a chart of an instance of \insglo{Norris} in your own product, just have a look at our \nameref{sec:ExternalAPI}.
 		\level{3}{Data object structure}
 			The \insglo{Bar Chart} requires an array of labels for each of the data points (independent values). This is shown on the X-axis or on the Y-axis, depending on the settings relating to the orientation of the bars. The data for Bar Charts is broken up into an array of datasets. Each dataset has a name and an array of dependent values, whose length is equal to that of the array of labels. Each dataset represents a set of bars.\\
-			More details about tha data object of a Bar Chart (and other types of charts) can be found at \nameref{sec:ObjectsDescriptionCharts}.
+			More details about tha data object of a \insglo{Bar Chart} (and other types of charts) can be found at \nameref{sec:ObjectsDescriptionCharts}.
 		\level{3}{Options object structure}
 			It is possible to set some options for the chart. For example, you can choose the bars orientation, legend position, distance between two bars... However, this step isn't mandatory, you can avoid it: in this case some default options will be set.\\
-			More details about options object of a Bar Chart (and other types of charts) can be found at \nameref{sec:ObjectsDescriptionCharts}.
+			More details about options object of a \insglo{Bar Chart} (and other types of charts) can be found at \nameref{sec:ObjectsDescriptionCharts}.
 		\level{3}{Update object structure}
-			When you want to update with the inplace method a Bar Chart you have to choose which bars (of which series) you desire to modify. To modify a bar means that its height (or length) will change. In the update object you can insert more than one single value: in this way you are able to modify multiple bars at the same time.\\
-			More details about the update object of a Bar Chart (and other types of charts) can be found at \nameref{sec:ObjectsDescriptionCharts}.
+			When you want to update with the inplace method a \insglo{Bar Chart} you have to choose which bars (of which series) you desire to modify. To modify a bar means that its height (or length) will change. In the update object you can insert more than one single value: in this way you are able to modify multiple bars at the same time.\\
+			More details about the update object of a \insglo{Bar Chart} (and other types of charts) can be found at \nameref{sec:ObjectsDescriptionCharts}.

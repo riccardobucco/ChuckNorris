@@ -7,10 +7,10 @@
     \end{enumerate}
     Le regole che sono state rispettate, gli strumenti che sono stati usati e le procedure che sono state effettuate possono essere trovate all'interno del documento \insdoc{Norme di Progetto v7.00}.
     \level{3}{Gerarchie presenti nell'applicazione Android}
-            Di seguito vengono elencate tutte le gerarchie presenti nell'applicazione Android per fornire in forma visiva tutti i tipi implementati/estesi dalle singole componenti.
+            Di seguito vengono elencate tutte le gerarchie presenti nell'applicazione \insglo{Android} per fornire in forma visiva tutti i tipi implementati/estesi dalle singole componenti.
             \begin{itemize}
                 \item Gerarchie in Model::NorrisChart \\
-                    La seguente gerarchia rappresenta tutte le tipologie di chart utilizzate nell'applicazione Android.
+                    La seguente gerarchia rappresenta tutte le tipologie di chart utilizzate nell'applicazione \insglo{Android}.
                     \begin{figure}[H]
                         \centering
                         \includegraphics[width=1\textwidth]{DefinizioneDiProdotto/Pics/Gerarchie/ModelChartImpl.pdf}
@@ -29,20 +29,20 @@
                         \caption{Diagramma gerarchia Updater nell'applicazione Android Model::NorrisChart }
                     \end{figure}
                 \item Gerarchie in Presenter \\
-                    La seguente gerarchia rappresenta i presenter utilizzati nell'applicazione Android.
+                    La seguente gerarchia rappresenta i presenter utilizzati nell'applicazione \insglo{Android}.
                     \begin{figure}[H]
                         \centering
                         \includegraphics[width=1\textwidth]{DefinizioneDiProdotto/Pics/Gerarchie/ApplicazionePresenter.pdf}
                         \caption{Diagramma gerarchia dei presenter nell'applicazione Android Model::Services}
                     \end{figure}
-                    La seguente gerarchia rappresenta tutte le classi factory dei vari presenter utilizzate nell'applicazione Android.
+                    La seguente gerarchia rappresenta tutte le classi factory dei vari presenter utilizzate nell'applicazione \insglo{Android}.
                     \begin{figure}[H]
                         \centering
                         \includegraphics[width=1\textwidth]{DefinizioneDiProdotto/Pics/Gerarchie/ApplicazionePresenterFactory.pdf}
                         \caption{Diagramma gerarchia delle PresenterFactory nell'applicazione Android Presenter}
                     \end{figure}
                 \item Gerarchie in View \\
-                    La seguente gerarchia rappresenta le varie Activity utilizzate nell'applicazione Android.
+                    La seguente gerarchia rappresenta le varie \insglo{Activity} utilizzate nell'applicazione \insglo{Android}.
                     \begin{figure}[H]
                         \centering
                         \includegraphics[width=1\textwidth]{DefinizioneDiProdotto/Pics/Gerarchie/ApplicazioneActivity.pdf}
@@ -65,7 +65,7 @@
                 \caption{Diagramma di sequenza - Applicazione, login iniziale}
             \end{figure}
             \begin{enumerate}
-                \item il messaggio iniziale rappresenta l'invocazione del metodo onLoginClick(View view) nella LoginActivity v da parte del gestore eventi di Android a seguito della pressione del bottone di login da parte dell'utente;
+                \item il messaggio iniziale rappresenta l'invocazione del metodo onLoginClick(View view) nella LoginActivity v da parte del gestore eventi di \insglo{Android} a seguito della pressione del bottone di login da parte dell'utente;
                 \item viene avvertito il presenter p di tale evento;
                 \item esso fa visualizzare nella view un messaggio di attesa;
                 \item nel frattempo ottiene l'istanza di di HttpRequesterWithCookie ed effettua il login su di essa;
@@ -80,7 +80,7 @@
                 \caption{Diagramma di sequenza - Applicazione, visualizzazione chart}
             \end{figure}
             \begin{enumerate}
-                \item alla creazione dell'activity viene creato il relativo presenter attraverso il metodo create della classe PresenterImpl;
+                \item alla creazione dell'\insglo{activity} viene creato il relativo presenter attraverso il metodo create della classe PresenterImpl;
                 \item tale presenter ottiene l'istanza unica di ChartReceiver e richiede il Chart;
                 \item ChartReciever notifica il presenter alla ricezione dei dati ed attiva gli aggiornamenti.
                 \item il presenter infine crea il modello dei dati e dice alla view iniziale di renderizzare il chart.
@@ -96,7 +96,7 @@
             \begin{enumerate}
                 \item il messaggio iniziale rappresenta l'arrivo di un aggiornamento attraverso il canale socket;
                 \item ChartReceiver avverte tutti i suoi osservatori chiamando i loro metodi update e passandogli il dato ricevuto;
-                \item il presenter p a questo punto trasforma il facchetto dal formato json al formato appropriato;
+                \item il presenter p a questo punto trasforma il facchetto dal formato \insglo{json} al formato appropriato;
                 \item aggiorna successivamente il modello dei dati;
                 \item infine chiede alla view (LineChartActivity) la renderizzazione dei nuovi dati.
             \end{enumerate}

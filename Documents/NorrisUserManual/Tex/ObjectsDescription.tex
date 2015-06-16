@@ -1,25 +1,25 @@
 \level{1}{Objects description} \label{sec:ObjectsDescription}
 	\level{2}{Norris} \label{sec:ObjectsDescriptionNorris}
-		After you've created an instance of Norris, you can set some options. More specifically, you can change some functions' behavior. In other words, it's possible to pass your own functions so that Norris will use it instead of the default one.\\
+		After you've created an instance of \insglo{Norris}, you can set some options. More specifically, you can change some functions' behavior. In other words, it's possible to pass your own functions so that \insglo{Norris} will use it instead of the default one.\\
 		You can change the behavior of the following functions:
 		\begin{description}
 			\item[endpoint] It sets the endpoint on which the APIs are supplied. The default value is “/”.
 			\item[secret] It's the encryption key of the cookie. The value is fixed.
 			\item[origins] It contains the hosts, which are allowed to add the widgets.
-			\item[login] This method is called when a client tries to connect to the instance of Norris. The default login function always returns true.
-			\item[logout] This method is called when a client tries to disconnect from the instance of Norris. The default logout function always returns true.
-			\item[isLogged] This method is called when a client makes a request to the instance of Norris. The default isLogged function always returns true.
+			\item[login] This method is called when a client tries to connect to the instance of \insglo{Norris}. The default login function always returns true.
+			\item[logout] This method is called when a client tries to disconnect from the instance of \insglo{Norris}. The default logout function always returns true.
+			\item[isLogged] This method is called when a client makes a request to the instance of \insglo{Norris}. The default isLogged function always returns true.
 			\item[keepAlive] This method is called when a client renews its connection (in order to not be disconnected). The default keepAlive function always returns true.
 		\end{description}
 	\level{2}{Pages}
-		After you've created a page into an instance of Norris, you can set some options. You can change the following properties:
+		After you've created a page into an instance of \insglo{Norris}, you can set some options. You can change the following properties:
 		\begin{description}
 			\item[title] This is the title of the page. It's a String.
 			\item[maxChartsRow] This is a number which sets the maximum number of charts inside a row of the page. The default value is 2.
 			\item[maxChartsCol] This is an integer number which sets the maximum number of charts inside a column of the page. The default value is 3.
 		\end{description}
 	\level{2}{Charts} \label{sec:ObjectsDescriptionCharts}
-		In this section it's described the format that every \insglo{JSON} object should follow when they are used inside a chart. You may use them in the following situations:
+		In this section it's described the format that every JSON object should follow when they are used inside a chart. You may use them in the following situations:
 		\begin{itemize}
 			\item addition of data during the chart's inizialization;
 			\item addition of settings during the chart's initialization;
@@ -29,13 +29,13 @@
 		\level{3}{Data inizialization}
 			When you are creating a chart and you want to add some data, make sure to set the properties of the \textbf{Data} object described below, with the right format.
 			\level{4}{Bar chart and Line chart} \label{sec:dataBarLine}
-				The Data object of a Bar Chart or Line Chart has the following “name/value” pairs:
+				The Data object of a \insglo{Bar Chart} or \insglo{Line Chart} has the following “name/value” pairs:
 				\begin{description}
 					\item[labels] This is an array of items, which have String type. It indicates the values of the “x” axis (dependent values of the chart). Note that this property is mandatory.
-					\item[datasets] This is an array of objects. Every object represents a set of bars (in a Bar Chart) or a line (in a Line Chart). They have the following properties: 
+					\item[datasets] This is an array of objects. Every object represents a set of bars (in a \insglo{Bar Chart}) or a line (in a \insglo{Line Chart}). They have the following properties: 
 					\begin{description}
-						\item[name] It's a String, which describes the name of the bar set (in a Bar Chart) or of the line (in a Line Chart). 
-						\item[color] It's a String which represents the color of the specified bar set (in a Bar Chart) or line (in a Line Chart). It uses the hexadecimal, six digits, notation for the Red, Green and Blue values. 
+						\item[name] It's a String, which describes the name of the bar set (in a \insglo{Bar Chart}) or of the line (in a \insglo{Line Chart}). 
+						\item[color] It's a String which represents the color of the specified bar set (in a \insglo{Bar Chart}) or line (in a \insglo{Line Chart}). It uses the hexadecimal, six digits, notation for the Red, Green and Blue values. 
 						\item[values] It's an array of numbers which indicates the dependent values corresponding to the values of the “x” axis in a given bar set or line. The length of this array must be the same of that of the labels array. Note that this property is mandatory.
 					\end{description}
 				\end{description}
@@ -45,7 +45,7 @@
 				\begin{description}
 					\item[name] This is a String, which represents the name of the series of points.
 					\item[marker] It's a String, which represents the type of the marker.
-					\item[color] It's a String which represents the color of the specified bar set (in a Bar Chart) or line (in a Line Chart). It uses the hexadecimal, six digits, notation for the Red, Green and Blue values. 
+					\item[color] It's a String which represents the color of the specified bar set (in a \insglo{Bar Chart}) or line (in a \insglo{Line Chart}). It uses the hexadecimal, six digits, notation for the Red, Green and Blue values. 
 					\item[values] This is an array of objects. Every object represents a single point of the series, and they have the following properties:
 						\begin{description}
 							\item[x] Iit's a number that represents the longitude.
@@ -55,12 +55,12 @@
 				\end{description}
 				Note that the “values” properties is mandatory, in particular “x” and “y” are indispensable. Different series can have a different number of points.
 			\level{4}{Table}
-				The Data object of a Table has the following “name/value” pairs:
+				The Data object of a \insglo{Table} has the following “name/value” pairs:
 				\begin{description}
-					\item[headers] This is an array of Strings. Every String represents the header of a column of the Table.
-					\item[datasets] This is an array of arrays of objects. The main array represents the entire Table. Internal arrays represent rows of the Table. Every object represents a cell of the specified row, and they have the following properties:
+					\item[headers] This is an array of Strings. Every String represents the header of a column of the \insglo{Table}.
+					\item[datasets] This is an array of arrays of objects. The main array represents the entire \insglo{Table}. Internal arrays represent rows of the \insglo{Table}. Every object represents a cell of the specified row, and they have the following properties:
 					\begin{description}
-						\item[color] It's a String which represents the color of the specified bar set (in a Bar Chart) or line (in a Line Chart). It uses the hexadecimal, six digits, notation for the Red, Green and Blue values. 
+						\item[color] It's a String which represents the color of the specified bar set (in a \insglo{Bar Chart}) or line (in a \insglo{Line Chart}). It uses the hexadecimal, six digits, notation for the Red, Green and Blue values. 
 						\item[background] It's a String with the same properties of “color” but it sets the background color of the cell.
 						\item[value] It's a String which represents the text of the cell.
 					\end{description}
@@ -68,7 +68,7 @@
 				You have to keep in mind that the “headers”, “datasets” and “values” properties are mandatory. Moreover, the length of each array contained in datasets must be the same of that of “headers” array.
 
 		\level{3}{Settings}
-			When you want to specify the settings of a chart, you have to set the properties of the \insglo{JSON} object in the right way, depending on the type of the chart.\\
+			When you want to specify the settings of a chart, you have to set the properties of the JSON object in the right way, depending on the type of the chart.\\
 			For every type of charts, there are some basic properties that can be set. The description of those settings follows.
 			\begin{description}
 				\item[title] It's a String which represents the title of the chart.
@@ -85,8 +85,8 @@
 					\item[orientation] It'a String which specifies the orientation of the chart. It can assume one of the following values: “vertical” or “horizontal”.
 					\item[style] It's an object with the following properties:
 					\begin{description}
-						\item[maxValue] It's a number indicating the maximum value that the bar chart assumes.
-						\item[minValue] It's a number indicating the minimum value that the bar chart assumes.
+						\item[maxValue] It's a number indicating the maximum value that the \insglo{bar chart} assumes.
+						\item[minValue] It's a number indicating the minimum value that the \insglo{bar chart} assumes.
 						\item[barArea] This property sets the area occupied by the bar of the chart. It's a String which accept a percentage.
 						\item[showGrid] This property sets whether the grid has to be shown or not.
 						\item[animationDuration] It's an integer which specify the duration time of an animation.
@@ -102,8 +102,8 @@
 					\item[maxItems] It's an integer value describing the maximum number of dependent values of the chart, that is, the maximum number of points for every line (the minimum is 1).
 					\item[style] It's an object with six properties:
 						\begin{description}
-							\item[maxValue] It's a number indicating the maximum value that the line chart assumes.
-							\item[minValue] It's a number indicating the minimum value that the line chart assumes.
+							\item[maxValue] It's a number indicating the maximum value that the \insglo{line chart} assumes.
+							\item[minValue] It's a number indicating the minimum value that the \insglo{line chart} assumes.
 							\item[pointDotSize] It is a number indicating the size of each point in pixels.
 							\item[bezierCurve] It's a boolean value which indicates whether the line is curved between the points.
 							\item[showGrid] It is a boolean value which specifies if the grid of the chart has to be shown or not.
@@ -125,11 +125,11 @@
 					\item[newLinePosition] It's a String, chosen from a set of values, which sets where the new line has to be positioned. This property can assume one of the following values: “top” or “bottom”.
 					\item[allowFilter] It's a boolean indicating whether the filtering options are allowed or not.
 					\item[allowSort] It's a boolean indicating whether the sorting option is allowed or not.
-					\item[pageSize] It's an integer representing the paginate option of a table. If its value is “-1”, the rows of the table are drawn in one single page, if it's greater than “0” it indicates the number of rows of each page of the table.
+					\item[pageSize] It's an integer representing the paginate option of a \insglo{table}. If its value is “-1”, the rows of the \insglo{table} are drawn in one single page, if it's greater than “0” it indicates the number of rows of each page of the \insglo{table}.
 				\end{description}
 
 		\level{3}{Updates}
-			In this section it's described the format of the update \insglo{packages}, depending on charts type. 
+			In this section it's described the format of the update packages, depending on charts type. 
 			\level{4}{Bar chart}
 				The \insglo{Bar Chart} can be updated with the “\insglo{in place}” method. The parameter of such method must be an object with the “inplace” property, which is an array of objects with the properties described below.
 				\begin{description}
@@ -144,7 +144,7 @@
 					\item[position] It's an object with two “name/value” pairs: “x” and “y”. They both are two integer values, that can assume a minimum value of 0. “x” value specifies which line has to be modified, “y” specifies which point of the chosen line has to be updated.
 					\item[data] It's the new dependent value for the chosen point.
 				\end{description}
-				The parameter of the “\insglo{stream}” method must be an object with the “stream” property, which is an array of objects with the following properties.
+				The parameter of the “\insglo{stream}” method must be an object with the “\insglo{stream}” property, which is an array of objects with the following properties.
 				\begin{description}
 					\item[label] It's a String that indicates the new x-value (independent value) that would be added.
 					\item[data] It's an array of values. If “n” is the index of a value in the array, it has to be added to the line number “n” of the chart, in corresponondence of the new x-value (label).
@@ -164,7 +164,7 @@
 						\item[position] It's an object formed by two “name/value” pairs: “series” and “index”. Both are integers that can assume at least a 0 value. The first indicates which series has to be modified, the second one indicates the point of the chosen series whose coordinates must change. 
 						\item[data] It's an object formed by three “name/value” pairs: “x” and “y”, which are two numbers, and “id”, which is a String. It's mandatory to set at least the values “x” and “y” or the “id” property. “x” and “y” stand for the new coordinates that have to be assigned to the chosen point (position).
 					\end{description}
-					\item[stream] It's an array of objects. Objects represent points that have to be added to the chart. Every object has the following properties:
+					\item[\insglo{stream}] It's an array of objects. Objects represent points that have to be added to the chart. Every object has the following properties:
 					\begin{description}
 						\item[series] It's an integer value representing the series that has to be modified.
 						\item[data] It's an array of objects that represents the points that have to be added to the chosen series. Every object has the “x”, “y” (coordinates of the new point) and “id” properties.
@@ -183,12 +183,12 @@
 					\item[position] It's an object which represents the cell which is going to be modified. It has two properties “x” and “y”: they represent the row and the column of the cell that has to be modified. They both are integers that can assume at least a 0 value.
 					\item[data] It's an object with three properties:
 					\begin{description}
-						\item[color] It's a String which represents the color of the specified bar set (in a Bar Chart) or line (in a Line Chart). It uses the hexadecimal, six digits, notation for the Red, Green and Blue values. 
+						\item[color] It's a String which represents the color of the specified bar set (in a \insglo{Bar Chart}) or line (in a \insglo{Line Chart}). It uses the hexadecimal, six digits, notation for the Red, Green and Blue values. 
 						\item[background] It's a String with the same properties of “color” but it sets the background color of the cell.
 						\item[value] It's a String which represents the text of the cell.
 					\end{description}
 				\end{description}
 				The parameter of the “\insglo{stream}” method must be an object with the “steam” property, which is an array of objects with the following properties.
 				\begin{description}
-					\item[row] It's an array of objects with three properties: “color”, “background” and “value”. They have the same feature of the properties described for the “in place” method.
+					\item[row] It's an array of objects with three properties: “color”, “background” and “value”. They have the same feature of the properties described for the “\insglo{in place}” method.
 				\end{description}

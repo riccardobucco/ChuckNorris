@@ -105,7 +105,7 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				I test di accettazione avvengono al momento del collaudo del \insglo{software} col proponente.
 				I test di accettazione sono identificati dalla sintassi TA[Codice del requisito], dove il Codice del requisito si riferisce al requisito che sarà testato.
 				\level{5}{Test di robustezza}
-				I test di robustezza servono a prevenire il collasso del sistema in situazioni limite. In particolare, poichè nel progetto viene usato principalmente un linguaggio non tipato quale il JavaScript, sono stati previsti dei casi in cui vengono effettuati dei controlli di tipo sui parametri passati a metodi e costruttori. Qualora tali controlli non venissero superati, il programma deve sollevare delle eccezioni indicando con messaggi significativi il tipo di errore commesso.\\
+				I test di robustezza servono a prevenire il collasso del sistema in situazioni limite. In particolare, poiché nel progetto viene usato principalmente un linguaggio non tipato quale il \insglo{JavaScript}, sono stati previsti dei casi in cui vengono effettuati dei controlli di tipo sui parametri passati a metodi e costruttori. Qualora tali controlli non venissero superati, il programma deve sollevare delle eccezioni indicando con messaggi significativi il tipo di errore commesso.\\
 				I test di robustezza definiti verificano quindi il corretto sollevamento delle eccezioni nelle situazioni individuate.\\
 				I test di robustezza sono identificati dal nome \texttt{TSNomeClasse.js}, dove \texttt{NomeClasse} indica il nome della classe testata.
 				
@@ -117,8 +117,8 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 					Per eseguire i test di unità su \insglo{Norris}, si procede nel modo di seguito esposto, dando per scontato che sia già installato il \textit{\insglo{package} manager} \texttt{npm} di \insglo{node.js}.
 					\begin{itemize}
 						\item Da terminale ci si sposti nella cartella \inspath{Sources/Norris}.
-						\item In caso non sia presente, si installi il test \insglo{framework} “mocha”, tramite il comando \texttt{npm install -g mocha}. 
-						\item Una volta installato “mocha”, ci si sposti nella cartella \inspath{Sources/Norris/test/unit} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire. 
+						\item In caso non sia presente, si installi il test \insglo{framework} “\insglo{mocha}”, tramite il comando \texttt{npm install -g mocha}. 
+						\item Una volta installato “\insglo{mocha}”, ci si sposti nella cartella \inspath{Sources/Norris/test/unit} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire. 
 						\item In caso il test dia risultato positivo, comparirà l'elenco dei metodi testati con il segno di spunta, come nella figura seguente.
 						\begin{figure}[H]
 							\centering
@@ -137,8 +137,8 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 					Per eseguire i test di integrazione su \insglo{Norris}, si procede nel modo di seguito esposto, dando per scontato che sia già installato il \textit{\insglo{package} manager} \texttt{npm} di \insglo{node.js}.
 					\begin{itemize}
 						\item Da terminale ci si sposti nella cartella \inspath{Sources/Norris}.
-						\item In caso non sia presente, si installi il test \insglo{framework} “mocha”, tramite il comando \texttt{npm install -g mocha}. 
-						\item Una volta installato “mocha”, ci si sposti nella cartella \inspath{Sources/Norris/test/integration} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire.
+						\item In caso non sia presente, si installi il test \insglo{framework} “\insglo{mocha}”, tramite il comando \texttt{npm install -g mocha}. 
+						\item Una volta installato “\insglo{mocha}”, ci si sposti nella cartella \inspath{Sources/Norris/test/integration} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire.
 						\item In caso il test dia risultato positivo, comparirà l'elenco delle funzionalità testate con il segno di spunta, come nella figura seguente.
 						\begin{figure}[H]
 							\centering
@@ -157,8 +157,8 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 					Per eseguire i test di robustezza su \insglo{Norris}, si procede nel modo di seguito esposto, dando per scontato che sia già installato il \textit{\insglo{package} manager} \texttt{npm} di \insglo{node.js}.
 					\begin{itemize}
 						\item Da terminale ci si sposti nella cartella \inspath{Sources/Norris}.
-						\item In caso non sia presente, si installi il test \insglo{framework} “mocha”, tramite il comando \texttt{npm install -g mocha}. 
-						\item Una volta installato “mocha”, ci si sposti nella cartella \inspath{Sources/Norris/test/strength} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire.
+						\item In caso non sia presente, si installi il test \insglo{framework} “\insglo{mocha}”, tramite il comando \texttt{npm install -g mocha}. 
+						\item Una volta installato “\insglo{mocha}”, ci si sposti nella cartella \inspath{Sources/Norris/test/strength} e si digiti, quindi, il comando \texttt{mocha nomeTest.js} dove \textit{nomeTest} indica il nome del file del test da eseguire.
 						\item In caso il test dia risultato positivo, comparirà l'elenco delle funzionalità testate con il segno di spunta, come nella figura seguente.
 						\begin{figure}[H]
 							\centering
@@ -177,9 +177,9 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 				Per eseguire i test di unità e di integrazione su \insglo{Chuck}, si segua la \insglo{procedura} descritta di seguito.
 					\begin{itemize}
 						\item Da terminale ci si sposti nella cartella \inspath{Sources/Chuck}.
-						\item Si digiti il comando \texttt{npm test}. La prima volta, verrà eseguito, in modo automatico, il comando \texttt{npm install} il quale installa le dipendenze in una cartella locale “node\_modules”, verrà installato, anche, il \insglo{framework} “jasmine” e saranno effettuati tutti i test in modo automatico. (Per maggiori informazioni e approfondimenti su “jasmine” si visiti il sito \insuri{http://jasmine.github.io/}.) \\
+						\item Si digiti il comando \texttt{npm test}. La prima volta, verrà eseguito, in modo automatico, il comando \texttt{npm install} il quale installa le dipendenze in una cartella locale “node\_modules”, verrà installato, anche, il \insglo{framework} “\insglo{jasmine}” e saranno effettuati tutti i test in modo automatico. (Per maggiori informazioni e approfondimenti su “\insglo{jasmine}” si visiti il sito \insuri{http://jasmine.github.io/}.) \\
 						Durante l'esecuzione del comando si aprirà una finestra del \insglo{browser} (la si può ignorare) e alla fine della \insglo{procedura} compariranno i risultati dei test. \\
-						Le volte successive, questo comando, eseguirà solo i test poichè i pacchetti risulteranno già installati. \\
+						Le volte successive, questo comando, eseguirà solo i test poiché i pacchetti risulteranno già installati. \\
 						\item In caso i test vengano eseguiti con successo, l'ultima riga riporterà il loro esito positivo.
 							\begin{figure}[H]
 								\centering
@@ -195,7 +195,7 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 					\end{itemize}
 					
 				\level{5}{Applicazione Android}
-				Per eseguire i test di unità e di integrazione sull'applicazione Android, si esegua la \insglo{procedura} descritta di seguito.
+				Per eseguire i test di unità e di integrazione sull'applicazione \insglo{Android}, si esegua la \insglo{procedura} descritta di seguito.
 				\begin{itemize}
 					\item Scaricare dal sito \insuri{https://github.com/junit-team/junit/wiki/Download-and-Install} i pacchetti \texttt{junit.jar} e \texttt{hamcrest-core.jar} e inserirli nella cartella contenente la classe di test. Tale cartella dovrà essere quella contenente tutte le classi di test.
 					\item Aggiungere la dipendenza a \texttt{junit:junit} nello \textit{scope} della classe di test.
@@ -213,9 +213,9 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 			\level{4}{Strumenti}
 			Gli strumenti da utilizzare nell'esecuzione dei test sono:
 			\begin{description}
-				\item[jasmine] Un framework JavaScript per l'esecuzione di test su codice che utilizza AngularJS.  Per maggiori informazioni e approfondimenti su “jasmine” si visiti il sito \insuri{http://jasmine.github.io/}.
-				\item[mocha] Un framework Javascript per l'esecuzione di test su applicazioni basate su Node.js. Per ulteriori informazioni e approfondimenti si visiti il sito \insuri{http://mochajs.org/}.
-				\item[JUnit] Un framework per l'esecuzione di test su applicazioni Java. Per ulteriori informazioni e approfondimenti si visiti il sito \insuri{http://junit.org/}.
+				\item[\insglo{jasmine}] Un \insglo{framework} \insglo{JavaScript} per l'esecuzione di test su codice che utilizza AngularJS.  Per maggiori informazioni e approfondimenti su “\insglo{jasmine}” si visiti il sito \insuri{http://jasmine.github.io/}.
+				\item[\insglo{mocha}] Un \insglo{framework} \insglo{Javascript} per l'esecuzione di test su applicazioni basate su \insglo{Node.js}. Per ulteriori informazioni e approfondimenti si visiti il sito \insuri{http://mochajs.org/}.
+				\item[JUnit] Un \insglo{framework} per l'esecuzione di test su applicazioni \insglo{Java}. Per ulteriori informazioni e approfondimenti si visiti il sito \insuri{http://junit.org/}.
 			\end{description}
 			
 		\level{3}{Issue tracking}
@@ -261,9 +261,9 @@ Per eseguire una verifica quanto più accurata e completa possibile è necessari
 							\caption{Procedura per tracciamento errori comuni}
 					\end{figure}
 		\level{4}{Strumenti}
-			Gli strumenti daa utilizzare nel processo di gestione sono:
+			Gli strumenti da utilizzare nel processo di gestione sono:
 			\begin{description}
-				\item[GitHub] è stato scelto il servizio di \insglo{issue} tracking offerto da \insglo{GitHub}, come suggerito nel \insglo{capitolato}, in modo da unificare gestione delle \insglo{issue} e versionamento.
+				\item[\insglo{GitHub}] è stato scelto il servizio di \insglo{issue} tracking offerto da \insglo{GitHub}, come suggerito nel \insglo{capitolato}, in modo da unificare gestione delle \insglo{issue} e versionamento.
 				\item[Tracker] viene utilizzato un servizio fornito da \textit{Tracker}, un'applicazione web creata dal \groupname, per permettere al \insrole{Project Manager} di avere una visione statistica degli errori effettuati dal \insglo{team}. Per una descrizione dettagliata dell'applicazione, e in particolare della gestione della lista degli errori frequenti si rimanda all'appendice \nameref{sec:tracker}.
 			\end{description}
 			
