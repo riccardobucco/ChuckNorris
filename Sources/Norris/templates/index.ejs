@@ -59,15 +59,18 @@
     <body ng-controller="authController">
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <header class="jumbotron text-center">
+    <header class="jumbotron text-center header-margin">
       <div class="container">
         <img src="/images/norris-hor.png" class="logo-norris" title="Norris" alt="Norris Logo" />
           <h3>Real time charts</h3>
       </div>
     </header>
-    <div class="container content">
+   <div ng-show="logged == true" class="text-right container">
+            <input type="button" class="btn btn-default" ng-click="logout()" value="Logout"/>
+</div>
 
 <div ng-show="logged == false">
+<div class="container content logincontent">
 <h3>Please log in to view the charts</h3>
 <form ng-submit="login()">
 <div class="form-group">
@@ -80,9 +83,11 @@
   </div>
            <input type="submit" id="submit" class="btn btn-default" value="Login" />
 </div>
+</div>
 </form>
 
 <div ng-show="logged == true">
+<div class="container content">
 <h2>Pages</h2>
 <div class="list-group">
 <% var wt = 0;
@@ -122,10 +127,7 @@
 </div>
 
  </div>
-    <footer class="text-center footer-margin">
-    <div ng-show="logged == true" class="text-right container">
-            <input type="button" class="btn btn-default" ng-click="logout()" value="Logout"/>
-</div>
+    <footer class="text-center">
           <img src="/images/kt-trademark.png" alt="Kaizen Team Trademark" title="Kaizen Team" height="100px" />
     </footer>
     </body>
