@@ -44,11 +44,18 @@
 				The Data object of a \insglo{Map Chart} has the “datasets” property, which is an array of objects with the following “name/value” pairs.
 				\begin{description}
 					\item[name] This is a String, which represents the name of the series of points.
-					\item[marker] It's a String, which represents the type of the marker.
+					\item[marker] It's a String, which represents the type of the marker. Norris allows you to choose between five types of marker:
+					\begin{itemize}
+					  \item standard
+					  \item custom
+					  \item bus
+					  \item flag
+					  \item plane
+					\end{itemize}
 					\item[color] It's a String which represents the color of the specified bar set (in a \insglo{Bar Chart}) or line (in a \insglo{Line Chart}). It uses the hexadecimal, six digits, notation for the Red, Green and Blue values. 
 					\item[values] This is an array of objects. Every object represents a single point of the series, and they have the following properties:
 						\begin{description}
-							\item[x] Iit's a number that represents the longitude.
+							\item[x] It's a number that represents the longitude.
 							\item[y] It's a number that represents the latitude;
 							\item[id] It's a String for arbitrary text containing notes about the described point.
 						\end{description}

@@ -58,13 +58,13 @@
 		You can create one of the charts \insglo{Norris} has available. In the example below, we will build a \insglo{Bar Chart} based on some data and settings. Then we will add it to a page, and we keep it updated.
 		\begin{lstlisting}
 			// create a new empty (*\ignoreglo{Bar Chart}*) whose id is 'cp3'
-			var myChart = new nrr.Chart('(*\ignoreglo{barchart}*)', 'cp3');
+			var myChart = new nrr.createChart('(*\ignoreglo{barchart}*)', 'cp3');
 			// enter data for the chart
 			myChart.setData({...});
 			// choose options for the chart [optional]
 			myChart.setSettings({...});
 			// create a new page
-			var myPage = new nrr.Page('myFirstPage');
+			var myPage = new nrr.createPage('myFirstPage');
 			// add the myChart to the new page
 			myPage.add(myChart);
 			// myPage will be available at '/endpoint/(*\ignoreglo{norris}*)/pages/page_ID' path:
