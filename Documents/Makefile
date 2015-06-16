@@ -34,13 +34,13 @@ $(DOCUMENTI): _force
 	@ xsltproc -o $@/$@.tex Commons/Document.xsl $@/$@.xml
 
 	@ #documenti specifici
-	@ #test "$@" != "AnalisiDeiRequisiti" || make _analisi
-	@ #test "$@" != "DefinizioneDiProdotto" || make _definizione
-	@ #test "$@" != "Glossario" || make _glossario
-	@ #test "$@" != "NormeDiProgetto" || make _norme
-	@ #test "$@" != "PianoDiQualifica" || make _qualifica
-	@ #test "$@" != "SpecificaTecnica" || make _specifica
-	@ #test "$@" != "StudioDiFattibilita" || make _studio
+	@ test "$@" != "AnalisiDeiRequisiti" || make _analisi
+	@ test "$@" != "DefinizioneDiProdotto" || make _definizione
+	@ test "$@" != "Glossario" || make _glossario
+	@ test "$@" != "NormeDiProgetto" || make _norme
+	@ test "$@" != "PianoDiQualifica" || make _qualifica
+	@ test "$@" != "SpecificaTecnica" || make _specifica
+	@ test "$@" != "StudioDiFattibilita" || make _studio
 	
 	@ #compilazione file latex
 	@ make $@/$@.pdf
