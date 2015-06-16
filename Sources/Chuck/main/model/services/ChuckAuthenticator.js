@@ -36,10 +36,6 @@ angular.module('chuck')
  */
 .factory('ChuckAuthenticator', ['$http', function ($http) {
 
-    function makeRequest(endpoint, type, params) {
-
-    }
-
     return {
         
         /**
@@ -57,7 +53,7 @@ angular.module('chuck')
                 method: 'POST',
                 url: endpoint + 'auth/login',
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                data: $.param({username: username, password: password})
+                data: jQuery.param({username: username, password: password})
             });
         },
 
@@ -74,7 +70,7 @@ angular.module('chuck')
                 method: 'POST',
                 url: endpoint + 'auth/keepalive',
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                data: $.param({})
+                data: ''
             });
         },
 
@@ -91,7 +87,7 @@ angular.module('chuck')
                 method: 'POST',
                 url: endpoint + 'auth/logout',
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                data: $.param({})
+                data: ''
             });
         }
     };
