@@ -1,0 +1,521 @@
+
+		\documentclass[a4paper]{article}
+		
+		%package include
+		\usepackage[margin=3cm]{geometry}
+		\usepackage[italian]{babel}
+		\usepackage[utf8]{inputenc}
+		\usepackage[T1]{fontenc}
+		\usepackage{graphicx}
+		\usepackage{fancyhdr}
+		\usepackage{lastpage}
+		\usepackage{longtable}
+		\usepackage{tabu}
+		\usepackage{hyperref}
+		\usepackage[hypcap]{caption}
+		\usepackage{color}
+		\usepackage{xcolor}
+		\usepackage{eurosym}
+		\usepackage{abstract}
+		\usepackage{float}
+		\usepackage{listings, lstautogobble}
+		\usepackage{amsmath}
+		\usepackage{subfigure}
+		\usepackage{pifont}
+		\usepackage{multirow}
+
+		\colorlet{punct}{red!60!black}
+		\definecolor{background}{HTML}{EEEEEE}
+		\definecolor{delim}{RGB}{20,105,176}
+		\colorlet{numb}{magenta!60!black}
+
+
+		% per allineare il codice a sinistra invece che al centro
+		\lstset{
+			autogobble=true,
+			escapeinside={(*}{*)}
+		}
+
+		\lstdefinelanguage{json}{
+		    basicstyle=\normalfont\ttfamily,
+		    numbers=left,
+		    numberstyle=\scriptsize,
+		    stepnumber=1,
+		    numbersep=8pt,
+		    showstringspaces=false,
+		    breaklines=true,
+		    frame=lines,
+		    backgroundcolor=\color{background},
+		    literate=
+		     *{0}{{{\color{numb}0}}}{1}
+		      {1}{{{\color{numb}1}}}{1}
+		      {2}{{{\color{numb}2}}}{1}
+		      {3}{{{\color{numb}3}}}{1}
+		      {4}{{{\color{numb}4}}}{1}
+		      {5}{{{\color{numb}5}}}{1}
+		      {6}{{{\color{numb}6}}}{1}
+		      {7}{{{\color{numb}7}}}{1}
+		      {8}{{{\color{numb}8}}}{1}
+		      {9}{{{\color{numb}9}}}{1}
+		      {:}{{{\color{punct}{:}}}}{1}
+		      {,}{{{\color{punct}{,}}}}{1}
+		      {\{}{{{\color{delim}{\{}}}}{1}
+		      {\}}{{{\color{delim}{\}}}}}{1}
+		      {[}{{{\color{delim}{[}}}}{1}
+		      {]}{{{\color{delim}{]}}}}{1},
+		}
+		
+
+		%macro definitions
+		\input{Tex/Macro.tex}
+		\newcommand{\doctitle}{Specifica Tecnica}
+		\newcommand{\lastversion}{5.00}
+		
+
+		%abstract font
+		\renewcommand{\abstractnamefont}{\huge\bfseries}
+		\renewcommand{\abstracttextfont}{\large}
+
+		%hyperred
+		\hypersetup{
+			linktoc=all,
+			colorlinks=true,
+			allcolors=black,
+			urlcolor=blue,
+			bookmarksdepth=100
+		}
+
+		%section counters
+		\makeatletter
+		\newcommand\level[1]{%
+			\ifcase#1\relax\expandafter\chapter\or
+				\expandafter\section\or
+				\expandafter\subsection\or
+				\expandafter\subsubsection\else
+				\def\next{\@level{#1}}\expandafter\next
+			\fi}
+		\newcommand{\@level}[1]{%
+			\@startsection{level#1}%
+				{#1}%
+				{\z@}%
+				{-3.25ex\@plus -1ex \@minus -.2ex}%
+				{1.5ex \@plus .2ex}%
+				{\normalfont\normalsize\bfseries}}
+
+		\newdimen\@numsdim
+		\newdimen\@dotsdim
+		{\normalfont\normalsize
+			\sbox\z@{0}\global\@numsdim=\wd\z@
+			\sbox\z@{.}\global\@dotsdim=\wd\z@
+		}
+
+		\newdimen\@numindent
+		\newdimen\@textindent
+		\setlength{\@numindent}{15pt}
+		\setlength{\@textindent}{15pt}
+
+
+		\newcounter{level4}[subsubsection]
+		\@namedef{thelevel4}{\thesubsubsection.\arabic{level4}}
+		\@namedef{level4mark}#1{}
+		%\def\l@section{\@dottedtocline{1}{\dimexpr\@numindent*0\relax}{\dimexpr\@dotsdim*0+\@numsdim*1+\@textindent\relax}}
+		\def\l@subsection{\@dottedtocline{2}{\dimexpr\@numindent*1\relax}{\dimexpr\@dotsdim*1+\@numsdim*2+\@textindent\relax}}
+		\def\l@subsubsection{\@dottedtocline{3}{\dimexpr\@numindent*2\relax}{\dimexpr\@dotsdim*2+\@numsdim*3+\@textindent\relax}}
+		\@namedef{l@level4}{\@dottedtocline{4}{\dimexpr\@numindent*3\relax}{\dimexpr\@dotsdim*3+\@numsdim*4+\@textindent\relax}}
+
+		\count@=4
+		\def\@ncp#1{\number\numexpr\count@+#1\relax}
+		\loop\ifnum\count@<100
+			\begingroup\edef\x{\endgroup
+				\noexpand\newcounter{level\@ncp{1}}[level\number\count@]
+				\noexpand\@namedef{thelevel\@ncp{1}}{%
+					\noexpand\@nameuse{thelevel\@ncp{0}}.\noexpand\arabic{level\@ncp{1}}}
+				\noexpand\@namedef{level\@ncp{1}mark}####1{}%
+				\noexpand\@namedef{l@level\@ncp{1}}%
+					{\noexpand\@dottedtocline%
+						{\@ncp{1}}%
+						{\dimexpr\@numindent*\@ncp{0}\relax}%
+						{\the\dimexpr\@dotsdim*\@ncp{0}+\@numsdim*\@ncp{1}+\@textindent\relax}}}%
+			\x
+			\expandafter\edef\csname toclevel@level\the\count@\endcsname{\the\count@}%
+			\advance\count@\@ne
+		\repeat
+		\makeatother
+		
+		\setcounter{tocdepth}{100}
+		\setcounter{secnumdepth}{100}
+
+		
+
+		%fancyhdr config
+		\fancyhf{}
+		\fancyhead[L]{\includegraphics[scale=0.05]{Pics/Logo} \includegraphics[height=7mm]{Pics/KaizenTeam}}
+		\fancyhead[R]{\Large \bfseries \doctitle \vspace{0.1mm}}
+
+		\fancypagestyle{roman}{
+			\hypersetup{linkcolor=black}
+			\pagenumbering{Roman}
+			\fancyfoot[C]{\thepage{}}
+		}
+
+		\fancypagestyle{plain}{
+			\hypersetup{linkcolor=blue}
+			\pagenumbering{arabic}
+			\fancyfoot[C]{\thepage{} di \pageref*{LastPage}}
+		}
+
+		
+		%space between paragraph
+		\raggedbottom
+		
+
+
+		\begin{document}
+
+			\pagestyle{roman}
+			\input{Tex/Titlepage.tex}
+			\newpage
+			
+
+				\begin{center}
+					\tabulinesep=6pt
+					\begin{tabu} {X[r]|X[l]}
+						\textbf{Versione} & 5.00 \\
+						\textbf{Data redazione} & 2015-06-13 \\
+						\textbf{Redazione} & \parbox[t]{0.4\textwidth}{Pavanello Fabio Matteo} \\
+						\textbf{Verifica} & \parbox[t]{0.4\textwidth}{ Moretto Alessandro \\ Bigarella Chiara} \\
+						\textbf{Approvazione} & \parbox[t]{0.4\textwidth}{Carlon Chiara} \\
+						\textbf{Uso} & Esterno \\
+						\textbf{Distribuzione} & \parbox[t]{0.4\textwidth}{\groupname{} \\ Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap} \\
+					\end{tabu}
+				\end{center}
+
+	
+			\newpage
+			
+			\section*{Diario delle modifiche}
+				\addtocounter{table}{-1}
+				\tabulinesep=3pt
+				\begin{longtabu} to \textwidth {|X[c,m]|X[c,m]|X[c,m]|X[c,m]|X[c,m]|}
+					\hline
+					\rowfont{\bf}
+					Versione &
+					Data &
+					Autore &
+					Ruolo &
+					Descrizione \\
+					\hline
+					\endhead
+					5.00 &
+						2015-06-13 &
+						Carlon Chiara &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					4.04 &
+						2015-06-12 &
+						Bigarella Chiara &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					4.03 &
+						2015-06-12 &
+						Pavanello Fabio Matteo &
+						Progettista &
+						Fornito maggior dettaglio sulle relazioni individuate tra le componenti \\
+						\hline
+					4.02 &
+						2015-06-11 &
+						Moretto Alessandro &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					4.01 &
+						2015-06-10 &
+						Pavanello Fabio Matteo &
+						Progettista &
+						Correzione errori segnalati in RQ \\
+						\hline
+					4.00 &
+						2015-05-27 &
+						Pavanello Fabio Matteo &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					3.16 &
+						2015-03-29 &
+						Rubin Marco &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					3.15 &
+						2015-05-10 &
+						Davide Dal Bianco &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					3.14 &
+						2015-05-10 &
+						Bigarella Chiara &
+						Progettista &
+						Aggiunto paragrafo per spiegare l'utilizzo delle classi factory \\
+						\hline
+					3.13 &
+						2015-05-10 &
+						Moretto Alessandro &
+						Verificatore &
+						Verifica incrementi architettura di Norris e Chuck \\
+						\hline
+					3.12 &
+						2015-05-10 &
+						Bucco Riccardo &
+						Progettista &
+						Lieve modifica architettura Norris e Chuck \\
+						\hline
+					3.11 &
+						2015-05-09 &
+						Bucco Riccardo &
+						Progettista &
+						Spostamento pattern dopo la definizione dell'architettura \\
+						\hline
+					3.10 &
+						2015-05-09 &
+						Moretto Alessandro &
+						Verificatore &
+						Verifica incrementi architettura \\
+						\hline
+					3.09 &
+						2015-05-08 &
+						Bigarella Chiara &
+						Progettista &
+						Correzioni errori rilevati dalla verifica dell'architettura dell'applicazione android \\
+						\hline
+					3.08 &
+						2015-05-08 &
+						Moretto Alessandro &
+						Verificatore &
+						Verifica architettura \\
+						\hline
+					3.07 &
+						2015-05-08 &
+						Bigarella Chiara &
+						Progettista &
+						Modifica architettura dell'applicazione android, da MVC a MVP \\
+						\hline
+					3.06 &
+						2015-05-08 &
+						Pavanello Fabio Matteo &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					3.05 &
+						2015-05-08 &
+						Carlon Chiara &
+						Progettista &
+						Approfondita descrizione pattern Bridge \\
+						\hline
+					3.04 &
+						2015-05-08 &
+						Bigarella Chiara &
+						Progettista &
+						Correzione piccoli errori segnalati in RP \\
+						\hline
+					3.03 &
+						2015-05-07 &
+						Dal Bianco Davide &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					3.02 &
+						2015-05-07 &
+						Carlon Chiara &
+						Amministratore &
+						Aggiunti svantaggi tecnologie \\
+						\hline
+					3.01 &
+						2015-05-07 &
+						Bucco Riccardo &
+						Progettista &
+						Modificati riferimenti informativi \\
+						\hline
+					3.00 &
+						2015-05-03 &
+						Bigarella Chiara &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					2.02 &
+						2015-04-24 &
+						Bucco Riccardo &
+						Verificatore &
+						Verifica modifiche Chuck \\
+						\hline
+					2.01 &
+						2015-04-04 &
+						Rubin Marco &
+						Progettista &
+						Apporto di piccole modifiche architettura Chuck \\
+						\hline
+					2.00 &
+						2015-04-20 &
+						Dal Bianco Davide &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					1.02 &
+						2015-04-06 &
+						Moretto Alessandro &
+						Verificatore &
+						Verifica incremento \\
+						\hline
+					1.01 &
+						2015-04-04 &
+						Rubin Marco &
+						Progettista &
+						Apporto di piccole modifiche architetturale Norris \\
+						\hline
+					1.00 &
+						2015-03-31 &
+						Rubin Marco &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					0.16 &
+						2015-03-31 &
+						Pavanello Fabio Matteo &
+						Verificatore &
+						Verifica documento \\
+						\hline
+					0.15 &
+						2015-03-29 &
+						Bucco Riccardo &
+						Progettista &
+						Stesura ed importazione tracciamento \\
+						\hline
+					0.14 &
+						2015-03-29 &
+						Dal Bianco Davide &
+						Project Manager &
+						Stesura stime di fattibilità e di bisogno di risorse \\
+						\hline
+					0.13 &
+						2015-03-27 &
+						Carlon Chiara &
+						Verificatore &
+						Verifica componenti applicazione Android \\
+						\hline
+					0.12 &
+						2015-03-26 &
+						Pavanello Fabio Matteo &
+						Verificatore &
+						Verifica componenti Chuck \\
+						\hline
+					0.11 &
+						2015-03-26 &
+						Carlon Chiara &
+						Verificatore &
+						Verifica sezione Dashboard \\
+						\hline
+					0.10 &
+						2015-03-26 &
+						Bucco Riccardo &
+						Progettista &
+						Stesura sezione mockup Dashboard \\
+						\hline
+					0.09 &
+						2015-03-26 &
+						Carlon Chiara &
+						Verificatore &
+						Verifica componenti Norris \\
+						\hline
+					0.08 &
+						2015-03-24 &
+						Moretto Alessandro &
+						Progettista &
+						Stesura e descrizione componenti applicazione Android \\
+						\hline
+					0.07 &
+						2015-03-24 &
+						Bucco Riccardo &
+						Progettista &
+						Stesura e descrizione componenti Chuck \\
+						\hline
+					0.06 &
+						2015-03-23 &
+						Dal Bianco Davide &
+						Progettista &
+						Stesura e descrizione componenti Norris \\
+						\hline
+					0.05 &
+						2015-03-15 &
+						Pavanello Fabio Matteo &
+						Verificatore &
+						Verifica architettura \\
+						\hline
+					0.04 &
+						2015-03-12 &
+						Bigarella Chiara &
+						Progettista &
+						Stesura architettura generale \\
+						\hline
+					0.03 &
+						2015-03-07 &
+						Carlon Chiara &
+						Verificatore &
+						Verifica documento \\
+						\hline
+					0.02 &
+						2015-03-06 &
+						Moretto Alessandro &
+						Progettista &
+						Stesura tecnologie utilizzate \\
+						\hline
+					0.01 &
+						2015-03-05 &
+						Bigarella Chiara &
+						Progettista &
+						Struttura ed introduzione del documento \\
+						\hline
+					
+				\end{longtabu}
+
+	
+			\newpage
+
+			
+			\tableofcontents
+			\newpage
+			\listoftables
+			\newpage
+			\listoffigures
+			\newpage
+			\pagestyle{plain}
+
+			
+		\newpage
+		\input{Tex/Introduzione.tex}
+	
+		\newpage
+		\input{Tex/Tecnologie.tex}
+	
+		\newpage
+		\input{Tex/DescrizioneProdotti.tex}
+	
+		\newpage
+		\input{Tex/Progettazione.tex}
+	
+		\newpage
+		\input{Tex/Stime.tex}
+	
+		\newpage
+		\input{Tex/Tracciamento.tex}
+	
+		\appendix
+		
+		\newpage
+		\input{Tex/AppendiceDesignPattern.tex}
+	
+
+		\end{document}
+
+	

@@ -35,7 +35,7 @@ $(DOCUMENTI): _force
 
 	@ #documenti specifici
 	@ #test "$@" != "AnalisiDeiRequisiti" || make _analisi
-	@ test "$@" != "DefinizioneDiProdotto" || make _definizione
+	@ #test "$@" != "DefinizioneDiProdotto" || make _definizione
 	@ #test "$@" != "Glossario" || make _glossario
 	@ #test "$@" != "NormeDiProgetto" || make _norme
 	@ #test "$@" != "PianoDiQualifica" || make _qualifica
