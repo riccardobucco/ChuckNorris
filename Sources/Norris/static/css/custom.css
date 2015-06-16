@@ -7,7 +7,8 @@ footer {padding:20px 0px; background-color:#DDD; }
 .toolbar ul { margin:0px; list-style-type: none; text-align:left; padding-left:5px; }
 .logo-norris { max-height:100px; max-width:90%; }
 .chart-type { font-style:italic; color:#aaa; }
-.returnlink { padding:10px; background-color:#eee; margin:50px auto 0px auto; }
+.returnlink { padding:10px; background-color:#eee;}
+.footer-margin {  margin:50px auto 0px auto;  }
 .returnlink a { color:#525252; font-size:1.5em; }
 
 .col-width-fixed { 
