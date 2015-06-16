@@ -13,7 +13,13 @@
                         "type": "string"
                     },
                     "marker": {
-                        "type": "string"
+                        "enum": [
+			                "standard",
+			                "custom",
+			                "flag",
+			                "plane",
+			                "bus"
+            			]
                     },
                     "color": {
                         "type": "string",
