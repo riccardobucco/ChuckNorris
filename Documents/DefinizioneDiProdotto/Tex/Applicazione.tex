@@ -82,7 +82,7 @@
             \begin{enumerate}
                 \item alla creazione dell'\insglo{activity} viene creato il relativo presenter attraverso il metodo create della classe PresenterImpl;
                 \item tale presenter ottiene l'istanza unica di ChartReceiver e richiede il Chart;
-                \item ChartReciever notifica il presenter alla ricezione dei dati ed attiva gli aggiornamenti.
+                \item ChartReceiver notifica il presenter alla ricezione dei dati ed attiva gli aggiornamenti.
                 \item il presenter infine crea il modello dei dati e dice alla view iniziale di renderizzare il chart.
             \end{enumerate}
             
@@ -96,7 +96,7 @@
             \begin{enumerate}
                 \item il messaggio iniziale rappresenta l'arrivo di un aggiornamento attraverso il canale socket;
                 \item ChartReceiver avverte tutti i suoi osservatori chiamando i loro metodi update e passandogli il dato ricevuto;
-                \item il presenter p a questo punto trasforma il facchetto dal formato \insglo{json} al formato appropriato;
+                \item il presenter p a questo punto trasforma il pacchetto dal formato \insglo{json} al formato appropriato;
                 \item aggiorna successivamente il modello dei dati;
                 \item infine chiede alla view (LineChartActivity) la renderizzazione dei nuovi dati.
             \end{enumerate}

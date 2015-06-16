@@ -72,7 +72,7 @@ function ChartEndpoint(controller) {
             });
         });
     } else {
-        console.log("ERROR: an ExternalAPIController is required.");
+        console.error("ERROR: an ExternalAPIController is required.");
         throw("ChartEndpoint:requiredExternalAPIController");
     }
 }

@@ -49,7 +49,8 @@ function ExternalAPIController(model, server, app) {
     events.EventEmitter.call(this); //ExternalAPIController inherits from events.EventEmitter
 
     if(!model || !server || !app) {
-        throw ('missing parameters')
+        console.error("ERROR: some parameters are missing.");
+        throw ('ExtrenalAPIController:missingParameters')
     }
 
     this.model = model;

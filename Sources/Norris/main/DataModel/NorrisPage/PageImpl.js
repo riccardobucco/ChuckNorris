@@ -68,12 +68,12 @@ PageImpl.prototype.add = function (chart) {
             return this;
         }
         else {
-            console.log("ERROR: wrong type. A NorrisChart widget is required.");
+            console.error("ERROR: wrong type. A NorrisChart widget is required.");
             throw("PageImpl:requiredNorrisChart");
         }
     }
     else {
-        console.log("ERROR: maximum number of charts is reached. You cannot add other charts to the page.");
+        console.error("ERROR: maximum number of charts is reached. You cannot add other charts to the page.");
         throw("PageImpl:reachedMaximunNumberOfCharts");
     }
 
@@ -113,7 +113,8 @@ PageImpl.prototype.setSettings = function(settings) {
 
     var schema = require(__dirname + '/../../../resources/schemes/page-settings');
     if(validate(newSettings, schema).errors.length > 0) {
-        throw new Error('wrong settings');
+        console.error("ERROR: wrong settings.");
+        throw new Error('PageImpl:wrongSettings');
     }
 
     this.settings = newSettings;

@@ -76,8 +76,8 @@ MapChartInPlaceUpdater.prototype.update = function (chart, updateData) {
             chart.setData(data);
         }
         else {
-            console.log("ERROR: the chart has no data to update.");
-            throw ("emptyChart");
+            console.error("ERROR: the chart has no data to update.");
+            throw ("MapChartInPlaceUpdater:emptyChart");
         }
     }
 };

@@ -44,7 +44,7 @@ function ChartRef (chart) {
         this.chart = chart;
     }
     else {
-        console.log("ERROR: chart is not a ChartImpl");
+        console.error("ERROR: chart is not a ChartImpl");
         throw("ChartEndpoint:requiredChartImpl");
     }
 }
