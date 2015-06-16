@@ -1,54 +1,34 @@
 \level{1}{Usage}
 	\level{2}{Initialization}
 		\begin{itemize}
-			\item You have to create a HTTP server.
+			\item You have to create a Express and a HTTP server.
 			\begin{enumerate}
 				\item Include the library:
 				\begin{lstlisting}
 					var (*\ignoreglo{http}*) = require('(*\ignoreglo{http}*)');
 				\end{lstlisting}
+				\item Create a new instance of \texttt{\ignoreglo{Express}}:
+				\begin{lstlisting}
+					var (*\ignoreglo{app}*) = (*require('express')()*);
+				\end{lstlisting}
 				\item Create a new instance of \texttt{\ignoreglo{http}.Server}:
 				\begin{lstlisting}
-					var (*\ignoreglo{server}*) = (*\ignoreglo{http}*).createServer();
+					var (*\ignoreglo{server}*) = (*\ignoreglo{http}*).createServer(app);
 				\end{lstlisting}
-				\texttt{server} will emit events you can listen. For example the event \texttt{'request'} is emitted each time there is a request.
 				\item Make the HTTP server accept connections on the specified \texttt{port}:
 				\begin{lstlisting}
 					(*\ignoreglo{server}*).listen(port);
 				\end{lstlisting}
 			\end{enumerate}
-			\item You have to create an Express web server.
-			\begin{enumerate}
-				\item Include the library:
-				\begin{lstlisting}
-					var (*\ignoreglo{express}*) = require('(*\ignoreglo{express}*)');
-				\end{lstlisting}
-				\item Create a new instance of Express:
-				\begin{lstlisting}
-					var app = new (*\ignoreglo{express}*)();
-				\end{lstlisting}
-			\end{enumerate}
-			\item You have to add a listener (\texttt{app}) to the end of the listeners array for the \texttt{'request'} event:
-			\begin{lstlisting}
-				(*\ignoreglo{server}*).on('request',app);
-			\end{lstlisting}
 			\item You have to create an instance of \insglo{Norris}.
 			\begin{enumerate}
 				\item Include the library:
 				\begin{lstlisting}
 					var (*\ignoreglo{norris}*) = require('(*\ignoreglo{norris}*)');
 				\end{lstlisting}
-				\item Create a new instance of \insglo{Norris}, and make it accessible by a client application at the given endpoint (e.g. \texttt{'/norris'}):
+				\item Create a new instance of \insglo{Norris}. You can choose some settings (properties) that affect how \insglo{Norris} behaves:
 				\begin{lstlisting}
-					var nrr = (*\ignoreglo{norris}*)((*\ignoreglo{server}*), endpoint);
-				\end{lstlisting}
-				or:
-				\begin{lstlisting}
-					var nrr = (*\ignoreglo{norris}*)((*\ignoreglo{server}*), endpoint, app);
-				\end{lstlisting}
-				\item (optional) You can choose some settings (properties) that affect how \insglo{Norris} behaves:
-				\begin{lstlisting}
-					nrr.settings(opts);
+					var nrr = (*\ignoreglo{norris}*)((*\ignoreglo{server}*), app[, options]);
 				\end{lstlisting}
 				For more information about the opts object, see \nameref{sec:ObjectsDescriptionNorris}.
 			\end{enumerate}
