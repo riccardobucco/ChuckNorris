@@ -57,11 +57,11 @@ _analisi: _force
 	@ find AnalisiDeiRequisiti/UseCase -name '*.tex' | grep -Eo '[^/]*$$' | grep -Eo '^UCD[0-9][^.]*' | sort -k 14 | sort -k 13 | sort -k 12 | sort -k 11 | sort -k 10 | sort -k 9 | sort -k 8 | sort -k 7 | sort -k 6 | sort -k 5 |sort -k 4 | xargs -I {} cat AnalisiDeiRequisiti/UseCase/{}.tex > AnalisiDeiRequisiti/UseCase/UCD.tex
 	
 	@ #download tabelle
-#@ curl http://kaizenteam.it/tracker/export/fonti.php > AnalisiDeiRequisiti/TrackerFonti.tex
-#@ curl http://kaizenteam.it/tracker/export/requisiti.php > AnalisiDeiRequisiti/TrackerRequisiti.tex
-#@ curl http://kaizenteam.it/tracker/export/requisiti-fonti.php > AnalisiDeiRequisiti/TrackerRequisitiFonti.tex
-#@ curl http://kaizenteam.it/tracker/export/fonti-requisiti.php > AnalisiDeiRequisiti/TrackerFontiRequisiti.tex
-#@ curl http://kaizenteam.it/tracker/export/riepilogo.php > AnalisiDeiRequisiti/TrackerRiepilogo.tex
+	@ curl http://kaizenteam.it/tracker/export/fonti.php > AnalisiDeiRequisiti/TrackerFonti.tex
+	@ curl http://kaizenteam.it/tracker/export/requisiti.php > AnalisiDeiRequisiti/TrackerRequisiti.tex
+	@ curl http://kaizenteam.it/tracker/export/requisiti-fonti.php > AnalisiDeiRequisiti/TrackerRequisitiFonti.tex
+	@ curl http://kaizenteam.it/tracker/export/fonti-requisiti.php > AnalisiDeiRequisiti/TrackerFontiRequisiti.tex
+	@ curl http://kaizenteam.it/tracker/export/riepilogo.php > AnalisiDeiRequisiti/TrackerRiepilogo.tex
 
 _definizione: _force
 	@ #creazione file latex classi
@@ -77,8 +77,8 @@ _definizione: _force
 	@ sed -ri 's/\$$/\\\$$/gi;s/_/\\_/gi' DefinizioneDiProdotto/Classi/Applicazione.tex
 
 	@ #download tabelle
-#@ curl http://kaizenteam.it/tracker/export/classi-requisiti.php > DefinizioneDiProdotto/TrackerClassiRequisiti.tex
-#@ curl http://kaizenteam.it/tracker/export/requisiti-classi.php > DefinizioneDiProdotto/TrackerRequisitiClassi.tex
+	@ curl http://kaizenteam.it/tracker/export/classi-requisiti.php > DefinizioneDiProdotto/TrackerClassiRequisiti.tex
+	@ curl http://kaizenteam.it/tracker/export/requisiti-classi.php > DefinizioneDiProdotto/TrackerRequisitiClassi.tex
 
 _glossario: _force
 	@ #creazione file latex termini
@@ -93,12 +93,12 @@ _norme: _force
 	@ sed -ri 's/\\listoftables//' NormeDiProgetto/NormeDiProgetto.tex
 
 _qualifica: _force
-#@ curl http://kaizenteam.it/tracker/export/test-integrazione.php > PianoDiQualifica/Tex/TestIntegrazione.tex
-#@ curl http://kaizenteam.it/tracker/export/test-integrazione_componenti.php > PianoDiQualifica/Tex/TracciamentoTestIntegrazioneClassiMetodi.tex
-#@ curl http://kaizenteam.it/tracker/export/test-unita.php > PianoDiQualifica/Tex/TestUnita.tex
-#@ curl http://kaizenteam.it/tracker/export/test-unita_metodi.php > PianoDiQualifica/Tex/TracciamentoTestUnitaClassiMetodi.tex
-#@ curl http://kaizenteam.it/tracker/export/metodi_CN.php > PianoDiQualifica/TrackerMetricheCN.tex
-#@ curl http://kaizenteam.it/tracker/export/metodi_A.php > PianoDiQualifica/TrackerMetricheA.tex
+	@ curl http://kaizenteam.it/tracker/export/test-integrazione.php > PianoDiQualifica/Tex/TestIntegrazione.tex
+	@ curl http://kaizenteam.it/tracker/export/test-integrazione_componenti.php > PianoDiQualifica/Tex/TracciamentoTestIntegrazioneClassiMetodi.tex
+	@ curl http://kaizenteam.it/tracker/export/test-unita.php > PianoDiQualifica/Tex/TestUnita.tex
+	@ curl http://kaizenteam.it/tracker/export/test-unita_metodi.php > PianoDiQualifica/Tex/TracciamentoTestUnitaClassiMetodi.tex
+	@ curl http://kaizenteam.it/tracker/export/metodi_CN.php > PianoDiQualifica/TrackerMetricheCN.tex
+	@ curl http://kaizenteam.it/tracker/export/metodi_A.php > PianoDiQualifica/TrackerMetricheA.tex
 
 _specifica: _force
 	@ #creazione file latex classi
@@ -112,8 +112,8 @@ _specifica: _force
 	@ sed -ri 's/\$$/\\\$$/gi' SpecificaTecnica/Classi/Applicazione.tex
 
 	@ #download tabelle
-#@ curl http://kaizenteam.it/tracker/export/componenti-requisiti.php > SpecificaTecnica/TrackerComponentiRequisiti.tex
-#@ curl http://kaizenteam.it/tracker/export/requisiti-componenti.php > SpecificaTecnica/TrackerRequisitiComponenti.tex
+	@ curl http://kaizenteam.it/tracker/export/componenti-requisiti.php > SpecificaTecnica/TrackerComponentiRequisiti.tex
+	@ curl http://kaizenteam.it/tracker/export/requisiti-componenti.php > SpecificaTecnica/TrackerRequisitiComponenti.tex
 
 _studio: _force
 	@ #eliminazione lot, lof
