@@ -1,0 +1,470 @@
+
+		\documentclass[a4paper]{article}
+		
+		%package include
+		\usepackage[margin=3cm]{geometry}
+		\usepackage[italian]{babel}
+		\usepackage[utf8]{inputenc}
+		\usepackage[T1]{fontenc}
+		\usepackage{graphicx}
+		\usepackage{fancyhdr}
+		\usepackage{lastpage}
+		\usepackage{longtable}
+		\usepackage{tabu}
+		\usepackage{hyperref}
+		\usepackage[hypcap]{caption}
+		\usepackage{color}
+		\usepackage{xcolor}
+		\usepackage{eurosym}
+		\usepackage{abstract}
+		\usepackage{float}
+		\usepackage{listings, lstautogobble}
+		\usepackage{amsmath}
+		\usepackage{subfigure}
+		\usepackage{pifont}
+		\usepackage{multirow}
+
+		\colorlet{punct}{red!60!black}
+		\definecolor{background}{HTML}{EEEEEE}
+		\definecolor{delim}{RGB}{20,105,176}
+		\colorlet{numb}{magenta!60!black}
+
+
+		% per allineare il codice a sinistra invece che al centro
+		\lstset{
+			autogobble=true,
+			escapeinside={(*}{*)}
+		}
+
+		\lstdefinelanguage{json}{
+		    basicstyle=\normalfont\ttfamily,
+		    numbers=left,
+		    numberstyle=\scriptsize,
+		    stepnumber=1,
+		    numbersep=8pt,
+		    showstringspaces=false,
+		    breaklines=true,
+		    frame=lines,
+		    backgroundcolor=\color{background},
+		    literate=
+		     *{0}{{{\color{numb}0}}}{1}
+		      {1}{{{\color{numb}1}}}{1}
+		      {2}{{{\color{numb}2}}}{1}
+		      {3}{{{\color{numb}3}}}{1}
+		      {4}{{{\color{numb}4}}}{1}
+		      {5}{{{\color{numb}5}}}{1}
+		      {6}{{{\color{numb}6}}}{1}
+		      {7}{{{\color{numb}7}}}{1}
+		      {8}{{{\color{numb}8}}}{1}
+		      {9}{{{\color{numb}9}}}{1}
+		      {:}{{{\color{punct}{:}}}}{1}
+		      {,}{{{\color{punct}{,}}}}{1}
+		      {\{}{{{\color{delim}{\{}}}}{1}
+		      {\}}{{{\color{delim}{\}}}}}{1}
+		      {[}{{{\color{delim}{[}}}}{1}
+		      {]}{{{\color{delim}{]}}}}{1},
+		}
+		
+
+		%macro definitions
+		\input{Tex/Macro.tex}
+		\newcommand{\doctitle}{Analisi Dei Requisiti}
+		\newcommand{\lastversion}{6.00}
+		
+
+		%abstract font
+		\renewcommand{\abstractnamefont}{\huge\bfseries}
+		\renewcommand{\abstracttextfont}{\large}
+
+		%hyperred
+		\hypersetup{
+			linktoc=all,
+			colorlinks=true,
+			allcolors=black,
+			urlcolor=blue,
+			bookmarksdepth=100
+		}
+
+		%section counters
+		\makeatletter
+		\newcommand\level[1]{%
+			\ifcase#1\relax\expandafter\chapter\or
+				\expandafter\section\or
+				\expandafter\subsection\or
+				\expandafter\subsubsection\else
+				\def\next{\@level{#1}}\expandafter\next
+			\fi}
+		\newcommand{\@level}[1]{%
+			\@startsection{level#1}%
+				{#1}%
+				{\z@}%
+				{-3.25ex\@plus -1ex \@minus -.2ex}%
+				{1.5ex \@plus .2ex}%
+				{\normalfont\normalsize\bfseries}}
+
+		\newdimen\@numsdim
+		\newdimen\@dotsdim
+		{\normalfont\normalsize
+			\sbox\z@{0}\global\@numsdim=\wd\z@
+			\sbox\z@{.}\global\@dotsdim=\wd\z@
+		}
+
+		\newdimen\@numindent
+		\newdimen\@textindent
+		\setlength{\@numindent}{15pt}
+		\setlength{\@textindent}{15pt}
+
+
+		\newcounter{level4}[subsubsection]
+		\@namedef{thelevel4}{\thesubsubsection.\arabic{level4}}
+		\@namedef{level4mark}#1{}
+		%\def\l@section{\@dottedtocline{1}{\dimexpr\@numindent*0\relax}{\dimexpr\@dotsdim*0+\@numsdim*1+\@textindent\relax}}
+		\def\l@subsection{\@dottedtocline{2}{\dimexpr\@numindent*1\relax}{\dimexpr\@dotsdim*1+\@numsdim*2+\@textindent\relax}}
+		\def\l@subsubsection{\@dottedtocline{3}{\dimexpr\@numindent*2\relax}{\dimexpr\@dotsdim*2+\@numsdim*3+\@textindent\relax}}
+		\@namedef{l@level4}{\@dottedtocline{4}{\dimexpr\@numindent*3\relax}{\dimexpr\@dotsdim*3+\@numsdim*4+\@textindent\relax}}
+
+		\count@=4
+		\def\@ncp#1{\number\numexpr\count@+#1\relax}
+		\loop\ifnum\count@<100
+			\begingroup\edef\x{\endgroup
+				\noexpand\newcounter{level\@ncp{1}}[level\number\count@]
+				\noexpand\@namedef{thelevel\@ncp{1}}{%
+					\noexpand\@nameuse{thelevel\@ncp{0}}.\noexpand\arabic{level\@ncp{1}}}
+				\noexpand\@namedef{level\@ncp{1}mark}####1{}%
+				\noexpand\@namedef{l@level\@ncp{1}}%
+					{\noexpand\@dottedtocline%
+						{\@ncp{1}}%
+						{\dimexpr\@numindent*\@ncp{0}\relax}%
+						{\the\dimexpr\@dotsdim*\@ncp{0}+\@numsdim*\@ncp{1}+\@textindent\relax}}}%
+			\x
+			\expandafter\edef\csname toclevel@level\the\count@\endcsname{\the\count@}%
+			\advance\count@\@ne
+		\repeat
+		\makeatother
+		
+		\setcounter{tocdepth}{100}
+		\setcounter{secnumdepth}{100}
+
+		
+
+		%fancyhdr config
+		\fancyhf{}
+		\fancyhead[L]{\includegraphics[scale=0.05]{Pics/Logo} \includegraphics[height=7mm]{Pics/KaizenTeam}}
+		\fancyhead[R]{\Large \bfseries \doctitle \vspace{0.1mm}}
+
+		\fancypagestyle{roman}{
+			\hypersetup{linkcolor=black}
+			\pagenumbering{Roman}
+			\fancyfoot[C]{\thepage{}}
+		}
+
+		\fancypagestyle{plain}{
+			\hypersetup{linkcolor=blue}
+			\pagenumbering{arabic}
+			\fancyfoot[C]{\thepage{} di \pageref*{LastPage}}
+		}
+
+		
+		%space between paragraph
+		\raggedbottom
+		
+
+
+		\begin{document}
+
+			\pagestyle{roman}
+			\input{Tex/Titlepage.tex}
+			\newpage
+			
+
+				\begin{center}
+					\tabulinesep=6pt
+					\begin{tabu} {X[r]|X[l]}
+						\textbf{Versione} & 6.00 \\
+						\textbf{Data redazione} & 2015-05-13 \\
+						\textbf{Redazione} & \parbox[t]{0.4\textwidth}{Carlon Chiara} \\
+						\textbf{Verifica} & \parbox[t]{0.4\textwidth}{Bigarella Chiara} \\
+						\textbf{Approvazione} & \parbox[t]{0.4\textwidth}{Pavanello Fabio Matteo} \\
+						\textbf{Uso} & Esterno \\
+						\textbf{Distribuzione} & \parbox[t]{0.4\textwidth}{Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap} \\
+					\end{tabu}
+				\end{center}
+
+	
+			\newpage
+			
+			\section*{Diario delle modifiche}
+				\addtocounter{table}{-1}
+				\tabulinesep=3pt
+				\begin{longtabu} to \textwidth {|X[c,m]|X[c,m]|X[c,m]|X[c,m]|X[c,m]|}
+					\hline
+					\rowfont{\bf}
+					Versione &
+					Data &
+					Autore &
+					Ruolo &
+					Descrizione \\
+					\hline
+					\endhead
+					6.00 &
+						2015-05-13 &
+						Pavanello Fabio Matteo &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					5.02 &
+						2015-05-12 &
+						Bigarella Chiara &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					5.01 &
+						2015-05-12 &
+						Carlon Chiara &
+						Analista &
+						Modifica riferimenti \\
+						\hline
+					5.00 &
+						2015-05-10 &
+						Bigarella Chiara &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					4.02 &
+						2015-05-09 &
+						Bucco Riccardo &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					4.01 &
+						2015-05-08 &
+						Moretto Alessandro &
+						Analista &
+						Modifica riferimenti \\
+						\hline
+					4.00 &
+						2015-04-07 &
+						Dal Bianco Davide &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					3.02 &
+						2015-04-06 &
+						Rubin Marco &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					3.01 &
+						2015-04-04 &
+						Pavanello Fabio Matteo &
+						Analista &
+						Modifica riferimenti \\
+						\hline
+					3.00 &
+						2015-03-13 &
+						Bucco Riccardo &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					2.09 &
+						2015-03-12 &
+						Rubin Marco &
+						Verificatore &
+						Verifica documento \\
+						\hline
+					2.06 &
+						2015-03-11 &
+						Dal Bianco Davide &
+						Verificatore &
+						Verifica tracciamento \\
+						\hline
+					2.05 &
+						2015-03-10 &
+						Moretto Alessandro &
+						Verificatore &
+						Verifica requisiti \\
+						\hline
+					2.04 &
+						2015-03-10 &
+						Bigarella Chiara &
+						Verificatore &
+						Verifica casi d'uso \\
+						\hline
+					2.03 &
+						2015-03-09 &
+						Dal Bianco Davide &
+						Chiara Carlon &
+						Modifica tracciamento \\
+						\hline
+					2.02 &
+						2015-03-07 &
+						Pavanello Fabio Matteo &
+						Analista &
+						Piccola modifica requisiti \\
+						\hline
+					2.01 &
+						2015-03-07 &
+						Rubin Marco &
+						Analista &
+						Piccola modifica casi d'uso \\
+						\hline
+					2.00 &
+						2015-03-03 &
+						Carlon Chiara &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					1.03 &
+						2015-02-27 &
+						Pavanello Fabio Matteo &
+						Verificatore &
+						Verifica documento \\
+						\hline
+					1.02 &
+						2015-02-23 &
+						Bucco Riccardo &
+						Analista &
+						Stesura appendice Express js \\
+						\hline
+					1.01 &
+						2015-02-23 &
+						Bigarella Chiara, Bucco Riccardo &
+						Analista &
+						Revisione correttiva contenuti basata su segnalazione del committente \\
+						\hline
+					1.00 &
+						2015-01-19 &
+						Moretto Alessandro &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					0.15 &
+						2015-01-17 &
+						Moretto Alessandro, Pavanello Fabio Matteo &
+						Verificatore &
+						Verifica stesura e tracciamento requisiti \\
+						\hline
+					0.14 &
+						2015-01-15 &
+						Bucco Riccardo &
+						Analista &
+						Modifica stesura e tracciamento requisiti \\
+						\hline
+					0.13 &
+						2015-01-13 &
+						Bucco Riccardo, Dal Bianco Davide &
+						Analista &
+						Terminazione stesura e tracciamento requisiti \\
+						\hline
+					0.12 &
+						2015-01-06 &
+						Moretto Alessandro &
+						Verificatore &
+						Verificati sottocasi d'uso UC3 e descrizione \\
+						\hline
+					0.11 &
+						2015-01-05 &
+						Rubin Marco &
+						Verificatore &
+						Verificati sottocasi d'uso UC2 e descrizione \\
+						\hline
+					0.10 &
+						2015-01-03 &
+						Bucco Riccardo &
+						Analista &
+						Terminazione sottocasi d'uso di UC3 e descrizione \\
+						\hline
+					0.09 &
+						2015-01-03 &
+						Pavanello Fabio Matteo &
+						Verificatore &
+						Verificati sottocasi d'uso UC1 e descrizione \\
+						\hline
+					0.08 &
+						2015-01-01 &
+						Dal Bianco Davide, Carlon Chiara &
+						Analista &
+						Terminazione sottocasi d'uso di UC2 e descrizione \\
+						\hline
+					0.07 &
+						2014-12-31 &
+						Bigarella Chiara &
+						Analista &
+						Terminazione sottocasi d'uso di UC1 e descrizione \\
+						\hline
+					0.06 &
+						2014-12-26 &
+						Moretto Alessandro &
+						Verificatore &
+						Verificato scenario generale casi d'uso \\
+						\hline
+					0.05 &
+						2014-12-25 &
+						Dal Bianco Davide &
+						Analista &
+						Creazione casi d'uso generale \\
+						\hline
+					0.04 &
+						2014-12-21 &
+						Rubin Marco &
+						Verificatore &
+						Verificata sezione Descrizione Generale \\
+						\hline
+					0.03 &
+						2014-12-21 &
+						Pavanello Fabio Matteo &
+						Verificatore &
+						Verificata sezione Introduzione \\
+						\hline
+					0.02 &
+						2014-12-21 &
+						Dal Bianco Davide &
+						Analista &
+						Terminazione stesura Descrizione Generale \\
+						\hline
+					0.01 &
+						2014-12-20 &
+						Bigarella Chiara &
+						Analista &
+						Terminazione stesura Introduzione \\
+						\hline
+					
+				\end{longtabu}
+
+	
+			\newpage
+
+			
+			\tableofcontents
+			\newpage
+			\listoftables
+			\newpage
+			\listoffigures
+			\newpage
+			\pagestyle{plain}
+
+			
+		\newpage
+		\input{Tex/Introduzione.tex}
+	
+		\newpage
+		\input{Tex/Descrizione.tex}
+	
+		\newpage
+		\input{Tex/UseCase.tex}
+	
+		\newpage
+		\input{Tex/Requisiti.tex}
+	
+		\newpage
+		\input{Tex/TracciamentoReqTest.tex}
+	
+		\appendix
+		
+		\newpage
+		\input{Tex/Middleware.tex}
+	
+
+		\end{document}
+
+	
