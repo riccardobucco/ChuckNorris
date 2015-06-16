@@ -20,7 +20,10 @@ NorrisUserManual: _force
 
 	@ #creazione file latex termini
 	@ xmllint --noout --schema NorrisUserManual/Termini.xsd NorrisUserManual/Termini.xml
-	@ xsltproc -o NorrisUserManual/Termini.tex NorrisUserManual/Termini.xsl NorrisUserManual/Termini.xml
+	@ echo '\level{1}{Glossary}' > NorrisUserManual/Termini.tex
+	@ echo '\\indent' >> NorrisUserManual/Termini.tex
+	@ echo '\\vspace{1cm}' >> NorrisUserManual/Termini.tex
+	@ xsltproc NorrisUserManual/Termini.xsl NorrisUserManual/Termini.xml >> NorrisUserManual/Termini.tex
 
 	@ #compilazione file latex
 	@ make $@/$@.pdf

@@ -192,8 +192,10 @@
 			\newpage
 			<xsl:call-template name="changes"/>
 			\newpage
-
 			
+
+			\tableofcontents
+			\newpage
 			\pagestyle{plain}
 
 			<xsl:apply-templates select="sections/name"/>
