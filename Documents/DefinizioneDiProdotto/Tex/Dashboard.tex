@@ -13,11 +13,11 @@
             \item \textbf{Inizializzazione della mappa} \\
             Si procede alla creazione ed inizializzazione di un \insglo{map chart} nell'istanza di \insglo{Norris}. Il chart non conterrà dati (che saranno inseriti in seguito, tramite aggiornamenti). Vengono inoltre impostate alcune opzioni di default. 
             
-            \item \textbf{Inizializzazione del \insglo{bar chart}} \\
-            Si procede alla creazione ed inizializzazione di un \insglo{bar chart} nell'istanza di \insglo{Norris}. Il chart non conterrà dati (che saranno inseriti in seguito, tramite aggiornamenti). Vengono inoltre impostate alcune opzioni di default.
+           % \item \textbf{Inizializzazione del \insglo{bar chart}} \\
+           % Si procede alla creazione ed inizializzazione di un \insglo{bar chart} nell'istanza di \insglo{Norris}. Il chart non conterrà dati (che saranno inseriti in seguito, tramite aggiornamenti). Vengono inoltre impostate alcune opzioni di default.
                         
             \item \textbf{Inizializzazione della tabella} \\
-            Si procede alla creazione ed inizializzazione di una \insglo{table} nell'istanza di \insglo{Norris}. Il chart viene inizializzato con dati riguardanti alcuni dei principali punti di interesse di Padova (Prato della Valle, Stazione FS, Ospedale Civile), che però sono impostati su “unknown”. Essi saranno correttamente aggiornati in un momento successivo, quando vengono ricevuti i dati dal \insglo{server} \insglo{APS}.
+            Si procede alla creazione ed inizializzazione di una \insglo{table} nell'istanza di \insglo{Norris}. Il chart non conterrà dati (che saranno inseriti in seguito, tramite aggiornamenti). Vengono inoltre impostate alcune opzioni di default.
             
             \item \textbf{Creazione della pagina web} \\
             Una volta creati i grafici, si può procedere con la creazione ed inizializzazione di una pagina all'interno dell'istanza di \insglo{Norris}. I grafici vengono aggiunti alla pagina appena creata; vengono inoltre impostate alcune opzioni di default per la pagina.
@@ -28,10 +28,10 @@
             \item \textbf{Aggiornare la mappa} \\
             Per aggiornare il \insglo{map chart} si utilizza l'apposito metodo fornito dalle \insglo{API} di \insglo{Norris}, al quale vengono passati i dati nel formato corretto e il tipo di aggiornamento che si desidera effettuare. Scegliendo di aggiornare la mappa con il metodo \insglo{movie}, vengono aggiornate le posizioni di tutti i punti sulla mappa, vengono aggiunti eventuali nuovi punti e vengono tolti quelli non più presenti.
             
-            \item \textbf{Aggiornare il \insglo{bar chart}} \\
-            Per aggiornare il \insglo{bar chart} si utilizza l'apposito metodo fornito dalle \insglo{API} di \insglo{Norris}, al quale vengono passati il tipo di aggiornamento che si desidera effettuare e i dati nel formato corretto. In particolare, si deve calcolare quanti mezzi sono attivi per ciascuna linea. A partire poi dal risultato ottenuto viene creato il pacchetto di aggiornamento tramite il quale le \insglo{API} interne possono effettuare l'aggiornamento vero e proprio del grafico.
+            %\item \textbf{Aggiornare il \insglo{bar chart}} \\
+            %Per aggiornare il \insglo{bar chart} si utilizza l'apposito metodo fornito dalle \insglo{API} di \insglo{Norris}, al quale vengono passati il tipo di aggiornamento che si desidera effettuare e i dati nel formato corretto. In particolare, si deve calcolare quanti mezzi sono attivi per ciascuna linea. A partire poi dal risultato ottenuto viene creato il pacchetto di aggiornamento tramite il quale le \insglo{API} interne possono effettuare l'aggiornamento vero e proprio del grafico.
             
             \item \ignoreglo{\textbf{Aggiornare la tabella}} \\
-            Per aggiornare il \insglo{bar chart} si utilizza l'apposito metodo fornito dalle \insglo{API} di \insglo{Norris}, al quale vengono passati il tipo di aggiornamento che si desidera effettuare e i dati nel formato corretto. In particolare, si deve calcolare qual è il mezzo più vicino ai vari punti di interesse e qual è il tempo di attesa medio. A partire poi dal risultato ottenuto viene creato il pacchetto di aggiornamento tramite il quale le \insglo{API} interne possono effettuare l'aggiornamento vero e proprio del grafico.
+            Per aggiornare il \insglo{bar chart} si utilizza l'apposito metodo fornito dalle \insglo{API} di \insglo{Norris}, al quale vengono passati il tipo di aggiornamento che si desidera effettuare e i dati nel formato corretto. In particolare, si deve calcolare quanti mezzi sono attivi per ciascuna linea. A partire poi dal risultato ottenuto viene creato il pacchetto di aggiornamento tramite il quale le \insglo{API} interne possono effettuare l'aggiornamento vero e proprio del grafico.
 
         \end{itemize}
