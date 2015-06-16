@@ -85,14 +85,15 @@ TableStreamUpdater.prototype.update = function (chart, updateData) {
 
                 }
                 else {
-                    throw ("wrongUpdateData");
+                    console.error("ERROR: wrong updating data.");
+                    throw ("TableStreamUpdater:wrongUpdateData");
                 }
             }
             chart.setData(data);
         }
         else {
-            console.log("ERROR: the chart has no data to update.");
-            throw ("emptyChart");
+            console.error("ERROR: the chart has no data to update.");
+            throw ("TableStreamUpdater:emptyChart");
         }
     }
 };

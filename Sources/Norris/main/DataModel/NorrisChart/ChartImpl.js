@@ -128,7 +128,8 @@ ChartImpl.prototype.getType = function() {
 ChartImpl.prototype.setData = function(data) {
     var schema = require(__dirname + '/../../../resources/schemes/' + this.getType() + '-data');
     if(validate(data, schema).errors.length > 0) {
-        throw new Error('wrong data');
+        console.error("ERROR: wrong data." );
+        throw new Error('ChartImpl:wrongData');
     }
 
     this.data=data;
@@ -171,7 +172,8 @@ ChartImpl.prototype.setSettings = function(settings) {
 
     var schema = require(__dirname + '/../../../resources/schemes/' + this.getType() + '-settings');
     if(validate(newSettings, schema).errors.length > 0) {
-        throw new Error('wrong settings');
+        console.error("ERROR: wrong settings." );
+        throw new Error('ChartImpl:wrongSettings');
     }
 
     this.settings = newSettings;
@@ -199,7 +201,8 @@ ChartImpl.prototype.update = function(updateType, updateData) {
     if (ChartImpl.prototype.updaters.hasOwnProperty(type)) {
         var schema = require(__dirname + '/../../../resources/schemes/' + this.getType() + '-update-' + updateType);
         if(validate(updateData, schema).errors.length > 0) {
-            throw new Error('wrong update data');
+            console.error("ERROR: wrong updating data." );
+            throw new Error('ChartImpl:wrongUpdatingData');
         }
 
         var dep=ChartImpl.prototype.updaters[type];
@@ -208,7 +211,7 @@ ChartImpl.prototype.update = function(updateType, updateData) {
         console.log("Chart "+this.uid+" has been updated with the method: "+updateType);
     }
     else {
-        console.log("ERROR: wrong updating type." );
+        console.error("ERROR: wrong updating type." );
         throw("ChartImpl:wrongUpdatingType");
 
     }

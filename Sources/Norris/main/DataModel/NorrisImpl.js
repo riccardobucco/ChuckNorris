@@ -95,7 +95,7 @@ NorrisImpl.prototype.createChart = function(chartType, chartId) {
             return chart;
       }
       else {
-            console.log("ERROR: this ID is already used.");
+            console.error("ERROR: this ID is already used.");
             throw("NorrisImpl:IDAlreadyUsed");
       }
 };
@@ -139,7 +139,7 @@ NorrisImpl.prototype.createPage = function(pageId) {
             return page;
       }
       else {
-            console.log("ERROR: this ID is already used.");
+            console.error("ERROR: this ID is already used.");
             throw("NorrisImpl:IDAlreadyUsed");
       }
 };
