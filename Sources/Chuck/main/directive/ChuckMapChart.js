@@ -106,6 +106,8 @@
                             jQuery(container).css({
                                 'background-color': 'white',
                                 'padding': '10px',
+                                'overflow-y': 'auto',
+                                'max-height': '350px',
                                 '-webkit-border-radius': '5px',
                                 '-moz-border-radius': '5px',
                                 'border-radius': '5px'
