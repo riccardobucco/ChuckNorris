@@ -180,7 +180,7 @@
                             if(markers[markerName]) {
                                 setMarkers();
                             } else {
-                                jQuery.get(CHUCK_DIR + '/resources/markers/' + markerName + '.svg', function (data) {
+                                jQuery.get(CHUCK_DIR + 'resources/markers/' + markerName + '.svg', function (data) {
                                     markers[markerName] = jQuery('svg',data).prop('outerHTML');
                                     setMarkers();
                                 });
