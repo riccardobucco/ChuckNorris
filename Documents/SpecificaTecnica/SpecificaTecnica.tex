@@ -68,8 +68,8 @@
 
 		%macro definitions
 		\input{Tex/Macro.tex}
-		\newcommand{\doctitle}{Analisi Dei Requisiti}
-		\newcommand{\lastversion}{6.00}
+		\newcommand{\doctitle}{Specifica Tecnica}
+		\newcommand{\lastversion}{5.00}
 		
 
 		%abstract font
@@ -180,13 +180,13 @@
 				\begin{center}
 					\tabulinesep=6pt
 					\begin{tabu} {X[r]|X[l]}
-						\textbf{Versione} & 6.00 \\
-						\textbf{Data redazione} & 2015-05-13 \\
-						\textbf{Redazione} & \parbox[t]{0.4\textwidth}{Carlon Chiara} \\
-						\textbf{Verifica} & \parbox[t]{0.4\textwidth}{Bigarella Chiara} \\
-						\textbf{Approvazione} & \parbox[t]{0.4\textwidth}{Pavanello Fabio Matteo} \\
+						\textbf{Versione} & 5.00 \\
+						\textbf{Data redazione} & 2015-06-13 \\
+						\textbf{Redazione} & \parbox[t]{0.4\textwidth}{Pavanello Fabio Matteo} \\
+						\textbf{Verifica} & \parbox[t]{0.4\textwidth}{ Moretto Alessandro \\ Bigarella Chiara} \\
+						\textbf{Approvazione} & \parbox[t]{0.4\textwidth}{Carlon Chiara} \\
 						\textbf{Uso} & Esterno \\
-						\textbf{Distribuzione} & \parbox[t]{0.4\textwidth}{Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap} \\
+						\textbf{Distribuzione} & \parbox[t]{0.4\textwidth}{\groupname{} \\ Prof. Vardanega Tullio \\ Prof. Cardin Riccardo \\ CoffeeStrap} \\
 					\end{tabu}
 				\end{center}
 
@@ -206,227 +206,275 @@
 					Descrizione \\
 					\hline
 					\endhead
-					6.00 &
-						2015-05-13 &
-						Pavanello Fabio Matteo &
+					5.00 &
+						2015-06-13 &
+						Carlon Chiara &
 						Project Manager &
 						Approvazione del documento \\
 						\hline
-					5.02 &
-						2015-05-12 &
+					4.04 &
+						2015-06-12 &
 						Bigarella Chiara &
 						Verificatore &
 						Verifica incrementi \\
 						\hline
-					5.01 &
-						2015-05-12 &
-						Carlon Chiara &
-						Analista &
-						Modifica riferimenti \\
-						\hline
-					5.00 &
-						2015-05-10 &
-						Bigarella Chiara &
-						Project Manager &
-						Approvazione del documento \\
+					4.03 &
+						2015-06-12 &
+						Pavanello Fabio Matteo &
+						Progettista &
+						Fornito maggior dettaglio sulle relazioni individuate tra le componenti \\
 						\hline
 					4.02 &
-						2015-05-09 &
-						Bucco Riccardo &
+						2015-06-11 &
+						Moretto Alessandro &
 						Verificatore &
 						Verifica incrementi \\
 						\hline
 					4.01 &
-						2015-05-08 &
-						Moretto Alessandro &
-						Analista &
-						Modifica riferimenti \\
+						2015-06-10 &
+						Pavanello Fabio Matteo &
+						Progettista &
+						Correzione errori segnalati in RQ \\
 						\hline
 					4.00 &
-						2015-04-07 &
-						Dal Bianco Davide &
+						2015-05-27 &
+						Pavanello Fabio Matteo &
 						Project Manager &
 						Approvazione del documento \\
 						\hline
-					3.02 &
-						2015-04-06 &
+					3.16 &
+						2015-03-29 &
 						Rubin Marco &
 						Verificatore &
 						Verifica incrementi \\
 						\hline
-					3.01 &
-						2015-04-04 &
+					3.15 &
+						2015-05-10 &
+						Davide Dal Bianco &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					3.14 &
+						2015-05-10 &
+						Bigarella Chiara &
+						Progettista &
+						Aggiunto paragrafo per spiegare l'utilizzo delle classi factory \\
+						\hline
+					3.13 &
+						2015-05-10 &
+						Moretto Alessandro &
+						Verificatore &
+						Verifica incrementi architettura di Norris e Chuck \\
+						\hline
+					3.12 &
+						2015-05-10 &
+						Bucco Riccardo &
+						Progettista &
+						Lieve modifica architettura Norris e Chuck \\
+						\hline
+					3.11 &
+						2015-05-09 &
+						Bucco Riccardo &
+						Progettista &
+						Spostamento pattern dopo la definizione dell'architettura \\
+						\hline
+					3.10 &
+						2015-05-09 &
+						Moretto Alessandro &
+						Verificatore &
+						Verifica incrementi architettura \\
+						\hline
+					3.09 &
+						2015-05-08 &
+						Bigarella Chiara &
+						Progettista &
+						Correzioni errori rilevati dalla verifica dell'architettura dell'applicazione android \\
+						\hline
+					3.08 &
+						2015-05-08 &
+						Moretto Alessandro &
+						Verificatore &
+						Verifica architettura \\
+						\hline
+					3.07 &
+						2015-05-08 &
+						Bigarella Chiara &
+						Progettista &
+						Modifica architettura dell'applicazione android, da MVC a MVP \\
+						\hline
+					3.06 &
+						2015-05-08 &
 						Pavanello Fabio Matteo &
-						Analista &
-						Modifica riferimenti \\
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					3.05 &
+						2015-05-08 &
+						Carlon Chiara &
+						Progettista &
+						Approfondita descrizione pattern Bridge \\
+						\hline
+					3.04 &
+						2015-05-08 &
+						Bigarella Chiara &
+						Progettista &
+						Correzione piccoli errori segnalati in RP \\
+						\hline
+					3.03 &
+						2015-05-07 &
+						Dal Bianco Davide &
+						Verificatore &
+						Verifica incrementi \\
+						\hline
+					3.02 &
+						2015-05-07 &
+						Carlon Chiara &
+						Amministratore &
+						Aggiunti svantaggi tecnologie \\
+						\hline
+					3.01 &
+						2015-05-07 &
+						Bucco Riccardo &
+						Progettista &
+						Modificati riferimenti informativi \\
 						\hline
 					3.00 &
-						2015-03-13 &
-						Bucco Riccardo &
+						2015-05-03 &
+						Bigarella Chiara &
 						Project Manager &
 						Approvazione del documento \\
-						\hline
-					2.09 &
-						2015-03-12 &
-						Rubin Marco &
-						Verificatore &
-						Verifica documento \\
-						\hline
-					2.06 &
-						2015-03-11 &
-						Dal Bianco Davide &
-						Verificatore &
-						Verifica tracciamento \\
-						\hline
-					2.05 &
-						2015-03-10 &
-						Moretto Alessandro &
-						Verificatore &
-						Verifica requisiti \\
-						\hline
-					2.04 &
-						2015-03-10 &
-						Bigarella Chiara &
-						Verificatore &
-						Verifica casi d'uso \\
-						\hline
-					2.03 &
-						2015-03-09 &
-						Dal Bianco Davide &
-						Chiara Carlon &
-						Modifica tracciamento \\
 						\hline
 					2.02 &
-						2015-03-07 &
-						Pavanello Fabio Matteo &
-						Analista &
-						Piccola modifica requisiti \\
+						2015-04-24 &
+						Bucco Riccardo &
+						Verificatore &
+						Verifica modifiche Chuck \\
 						\hline
 					2.01 &
-						2015-03-07 &
+						2015-04-04 &
 						Rubin Marco &
-						Analista &
-						Piccola modifica casi d'uso \\
+						Progettista &
+						Apporto di piccole modifiche architettura Chuck \\
 						\hline
 					2.00 &
-						2015-03-03 &
-						Carlon Chiara &
+						2015-04-20 &
+						Dal Bianco Davide &
 						Project Manager &
 						Approvazione del documento \\
 						\hline
-					1.03 &
-						2015-02-27 &
+					1.02 &
+						2015-04-06 &
+						Moretto Alessandro &
+						Verificatore &
+						Verifica incremento \\
+						\hline
+					1.01 &
+						2015-04-04 &
+						Rubin Marco &
+						Progettista &
+						Apporto di piccole modifiche architetturale Norris \\
+						\hline
+					1.00 &
+						2015-03-31 &
+						Rubin Marco &
+						Project Manager &
+						Approvazione del documento \\
+						\hline
+					0.16 &
+						2015-03-31 &
 						Pavanello Fabio Matteo &
 						Verificatore &
 						Verifica documento \\
 						\hline
-					1.02 &
-						2015-02-23 &
-						Bucco Riccardo &
-						Analista &
-						Stesura appendice Express js \\
-						\hline
-					1.01 &
-						2015-02-23 &
-						Bigarella Chiara, Bucco Riccardo &
-						Analista &
-						Revisione correttiva contenuti basata su segnalazione del committente \\
-						\hline
-					1.00 &
-						2015-01-19 &
-						Moretto Alessandro &
-						Project Manager &
-						Approvazione del documento \\
-						\hline
 					0.15 &
-						2015-01-17 &
-						Moretto Alessandro, Pavanello Fabio Matteo &
-						Verificatore &
-						Verifica stesura e tracciamento requisiti \\
+						2015-03-29 &
+						Bucco Riccardo &
+						Progettista &
+						Stesura ed importazione tracciamento \\
 						\hline
 					0.14 &
-						2015-01-15 &
-						Bucco Riccardo &
-						Analista &
-						Modifica stesura e tracciamento requisiti \\
+						2015-03-29 &
+						Dal Bianco Davide &
+						Project Manager &
+						Stesura stime di fattibilità e di bisogno di risorse \\
 						\hline
 					0.13 &
-						2015-01-13 &
-						Bucco Riccardo, Dal Bianco Davide &
-						Analista &
-						Terminazione stesura e tracciamento requisiti \\
+						2015-03-27 &
+						Carlon Chiara &
+						Verificatore &
+						Verifica componenti applicazione Android \\
 						\hline
 					0.12 &
-						2015-01-06 &
-						Moretto Alessandro &
+						2015-03-26 &
+						Pavanello Fabio Matteo &
 						Verificatore &
-						Verificati sottocasi d'uso UC3 e descrizione \\
+						Verifica componenti Chuck \\
 						\hline
 					0.11 &
-						2015-01-05 &
-						Rubin Marco &
+						2015-03-26 &
+						Carlon Chiara &
 						Verificatore &
-						Verificati sottocasi d'uso UC2 e descrizione \\
+						Verifica sezione Dashboard \\
 						\hline
 					0.10 &
-						2015-01-03 &
+						2015-03-26 &
 						Bucco Riccardo &
-						Analista &
-						Terminazione sottocasi d'uso di UC3 e descrizione \\
+						Progettista &
+						Stesura sezione mockup Dashboard \\
 						\hline
 					0.09 &
-						2015-01-03 &
-						Pavanello Fabio Matteo &
+						2015-03-26 &
+						Carlon Chiara &
 						Verificatore &
-						Verificati sottocasi d'uso UC1 e descrizione \\
+						Verifica componenti Norris \\
 						\hline
 					0.08 &
-						2015-01-01 &
-						Dal Bianco Davide, Carlon Chiara &
-						Analista &
-						Terminazione sottocasi d'uso di UC2 e descrizione \\
+						2015-03-24 &
+						Moretto Alessandro &
+						Progettista &
+						Stesura e descrizione componenti applicazione Android \\
 						\hline
 					0.07 &
-						2014-12-31 &
-						Bigarella Chiara &
-						Analista &
-						Terminazione sottocasi d'uso di UC1 e descrizione \\
+						2015-03-24 &
+						Bucco Riccardo &
+						Progettista &
+						Stesura e descrizione componenti Chuck \\
 						\hline
 					0.06 &
-						2014-12-26 &
-						Moretto Alessandro &
-						Verificatore &
-						Verificato scenario generale casi d'uso \\
+						2015-03-23 &
+						Dal Bianco Davide &
+						Progettista &
+						Stesura e descrizione componenti Norris \\
 						\hline
 					0.05 &
-						2014-12-25 &
-						Dal Bianco Davide &
-						Analista &
-						Creazione casi d'uso generale \\
-						\hline
-					0.04 &
-						2014-12-21 &
-						Rubin Marco &
-						Verificatore &
-						Verificata sezione Descrizione Generale \\
-						\hline
-					0.03 &
-						2014-12-21 &
+						2015-03-15 &
 						Pavanello Fabio Matteo &
 						Verificatore &
-						Verificata sezione Introduzione \\
+						Verifica architettura \\
+						\hline
+					0.04 &
+						2015-03-12 &
+						Bigarella Chiara &
+						Progettista &
+						Stesura architettura generale \\
+						\hline
+					0.03 &
+						2015-03-07 &
+						Carlon Chiara &
+						Verificatore &
+						Verifica documento \\
 						\hline
 					0.02 &
-						2014-12-21 &
-						Dal Bianco Davide &
-						Analista &
-						Terminazione stesura Descrizione Generale \\
+						2015-03-06 &
+						Moretto Alessandro &
+						Progettista &
+						Stesura tecnologie utilizzate \\
 						\hline
 					0.01 &
-						2014-12-20 &
+						2015-03-05 &
 						Bigarella Chiara &
-						Analista &
-						Terminazione stesura Introduzione \\
+						Progettista &
+						Struttura ed introduzione del documento \\
 						\hline
 					
 				\end{longtabu}
@@ -448,21 +496,24 @@
 		\input{Tex/Introduzione.tex}
 	
 		\newpage
-		\input{Tex/Descrizione.tex}
+		\input{Tex/Tecnologie.tex}
 	
 		\newpage
-		\input{Tex/UseCase.tex}
+		\input{Tex/DescrizioneProdotti.tex}
 	
 		\newpage
-		\input{Tex/Requisiti.tex}
+		\input{Tex/Progettazione.tex}
 	
 		\newpage
-		\input{Tex/TracciamentoReqTest.tex}
+		\input{Tex/Stime.tex}
+	
+		\newpage
+		\input{Tex/Tracciamento.tex}
 	
 		\appendix
 		
 		\newpage
-		\input{Tex/Middleware.tex}
+		\input{Tex/AppendiceDesignPattern.tex}
 	
 
 		\end{document}
