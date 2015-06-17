@@ -26,11 +26,11 @@ var t = nor.createChart('table', 't');
 
 
 bc.setData({
-    labels: ['1','2','3','4','5'],
+    labels: ['1','2','3','4'],
     datasets: [
-        {name: 'pippo', values: [1,2,3,4,5]},
-        {name: 'pluto', values: [1,2,0,4,5]},
-        {name: 'paperino', values: [1,2,3,4,5]}
+        {name: 'pippo', values: [1,2,3,4]},
+        {name: 'pluto', values: [1,2,0,4]},
+        {name: 'paperino', values: [1,2,3,4]}
     ]
 });
 bc.setSettings({title:'My Barchart',description: 'Esempio di bar chart orizzontale', orientation : 'horizontal', style: {barArea: '80%', showGrid: true, maxValue: 10, minValue: 0}})
@@ -48,10 +48,13 @@ lc.setSettings({title:'My Linechart',xLabel: 'xLabel', yLabel: 'yLabel', legendP
 setInterval(linechart, 2000);
 
 mc.setData({ datasets: [
-    {name: 'pippo', marker: 'standard', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}, {x:0, y:4}]},
-    {name: 'pluto', marker: 'custom', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}, {x:4, y:0}]}
+    {name: 'pippo', marker: 'standard', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:0, y:1}, {x:0, y:2}, {x:0, y:3}]},
+    {name: 'pluto', marker: 'custom', color : "#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9), values: [{x:1, y:0}, {x:2, y:0}, {x:3, y:0}]},
+     {name: 'pippo', marker: 'flag', color : "#E52525", values: [{x:-20, y:-10}, {x:55, y:33}, {x:66, y:39}]},
+      {name: 'pippo', marker: 'bus', color : "#3C25E5", values: [{x:-23, y:15}, {x:23, y:-25}, {x:83, y:35}]},
+       {name: 'pippo', marker: 'plane', color : "#CBE612", values: [{x:14, y:1}, {x:-64, y:20}, {x:24, y:30}]}
 ]});
-mc.setSettings({allowFilter: true});
+mc.setSettings({allowFilter: true, maxItems :3});
 setInterval(mapchart, 2000);
 
 t.setData({
@@ -124,7 +127,7 @@ function mapchart() {
             inplace: [{
                 position:{
                     series:0,
-                    index: Math.floor(Math.random()*4)
+                    index: Math.floor(Math.random()*3)
                 },
                 data: {
                     x: Math.floor(Math.random() * 180) - 90, 
